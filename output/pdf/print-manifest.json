@@ -1,0 +1,705 @@
+{
+  "version": "v0.6 / 2026-10-08",
+  "activity_dimensions_mm": {
+    "1h": [
+      36,
+      22
+    ],
+    "2h": [
+      36,
+      44
+    ],
+    "4h": [
+      36,
+      88
+    ]
+  },
+  "cards": [
+    {
+      "id": "outing",
+      "code": "M09",
+      "starter": false,
+      "page": 1,
+      "x": 10.0,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "nap",
+      "code": "M11",
+      "starter": false,
+      "page": 1,
+      "x": 48.5,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "handcraft",
+      "code": "M12",
+      "starter": false,
+      "page": 1,
+      "x": 87.0,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "hike",
+      "code": "M13",
+      "starter": false,
+      "page": 1,
+      "x": 125.5,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "market-service",
+      "code": "M18",
+      "starter": false,
+      "page": 1,
+      "x": 164.0,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "festival",
+      "code": "M21",
+      "starter": false,
+      "page": 1,
+      "x": 10.0,
+      "y": 109,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "poetry",
+      "code": "GA05",
+      "starter": false,
+      "page": 1,
+      "x": 48.5,
+      "y": 109,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "hackathon",
+      "code": "GB05",
+      "starter": false,
+      "page": 1,
+      "x": 87.0,
+      "y": 109,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "taste",
+      "code": "GC05",
+      "starter": false,
+      "page": 1,
+      "x": 125.5,
+      "y": 109,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "retreat",
+      "code": "HA03",
+      "starter": false,
+      "page": 1,
+      "x": 164.0,
+      "y": 109,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "royalty",
+      "code": "HA05",
+      "starter": false,
+      "page": 1,
+      "x": 10.0,
+      "y": 199,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "muse",
+      "code": "HA06",
+      "starter": false,
+      "page": 1,
+      "x": 48.5,
+      "y": 199,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "automation",
+      "code": "HB05",
+      "starter": false,
+      "page": 1,
+      "x": 87.0,
+      "y": 199,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "remote",
+      "code": "HB06",
+      "starter": false,
+      "page": 1,
+      "x": 125.5,
+      "y": 199,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "stall",
+      "code": "HC01",
+      "starter": false,
+      "page": 1,
+      "x": 164.0,
+      "y": 199,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "workshop",
+      "code": "HC04",
+      "starter": false,
+      "page": 2,
+      "x": 10.0,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "chain-store",
+      "code": "HC05",
+      "starter": false,
+      "page": 2,
+      "x": 48.5,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "brand",
+      "code": "HC06",
+      "starter": false,
+      "page": 2,
+      "x": 87.0,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "weekend",
+      "code": "P01",
+      "starter": false,
+      "page": 2,
+      "x": 125.5,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "outing",
+      "code": "M09",
+      "starter": true,
+      "page": 2,
+      "x": 164.0,
+      "y": 19,
+      "width": 36,
+      "height": 88
+    },
+    {
+      "id": "night-owl",
+      "code": "M04",
+      "starter": false,
+      "page": 2,
+      "x": 10.0,
+      "y": 110,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "night-sprint",
+      "code": "M05",
+      "starter": false,
+      "page": 2,
+      "x": 48.5,
+      "y": 110,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "night-quiet",
+      "code": "M06",
+      "starter": false,
+      "page": 2,
+      "x": 87.0,
+      "y": 110,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "mall",
+      "code": "M08",
+      "starter": false,
+      "page": 2,
+      "x": 125.5,
+      "y": 110,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "music",
+      "code": "M14",
+      "starter": false,
+      "page": 2,
+      "x": 164.0,
+      "y": 110,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "reading",
+      "code": "M15",
+      "starter": false,
+      "page": 2,
+      "x": 10.0,
+      "y": 157,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "tutoring",
+      "code": "M17",
+      "starter": false,
+      "page": 2,
+      "x": 48.5,
+      "y": 157,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "exhibition",
+      "code": "M20",
+      "starter": false,
+      "page": 2,
+      "x": 87.0,
+      "y": 157,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "story",
+      "code": "GA03",
+      "starter": false,
+      "page": 2,
+      "x": 125.5,
+      "y": 157,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "photo",
+      "code": "GA04",
+      "starter": false,
+      "page": 2,
+      "x": 164.0,
+      "y": 157,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "prototype",
+      "code": "GB03",
+      "starter": false,
+      "page": 2,
+      "x": 10.0,
+      "y": 204,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "open-source",
+      "code": "GB04",
+      "starter": false,
+      "page": 2,
+      "x": 48.5,
+      "y": 204,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "salon",
+      "code": "GC03",
+      "starter": false,
+      "page": 2,
+      "x": 87.0,
+      "y": 204,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "trial-stall",
+      "code": "GC04",
+      "starter": false,
+      "page": 2,
+      "x": 125.5,
+      "y": 204,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "seminar-A",
+      "code": "GA06",
+      "starter": false,
+      "page": 2,
+      "x": 164.0,
+      "y": 204,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "seminar-B",
+      "code": "GB06",
+      "starter": false,
+      "page": 3,
+      "x": 10.0,
+      "y": 19,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "seminar-C",
+      "code": "GC06",
+      "starter": false,
+      "page": 3,
+      "x": 48.5,
+      "y": 19,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "newsletter",
+      "code": "HA01",
+      "starter": false,
+      "page": 3,
+      "x": 87.0,
+      "y": 19,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "editorial",
+      "code": "HA04",
+      "starter": false,
+      "page": 3,
+      "x": 125.5,
+      "y": 19,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "freelance",
+      "code": "HB01",
+      "starter": false,
+      "page": 3,
+      "x": 164.0,
+      "y": 19,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "maker-break",
+      "code": "HB03",
+      "starter": false,
+      "page": 3,
+      "x": 10.0,
+      "y": 66,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "consulting",
+      "code": "HC02",
+      "starter": false,
+      "page": 3,
+      "x": 48.5,
+      "y": 66,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "community",
+      "code": "HC03",
+      "starter": false,
+      "page": 3,
+      "x": 87.0,
+      "y": 66,
+      "width": 36,
+      "height": 44
+    },
+    {
+      "id": "slack-phone",
+      "code": "M01",
+      "starter": false,
+      "page": 3,
+      "x": 10.0,
+      "y": 115,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "slack-headphones",
+      "code": "M02",
+      "starter": false,
+      "page": 3,
+      "x": 48.5,
+      "y": 115,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "slack-meeting",
+      "code": "M03",
+      "starter": false,
+      "page": 3,
+      "x": 87.0,
+      "y": 115,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "shopping",
+      "code": "M07",
+      "starter": false,
+      "page": 3,
+      "x": 125.5,
+      "y": 115,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "walk",
+      "code": "M10",
+      "starter": false,
+      "page": 3,
+      "x": 164.0,
+      "y": 115,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "microjob",
+      "code": "M16",
+      "starter": false,
+      "page": 3,
+      "x": 10.0,
+      "y": 140,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "spa",
+      "code": "M19",
+      "starter": false,
+      "page": 3,
+      "x": 48.5,
+      "y": 140,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "headhunter",
+      "code": "M22",
+      "starter": false,
+      "page": 3,
+      "x": 87.0,
+      "y": 140,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "journal",
+      "code": "GA01",
+      "starter": false,
+      "page": 3,
+      "x": 125.5,
+      "y": 140,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "sketch",
+      "code": "GA02",
+      "starter": false,
+      "page": 3,
+      "x": 164.0,
+      "y": 140,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "script",
+      "code": "GB01",
+      "starter": false,
+      "page": 3,
+      "x": 10.0,
+      "y": 165,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "repair",
+      "code": "GB02",
+      "starter": false,
+      "page": 3,
+      "x": 48.5,
+      "y": 165,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "interview",
+      "code": "GC01",
+      "starter": false,
+      "page": 3,
+      "x": 87.0,
+      "y": 165,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "resale",
+      "code": "GC02",
+      "starter": false,
+      "page": 3,
+      "x": 125.5,
+      "y": 165,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "illustration",
+      "code": "HA02",
+      "starter": false,
+      "page": 3,
+      "x": 164.0,
+      "y": 165,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "microtool",
+      "code": "HB02",
+      "starter": false,
+      "page": 3,
+      "x": 10.0,
+      "y": 190,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "pipeline",
+      "code": "HB04",
+      "starter": false,
+      "page": 3,
+      "x": 48.5,
+      "y": 190,
+      "width": 36,
+      "height": 22
+    },
+    {
+      "id": "microjob",
+      "code": "M16",
+      "starter": true,
+      "page": 3,
+      "x": 87.0,
+      "y": 190,
+      "width": 36,
+      "height": 22
+    }
+  ],
+  "events": [
+    {
+      "name": "领导突然路过",
+      "page": 5,
+      "code": "E01"
+    },
+    {
+      "name": "周会点名",
+      "page": 5,
+      "code": "E02"
+    },
+    {
+      "name": "午后查岗",
+      "page": 5,
+      "code": "E03"
+    },
+    {
+      "name": "周末巡视",
+      "page": 5,
+      "code": "E04"
+    },
+    {
+      "name": "全员抽查",
+      "page": 5,
+      "code": "E05"
+    },
+    {
+      "name": "随机巡场",
+      "page": 5,
+      "code": "E06"
+    },
+    {
+      "name": "项目奖金",
+      "page": 6,
+      "code": "E07"
+    },
+    {
+      "name": "周日晨间团建",
+      "page": 6,
+      "code": "E08"
+    },
+    {
+      "name": "双休通知",
+      "page": 6,
+      "code": "E09"
+    },
+    {
+      "name": "领导突击连线",
+      "page": 6,
+      "code": "E10"
+    },
+    {
+      "name": "普通的一周",
+      "page": 6,
+      "code": "E11"
+    },
+    {
+      "name": "周日午后团建",
+      "page": 6,
+      "code": "E12"
+    }
+  ],
+  "files": {
+    "01-card-set-A4.pdf": {
+      "pages": 4
+    },
+    "02-player-board-and-aids-A4.pdf": {
+      "pages": 3
+    },
+    "03-shared-events-and-rules-A4.pdf": {
+      "pages": 6
+    },
+    "04-three-player-complete-A4.pdf": {
+      "pages": 27
+    }
+  }
+}
