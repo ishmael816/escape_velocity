@@ -1,0 +1,1373 @@
+{
+  "note": "Heuristic bots test legal progress, not human playtime or route balance. Steps count active time slots across the table, not individual effects.",
+  "games": [
+    {
+      "starterRecovery": "outing",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 13,
+      "firstAdvancedWeek": 6,
+      "firstCoreWeek": 7,
+      "escapeWeeks": [
+        13,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 5.8,
+      "skills": [
+        {
+          "A": 5,
+          "B": 2,
+          "C": 1
+        },
+        {
+          "A": 2,
+          "B": 4,
+          "C": 2
+        }
+      ],
+      "income": [
+        26,
+        16
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 11,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 7,
+      "escapeWeeks": [
+        11,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 6.1,
+      "skills": [
+        {
+          "A": 6,
+          "B": 1,
+          "C": 2
+        },
+        {
+          "A": 2,
+          "B": 3,
+          "C": 6
+        }
+      ],
+      "income": [
+        28,
+        18
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 2,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 13,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 10,
+      "escapeWeeks": [
+        13,
+        13
+      ],
+      "winners": 2,
+      "averageSteps": 5.4,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 6,
+          "C": 1
+        }
+      ],
+      "income": [
+        26,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 19,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 8,
+      "escapeWeeks": [
+        15,
+        19,
+        null
+      ],
+      "winners": 3,
+      "averageSteps": 8.4,
+      "skills": [
+        {
+          "A": 6,
+          "B": 6,
+          "C": 4
+        },
+        {
+          "A": 4,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 6,
+          "B": 2,
+          "C": 3
+        }
+      ],
+      "income": [
+        38,
+        36,
+        24
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 15,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 8,
+      "escapeWeeks": [
+        12,
+        15,
+        15
+      ],
+      "winners": 3,
+      "averageSteps": 7.5,
+      "skills": [
+        {
+          "A": 6,
+          "B": 4,
+          "C": 5
+        },
+        {
+          "A": 6,
+          "B": 4,
+          "C": 1
+        },
+        {
+          "A": 4,
+          "B": 4,
+          "C": 4
+        }
+      ],
+      "income": [
+        40,
+        26,
+        38
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 3,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 14,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 5,
+      "escapeWeeks": [
+        12,
+        null,
+        14
+      ],
+      "winners": 3,
+      "averageSteps": 7.3,
+      "skills": [
+        {
+          "A": 5,
+          "B": 2,
+          "C": 5
+        },
+        {
+          "A": 3,
+          "B": 5,
+          "C": 1
+        },
+        {
+          "A": 2,
+          "B": 1,
+          "C": 4
+        }
+      ],
+      "income": [
+        28,
+        14,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 18,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 6,
+      "escapeWeeks": [
+        11,
+        null,
+        9,
+        18
+      ],
+      "winners": 4,
+      "averageSteps": 10.6,
+      "skills": [
+        {
+          "A": 6,
+          "B": 4,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 6,
+          "C": 2
+        },
+        {
+          "A": 5,
+          "B": 5,
+          "C": 4
+        },
+        {
+          "A": 6,
+          "B": 5,
+          "C": 3
+        }
+      ],
+      "income": [
+        32,
+        24,
+        48,
+        26
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 14,
+      "firstAdvancedWeek": 3,
+      "firstCoreWeek": 4,
+      "escapeWeeks": [
+        14,
+        null,
+        14,
+        11
+      ],
+      "winners": 4,
+      "averageSteps": 8.6,
+      "skills": [
+        {
+          "A": 4,
+          "B": 5,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 5,
+          "C": 6
+        },
+        {
+          "A": 2,
+          "B": 1,
+          "C": 6
+        },
+        {
+          "A": 6,
+          "B": 4,
+          "C": 2
+        }
+      ],
+      "income": [
+        30,
+        24,
+        28,
+        40
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 4,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 18,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 7,
+      "escapeWeeks": [
+        18,
+        null,
+        13,
+        16
+      ],
+      "winners": 4,
+      "averageSteps": 9.3,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 3,
+          "B": 2,
+          "C": 6
+        },
+        {
+          "A": 6,
+          "B": 2,
+          "C": 2
+        }
+      ],
+      "income": [
+        26,
+        20,
+        36,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 9,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": null,
+      "escapeWeeks": [
+        null,
+        9
+      ],
+      "winners": 1,
+      "averageSteps": 4.9,
+      "skills": [
+        {
+          "A": 4,
+          "B": 0,
+          "C": 0
+        },
+        {
+          "A": 4,
+          "B": 3,
+          "C": 0
+        }
+      ],
+      "income": [
+        14,
+        26
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 13,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 8,
+      "escapeWeeks": [
+        13,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 6,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 1
+        },
+        {
+          "A": 2,
+          "B": 6,
+          "C": 4
+        }
+      ],
+      "income": [
+        34,
+        14
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 2,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 14,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 11,
+      "escapeWeeks": [
+        14,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 5,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 4,
+          "C": 1
+        }
+      ],
+      "income": [
+        28,
+        22
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 15,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 9,
+      "escapeWeeks": [
+        13,
+        null,
+        15
+      ],
+      "winners": 3,
+      "averageSteps": 7.4,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 6,
+          "C": 2
+        },
+        {
+          "A": 6,
+          "B": 3,
+          "C": 4
+        }
+      ],
+      "income": [
+        36,
+        6,
+        38
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 14,
+      "firstAdvancedWeek": 7,
+      "firstCoreWeek": 10,
+      "escapeWeeks": [
+        13,
+        null,
+        14
+      ],
+      "winners": 3,
+      "averageSteps": 6.5,
+      "skills": [
+        {
+          "A": 5,
+          "B": 2,
+          "C": 1
+        },
+        {
+          "A": 5,
+          "B": 5,
+          "C": 2
+        },
+        {
+          "A": 3,
+          "B": 1,
+          "C": 6
+        }
+      ],
+      "income": [
+        26,
+        12,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 3,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 23,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 8,
+      "escapeWeeks": [
+        19,
+        null,
+        23
+      ],
+      "winners": 3,
+      "averageSteps": 8,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 3
+        },
+        {
+          "A": 3,
+          "B": 3,
+          "C": 6
+        },
+        {
+          "A": 3,
+          "B": 2,
+          "C": 3
+        }
+      ],
+      "income": [
+        46,
+        12,
+        34
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 19,
+      "firstAdvancedWeek": 6,
+      "firstCoreWeek": 6,
+      "escapeWeeks": [
+        19,
+        null,
+        15,
+        15
+      ],
+      "winners": 4,
+      "averageSteps": 8.6,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 3
+        },
+        {
+          "A": 6,
+          "B": 5,
+          "C": 2
+        },
+        {
+          "A": 4,
+          "B": 6,
+          "C": 5
+        },
+        {
+          "A": 6,
+          "B": 3,
+          "C": 2
+        }
+      ],
+      "income": [
+        30,
+        6,
+        46,
+        36
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 21,
+      "firstAdvancedWeek": 6,
+      "firstCoreWeek": 8,
+      "escapeWeeks": [
+        21,
+        13,
+        14,
+        null
+      ],
+      "winners": 4,
+      "averageSteps": 9.4,
+      "skills": [
+        {
+          "A": 6,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 5,
+          "B": 4,
+          "C": 6
+        },
+        {
+          "A": 5,
+          "B": 3,
+          "C": 6
+        },
+        {
+          "A": 6,
+          "B": 4,
+          "C": 1
+        }
+      ],
+      "income": [
+        26,
+        66,
+        54,
+        24
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 4,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 21,
+      "firstAdvancedWeek": 7,
+      "firstCoreWeek": 10,
+      "escapeWeeks": [
+        20,
+        null,
+        21,
+        13
+      ],
+      "winners": 4,
+      "averageSteps": 8.8,
+      "skills": [
+        {
+          "A": 3,
+          "B": 1,
+          "C": 6
+        },
+        {
+          "A": 2,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 5,
+          "B": 4,
+          "C": 4
+        },
+        {
+          "A": 6,
+          "B": 3,
+          "C": 4
+        }
+      ],
+      "income": [
+        38,
+        12,
+        40,
+        36
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 12,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 10,
+      "escapeWeeks": [
+        12,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 5.7,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 1
+        },
+        {
+          "A": 1,
+          "B": 4,
+          "C": 2
+        }
+      ],
+      "income": [
+        26,
+        16
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 13,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 9,
+      "escapeWeeks": [
+        null,
+        13
+      ],
+      "winners": 2,
+      "averageSteps": 6.2,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 3
+        },
+        {
+          "A": 6,
+          "B": 5,
+          "C": 6
+        }
+      ],
+      "income": [
+        24,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 2,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 10,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 9,
+      "escapeWeeks": [
+        10,
+        null
+      ],
+      "winners": 1,
+      "averageSteps": 5.1,
+      "skills": [
+        {
+          "A": 6,
+          "B": 1,
+          "C": 2
+        },
+        {
+          "A": 1,
+          "B": 5,
+          "C": 2
+        }
+      ],
+      "income": [
+        30,
+        12
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 19,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 10,
+      "escapeWeeks": [
+        9,
+        19,
+        null
+      ],
+      "winners": 3,
+      "averageSteps": 11.1,
+      "skills": [
+        {
+          "A": 6,
+          "B": 6,
+          "C": 5
+        },
+        {
+          "A": 2,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 5,
+          "B": 3,
+          "C": 4
+        }
+      ],
+      "income": [
+        40,
+        26,
+        6
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 16,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 12,
+      "escapeWeeks": [
+        16,
+        null,
+        13
+      ],
+      "winners": 3,
+      "averageSteps": 7.8,
+      "skills": [
+        {
+          "A": 3,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 2,
+          "B": 5,
+          "C": 3
+        },
+        {
+          "A": 6,
+          "B": 4,
+          "C": 5
+        }
+      ],
+      "income": [
+        32,
+        22,
+        34
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 3,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 16,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 6,
+      "escapeWeeks": [
+        9,
+        16,
+        16
+      ],
+      "winners": 3,
+      "averageSteps": 9.8,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 4
+        },
+        {
+          "A": 6,
+          "B": 5,
+          "C": 1
+        },
+        {
+          "A": 2,
+          "B": 1,
+          "C": 6
+        }
+      ],
+      "income": [
+        28,
+        32,
+        34
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 16,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 13,
+      "escapeWeeks": [
+        16,
+        14,
+        13,
+        null
+      ],
+      "winners": 4,
+      "averageSteps": 8.2,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 1
+        },
+        {
+          "A": 4,
+          "B": 5,
+          "C": 1
+        },
+        {
+          "A": 4,
+          "B": 4,
+          "C": 6
+        },
+        {
+          "A": 3,
+          "B": 5,
+          "C": 2
+        }
+      ],
+      "income": [
+        26,
+        32,
+        34,
+        24
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 17,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 7,
+      "escapeWeeks": [
+        17,
+        17,
+        11,
+        12
+      ],
+      "winners": 4,
+      "averageSteps": 9.1,
+      "skills": [
+        {
+          "A": 4,
+          "B": 5,
+          "C": 2
+        },
+        {
+          "A": 6,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 6,
+          "B": 3,
+          "C": 3
+        },
+        {
+          "A": 6,
+          "B": 5,
+          "C": 4
+        }
+      ],
+      "income": [
+        26,
+        28,
+        56,
+        50
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 4,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 14,
+      "firstAdvancedWeek": 3,
+      "firstCoreWeek": 10,
+      "escapeWeeks": [
+        13,
+        null,
+        14,
+        14
+      ],
+      "winners": 4,
+      "averageSteps": 6.9,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 1
+        },
+        {
+          "A": 1,
+          "B": 4,
+          "C": 1
+        },
+        {
+          "A": 3,
+          "B": 1,
+          "C": 5
+        },
+        {
+          "A": 6,
+          "B": 1,
+          "C": 2
+        }
+      ],
+      "income": [
+        24,
+        24,
+        26,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 18,
+      "firstAdvancedWeek": 5,
+      "firstCoreWeek": 14,
+      "escapeWeeks": [
+        18,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 5,
+      "skills": [
+        {
+          "A": 5,
+          "B": 1,
+          "C": 1
+        },
+        {
+          "A": 1,
+          "B": 2,
+          "C": 1
+        }
+      ],
+      "income": [
+        28,
+        6
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 19,
+      "firstAdvancedWeek": 9,
+      "firstCoreWeek": 13,
+      "escapeWeeks": [
+        19,
+        null
+      ],
+      "winners": 2,
+      "averageSteps": 5.7,
+      "skills": [
+        {
+          "A": 6,
+          "B": 3,
+          "C": 1
+        },
+        {
+          "A": 1,
+          "B": 5,
+          "C": 1
+        }
+      ],
+      "income": [
+        26,
+        20
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 2,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 14,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 11,
+      "escapeWeeks": [
+        null,
+        14
+      ],
+      "winners": 2,
+      "averageSteps": 5.4,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 1
+        },
+        {
+          "A": 1,
+          "B": 5,
+          "C": 2
+        }
+      ],
+      "income": [
+        20,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 28,
+      "firstAdvancedWeek": 8,
+      "firstCoreWeek": 17,
+      "escapeWeeks": [
+        18,
+        null,
+        28
+      ],
+      "winners": 3,
+      "averageSteps": 9.4,
+      "skills": [
+        {
+          "A": 6,
+          "B": 4,
+          "C": 3
+        },
+        {
+          "A": 4,
+          "B": 6,
+          "C": 2
+        },
+        {
+          "A": 6,
+          "B": 4,
+          "C": 3
+        }
+      ],
+      "income": [
+        36,
+        16,
+        26
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 23,
+      "firstAdvancedWeek": 12,
+      "firstCoreWeek": 16,
+      "escapeWeeks": [
+        17,
+        null,
+        23
+      ],
+      "winners": 3,
+      "averageSteps": 7.8,
+      "skills": [
+        {
+          "A": 6,
+          "B": 4,
+          "C": 2
+        },
+        {
+          "A": 5,
+          "B": 6,
+          "C": 2
+        },
+        {
+          "A": 6,
+          "B": 1,
+          "C": 6
+        }
+      ],
+      "income": [
+        46,
+        12,
+        32
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 3,
+      "seed": 20261008,
+      "ended": false,
+      "weeks": 41,
+      "firstAdvancedWeek": 10,
+      "firstCoreWeek": 20,
+      "escapeWeeks": [
+        null,
+        null,
+        33
+      ],
+      "winners": 2,
+      "averageSteps": 7.7,
+      "skills": [
+        {
+          "A": 4,
+          "B": 0,
+          "C": 0
+        },
+        {
+          "A": 4,
+          "B": 6,
+          "C": 1
+        },
+        {
+          "A": 6,
+          "B": 2,
+          "C": 4
+        }
+      ],
+      "income": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 24,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 11,
+      "escapeWeeks": [
+        19,
+        null,
+        24,
+        22
+      ],
+      "winners": 4,
+      "averageSteps": 7.9,
+      "skills": [
+        {
+          "A": 6,
+          "B": 2,
+          "C": 5
+        },
+        {
+          "A": 2,
+          "B": 3,
+          "C": 1
+        },
+        {
+          "A": 1,
+          "B": 2,
+          "C": 6
+        },
+        {
+          "A": 5,
+          "B": 3,
+          "C": 3
+        }
+      ],
+      "income": [
+        38,
+        10,
+        28,
+        34
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 36,
+      "firstAdvancedWeek": 6,
+      "firstCoreWeek": 12,
+      "escapeWeeks": [
+        20,
+        36,
+        15,
+        null
+      ],
+      "winners": 4,
+      "averageSteps": 10.9,
+      "skills": [
+        {
+          "A": 6,
+          "B": 4,
+          "C": 3
+        },
+        {
+          "A": 6,
+          "B": 4,
+          "C": 1
+        },
+        {
+          "A": 2,
+          "B": 2,
+          "C": 6
+        },
+        {
+          "A": 5,
+          "B": 1,
+          "C": 1
+        }
+      ],
+      "income": [
+        42,
+        28,
+        40,
+        18
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 4,
+      "seed": 20261008,
+      "ended": true,
+      "weeks": 29,
+      "firstAdvancedWeek": 4,
+      "firstCoreWeek": 18,
+      "escapeWeeks": [
+        23,
+        null,
+        29,
+        20
+      ],
+      "winners": 4,
+      "averageSteps": 8.5,
+      "skills": [
+        {
+          "A": 6,
+          "B": 4,
+          "C": 3
+        },
+        {
+          "A": 1,
+          "B": 5,
+          "C": 0
+        },
+        {
+          "A": 5,
+          "B": 1,
+          "C": 4
+        },
+        {
+          "A": 6,
+          "B": 3,
+          "C": 1
+        }
+      ],
+      "income": [
+        38,
+        22,
+        34,
+        40
+      ]
+    }
+  ]
+}

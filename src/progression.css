@@ -1,0 +1,106 @@
+.maintenance-strip { display:flex; align-items:center; flex-wrap:wrap; gap:5px; background:#f6ecd8ef; border-radius:4px; padding:6px 9px; font-size:10px; color:#71654d; }
+.maintenance-strip>span:last-child { margin-left:auto; font-size:9px; }
+.maintenance-strip .effect-token { font-size:10px; padding:1px 3px; }
+.maintenance-strip .effect-token svg { width:12px; height:12px; }
+.skill-tray { display:grid; grid-template-columns:repeat(3,1fr) auto; gap:8px; margin:9px 0 12px; align-items:start; }
+.skill-stack { color:#4b4b3d; background:#e2d5bdec; border:1px solid #c2b08e; border-radius:5px; box-shadow:inset 0 2px 4px #66513232,inset 0 -1px 1px #fff7e4; padding:5px; }
+.skill-stack summary { cursor:pointer; display:flex; gap:7px; align-items:center; padding:5px; background:var(--wash); border-top:3px solid var(--family); border-radius:3px; box-shadow:0 2px 1px #6651322a; font-size:11px; }
+.skill-stack summary svg { color:var(--family); }
+.skill-stack summary b { font-family:Georgia,serif; margin-left:auto; font-size:23px; color:var(--family); }
+.skill-stack>div { display:flex; flex-direction:column; gap:4px; padding-top:7px; }
+.skill-slip { padding:4px 7px; background:#fff5dc; border-left:3px solid var(--family); box-shadow:0 1px 2px #55452222; font-size:10px; }
+.atlas-link { align-self:stretch; display:flex; align-items:center; gap:5px; border:0; background:#e7dbc3; color:#63543e; border-radius:4px; font-size:10px; padding:8px; }
+.upgrades-tray { display:flex; flex-wrap:wrap; gap:9px; margin:8px 0 12px; }
+.upgrade-plaque { display:flex; align-items:center; gap:9px; border:2px solid #bd9e51; border-radius:6px; padding:8px 12px; color:var(--family); background:var(--wash); box-shadow:0 3px 0 #977f51,0 5px 7px #5e4a2225; }
+.upgrade-plaque b,.upgrade-plaque small { display:block; text-align:left; font-size:12px; }
+.upgrade-plaque small { color:#7c715c; font-size:9px; margin-top:3px; }
+.skill-requirements { display:flex; flex-wrap:wrap; gap:3px; align-items:center; }
+.skill-symbol { display:inline-flex; align-items:center; justify-content:center; gap:1px; border:1px solid color-mix(in srgb,var(--family),white 55%); background:var(--wash); border-radius:3px; color:var(--family); padding:2px; font-size:9px; font-weight:700; }
+.skill-requirements small { color:#736957; font-size:10px; margin-left:4px; }
+.tabletop-face .skill-requirements { justify-content:center; }
+.compact-face .skill-symbol { font-size:8px; padding:0 1px; }
+.compact-face .skill-symbol svg { width:9px; height:9px; }
+.slot .duration-1 { gap:2px; }
+.slot .duration-1 .special-rules,.game-card[data-hours="1"] .special-rules { display:none; }
+.slot .duration-1 .face-heading { flex-direction:row; gap:3px; }
+.slot .duration-1 .face-symbol svg { width:13px; height:13px; }
+.slot .duration-1 .face-name { font-size:9px; }
+.game-card { min-height:0; }
+.game-card[data-hours="1"] .skill-symbol { font-size:7px; padding:0 1px; }
+.game-card[data-hours="1"] .skill-symbol svg { width:8px; height:8px; }
+.card-bottom { gap:4px; }
+.detail-button { border:0; padding:2px; display:flex; background:transparent; color:#8b7859; }
+.placement-label { min-width:0; font-size:10px; }
+.muted-note { font-size:8px; opacity:.65; }
+.plan-warnings { margin-top:10px; font-size:11px; color:#ab5544; }
+.plan-warnings summary { cursor:pointer; }
+.plan-warnings p { color:#a05848; padding:4px 0; font-size:10px; }
+.dialog-panel.catalogue-dialog { max-width:1080px; width:min(1080px,95vw); }
+.route-catalogue { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.route-column h3 { color:var(--family); display:flex; gap:8px; align-items:center; }
+.atlas-card { display:block; text-align:left; width:100%; background:var(--wash); border:1px solid #d8cdb7; border-left:4px solid var(--family); border-radius:6px; padding:12px; margin:12px 0; color:#4e513e; box-shadow:0 3px 4px #67523112; }
+.atlas-card>div:first-child { display:flex; gap:5px; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.atlas-card b { font-size:13px; }
+.atlas-card span:not(.effect-token):not(.skill-symbol):not(.engine-token) { font-size:10px; }
+.atlas-card .effect-ribbon { justify-content:flex-start; margin-top:9px; }
+.atlas-card p { margin:8px 0 0; font-size:11px; line-height:1.6; color:#766d57; }
+.atlas-card.core-card { outline:1px solid #c6a05b; background:linear-gradient(135deg,#ffedba66,transparent),var(--wash); }
+.card-reference { background:var(--wash); border-top:6px solid var(--family); padding:20px; border-radius:6px; margin:20px 0; }
+.card-reference .tabletop-face { min-height:0; gap:15px; padding:15px; }
+.card-reference .face-heading { flex-direction:row; }
+.card-reference p { font-size:13px; line-height:1.9; }
+.card-reference .special-rules { font-size:13px; }
+.draft-section { margin:20px 0; padding:18px; border:1px solid #c4a96f; border-radius:8px; background:#eee2c7; box-shadow:inset 0 2px 5px #6f53231c; }
+.draft-section h3 { margin:0; }
+.draft-offer>p { font-size:12px; line-height:1.7; }
+.draft-options { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.draft-card { border-top:5px solid var(--family); padding:14px; background:var(--wash); border-radius:5px; box-shadow:0 3px 0 #b5a382,0 6px 12px #6950271c; }
+.draft-card .tabletop-face { min-height:0; gap:12px; }
+.draft-card .face-heading { flex-direction:row; }
+.draft-card .special-rules { font-size:11px; }
+.draft-card .primary-button { margin-top:12px; font-size:12px; }
+.quick-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; position:sticky; top:0; z-index:6; background:#20392feb; backdrop-filter:blur(10px); color:#d9dac4; padding:8px 12px; margin-top:8px; border:1px solid #d4c39555; border-radius:6px; box-shadow:0 3px 9px #10271f44; font-size:12px; }
+.quick-actions>div { display:flex; align-items:center; gap:8px; }
+.quick-actions button { font-size:12px; padding:7px 12px; min-height:32px; }
+.quick-actions .outline-button { color:#eee1c3; border-color:#b5aa8777; }
+.selection-notice { top:53px; }
+button:focus-visible,[tabindex]:focus-visible,summary:focus-visible { outline:3px solid #d6a743; outline-offset:3px; }
+@media(max-width:900px) { .skill-tray { grid-template-columns:repeat(3,1fr); } .atlas-link { grid-column:1/-1; justify-content:center; } .route-catalogue { grid-template-columns:1fr; } .route-column { border-bottom:1px solid #cbbfaa; } .maintenance-strip>span:last-child { width:100%; } }
+@media(max-width:600px) { .skill-stack summary { gap:4px; font-size:9px; } .skill-stack summary svg { width:15px; } .quick-actions { flex-wrap:wrap; font-size:10px; gap:6px; } .quick-actions>div { width:100%; } .quick-actions button { flex:1; } .draft-options { grid-template-columns:1fr; } .draft-section { padding:10px; } .dialog-panel { padding:24px 16px; } }
+
+.route-starters { display:flex; flex-wrap:wrap; gap:5px; margin:15px 0; }
+.route-starters>small { width:100%; font-size:10px; color:#86785e; margin-bottom:4px; }
+.route-starters button { background:#f5ead7; border:1px solid #d8cbb5; border-radius:4px; padding:6px; color:var(--family); font-size:11px; }
+.route-starters button span { display:block; font-size:9px; color:#8a7b60; margin-top:3px; }
+.slot-editor { scroll-margin-top:80px; }
+
+.basic-catalogue { border-bottom:1px solid #cbbfaa; margin-bottom:22px; padding-bottom:14px; }
+.basic-catalogue summary { cursor:pointer; font-size:13px; color:#5c654a; }
+.basic-catalogue .route-column { --family:#55634b; }
+@media(min-width:901px) { .basic-catalogue .route-catalogue { grid-template-columns:1.5fr 1fr; } }
+
+/* Face-down route stacks and personal project. */
+.growth-panel { padding:16px 18px 20px; border-top:1px solid #c8b88155; }
+.growth-decks { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; max-width:620px; margin:14px auto 0; }
+.growth-deck { position:relative; display:flex; align-items:center; flex-direction:column; gap:8px; padding:18px 8px; border:5px double #f4e6c27a; border-radius:7px; color:#fff4d7; background:repeating-linear-gradient(45deg,#ffffff06 0 2px,transparent 2px 9px),var(--family); box-shadow:2px 3px 0 #d5c5a1,4px 6px 0 #746548,5px 9px 9px #0c211c55; }
+.growth-deck b { font-size:14px; }.growth-deck small { font-size:10px; }
+.deck-seal { border:1px solid #f4e6c299; border-radius:50%; padding:9px; }
+.market-footnote { color:#d2c8ac; font-size:11px; text-align:center; line-height:1.7; margin:18px 0 0; }
+.personal-project { display:flex; align-items:center; gap:10px; padding:10px 14px; margin:8px 0; border:1px solid #baa57e; border-radius:5px; background:#e7d9ba; color:#66543a; box-shadow:inset 0 2px 5px #65502e25; }
+.personal-project>span { flex:1; font-size:12px; }.personal-project small { display:block; font-size:10px; margin-top:4px; }.personal-project .outline-button { flex-shrink:0; }
+@media(max-width:650px) {.growth-decks { gap:10px; }.growth-deck { padding:14px 4px; }.growth-deck b { font-size:12px; }.personal-project { flex-wrap:wrap; } }
+
+/* Shared acquisition: card function never splits the market. */
+.market-groups { display:flex; flex-direction:column; gap:22px; }
+.market-grid.duration-market-grid { display:flex; flex-wrap:wrap; align-items:flex-start; gap:14px; overflow:visible; }
+.duration-market-grid .game-card { width:150px; min-width:150px; flex:0 0 150px; }
+.duration-market { padding:0 0 16px; border-bottom:1px solid #dac9a129; }
+
+#shelf { scroll-margin-top:66px; }
+.duration-market-grid { --card-unit:66px; }
+
+/* A physical event marker covers the reserved half-day without discarding its card. */
+.physical-well.event-blocked { border-color:#a9563c; }
+.event-blocked .slot { position:relative; }
+.event-blocked .tabletop-face { opacity:.45; }
+.event-block-banner { position:absolute; left:5px; right:5px; top:45%; display:flex; align-items:center; justify-content:center; gap:5px; padding:10px 3px; background:#9c493beb; color:#fff5dc; border:1px solid #d0a57a; border-radius:3px; font-size:11px; box-shadow:0 3px 5px #47221635; }
