@@ -1,8 +1,9 @@
 // Color and symbol together identify a route; color is never the only cue.
 export const FAMILIES = {
   creative: { name: '创作', color: '#c95151', icon: 'pen' },
-  technical: { name: '技术', color: '#376fc1', icon: 'layers' },
-  business: { name: '经营', color: '#b57c20', icon: 'shop' },
+  technical: { name: '开发', color: '#378358', icon: 'layers' },
+  business: { name: '商业', color: '#b57c20', icon: 'shop' },
+  career: { name: '职场', color: '#627084', icon: 'bag' },
   recovery: { name: '生活', color: '#378358', icon: 'leaf' },
   inspiration: { name: '灵感', color: '#238a99', icon: 'book' },
   time: { name: '时间机会', color: '#8054b7', icon: 'moon' },
@@ -10,6 +11,7 @@ export const FAMILIES = {
 };
 export const hours = size => ({ 1: 2, 2: 4, 3: 8 }[size] || 4);
 export function familyOf(def) {
+  if (def.route) return { W: 'career', A: 'creative', B: 'technical', C: 'business' }[def.route];
   if (def.kind === 'opportunity' || def.unlockWeekend) return 'time';
   if (def.category === '生活' || def.category === '恢复') return 'recovery';
   if (def.category === '灵感') return 'inspiration';

@@ -32,10 +32,14 @@ function skills(pattern, gain=false) {
 export function cardFace(d,compact=false,c=null) {
   const progress=c?.progress||0, target=d.progressTarget;
   const rule=d.unlockWeekend?'本周先完成副业；完成后永久双休，工资不变':d.rule;
-  return `<div class="tabletop-face illustrated-face family-${familyOf(d)} duration-${hours(d.size)} ${compact?'compact-face':''} ${d.minSanity||d.stress?'has-mind':''}" style="--card-hours:${hours(d.size)}">
+  const dice=d.dice?Object.entries(d.dice.faces.reduce((out,n,i)=>((out[n]||=[]).push(i+1),out),{})).map(([n,faces])=>`<span class="dice-outcome"><span class="die-faces" aria-label="骰点 ${faces.join('、')}">${faces.map(f=>`<span aria-hidden="true">${'⚀⚁⚂⚃⚄⚅'[f-1]}</span>`).join('')}</span><span>→</span>${badge('money',n,`${d.dice.resource==='salary'?'奖金':'骰面副业收入'} ${n}`)}</span>`).join(''):'';
+  return `<div class="tabletop-face illustrated-face family-${familyOf(d)} duration-${hours(d.size)} ${compact?'compact-face':''} ${d.minSanity||d.maxSanity<10||d.stress?'has-mind':''}" style="--card-hours:${hours(d.size)}">
     <header class="printed-title"><span class="route-emblem">${icon(d.icon,14)}</span><strong>${esc(d.name)}</strong></header>
-    <div class="mind-corner">${d.minSanity?badge('sanity','≥'+d.minSanity,`安排和执行要求理智 ≥${d.minSanity}`):''}${d.stress?badge('sanity','−'+d.stress,`日程压力 ${d.stress}，撤回解除`,'reversible'):''}</div>
+    <div class="mind-corner">${d.maxSanity<10?badge('sanity','≤'+d.maxSanity,`安排和执行要求理智 ≤${d.maxSanity}`):d.minSanity?badge('sanity','≥'+d.minSanity,`安排和执行要求理智 ≥${d.minSanity}`):''}${d.stress?badge('sanity','−'+d.stress,`日程压力 ${d.stress}，撤回解除`,'reversible'):''}</div>
     <div class="printed-effects"><div class="resource-equation">${resources(d.cost,'−')}${Object.keys(d.cost||{}).length&&Object.keys(d.gain||{}).length?'<span class="effect-arrow" aria-hidden="true">→</span>':''}${resources(d.gain)}</div>
+    ${dice?`<div class="dice-table" aria-label="执行时掷一次骰">${dice}</div>`:''}
+    ${d.professional?`<span class="professional-mark" title="履职，不算摸鱼；仅工作白天可安排">${icon('bag',13)} ${icon('check',12)}</span>`:''}
+    ${d.capital?`<span class="capital-mark" title="安排时锁定本金 ${d.capital}，撤回返还">${icon('lock',12)}${badge('money',c?.lockedCapital||d.capital,`锁定本金 ${d.capital}`)}</span>`:''}
     ${d.requires?skills(d.requires):''}${d.skill?skills(d.skill,true):''}
     ${d.draft?`<span class="draft-glyph" title="从未亮出的高级牌抽二选一">${icon('layers',14)} 2 → 1</span>`:''}
     ${rule?`<p class="printed-rule">${esc(rule)}</p>`:''}

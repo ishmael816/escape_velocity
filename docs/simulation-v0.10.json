@@ -1,0 +1,689 @@
+{
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "games": [
+    {
+      "starterActivity": "W01",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        9,
+        null
+      ],
+      "averageSlots": 7.7,
+      "maxSlots": 13,
+      "income": [
+        10,
+        5
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null
+      ],
+      "averageSlots": 8.2,
+      "maxSlots": 13,
+      "income": [
+        5,
+        4
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        9,
+        null
+      ],
+      "averageSlots": 7,
+      "maxSlots": 9,
+      "income": [
+        10,
+        5
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 11,
+      "escapeWeeks": [
+        null,
+        11,
+        8
+      ],
+      "averageSlots": 8.2,
+      "maxSlots": 10,
+      "income": [
+        6,
+        10,
+        10
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        10,
+        null
+      ],
+      "averageSlots": 9.7,
+      "maxSlots": 12,
+      "income": [
+        0,
+        9,
+        7
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        12,
+        null
+      ],
+      "averageSlots": 7.1,
+      "maxSlots": 10,
+      "income": [
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        14,
+        null,
+        11
+      ],
+      "averageSlots": 12.5,
+      "maxSlots": 15,
+      "income": [
+        5,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 10.7,
+      "maxSlots": 14,
+      "income": [
+        5,
+        5,
+        9,
+        4
+      ]
+    },
+    {
+      "starterActivity": "W01",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        14,
+        null,
+        10
+      ],
+      "averageSlots": 10.5,
+      "maxSlots": 14,
+      "income": [
+        8,
+        9,
+        4,
+        8
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        9,
+        null
+      ],
+      "averageSlots": 8.1,
+      "maxSlots": 13,
+      "income": [
+        10,
+        3
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 10,
+      "escapeWeeks": [
+        10,
+        null
+      ],
+      "averageSlots": 8.1,
+      "maxSlots": 12,
+      "income": [
+        10,
+        6
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        8,
+        null
+      ],
+      "averageSlots": 7,
+      "maxSlots": 9,
+      "income": [
+        10,
+        5
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        8,
+        null,
+        null
+      ],
+      "averageSlots": 11.7,
+      "maxSlots": 14,
+      "income": [
+        6,
+        9,
+        6
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        12,
+        null
+      ],
+      "averageSlots": 8.9,
+      "maxSlots": 12,
+      "income": [
+        6,
+        10,
+        4
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 10.4,
+      "maxSlots": 12,
+      "income": [
+        7,
+        2,
+        7
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        15,
+        null,
+        7
+      ],
+      "averageSlots": 11.2,
+      "maxSlots": 14,
+      "income": [
+        8,
+        10,
+        3,
+        10
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 12,
+      "income": [
+        4,
+        9,
+        7,
+        8
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        20,
+        null,
+        null
+      ],
+      "averageSlots": 11.9,
+      "maxSlots": 14,
+      "income": [
+        9,
+        10,
+        7,
+        9
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        null,
+        9
+      ],
+      "averageSlots": 7.4,
+      "maxSlots": 12,
+      "income": [
+        9,
+        10
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 14,
+      "escapeWeeks": [
+        null,
+        14
+      ],
+      "averageSlots": 9.3,
+      "maxSlots": 13,
+      "income": [
+        4,
+        10
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        null,
+        9
+      ],
+      "averageSlots": 8.2,
+      "maxSlots": 11,
+      "income": [
+        4,
+        10
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        11,
+        null
+      ],
+      "averageSlots": 9,
+      "maxSlots": 12,
+      "income": [
+        3,
+        10,
+        1
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 9.3,
+      "maxSlots": 11,
+      "income": [
+        8,
+        7,
+        8
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 9.1,
+      "maxSlots": 12,
+      "income": [
+        7,
+        2,
+        7
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 15,
+      "escapeWeeks": [
+        null,
+        14,
+        6,
+        15
+      ],
+      "averageSlots": 11,
+      "maxSlots": 14,
+      "income": [
+        1,
+        10,
+        8,
+        10
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        12,
+        null
+      ],
+      "averageSlots": 11.6,
+      "maxSlots": 13,
+      "income": [
+        4,
+        5,
+        9,
+        9
+      ]
+    },
+    {
+      "starterActivity": "B02",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        8,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 9.3,
+      "maxSlots": 12,
+      "income": [
+        10,
+        4,
+        7,
+        9
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 10,
+      "escapeWeeks": [
+        10,
+        10
+      ],
+      "averageSlots": 7,
+      "maxSlots": 11,
+      "income": [
+        10,
+        10
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 13,
+      "escapeWeeks": [
+        null,
+        13
+      ],
+      "averageSlots": 8.1,
+      "maxSlots": 11,
+      "income": [
+        7,
+        10
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 10,
+      "escapeWeeks": [
+        10,
+        null
+      ],
+      "averageSlots": 7.2,
+      "maxSlots": 10,
+      "income": [
+        10,
+        4
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        14,
+        null
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 10,
+      "income": [
+        7,
+        10,
+        9
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        12
+      ],
+      "averageSlots": 11.4,
+      "maxSlots": 14,
+      "income": [
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        11
+      ],
+      "averageSlots": 8.1,
+      "maxSlots": 12,
+      "income": [
+        4,
+        3,
+        10
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        13,
+        null,
+        9
+      ],
+      "averageSlots": 11.4,
+      "maxSlots": 13,
+      "income": [
+        4,
+        10,
+        5,
+        6
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 11,
+      "income": [
+        4,
+        5,
+        3,
+        9
+      ]
+    },
+    {
+      "starterActivity": "C01",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        9
+      ],
+      "averageSlots": 10.6,
+      "maxSlots": 14,
+      "income": [
+        1,
+        6,
+        5,
+        10
+      ]
+    }
+  ]
+}
