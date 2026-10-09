@@ -22,6 +22,7 @@ export function familyOf(def) {
 }
 export function specialRules(def) {
   const rules = [];
+  if(def.support)rules.push(`占用日程提供理智支持 +${def.support}；查岗揭晓后、普通活动前每周付 ${def.upkeep} 钱。多张按日程顺序支付；付不起、查停、团建或同晚超过 2h 时失效且不收费。撤回解除，不跨周累加`);
   if (def.rule) rules.push(def.rule);
   if (def.progressTarget) rules.push(`每周至多推进一次，共 ${def.progressTarget} 次；每次付执行消耗，满格才获得效果并离场`);
   if (def.skill) rules.push(`完成 → ${def.skill} 技能（同名只计一次）`);

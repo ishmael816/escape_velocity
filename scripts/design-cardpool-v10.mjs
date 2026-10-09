@@ -1,4 +1,4 @@
-// Design data only. This does not replace the playable v0.9 engine or card pool.
+// Source for the playable pool, including the v0.11 support-card experiment.
 import { writeFileSync } from 'node:fs';
 
 const cards=[];
@@ -59,6 +59,12 @@ add('C10','自有品牌',8,10,1,normal,'CCCC','repeat',{}, {profit:4},'',{advanc
 add('C11','创作者商店',8,9,0,normal,'AAC','repeat',{inspiration:1}, {profit:3},'',{advanced:true,capital:6});
 add('C12','企业客户长约',8,9,1,any,'CCW','repeat',{}, {profit:3},'理智 ≤1 时，副业收入额外 +1。',{advanced:true,capital:6,conditionalBonus:1,condition:'lowSanity'});
 
+// Support is a reversible schedule contribution, never a resource gain.
+add('A13','公园写生',2,2,0,any,'','repeat',{}, {},'',{support:1,upkeep:1});
+add('B13','手作工坊',4,3,0,any,'','repeat',{}, {},'',{support:2,upkeep:1});
+add('C13','健身私教',2,3,0,any,'','repeat',{}, {},'',{support:2,upkeep:2});
+add('W13','心理咨询',4,4,0,any,'','repeat',{}, {},'',{support:3,upkeep:2});
+
 const projects=[
  {id:'P01',name:'争取双休',hours:8,price:4,stress:0,minSanity:2,maxSanity:10,requires:'WW',kind:'project',cost:{money:1},gain:{},progress:3,professional:true,effect:'每次推进须本周此前成功执行过副业。完成后永久释放周六，工资不变，自主状态 +2（一次性身份变化，不是每周回血）。'},
  {id:'P02',name:'弹性工作授权',hours:4,price:4,stress:0,minSanity:0,maxSanity:10,requires:'WWW',kind:'project',cost:{money:2},gain:{},progress:1,professional:true,effect:'完成后的下一周起，每周周初标记一个工作时段：该时段的一张 2h 非履职活动免受查岗；查岗骰落定前必须选好，本周不可移动。不保护 4h/8h、团建或熬夜。'}
@@ -72,15 +78,15 @@ const events=[
  {id:'E06',name:'发放奖金',copies:1,inspectionCount:0,cash:2},
  {id:'E07',name:'本周双休',copies:1,inspectionCount:0,temporaryWeekend:true},
 ];
-const design={status:'playable-prototype',version:'0.10.0',routes:{W:{name:'职场',color:'无色/灰',icon:'公文包'},A:{name:'创作',color:'红',icon:'笔尖'},B:{name:'开发',color:'绿',icon:'齿轮'},C:{name:'商业',color:'黄',icon:'店铺'}},baseline:{money:8,sanity:3,inspiration:4,salary:2,passMoney:1,escapeIncomeAtLeast:10,incomeTrackMax:10,perActivityIncomeMax:4,searchEmptyCompensation:1,night4hStress:4},market:{2:5,4:4,8:3},inspection:{dieSides:6,rollAfter:'schedule-locked',sharedByAllPlayers:true,periods:['am','pm'],rerollDuplicates:false,repeatPenalty:false,finePerActivity:1,pauseCaughtActivity:true,sanityPenalty:0},events,cards,projects};
+const design={status:'playable-prototype',version:'0.11.0',routes:{W:{name:'职场',color:'无色/灰',icon:'公文包'},A:{name:'创作',color:'红',icon:'笔尖'},B:{name:'开发',color:'绿',icon:'齿轮'},C:{name:'商业',color:'黄',icon:'店铺'}},baseline:{money:8,sanity:3,inspiration:4,salary:2,passMoney:1,escapeIncomeAtLeast:10,escapeSanityAtLeast:6,incomeTrackMax:10,perActivityIncomeMax:4,searchEmptyCompensation:1,night4hStress:4},market:{2:5,4:4,8:3},inspection:{dieSides:6,rollAfter:'schedule-locked',sharedByAllPlayers:true,periods:['am','pm'],rerollDuplicates:false,repeatPenalty:false,finePerActivity:1,pauseCaughtActivity:true,sanityPenalty:0},events,cards,projects};
 writeFileSync('docs/cardpool-v0.10.json',JSON.stringify(design,null,2)+'\n');
 const amount=v=>Object.entries(v).map(([key,n])=>`${{money:'钱',inspiration:'灵感',profit:'副业',salary:'工资附加',cash:'普通现金'}[key]} ${n}`).join('、')||'—';
 const gate=d=>d.maxSanity<10?`≤${d.maxSanity}`:d.minSanity?`≥${d.minSanity}`:'不限';
-let md='# 四流派卡池 v0.10 · 完整牌表\n\n已接入网页 v0.10，仍需真人对局检验平衡。字段、结算与数值检查见 [设计说明](cardpool-design-v0.10.md)。由 `node scripts/design-cardpool-v10.mjs` 生成。\n\n购买价支付一次；本金在安排时锁定，撤回时返还；执行消耗/收益每次成功执行发生。归档牌成功后离开日程并留下主色技能；无任何理智恢复收益。履职牌仅工作日白天工作槽可用，不算摸鱼。副业收益才计逃离，工资附加与普通现金不计。\n\n';
-md+=`试玩基准：起始资金 ${design.baseline.money}；每周固定收入 ${design.baseline.salary}，没有生活费；整备拿 ${design.baseline.passMoney}。当周收入轨道 0–${design.baseline.incomeTrackMax}，达到 ${design.baseline.escapeIncomeAtLeast} 逃离；不跨周积累。每张副业含所有加成最多收入 ${design.baseline.perActivityIncomeMax}。\n\n周初事件只预告查岗次数；日程锁定后掷对应数量的 D6，1–6 对应周一至周六，全体共用结果、重复不重掷、同牌不重复受罚，查当天白天。被查活动本周暂停、每张罚 1 钱，不影响理智，不按时长加罚。活动骰逐张独立掷，牌面骰表为额外收益，和固定执行收益相加；绿色只翻倍固定收入，最终仍封顶 4。详见 [骰子规则与概率](dice-design-v0.10.md)。\n\n`;
+let md='# 四流派卡池 v0.11 · 完整牌表\n\n已接入网页 v0.11，仍需真人对局检验平衡。支持牌规则见 [v0.11 实验说明](support-design-v0.11.md)。文件路径沿用 v0.10。字段、结算与数值检查见 [设计说明](cardpool-design-v0.10.md)。由 `node scripts/design-cardpool-v10.mjs` 生成。\n\n购买价支付一次；本金在安排时锁定，撤回时返还；执行消耗/收益每次成功执行发生。归档牌成功后离开日程并留下主色技能；支持牌提供可逆理智状态，结算前付维持费，不累加；被查停、团建阻断、4h 熬夜或付不起费用时失效。多张按日程顺序付费，当周收入与工资不能补缴。履职牌仅工作日白天工作槽可用，不算摸鱼。副业收益才计逃离，工资附加与普通现金不计。\n\n';
+md+=`试玩基准：起始资金 ${design.baseline.money}；每周固定收入 ${design.baseline.salary}，没有生活费；整备拿 ${design.baseline.passMoney}。当周收入轨道 0–${design.baseline.incomeTrackMax}，达到 ${design.baseline.escapeIncomeAtLeast} 且理智 ≥${design.baseline.escapeSanityAtLeast} 才可逃离；不跨周积累。每张副业含所有加成最多收入 ${design.baseline.perActivityIncomeMax}。\n\n周初事件只预告查岗次数；日程锁定后掷对应数量的 D6，1–6 对应周一至周六，全体共用结果、重复不重掷、同牌不重复受罚，查当天白天。被查活动本周暂停、每张罚 1 钱，不影响理智，不按时长加罚。活动骰逐张独立掷，牌面骰表为额外收益，和固定执行收益相加；绿色只翻倍固定收入，最终仍封顶 4。详见 [骰子规则与概率](dice-design-v0.10.md)。\n\n`;
 for(const [route,info]of Object.entries(design.routes)){
  md+=`## ${info.color} · ${info.name}\n\n| 编号／名称 | h | 买价 | 本金 | 压力 | 理智 | 技能 | 类型 | 执行消耗 | 执行收益 | 特殊效果 |\n|---|---:|---:|---:|---:|---|---|---|---|---|---|\n`;
- for(const d of cards.filter(d=>d.route===route))md+=`| ${d.id} ${d.name} | ${d.hours} | ${d.price} | ${d.capital||'—'} | ${d.stress} | ${gate(d)} | ${d.requires||'—'} | ${d.kind==='growth'?'一次归档':'常驻'}${d.professional?'·履职':''} | ${amount(d.cost)} | ${amount(d.gain)} | ${d.effect||'—'} |\n`;
+ for(const d of cards.filter(d=>d.route===route))md+=`| ${d.id} ${d.name} | ${d.hours} | ${d.price} | ${d.capital||'—'} | ${d.stress} | ${gate(d)} | ${d.requires||'—'} | ${d.kind==='growth'?'一次归档':'常驻'}${d.professional?'·履职':''} | ${amount(d.cost)} | ${amount(d.gain)} | ${d.support?'理智支持 +'+d.support+'；每周维持费 '+d.upkeep+' 钱':d.effect||'—'} |\n`;
  md+='\n';
 }
 md+='## 玩家板固定项目（每人一套，不混入市场）\n\n| 名称 | h | 启动买价 | 压力 | 理智 | 信用 | 每次消耗 | 进度 | 效果 |\n|---|---:|---:|---:|---|---|---|---|---|\n';
