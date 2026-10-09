@@ -1,0 +1,6826 @@
+{
+  "method": "Player 0 builds basic repeats with duplicates and no recovery, against two default bots, 100 seeds. No skills/advanced/search cards. Heuristic, not optimal.",
+  "summary": {
+    "games": 100,
+    "ended": 100,
+    "escaped": 0,
+    "escapeWeek": {}
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "errands",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 2,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 3,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "errands",
+        "music",
+        "microjob",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 4,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 2
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "proofread",
+        "music",
+        "library",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 5,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 6,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 2
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 2,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "music",
+        "proofread",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 7,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 12,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 13,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "podcast",
+        "microjob",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 8,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "reading",
+        "proofread",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 9,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "tutoring",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 10,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 2,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "market-service",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 11,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 2,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "proofread",
+        "reading",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 12,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "market-service",
+        "microjob",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 13,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "microjob",
+        "market-service",
+        "library",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 14,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 0,
+          "sanity": 0,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 0,
+          "sanity": 0,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "market-service",
+        "music",
+        "music",
+        "proofread",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 15,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 0,
+          "sanity": 0,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 0,
+          "sanity": 0,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "market-service",
+        "podcast",
+        "microjob",
+        "music",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 16,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "microjob",
+        "podcast",
+        "proofread",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 17,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "tutoring",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 18,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "microjob",
+        "microjob",
+        "reading",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 19,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "proofread",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 20,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "tutoring",
+        "market-service",
+        "music",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 21,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "market-service",
+        "library",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 22,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "music",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 23,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "tutoring",
+        "tutoring",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 24,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "music",
+        "library",
+        "tutoring",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 25,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "microjob",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 26,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 10,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 11,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 12,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 13,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "tutoring",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 27,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "microjob",
+        "microjob",
+        "music",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 28,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "microjob",
+        "microjob",
+        "music",
+        "library",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 29,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "microjob",
+        "market-service",
+        "music",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 30,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "microjob",
+        "library",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 31,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "music",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 32,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "music",
+        "market-service",
+        "library",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 33,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "errands",
+        "tutoring",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 34,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "microjob",
+        "microjob",
+        "podcast",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 35,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "errands",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 36,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "proofread",
+        "market-service",
+        "library",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 37,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 12,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 13,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 14,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 15,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "microjob",
+        "microjob",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 38,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 11,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "market-service",
+        "music",
+        "reading",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 39,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "microjob",
+        "errands",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 40,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 7
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "proofread",
+        "music",
+        "market-service",
+        "music",
+        "podcast",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 41,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "microjob",
+        "market-service",
+        "library",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 42,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 10,
+          "income": 0,
+          "sanity": 0,
+          "cards": 6
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 12,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "proofread",
+        "market-service",
+        "music",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 43,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "errands",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 44,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "errands",
+        "proofread",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 45,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "errands",
+        "microjob",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 46,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "proofread",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 47,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 12,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 13,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 14,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "market-service",
+        "library",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 48,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "tutoring",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 49,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "market-service",
+        "music",
+        "podcast",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 50,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "microjob",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 51,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "errands",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 52,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "proofread",
+        "market-service",
+        "music",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 53,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "proofread",
+        "errands",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 54,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "proofread",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 55,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "errands",
+        "market-service",
+        "music",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 56,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 9,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 10,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 11,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 12,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 13,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 14,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 15,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 16,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "proofread",
+        "errands",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 57,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 12,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 13,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "microjob",
+        "music",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 58,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 12,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 13,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "tutoring",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 59,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 9,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 10,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 11,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 12,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 13,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 14,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 15,
+          "income": 0,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 16,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "proofread",
+        "microjob",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 60,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "errands",
+        "errands",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 61,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "market-service",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 62,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "errands",
+        "music",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 63,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 12,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "errands",
+        "tutoring",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 64,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 12,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 65,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "errands",
+        "music",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 66,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "microjob",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 67,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 68,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "proofread",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 69,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "tutoring",
+        "tutoring",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 70,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "proofread",
+        "library",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 71,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "errands",
+        "music",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 72,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "errands",
+        "microjob",
+        "reading",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 73,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "market-service",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 74,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "library",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 75,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "errands",
+        "market-service",
+        "music"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 76,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "microjob",
+        "market-service",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 77,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "tutoring",
+        "market-service",
+        "music",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 78,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 79,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 5,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 6,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "microjob",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 80,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 6
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "microjob",
+        "music",
+        "market-service",
+        "podcast",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 81,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "tutoring",
+        "music",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 82,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 0,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "podcast",
+        "tutoring",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 83,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 12,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 13,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 14,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 15,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "microjob",
+        "music",
+        "microjob",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 84,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 2,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "microjob",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 85,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 12,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 13,
+          "income": 6,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "tutoring",
+        "music",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 86,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "microjob",
+        "microjob",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 87,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "errands",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 88,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 12,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 13,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 14,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 15,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 16,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 17,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "market-service",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 89,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 2,
+          "sanity": 0,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "tutoring",
+        "library",
+        "proofread",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 90,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "microjob",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 91,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 92,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "microjob",
+        "music",
+        "errands"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 93,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 5,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 8,
+          "income": 0,
+          "sanity": 0,
+          "cards": 3
+        },
+        {
+          "week": 9,
+          "income": 6,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 10,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 11,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 12,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "tutoring",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 94,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 5,
+          "income": 2,
+          "sanity": 1,
+          "cards": 3
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "market-service",
+        "tutoring"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 95,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 9,
+          "income": 0,
+          "sanity": 0,
+          "cards": 5
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 11,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 12,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "music",
+        "music",
+        "microjob",
+        "proofread"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 96,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 2
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 9,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 10,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 11,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "market-service",
+        "reading",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 97,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 9,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 3,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 8,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "music",
+        "market-service",
+        "library",
+        "tutoring",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 98,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "reading",
+        "errands",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 99,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 2,
+          "sanity": 2,
+          "cards": 2
+        },
+        {
+          "week": 2,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 3,
+          "income": 2,
+          "sanity": 2,
+          "cards": 3
+        },
+        {
+          "week": 4,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 7,
+          "income": 9,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "library",
+        "market-service",
+        "market-service",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0
+    },
+    {
+      "seed": 100,
+      "ended": true,
+      "escaped": false,
+      "escapeWeek": null,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 1,
+          "cards": 3
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 1,
+          "cards": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 4,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        },
+        {
+          "week": 6,
+          "income": 4,
+          "sanity": 1,
+          "cards": 5
+        }
+      ],
+      "cards": [
+        "microjob",
+        "music",
+        "proofread",
+        "music",
+        "reading",
+        "market-service",
+        "market-service"
+      ],
+      "skills": 0
+    }
+  ]
+}

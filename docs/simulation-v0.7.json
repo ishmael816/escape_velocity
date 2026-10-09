@@ -1,0 +1,689 @@
+{
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "games": [
+    {
+      "starterRecovery": "outing",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        5
+      ],
+      "averageSlots": 9,
+      "maxSlots": 12,
+      "income": [
+        49,
+        32
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        null
+      ],
+      "averageSlots": 7.6,
+      "maxSlots": 10,
+      "income": [
+        32,
+        12
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 4,
+      "escapeWeeks": [
+        null,
+        4
+      ],
+      "averageSlots": 7,
+      "maxSlots": 8,
+      "income": [
+        4,
+        42
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        8,
+        7,
+        null
+      ],
+      "averageSlots": 9.4,
+      "maxSlots": 14,
+      "income": [
+        29,
+        40,
+        18
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        8,
+        8,
+        6
+      ],
+      "averageSlots": 10.1,
+      "maxSlots": 15,
+      "income": [
+        30,
+        33,
+        42
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        5,
+        null
+      ],
+      "averageSlots": 9.6,
+      "maxSlots": 11,
+      "income": [
+        30,
+        25,
+        14
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        5,
+        null,
+        7,
+        5
+      ],
+      "averageSlots": 10.9,
+      "maxSlots": 15,
+      "income": [
+        32,
+        4,
+        31,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        null,
+        6,
+        5,
+        4
+      ],
+      "averageSlots": 11.7,
+      "maxSlots": 15,
+      "income": [
+        21,
+        30,
+        26,
+        26
+      ]
+    },
+    {
+      "starterRecovery": "outing",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 10,
+      "escapeWeeks": [
+        5,
+        10,
+        10,
+        5
+      ],
+      "averageSlots": 11.9,
+      "maxSlots": 17,
+      "income": [
+        39,
+        27,
+        48,
+        38
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        null
+      ],
+      "averageSlots": 9.2,
+      "maxSlots": 12,
+      "income": [
+        49,
+        4
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        null
+      ],
+      "averageSlots": 8.2,
+      "maxSlots": 11,
+      "income": [
+        25,
+        12
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 4,
+      "escapeWeeks": [
+        null,
+        4
+      ],
+      "averageSlots": 7,
+      "maxSlots": 8,
+      "income": [
+        4,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        6,
+        null
+      ],
+      "averageSlots": 10,
+      "maxSlots": 15,
+      "income": [
+        25,
+        28,
+        14
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        6,
+        7
+      ],
+      "averageSlots": 10,
+      "maxSlots": 16,
+      "income": [
+        32,
+        39,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        6,
+        null,
+        8
+      ],
+      "averageSlots": 13.6,
+      "maxSlots": 18,
+      "income": [
+        32,
+        23,
+        58
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        6,
+        null,
+        6,
+        6
+      ],
+      "averageSlots": 9.7,
+      "maxSlots": 13,
+      "income": [
+        30,
+        4,
+        26,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 11,
+      "escapeWeeks": [
+        11,
+        null,
+        5,
+        7
+      ],
+      "averageSlots": 12.9,
+      "maxSlots": 17,
+      "income": [
+        29,
+        14,
+        23,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "handcraft",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 12,
+      "escapeWeeks": [
+        12,
+        8,
+        12,
+        11
+      ],
+      "averageSlots": 14.1,
+      "maxSlots": 21,
+      "income": [
+        35,
+        29,
+        36,
+        26
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        5
+      ],
+      "averageSlots": 9,
+      "maxSlots": 12,
+      "income": [
+        49,
+        32
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        null
+      ],
+      "averageSlots": 7.6,
+      "maxSlots": 10,
+      "income": [
+        32,
+        23
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        5,
+        null
+      ],
+      "averageSlots": 7.2,
+      "maxSlots": 10,
+      "income": [
+        30,
+        20
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        null,
+        6,
+        6
+      ],
+      "averageSlots": 8.2,
+      "maxSlots": 12,
+      "income": [
+        11,
+        33,
+        32
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        8,
+        6,
+        8
+      ],
+      "averageSlots": 9.8,
+      "maxSlots": 13,
+      "income": [
+        27,
+        44,
+        39
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        4,
+        null,
+        5
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 12,
+      "income": [
+        25,
+        14,
+        28
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        6,
+        null,
+        7,
+        6
+      ],
+      "averageSlots": 9.1,
+      "maxSlots": 12,
+      "income": [
+        32,
+        16,
+        33,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        5,
+        5,
+        7
+      ],
+      "averageSlots": 10.9,
+      "maxSlots": 16,
+      "income": [
+        31,
+        28,
+        44,
+        39
+      ]
+    },
+    {
+      "starterRecovery": "hike",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        5,
+        null,
+        6,
+        5
+      ],
+      "averageSlots": 9.8,
+      "maxSlots": 14,
+      "income": [
+        37,
+        11,
+        32,
+        26
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        null,
+        5
+      ],
+      "averageSlots": 8.4,
+      "maxSlots": 11,
+      "income": [
+        11,
+        32
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        6,
+        null
+      ],
+      "averageSlots": 8,
+      "maxSlots": 12,
+      "income": [
+        39,
+        16
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        null,
+        5
+      ],
+      "averageSlots": 7.6,
+      "maxSlots": 10,
+      "income": [
+        20,
+        42
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        null,
+        7,
+        7
+      ],
+      "averageSlots": 9.6,
+      "maxSlots": 13,
+      "income": [
+        7,
+        42,
+        25
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        null,
+        5,
+        6
+      ],
+      "averageSlots": 9.3,
+      "maxSlots": 14,
+      "income": [
+        4,
+        27,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        6,
+        null
+      ],
+      "averageSlots": 10.4,
+      "maxSlots": 14,
+      "income": [
+        44,
+        25,
+        20
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        6,
+        null,
+        6,
+        8
+      ],
+      "averageSlots": 11.6,
+      "maxSlots": 16,
+      "income": [
+        30,
+        14,
+        4,
+        33
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        6,
+        5,
+        null,
+        6
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 14,
+      "income": [
+        26,
+        44,
+        23,
+        30
+      ]
+    },
+    {
+      "starterRecovery": "nap",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        5,
+        null,
+        6,
+        6
+      ],
+      "averageSlots": 10.7,
+      "maxSlots": 16,
+      "income": [
+        25,
+        11,
+        28,
+        26
+      ]
+    }
+  ]
+}

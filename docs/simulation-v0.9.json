@@ -1,0 +1,689 @@
+{
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "games": [
+    {
+      "starterActivity": "outing",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        null,
+        5
+      ],
+      "averageSlots": 7.2,
+      "maxSlots": 10,
+      "income": [
+        8,
+        17
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 3,
+      "escapeWeeks": [
+        null,
+        3
+      ],
+      "averageSlots": 7.3,
+      "maxSlots": 9,
+      "income": [
+        4,
+        17
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        null,
+        6
+      ],
+      "averageSlots": 8,
+      "maxSlots": 11,
+      "income": [
+        12,
+        21
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        5,
+        7
+      ],
+      "averageSlots": 8,
+      "maxSlots": 12,
+      "income": [
+        22,
+        18,
+        19
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 11,
+      "escapeWeeks": [
+        11,
+        11,
+        6
+      ],
+      "averageSlots": 10.9,
+      "maxSlots": 15,
+      "income": [
+        25,
+        19,
+        21
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        null,
+        7
+      ],
+      "averageSlots": 10,
+      "maxSlots": 15,
+      "income": [
+        23,
+        9,
+        29
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        5,
+        6,
+        null,
+        5
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 16,
+      "income": [
+        24,
+        31,
+        14,
+        22
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        6,
+        4,
+        null,
+        6
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 14,
+      "income": [
+        29,
+        17,
+        11,
+        20
+      ]
+    },
+    {
+      "starterActivity": "outing",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 10,
+      "escapeWeeks": [
+        7,
+        10,
+        9,
+        null
+      ],
+      "averageSlots": 11.8,
+      "maxSlots": 17,
+      "income": [
+        18,
+        27,
+        25,
+        6
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        null,
+        5
+      ],
+      "averageSlots": 7.2,
+      "maxSlots": 10,
+      "income": [
+        8,
+        17
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 3,
+      "escapeWeeks": [
+        null,
+        3
+      ],
+      "averageSlots": 7.3,
+      "maxSlots": 9,
+      "income": [
+        4,
+        17
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        9,
+        9
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 11,
+      "income": [
+        18,
+        24
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        6,
+        null,
+        7
+      ],
+      "averageSlots": 8.7,
+      "maxSlots": 12,
+      "income": [
+        27,
+        16,
+        29
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        8,
+        null,
+        8
+      ],
+      "averageSlots": 10,
+      "maxSlots": 14,
+      "income": [
+        24,
+        14,
+        33
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        null,
+        7
+      ],
+      "averageSlots": 10,
+      "maxSlots": 15,
+      "income": [
+        23,
+        9,
+        29
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        5,
+        6,
+        null,
+        5
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 16,
+      "income": [
+        24,
+        22,
+        14,
+        22
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        7,
+        9,
+        null,
+        9
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 14,
+      "income": [
+        21,
+        30,
+        11,
+        25
+      ]
+    },
+    {
+      "starterActivity": "handcraft",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        7,
+        7,
+        9,
+        null
+      ],
+      "averageSlots": 11.2,
+      "maxSlots": 16,
+      "income": [
+        18,
+        23,
+        25,
+        4
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        null,
+        5
+      ],
+      "averageSlots": 7.2,
+      "maxSlots": 10,
+      "income": [
+        8,
+        17
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 3,
+      "escapeWeeks": [
+        null,
+        3
+      ],
+      "averageSlots": 7.3,
+      "maxSlots": 9,
+      "income": [
+        4,
+        17
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        9,
+        9
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 11,
+      "income": [
+        18,
+        24
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        6,
+        null,
+        7
+      ],
+      "averageSlots": 8.7,
+      "maxSlots": 12,
+      "income": [
+        27,
+        16,
+        29
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 8,
+      "escapeWeeks": [
+        8,
+        null,
+        8
+      ],
+      "averageSlots": 10,
+      "maxSlots": 14,
+      "income": [
+        24,
+        14,
+        33
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        null,
+        7
+      ],
+      "averageSlots": 10,
+      "maxSlots": 15,
+      "income": [
+        23,
+        9,
+        29
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        5,
+        6,
+        null,
+        5
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 16,
+      "income": [
+        24,
+        31,
+        14,
+        22
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        7,
+        9,
+        null,
+        9
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 14,
+      "income": [
+        21,
+        30,
+        11,
+        25
+      ]
+    },
+    {
+      "starterActivity": "hike",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 10,
+      "escapeWeeks": [
+        7,
+        10,
+        9,
+        null
+      ],
+      "averageSlots": 11.8,
+      "maxSlots": 17,
+      "income": [
+        18,
+        27,
+        25,
+        6
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 5,
+      "escapeWeeks": [
+        null,
+        5
+      ],
+      "averageSlots": 7.2,
+      "maxSlots": 10,
+      "income": [
+        8,
+        17
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 3,
+      "escapeWeeks": [
+        null,
+        3
+      ],
+      "averageSlots": 7.3,
+      "maxSlots": 9,
+      "income": [
+        4,
+        17
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        null,
+        6
+      ],
+      "averageSlots": 8,
+      "maxSlots": 11,
+      "income": [
+        12,
+        21
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        5,
+        7
+      ],
+      "averageSlots": 8,
+      "maxSlots": 12,
+      "income": [
+        22,
+        18,
+        19
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 11,
+      "escapeWeeks": [
+        11,
+        11,
+        6
+      ],
+      "averageSlots": 10.9,
+      "maxSlots": 15,
+      "income": [
+        25,
+        19,
+        21
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 7,
+      "escapeWeeks": [
+        7,
+        null,
+        7
+      ],
+      "averageSlots": 10,
+      "maxSlots": 15,
+      "income": [
+        23,
+        9,
+        29
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        5,
+        6,
+        null,
+        5
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 16,
+      "income": [
+        24,
+        22,
+        14,
+        22
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 6,
+      "escapeWeeks": [
+        6,
+        4,
+        null,
+        6
+      ],
+      "averageSlots": 10.2,
+      "maxSlots": 14,
+      "income": [
+        29,
+        17,
+        11,
+        20
+      ]
+    },
+    {
+      "starterActivity": "nap",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 9,
+      "escapeWeeks": [
+        7,
+        7,
+        9,
+        null
+      ],
+      "averageSlots": 11.2,
+      "maxSlots": 16,
+      "income": [
+        18,
+        23,
+        25,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>逃离工位 · 图标卡面样张</title>
+<link rel="stylesheet" href="/src/style.css"><link rel="stylesheet" href="/src/tabletop.css"><link rel="stylesheet" href="/src/physical-board.css"><link rel="stylesheet" href="/src/v7.css"><link rel="stylesheet" href="/src/card-face.css">
+<style>body{margin:0;background:#ece5d6;color:#30483e;font-family:system-ui,'Microsoft YaHei',sans-serif;}main{max-width:620px;padding:22px;margin:auto;}h1{font-size:22px;margin:0 0 6px;letter-spacing:2px;}header p{font-size:11px;color:#7c796b;margin:0 0 22px;}.specimens{display:flex;align-items:flex-start;gap:20px;}.specimens .game-card{width:180px;--card-unit:105px;}.specimens .card-paper{box-shadow:0 2px 0 #9d927c,0 6px 15px #50432e25;}.caption{font-size:10px;color:#7c796b;margin:10px 0;}.specimen-legend{display:flex;gap:23px;align-items:center;margin-top:18px;border-top:1px solid #c5b89d;padding-top:16px;font-size:11px;}.specimen-legend>span{display:flex;gap:10px;align-items:center;}.specimen-legend .pictogram{--symbol-size:25px;}a{color:inherit;}@media(max-width:610px){.specimens{gap:12px;}.specimens .game-card{width:calc((100vw - 68px)/3);}}</style></head>
+<body><main><header><h1>逃离工位 · 卡面样张</h1><p>生成图标 × 固定信息位置 · 1 / 2 / 4 小时等比例高度</p></header><section class="specimens" id="samples"></section><div class="specimen-legend" id="legend"></div></main>
+<script type="module">
+import {getCard} from '/src/cards.js';import {cardFace,badge} from '/src/card-face.js';import {familyOf,hours} from '/src/card-visuals.js';
+const samples=[['shopping','多次活动'],['seminar-A','一次性成长'],['weekend','三次完成 · 示例已推进一次']];
+document.querySelector('#samples').innerHTML=samples.map(([id,label])=>{const d=getCard(id);return `<article class="game-card family-${familyOf(d)}" data-hours="${hours(d.size)}" style="--card-hours:${hours(d.size)}"><div class="card-paper">${cardFace(d,false,{progress:id==='weekend'?1:0})}</div><p class="caption">${label}</p></article>`;}).join('');
+document.querySelector('#legend').innerHTML=`<span>${badge('money',4,'买价4')}底栏买价</span><span>${badge('once',3,'三次完成')}完成次数</span><span>${badge('sanity','≥2','理智门槛')}心智条件</span>`;
+</script></body></html>

@@ -1,250 +1,49 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
-import { EVENTS, CARDS, ADVANCED, CARD_MAP, STARTERS, ECONOMY, activityValue, MARKET_LIMITS, marketLane, getCard } from '../src/cards.js';
+import {CARDS,ADVANCED,EVENTS,MARKET_LIMITS,getCard,marketLane} from '../src/cards.js';
+import {hours} from '../src/card-visuals.js';
+const make=o=>E.createGame({playerCount:3,mode:'hotseat',...o});
+function quiet(g){g.inspection={name:'测试平静周',kind:'quiet',times:[],blockedTimes:[]};g.players.forEach(p=>p.tempWeekend=false);return g;}
+function add(g,p,type){const c={uid:`c${++g.uid}`,type};p.cards.push(c);return c;}
+function skills(g,p,pattern){for(const r of pattern){const d=CARDS.find(d=>d.skill===r&&!p.skills.some(c=>c.type===d.id));p.skills.push({uid:`c${++g.uid}`,type:d.id});}E.syncSanity(g,p);}
+function turn(g,id=0){while(g.phase==='planning'&&E.activeBuyer(g)!==id)E.pass(g,E.activeBuyer(g));}
+function finish(g){while(g.phase==='planning')E.pass(g,E.activeBuyer(g));E.resolveAll(g);}
+function next(g){for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,false);}E.closeWeek(g);}
+const am={day:6,period:0},pm={day:6,period:1},night={day:6,period:2};
+function allCards(g){return [...Object.values(g.decks).flat(),...Object.values(g.market).flat(),...Object.values(g.discard).flat(),...g.players.flatMap(p=>[...p.cards,...p.completedProjects,...p.skills,...p.upgrades,...p.drafts.flatMap(d=>d.options||[])])];}
 
-const game = options => E.createGame({ playerCount:3, mode:'hotseat', ...options });
-function planning(g) { while(g.phase==='procurement') E.pass(g,E.activeBuyer(g)); return g; }
-function card(g,p,type) { const c={uid:`c${++g.uid}`,type}; p.cards.push(c); return c; }
-function skills(g,p,pattern) { for(const r of pattern) { const d=CARDS.find(d=>d.skill===r&&!p.skills.some(c=>c.type===d.id)); p.skills.push({uid:`c${++g.uid}`,type:d.id}); } }
-function finish(g,event='普通的一周') { for(const p of g.players) if(!p.locked) E.lockPlan(g,p.id); g.inspectionDeck=[EVENTS.findIndex(e=>e.name===event)]; E.revealEvent(g); E.resolveAll(g); }
-function next(g) { for(const p of g.players) { E.botDraft(g,p.id); if(!Object.hasOwn(g.escapeDecisions,p.id)) E.chooseEscape(g,p.id,false); } E.closeWeek(g); }
-const sunAM={day:6,period:0},sunPM={day:6,period:1},monPM={day:0,period:1},monNight={day:0,period:2};
-
-test('week maintenance is per working day; empty work and rest do not resolve',()=>{
- const g=game(),p=g.players[0]; assert.equal(E.workingDays(p),6); assert.equal(p.sanity,12); assert.equal(p.money,18);
- assert.equal(E.capacity(p,sunAM),3); assert.equal(E.capacity(p,monNight),0);
- planning(g);const sanity=p.sanity;finish(g); assert.equal(g.timeline.length,0);assert.equal(p.sanity,sanity);assert.equal(p.money,32);assert.equal(p.income,0);
- next(g);assert.equal(p.sanity,sanity-12);assert.equal(p.money,28);assert.deepEqual(g.purchaseOrder,[1,2,0,0,2,1]);
-});
-test('shortfall and maintenance never create negative resources; lying flat remains available',()=>{
- const g=game({startMoney:1,startSanity:2}); assert.equal(g.players[0].money,0);assert.equal(g.players[0].sanity,0);assert.equal(g.players[0].maintenance.shortfall,3);
- E.pass(g,0);assert.equal(g.players[0].sanity,4);assert.throws(()=>E.pass(g,0));
-});
-test('snake purchases refill immediately by duration; invalid purchases spend no turn',()=>{
- const g=game(),p=g.players[0]; assert.deepEqual(g.purchaseOrder,[0,1,2,2,1,0]);const c=g.market[1][0];E.buy(g,0,c.uid);assert.equal(g.market[1].length,4);assert.ok(p.cards.includes(c));
- while(E.activeBuyer(g)!==0)E.pass(g,E.activeBuyer(g));const before=JSON.stringify(g);assert.throws(()=>E.buy(g,0,'supply:outing'));assert.equal(JSON.stringify(g),before);E.pass(g,0);assert.equal(g.phase,'planning');
-});
-test('opportunities retain work-day maintenance and rebinding returns nested activity to hand',()=>{
- const g=planning(game()),p=g.players[0],slack=card(g,p,'slack-phone'),night=card(g,p,'night-owl'),mall=card(g,p,'mall');
- E.place(g,0,slack.uid,monPM);assert.equal(E.capacity(p,monPM),1);assert.equal(E.workingDays(p),6);assert.throws(()=>E.place(g,0,mall.uid,monPM));
- E.place(g,0,card(g,p,'shopping').uid,monPM);E.place(g,0,slack.uid,{day:1,period:1});assert.equal(p.schedule['0-1'],undefined);assert.ok(p.cards[0]);
- E.place(g,0,night.uid,monNight);E.place(g,0,mall.uid,monNight);E.unplace(g,0,night.uid);assert.equal(E.capacity(p,monNight),0);assert.equal(p.schedule['0-2'],undefined);
-});
-test('night slots cost sanity every week, including an empty opened slot; withdrawing stops cost',()=>{
- const g=planning(game()),p=g.players[0],n=card(g,p,'night-owl');E.place(g,0,n.uid,monNight);const s=p.sanity;finish(g);assert.equal(p.sanity,s-2);assert.equal(g.timeline.length,1);
- next(g);planning(g);const s2=p.sanity;finish(g);assert.equal(p.sanity,s2-2);next(g);planning(g);E.unplace(g,0,n.uid);const s3=p.sanity;finish(g);assert.equal(p.sanity,s3);
-});
-test('only explicit idle actions generate inspiration; clear removes them',()=>{
- const g=planning(game()),p=g.players[0];E.basic(g,0,sunAM,'idle');const i=p.inspiration;finish(g);assert.equal(p.inspiration,i+2);
- next(g);planning(g);E.basic(g,0,sunAM,'clear');const j=p.inspiration;finish(g);assert.equal(p.inspiration,j);
-});
-test('successful one-shot becomes a permanent distinct skill; repeated names do not grow skill count',()=>{
- const g=planning(game()),p=g.players[0],a=card(g,p,'journal');E.place(g,0,a.uid,sunAM);finish(g);assert.ok(!p.cards.includes(a));assert.equal(p.schedule['6-0'],undefined);assert.equal(E.skillCounts(p).A,1);
- next(g);planning(g);const b=card(g,p,'journal');E.place(g,0,b.uid,sunAM);finish(g);assert.equal(E.skillCounts(p).A,1);assert.ok(g.growthDecks.A.includes(b));
-});
-test('inspection cancels the activity without consuming it or double-charging work',()=>{
- const g=planning(game()),p=g.players[0],a=card(g,p,'journal'),o=card(g,p,'slack-phone');E.place(g,0,o.uid,monPM);E.place(g,0,a.uid,monPM);const s=p.sanity,m=p.money,i=p.inspiration;finish(g,'领导突然路过');
- assert.equal(p.sanity,s-2);assert.equal(p.money,m-2+g.config.salary);assert.equal(p.inspiration,i);assert.equal(E.skillCounts(p).A,0);assert.ok(p.cards.includes(a));assert.equal(p.caught,1);
-});
-test('insufficient resources keep a one-shot available; skill gates require the full mixed pattern',()=>{
- const g=planning(game()),p=g.players[0],a=card(g,p,'journal'),advanced=card(g,p,'microtool');p.inspiration=0;E.place(g,0,a.uid,sunAM);assert.throws(()=>E.place(g,0,advanced.uid,sunPM));finish(g);assert.ok(p.cards.includes(a));
- skills(g,p,'ABB');assert.equal(E.qualified(p,getCard(advanced)),true);assert.equal(E.qualified(p,getCard('freelance')),false);assert.deepEqual(E.skillMissing(p,getCard('freelance')),['B']);
-});
-test('seminar performs an actual draw, blocks close until choice, permits holding unqualified cards',()=>{
- const g=planning(game()),p=g.players[0],a=card(g,p,'seminar-A');E.place(g,0,a.uid,sunAM);finish(g);assert.equal(p.drafts.length,1);const d=p.drafts[0];assert.equal(d.options.length,2);assert.notEqual(d.options[0].type,d.options[1].type);assert.equal(E.skillCounts(p).A,1);
- assert.throws(()=>E.closeWeek(g));assert.throws(()=>E.openDraft(g,0,d.id,'B'));const chosen=d.options[0],other=d.options[1];E.chooseAdvanced(g,0,d.id,chosen.uid);assert.ok(p.cards.includes(chosen));assert.equal(g.advancedDecks.A[0].uid,other.uid);assert.equal(E.qualified(p,getCard(chosen)),false);next(g);planning(g);assert.throws(()=>E.place(g,0,chosen.uid,sunAM));
-});
-test('headhunter chooses exactly one pool, cannot reroll; a depleted eligible pool compensates',()=>{
- const g=planning(game()),p=g.players[0],a=card(g,p,'headhunter');E.place(g,0,a.uid,sunAM);finish(g);const d=p.drafts[0];assert.equal(d.options,null);E.openDraft(g,0,d.id,'B');assert.ok(d.options.every(c=>getCard(c).route==='B'));assert.throws(()=>E.openDraft(g,0,d.id,'C'));
- E.chooseAdvanced(g,0,d.id,d.options[0].uid);g.advancedDecks.C=[];p.drafts.push({id:'empty',pool:'C',options:null});const s=p.sanity;E.openDraft(g,0,'empty','C');assert.equal(p.sanity,s+g.config.passSanity);assert.equal(p.drafts.length,0);
-});
-test('draw excludes owned and built names, even when multiple physical copies exist',()=>{
- const g=game(),p=g.players[0];g.phase='escape';card(g,p,'newsletter');p.upgrades.push({type:'royalty',uid:'built',activeFrom:1});p.drafts.push({id:'draw',pool:'A',options:null});
- E.openDraft(g,0,'draw','A');assert.equal(p.drafts[0].options.length,2);assert.ok(p.drafts[0].options.every(c=>!['newsletter','royalty'].includes(c.type)));
-});
-test('employee bonus is shared and never counts as side income',()=>{
- const g=planning(game()),p=g.players[0],q=g.players[1];q.escaped=true;const m=p.money,n=q.money;finish(g,'项目奖金');assert.equal(p.money,m+5+g.config.salary);assert.equal(q.money,n);assert.equal(p.income,0);
-});
-
-test('event deck is majority inspections with two half-day Sunday disruptions',()=>{
- assert.equal(EVENTS.length,12);
- assert.equal(EVENTS.filter(e=>e.kind==='inspection').length,7);
- assert.equal(EVENTS.filter(e=>e.kind==='team').length,2);
- assert.equal(EVENTS.filter(e=>e.kind==='bonus'||e.kind==='weekend').length,2);
- assert.equal(EVENTS.filter(e=>e.kind==='quiet').length,1);
- assert.deepEqual(EVENTS.filter(e=>e.kind==='team').map(e=>e.blockedTimes),[[[6,0]],[[6,1]]]);
-});
-
-test('Sunday team event preserves a one-shot and its costs while the other half-day runs',()=>{
- const g=planning(game()),p=g.players[0],a=card(g,p,'seminar-A');
- E.place(g,0,a.uid,sunAM);E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunPM);
- const before={money:p.money,sanity:p.sanity,inspiration:p.inspiration};
- finish(g,'周日晨间团建');
- assert.ok(p.cards.includes(a));assert.equal(p.schedule['6-0'],a.uid);assert.equal(p.skills.length,0);assert.equal(p.drafts.length,0);
- assert.equal(p.money,before.money+4+g.config.salary);assert.equal(p.sanity,before.sanity);assert.equal(p.inspiration,before.inspiration-1);assert.equal(p.income,4);assert.equal(p.caught,0);
- next(g);planning(g);finish(g);assert.equal(p.skills.some(c=>c.uid===a.uid),true);assert.equal(p.drafts.length,1);
-});
-
-test('team event pauses idle and permanent-weekend employees but exempts escaped players',()=>{
- const g=planning(game());g.players[1].weekend=true;g.players[2].escaped=true;
- for(const p of g.players) E.basic(g,p.id,sunPM,'idle');
- const before=g.players.map(p=>p.inspiration);finish(g,'周日午后团建');
- assert.deepEqual(g.players.map((p,i)=>p.inspiration-before[i]),[0,0,2]);
- assert.deepEqual(g.players.map(p=>p.caught),[0,0,0]);
-});
-
-test('team event survives save/restore without adding empty-slot resolution work',()=>{
- const empty=planning(game());finish(empty,'周日晨间团建');assert.equal(empty.timeline.length,0);
- const g=planning(game()),p=g.players[0];E.place(g,0,p.cards.find(c=>c.type==='outing').uid,sunAM);
- for(const p of g.players)E.lockPlan(g,p.id);
- g.inspectionDeck=[EVENTS.findIndex(e=>e.name==='周日晨间团建')];E.revealEvent(g);
- const restored=JSON.parse(JSON.stringify(g));E.resolveAll(g);E.resolveAll(restored);assert.deepEqual(restored,g);
- assert.ok(g.logs.some(l=>l.text.includes('被公司团建占用')));
-});
-test('temporary weekend starts next week, reduces maintenance once, expires and returns cards safely',()=>{
- const g=planning(game()),p=g.players[0];finish(g,'双休通知');assert.equal(E.capacity(p,{day:5,period:0}),0);next(g);assert.equal(p.maintenance.days,5);assert.equal(E.capacity(p,{day:5,period:0}),3);
- planning(g);const a=card(g,p,'mall');E.place(g,0,a.uid,{day:5,period:0});finish(g);next(g);assert.equal(p.maintenance.days,6);assert.equal(p.schedule['5-0'],undefined);assert.ok(p.cards.includes(a));
-});
-test('permanent weekend requires an earlier job, applies next week with unchanged salary',()=>{
- const g=planning(game()),p=g.players[0],w=card(g,p,'weekend');E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunAM);E.place(g,0,w.uid,sunPM);finish(g);assert.equal(p.weekend,true);next(g);assert.equal(p.maintenance.days,5);assert.equal(g.config.salary,14);
-});
-test('core power activates following week and leaves the calendar',()=>{
- const g=planning(game()),p=g.players[0];skills(g,p,'AAAA');const c=card(g,p,'royalty');E.place(g,0,c.uid,sunAM);finish(g);assert.equal(p.income,0);assert.equal(p.upgrades.length,1);assert.equal(p.schedule['6-0'],undefined);
- next(g);planning(g);finish(g);assert.equal(p.income,6);
-});
-test('automation waives only the first technical income inspiration and adds income only once',()=>{
- const g=planning(game()),p=g.players[0];skills(g,p,'BBB');p.upgrades=[{type:'automation',uid:'core',activeFrom:1}];p.inspiration=1;
- const a=card(g,p,'freelance');E.place(g,0,a.uid,sunAM);E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunPM);finish(g);assert.equal(p.income,10+2+4);assert.equal(p.inspiration,0);
-});
-test('remote agreement and multi-route brand change scheduling and reward successful route combinations',()=>{
- const g=planning(game()),p=g.players[0];p.upgrades=[{type:'remote',uid:'remote',activeFrom:2},{type:'brand',uid:'brand',activeFrom:2}];finish(g);next(g);assert.equal(p.maintenance.days,5);assert.equal(E.capacity(p,{day:2,period:0}),3);
- planning(g);for(const [type,slot] of [['journal',{day:2,period:0}],['repair',sunAM],['resale',sunPM]])E.place(g,0,card(g,p,type).uid,slot);finish(g);assert.equal(p.income,10);assert.equal(p.achievement,0);
-});
-test('preview is pure and matches a quiet week including resource ordering and income bonuses',()=>{
- const g=planning(game()),p=g.players[0];skills(g,p,'ABC');E.place(g,0,card(g,p,'editorial').uid,sunAM);E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunPM);
- const before=JSON.stringify(g),pred=E.preview(g,0);assert.equal(JSON.stringify(g),before);finish(g);for(const key of ['money','sanity','inspiration','income','achievement'])assert.equal(p[key],pred[key]);assert.equal(p.income,6);
-});
-test('N minus one triggers current-week ending after all choices; strict income gate and shared wins',()=>{
- const g=planning(game());finish(g);g.players[0].income=24;assert.equal(E.eligible(g,g.players[0]),false);g.players[0].income=25;g.players[1].income=26;delete g.escapeDecisions[0];delete g.escapeDecisions[1];E.chooseEscape(g,0,true);assert.throws(()=>E.closeWeek(g));E.chooseEscape(g,1,true);E.closeWeek(g);assert.equal(g.phase,'ended');assert.equal(g.week,1);assert.ok(E.won(g,g.players[0]));assert.ok(E.won(g,g.players[1]));
-});
-test('pending advanced choices survive JSON save/restore with identical results',()=>{
- const g=planning(game()),p=g.players[0];E.place(g,0,card(g,p,'seminar-A').uid,sunAM);finish(g);const restored=JSON.parse(JSON.stringify(g));
- for(const state of [g,restored]){const d=state.players[0].drafts[0];E.chooseAdvanced(state,0,d.id,d.options[0].uid);next(state);}assert.deepEqual(restored,g);
-});
-test('all three routes have six distinct advanced cards and reachable permanent cores',()=>{
- assert.equal(new Set([...CARDS,...ADVANCED].map(c=>c.id)).size,CARDS.length+ADVANCED.length);
- for(const r of ['A','B','C']){assert.equal(ADVANCED.filter(c=>c.route===r).length,6);assert.equal(ADVANCED.filter(c=>c.route===r&&c.core).length,2);}
- for(const d of ADVANCED) for(const r of ['A','B','C'])assert.ok([...d.requires].filter(x=>x===r).length<=CARDS.filter(c=>c.skill===r).length);
-});
-
-test('catalogue follows operating budgets with explicit achievement and search tradeoffs',()=>{
- assert.equal(Object.keys(CARD_MAP).length,59);
- for(const d of CARDS.filter(d=>d.kind==='activity'&&!d.draft)){
-  // Achievement is deliberately separated from the operating-resource estimate.
-  const budget=activityValue(d)+(d.gain.achievement||0)*3;
-  assert.equal(budget,ECONOMY.basic[d.size]+(d.consumable?5:0),d.id);
- }
- for(const d of ADVANCED.filter(d=>!d.core))assert.equal(activityValue(d),ECONOMY.advanced[d.size],d.id);
- for(const r of ['A','B','C'])assert.equal(CARDS.filter(d=>d.skill===r).length,6);
-});
-
-test('all starting recovery choices are selectable and unknown choices fall back safely',()=>{
- for(const type of STARTERS){const g=game({starterRecovery:type});assert.ok(g.players.every(p=>p.cards[0].type===type));}
- assert.equal(game({starterRecovery:'missing'}).players[0].cards[0].type,'outing');
-});
-
-test('one-shot supplies are discarded after success and grant no skill',()=>{
- const g=planning(game()),p=g.players[0],c=card(g,p,'spa'),s=p.sanity;
- E.place(g,0,c.uid,sunAM);finish(g);assert.equal(p.sanity,s+10);assert.ok(g.discard[1].includes(c));assert.equal(p.skills.length,0);assert.ok(!p.cards.includes(c));
-});
-
-test('combo rewards only the next successful job; failure preserves the bonus and week end clears it',()=>{
- const g=planning(game()),p=g.players[0];p.weekend=true;skills(g,p,'ABC');p.inspiration=0;
- E.place(g,0,card(g,p,'pipeline').uid,{day:5,period:0});
- E.place(g,0,card(g,p,'tutoring').uid,{day:5,period:1}); // Needs 2 inspiration; fails after pipeline gives 1.
- E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunAM);
- E.place(g,0,card(g,p,'microjob').uid,sunPM); // No inspiration left: no second bonus or income.
- finish(g);assert.equal(p.income,6);assert.equal(p.jobBonuses.length,0);assert.equal(p.jobsDone,1);
- next(g);planning(g);E.unplace(g,0,p.schedule['6-0']);E.unplace(g,0,p.schedule['6-1']);E.unplace(g,0,p.schedule['5-1']);
- finish(g);assert.equal(p.jobBonuses.length,1);next(g);assert.equal(p.jobBonuses.length,0);
-});
-
-test('recovery can revive a zero-sanity player before a later job without forced rest',()=>{
- const g=planning(game()),p=g.players[0];p.sanity=0;
- E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunAM);E.place(g,0,p.cards[0].uid,sunPM);finish(g);
- assert.equal(p.income,0);assert.equal(p.sanity,8);
- next(g);planning(g);p.sanity=0;E.place(g,0,p.cards[0].uid,sunAM);E.place(g,0,p.cards.find(c=>c.type==='microjob').uid,sunPM);finish(g);
- assert.equal(p.income,4);assert.equal(p.sanity,8);
-});
-
-test('default recovery plus one pass sustains three weeks with a growth purchase each week',()=>{
- const g=game(),p=g.players[0];
- for(const route of ['A','B','C']){
-  let purchased=false;
-  while(g.phase==='procurement'){const id=E.activeBuyer(g);if(id===0&&!purchased){const deck=g.growthDecks[route],i=deck.findIndex(c=>c.type===`seminar-${route}`);deck.push(...deck.splice(i,1));E.study(g,0,route);E.chooseStudy(g,0,g.studyOffer.options.find(c=>c.type===`seminar-${route}`).uid);purchased=true;}else E.pass(g,id);}
-  E.place(g,0,p.cards.find(c=>c.type==='outing').uid,sunAM);E.place(g,0,p.cards.find(c=>c.type===`seminar-${route}`).uid,sunPM);finish(g);
-  assert.ok(p.sanity>=24);assert.ok(p.money>=18);assert.equal(p.drafts.length,1);next(g);
- }
- assert.deepEqual(E.skillCounts(p),{A:1,B:1,C:1});assert.ok(p.sanity>=12);
-});
-
-test('every working time can be inspected; no permanently safe slack slot',()=>{
- const times=new Set(EVENTS.flatMap(e=>(e.times||[]).map(([d,p])=>`${d}-${p}`)));
- for(let day=0;day<6;day++)for(let period=0;period<2;period++)assert.ok(times.has(`${day}-${period}`));
-});
-
-for(const playerCount of [2,3,4]) for(const seed of [7,42,20261008]) test(`${playerCount} players, seed ${seed}: full legal game completes`,()=>{
- const g=game({playerCount,seed});g.players.forEach(p=>p.bot=true);
- while(g.phase!=='ended'&&g.week<=40){while(g.phase==='procurement')E.botBuy(g);for(const p of g.players){E.autoPlan(g,p.id);E.autoDiscard(g,p.id);E.lockPlan(g,p.id);}E.revealEvent(g);E.resolveAll(g);for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,true);}E.closeWeek(g);
- for(const p of g.players)for(const k of ['money','sanity','inspiration','achievement'])assert.ok(Number.isFinite(p[k])&&p[k]>=0);
- }assert.equal(g.phase,'ended');assert.ok(g.players.filter(p=>p.escaped).length>=playerCount-1);
-});
-
-
-test('shared market has 4/3/2 duration spaces and mixes opportunity with activity',()=>{
- const g=game();
- for(const [lane,count] of Object.entries(MARKET_LIMITS)){
-  assert.equal(g.market[lane].length,count);
-  const all=[...g.market[lane],...g.decks[lane]];
-  assert.ok(all.every(c=>marketLane(getCard(c))===lane&&!getCard(c).skill));
-  if(lane!=='4')assert.deepEqual(new Set(all.map(c=>getCard(c).kind)),new Set(['activity','opportunity']));
- }
- const snapshot=structuredClone(g.market), chosen=g.market[2][1];E.buy(g,0,chosen.uid);
- assert.equal(g.market[2].length,3);assert.ok(!g.market[2].includes(chosen));assert.deepEqual(g.market[1],snapshot[1]);assert.deepEqual(g.market[4],snapshot[4]);
-});
-
-test('duration pile exhaustion reshuffles only its own discard and may leave empty spaces',()=>{
- const g=game();g.decks[1]=[];g.discard[1]=[{uid:'recycled',type:'shopping'}];
- E.buy(g,0,g.market[1][0].uid);assert.equal(g.market[1].length,4);assert.ok(g.market[1].some(c=>c.uid==='recycled'));assert.equal(g.discard[1].length,0);
- E.buy(g,1,g.market[1][0].uid);assert.equal(g.market[1].length,3);
-});
-
-test('study commits one purchase, cannot reroll or pass, and resumes identically from JSON',()=>{
- const g=game(),p=g.players[0],money=p.money,deck=[...g.growthDecks.A];
- E.study(g,0,'A');assert.equal(p.money,money-3);assert.equal(g.purchaseIndex,0);assert.deepEqual(g.studyOffer.options,deck.slice(-2).reverse());
- const before=JSON.stringify(g);for(const fn of [()=>E.pass(g,0),()=>E.study(g,0,'B'),()=>E.buy(g,0,g.market[1][0].uid),()=>E.chooseStudy(g,1,g.studyOffer.options[0].uid),()=>E.chooseStudy(g,0,'fake')]){assert.throws(fn);assert.equal(JSON.stringify(g),before);}
- const saved=JSON.parse(before),pick=g.studyOffer.options[0],other=g.studyOffer.options[1];
- for(const state of [g,saved])E.chooseStudy(state,0,pick.uid);
- assert.deepEqual(g,saved);assert.ok(p.cards.includes(pick));assert.equal(g.growthDecks.A[0].uid,other.uid);assert.equal(g.purchaseIndex,1);assert.equal(g.studyOffer,null);
-});
-
-test('growth draw handles one card, empty pile and unaffordable registration without free reveals',()=>{
- const g=game();g.growthDecks.A=g.growthDecks.A.slice(0,1);E.study(g,0,'A');assert.equal(g.studyOffer.options.length,1);E.chooseStudy(g,0,g.studyOffer.options[0].uid);
- const before=JSON.stringify(g);assert.throws(()=>E.study(g,1,'A'));assert.equal(JSON.stringify(g),before);
- g.players[1].money=2;const poor=JSON.stringify(g);assert.throws(()=>E.study(g,1,'B'));assert.equal(JSON.stringify(g),poor);
-});
-
-test('weekend project is personal, has a finite card and returns to its owner when discarded',()=>{
- const g=game(),p=g.players[0],project=p.projects[0];assert.throws(()=>E.buy(g,0,g.players[1].projects[0].uid));
- E.buy(g,0,project.uid);assert.equal(p.projects.length,0);assert.ok(p.cards.includes(project));planning(g);E.discardCard(g,0,project.uid);assert.equal(p.projects[0],project);assert.ok(!p.cards.includes(project));
-});
-
-function allPhysicalCards(g){return [...Object.values(g.decks).flat(),...Object.values(g.discard).flat(),...Object.values(g.market).flat(),...Object.values(g.growthDecks).flat(),...Object.values(g.advancedDecks).flat(),...(g.studyOffer?.options||[]),...g.players.flatMap(p=>[...p.cards,...p.skills,...p.upgrades,...p.projects,...p.completedProjects,...p.drafts.flatMap(d=>d.options||[])])];}
-test('a complete game conserves physical cards across drafts, skills, projects and discards',()=>{
- const g=game({playerCount:3,seed:42});g.players.forEach(p=>p.bot=true);
- const original=allPhysicalCards(g).map(c=>c.uid).sort();assert.equal(original.length,61*3);
- const check=()=>assert.deepEqual(allPhysicalCards(g).map(c=>c.uid).sort(),original);
- while(g.phase!=='ended'&&g.week<=40){while(g.phase==='procurement'){E.botBuy(g);check();}for(const p of g.players){E.autoPlan(g,p.id);E.autoDiscard(g,p.id);E.lockPlan(g,p.id);}E.revealEvent(g);E.resolveAll(g);check();for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,true);}E.closeWeek(g);check();}
- assert.equal(g.phase,'ended');
-});
+test('2/4/8h decks, 5/4/3 market, 57 types, no sanity gain/cost/power anywhere',()=>{const g=make();assert.deepEqual(Object.keys(g.decks),['2','4','8']);assert.equal(CARDS.length+ADVANCED.length,57);for(const [key,n]of Object.entries(MARKET_LIMITS))assert.equal(g.market[key].length,n);assert.ok(ADVANCED.every(d=>hours(d.size)===8));assert.ok([...CARDS,...ADVANCED].every(d=>!Object.hasOwn(d.gain,'sanity')&&!Object.hasOwn(d.cost,'sanity')&&!Object.hasOwn(d.price,'sanity')));assert.ok(ADVANCED.every(d=>!d.powerSanity));assert.equal(g.players[0].sanity,3);assert.equal(g.version,9);});
+test('8 of 12 events are inspections, three unique public times each',()=>{const es=EVENTS.filter(e=>e.kind==='inspection');assert.equal(es.length,8);assert.equal(EVENTS.length,12);assert.ok(es.every(e=>e.times.length===3&&new Set(e.times.map(String)).size===3));});
+test('seven daily actions, salary at end only, rotating first player',()=>{const g=quiet(make()),m=g.players[0].money;for(let day=0;day<7;day++)for(let id=0;id<3;id++){assert.equal(g.day,day);assert.equal(E.activeBuyer(g),id);E.pass(g,id);}assert.equal(g.actionCount,21);assert.equal(g.players[0].money,m+14);E.resolveAll(g);assert.equal(g.players[0].money,m+14+6);assert.equal(g.players[0].sanity,3);next(g);assert.equal(E.activeBuyer(g),1);assert.equal(g.day,0);});
+test('buy refills without placing, failed purchase atomic, locked advanced can be bought',()=>{const g=quiet(make({startMoney:99})),p=g.players[0],before=JSON.stringify(g);assert.throws(()=>E.buy(g,1,g.market[2][0].uid));assert.equal(JSON.stringify(g),before);const c=g.market[2][0];E.buy(g,0,c.uid);assert.equal(E.findPlacement(p,c.uid),null);assert.equal(g.market[2].length,5);turn(g);const big=g.decks[8].find(c=>getCard(c).requires);g.decks[8]=g.decks[8].filter(x=>x!==big);g.market[8].push(big);E.buy(g,0,big.uid);turn(g);assert.match(E.canPlace(g,p,big.uid,am),/技能/);});
+test('refresh exhausted deck draws old discard before discarding current offer',()=>{const g=quiet(make()),c=g.market[2][0],other=g.decks[2][0],p=g.players[0],m=p.money;g.decks[2]=[];g.discard[2]=[other];E.refresh(g,0,c.uid);assert.ok(g.market[2].includes(other));assert.deepEqual(g.discard[2],[c]);assert.equal(p.money,m);assert.equal(p.sanity,3);});
+test('past source and destination locked, failures atomic',()=>{const g=quiet(make()),p=g.players[0],c=p.cards[1];E.place(g,0,c.uid,{day:0,period:0});turn(g);const before=JSON.stringify(g);assert.throws(()=>E.place(g,0,c.uid,am),/过去/);assert.throws(()=>E.place(g,0,p.cards[0].uid,{day:0,period:0}),/今天/);assert.throws(()=>E.unplace(g,0,c.uid));assert.equal(JSON.stringify(g),before);});
+test('2h uses the only daytime card slot; one 2h night has no night pressure',()=>{const g=quiet(make()),p=g.players[0];E.place(g,0,p.cards[2].uid,am);turn(g);assert.match(E.canPlace(g,p,p.cards[1].uid,am),/先用/);E.place(g,0,p.cards[1].uid,night);assert.equal(p.sanity,2);assert.equal(E.slotHours(p,night),2);});
+test('8h anchors once, covers two halves, resolves once at PM, one placement action',()=>{const g=quiet(make({startSanity:4})),p=g.players[0],c=add(g,p,'market-service');E.place(g,0,c.uid,pm);assert.equal(g.actionCount,1);assert.equal(E.findPlacement(p,c.uid).key,'6-0');assert.deepEqual(E.cardsInSlot(p,am),[c]);assert.deepEqual(E.cardsInSlot(p,pm),[c]);assert.equal(E.slotHours(p,am),4);turn(g);for(const s of [am,pm])assert.match(E.canPlace(g,p,p.cards[2].uid,s),/先用/);finish(g);assert.equal(p.income,7);assert.equal(p.inspiration,2);assert.equal(g.history[0].steps,1);assert.equal(g.logs.filter(l=>l.tone==='income'&&l.slot).length,1);assert.equal(g.logs.find(l=>l.tone==='income'&&l.slot).slot.period,1);});
+test('8h rejects occupied PM and night; failed placement atomic',()=>{const g=quiet(make({startSanity:4})),p=g.players[0],c=add(g,p,'market-service');E.place(g,0,p.cards[2].uid,pm);turn(g);const before=JSON.stringify(g);assert.throws(()=>E.place(g,0,c.uid,am),/先用/);assert.throws(()=>E.place(g,0,c.uid,night),/完整白天/);assert.equal(JSON.stringify(g),before);});
+test('8h moving frees both old halves; stress and withdrawal charged once',()=>{const g=quiet(make({startSanity:4})),p=g.players[0],c=add(g,p,'market-service');E.place(g,0,c.uid,{day:3,period:0});turn(g);E.place(g,0,c.uid,pm);assert.equal(p.sanity,3);assert.equal(E.cardsInSlot(p,{day:3,period:1}).length,0);turn(g);E.unplace(g,0,c.uid);assert.equal(p.sanity,4);assert.equal(E.cardsInSlot(p,pm).length,0);});
+test('team blocks either half, existing full-day activity pauses without cost',()=>{for(const s of [am,pm]){const g=quiet(make({startSanity:4})),p=g.players[0],c=add(g,p,'market-service');g.inspection.blockedTimes=[s];assert.match(E.canPlace(g,p,c.uid,am),/团建/);g.inspection.blockedTimes=[];E.place(g,0,c.uid,am);g.inspection.blockedTimes=[s];finish(g);assert.equal(p.inspiration,4);assert.equal(p.income,0);assert.ok(E.findPlacement(p,c.uid));}});
+test('8h inspection of either half cancels whole activity; fine 4h or 8h once',()=>{for(const times of [[{day:0,period:0}],[{day:0,period:1}],[{day:0,period:0},{day:0,period:1}]]){const g=quiet(make({startSanity:10})),p=g.players[0],c=add(g,p,'market-service');g.inspection={name:'查岗',times,blockedTimes:[],money:1,sanity:1};E.place(g,0,c.uid,{day:0,period:0});const m=p.money;finish(g);assert.equal(p.income,0);assert.equal(p.inspiration,4);assert.equal(p.sanity,9-times.length*4);assert.equal(p.money,m+12+6-times.length*4);assert.equal(p.caught,1);}});
+test('2h/4h inspection fines scale by hours; salary remains',()=>{for(const [type,h]of [['music',2],['reading',4]]){const g=quiet(make({startSanity:8})),p=g.players[0],c=add(g,p,type);g.inspection={name:'查岗',times:[{day:0,period:0}],blockedTimes:[],money:1,sanity:1};E.place(g,0,c.uid,{day:0,period:0});const m=p.money;finish(g);assert.equal(p.sanity,8-h);assert.equal(p.money,m+12+6-h);assert.equal(p.inspiration,4);}});
+test('2+2h night occupies 4 sanity once, withdrawal releases it',()=>{const g=quiet(make({startSanity:8})),p=g.players[0],c=add(g,p,'podcast');E.place(g,0,p.cards[2].uid,night);assert.equal(p.sanity,8);turn(g);E.place(g,0,c.uid,night);assert.equal(p.sanity,4);turn(g);assert.match(E.canPlace(g,p,p.cards[1].uid,night),/4h/);finish(g);assert.equal(p.sanity,4);next(g);quiet(g);turn(g);E.unplace(g,0,c.uid);assert.equal(p.sanity,8);});
+test('starting sanity cannot afford 4h night activity',()=>{const g=quiet(make());assert.match(E.canPlace(g,g.players[0],g.players[0].cards[0].uid,night),/低于 0/);});
+test('life activity yields inspiration only; completing it releases night pressure',()=>{const g=quiet(make({startSanity:8})),p=g.players[0],c=p.cards[0];E.place(g,0,c.uid,night);assert.equal(p.sanity,4);finish(g);assert.equal(p.sanity,8);assert.equal(p.inspiration,8);assert.ok(!p.cards.includes(c));});
+test('two one-shot life activities cannot manufacture sanity by releasing night pressure',()=>{const g=quiet(make({startSanity:8})),p=g.players[0],a=add(g,p,'spa'),b=add(g,p,'walk');E.place(g,0,a.uid,night);turn(g);E.place(g,0,b.uid,night);assert.equal(p.sanity,4);finish(g);assert.equal(p.sanity,8);assert.ok(g.discard[2].includes(a)&&g.discard[2].includes(b));});
+test('life cards never raise sanity, including zero; defaults and range preserved',()=>{for(const initial of [0,3,10]){const g=quiet(make({startSanity:initial})),p=g.players[0],c=p.cards[0];E.place(g,0,c.uid,am);finish(g);assert.equal(p.sanity,initial);assert.ok(g.discard[4].includes(c));next(g);quiet(g);finish(g);assert.equal(p.sanity,initial);}assert.equal(make({startSanity:24}).players[0].sanity,10);});
+test('moves and withdrawal cannot manufacture sanity at cap',()=>{const g=quiet(make({startSanity:10})),p=g.players[0],c=p.cards[1];E.place(g,0,c.uid,am);turn(g);E.place(g,0,c.uid,night);assert.equal(p.sanity,9);turn(g);E.unplace(g,0,c.uid);assert.equal(p.sanity,10);});
+test('post-placement sanity gate atomic; later accountability pauses execution',()=>{const g=quiet(make({startSanity:1})),p=g.players[0],before=JSON.stringify(g);assert.throws(()=>E.place(g,0,p.cards[1].uid,am),/门槛/);assert.equal(JSON.stringify(g),before);g.config.startSanity=3;E.syncSanity(g,p);E.place(g,0,p.cards[1].uid,am);p.accountability=3;E.syncSanity(g,p);finish(g);assert.equal(p.income,0);assert.equal(p.inspiration,4);});
+test('skills unique by type; duplicate growth enters duration discard',()=>{const g=quiet(make()),p=g.players[0],a=add(g,p,'journal'),b=add(g,p,'journal');E.place(g,0,a.uid,am);turn(g);E.place(g,0,b.uid,pm);finish(g);assert.equal(E.skillCounts(p).A,1);assert.ok(g.discard[2].includes(b));assert.equal(p.sanity,3);});
+test('draft scans unrevealed shared 8h deck, preserves skipped order and returns other card',()=>{const g=quiet(make()),p=g.players[0];g.phase='escape';p.drafts=[{id:'t',pool:'A',options:null}];const before=[...g.decks[8]],market=[...g.market[8]];E.openDraft(g,0,'t');const draft=p.drafts[0];assert.ok(draft.options.every(c=>getCard(c).tier==='advanced'&&getCard(c).route==='A'));assert.deepEqual(g.decks[8],before.filter(c=>!draft.options.includes(c)));assert.deepEqual(g.market[8],market);const chosen=draft.options[0],rest=draft.options.slice(1);E.chooseAdvanced(g,0,'t',chosen.uid);assert.ok(p.cards.includes(chosen));assert.deepEqual(g.decks[8].slice(0,rest.length),rest);});
+test('empty draft gives money, not sanity',()=>{const g=quiet(make()),p=g.players[0];g.phase='escape';p.drafts=[{id:'t',pool:'any',options:null}];g.decks[8]=g.decks[8].filter(c=>getCard(c).tier!=='advanced');const m=p.money;E.openDraft(g,0,'t');assert.equal(p.money,m+2);assert.equal(p.sanity,3);assert.equal(p.drafts.length,0);});
+test('two-week core progresses once despite two occupied halves, active following week',()=>{const g=quiet(make({startMoney:50,startSanity:7})),p=g.players[0];skills(g,p,'AAAA');const c=add(g,p,'royalty');E.place(g,0,c.uid,am);finish(g);assert.equal(c.progress,1);assert.equal(p.inspiration,3);assert.equal(p.income,0);next(g);quiet(g);finish(g);assert.equal(c.progress,2);assert.equal(p.upgrades.length,1);assert.equal(p.sanity,7);assert.equal(p.income,0);assert.equal(E.cardsInSlot(p,pm).length,0);next(g);quiet(g);finish(g);assert.equal(p.income,6);});
+test('muse boosts first A income only, no weekly sanity gain',()=>{const g=quiet(make({startSanity:6})),p=g.players[0];p.upgrades.push({uid:'core',type:'muse',activeFrom:1});const a=add(g,p,'proofread'),b=add(g,p,'tutoring');E.place(g,0,a.uid,am);turn(g);E.place(g,0,b.uid,pm);const sanity=p.sanity;finish(g);assert.equal(p.income,10);assert.equal(p.inspiration,3);assert.equal(p.sanity,sanity);});
+test('A growth before income does not consume muse income power',()=>{const g=quiet(make({startSanity:6})),p=g.players[0];p.upgrades.push({uid:'core',type:'muse',activeFrom:1});const a=add(g,p,'journal'),b=add(g,p,'proofread');E.place(g,0,a.uid,am);turn(g);E.place(g,0,b.uid,pm);const sanity=p.sanity;finish(g);assert.equal(p.income,6);assert.equal(p.inspiration,5);assert.equal(p.sanity,sanity);});
+test('weekend project 3/3 frees Saturday and both occupied halves',()=>{const g=quiet(make()),p=g.players[0],c=add(g,p,'weekend');E.place(g,0,p.cards[1].uid,{day:0,period:0});turn(g);E.place(g,0,c.uid,am);for(let week=1;week<=3;week++){if(week>1){next(g);quiet(g);p.inspiration++;}finish(g);assert.equal(c.progress,week);assert.equal(p.weekend,week===3);}assert.ok(p.completedProjects.includes(c));assert.equal(E.cardsInSlot(p,pm).length,0);assert.equal(E.workType(p,{day:5,period:0}),null);});
+test('no progress when blocked, caught, gate unmet, no earlier income or no resources',()=>{for(const reason of ['team','caught','sanity','income','money']){const g=quiet(make()),p=g.players[0],c=add(g,p,'weekend');E.place(g,0,c.uid,am);while(g.phase==='planning')E.pass(g,E.activeBuyer(g));p.jobsDone=1;if(reason==='team')g.inspection.blockedTimes=[pm];if(reason==='caught'){p.schedule={'0-0':[c.uid]};g.timeline=[{day:0,period:1}];Object.assign(g.inspection,{times:[{day:0,period:0}],money:1,sanity:1});}if(reason==='sanity'){p.accountability=10;E.syncSanity(g,p);}if(reason==='income')p.jobsDone=0;if(reason==='money')p.money=0;E.resolveAll(g);assert.equal(c.progress,undefined,reason);assert.equal(p.weekend,false);}});
+test('progress survives withdrawal, placement and save reload; discard clears it',()=>{let g=quiet(make()),p=g.players[0],c=add(g,p,'weekend');c.progress=1;E.place(g,0,c.uid,am);turn(g);E.unplace(g,0,c.uid);g=JSON.parse(JSON.stringify(g));p=g.players[0];c=E.cardAt(p,c.uid);turn(g);E.place(g,0,c.uid,pm);assert.equal(c.progress,1);turn(g);E.discardCard(g,0,c.uid);assert.equal(c.progress,undefined);assert.ok(g.discard[8].includes(c));assert.equal(p.weekend,false);});
+test('preview neither mutates progress nor doubles full-day income',()=>{const g=quiet(make({startSanity:4})),p=g.players[0],c=add(g,p,'market-service');E.place(g,0,c.uid,am);const before=JSON.stringify(g);assert.equal(E.preview(g,0).income,7);assert.equal(JSON.stringify(g),before);});
+test('strict >16 income, N-1 ends same week, no resource-score victory',()=>{const g=quiet(make());finish(g);g.players[0].income=16;assert.equal(E.eligible(g,g.players[0]),false);for(const p of g.players.slice(0,2)){p.income=17;delete g.escapeDecisions[p.id];E.chooseEscape(g,p.id);}g.players[2].money=9999;E.closeWeek(g);assert.equal(g.phase,'ended');assert.equal(g.week,1);assert.equal(E.won(g,g.players[2]),false);});
+test('escaped ignores company events, still pays night pressure',()=>{const g=quiet(make({startSanity:8})),p=g.players[0];p.escaped=true;g.inspection.times=[am];g.inspection.blockedTimes=[pm];assert.equal(E.inspected(g,p,am),false);assert.equal(E.eventBlocksSlot(g,p,pm),false);E.place(g,0,p.cards[0].uid,night);assert.equal(p.sanity,6);});
+test('fixed seed reproducible, duration metadata consistent',()=>{assert.deepEqual(make({seed:42}),make({seed:42}));assert.ok([...CARDS,...ADVANCED].every(d=>String(hours(d.size))===marketLane(d)));});
+for(const playerCount of [2,3,4])test(`${playerCount} players: complete legal game, conservation, one daily action`,()=>{const g=E.createGame({playerCount,seed:42});g.players.forEach(p=>p.bot=true);const ids=allCards(g).map(c=>c.uid).sort();let guard=0;while(g.phase!=='ended'&&guard++<35){while(g.phase==='planning'){const before=g.actionCount;E.botAct(g);assert.equal(g.actionCount,before+1);for(const p of g.players)for(let day=0;day<7;day++)for(let period=0;period<3;period++){assert.ok(E.slotHours(p,{day,period})<=4);if(period!==2)assert.ok(E.cardsInSlot(p,{day,period}).length<=1);}}E.resolveAll(g);assert.equal(g.history.at(-1).actions,7*playerCount);for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}E.closeWeek(g);assert.deepEqual(allCards(g).map(c=>c.uid).sort(),ids);for(const p of g.players)assert.ok(p.money>=0&&p.sanity>=0&&p.sanity<=10&&p.inspiration>=0);}assert.equal(g.phase,'ended');});

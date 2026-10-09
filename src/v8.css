@@ -1,0 +1,13 @@
+/* A full-day card bridges two physical half-day recesses. */
+.full-day-track .physical-well{height:calc(var(--hour-unit) * 8 + 46px)}
+.full-day-track .v7-slot{justify-content:center}
+.full-day-track .slot-caption{color:#72522f;font-weight:700}
+.full-day-track .physical-well::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:1px dashed #84704c55;pointer-events:none}
+.full-day-track .tabletop-face{position:relative;z-index:1}
+.hand-grid,.market-grid{--card-unit:62px}
+.game-card[data-hours="2"] .printed-title strong{font-size:11px}
+.game-card[data-hours="2"] .printed-effects{padding-top:3px;padding-bottom:5px}
+.calendar-footer{line-height:1.7}
+.v7-slot .duration-2 .printed-effects{padding-top:2px;padding-bottom:2px}
+
+.sanity-explanation { margin: 4px 0 12px; padding: 6px 10px; border-radius: 4px; background: #f4ecdbeF; color: #544d3e; font-size: 12px; line-height: 1.6; }

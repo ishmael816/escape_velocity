@@ -1,0 +1,1392 @@
+{
+  "CARDS": [
+    {
+      "id": "slack-phone",
+      "name": "手机摸鱼",
+      "kind": "opportunity",
+      "method": "slack",
+      "size": 1,
+      "category": "机会",
+      "icon": "phone",
+      "price": {
+        "money": 3,
+        "sanity": 1
+      }
+    },
+    {
+      "id": "slack-headphones",
+      "name": "耳机结界",
+      "kind": "opportunity",
+      "method": "slack",
+      "size": 1,
+      "workType": "desk",
+      "category": "机会",
+      "icon": "headphones",
+      "price": {
+        "money": 7,
+        "sanity": 2
+      },
+      "bonus": {
+        "inspiration": 1
+      }
+    },
+    {
+      "id": "slack-meeting",
+      "name": "会议隐身",
+      "kind": "opportunity",
+      "method": "slack",
+      "size": 1,
+      "workType": "meeting",
+      "category": "机会",
+      "icon": "eye",
+      "price": {
+        "money": 2,
+        "sanity": 1
+      }
+    },
+    {
+      "id": "night-owl",
+      "name": "夜猫子",
+      "kind": "opportunity",
+      "method": "night",
+      "size": 2,
+      "category": "机会",
+      "icon": "moon",
+      "price": {
+        "money": 2
+      },
+      "nightOffset": 0
+    },
+    {
+      "id": "night-sprint",
+      "name": "凌晨冲刺",
+      "kind": "opportunity",
+      "method": "night",
+      "size": 2,
+      "category": "机会",
+      "icon": "bolt",
+      "price": {
+        "money": 5
+      },
+      "nightOffset": 1,
+      "incomeBonus": 2
+    },
+    {
+      "id": "night-quiet",
+      "name": "安静的夜",
+      "kind": "opportunity",
+      "method": "night",
+      "size": 2,
+      "category": "机会",
+      "icon": "moon",
+      "price": {
+        "money": 5
+      },
+      "nightOffset": -1
+    },
+    {
+      "id": "shopping",
+      "name": "淘宝购物",
+      "kind": "activity",
+      "size": 1,
+      "category": "恢复",
+      "icon": "phone",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 3
+      },
+      "gain": {
+        "sanity": 5
+      }
+    },
+    {
+      "id": "mall",
+      "name": "逛商场",
+      "kind": "activity",
+      "size": 2,
+      "category": "恢复",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 3
+      },
+      "gain": {
+        "sanity": 6
+      }
+    },
+    {
+      "id": "outing",
+      "name": "周日看场演出",
+      "kind": "activity",
+      "size": 3,
+      "category": "恢复",
+      "icon": "frame",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 4
+      },
+      "gain": {
+        "sanity": 8
+      }
+    },
+    {
+      "id": "walk",
+      "name": "街角散步",
+      "kind": "activity",
+      "size": 1,
+      "category": "恢复",
+      "icon": "leaf",
+      "price": {
+        "money": 3
+      },
+      "cost": {},
+      "gain": {
+        "sanity": 2
+      }
+    },
+    {
+      "id": "nap",
+      "name": "宅家慢生活",
+      "kind": "activity",
+      "size": 3,
+      "category": "恢复",
+      "icon": "coffee",
+      "price": {
+        "money": 3
+      },
+      "cost": {},
+      "gain": {
+        "sanity": 4
+      }
+    },
+    {
+      "id": "handcraft",
+      "name": "沉浸手作",
+      "kind": "activity",
+      "size": 3,
+      "category": "恢复",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "sanity": 8
+      }
+    },
+    {
+      "id": "hike",
+      "name": "郊外寻趣",
+      "kind": "activity",
+      "size": 3,
+      "category": "恢复",
+      "icon": "mountain",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 4
+      },
+      "gain": {
+        "sanity": 6,
+        "inspiration": 1
+      }
+    },
+    {
+      "id": "music",
+      "name": "听完整张专辑",
+      "kind": "activity",
+      "size": 2,
+      "category": "灵感",
+      "icon": "headphones",
+      "price": {
+        "money": 3
+      },
+      "cost": {},
+      "gain": {
+        "sanity": 1,
+        "inspiration": 1
+      }
+    },
+    {
+      "id": "reading",
+      "name": "读一本闲书",
+      "kind": "activity",
+      "size": 2,
+      "category": "灵感",
+      "icon": "book",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "inspiration": 2
+      }
+    },
+    {
+      "id": "microjob",
+      "name": "零散接单",
+      "kind": "activity",
+      "size": 1,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "money": 4
+      },
+      "route": "B",
+      "income": true,
+      "minSanity": 4
+    },
+    {
+      "id": "tutoring",
+      "name": "周末陪练",
+      "kind": "activity",
+      "size": 2,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 7
+      },
+      "route": "A",
+      "income": true,
+      "minSanity": 4
+    },
+    {
+      "id": "market-service",
+      "name": "市集帮工",
+      "kind": "activity",
+      "size": 3,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 3
+      },
+      "gain": {
+        "money": 10
+      },
+      "route": "C",
+      "income": true,
+      "minSanity": 4
+    },
+    {
+      "id": "journal",
+      "name": "写下今天",
+      "kind": "activity",
+      "size": 1,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "sanity": 4
+      },
+      "route": "A",
+      "skill": "A",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "sketch",
+      "name": "速写练习",
+      "kind": "activity",
+      "size": 1,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "inspiration": 2
+      },
+      "route": "A",
+      "skill": "A",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "story",
+      "name": "短篇投稿",
+      "kind": "activity",
+      "size": 2,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 5,
+        "sanity": 2
+      },
+      "route": "A",
+      "skill": "A",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "photo",
+      "name": "城市采风",
+      "kind": "activity",
+      "size": 2,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "inspiration": 2,
+        "sanity": 1
+      },
+      "route": "A",
+      "skill": "A",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "poetry",
+      "name": "诗歌工作坊",
+      "kind": "activity",
+      "size": 3,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "sanity": 6
+      },
+      "route": "A",
+      "skill": "A",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "script",
+      "name": "写个小脚本",
+      "kind": "activity",
+      "size": 1,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "money": 2,
+        "sanity": 2
+      },
+      "route": "B",
+      "skill": "B",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "repair",
+      "name": "修好旧物",
+      "kind": "activity",
+      "size": 1,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "inspiration": 1,
+        "sanity": 1
+      },
+      "route": "B",
+      "skill": "B",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "prototype",
+      "name": "周末原型",
+      "kind": "activity",
+      "size": 2,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 1,
+        "sanity": 3,
+        "achievement": 1
+      },
+      "route": "B",
+      "skill": "B",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "open-source",
+      "name": "开源贡献",
+      "kind": "activity",
+      "size": 2,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "inspiration": 2,
+        "sanity": 1
+      },
+      "route": "B",
+      "skill": "B",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "hackathon",
+      "name": "创客实验日",
+      "kind": "activity",
+      "size": 3,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 6,
+        "sanity": 2
+      },
+      "route": "B",
+      "skill": "B",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "interview",
+      "name": "用户访谈",
+      "kind": "activity",
+      "size": 1,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "inspiration": 2
+      },
+      "route": "C",
+      "skill": "C",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "resale",
+      "name": "二手交易",
+      "kind": "activity",
+      "size": 1,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "money": 3
+      },
+      "route": "C",
+      "skill": "C",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "salon",
+      "name": "组织读书会",
+      "kind": "activity",
+      "size": 2,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "inspiration": 2,
+        "sanity": 1
+      },
+      "route": "C",
+      "skill": "C",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "trial-stall",
+      "name": "试摆一次摊",
+      "kind": "activity",
+      "size": 2,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "money": 3,
+        "sanity": 2
+      },
+      "route": "C",
+      "skill": "C",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "taste",
+      "name": "市集调研日",
+      "kind": "activity",
+      "size": 3,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "money": 4,
+        "inspiration": 1
+      },
+      "route": "C",
+      "skill": "C",
+      "once": true,
+      "minSanity": 4
+    },
+    {
+      "id": "seminar-A",
+      "name": "写作研讨会",
+      "kind": "activity",
+      "size": 2,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "sanity": 1
+      },
+      "route": "A",
+      "skill": "A",
+      "once": true,
+      "minSanity": 4,
+      "draft": "A",
+      "rule": "周末从写作与创作池抽二选一"
+    },
+    {
+      "id": "seminar-B",
+      "name": "技术交流会",
+      "kind": "activity",
+      "size": 2,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "sanity": 1
+      },
+      "route": "B",
+      "skill": "B",
+      "once": true,
+      "minSanity": 4,
+      "draft": "B",
+      "rule": "周末从技术与制作池抽二选一"
+    },
+    {
+      "id": "seminar-C",
+      "name": "主理人聚会",
+      "kind": "activity",
+      "size": 2,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "sanity": 1
+      },
+      "route": "C",
+      "skill": "C",
+      "once": true,
+      "minSanity": 4,
+      "draft": "C",
+      "rule": "周末从经营与社群池抽二选一"
+    },
+    {
+      "id": "spa",
+      "name": "温泉小憩",
+      "kind": "activity",
+      "size": 1,
+      "category": "恢复",
+      "icon": "sun",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 3
+      },
+      "gain": {
+        "sanity": 10
+      },
+      "once": true,
+      "consumable": true
+    },
+    {
+      "id": "exhibition",
+      "name": "限定展览",
+      "kind": "activity",
+      "size": 2,
+      "category": "灵感",
+      "icon": "frame",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "inspiration": 5
+      },
+      "once": true,
+      "consumable": true
+    },
+    {
+      "id": "festival",
+      "name": "周末音乐节",
+      "kind": "activity",
+      "size": 3,
+      "category": "恢复",
+      "icon": "tent",
+      "price": {
+        "money": 3
+      },
+      "cost": {
+        "money": 3
+      },
+      "gain": {
+        "sanity": 5,
+        "inspiration": 2,
+        "achievement": 1
+      },
+      "once": true,
+      "consumable": true
+    },
+    {
+      "id": "headhunter",
+      "name": "寻找猎头",
+      "kind": "activity",
+      "size": 1,
+      "category": "经营",
+      "icon": "bag",
+      "price": {
+        "money": 2
+      },
+      "cost": {
+        "money": 1
+      },
+      "gain": {},
+      "once": true,
+      "draft": "any",
+      "minSanity": 4,
+      "rule": "周末任选一个高级池，抽二选一"
+    }
+  ],
+  "ADVANCED": [
+    {
+      "id": "newsletter",
+      "name": "个人专栏",
+      "kind": "activity",
+      "size": 2,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 10
+      },
+      "route": "A",
+      "requires": "AAA",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "illustration",
+      "name": "商业插画",
+      "kind": "activity",
+      "size": 1,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "money": 6
+      },
+      "route": "A",
+      "requires": "AAB",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "retreat",
+      "name": "驻地创作",
+      "kind": "activity",
+      "size": 3,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "sanity": 10
+      },
+      "route": "A",
+      "requires": "AAC",
+      "tier": "advanced"
+    },
+    {
+      "id": "editorial",
+      "name": "策划选题",
+      "kind": "activity",
+      "size": 2,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 0
+      },
+      "cost": {},
+      "gain": {
+        "inspiration": 2
+      },
+      "route": "A",
+      "requires": "ABC",
+      "tier": "advanced",
+      "jobBonus": 2,
+      "jobBonusUses": 1,
+      "rule": "本周下一次成功副业收入 +2"
+    },
+    {
+      "id": "royalty",
+      "name": "出版合约",
+      "kind": "activity",
+      "size": 3,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 6,
+        "inspiration": 2
+      },
+      "gain": {},
+      "route": "A",
+      "requires": "AAAA",
+      "tier": "advanced",
+      "once": true,
+      "core": true,
+      "upgrade": "royalty",
+      "minSanity": 6,
+      "passiveIncome": 6,
+      "rule": "永久：从下周起每周版税收入 +6，不占日程"
+    },
+    {
+      "id": "muse",
+      "name": "创作自由",
+      "kind": "activity",
+      "size": 3,
+      "category": "创作",
+      "icon": "pen",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 6,
+        "inspiration": 1
+      },
+      "gain": {},
+      "route": "A",
+      "requires": "AABC",
+      "tier": "advanced",
+      "once": true,
+      "core": true,
+      "upgrade": "muse",
+      "minSanity": 6,
+      "discount": 2,
+      "powerSanity": 2,
+      "rule": "永久：每周首个创作活动少消耗至多 2 灵感，并恢复 2 理智"
+    },
+    {
+      "id": "freelance",
+      "name": "独立开发",
+      "kind": "activity",
+      "size": 2,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 10
+      },
+      "route": "B",
+      "requires": "BBB",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "microtool",
+      "name": "小工具订阅",
+      "kind": "activity",
+      "size": 1,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 1
+      },
+      "gain": {
+        "money": 6
+      },
+      "route": "B",
+      "requires": "ABB",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "maker-break",
+      "name": "木工小屋",
+      "kind": "activity",
+      "size": 2,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "sanity": 8
+      },
+      "route": "B",
+      "requires": "BBC",
+      "tier": "advanced"
+    },
+    {
+      "id": "pipeline",
+      "name": "工具链",
+      "kind": "activity",
+      "size": 1,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 0
+      },
+      "cost": {},
+      "gain": {
+        "inspiration": 1
+      },
+      "route": "B",
+      "requires": "ABC",
+      "tier": "advanced",
+      "jobBonus": 2,
+      "jobBonusUses": 1,
+      "rule": "本周下一次成功副业收入 +2"
+    },
+    {
+      "id": "automation",
+      "name": "自动化工作室",
+      "kind": "activity",
+      "size": 3,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 6,
+        "inspiration": 2
+      },
+      "gain": {},
+      "route": "B",
+      "requires": "BBBB",
+      "tier": "advanced",
+      "once": true,
+      "core": true,
+      "upgrade": "automation",
+      "minSanity": 6,
+      "discount": 2,
+      "powerIncome": 2,
+      "rule": "永久：每周首个技术副业少消耗至多 2 灵感，收入 +2"
+    },
+    {
+      "id": "remote",
+      "name": "远程合作协议",
+      "kind": "activity",
+      "size": 3,
+      "category": "技术",
+      "icon": "layers",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 8,
+        "inspiration": 2
+      },
+      "gain": {},
+      "route": "B",
+      "requires": "ABBBC",
+      "tier": "advanced",
+      "once": true,
+      "core": true,
+      "upgrade": "remote",
+      "minSanity": 6,
+      "rule": "永久：下周起周三全天自由，工资不变，少一个工作日"
+    },
+    {
+      "id": "stall",
+      "name": "独立小摊",
+      "kind": "activity",
+      "size": 3,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 3
+      },
+      "gain": {
+        "money": 14
+      },
+      "route": "C",
+      "requires": "CCC",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "consulting",
+      "name": "品牌顾问",
+      "kind": "activity",
+      "size": 2,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 10
+      },
+      "route": "C",
+      "requires": "ACC",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "community",
+      "name": "兴趣社群",
+      "kind": "activity",
+      "size": 2,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 2
+      },
+      "gain": {
+        "sanity": 6,
+        "inspiration": 1
+      },
+      "route": "C",
+      "requires": "BCC",
+      "tier": "advanced"
+    },
+    {
+      "id": "workshop",
+      "name": "跨界工作坊",
+      "kind": "activity",
+      "size": 3,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "inspiration": 2
+      },
+      "gain": {
+        "money": 10,
+        "sanity": 2
+      },
+      "route": "C",
+      "requires": "ABC",
+      "tier": "advanced",
+      "income": true,
+      "minSanity": 6
+    },
+    {
+      "id": "chain-store",
+      "name": "自己的小店",
+      "kind": "activity",
+      "size": 3,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 6,
+        "inspiration": 2
+      },
+      "gain": {},
+      "route": "C",
+      "requires": "CCCC",
+      "tier": "advanced",
+      "once": true,
+      "core": true,
+      "upgrade": "chain",
+      "minSanity": 6,
+      "powerIncome": 4,
+      "powerSanity": 2,
+      "rule": "永久：每周首个经营副业收入 +4，并恢复 2 理智"
+    },
+    {
+      "id": "brand",
+      "name": "跨界品牌",
+      "kind": "activity",
+      "size": 3,
+      "category": "经营",
+      "icon": "shop",
+      "price": {
+        "money": 0
+      },
+      "cost": {
+        "money": 6,
+        "inspiration": 2
+      },
+      "gain": {},
+      "route": "C",
+      "requires": "ABCCC",
+      "tier": "advanced",
+      "once": true,
+      "core": true,
+      "upgrade": "brand",
+      "minSanity": 6,
+      "passiveIncome": 10,
+      "rule": "永久：一周成功执行创作、技术、经营各一次，周末收入 +10"
+    }
+  ],
+  "WEEKEND_CARD": {
+    "id": "weekend",
+    "name": "争取双休",
+    "kind": "activity",
+    "size": 3,
+    "category": "解锁",
+    "icon": "sun",
+    "price": {
+      "money": 5
+    },
+    "cost": {
+      "money": 6
+    },
+    "gain": {},
+    "once": true,
+    "minSanity": 4,
+    "unlockWeekend": true,
+    "rule": "本周先完成副业；成功后下周永久双休，工资不变"
+  },
+  "EVENTS": [
+    {
+      "name": "领导突然路过",
+      "kind": "inspection",
+      "times": [
+        [
+          0,
+          1
+        ]
+      ],
+      "money": 2,
+      "sanity": 2,
+      "text": "抽查周一下午；只处罚该时段摸鱼。"
+    },
+    {
+      "name": "周会点名",
+      "kind": "inspection",
+      "times": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "money": 2,
+      "sanity": 2,
+      "text": "抽查周一、周三上午。"
+    },
+    {
+      "name": "午后查岗",
+      "kind": "inspection",
+      "times": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "money": 3,
+      "sanity": 1,
+      "text": "抽查周二、周四下午。"
+    },
+    {
+      "name": "周末巡视",
+      "kind": "inspection",
+      "times": [
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "money": 2,
+      "sanity": 2,
+      "text": "抽查周六两个工作时段；已双休者不受影响。"
+    },
+    {
+      "name": "全员抽查",
+      "kind": "inspection",
+      "times": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "money": 2,
+      "sanity": 2,
+      "text": "抽查周五上午、周三下午、周五下午。"
+    },
+    {
+      "name": "随机巡场",
+      "kind": "inspection",
+      "times": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "money": 3,
+      "sanity": 1,
+      "text": "抽查周二、周四、周六上午。"
+    },
+    {
+      "name": "项目奖金",
+      "kind": "bonus",
+      "gain": {
+        "money": 5
+      },
+      "employeesOnly": true,
+      "text": "所有在职玩家立即获得 5 资金；不计副业收入。"
+    },
+    {
+      "name": "周日晨间团建",
+      "kind": "team",
+      "blockedTimes": [
+        [
+          6,
+          0
+        ]
+      ],
+      "employeesOnly": true,
+      "text": "占用本周周日上午：在职玩家该时段活动与放空暂停，卡牌保留，不付执行消耗；不额外扣钱或理智。已逃离者不受影响。"
+    },
+    {
+      "name": "双休通知",
+      "kind": "weekend",
+      "employeesOnly": true,
+      "text": "下周临时双休一周，工资不变；已永久双休者获得 3 理智。"
+    },
+    {
+      "name": "领导突击连线",
+      "kind": "inspection",
+      "times": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "money": 2,
+      "sanity": 2,
+      "text": "抽查周一下午、周四上午、周五下午。"
+    },
+    {
+      "name": "普通的一周",
+      "kind": "quiet",
+      "text": "没有额外效果，按你的安排度过这一周。"
+    },
+    {
+      "name": "周日午后团建",
+      "kind": "team",
+      "blockedTimes": [
+        [
+          6,
+          1
+        ]
+      ],
+      "employeesOnly": true,
+      "text": "占用本周周日下午：在职玩家该时段活动与放空暂停，卡牌保留，不付执行消耗；不额外扣钱或理智。已逃离者不受影响。"
+    }
+  ],
+  "DEFAULTS": {
+    "playerCount": 3,
+    "mode": "bots",
+    "starterRecovery": "outing",
+    "startMoney": 22,
+    "startSanity": 24,
+    "startInspiration": 4,
+    "salary": 14,
+    "workSanity": 2,
+    "livingCost": 4,
+    "passSanity": 4,
+    "nightSanity": 2,
+    "escapeIncome": 24,
+    "scoreTarget": 85,
+    "sanityFloor": 4,
+    "escapeAchievement": 2,
+    "seed": 20261008
+  }
+}

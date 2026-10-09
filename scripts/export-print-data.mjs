@@ -1,5 +1,6 @@
 import fs from 'node:fs';
-import { CARDS, ADVANCED, WEEKEND_CARD, EVENTS, DEFAULTS } from '../src/cards.js';
+// Archived v0.6 printer; v0.7 requires a new player board and help sheet.
+const { CARDS, ADVANCED, WEEKEND_CARD, EVENTS, DEFAULTS } = JSON.parse(fs.readFileSync(new URL('./fixtures/print-cards-v0.6.json', import.meta.url), 'utf8'));
 import { familyOf, FAMILIES } from '../src/card-visuals.js';
 
 const common = CARDS.filter(c => !c.skill).map((c, i) => ({ ...c, code: `M${String(i + 1).padStart(2, '0')}`, deck: '公共' }));

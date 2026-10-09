@@ -1,0 +1,7522 @@
+{
+  "method": "Player 0 uses only basic repeatable cards with duplicates allowed, against two built-in bots; public information only, seeds 1..100. Policy is heuristic, not optimal.",
+  "summary": {
+    "games": 100,
+    "ended": 100,
+    "escapedWithoutSkills": 70,
+    "escapeWeek": {
+      "min": 3,
+      "median": 5,
+      "max": 8
+    },
+    "example": {
+      "seed": 42,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 53,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 74,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 86,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 121,
+          "schedule": 11
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "logs": [
+            {
+              "week": 1,
+              "day": 0,
+              "player": 0,
+              "text": "安排「宅家慢生活」→ 周一上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "logs": [
+            {
+              "week": 1,
+              "day": 1,
+              "player": 0,
+              "text": "安排「听完整张专辑」→ 周二上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "logs": [
+            {
+              "week": 1,
+              "day": 2,
+              "player": 0,
+              "text": "安排「零散接单」→ 周三上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "logs": [
+            {
+              "week": 1,
+              "day": 3,
+              "player": 0,
+              "text": "购买「街角散步」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "logs": [
+            {
+              "week": 1,
+              "day": 4,
+              "player": 0,
+              "text": "安排「街角散步」→ 周五上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 5,
+          "logs": [
+            {
+              "week": 1,
+              "day": 5,
+              "player": 0,
+              "text": "整备：刷新「短篇投稿」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 6,
+          "logs": [
+            {
+              "week": 1,
+              "day": 6,
+              "player": 0,
+              "text": "整备：刷新「组织读书会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "logs": [
+            {
+              "week": 2,
+              "day": 0,
+              "player": 0,
+              "text": "整备：刷新「限定展览」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "logs": [
+            {
+              "week": 2,
+              "day": 1,
+              "player": 0,
+              "text": "购买「周末陪练」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "logs": [
+            {
+              "week": 2,
+              "day": 2,
+              "player": 0,
+              "text": "安排「周末陪练」→ 周三下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 3,
+          "logs": [
+            {
+              "week": 2,
+              "day": 3,
+              "player": 0,
+              "text": "整备：刷新「开源贡献」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 4,
+          "logs": [
+            {
+              "week": 2,
+              "day": 4,
+              "player": 0,
+              "text": "整备：刷新「短篇投稿」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 5,
+          "logs": [
+            {
+              "week": 2,
+              "day": 5,
+              "player": 0,
+              "text": "购买「听完整张专辑」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 6,
+          "logs": [
+            {
+              "week": 2,
+              "day": 6,
+              "player": 0,
+              "text": "安排「听完整张专辑」→ 周日上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "logs": [
+            {
+              "week": 3,
+              "day": 0,
+              "player": 0,
+              "text": "整备：刷新「限定展览」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "logs": [
+            {
+              "week": 3,
+              "day": 1,
+              "player": 0,
+              "text": "整备：刷新「城市采风」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 2,
+          "logs": [
+            {
+              "week": 3,
+              "day": 2,
+              "player": 0,
+              "text": "整备：刷新「逛商场」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 3,
+          "logs": [
+            {
+              "week": 3,
+              "day": 3,
+              "player": 0,
+              "text": "整备：刷新「短篇投稿」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 4,
+          "logs": [
+            {
+              "week": 3,
+              "day": 4,
+              "player": 0,
+              "text": "整备：刷新「逛商场」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 5,
+          "logs": [
+            {
+              "week": 3,
+              "day": 5,
+              "player": 0,
+              "text": "购买「零散接单」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 6,
+          "logs": [
+            {
+              "week": 3,
+              "day": 6,
+              "player": 0,
+              "text": "安排「零散接单」→ 周日下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 0,
+          "logs": [
+            {
+              "week": 4,
+              "day": 0,
+              "player": 0,
+              "text": "整备：刷新「写作研讨会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 1,
+          "logs": [
+            {
+              "week": 4,
+              "day": 1,
+              "player": 0,
+              "text": "整备：刷新「主理人聚会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 2,
+          "logs": [
+            {
+              "week": 4,
+              "day": 2,
+              "player": 0,
+              "text": "整备：刷新「开源贡献」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 3,
+          "logs": [
+            {
+              "week": 4,
+              "day": 3,
+              "player": 0,
+              "text": "整备：刷新「组织读书会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 4,
+          "logs": [
+            {
+              "week": 4,
+              "day": 4,
+              "player": 0,
+              "text": "整备：刷新「周末原型」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 5,
+          "logs": [
+            {
+              "week": 4,
+              "day": 5,
+              "player": 0,
+              "text": "整备：刷新「组织读书会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 6,
+          "logs": [
+            {
+              "week": 4,
+              "day": 6,
+              "player": 0,
+              "text": "整备：刷新「限定展览」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "logs": [
+            {
+              "week": 5,
+              "day": 0,
+              "player": 0,
+              "text": "购买「周末陪练」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 1,
+          "logs": [
+            {
+              "week": 5,
+              "day": 1,
+              "player": 0,
+              "text": "安排「周末陪练」→ 周二下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 2,
+          "logs": [
+            {
+              "week": 5,
+              "day": 2,
+              "player": 0,
+              "text": "整备：刷新「逛商场」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 3,
+          "logs": [
+            {
+              "week": 5,
+              "day": 3,
+              "player": 0,
+              "text": "购买「听完整张专辑」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 4,
+          "logs": [
+            {
+              "week": 5,
+              "day": 4,
+              "player": 0,
+              "text": "安排「听完整张专辑」→ 周五下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 5,
+          "logs": [
+            {
+              "week": 5,
+              "day": 5,
+              "player": 0,
+              "text": "购买「读一本闲书」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 6,
+          "logs": [
+            {
+              "week": 5,
+              "day": 6,
+              "player": 0,
+              "text": "安排「读一本闲书」→ 周日夜晚。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 0,
+          "logs": [
+            {
+              "week": 6,
+              "day": 0,
+              "player": 0,
+              "text": "移动「宅家慢生活」→ 周一下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 1,
+          "logs": [
+            {
+              "week": 6,
+              "day": 1,
+              "player": 0,
+              "text": "移动「零散接单」→ 周四上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 2,
+          "logs": [
+            {
+              "week": 6,
+              "day": 2,
+              "player": 0,
+              "text": "购买「周末陪练」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 3,
+          "logs": [
+            {
+              "week": 6,
+              "day": 3,
+              "player": 0,
+              "text": "安排「周末陪练」→ 周四下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 4,
+          "logs": [
+            {
+              "week": 6,
+              "day": 4,
+              "player": 0,
+              "text": "整备：临时零工 +2 资金（不计副业）。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 5,
+          "logs": [
+            {
+              "week": 6,
+              "day": 5,
+              "player": 0,
+              "text": "整备：临时零工 +2 资金（不计副业）。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 6,
+          "logs": [
+            {
+              "week": 6,
+              "day": 6,
+              "player": 0,
+              "text": "整备：临时零工 +2 资金（不计副业）。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "reading",
+        "music",
+        "tutoring",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 36,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 14,
+          "sanity": 6,
+          "money": 49,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 21,
+          "sanity": 7,
+          "money": 69,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 28,
+          "sanity": 8,
+          "money": 93,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "ended": true,
+      "length": 8,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "microjob",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 27,
+          "schedule": 8
+        },
+        {
+          "week": 3,
+          "income": 16,
+          "sanity": 5,
+          "money": 46,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 16,
+          "sanity": 7,
+          "money": 68,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 23,
+          "sanity": 8,
+          "money": 86,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 23,
+          "sanity": 10,
+          "money": 114,
+          "schedule": 11
+        },
+        {
+          "week": 7,
+          "income": 23,
+          "sanity": 10,
+          "money": 147,
+          "schedule": 11
+        },
+        {
+          "week": 8,
+          "income": 23,
+          "sanity": 10,
+          "money": 175,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 3,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "tutoring",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 26,
+          "sanity": 4,
+          "money": 51,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 67,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 88,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 107,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "ended": true,
+      "length": 8,
+      "escaped": true,
+      "escapeWeek": 8,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 8,
+          "money": 35,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 43,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 60,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 18,
+          "sanity": 10,
+          "money": 82,
+          "schedule": 9
+        },
+        {
+          "week": 7,
+          "income": 21,
+          "sanity": 8,
+          "money": 102,
+          "schedule": 10
+        },
+        {
+          "week": 8,
+          "income": 28,
+          "sanity": 10,
+          "money": 144,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 5,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "music",
+        "tutoring",
+        "reading",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 38,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 53,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 82,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 116,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 150,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 6,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "music",
+        "microjob",
+        "reading",
+        "microjob",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 20,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 54,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 69,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 9,
+          "money": 90,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 111,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "ended": true,
+      "length": 4,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 47,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 7,
+          "money": 68,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 8,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "reading",
+        "market-service",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 28,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 34,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 21,
+          "sanity": 7,
+          "money": 48,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 28,
+          "sanity": 8,
+          "money": 76,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 9,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 27,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 39,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 23,
+          "sanity": 4,
+          "money": 63,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 6,
+          "money": 77,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 30,
+          "sanity": 7,
+          "money": 104,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 10,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "market-service",
+        "reading",
+        "music",
+        "microjob",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 5,
+          "money": 47,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 6,
+          "money": 69,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 103,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 7,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "tutoring",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 38,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 48,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 65,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 92,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 124,
+          "schedule": 10
+        },
+        {
+          "week": 7,
+          "income": 29,
+          "sanity": 10,
+          "money": 159,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 12,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "music",
+        "tutoring",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 25,
+          "schedule": 8
+        },
+        {
+          "week": 3,
+          "income": 12,
+          "sanity": 6,
+          "money": 42,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 63,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 88,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 13,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "reading",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 4,
+          "money": 55,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 8,
+          "sanity": 5,
+          "money": 68,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 8,
+          "sanity": 7,
+          "money": 70,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 9,
+          "money": 100,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 14,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "music",
+        "tutoring",
+        "reading",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 36,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 47,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 62,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 9,
+          "money": 83,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 19,
+          "sanity": 10,
+          "money": 107,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 15,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 7,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 12,
+          "sanity": 6,
+          "money": 47,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 12,
+          "sanity": 8,
+          "money": 59,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 9,
+          "money": 73,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 19,
+          "sanity": 10,
+          "money": 97,
+          "schedule": 10
+        },
+        {
+          "week": 7,
+          "income": 26,
+          "sanity": 10,
+          "money": 127,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 16,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 7,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "microjob",
+        "music",
+        "music",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 5,
+          "money": 51,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 14,
+          "sanity": 7,
+          "money": 65,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 9,
+          "money": 83,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 107,
+          "schedule": 10
+        },
+        {
+          "week": 7,
+          "income": 29,
+          "sanity": 10,
+          "money": 134,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 7,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "microjob",
+        "reading",
+        "music",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 37,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 57,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 12,
+          "sanity": 6,
+          "money": 66,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 16,
+          "sanity": 8,
+          "money": 87,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 23,
+          "sanity": 10,
+          "money": 105,
+          "schedule": 11
+        },
+        {
+          "week": 7,
+          "income": 30,
+          "sanity": 10,
+          "money": 137,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 18,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "microjob",
+        "tutoring",
+        "microjob",
+        "reading",
+        "music",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 19,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 4,
+          "money": 47,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 6,
+          "money": 61,
+          "schedule": 11
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 3,
+          "money": 97,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "reading",
+        "tutoring",
+        "tutoring",
+        "music",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 42,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 60,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 86,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 114,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 20,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "market-service",
+        "microjob",
+        "tutoring",
+        "music",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 4,
+          "money": 57,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 8,
+          "sanity": 5,
+          "money": 60,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 7,
+          "money": 87,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 9,
+          "money": 117,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 21,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 32,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 48,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 11,
+          "sanity": 10,
+          "money": 69,
+          "schedule": 7
+        },
+        {
+          "week": 6,
+          "income": 11,
+          "sanity": 10,
+          "money": 85,
+          "schedule": 7
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 49,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 6,
+          "money": 68,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 8,
+          "money": 83,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "ended": true,
+      "length": 8,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 28,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 40,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 58,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 81,
+          "schedule": 8
+        },
+        {
+          "week": 6,
+          "income": 18,
+          "sanity": 10,
+          "money": 104,
+          "schedule": 8
+        },
+        {
+          "week": 7,
+          "income": 18,
+          "sanity": 10,
+          "money": 127,
+          "schedule": 8
+        },
+        {
+          "week": 8,
+          "income": 22,
+          "sanity": 10,
+          "money": 151,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 24,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "reading",
+        "tutoring",
+        "tutoring",
+        "music",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 16,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 24,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 39,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 56,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 74,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 107,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 25,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "music",
+        "reading",
+        "microjob",
+        "tutoring",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 41,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 60,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 8,
+          "money": 88,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 26,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "microjob",
+        "reading",
+        "music",
+        "market-service",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 16,
+          "sanity": 5,
+          "money": 47,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 16,
+          "sanity": 7,
+          "money": 62,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 7,
+          "money": 80,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 31,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 46,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 9,
+          "money": 62,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 25,
+          "sanity": 10,
+          "money": 95,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 28,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "market-service"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 12,
+          "sanity": 6,
+          "money": 42,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 56,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 7,
+          "money": 91,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 29,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "market-service",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 5,
+          "money": 55,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 6,
+          "money": 75,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 99,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 25,
+          "sanity": 10,
+          "money": 132,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 30,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 49,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 67,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 91,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 31,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "reading",
+        "microjob",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 27,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 23,
+          "sanity": 4,
+          "money": 47,
+          "schedule": 10
+        },
+        {
+          "week": 4,
+          "income": 23,
+          "sanity": 6,
+          "money": 75,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 30,
+          "sanity": 7,
+          "money": 99,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 32,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 3,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "microjob",
+        "reading",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 25,
+          "sanity": 4,
+          "money": 50,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 6,
+          "money": 74,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 107,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "reading",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 28,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 43,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 60,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 87,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 109,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 34,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 7,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 27,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 23,
+          "sanity": 4,
+          "money": 53,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 5,
+          "money": 68,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 7,
+          "money": 87,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 23,
+          "sanity": 9,
+          "money": 104,
+          "schedule": 13
+        },
+        {
+          "week": 7,
+          "income": 30,
+          "sanity": 10,
+          "money": 148,
+          "schedule": 13
+        }
+      ]
+    },
+    {
+      "seed": 35,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 40,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 63,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 91,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 36,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "microjob",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 19,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 36,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 5,
+          "money": 48,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 6,
+          "money": 60,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 90,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 37,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "microjob",
+        "music",
+        "music",
+        "tutoring",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 16,
+          "sanity": 5,
+          "money": 43,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 30,
+          "sanity": 5,
+          "money": 68,
+          "schedule": 11
+        },
+        {
+          "week": 5,
+          "income": 30,
+          "sanity": 7,
+          "money": 95,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 38,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "music",
+        "microjob",
+        "market-service",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 43,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 64,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 87,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 25,
+          "sanity": 10,
+          "money": 112,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 39,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "microjob",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "reading",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 4,
+          "money": 50,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 14,
+          "sanity": 5,
+          "money": 59,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 7,
+          "money": 82,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 9,
+          "money": 110,
+          "schedule": 12
+        },
+        {
+          "week": 7,
+          "income": 29,
+          "sanity": 10,
+          "money": 146,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 40,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "microjob",
+        "market-service"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 36,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 46,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 29,
+          "sanity": 5,
+          "money": 77,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 7,
+          "money": 100,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 41,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "reading",
+        "tutoring",
+        "tutoring",
+        "market-service",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 34,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 8,
+          "sanity": 7,
+          "money": 41,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 55,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 32,
+          "sanity": 7,
+          "money": 74,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 53,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 74,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 86,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 121,
+          "schedule": 11
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "logs": [
+            {
+              "week": 1,
+              "day": 0,
+              "player": 0,
+              "text": "安排「宅家慢生活」→ 周一上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "logs": [
+            {
+              "week": 1,
+              "day": 1,
+              "player": 0,
+              "text": "安排「听完整张专辑」→ 周二上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "logs": [
+            {
+              "week": 1,
+              "day": 2,
+              "player": 0,
+              "text": "安排「零散接单」→ 周三上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "logs": [
+            {
+              "week": 1,
+              "day": 3,
+              "player": 0,
+              "text": "购买「街角散步」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "logs": [
+            {
+              "week": 1,
+              "day": 4,
+              "player": 0,
+              "text": "安排「街角散步」→ 周五上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 5,
+          "logs": [
+            {
+              "week": 1,
+              "day": 5,
+              "player": 0,
+              "text": "整备：刷新「短篇投稿」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 1,
+          "day": 6,
+          "logs": [
+            {
+              "week": 1,
+              "day": 6,
+              "player": 0,
+              "text": "整备：刷新「组织读书会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "logs": [
+            {
+              "week": 2,
+              "day": 0,
+              "player": 0,
+              "text": "整备：刷新「限定展览」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "logs": [
+            {
+              "week": 2,
+              "day": 1,
+              "player": 0,
+              "text": "购买「周末陪练」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "logs": [
+            {
+              "week": 2,
+              "day": 2,
+              "player": 0,
+              "text": "安排「周末陪练」→ 周三下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 3,
+          "logs": [
+            {
+              "week": 2,
+              "day": 3,
+              "player": 0,
+              "text": "整备：刷新「开源贡献」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 4,
+          "logs": [
+            {
+              "week": 2,
+              "day": 4,
+              "player": 0,
+              "text": "整备：刷新「短篇投稿」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 5,
+          "logs": [
+            {
+              "week": 2,
+              "day": 5,
+              "player": 0,
+              "text": "购买「听完整张专辑」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "day": 6,
+          "logs": [
+            {
+              "week": 2,
+              "day": 6,
+              "player": 0,
+              "text": "安排「听完整张专辑」→ 周日上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "logs": [
+            {
+              "week": 3,
+              "day": 0,
+              "player": 0,
+              "text": "整备：刷新「限定展览」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "logs": [
+            {
+              "week": 3,
+              "day": 1,
+              "player": 0,
+              "text": "整备：刷新「城市采风」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 2,
+          "logs": [
+            {
+              "week": 3,
+              "day": 2,
+              "player": 0,
+              "text": "整备：刷新「逛商场」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 3,
+          "logs": [
+            {
+              "week": 3,
+              "day": 3,
+              "player": 0,
+              "text": "整备：刷新「短篇投稿」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 4,
+          "logs": [
+            {
+              "week": 3,
+              "day": 4,
+              "player": 0,
+              "text": "整备：刷新「逛商场」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 5,
+          "logs": [
+            {
+              "week": 3,
+              "day": 5,
+              "player": 0,
+              "text": "购买「零散接单」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "day": 6,
+          "logs": [
+            {
+              "week": 3,
+              "day": 6,
+              "player": 0,
+              "text": "安排「零散接单」→ 周日下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 0,
+          "logs": [
+            {
+              "week": 4,
+              "day": 0,
+              "player": 0,
+              "text": "整备：刷新「写作研讨会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 1,
+          "logs": [
+            {
+              "week": 4,
+              "day": 1,
+              "player": 0,
+              "text": "整备：刷新「主理人聚会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 2,
+          "logs": [
+            {
+              "week": 4,
+              "day": 2,
+              "player": 0,
+              "text": "整备：刷新「开源贡献」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 3,
+          "logs": [
+            {
+              "week": 4,
+              "day": 3,
+              "player": 0,
+              "text": "整备：刷新「组织读书会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 4,
+          "logs": [
+            {
+              "week": 4,
+              "day": 4,
+              "player": 0,
+              "text": "整备：刷新「周末原型」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 5,
+          "logs": [
+            {
+              "week": 4,
+              "day": 5,
+              "player": 0,
+              "text": "整备：刷新「组织读书会」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "day": 6,
+          "logs": [
+            {
+              "week": 4,
+              "day": 6,
+              "player": 0,
+              "text": "整备：刷新「限定展览」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "logs": [
+            {
+              "week": 5,
+              "day": 0,
+              "player": 0,
+              "text": "购买「周末陪练」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 1,
+          "logs": [
+            {
+              "week": 5,
+              "day": 1,
+              "player": 0,
+              "text": "安排「周末陪练」→ 周二下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 2,
+          "logs": [
+            {
+              "week": 5,
+              "day": 2,
+              "player": 0,
+              "text": "整备：刷新「逛商场」。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 3,
+          "logs": [
+            {
+              "week": 5,
+              "day": 3,
+              "player": 0,
+              "text": "购买「听完整张专辑」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 4,
+          "logs": [
+            {
+              "week": 5,
+              "day": 4,
+              "player": 0,
+              "text": "安排「听完整张专辑」→ 周五下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 5,
+          "logs": [
+            {
+              "week": 5,
+              "day": 5,
+              "player": 0,
+              "text": "购买「读一本闲书」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "day": 6,
+          "logs": [
+            {
+              "week": 5,
+              "day": 6,
+              "player": 0,
+              "text": "安排「读一本闲书」→ 周日夜晚。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 0,
+          "logs": [
+            {
+              "week": 6,
+              "day": 0,
+              "player": 0,
+              "text": "移动「宅家慢生活」→ 周一下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 1,
+          "logs": [
+            {
+              "week": 6,
+              "day": 1,
+              "player": 0,
+              "text": "移动「零散接单」→ 周四上午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 2,
+          "logs": [
+            {
+              "week": 6,
+              "day": 2,
+              "player": 0,
+              "text": "购买「周末陪练」，安排需另花一次行动。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 3,
+          "logs": [
+            {
+              "week": 6,
+              "day": 3,
+              "player": 0,
+              "text": "安排「周末陪练」→ 周四下午。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 4,
+          "logs": [
+            {
+              "week": 6,
+              "day": 4,
+              "player": 0,
+              "text": "整备：临时零工 +2 资金（不计副业）。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 5,
+          "logs": [
+            {
+              "week": 6,
+              "day": 5,
+              "player": 0,
+              "text": "整备：临时零工 +2 资金（不计副业）。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "day": 6,
+          "logs": [
+            {
+              "week": 6,
+              "day": 6,
+              "player": 0,
+              "text": "整备：临时零工 +2 资金（不计副业）。",
+              "tone": "normal",
+              "slot": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 28,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 6,
+          "money": 35,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 7,
+          "money": 65,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 9,
+          "money": 98,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 25,
+          "sanity": 10,
+          "money": 131,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "reading",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 31,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 42,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 52,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 10,
+          "money": 68,
+          "schedule": 8
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 49,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 65,
+          "schedule": 11
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 100,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 135,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "tutoring",
+        "music",
+        "reading",
+        "microjob",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 6,
+          "money": 49,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 62,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 8,
+          "money": 83,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 47,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 42,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 57,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 10,
+          "money": 77,
+          "schedule": 8
+        }
+      ]
+    },
+    {
+      "seed": 48,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "tutoring",
+        "market-service",
+        "music",
+        "music",
+        "reading",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 20,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 18,
+          "sanity": 4,
+          "money": 36,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 4,
+          "money": 55,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 6,
+          "money": 74,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 8,
+          "money": 89,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 28,
+          "sanity": 10,
+          "money": 130,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 49,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "microjob",
+        "microjob",
+        "reading",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 20,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 54,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 75,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 101,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 136,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 50,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 19,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 55,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 82,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 8,
+          "money": 111,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 51,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "microjob",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 19,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 36,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 56,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 73,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 95,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 52,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "reading",
+        "market-service",
+        "music",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 29,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 12,
+          "sanity": 6,
+          "money": 45,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 6,
+          "money": 64,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 8,
+          "money": 80,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 53,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "reading",
+        "microjob",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 38,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 59,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 80,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 106,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 54,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 30,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 42,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 64,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 78,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 36,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 55,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 10,
+          "money": 74,
+          "schedule": 8
+        },
+        {
+          "week": 6,
+          "income": 25,
+          "sanity": 10,
+          "money": 100,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 56,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "microjob",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 8,
+          "money": 35,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 40,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 53,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 84,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 57,
+      "ended": true,
+      "length": 8,
+      "escaped": true,
+      "escapeWeek": 8,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 47,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 70,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 98,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 125,
+          "schedule": 10
+        },
+        {
+          "week": 7,
+          "income": 22,
+          "sanity": 10,
+          "money": 152,
+          "schedule": 10
+        },
+        {
+          "week": 8,
+          "income": 26,
+          "sanity": 10,
+          "money": 184,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 58,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "reading",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 44,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 62,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 23,
+          "sanity": 8,
+          "money": 91,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 30,
+          "sanity": 3,
+          "money": 120,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 59,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring",
+        "reading",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 37,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 53,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 84,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 115,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 60,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 8,
+          "money": 35,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 40,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 57,
+          "schedule": 8
+        }
+      ]
+    },
+    {
+      "seed": 61,
+      "ended": true,
+      "length": 7,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "music",
+        "microjob",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 16,
+          "sanity": 5,
+          "money": 48,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 23,
+          "sanity": 6,
+          "money": 66,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 23,
+          "sanity": 8,
+          "money": 89,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 23,
+          "sanity": 10,
+          "money": 117,
+          "schedule": 11
+        },
+        {
+          "week": 7,
+          "income": 23,
+          "sanity": 10,
+          "money": 145,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 62,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "music",
+        "microjob",
+        "music",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 28,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 12,
+          "sanity": 6,
+          "money": 40,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 53,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 9,
+          "money": 76,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 63,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "reading",
+        "tutoring",
+        "tutoring",
+        "music",
+        "microjob",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 27,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 38,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 56,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 74,
+          "schedule": 8
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 93,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 64,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "microjob",
+        "microjob",
+        "music",
+        "music",
+        "reading",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 32,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 4,
+          "money": 45,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 29,
+          "sanity": 5,
+          "money": 70,
+          "schedule": 11
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 7,
+          "money": 98,
+          "schedule": 12
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 9,
+          "money": 135,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 65,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "tutoring",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 28,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 8,
+          "sanity": 7,
+          "money": 39,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 8,
+          "sanity": 9,
+          "money": 53,
+          "schedule": 6
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 10,
+          "money": 69,
+          "schedule": 7
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 92,
+          "schedule": 8
+        }
+      ]
+    },
+    {
+      "seed": 66,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 3,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "market-service",
+        "reading",
+        "tutoring",
+        "music",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 29,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 25,
+          "sanity": 4,
+          "money": 62,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 6,
+          "money": 96,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 130,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 67,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "microjob",
+        "music",
+        "reading",
+        "tutoring",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 29,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 45,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 87,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 121,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 68,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 31,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 48,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 69,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 95,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 125,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 69,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "tutoring",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "reading",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 18,
+          "sanity": 4,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 54,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 6,
+          "money": 69,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 8,
+          "money": 91,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 125,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 70,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "microjob",
+        "music",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 35,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 48,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 70,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 97,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 71,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "tutoring",
+        "music",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 33,
+          "schedule": 4
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 8,
+          "money": 38,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 47,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 9,
+          "money": 71,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 72,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "microjob",
+        "microjob",
+        "music",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 31,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 43,
+          "schedule": 10
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 68,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 9,
+          "money": 98,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 73,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "microjob",
+        "reading",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 28,
+          "schedule": 8
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 50,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 69,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 30,
+          "sanity": 7,
+          "money": 101,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 74,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "microjob",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 40,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 61,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 19,
+          "sanity": 9,
+          "money": 83,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 110,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 75,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 3,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "tutoring",
+        "microjob",
+        "music",
+        "market-service",
+        "reading",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 20,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 25,
+          "sanity": 4,
+          "money": 62,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 6,
+          "money": 77,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 101,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 76,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "reading",
+        "tutoring",
+        "market-service"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 48,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 29,
+          "sanity": 5,
+          "money": 74,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 7,
+          "money": 90,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 77,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 29,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 23,
+          "sanity": 4,
+          "money": 52,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 30,
+          "sanity": 5,
+          "money": 76,
+          "schedule": 11
+        },
+        {
+          "week": 5,
+          "income": 30,
+          "sanity": 7,
+          "money": 100,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 78,
+      "ended": true,
+      "length": 8,
+      "escaped": true,
+      "escapeWeek": 8,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 42,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 56,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 10,
+          "money": 75,
+          "schedule": 8
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 96,
+          "schedule": 9
+        },
+        {
+          "week": 7,
+          "income": 22,
+          "sanity": 10,
+          "money": 122,
+          "schedule": 10
+        },
+        {
+          "week": 8,
+          "income": 26,
+          "sanity": 10,
+          "money": 157,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 79,
+      "ended": true,
+      "length": 7,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 47,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 61,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 77,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 103,
+          "schedule": 10
+        },
+        {
+          "week": 7,
+          "income": 22,
+          "sanity": 10,
+          "money": 129,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 80,
+      "ended": true,
+      "length": 8,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "microjob",
+        "tutoring",
+        "music",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 18,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 45,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 61,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 83,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 110,
+          "schedule": 10
+        },
+        {
+          "week": 7,
+          "income": 22,
+          "sanity": 10,
+          "money": 137,
+          "schedule": 10
+        },
+        {
+          "week": 8,
+          "income": 22,
+          "sanity": 10,
+          "money": 164,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 81,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 3,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "tutoring",
+        "tutoring",
+        "music",
+        "music",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 18,
+          "sanity": 4,
+          "money": 29,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 25,
+          "sanity": 5,
+          "money": 59,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 7,
+          "money": 74,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 9,
+          "money": 78,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 82,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "music",
+        "music",
+        "tutoring",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 33,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 6,
+          "money": 46,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 7,
+          "money": 67,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 9,
+          "money": 100,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 83,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "microjob",
+        "reading",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 39,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 60,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 82,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 84,
+      "ended": true,
+      "length": 7,
+      "escaped": true,
+      "escapeWeek": 7,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "music",
+        "music",
+        "tutoring",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 27,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 23,
+          "sanity": 4,
+          "money": 58,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 6,
+          "money": 73,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 15,
+          "sanity": 8,
+          "money": 93,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 8,
+          "sanity": 10,
+          "money": 96,
+          "schedule": 11
+        },
+        {
+          "week": 7,
+          "income": 30,
+          "sanity": 10,
+          "money": 122,
+          "schedule": 13
+        }
+      ]
+    },
+    {
+      "seed": 85,
+      "ended": true,
+      "length": 4,
+      "escaped": true,
+      "escapeWeek": 3,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "music",
+        "tutoring",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 25,
+          "schedule": 8
+        },
+        {
+          "week": 3,
+          "income": 26,
+          "sanity": 4,
+          "money": 46,
+          "schedule": 10
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 62,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 86,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "market-service",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 31,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 47,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 25,
+          "sanity": 6,
+          "money": 71,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 25,
+          "sanity": 8,
+          "money": 92,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 25,
+          "sanity": 10,
+          "money": 118,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 87,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 35,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 46,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 18,
+          "sanity": 8,
+          "money": 64,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 87,
+          "schedule": 8
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 10,
+          "money": 111,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 88,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 44,
+          "schedule": 10
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 75,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 101,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 89,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "music",
+        "market-service",
+        "reading",
+        "market-service"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 8,
+          "money": 35,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 46,
+          "schedule": 6
+        },
+        {
+          "week": 5,
+          "income": 21,
+          "sanity": 9,
+          "money": 60,
+          "schedule": 8
+        },
+        {
+          "week": 6,
+          "income": 31,
+          "sanity": 9,
+          "money": 85,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 90,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 5,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "microjob",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 27,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 40,
+          "schedule": 10
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 66,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 29,
+          "sanity": 8,
+          "money": 100,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 91,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "microjob",
+        "microjob",
+        "tutoring",
+        "music",
+        "music",
+        "microjob",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 12,
+          "sanity": 4,
+          "money": 30,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 19,
+          "sanity": 5,
+          "money": 49,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 19,
+          "sanity": 7,
+          "money": 68,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 23,
+          "sanity": 8,
+          "money": 88,
+          "schedule": 11
+        },
+        {
+          "week": 6,
+          "income": 30,
+          "sanity": 9,
+          "money": 118,
+          "schedule": 12
+        }
+      ]
+    },
+    {
+      "seed": 92,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "market-service",
+        "microjob",
+        "market-service",
+        "music",
+        "music",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 14,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 18,
+          "sanity": 5,
+          "money": 49,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 0,
+          "sanity": 5,
+          "money": 49,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 24,
+          "sanity": 7,
+          "money": 72,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 28,
+          "sanity": 9,
+          "money": 115,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 93,
+      "ended": true,
+      "length": 5,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "music",
+        "microjob",
+        "music",
+        "microjob",
+        "microjob",
+        "reading"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 19,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 33,
+          "schedule": 7
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 48,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 23,
+          "sanity": 6,
+          "money": 75,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 23,
+          "sanity": 8,
+          "money": 97,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 94,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 23,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 40,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "sanity": 7,
+          "money": 63,
+          "schedule": 9
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 86,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 126,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 95,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "music",
+        "microjob",
+        "reading",
+        "tutoring",
+        "music",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 28,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 45,
+          "schedule": 7
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 59,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 80,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 26,
+          "sanity": 10,
+          "money": 104,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 96,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "music",
+        "tutoring",
+        "music",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 29,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 8,
+          "sanity": 7,
+          "money": 47,
+          "schedule": 6
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 57,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 74,
+          "schedule": 10
+        },
+        {
+          "week": 6,
+          "income": 22,
+          "sanity": 9,
+          "money": 100,
+          "schedule": 10
+        }
+      ]
+    },
+    {
+      "seed": 97,
+      "ended": true,
+      "length": 5,
+      "escaped": true,
+      "escapeWeek": 4,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "walk",
+        "microjob",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music",
+        "microjob",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 15,
+          "sanity": 4,
+          "money": 38,
+          "schedule": 6
+        },
+        {
+          "week": 3,
+          "income": 22,
+          "sanity": 5,
+          "money": 50,
+          "schedule": 9
+        },
+        {
+          "week": 4,
+          "income": 26,
+          "sanity": 6,
+          "money": 78,
+          "schedule": 10
+        },
+        {
+          "week": 5,
+          "income": 26,
+          "sanity": 8,
+          "money": 104,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 98,
+      "ended": true,
+      "length": 6,
+      "escaped": true,
+      "escapeWeek": 6,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "microjob",
+        "music",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music",
+        "tutoring"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 21,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 8,
+          "sanity": 5,
+          "money": 34,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 15,
+          "sanity": 6,
+          "money": 43,
+          "schedule": 8
+        },
+        {
+          "week": 4,
+          "income": 15,
+          "sanity": 8,
+          "money": 62,
+          "schedule": 8
+        },
+        {
+          "week": 5,
+          "income": 22,
+          "sanity": 9,
+          "money": 83,
+          "schedule": 9
+        },
+        {
+          "week": 6,
+          "income": 29,
+          "sanity": 10,
+          "money": 106,
+          "schedule": 11
+        }
+      ]
+    },
+    {
+      "seed": 99,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "music",
+        "tutoring",
+        "reading",
+        "microjob",
+        "microjob"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 17,
+          "schedule": 5
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 6,
+          "money": 26,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 8,
+          "money": 35,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 45,
+          "schedule": 7
+        },
+        {
+          "week": 5,
+          "income": 11,
+          "sanity": 10,
+          "money": 60,
+          "schedule": 7
+        },
+        {
+          "week": 6,
+          "income": 19,
+          "sanity": 10,
+          "money": 77,
+          "schedule": 9
+        }
+      ]
+    },
+    {
+      "seed": 100,
+      "ended": true,
+      "length": 6,
+      "escaped": false,
+      "escapeWeek": null,
+      "cards": [
+        "nap",
+        "microjob",
+        "music",
+        "shopping",
+        "tutoring",
+        "reading",
+        "tutoring",
+        "music"
+      ],
+      "skills": 0,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 4,
+          "sanity": 4,
+          "money": 22,
+          "schedule": 4
+        },
+        {
+          "week": 2,
+          "income": 11,
+          "sanity": 5,
+          "money": 33,
+          "schedule": 5
+        },
+        {
+          "week": 3,
+          "income": 11,
+          "sanity": 7,
+          "money": 49,
+          "schedule": 5
+        },
+        {
+          "week": 4,
+          "income": 11,
+          "sanity": 9,
+          "money": 59,
+          "schedule": 6
+        },
+        {
+          "week": 5,
+          "income": 18,
+          "sanity": 10,
+          "money": 76,
+          "schedule": 7
+        },
+        {
+          "week": 6,
+          "income": 18,
+          "sanity": 10,
+          "money": 93,
+          "schedule": 8
+        }
+      ]
+    }
+  ]
+}
