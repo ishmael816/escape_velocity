@@ -12,6 +12,12 @@ npm run dev
 
 打开 http://127.0.0.1:5173/ 。仅监听本机。
 
+## Vercel 部署
+
+仓库根目录的 `vercel.json` 明确使用静态站点模式：Framework Preset 为 Other，构建命令 `npm run build`，输出目录 `dist`。项目 Root Directory 应为仓库根目录，生产分支为 `codex/demo-v0.6`。
+
+构建只发布首页、浏览器脚本、样式和图片；`server.mjs` 仅用于本地开发。修改配置后需要新建一次部署，旧部署不会自动改变。可先在本地运行 `npm run build` 检查构建。
+
 ## 第一局
 
 1. 周初公开事件和查岗时段。每个周一至周日，玩家按座次各行动一次；全员行动后才进入下一天。每周起始玩家轮换。
