@@ -32,8 +32,6 @@
     "passMoney": 0,
     "escapeIncomeAtLeast": 10,
     "escapeSanityAtLeast": 6,
-    "incomeTrackMax": 10,
-    "perActivityIncomeMax": 4,
     "searchEmptyCompensation": 1,
     "night4hStress": 4
   },
@@ -713,11 +711,10 @@
       "kind": "repeat",
       "cost": {},
       "gain": {},
-      "effect": "下一张活动若为副业收入牌，印刷基础收入翻倍；该牌含所有加成最多收入 4。",
+      "effect": "下一张活动若为副业收入牌，印刷基础收入翻倍；条件奖励与骰面收益另加，不翻倍。",
       "advanced": true,
       "boost": {
-        "type": "double",
-        "amount": 2
+        "type": "double"
       },
       "support": 1,
       "upkeep": 0
@@ -779,11 +776,10 @@
       "gain": {
         "inspiration": 2
       },
-      "effect": "下一张活动若为有本金的副业收入牌，印刷基础收入翻倍；该牌含所有加成最多收入 4。",
+      "effect": "下一张活动若为有本金的副业收入牌，印刷基础收入翻倍；条件奖励与骰面收益另加，不翻倍。",
       "advanced": true,
       "boost": {
         "type": "double",
-        "amount": 2,
         "capitalOnly": true
       }
     },

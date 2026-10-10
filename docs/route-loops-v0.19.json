@@ -1,0 +1,880 @@
+{
+  "note": "Prepared legal boards with required archived skills, no permanent weekend or protection, 12 liquid cash after capital is locked. No card acquisition probability, building time, live opponents or adaptive event response simulated. All currently implemented caps remain. Inspection probabilities are exact conditional one-week results for these fixed schedules, not route win rates. Openings use controlled visible offers, ordinary purchases and alternating legal actions from the real empty-hand starting resources, in a quiet week.",
+  "openings": [
+    {
+      "id": "creative",
+      "cards": [
+        "A05",
+        "A07",
+        "A02"
+      ],
+      "slots": [
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "actions": 6,
+      "cashAfterAction": [
+        6,
+        6,
+        3,
+        3,
+        2,
+        2
+      ],
+      "money": 7,
+      "capital": 0,
+      "sanity": 3,
+      "income": 2,
+      "skills": {
+        "W": 0,
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "inspiration": 4,
+      "upkeep": 0
+    },
+    {
+      "id": "developer",
+      "cards": [
+        "B06",
+        "B02",
+        "B13"
+      ],
+      "slots": [
+        [
+          6,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "actions": 6,
+      "cashAfterAction": [
+        5,
+        5,
+        4,
+        4,
+        2,
+        2
+      ],
+      "money": 6,
+      "capital": 0,
+      "sanity": 4,
+      "income": 2,
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "inspiration": 4,
+      "upkeep": 1
+    },
+    {
+      "id": "commerce",
+      "cards": [
+        "C06",
+        "C02"
+      ],
+      "slots": [
+        [
+          6,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "actions": 4,
+      "cashAfterAction": [
+        5,
+        2,
+        1,
+        1
+      ],
+      "money": 6,
+      "capital": 3,
+      "sanity": 3,
+      "income": 2,
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "inspiration": 4,
+      "upkeep": 0
+    },
+    {
+      "id": "career",
+      "cards": [
+        "W05",
+        "W02",
+        "W01"
+      ],
+      "slots": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "actions": 6,
+      "cashAfterAction": [
+        6,
+        6,
+        5,
+        5,
+        3,
+        3
+      ],
+      "money": 8,
+      "capital": 0,
+      "sanity": 2,
+      "income": 0,
+      "skills": {
+        "W": 2,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "inspiration": 4,
+      "upkeep": 0
+    }
+  ],
+  "boards": [
+    {
+      "id": "creative",
+      "name": "创作：留白与长篇",
+      "skills": "AAAA",
+      "plan": [
+        [
+          "A09",
+          1
+        ],
+        [
+          "A10",
+          3
+        ],
+        [
+          "A08",
+          6
+        ],
+        [
+          "A05",
+          0,
+          2
+        ],
+        [
+          "C13",
+          2,
+          2
+        ]
+      ],
+      "archive": [
+        "A02",
+        "A01",
+        "A03",
+        "A14"
+      ],
+      "boardPrice": 25,
+      "archivePrice": 7,
+      "capital": 0,
+      "hours": 28,
+      "daySlots": 6,
+      "minimumPurchasePlaceActions": 18,
+      "upkeep": 1,
+      "calm": {
+        "income": 10,
+        "sanity": 7,
+        "eligible": true,
+        "cashDelta": 12,
+        "inspirationDelta": 0,
+        "caught": 0
+      },
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        }
+      ],
+      "inspections": [
+        {
+          "count": 0,
+          "sequences": 1,
+          "escapeFraction": 1,
+          "averageIncome": 10
+        },
+        {
+          "count": 1,
+          "sequences": 6,
+          "escapeFraction": 0.6666666666666666,
+          "averageIncome": 8.833333333333334
+        },
+        {
+          "count": 2,
+          "sequences": 36,
+          "escapeFraction": 0.4444444444444444,
+          "averageIncome": 7.861111111111111
+        },
+        {
+          "count": 3,
+          "sequences": 216,
+          "escapeFraction": 0.2962962962962963,
+          "averageIncome": 7.050925925925926
+        }
+      ],
+      "sundayTeam": [
+        {
+          "period": 0,
+          "income": 7,
+          "sanity": 7,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 1,
+          "caught": 0
+        },
+        {
+          "period": 1,
+          "income": 7,
+          "sanity": 7,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 1,
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "id": "developer",
+      "name": "开发：两组增强",
+      "skills": "BBBB",
+      "plan": [
+        [
+          "B09",
+          0
+        ],
+        [
+          "B06",
+          1,
+          0
+        ],
+        [
+          "B07",
+          1,
+          1
+        ],
+        [
+          "B10",
+          2
+        ],
+        [
+          "A13",
+          6,
+          0
+        ],
+        [
+          "C05",
+          4,
+          2
+        ],
+        [
+          "C13",
+          5,
+          2
+        ]
+      ],
+      "archive": [
+        "B02",
+        "B01",
+        "B14",
+        "B03"
+      ],
+      "boardPrice": 25,
+      "archivePrice": 8,
+      "capital": 0,
+      "hours": 32,
+      "daySlots": 7,
+      "minimumPurchasePlaceActions": 22,
+      "upkeep": 1,
+      "calm": {
+        "income": 10,
+        "sanity": 6,
+        "eligible": true,
+        "cashDelta": 12,
+        "inspirationDelta": 0,
+        "caught": 0
+      },
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 6,
+          "inspirationDelta": 0,
+          "scheduled": 7
+        },
+        {
+          "income": 10,
+          "sanity": 6,
+          "inspirationDelta": 0,
+          "scheduled": 7
+        },
+        {
+          "income": 10,
+          "sanity": 6,
+          "inspirationDelta": 0,
+          "scheduled": 7
+        }
+      ],
+      "inspections": [
+        {
+          "count": 0,
+          "sequences": 1,
+          "escapeFraction": 1,
+          "averageIncome": 10
+        },
+        {
+          "count": 1,
+          "sequences": 6,
+          "escapeFraction": 0.5,
+          "averageIncome": 8.166666666666666
+        },
+        {
+          "count": 2,
+          "sequences": 36,
+          "escapeFraction": 0.25,
+          "averageIncome": 6.805555555555555
+        },
+        {
+          "count": 3,
+          "sequences": 216,
+          "escapeFraction": 0.125,
+          "averageIncome": 5.782407407407407
+        }
+      ],
+      "sundayTeam": [
+        {
+          "period": 0,
+          "income": 9,
+          "sanity": 5,
+          "eligible": false,
+          "cashDelta": 11,
+          "inspirationDelta": 0,
+          "caught": 0
+        },
+        {
+          "period": 1,
+          "income": 10,
+          "sanity": 6,
+          "eligible": true,
+          "cashDelta": 12,
+          "inspirationDelta": 0,
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "id": "commerce",
+      "name": "商业：本金经营",
+      "skills": "CCCC",
+      "plan": [
+        [
+          "C10",
+          1
+        ],
+        [
+          "C09",
+          3
+        ],
+        [
+          "C08",
+          6
+        ],
+        [
+          "C13",
+          0,
+          2
+        ]
+      ],
+      "archive": [
+        "C02",
+        "C01",
+        "C03",
+        "C14"
+      ],
+      "boardPrice": 18,
+      "archivePrice": 9,
+      "capital": 20,
+      "hours": 26,
+      "daySlots": 6,
+      "minimumPurchasePlaceActions": 16,
+      "upkeep": 1,
+      "calm": {
+        "income": 10,
+        "sanity": 7,
+        "eligible": true,
+        "cashDelta": 12,
+        "inspirationDelta": 0,
+        "caught": 0
+      },
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 4
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 4
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 4
+        }
+      ],
+      "inspections": [
+        {
+          "count": 0,
+          "sequences": 1,
+          "escapeFraction": 1,
+          "averageIncome": 10
+        },
+        {
+          "count": 1,
+          "sequences": 6,
+          "escapeFraction": 0.6666666666666666,
+          "averageIncome": 8.833333333333334
+        },
+        {
+          "count": 2,
+          "sequences": 36,
+          "escapeFraction": 0.4444444444444444,
+          "averageIncome": 7.861111111111111
+        },
+        {
+          "count": 3,
+          "sequences": 216,
+          "escapeFraction": 0.2962962962962963,
+          "averageIncome": 7.050925925925926
+        }
+      ],
+      "sundayTeam": [
+        {
+          "period": 0,
+          "income": 7,
+          "sanity": 7,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 0,
+          "caught": 0
+        },
+        {
+          "period": 1,
+          "income": 7,
+          "sanity": 7,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 0,
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "id": "career_commerce",
+      "name": "职场转商业：分红与经营",
+      "skills": "CCW",
+      "plan": [
+        [
+          "C12",
+          0
+        ],
+        [
+          "C06",
+          1,
+          0
+        ],
+        [
+          "A13",
+          1,
+          1
+        ],
+        [
+          "C08",
+          6
+        ],
+        [
+          "C13",
+          4,
+          2
+        ]
+      ],
+      "archive": [
+        "C02",
+        "C01",
+        "W02"
+      ],
+      "boardPrice": 21,
+      "archivePrice": 4,
+      "capital": 19,
+      "hours": 26,
+      "daySlots": 6,
+      "minimumPurchasePlaceActions": 16,
+      "upkeep": 1,
+      "calm": {
+        "income": 10,
+        "sanity": 7,
+        "eligible": true,
+        "cashDelta": 12,
+        "inspirationDelta": 0,
+        "caught": 0
+      },
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        }
+      ],
+      "inspections": [
+        {
+          "count": 0,
+          "sequences": 1,
+          "escapeFraction": 1,
+          "averageIncome": 10
+        },
+        {
+          "count": 1,
+          "sequences": 6,
+          "escapeFraction": 0.6666666666666666,
+          "averageIncome": 8.833333333333334
+        },
+        {
+          "count": 2,
+          "sequences": 36,
+          "escapeFraction": 0.4444444444444444,
+          "averageIncome": 7.861111111111111
+        },
+        {
+          "count": 3,
+          "sequences": 216,
+          "escapeFraction": 0.2962962962962963,
+          "averageIncome": 7.050925925925926
+        }
+      ],
+      "sundayTeam": [
+        {
+          "period": 0,
+          "income": 7,
+          "sanity": 7,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 0,
+          "caught": 0
+        },
+        {
+          "period": 1,
+          "income": 7,
+          "sanity": 7,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 0,
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "id": "creative_developer",
+      "name": "创作×开发：素材与叙事",
+      "skills": "AABB",
+      "plan": [
+        [
+          "B11",
+          0
+        ],
+        [
+          "A13",
+          1,
+          0
+        ],
+        [
+          "B07",
+          1,
+          1
+        ],
+        [
+          "A11",
+          2
+        ],
+        [
+          "A08",
+          6
+        ]
+      ],
+      "archive": [
+        "A02",
+        "A01",
+        "B02",
+        "B01"
+      ],
+      "boardPrice": 24,
+      "archivePrice": 6,
+      "capital": 0,
+      "hours": 32,
+      "daySlots": 8,
+      "minimumPurchasePlaceActions": 18,
+      "upkeep": 0,
+      "calm": {
+        "income": 10,
+        "sanity": 6,
+        "eligible": true,
+        "cashDelta": 13,
+        "inspirationDelta": 0,
+        "caught": 0
+      },
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 6,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        },
+        {
+          "income": 10,
+          "sanity": 6,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        },
+        {
+          "income": 10,
+          "sanity": 6,
+          "inspirationDelta": 0,
+          "scheduled": 5
+        }
+      ],
+      "inspections": [
+        {
+          "count": 0,
+          "sequences": 1,
+          "escapeFraction": 1,
+          "averageIncome": 10
+        },
+        {
+          "count": 1,
+          "sequences": 6,
+          "escapeFraction": 0.5,
+          "averageIncome": 8.666666666666666
+        },
+        {
+          "count": 2,
+          "sequences": 36,
+          "escapeFraction": 0.25,
+          "averageIncome": 7.611111111111111
+        },
+        {
+          "count": 3,
+          "sequences": 216,
+          "escapeFraction": 0.125,
+          "averageIncome": 6.768518518518518
+        }
+      ],
+      "sundayTeam": [
+        {
+          "period": 0,
+          "income": 7,
+          "sanity": 6,
+          "eligible": false,
+          "cashDelta": 10,
+          "inspirationDelta": 1,
+          "caught": 0
+        },
+        {
+          "period": 1,
+          "income": 7,
+          "sanity": 6,
+          "eligible": false,
+          "cashDelta": 10,
+          "inspirationDelta": 1,
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "id": "developer_commerce",
+      "name": "开发×商业：自动化代购",
+      "skills": "BCCC",
+      "plan": [
+        [
+          "B12",
+          0
+        ],
+        [
+          "C06",
+          1,
+          0
+        ],
+        [
+          "A07",
+          1,
+          1
+        ],
+        [
+          "A13",
+          2,
+          0
+        ],
+        [
+          "C09",
+          6
+        ],
+        [
+          "C13",
+          4,
+          2
+        ]
+      ],
+      "archive": [
+        "B02",
+        "C02",
+        "C01",
+        "C03"
+      ],
+      "boardPrice": 23,
+      "archivePrice": 7,
+      "capital": 9,
+      "hours": 30,
+      "daySlots": 7,
+      "minimumPurchasePlaceActions": 20,
+      "upkeep": 1,
+      "calm": {
+        "income": 10,
+        "sanity": 7,
+        "eligible": true,
+        "cashDelta": 12,
+        "inspirationDelta": 1,
+        "caught": 0
+      },
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 1,
+          "scheduled": 6
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 1,
+          "scheduled": 6
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspirationDelta": 1,
+          "scheduled": 6
+        }
+      ],
+      "inspections": [
+        {
+          "count": 0,
+          "sequences": 1,
+          "escapeFraction": 1,
+          "averageIncome": 10
+        },
+        {
+          "count": 1,
+          "sequences": 6,
+          "escapeFraction": 0.5,
+          "averageIncome": 8.5
+        },
+        {
+          "count": 2,
+          "sequences": 36,
+          "escapeFraction": 0.25,
+          "averageIncome": 7.361111111111111
+        },
+        {
+          "count": 3,
+          "sequences": 216,
+          "escapeFraction": 0.125,
+          "averageIncome": 6.486111111111111
+        }
+      ],
+      "sundayTeam": [
+        {
+          "period": 0,
+          "income": 7,
+          "sanity": 6,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 1,
+          "caught": 0
+        },
+        {
+          "period": 1,
+          "income": 7,
+          "sanity": 6,
+          "eligible": false,
+          "cashDelta": 9,
+          "inspirationDelta": 1,
+          "caught": 0
+        }
+      ]
+    }
+  ]
+}

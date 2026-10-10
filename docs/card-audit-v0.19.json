@@ -504,15 +504,15 @@
       "candidateName": "自动化工具",
       "current": "8h／购7／耗灵感1／BBB／心智≥1／后张基础翻倍",
       "candidate": "8h／购5／支持1／BBB／后张基础翻倍",
-      "reason": "增强实际最多 2，支持 1，共预算 6，三技能买 5；避免一个 8h 高级工具只增加 1 却卖 7。",
+      "reason": "基础收入真正翻倍，支持 1；移除收入上限后暂保留买价 5，增强预算及整局平衡需重验。",
       "changed": true,
       "currentBudget": [
         -1,
-        3
+        7
       ],
       "currentTemplatePriceExcludingSpecialAdjustments": [
         -2,
-        2
+        6
       ]
     },
     {
@@ -555,15 +555,15 @@
       "candidateName": "电商自动化",
       "current": "8h／购7／锁本金3／BCC／心智≥1／后张基础翻倍（有本金）",
       "candidate": "8h／购5／灵感2／BCC／心智≥1／后张基础翻倍（有本金）",
-      "reason": "取消工具自身本金，保留目标必须有本金；增强最多 2＋灵感 2，预算 6、买 5。",
+      "reason": "取消工具自身本金，保留目标必须有本金；基础收入真正翻倍＋灵感 2；暂保留买价 5，增强预算及整局平衡需重验。",
       "changed": true,
       "currentBudget": [
         0,
-        4
+        8
       ],
       "currentTemplatePriceExcludingSpecialAdjustments": [
         -1,
-        3
+        7
       ]
     },
     {
@@ -701,7 +701,7 @@
       "candidateName": "自有品牌",
       "current": "8h／购9／副业4／压力1／锁本金10／CCCC／心智≥1",
       "candidate": "8h／购6／副业4／支持1／锁本金8／CCCC",
-      "reason": "收入上限仍 4，增加支持 1，技能补偿 2、本金补偿封顶 2，买 6、启动共 14。",
+      "reason": "印刷基础收入 4，增加支持 1，技能补偿 2、本金补偿封顶 2，买 6、启动共 14。",
       "changed": true,
       "currentBudget": [
         7,
@@ -891,7 +891,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     },
     {
       "id": "W07",
@@ -902,7 +903,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 3,
-      "formulaPrice": 3
+      "formulaPrice": 3,
+      "needsBalanceReview": false
     },
     {
       "id": "W08",
@@ -913,7 +915,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 4,
-      "formulaPrice": 4
+      "formulaPrice": 4,
+      "needsBalanceReview": false
     },
     {
       "id": "W09",
@@ -924,7 +927,8 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 4,
-      "formulaPrice": 4
+      "formulaPrice": 4,
+      "needsBalanceReview": false
     },
     {
       "id": "W10",
@@ -935,7 +939,8 @@
       "skillCredit": 2,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "W11",
@@ -946,7 +951,8 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "W12",
@@ -957,7 +963,8 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "A05",
@@ -968,7 +975,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     },
     {
       "id": "A06",
@@ -979,7 +987,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 4,
-      "formulaPrice": 4
+      "formulaPrice": 4,
+      "needsBalanceReview": false
     },
     {
       "id": "A07",
@@ -990,7 +999,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 3,
-      "formulaPrice": 3
+      "formulaPrice": 3,
+      "needsBalanceReview": false
     },
     {
       "id": "A08",
@@ -1001,7 +1011,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "A09",
@@ -1012,7 +1023,8 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 7,
-      "formulaPrice": 7
+      "formulaPrice": 7,
+      "needsBalanceReview": false
     },
     {
       "id": "A10",
@@ -1023,7 +1035,8 @@
       "skillCredit": 2,
       "capitalCredit": 0,
       "price": 8,
-      "formulaPrice": 8
+      "formulaPrice": 8,
+      "needsBalanceReview": false
     },
     {
       "id": "A11",
@@ -1034,7 +1047,8 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 7,
-      "formulaPrice": 7
+      "formulaPrice": 7,
+      "needsBalanceReview": false
     },
     {
       "id": "A12",
@@ -1045,7 +1059,8 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 6,
-      "formulaPrice": 6
+      "formulaPrice": 6,
+      "needsBalanceReview": false
     },
     {
       "id": "B05",
@@ -1056,7 +1071,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     },
     {
       "id": "B06",
@@ -1067,7 +1083,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 3,
-      "formulaPrice": 3
+      "formulaPrice": 3,
+      "needsBalanceReview": false
     },
     {
       "id": "B07",
@@ -1078,7 +1095,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     },
     {
       "id": "B08",
@@ -1089,18 +1107,20 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "B09",
       "budgetRange": [
         2,
-        6
+        10
       ],
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 9,
+      "needsBalanceReview": true
     },
     {
       "id": "B10",
@@ -1111,7 +1131,8 @@
       "skillCredit": 2,
       "capitalCredit": 0,
       "price": 6,
-      "formulaPrice": 6
+      "formulaPrice": 6,
+      "needsBalanceReview": false
     },
     {
       "id": "B11",
@@ -1122,18 +1143,20 @@
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 6,
-      "formulaPrice": 6
+      "formulaPrice": 6,
+      "needsBalanceReview": false
     },
     {
       "id": "B12",
       "budgetRange": [
         2,
-        6
+        10
       ],
       "skillCredit": 1,
       "capitalCredit": 0,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 9,
+      "needsBalanceReview": true
     },
     {
       "id": "C05",
@@ -1144,7 +1167,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     },
     {
       "id": "C06",
@@ -1155,7 +1179,8 @@
       "skillCredit": 0,
       "capitalCredit": 1,
       "price": 3,
-      "formulaPrice": 3
+      "formulaPrice": 3,
+      "needsBalanceReview": false
     },
     {
       "id": "C07",
@@ -1166,7 +1191,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 3,
-      "formulaPrice": 3
+      "formulaPrice": 3,
+      "needsBalanceReview": false
     },
     {
       "id": "C08",
@@ -1177,7 +1203,8 @@
       "skillCredit": 0,
       "capitalCredit": 2,
       "price": 4,
-      "formulaPrice": 4
+      "formulaPrice": 4,
+      "needsBalanceReview": false
     },
     {
       "id": "C09",
@@ -1188,7 +1215,8 @@
       "skillCredit": 1,
       "capitalCredit": 2,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "C10",
@@ -1199,7 +1227,8 @@
       "skillCredit": 2,
       "capitalCredit": 2,
       "price": 6,
-      "formulaPrice": 6
+      "formulaPrice": 6,
+      "needsBalanceReview": false
     },
     {
       "id": "C11",
@@ -1210,7 +1239,8 @@
       "skillCredit": 1,
       "capitalCredit": 2,
       "price": 5,
-      "formulaPrice": 5
+      "formulaPrice": 5,
+      "needsBalanceReview": false
     },
     {
       "id": "C12",
@@ -1221,7 +1251,8 @@
       "skillCredit": 1,
       "capitalCredit": 2,
       "price": 7,
-      "formulaPrice": 7
+      "formulaPrice": 7,
+      "needsBalanceReview": false
     },
     {
       "id": "A13",
@@ -1232,7 +1263,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 4,
-      "formulaPrice": 4
+      "formulaPrice": 4,
+      "needsBalanceReview": false
     },
     {
       "id": "B13",
@@ -1243,7 +1275,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     },
     {
       "id": "C13",
@@ -1254,7 +1287,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 3,
-      "formulaPrice": 3
+      "formulaPrice": 3,
+      "needsBalanceReview": false
     },
     {
       "id": "W13",
@@ -1265,7 +1299,8 @@
       "skillCredit": 0,
       "capitalCredit": 0,
       "price": 2,
-      "formulaPrice": 2
+      "formulaPrice": 2,
+      "needsBalanceReview": false
     }
   ],
   "inspection": {
@@ -1334,10 +1369,10 @@
         1,
         1,
         1,
-        0,
-        0
+        1,
+        1
       ],
-      "meanExtra": 0.6666666666666666
+      "meanExtra": 1
     },
     {
       "pool": "current",
@@ -1385,9 +1420,9 @@
       "target": "A10",
       "condition": true,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "current",
@@ -1415,9 +1450,9 @@
       "target": "A12",
       "condition": true,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "current",
@@ -1510,9 +1545,9 @@
       "target": "C10",
       "condition": false,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "current",
@@ -1540,9 +1575,9 @@
       "target": "C12",
       "condition": true,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "current",
@@ -1550,9 +1585,9 @@
       "target": "W11",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1570,9 +1605,9 @@
       "target": "W12",
       "condition": true,
       "additionalPerFace": [
-        1
+        2
       ],
-      "meanExtra": 1
+      "meanExtra": 2
     },
     {
       "pool": "current",
@@ -1595,9 +1630,9 @@
       "target": "A08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1615,9 +1650,9 @@
       "target": "A09",
       "condition": true,
       "additionalPerFace": [
-        1
+        2
       ],
-      "meanExtra": 1
+      "meanExtra": 2
     },
     {
       "pool": "current",
@@ -1625,9 +1660,9 @@
       "target": "A10",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1635,9 +1670,9 @@
       "target": "A10",
       "condition": true,
       "additionalPerFace": [
-        0
+        3
       ],
-      "meanExtra": 0
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1655,9 +1690,9 @@
       "target": "A12",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1665,9 +1700,9 @@
       "target": "A12",
       "condition": true,
       "additionalPerFace": [
-        0
+        3
       ],
-      "meanExtra": 0
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1685,9 +1720,9 @@
       "target": "B08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1695,9 +1730,9 @@
       "target": "B10",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1740,9 +1775,9 @@
       "target": "C08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1750,9 +1785,9 @@
       "target": "C09",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1760,9 +1795,9 @@
       "target": "C10",
       "condition": false,
       "additionalPerFace": [
-        0
+        4
       ],
-      "meanExtra": 0
+      "meanExtra": 4
     },
     {
       "pool": "current",
@@ -1770,9 +1805,9 @@
       "target": "C11",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1780,9 +1815,9 @@
       "target": "C12",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1790,9 +1825,9 @@
       "target": "C12",
       "condition": true,
       "additionalPerFace": [
-        0
+        3
       ],
-      "meanExtra": 0
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -1990,9 +2025,9 @@
       "target": "C08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -2000,9 +2035,9 @@
       "target": "C09",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -2010,9 +2045,9 @@
       "target": "C10",
       "condition": false,
       "additionalPerFace": [
-        0
+        4
       ],
-      "meanExtra": 0
+      "meanExtra": 4
     },
     {
       "pool": "current",
@@ -2020,9 +2055,9 @@
       "target": "C11",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -2030,9 +2065,9 @@
       "target": "C12",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "current",
@@ -2040,9 +2075,9 @@
       "target": "C12",
       "condition": true,
       "additionalPerFace": [
-        0
+        3
       ],
-      "meanExtra": 0
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2130,9 +2165,9 @@
       "target": "A10",
       "condition": true,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "candidate",
@@ -2160,9 +2195,9 @@
       "target": "A12",
       "condition": true,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "candidate",
@@ -2250,9 +2285,9 @@
       "target": "C10",
       "condition": false,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "candidate",
@@ -2270,9 +2305,9 @@
       "target": "C12",
       "condition": false,
       "additionalPerFace": [
-        0
+        1
       ],
-      "meanExtra": 0
+      "meanExtra": 1
     },
     {
       "pool": "candidate",
@@ -2290,9 +2325,9 @@
       "target": "W11",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2310,9 +2345,9 @@
       "target": "W12",
       "condition": true,
       "additionalPerFace": [
-        1
+        2
       ],
-      "meanExtra": 1
+      "meanExtra": 2
     },
     {
       "pool": "candidate",
@@ -2330,9 +2365,9 @@
       "target": "A08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2350,9 +2385,9 @@
       "target": "A09",
       "condition": true,
       "additionalPerFace": [
-        1
+        2
       ],
-      "meanExtra": 1
+      "meanExtra": 2
     },
     {
       "pool": "candidate",
@@ -2360,9 +2395,9 @@
       "target": "A10",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2370,9 +2405,9 @@
       "target": "A10",
       "condition": true,
       "additionalPerFace": [
-        0
+        3
       ],
-      "meanExtra": 0
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2380,9 +2415,9 @@
       "target": "A11",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2390,9 +2425,9 @@
       "target": "A12",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2400,9 +2435,9 @@
       "target": "A12",
       "condition": true,
       "additionalPerFace": [
-        0
+        3
       ],
-      "meanExtra": 0
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2420,9 +2455,9 @@
       "target": "B08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2430,9 +2465,9 @@
       "target": "B10",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2470,9 +2505,9 @@
       "target": "C08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2480,9 +2515,9 @@
       "target": "C09",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2490,9 +2525,9 @@
       "target": "C10",
       "condition": false,
       "additionalPerFace": [
-        0
+        4
       ],
-      "meanExtra": 0
+      "meanExtra": 4
     },
     {
       "pool": "candidate",
@@ -2510,9 +2545,9 @@
       "target": "C12",
       "condition": false,
       "additionalPerFace": [
-        0
+        4
       ],
-      "meanExtra": 0
+      "meanExtra": 4
     },
     {
       "pool": "candidate",
@@ -2710,9 +2745,9 @@
       "target": "C08",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2720,9 +2755,9 @@
       "target": "C09",
       "condition": false,
       "additionalPerFace": [
-        1
+        3
       ],
-      "meanExtra": 1
+      "meanExtra": 3
     },
     {
       "pool": "candidate",
@@ -2730,9 +2765,9 @@
       "target": "C10",
       "condition": false,
       "additionalPerFace": [
-        0
+        4
       ],
-      "meanExtra": 0
+      "meanExtra": 4
     },
     {
       "pool": "candidate",
@@ -2750,9 +2785,9 @@
       "target": "C12",
       "condition": false,
       "additionalPerFace": [
-        0
+        4
       ],
-      "meanExtra": 0
+      "meanExtra": 4
     },
     {
       "pool": "candidate",

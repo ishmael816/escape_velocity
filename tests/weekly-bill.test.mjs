@@ -3,11 +3,11 @@ import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
 import {make,rig,lock,next,seedFor,skills} from './helpers.mjs';
 
-test('side income is paid only after the last slot; inspiration still chains immediately',()=>{
+test('side income is paid only after the last slot; board inspiration is never spent',()=>{
  const g=make({startInspiration:0}),p=g.players[0];
- rig(g,p,[['A05',0],['A07',1],['A05',6]]);lock(g);const money=p.money;
- E.step(g);E.step(g);assert.equal(p.inspiration,1);
- E.step(g);assert.equal(p.money,money);assert.equal(p.income,0);assert.equal(p.inspiration,0);
+ rig(g,p,[['A07',1],['A02',6]]);lock(g);const money=p.money;
+ E.step(g);E.step(g);assert.equal(E.inspirationCount(p),7);
+ assert.equal(p.money,money);assert.equal(p.income,0);assert.equal(E.inspirationCount(p),7);
  assert.equal(E.eligible(g,p),false);
  E.resolveAll(g);assert.equal(p.money,money+5);assert.equal(p.income,2);
  assert.deepEqual(p.settlement,{week:1,sideIncome:2,otherIncome:0,salary:3,eventMoney:0,total:5});

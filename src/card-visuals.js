@@ -22,6 +22,11 @@ export function familyOf(def) {
 }
 export function specialRules(def) {
   const rules = [];
+  if(def.parallel)rules.push('可与一张活动并行，时间取较长者；最多两张，各自承担压力与费用，工作格查岗分别暂停');
+  if(def.capitalRatio)rules.push('安排时自选本金，须为 '+def.capitalRatio+' 的正整数倍；每 '+def.capitalRatio+' 本金产生1收入。调整需一次安排行动；撤回返还');
+  if(def.inspirationRequired)rules.push('版图灵感至少 '+def.inspirationRequired+' 枚，不消耗；放牌清除该格灵感，撤回须等下周恢复');
+  if(def.opportunity)rules.push('每周查看一个时长牌堆的 '+def.opportunity.count+' 张，原价买至多1张，其余放堆底；下周再安排');
+  if(def.hireFee)rules.push('额外支付 '+def.hireFee+' 招聘费，原价购买市场中一张2h一次性牌直接归档，不执行原效果；同名不重复归档');
   if(def.support)rules.push(`占用日程提供理智支持 +${def.support}；${def.upkeep?`查岗揭晓后、普通活动前每周付 ${def.upkeep} 钱，多张按日程顺序支付，付不起则撤回手牌`:'无维持费'}。查停、团建或同晚超过 2h 时支持失效；其余效果按日程执行。撤回解除，不跨周累加`);
   if(!def.once&&Object.values(def.cost||{}).some(n=>n>0))rules.push('付不起执行消耗时撤回手牌，解除支持与压力并返还本金');
   if (def.rule) rules.push(def.rule);

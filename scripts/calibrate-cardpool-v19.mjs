@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 // Apply the approved numerical templates to the original card definitions.
 export function calibratePool(candidate) {
 const notes = {};
+if(candidate.baseline){delete candidate.baseline.perActivityIncomeMax;delete candidate.baseline.incomeTrackMax;}
 const find = id => candidate.cards.find(c => c.id === id);
 function change(id, patch, why, remove = []) {
   const c = find(id);
@@ -44,10 +45,10 @@ change('B05', {cost:{},gain:{inspiration:1}}, '取消现金周费，改为买 2�
 change('B06', {cost:{}}, '取消未补偿的灵感费，回到 4h 基准。');
 change('B07', {price:2}, '最多增加下一张实际收入 1，预算 2，买价 2；命中非收入活动仍会失效。');
 change('B08', {cost:{}}, '取消未补偿的灵感费，回到 8h 基准。');
-change('B09', {price:5,cost:{},support:1,upkeep:0,minSanity:0}, '增强实际最多 2，支持 1，共预算 6，三技能买 5；避免一个 8h 高级工具只增加 1 却卖 7。');
+change('B09', {price:5,cost:{},support:1,upkeep:0,minSanity:0}, '基础收入真正翻倍，支持 1；移除收入上限后暂保留买价 5，增强预算及整局平衡需重验。');
 change('B10', {price:6,cost:{},support:1,upkeep:0,minSanity:0}, '收入 3＋支持 1，四技能预算买 6，取消灵感费。');
 change('B11', {price:6,cost:{},support:1,upkeep:0,minSanity:0}, '保留留白产灵感；收入 2＋支持 1，触发时再得灵感 1，按预算上限 7 减技能 1 定价。');
-change('B12', {price:5,gain:{inspiration:2}}, '取消工具自身本金，保留目标必须有本金；增强最多 2＋灵感 2，预算 6、买 5。', ['capital']);
+change('B12', {price:5,gain:{inspiration:2}}, '取消工具自身本金，保留目标必须有本金；基础收入真正翻倍＋灵感 2；暂保留买价 5，增强预算及整局平衡需重验。', ['capital']);
 
 change('C01', {}, '保留：净支出 1 的返款型成长，返款在周末，不能立即滚动购买。');
 change('C02', {cost:{},gain:{}}, '回到买 1 的简单成长；不再先付现金才获得灵感。');
@@ -57,7 +58,7 @@ change('C06', {stress:0,gain:{profit:2},effect:'本金在安排时锁定，撤�
 change('C07', {cost:{}}, '去掉每周现金费，买 3 产灵感 3，回到 4h 供应模板。');
 change('C08', {price:4,stress:0}, '本金 6 暂补偿 2 点，收入 3、无压力，买价 4；启动现金仍需 10。');
 change('C09', {price:5,capital:6,support:1,upkeep:0,minSanity:0}, '收入 3＋支持 1，技能 1、本金 2 的预算补偿后买 5；启动共 11。');
-change('C10', {price:6,stress:0,capital:8,support:1,upkeep:0,minSanity:0}, '收入上限仍 4，增加支持 1，技能补偿 2、本金补偿封顶 2，买 6、启动共 14。');
+change('C10', {price:6,stress:0,capital:8,support:1,upkeep:0,minSanity:0}, '印刷基础收入 4，增加支持 1，技能补偿 2、本金补偿封顶 2，买 6、启动共 14。');
 change('C11', {price:5,cost:{},gain:{profit:2},support:2,upkeep:0,minSanity:0}, '减少收入换支持 2，取消灵感费；技能和本金补偿后买 5，提供商业与生活的混合选择。');
 change('C12', {name:'分红投资组合',price:7,stress:0,capital:10,gain:{profit:4},support:1,upkeep:0,effect:''}, '移除低心智收入奖励，改为资金积累后的转型端：收入 4＋支持 1，启动共 17；不能靠两张达到收入 10。', ['conditionalBonus','condition']);
 
@@ -77,5 +78,9 @@ change('W14', {}, '保留：翻 2、原价买牌，履职安全但受低心智�
 change('P01', {}, '暂保留：买 4＋三次各付 1＝现金支出 7，另有技能、3 周推进和每周 8h 占用；双休是综合权限，不按支持 2 单项定价。');
 change('P02', {price:2,cost:{},requires:'WW',effect:'完成后的下一周起，每周周初标记一个工作时段：该时段的一张 2h 或 4h 非履职活动免受查岗。掷骰前选好，本周不可移动。不保护 8h、团建或熬夜。'}, '原价含执行费共 6 且只能护 2h，收益过低；改为买 2、WW、一次完成，并允许保护一张 4h。');
 
+for(const c of candidate.cards.filter(c=>c.boost?.type==='double')){
+  delete c.boost.amount;
+  c.effect=`下一张活动若为${c.boost.capitalOnly?'有本金的':''}副业收入牌，印刷基础收入翻倍；条件奖励与骰面收益另加，不翻倍。`;
+}
 return notes;
 }

@@ -12,7 +12,7 @@ test('2–4 players: refresh only after every Monday action, with no extra money
  for(const playerCount of [2,3,4]){
   const g=make({playerCount}),before=ids(g),pool=poolIds(g),money=g.players.map(p=>p.money);
   for(let n=0;n<playerCount-1;n++){E.pass(g,E.activeBuyer(g));assert.deepEqual(ids(g),before);}
-  E.pass(g,E.activeBuyer(g));assert.equal(g.day,1);assert.equal(g.actionCount,playerCount);
+  E.pass(g,E.activeBuyer(g));assert.equal(g.phase,'resolving');assert.equal(g.endedByPass,true);assert.equal(g.actionCount,playerCount);
   assert.equal(g.mondayMarketRefreshed,true);assert.ok(ids(g).every(uid=>!before.includes(uid)));
   assert.deepEqual(poolIds(g),pool);assert.deepEqual(g.players.map(p=>p.money),money);
   for(const [lane,n]of Object.entries(MARKET_LIMITS))assert.equal(g.market[lane].length,n);

@@ -8,12 +8,12 @@ export const ROUTES={
  B:{name:'开发',pool:'开发与制作',icon:'layers',family:'technical'},
  C:{name:'商业',pool:'商业与经营',icon:'shop',family:'business'},
 };
-export const DEFAULTS={playerCount:3,mode:'bots',startMoney:8,startSanity:3,startInspiration:4,maxSanity:10,salary:3,nightStress3:2,nightStress4:4,escapeIncome:10,escapeSanity:6,inspectionFine:1,seed:20261009};
+export const DEFAULTS={playerCount:3,mode:'bots',startMoney:8,startSanity:3,maxSanity:10,salary:3,nightStress3:2,nightStress4:4,escapeIncome:10,escapeSanity:6,inspectionFine:1,seed:20261009};
 function adapt(d){
  const route=ROUTES[d.route||'W'];
  return {...d,kind:'activity',size:{2:1,4:2,8:3}[d.hours],category:route.name,icon:route.icon,
-  price:{money:d.price},cost:{...d.cost},gain:{...(d.gain.inspiration?{inspiration:d.gain.inspiration}:{}),...((d.gain.profit||d.gain.cash||d.gain.salary)?{money:(d.gain.profit||0)+(d.gain.cash||0)+(d.gain.salary||0)}:{})},
-  fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.gain.profit||d.dice?.resource==='profit',
+  price:{money:d.price},cost:{...d.cost},gain:{...((d.gain.profit||d.gain.cash||d.gain.salary)?{money:(d.gain.profit||0)+(d.gain.cash||0)+(d.gain.salary||0)}:{})},
+  fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.gain.profit||!!d.capitalRatio||d.dice?.resource==='profit',
   once:d.kind==='growth'||d.kind==='once',skill:d.kind==='growth'?d.route:null,
   tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.dice?'':d.effect,
   progressTarget:d.progress,unlockWeekend:d.id==='P01',unlockProtection:d.id==='P02',permanent:!!d.permanent,route:d.route||'W',

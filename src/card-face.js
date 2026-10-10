@@ -29,14 +29,31 @@ function resources(values={},sign='+') {
 function skills(pattern, gain=false) {
   return `<span class="card-skills" title="${gain?'完成获得技能':'安排需要技能'} ${pattern}" aria-label="${gain?'完成获得技能':'安排需要技能'} ${pattern}">${icon(gain?'arrow':'lock',12)}${[...new Set(pattern)].map(r=>`<span class="route-mark family-${ROUTES[r].family}">${icon(ROUTES[r].icon,14)}<b>${[...pattern].filter(x=>x===r).length}</b></span>`).join('')}</span>`;
 }
+function mechanics(d,c){
+ const glyph=(label,body)=>'<span class="mechanic-glyph" role="img" title="'+esc(label)+'" aria-label="'+esc(label)+'">'+body+'</span>';
+ const coin=(n)=>badge('money',n,'收入 '+n);
+ return '<div class="mechanic-equations">'+[
+ d.inspirationRequired?glyph('版图灵感至少 '+d.inspirationRequired+'，不消耗',badge('inspiration','≥'+d.inspirationRequired,'版图灵感门槛')):'',
+ d.parallel?glyph('可与一张活动并行，时间取较长者',icon('layers',23)+' ∥'):'',
+ d.capitalRatio?glyph('每 '+d.capitalRatio+' 本金产生 1 收入；当前锁定 '+(c?.lockedCapital||0),icon('lock',14)+badge('money',d.capitalRatio,'本金比例')+' → '+coin(1)+(c?.lockedCapital?'<small>['+c.lockedCapital+']</small>':'')):'',
+ d.opportunity?glyph('看 '+d.opportunity.count+' 张，原价买至多 1 张',icon('eye',20)+icon('layers',20)+'<b>'+d.opportunity.count+'</b> → '+icon('shop',20)+'<b>1</b>'):'',
+ d.hireFee?glyph('额外支付 '+d.hireFee+' 招聘费，原价买一张2h一次性牌直接归档，不执行效果',badge('money','−'+d.hireFee,'招聘费')+' + '+icon('shop',18)+badge('once',null,'2h一次性牌')+' → '+icon('book',20)):'',
+ d.boost?glyph('下一张牌收入 +1',icon('arrow',20)+coin('+1')):'',
+ d.condition==='inspiration'?glyph('版图灵感至少 '+d.inspirationBonusAt+'：收入 +'+d.conditionalBonus,badge('inspiration','≥'+d.inspirationBonusAt,'版图灵感')+' → '+coin('+'+d.conditionalBonus)):'',
+ d.condition==='professional'?glyph('本周此前完成工作活动：收入 +'+d.conditionalBonus,icon('bag',20)+icon('check',16)+' → '+coin('+'+d.conditionalBonus)):'',
+ d.condition==='capitalJob'?glyph('本周此前完成压有本金的牌：收入 +'+d.conditionalBonus,icon('lock',16)+coin(null)+icon('check',16)+' → '+coin('+'+d.conditionalBonus)):''
+ ].join('')+'</div>';
+}
 export function cardFace(d,compact=false,c=null) {
   const progress=c?.progress||0, target=d.progressTarget;
-  const rule=d.unlockWeekend?'本周先完成副业；完成后永久双休，工资不变':d.rule;
+  const symbolic=d.parallel||d.capitalRatio||d.opportunity||d.hireFee||d.condition||d.boost||d.draft;
+  const rule=symbolic?'':d.unlockWeekend?'本周先完成副业；完成后永久双休，工资不变':d.rule;
   const dice=d.dice?Object.entries(d.dice.faces.reduce((out,n,i)=>((out[n]||=[]).push(i+1),out),{})).map(([n,faces])=>`<span class="dice-outcome"><span class="die-faces" aria-label="骰点 ${faces.join('、')}">${faces.map(f=>`<span aria-hidden="true">${'⚀⚁⚂⚃⚄⚅'[f-1]}</span>`).join('')}</span><span>→</span>${badge('money',n,`${d.dice.resource==='salary'?'奖金':'骰面副业收入'} ${n}`)}</span>`).join(''):'';
   return `<div class="tabletop-face illustrated-face family-${familyOf(d)} duration-${hours(d.size)} ${compact?'compact-face':''} ${d.minSanity||d.maxSanity<10||d.stress||d.support?'has-mind':''}" style="--card-hours:${hours(d.size)}">
     <header class="printed-title"><span class="route-emblem">${icon(d.icon,14)}</span><strong>${esc(d.name)}</strong></header>
     <div class="mind-corner">${d.support?badge('sanity','+'+d.support,`${d.upkeep?'付费后':'占用日程'}本周理智支持 +${d.support}，撤回解除，不逐周累加`,'reversible'):''}${d.maxSanity<10?badge('sanity','≤'+d.maxSanity,`安排和执行要求理智 ≤${d.maxSanity}`):d.minSanity?badge('sanity','≥'+d.minSanity,`安排和执行要求理智 ≥${d.minSanity}`):''}${d.stress?badge('sanity','−'+d.stress,`日程压力 ${d.stress}，撤回解除`,'reversible'):''}</div>
     <div class="printed-effects"><div class="resource-equation">${d.upkeep?badge('money','−'+d.upkeep,`结算前每周支付 ${d.upkeep} 资金维持支持`,'spend'):''}${resources(d.cost,'−')}${Object.keys(d.cost||{}).length&&Object.keys(d.gain||{}).length?'<span class="effect-arrow" aria-hidden="true">→</span>':''}${resources(d.gain)}</div>
+    ${mechanics(d,c)}
     ${dice?`<div class="dice-table" aria-label="执行时掷一次骰">${dice}</div>`:''}
     ${d.professional?`<span class="professional-mark" title="履职，不算摸鱼；仅工作白天可安排">${icon('bag',13)} ${icon('check',12)}</span>`:''}
     ${d.capital?`<span class="capital-mark" title="安排时锁定本金 ${d.capital}，撤回返还">${icon('lock',12)}${badge('money',c?.lockedCapital||d.capital,`锁定本金 ${d.capital}`)}</span>`:''}
@@ -50,6 +67,9 @@ export function cardFace(d,compact=false,c=null) {
 }
 
 export function iconHelp(){return `<div class="icon-help">${[
+  [icon('layers',24)+' ∥','并行：与另一张活动共用时段，时间取较长者。最多两张，各自承担压力、费用与查岗。'],
+  [badge('inspiration','≥2','版图灵感'),'灵感在空置夜晚，每格一枚，不消耗。放牌清除；撤回后须等下周再产生。'],
+  [icon('eye',24)+icon('layers',24)+'3 → '+icon('shop',24)+'1','看3买1：选一个时长牌堆查看，原价购买至多一张；其余放堆底，下周再安排。'],
   [badge('money',5,'买价示例'),'底栏金币角标是购买价；效果区的正负角标表示收益、消耗。'],
   [badge('sanity','+2','可逆支持','reversible'),'右上心智 +2 与回转箭头：占用日程提供支持；印有负金币才需要每周付费。不累加，撤回解除；查停、团建或4h熬夜则支持失效，付不起费用则撤回。'],
   [badge('once',null,'一次性'),'票券：成功执行一次后离场。'],

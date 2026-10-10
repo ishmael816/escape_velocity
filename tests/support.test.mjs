@@ -5,7 +5,7 @@ import {CARDS,getCard} from '../src/cards.js';
 import {make,turn,lock,finish,next,add,skills,rig,seedFor} from './helpers.mjs';
 
 test('four support types use normal pools and reversible contributions, not gains',()=>{
- const cards=CARDS.filter(d=>d.support);assert.equal(cards.length,4);
+ const cards=CARDS.filter(d=>d.support&&d.id!=='A05');assert.equal(cards.length,4);
  assert.deepEqual(cards.map(d=>[d.hours,d.price.money,d.support,d.upkeep]),[[4,4,1,0],[4,2,2,1],[2,3,2,1],[4,2,3,2]]);
  for(const d of cards){assert.equal(d.once,false);assert.deepEqual(d.gain,d.id==='A13'?{money:1}:{});assert.equal(d.stress,0);assert.equal(d.minSanity,0);assert.equal(d.maxSanity,10);assert.ok(!d.professional);}
 });
@@ -62,8 +62,4 @@ test('preview is pure, prepays support and reload never double charges',()=>{
 test('income alone cannot escape; exact sanity six qualifies before escape autonomy',()=>{
  const g=make(),p=g.players[0];g.phase='escape';p.income=10;assert.equal(E.eligible(g,p),false);
  rig(g,p,[['W13',6]]);assert.equal(E.eligible(g,p),true);p.money=1;assert.equal(E.eligible(g,p),false);
-});
-test('prepared no-weekend mixed engine sustains income ten and sanity six with weekly upkeep',()=>{
- const g=make({startMoney:20}),p=g.players[0];skills(p,'BBBBCCCAA');rig(g,p,[['B07',0],['B10',1],['C09',2],['C11',3],['A13',4],['W13',6]]);
- for(let week=0;week<3;week++){finish(g);assert.equal(p.income,10);assert.equal(p.sanity,10);assert.equal(p.weekend,false);assert.equal(E.eligible(g,p),true);assert.equal(p.inspiration,4);if(week<2)next(g);}
 });

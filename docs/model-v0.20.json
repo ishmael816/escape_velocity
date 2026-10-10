@@ -1,0 +1,548 @@
+{
+  "note": "Prepared boards are legal placement/settlement experiments with supplied skills and cash; not full-game acquisition or route win rates. Reinvestment assumes safe execution and one top-up action each week.",
+  "ratios": [
+    {
+      "ratio": 2,
+      "profitAt12": 6,
+      "capitalForTen": 20,
+      "principalEquivalentWeeks": 2,
+      "reinvest": [
+        {
+          "week": 1,
+          "income": 6,
+          "capitalAfterTopUp": 18,
+          "cash": 3
+        },
+        {
+          "week": 2,
+          "income": 9,
+          "capitalAfterTopUp": 28,
+          "cash": 3
+        },
+        {
+          "week": 3,
+          "income": 14,
+          "capitalAfterTopUp": 44,
+          "cash": 2
+        },
+        {
+          "week": 4,
+          "income": 22,
+          "capitalAfterTopUp": 66,
+          "cash": 3
+        },
+        {
+          "week": 5,
+          "income": 33,
+          "capitalAfterTopUp": 100,
+          "cash": 3
+        },
+        {
+          "week": 6,
+          "income": 50,
+          "capitalAfterTopUp": 152,
+          "cash": 2
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "survival": 1,
+          "expectedProfitAt12": 6,
+          "expectedFine": 0,
+          "principalEquivalentWeeks": 2
+        },
+        {
+          "checks": 1,
+          "survival": 0.8333333333333334,
+          "expectedProfitAt12": 5,
+          "expectedFine": 0.16666666666666663,
+          "principalEquivalentWeeks": 2.4
+        },
+        {
+          "checks": 2,
+          "survival": 0.6944444444444445,
+          "expectedProfitAt12": 4.166666666666667,
+          "expectedFine": 0.30555555555555547,
+          "principalEquivalentWeeks": 2.8799999999999994
+        },
+        {
+          "checks": 3,
+          "survival": 0.5787037037037038,
+          "expectedProfitAt12": 3.472222222222223,
+          "expectedFine": 0.42129629629629617,
+          "principalEquivalentWeeks": 3.455999999999999
+        }
+      ]
+    },
+    {
+      "ratio": 3,
+      "profitAt12": 4,
+      "capitalForTen": 30,
+      "principalEquivalentWeeks": 3,
+      "reinvest": [
+        {
+          "week": 1,
+          "income": 4,
+          "capitalAfterTopUp": 15,
+          "cash": 4
+        },
+        {
+          "week": 2,
+          "income": 5,
+          "capitalAfterTopUp": 21,
+          "cash": 4
+        },
+        {
+          "week": 3,
+          "income": 7,
+          "capitalAfterTopUp": 30,
+          "cash": 3
+        },
+        {
+          "week": 4,
+          "income": 10,
+          "capitalAfterTopUp": 42,
+          "cash": 2
+        },
+        {
+          "week": 5,
+          "income": 14,
+          "capitalAfterTopUp": 57,
+          "cash": 2
+        },
+        {
+          "week": 6,
+          "income": 19,
+          "capitalAfterTopUp": 75,
+          "cash": 4
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "survival": 1,
+          "expectedProfitAt12": 4,
+          "expectedFine": 0,
+          "principalEquivalentWeeks": 3
+        },
+        {
+          "checks": 1,
+          "survival": 0.8333333333333334,
+          "expectedProfitAt12": 3.3333333333333335,
+          "expectedFine": 0.16666666666666663,
+          "principalEquivalentWeeks": 3.5999999999999996
+        },
+        {
+          "checks": 2,
+          "survival": 0.6944444444444445,
+          "expectedProfitAt12": 2.777777777777778,
+          "expectedFine": 0.30555555555555547,
+          "principalEquivalentWeeks": 4.319999999999999
+        },
+        {
+          "checks": 3,
+          "survival": 0.5787037037037038,
+          "expectedProfitAt12": 2.3148148148148153,
+          "expectedFine": 0.42129629629629617,
+          "principalEquivalentWeeks": 5.183999999999999
+        }
+      ]
+    },
+    {
+      "ratio": 4,
+      "profitAt12": 3,
+      "capitalForTen": 40,
+      "principalEquivalentWeeks": 4,
+      "reinvest": [
+        {
+          "week": 1,
+          "income": 3,
+          "capitalAfterTopUp": 16,
+          "cash": 2
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "capitalAfterTopUp": 20,
+          "cash": 3
+        },
+        {
+          "week": 3,
+          "income": 5,
+          "capitalAfterTopUp": 24,
+          "cash": 5
+        },
+        {
+          "week": 4,
+          "income": 6,
+          "capitalAfterTopUp": 32,
+          "cash": 4
+        },
+        {
+          "week": 5,
+          "income": 8,
+          "capitalAfterTopUp": 40,
+          "cash": 5
+        },
+        {
+          "week": 6,
+          "income": 10,
+          "capitalAfterTopUp": 52,
+          "cash": 4
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "survival": 1,
+          "expectedProfitAt12": 3,
+          "expectedFine": 0,
+          "principalEquivalentWeeks": 4
+        },
+        {
+          "checks": 1,
+          "survival": 0.8333333333333334,
+          "expectedProfitAt12": 2.5,
+          "expectedFine": 0.16666666666666663,
+          "principalEquivalentWeeks": 4.8
+        },
+        {
+          "checks": 2,
+          "survival": 0.6944444444444445,
+          "expectedProfitAt12": 2.0833333333333335,
+          "expectedFine": 0.30555555555555547,
+          "principalEquivalentWeeks": 5.759999999999999
+        },
+        {
+          "checks": 3,
+          "survival": 0.5787037037037038,
+          "expectedProfitAt12": 1.7361111111111116,
+          "expectedFine": 0.42129629629629617,
+          "principalEquivalentWeeks": 6.911999999999998
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "AB",
+      "name": "创作 × 开发：并行保留空夜",
+      "skills": "AAAABBBB",
+      "plan": [
+        [
+          "A08",
+          0
+        ],
+        [
+          "B10",
+          0
+        ],
+        [
+          "A10",
+          6
+        ],
+        [
+          "C13",
+          2,
+          2
+        ],
+        [
+          "B09",
+          2,
+          2
+        ]
+      ],
+      "boardPrice": 28,
+      "archivePrice": 23,
+      "capital": 0,
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 24
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 36
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 48
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "cases": 1,
+          "meanIncome": 10,
+          "escapeFraction": 1
+        },
+        {
+          "checks": 1,
+          "cases": 6,
+          "meanIncome": 9.166666666666666,
+          "escapeFraction": 0.8333333333333334
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "meanIncome": 8.472222222222221,
+          "escapeFraction": 0.6944444444444444
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "meanIncome": 7.893518518518518,
+          "escapeFraction": 0.5787037037037037
+        }
+      ]
+    },
+    {
+      "id": "AC",
+      "name": "创作 × 商业：投资带动创作",
+      "skills": "ACCC",
+      "plan": [
+        [
+          "C09",
+          0,
+          0,
+          12
+        ],
+        [
+          "A12",
+          2
+        ],
+        [
+          "A08",
+          6
+        ],
+        [
+          "C13",
+          1,
+          2
+        ],
+        [
+          "A13",
+          3
+        ]
+      ],
+      "boardPrice": 22,
+      "archivePrice": 7,
+      "capital": 12,
+      "continuity": [
+        {
+          "income": 11,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 25
+        },
+        {
+          "income": 11,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 38
+        },
+        {
+          "income": 11,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 51
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "cases": 1,
+          "meanIncome": 11,
+          "escapeFraction": 1
+        },
+        {
+          "checks": 1,
+          "cases": 6,
+          "meanIncome": 9.5,
+          "escapeFraction": 0.6666666666666666
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "meanIncome": 8.305555555555555,
+          "escapeFraction": 0.4444444444444444
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "meanIncome": 7.347222222222222,
+          "escapeFraction": 0.2962962962962963
+        }
+      ]
+    },
+    {
+      "id": "BC",
+      "name": "开发 × 商业：并行经营",
+      "skills": "BCCCC",
+      "plan": [
+        [
+          "C08",
+          0
+        ],
+        [
+          "B12",
+          0
+        ],
+        [
+          "C10",
+          6,
+          0,
+          12
+        ],
+        [
+          "A13",
+          2
+        ],
+        [
+          "C13",
+          1,
+          2
+        ]
+      ],
+      "boardPrice": 23,
+      "archivePrice": 13,
+      "capital": 18,
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 24
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 36
+        },
+        {
+          "income": 10,
+          "sanity": 7,
+          "inspiration": 6,
+          "cash": 48
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "cases": 1,
+          "meanIncome": 10,
+          "escapeFraction": 1
+        },
+        {
+          "checks": 1,
+          "cases": 6,
+          "meanIncome": 9,
+          "escapeFraction": 0.6666666666666666
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "meanIncome": 8.166666666666666,
+          "escapeFraction": 0.4444444444444444
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "meanIncome": 7.472222222222222,
+          "escapeFraction": 0.2962962962962963
+        }
+      ]
+    },
+    {
+      "id": "WC",
+      "name": "职场 → 商业：工资积累后投入本金",
+      "skills": "WWBCCC",
+      "plan": [
+        [
+          "W12",
+          1
+        ],
+        [
+          "W05",
+          0
+        ],
+        [
+          "C09",
+          6,
+          0,
+          24
+        ],
+        [
+          "A13",
+          2
+        ],
+        [
+          "C13",
+          3,
+          2
+        ],
+        [
+          "W13",
+          4
+        ]
+      ],
+      "boardPrice": 20,
+      "archivePrice": 10,
+      "capital": 24,
+      "continuity": [
+        {
+          "income": 10,
+          "sanity": 9,
+          "inspiration": 6,
+          "cash": 23
+        },
+        {
+          "income": 10,
+          "sanity": 9,
+          "inspiration": 6,
+          "cash": 34
+        },
+        {
+          "income": 10,
+          "sanity": 9,
+          "inspiration": 6,
+          "cash": 45
+        }
+      ],
+      "inspections": [
+        {
+          "checks": 0,
+          "cases": 1,
+          "meanIncome": 10,
+          "escapeFraction": 1
+        },
+        {
+          "checks": 1,
+          "cases": 6,
+          "meanIncome": 9.333333333333334,
+          "escapeFraction": 0.6666666666666666
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "meanIncome": 8.777777777777779,
+          "escapeFraction": 0.4444444444444444
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "meanIncome": 8.314814814814815,
+          "escapeFraction": 0.2962962962962963
+        }
+      ]
+    }
+  ]
+}

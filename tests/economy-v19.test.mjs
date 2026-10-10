@@ -28,11 +28,11 @@ test('painting gives schedule support immediately and income only on weekly payo
  next(g);turn(g);E.unplace(g,0,c.uid);assert.equal(p.sanity,3);assert.equal(p.money,12);
 });
 
-test('mixed support with boost and inspiration executes its non-sanity effects',()=>{
+test('parallel tools retain their income and support',()=>{
  const g=make(),p=g.players[0];skills(p,'BBBB');
- rig(g,p,[['B09',0],['B06',1],['B11',2]]);skills(p,'AAAABBBB');E.syncSanity(g,p);
- assert.equal(p.sanity,4);finish(g);
- assert.equal(p.income,6);assert.equal(p.inspiration,5);assert.equal(p.sanity,4);
+ rig(g,p,[['B09',0],['B06',0],['B11',2]]);skills(p,'AAAABBBB');E.syncSanity(g,p);
+ assert.equal(p.sanity,3);finish(g);
+ assert.equal(p.income,4);assert.equal(E.inspirationCount(p),7);assert.equal(p.sanity,3);
 });
 
 test('mixed support lost to inspection also loses income; only one fine',()=>{
@@ -47,20 +47,14 @@ test('overtime disables mixed sanity support but still allows its income effect'
  assert.equal(p.sanity,3);assert.equal(p.income,1);assert.equal(p.money,12);
 });
 
-test('unfunded mixed activity returns to hand and cannot help the escape gate',()=>{
- const g=make({startInspiration:0}),p=g.players[0];skills(p,'ABB');rig(g,p,[['A11',6]]);
- assert.equal(p.sanity,4);finish(g);
- assert.equal(p.income,0);assert.equal(p.sanity,3);assert.equal(p.cards.length,1);
- assert.equal(E.findPlacement(p,p.cards[0].uid),null);assert.equal(p.supports[0].active,false);
- p.income=10;assert.equal(E.eligible(g,p),false);
- next(g);assert.equal(p.sanity,3);assert.equal(E.unplacedCards(p).length,1);
+test('insufficient board inspiration pauses both creative income and support',()=>{
+ const g=make(),p=g.players[0];skills(p,'ABB');rig(g,p,[['A11',6]]);p.inspirationSlots=[];E.syncSanity(g,p);
+ assert.equal(p.sanity,3);finish(g);assert.equal(p.income,0);assert.equal(p.sanity,3);assert.ok(E.findPlacement(p,p.cards[0].uid));assert.equal(p.supports[0].active,false);
 });
-
-test('unaffordable repeat withdrawal releases its overtime pressure and survives reload',()=>{
- const g=make({startSanity:6,startInspiration:0}),p=g.players[0];rig(g,p,[['A07',0,2],['A05',6,2]]);
+test('unaffordable repeated search returns to hand and releases night pressure across reload',()=>{
+ const g=make({startMoney:0,startSanity:6}),p=g.players[0];rig(g,p,[['C14',0,2],['A02',0,2]]);
  assert.equal(p.sanity,2);lock(g);E.step(g);const restored=JSON.parse(JSON.stringify(g));
- for(const x of [g,restored]){E.resolveAll(x);assert.equal(x.players[0].sanity,6);assert.equal(E.unplacedCards(x.players[0])[0].type,'A07');}
- assert.deepEqual(g,restored);
+ for(const x of [g,restored]){E.resolveAll(x);assert.equal(x.players[0].sanity,6);assert.equal(E.unplacedCards(x.players[0])[0].type,'C14');}assert.deepEqual(g,restored);
 });
 
 test('one-time multiweek permissions keep progress when unable to pay',()=>{
