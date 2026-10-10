@@ -35,7 +35,7 @@ export function cardFace(d,compact=false,c=null) {
   const dice=d.dice?Object.entries(d.dice.faces.reduce((out,n,i)=>((out[n]||=[]).push(i+1),out),{})).map(([n,faces])=>`<span class="dice-outcome"><span class="die-faces" aria-label="骰点 ${faces.join('、')}">${faces.map(f=>`<span aria-hidden="true">${'⚀⚁⚂⚃⚄⚅'[f-1]}</span>`).join('')}</span><span>→</span>${badge('money',n,`${d.dice.resource==='salary'?'奖金':'骰面副业收入'} ${n}`)}</span>`).join(''):'';
   return `<div class="tabletop-face illustrated-face family-${familyOf(d)} duration-${hours(d.size)} ${compact?'compact-face':''} ${d.minSanity||d.maxSanity<10||d.stress||d.support?'has-mind':''}" style="--card-hours:${hours(d.size)}">
     <header class="printed-title"><span class="route-emblem">${icon(d.icon,14)}</span><strong>${esc(d.name)}</strong></header>
-    <div class="mind-corner">${d.support?badge('sanity','+'+d.support,`付费后本周理智支持 +${d.support}，撤回解除，不逐周累加`,'reversible'):''}${d.maxSanity<10?badge('sanity','≤'+d.maxSanity,`安排和执行要求理智 ≤${d.maxSanity}`):d.minSanity?badge('sanity','≥'+d.minSanity,`安排和执行要求理智 ≥${d.minSanity}`):''}${d.stress?badge('sanity','−'+d.stress,`日程压力 ${d.stress}，撤回解除`,'reversible'):''}</div>
+    <div class="mind-corner">${d.support?badge('sanity','+'+d.support,`${d.upkeep?'付费后':'占用日程'}本周理智支持 +${d.support}，撤回解除，不逐周累加`,'reversible'):''}${d.maxSanity<10?badge('sanity','≤'+d.maxSanity,`安排和执行要求理智 ≤${d.maxSanity}`):d.minSanity?badge('sanity','≥'+d.minSanity,`安排和执行要求理智 ≥${d.minSanity}`):''}${d.stress?badge('sanity','−'+d.stress,`日程压力 ${d.stress}，撤回解除`,'reversible'):''}</div>
     <div class="printed-effects"><div class="resource-equation">${d.upkeep?badge('money','−'+d.upkeep,`结算前每周支付 ${d.upkeep} 资金维持支持`,'spend'):''}${resources(d.cost,'−')}${Object.keys(d.cost||{}).length&&Object.keys(d.gain||{}).length?'<span class="effect-arrow" aria-hidden="true">→</span>':''}${resources(d.gain)}</div>
     ${dice?`<div class="dice-table" aria-label="执行时掷一次骰">${dice}</div>`:''}
     ${d.professional?`<span class="professional-mark" title="履职，不算摸鱼；仅工作白天可安排">${icon('bag',13)} ${icon('check',12)}</span>`:''}
@@ -51,7 +51,7 @@ export function cardFace(d,compact=false,c=null) {
 
 export function iconHelp(){return `<div class="icon-help">${[
   [badge('money',5,'买价示例'),'底栏金币角标是购买价；效果区的正负角标表示收益、消耗。'],
-  [badge('sanity','+2','可逆支持','reversible'),'右上心智 +2 与回转箭头：占用日程提供支持，每周先付效果区金币费用；不累加，撤回解除，查停、团建、4h 熬夜或未付费则失效。'],
+  [badge('sanity','+2','可逆支持','reversible'),'右上心智 +2 与回转箭头：占用日程提供支持；印有负金币才需要每周付费。不累加，撤回解除；查停、团建或4h熬夜则支持失效，付不起费用则撤回。'],
   [badge('once',null,'一次性'),'票券：成功执行一次后离场。'],
   [badge('once',3,'三次完成'),'票券角标 3：累计成功三次后离场；圆孔放置当前进度指示物。'],
   [badge('repeat',null,'多次'),'循环箭头：跨周保留，重复执行。'],

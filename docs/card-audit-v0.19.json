@@ -1,0 +1,3121 @@
+{
+  "status": "static-design-audit-not-playtest",
+  "sourceSHA256": "fe58ed2b3d30c821d9c71e35314a1eea8489db85027040ddcfa62acafe4daed3",
+  "runtimeMatchesCalibration": true,
+  "coverage": {
+    "market": 58,
+    "permanentActivities": 2,
+    "changed": 51,
+    "unchanged": [
+      "W01",
+      "W03",
+      "C01",
+      "A14",
+      "B14",
+      "W14",
+      "P01"
+    ],
+    "hours": {
+      "2": 16,
+      "4": 21,
+      "8": 21
+    }
+  },
+  "hypothesis": {
+    "capitalBudgetCredit": "3 本金补偿 1；6–10 本金补偿 2，封顶。仅候选设计假设，需流动性与整局测试。",
+    "conditional": "按可达到的最大效果计价，不假定触发率。"
+  },
+  "rows": [
+    {
+      "id": "W01",
+      "name": "补齐项目文档",
+      "candidateName": "补齐项目文档",
+      "current": "2h／购2／一次归档／奖金1／压力1／心智≤2",
+      "candidate": "2h／购2／一次归档／奖金1／压力1／心智≤2",
+      "reason": "保留：买 2、周末返奖金 1，净支出 1；压力和低心智换履职安全。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "W02",
+      "name": "承担工作交接",
+      "candidateName": "承担工作交接",
+      "current": "2h／购1／一次归档／灵感1／压力1／心智≤2",
+      "candidate": "2h／购1／一次归档／压力1／心智≤2",
+      "reason": "去掉额外灵感，回到买 1 归档一个技能；不再比简单成长白送资源。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "W03",
+      "name": "完成关键交付",
+      "candidateName": "完成关键交付",
+      "current": "4h／购3／一次归档／奖金2／压力2／心智≤1",
+      "candidate": "4h／购3／一次归档／奖金2／压力2／心智≤1",
+      "reason": "保留：买 3、周末返奖金 2，净支出 1；较长时段与压力 2 是兑现速度的代价。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "W04",
+      "name": "跨组复盘会",
+      "candidateName": "跨组复盘会",
+      "current": "4h／购4／一次归档／压力1／执行费1／心智≤2／高级二选一免费取得",
+      "candidate": "4h／购6／一次归档／压力1／心智≤2／高级二选一免费取得",
+      "reason": "保留高级牌二选一免费取得与归档，费用全部前置为 6；按对应新卡池的二选一价值核算，最优省款不超过 2。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "W05",
+      "name": "主动补位",
+      "candidateName": "主动补位",
+      "current": "2h／购2／奖金1／压力1／心智≤2",
+      "candidate": "2h／购2／奖金1／压力1",
+      "reason": "保留基准买 2／奖金 1／压力 1；取消入门补位的低心智门槛，给转型组合留一个履职触发器。",
+      "changed": true,
+      "currentBudget": [
+        1,
+        1
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "W06",
+      "name": "向上管理",
+      "candidateName": "向上管理",
+      "current": "4h／购3／压力1／心智≤2／奖金骰[0,0,0,2,2,4]",
+      "candidate": "4h／购3／一次归档／压力1／心智≤2／奖金骰[0,0,0,2,2,4]",
+      "reason": "奖金骰改为一次性归档。期望奖金 4/3、净支出 5/3，保留画饼体验，减少每周掷骰。",
+      "changed": true,
+      "currentBudget": [
+        1.6666666666666665,
+        1.6666666666666665
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1.666666666666666,
+        1.666666666666666
+      ]
+    },
+    {
+      "id": "W07",
+      "name": "整理业务知识库",
+      "candidateName": "整理业务知识库",
+      "current": "4h／购3／灵感3／压力1／执行费1／心智≤2",
+      "candidate": "4h／购3／灵感4／压力1／心智≤2",
+      "reason": "取消周费；灵感 4 减压力 1 的预算为 3。低心智是路线限制，不再额外加赠收益。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        0
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "W08",
+      "name": "季度攻坚",
+      "candidateName": "季度攻坚",
+      "current": "8h／购5／奖金3／压力2／心智≤1",
+      "candidate": "8h／购4／奖金3／压力2／心智≤1",
+      "reason": "奖金 3、压力 2 的预算为 4；购价由 5 降至 4。",
+      "changed": true,
+      "currentBudget": [
+        4,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "W09",
+      "name": "关键岗位津贴",
+      "candidateName": "关键岗位津贴",
+      "current": "8h／购7／奖金3／压力1／WWW／心智≤2",
+      "candidate": "8h／购4／奖金3／压力1／WWW／心智≤2",
+      "reason": "预算 5，三技能补偿 1，买价 4；履职收益仍不能计入逃离。",
+      "changed": true,
+      "currentBudget": [
+        5,
+        5
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "W10",
+      "name": "交付负责人",
+      "candidateName": "交付负责人",
+      "current": "8h／购9／奖金4／压力2／WWWW／心智≤1",
+      "candidate": "8h／购5／奖金4／压力1／WWWW／心智≤1",
+      "reason": "预算 7，四技能补偿 2，买价 5；保留低心智条件，压力由 2 减至 1。",
+      "changed": true,
+      "currentBudget": [
+        6,
+        6
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "W11",
+      "name": "企业外训讲师",
+      "candidateName": "企业外训讲师",
+      "current": "8h／购8／副业3／耗灵感2／WWA／心智≤2",
+      "candidate": "8h／购5／副业3／WWA／心智≥3",
+      "reason": "取消灵感费并把低心智限制改为至少 3，允许职场技能转为可参与逃离的收入。",
+      "changed": true,
+      "currentBudget": [
+        4,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "W12",
+      "name": "流程咨询",
+      "candidateName": "流程咨询",
+      "current": "8h／购8／副业2／压力1／耗灵感1／WWB／心智≤2／条件收入+1",
+      "candidate": "8h／购5／副业2／WWB／心智≥3／条件收入+1",
+      "reason": "收入 2→3，按触发上限定价；先执行履职只改变触发率，不再额外补偿购价。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "A01",
+      "name": "速写练习",
+      "candidateName": "速写练习",
+      "current": "2h／购1／一次归档／灵感2／耗灵感1／心智≥1",
+      "candidate": "2h／购2／一次归档／灵感1／心智≥1",
+      "reason": "简单归档 1 钱，加一次灵感 1 再加 1 钱；删去先扣后加的灵感记账。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "A02",
+      "name": "写作练笔",
+      "candidateName": "写作练笔",
+      "current": "2h／购1／一次归档／灵感1／心智≥1",
+      "candidate": "2h／购1／一次归档／心智≥1",
+      "reason": "回到 2h／买 1／单纯归档。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "A03",
+      "name": "作品复盘",
+      "candidateName": "作品复盘",
+      "current": "4h／购2／一次归档／灵感3／耗灵感1／心智≥1",
+      "candidate": "4h／购2／一次归档／灵感1／心智≥1",
+      "reason": "回到 4h／买 2／归档并获得一次灵感 1。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "A04",
+      "name": "创作研讨会",
+      "candidateName": "创作研讨会",
+      "current": "4h／购4／一次归档／执行费1／心智≥1／高级二选一免费取得",
+      "candidate": "4h／购7／一次归档／心智≥1／高级二选一免费取得",
+      "reason": "保留高级牌二选一免费取得与归档，费用全部前置为 7；按对应新卡池的二选一价值核算，最优省款不超过 2。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "A05",
+      "name": "听完整张专辑",
+      "candidateName": "听完整张专辑",
+      "current": "2h／购1／灵感1",
+      "candidate": "2h／购2／灵感1",
+      "reason": "常驻灵感 1 的 2h 基准买价为 2。",
+      "changed": true,
+      "currentBudget": [
+        1,
+        1
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "A06",
+      "name": "留白手帐",
+      "candidateName": "留白手帐",
+      "current": "4h／购3／心智≥1／留白灵感≤4",
+      "candidate": "4h／购4／心智≥1／留白灵感≤4",
+      "reason": "留白 0–4 晚得到 0–4 灵感，按上限 4 定价；不臆定平均留白数。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "A07",
+      "name": "征稿投稿",
+      "candidateName": "征稿投稿",
+      "current": "4h／购3／压力1／耗灵感1／心智≥1／收入骰[0,0,2,2,4,4]",
+      "candidate": "4h／购3／副业2／耗灵感1／心智≥1",
+      "reason": "固定收入 2、耗灵感 1、无压力，正好对应创作模板；去掉每周收益骰。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        2
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "A08",
+      "name": "长篇委托",
+      "candidateName": "长篇委托",
+      "current": "8h／购5／副业3／压力1／耗灵感2／心智≥1",
+      "candidate": "8h／购5／副业3／耗灵感1／心智≥1",
+      "reason": "保留买价 5；取消压力、灵感费由 2 减至 1，使预算回到 5。",
+      "changed": true,
+      "currentBudget": [
+        3,
+        3
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "A09",
+      "name": "专栏连载",
+      "candidateName": "专栏连载",
+      "current": "8h／购7／副业2／耗灵感2／AAA／心智≥1／条件收入+1",
+      "candidate": "8h／购7／副业2／支持1／AAA／条件收入+1",
+      "reason": "保留留白条件，加入支持 1，取消灵感费；收入 2→3、预算 6→8，按上限买 7。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "A10",
+      "name": "独立出版",
+      "candidateName": "独立出版",
+      "current": "8h／购9／副业3／压力1／耗灵感2／AAAA／心智≥1／条件收入+1",
+      "candidate": "8h／购8／副业3／支持1／AAAA／条件收入+1",
+      "reason": "收入 3→4、支持 1；四技能预算按最强状态定价 8，留白不足时不能按收入 4 估值。",
+      "changed": true,
+      "currentBudget": [
+        3,
+        5
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "A11",
+      "name": "互动叙事",
+      "candidateName": "互动叙事",
+      "current": "8h／购8／副业2／耗灵感2／ABB／心智≥1／前序B减灵感1",
+      "candidate": "8h／购7／副业3／支持1／耗灵感1／ABB／前序B减灵感1",
+      "reason": "保留先开发后创作的灵感减免；收入 3、支持 1、耗灵感 1→0，按完全减免的上限买 7。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        3
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "A12",
+      "name": "商业写作",
+      "candidateName": "商业写作",
+      "current": "8h／购8／副业3／压力1／耗灵感3／ACC／心智≥1／条件收入+1",
+      "candidate": "8h／购6／副业3／耗灵感1／ACC／心智≥1／条件收入+1",
+      "reason": "收入 3→4，灵感费降为 1、取消压力；按触发上限定价 6。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "B01",
+      "name": "脚本练习",
+      "candidateName": "脚本练习",
+      "current": "2h／购2／一次归档／返款1／耗灵感1／心智≥1",
+      "candidate": "2h／购2／一次归档／返款1／心智≥1",
+      "reason": "买 2、返现金 1 后净支出 1，取消额外灵感费。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "B02",
+      "name": "修复小故障",
+      "candidateName": "修复小故障",
+      "current": "2h／购1／一次归档／灵感1／心智≥1",
+      "candidate": "2h／购1／一次归档／心智≥1",
+      "reason": "回到 2h／买 1／单纯归档。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "B03",
+      "name": "开发原型",
+      "candidateName": "开发原型",
+      "current": "4h／购3／一次归档／返款2／耗灵感1／心智≥1",
+      "candidate": "4h／购3／一次归档／返款1／灵感1／心智≥1",
+      "reason": "买 3、周末返 1：净支出 2，归档＋一次灵感 1；预付与返款时点仍有区别。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "B04",
+      "name": "开发者交流",
+      "candidateName": "开发者交流",
+      "current": "4h／购4／一次归档／执行费1／心智≥1／高级二选一免费取得",
+      "candidate": "4h／购6／一次归档／心智≥1／高级二选一免费取得",
+      "reason": "保留高级牌二选一免费取得与归档，费用全部前置为 6；按对应新卡池的二选一价值核算，最优省款不超过 2。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "B05",
+      "name": "信息整理",
+      "candidateName": "信息整理",
+      "current": "2h／购2／灵感2／执行费1",
+      "candidate": "2h／购2／灵感1",
+      "reason": "取消现金周费，改为买 2、常驻灵感 1，与 2h 供应模板一致。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        0
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B06",
+      "name": "零散开发",
+      "candidateName": "零散开发",
+      "current": "4h／购3／副业2／压力1／耗灵感1／心智≥1",
+      "candidate": "4h／购3／副业2／压力1／心智≥1",
+      "reason": "取消未补偿的灵感费，回到 4h 基准。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        2
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "B07",
+      "name": "快捷脚本",
+      "candidateName": "快捷脚本",
+      "current": "4h／购3／心智≥1／后张+1",
+      "candidate": "4h／购2／心智≥1／后张+1",
+      "reason": "最多增加下一张实际收入 1，预算 2，买价 2；命中非收入活动仍会失效。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        2
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "B08",
+      "name": "数据清洗",
+      "candidateName": "数据清洗",
+      "current": "8h／购5／副业3／压力1／耗灵感2／心智≥1",
+      "candidate": "8h／购5／副业3／压力1／心智≥1",
+      "reason": "取消未补偿的灵感费，回到 8h 基准。",
+      "changed": true,
+      "currentBudget": [
+        3,
+        3
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "B09",
+      "name": "自动化工具",
+      "candidateName": "自动化工具",
+      "current": "8h／购7／耗灵感1／BBB／心智≥1／后张基础翻倍",
+      "candidate": "8h／购5／支持1／BBB／后张基础翻倍",
+      "reason": "增强实际最多 2，支持 1，共预算 6，三技能买 5；避免一个 8h 高级工具只增加 1 却卖 7。",
+      "changed": true,
+      "currentBudget": [
+        -1,
+        3
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        -2,
+        2
+      ]
+    },
+    {
+      "id": "B10",
+      "name": "独立软件服务",
+      "candidateName": "独立软件服务",
+      "current": "8h／购9／副业3／耗灵感1／BBBB／心智≥1",
+      "candidate": "8h／购6／副业3／支持1／BBBB",
+      "reason": "收入 3＋支持 1，四技能预算买 6，取消灵感费。",
+      "changed": true,
+      "currentBudget": [
+        5,
+        5
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "B11",
+      "name": "数字素材工厂",
+      "candidateName": "数字素材工厂",
+      "current": "8h／购8／副业2／耗灵感1／AAB／心智≥1／留白≥3再得灵感1",
+      "candidate": "8h／购6／副业2／支持1／AAB／留白≥3再得灵感1",
+      "reason": "保留留白产灵感；收入 2＋支持 1，触发时再得灵感 1，按预算上限 7 减技能 1 定价。",
+      "changed": true,
+      "currentBudget": [
+        3,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "B12",
+      "name": "电商自动化",
+      "candidateName": "电商自动化",
+      "current": "8h／购7／锁本金3／BCC／心智≥1／后张基础翻倍（有本金）",
+      "candidate": "8h／购5／灵感2／BCC／心智≥1／后张基础翻倍（有本金）",
+      "reason": "取消工具自身本金，保留目标必须有本金；增强最多 2＋灵感 2，预算 6、买 5。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        4
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        -1,
+        3
+      ]
+    },
+    {
+      "id": "C01",
+      "name": "二手试卖",
+      "candidateName": "二手试卖",
+      "current": "2h／购2／一次归档／返款1／心智≥1",
+      "candidate": "2h／购2／一次归档／返款1／心智≥1",
+      "reason": "保留：净支出 1 的返款型成长，返款在周末，不能立即滚动购买。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "C02",
+      "name": "用户访谈",
+      "candidateName": "用户访谈",
+      "current": "2h／购1／一次归档／灵感2／执行费1／心智≥1",
+      "candidate": "2h／购1／一次归档／心智≥1",
+      "reason": "回到买 1 的简单成长；不再先付现金才获得灵感。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "C03",
+      "name": "小规模试运营",
+      "candidateName": "小规模试运营",
+      "current": "4h／购2／一次归档／返款2／执行费1／心智≥1",
+      "candidate": "4h／购3／一次归档／返款1／灵感1／心智≥1",
+      "reason": "取消执行付钱又产钱；净支出 2、归档＋灵感 1，与 4h 成长模板一致。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "C04",
+      "name": "商家沙龙",
+      "candidateName": "商家沙龙",
+      "current": "4h／购4／一次归档／执行费1／心智≥1／高级二选一免费取得",
+      "candidate": "4h／购6／一次归档／心智≥1／高级二选一免费取得",
+      "reason": "保留高级牌二选一免费取得与归档，费用全部前置为 6；按对应新卡池的二选一价值核算，最优省款不超过 2。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "C05",
+      "name": "跑腿代办",
+      "candidateName": "跑腿代办",
+      "current": "2h／购2／副业1／压力1／耗灵感1／心智≥1",
+      "candidate": "2h／购2／副业1／压力1／心智≥1",
+      "reason": "取消灵感费，回到 2h／买 2／收入 1／压力 1。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        0
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "C06",
+      "name": "快闪代购",
+      "candidateName": "快闪代购",
+      "current": "4h／购3／副业1／压力1／锁本金3／心智≥1／收入骰[0,0,1,1,2,2]",
+      "candidate": "4h／购3／副业2／锁本金3／心智≥1",
+      "reason": "固定收入 2、取消压力；本金 3 暂补偿 1 点预算，买价仍为 3。",
+      "changed": true,
+      "currentBudget": [
+        3,
+        3
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        3,
+        3
+      ]
+    },
+    {
+      "id": "C07",
+      "name": "市场调研",
+      "candidateName": "市场调研",
+      "current": "4h／购3／灵感3／执行费1",
+      "candidate": "4h／购3／灵感3",
+      "reason": "去掉每周现金费，买 3 产灵感 3，回到 4h 供应模板。",
+      "changed": true,
+      "currentBudget": [
+        1,
+        1
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "C08",
+      "name": "周末摊位",
+      "candidateName": "周末摊位",
+      "current": "8h／购5／副业3／压力1／锁本金6／心智≥1",
+      "candidate": "8h／购4／副业3／锁本金6／心智≥1",
+      "reason": "本金 6 暂补偿 2 点，收入 3、无压力，买价 4；启动现金仍需 10。",
+      "changed": true,
+      "currentBudget": [
+        5,
+        5
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        5,
+        5
+      ]
+    },
+    {
+      "id": "C09",
+      "name": "稳定供货",
+      "candidateName": "稳定供货",
+      "current": "8h／购7／副业3／锁本金8／CCC／心智≥1",
+      "candidate": "8h／购5／副业3／支持1／锁本金6／CCC",
+      "reason": "收入 3＋支持 1，技能 1、本金 2 的预算补偿后买 5；启动共 11。",
+      "changed": true,
+      "currentBudget": [
+        6,
+        6
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        5,
+        5
+      ]
+    },
+    {
+      "id": "C10",
+      "name": "自有品牌",
+      "candidateName": "自有品牌",
+      "current": "8h／购9／副业4／压力1／锁本金10／CCCC／心智≥1",
+      "candidate": "8h／购6／副业4／支持1／锁本金8／CCCC",
+      "reason": "收入上限仍 4，增加支持 1，技能补偿 2、本金补偿封顶 2，买 6、启动共 14。",
+      "changed": true,
+      "currentBudget": [
+        7,
+        7
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        5,
+        5
+      ]
+    },
+    {
+      "id": "C11",
+      "name": "创作者商店",
+      "candidateName": "创作者商店",
+      "current": "8h／购8／副业3／耗灵感1／锁本金6／AAC／心智≥1",
+      "candidate": "8h／购5／副业2／支持2／锁本金6／AAC",
+      "reason": "减少收入换支持 2，取消灵感费；技能和本金补偿后买 5，提供商业与生活的混合选择。",
+      "changed": true,
+      "currentBudget": [
+        5,
+        5
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        4,
+        4
+      ]
+    },
+    {
+      "id": "C12",
+      "name": "企业客户长约",
+      "candidateName": "分红投资组合",
+      "current": "8h／购8／副业3／压力1／锁本金6／CCW／条件收入+1",
+      "candidate": "8h／购7／副业4／支持1／锁本金10／CCW",
+      "reason": "移除低心智收入奖励，改为资金积累后的转型端：收入 4＋支持 1，启动共 17；不能靠两张达到收入 10。",
+      "changed": true,
+      "currentBudget": [
+        5,
+        7
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "A13",
+      "name": "公园写生",
+      "candidateName": "画画与售卖习作",
+      "current": "2h／购2／支持1／周费1",
+      "candidate": "4h／购4／副业1／支持1",
+      "reason": "落实混合模板：4h／买 4／收入 1＋支持 1，无执行费；2h 承载同效果会超出小牌预算。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        0
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B13",
+      "name": "手作工坊",
+      "candidateName": "手作工坊",
+      "current": "4h／购3／支持2／周费1",
+      "candidate": "4h／购2／支持2／周费1",
+      "reason": "基础生活：4h、支持 2、周费 1，预算及买价均为 2。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        2
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "C13",
+      "name": "健身私教",
+      "candidateName": "健身私教",
+      "current": "2h／购3／支持2／周费2",
+      "candidate": "2h／购3／支持2／周费1",
+      "reason": "2h 支持 2、周费 1，预算 2，加小牌价格偏移 1，买价 3。",
+      "changed": true,
+      "currentBudget": [
+        0,
+        0
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "W13",
+      "name": "心理咨询",
+      "candidateName": "心理咨询",
+      "current": "4h／购4／支持3／周费2",
+      "candidate": "4h／购2／支持3／周费2",
+      "reason": "高品质生活：4h、支持 3、周费 2，预算及买价均为 2；用持续消费换日程效率。",
+      "changed": true,
+      "currentBudget": [
+        2,
+        2
+      ],
+      "currentTemplatePriceExcludingSpecialAdjustments": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "A14",
+      "name": "跨界采风",
+      "candidateName": "跨界采风",
+      "current": "2h／购2／一次归档／耗灵感1／翻3张原价购一",
+      "candidate": "2h／购2／一次归档／耗灵感1／翻3张原价购一",
+      "reason": "保留：翻 3 只增加可选范围，仍原价购买至多 1 张，不能算免费取得高级牌。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "C14",
+      "name": "付费寻商",
+      "candidateName": "付费寻商",
+      "current": "2h／购2／一次归档／执行费1／翻2张原价购一",
+      "candidate": "2h／购3／一次归档／翻2张原价购一",
+      "reason": "把必付的执行费 1 前置到买价，保留可选重翻费 1；最多购入 1 张。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "B14",
+      "name": "机会整理",
+      "candidateName": "机会整理",
+      "current": "4h／购2／一次归档／翻3张原价购一",
+      "candidate": "4h／购2／一次归档／翻3张原价购一",
+      "reason": "保留：4h 换翻 3 与整理余牌，不折现成稳定收入；买牌仍需现款。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "W14",
+      "name": "内部交流",
+      "candidateName": "内部交流",
+      "current": "2h／购2／一次归档／心智≤3／翻2张原价购一",
+      "candidate": "2h／购2／一次归档／心智≤3／翻2张原价购一",
+      "reason": "保留：翻 2、原价买牌，履职安全但受低心智限制；不额外加钱。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "P01",
+      "name": "争取双休",
+      "candidateName": "争取双休",
+      "current": "8h／购4／执行费1／WW／心智≥2／3次完成",
+      "candidate": "8h／购4／执行费1／WW／心智≥2／3次完成",
+      "reason": "暂保留：买 4＋三次各付 1＝现金支出 7，另有技能、3 周推进和每周 8h 占用；双休是综合权限，不按支持 2 单项定价。",
+      "changed": false,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    },
+    {
+      "id": "P02",
+      "name": "弹性工作授权",
+      "candidateName": "弹性工作授权",
+      "current": "4h／购4／执行费2／WWW／1次完成",
+      "candidate": "4h／购2／WW／1次完成",
+      "reason": "原价含执行费共 6 且只能护 2h，收益过低；改为买 2、WW、一次完成，并允许保护一张 4h。",
+      "changed": true,
+      "currentBudget": null,
+      "currentTemplatePriceExcludingSpecialAdjustments": null
+    }
+  ],
+  "repeatBudgetChecks": [
+    {
+      "id": "W05",
+      "budgetRange": [
+        1,
+        1
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    },
+    {
+      "id": "W07",
+      "budgetRange": [
+        3,
+        3
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 3,
+      "formulaPrice": 3
+    },
+    {
+      "id": "W08",
+      "budgetRange": [
+        4,
+        4
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 4,
+      "formulaPrice": 4
+    },
+    {
+      "id": "W09",
+      "budgetRange": [
+        5,
+        5
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 4,
+      "formulaPrice": 4
+    },
+    {
+      "id": "W10",
+      "budgetRange": [
+        7,
+        7
+      ],
+      "skillCredit": 2,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "W11",
+      "budgetRange": [
+        6,
+        6
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "W12",
+      "budgetRange": [
+        4,
+        6
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "A05",
+      "budgetRange": [
+        1,
+        1
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    },
+    {
+      "id": "A06",
+      "budgetRange": [
+        0,
+        4
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 4,
+      "formulaPrice": 4
+    },
+    {
+      "id": "A07",
+      "budgetRange": [
+        3,
+        3
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 3,
+      "formulaPrice": 3
+    },
+    {
+      "id": "A08",
+      "budgetRange": [
+        5,
+        5
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "A09",
+      "budgetRange": [
+        6,
+        8
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 7,
+      "formulaPrice": 7
+    },
+    {
+      "id": "A10",
+      "budgetRange": [
+        8,
+        10
+      ],
+      "skillCredit": 2,
+      "capitalCredit": 0,
+      "price": 8,
+      "formulaPrice": 8
+    },
+    {
+      "id": "A11",
+      "budgetRange": [
+        7,
+        8
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 7,
+      "formulaPrice": 7
+    },
+    {
+      "id": "A12",
+      "budgetRange": [
+        5,
+        7
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 6,
+      "formulaPrice": 6
+    },
+    {
+      "id": "B05",
+      "budgetRange": [
+        1,
+        1
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    },
+    {
+      "id": "B06",
+      "budgetRange": [
+        3,
+        3
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 3,
+      "formulaPrice": 3
+    },
+    {
+      "id": "B07",
+      "budgetRange": [
+        0,
+        2
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    },
+    {
+      "id": "B08",
+      "budgetRange": [
+        5,
+        5
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "B09",
+      "budgetRange": [
+        2,
+        6
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "B10",
+      "budgetRange": [
+        8,
+        8
+      ],
+      "skillCredit": 2,
+      "capitalCredit": 0,
+      "price": 6,
+      "formulaPrice": 6
+    },
+    {
+      "id": "B11",
+      "budgetRange": [
+        6,
+        7
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 6,
+      "formulaPrice": 6
+    },
+    {
+      "id": "B12",
+      "budgetRange": [
+        2,
+        6
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 0,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "C05",
+      "budgetRange": [
+        1,
+        1
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    },
+    {
+      "id": "C06",
+      "budgetRange": [
+        4,
+        4
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 1,
+      "price": 3,
+      "formulaPrice": 3
+    },
+    {
+      "id": "C07",
+      "budgetRange": [
+        3,
+        3
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 3,
+      "formulaPrice": 3
+    },
+    {
+      "id": "C08",
+      "budgetRange": [
+        6,
+        6
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 2,
+      "price": 4,
+      "formulaPrice": 4
+    },
+    {
+      "id": "C09",
+      "budgetRange": [
+        8,
+        8
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 2,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "C10",
+      "budgetRange": [
+        10,
+        10
+      ],
+      "skillCredit": 2,
+      "capitalCredit": 2,
+      "price": 6,
+      "formulaPrice": 6
+    },
+    {
+      "id": "C11",
+      "budgetRange": [
+        8,
+        8
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 2,
+      "price": 5,
+      "formulaPrice": 5
+    },
+    {
+      "id": "C12",
+      "budgetRange": [
+        10,
+        10
+      ],
+      "skillCredit": 1,
+      "capitalCredit": 2,
+      "price": 7,
+      "formulaPrice": 7
+    },
+    {
+      "id": "A13",
+      "budgetRange": [
+        4,
+        4
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 4,
+      "formulaPrice": 4
+    },
+    {
+      "id": "B13",
+      "budgetRange": [
+        2,
+        2
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    },
+    {
+      "id": "C13",
+      "budgetRange": [
+        2,
+        2
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 3,
+      "formulaPrice": 3
+    },
+    {
+      "id": "W13",
+      "budgetRange": [
+        2,
+        2
+      ],
+      "skillCredit": 0,
+      "capitalCredit": 0,
+      "price": 2,
+      "formulaPrice": 2
+    }
+  ],
+  "inspection": {
+    "byAnnouncedDice": [
+      {
+        "dice": 1,
+        "outcomes": 6,
+        "hit": 0.16666666666666666,
+        "bothSafeDifferentDays": 0.6666666666666666
+      },
+      {
+        "dice": 2,
+        "outcomes": 36,
+        "hit": 0.3055555555555556,
+        "bothSafeDifferentDays": 0.4444444444444444
+      },
+      {
+        "dice": 3,
+        "outcomes": 216,
+        "hit": 0.4212962962962963,
+        "bothSafeDifferentDays": 0.2962962962962963
+      }
+    ],
+    "eventCount": 12,
+    "fixedWeekdayHit": 0.1670524691358025,
+    "fixedDifferentWeekdaysBothSafe": 0.691358024691358
+  },
+  "boostCases": [
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "W11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "W12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "W12",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A07",
+      "condition": false,
+      "additionalPerFace": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "meanExtra": 0.6666666666666666
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A09",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A10",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "A12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "B06",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "B08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "B10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "B11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C05",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C06",
+      "condition": false,
+      "additionalPerFace": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B07",
+      "target": "C12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "W11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "W12",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "W12",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A07",
+      "condition": false,
+      "additionalPerFace": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A09",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A09",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A10",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A11",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "A12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "B06",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "B08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "B10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "B11",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C05",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C06",
+      "condition": false,
+      "additionalPerFace": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B09",
+      "target": "C12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "W11",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "W12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "W12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A07",
+      "condition": false,
+      "additionalPerFace": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A08",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A09",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A09",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A10",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A11",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "A12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "B06",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "B08",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "B10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "B11",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C05",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C06",
+      "condition": false,
+      "additionalPerFace": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "current",
+      "booster": "B12",
+      "target": "C12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "W11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "W12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "W12",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A07",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A09",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A10",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "B06",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "B08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "B10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "B11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C05",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C06",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "C12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B07",
+      "target": "A13",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "W11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "W12",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "W12",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A07",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A09",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A09",
+      "condition": true,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A10",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A11",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A12",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "B06",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "B08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "B10",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "B11",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C05",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C06",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C11",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "C12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B09",
+      "target": "A13",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "W11",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "W12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "W12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A07",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A08",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A09",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A09",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A10",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A11",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A12",
+      "condition": true,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "B06",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "B08",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "B10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "B11",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C05",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C06",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C08",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C09",
+      "condition": false,
+      "additionalPerFace": [
+        1
+      ],
+      "meanExtra": 1
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C10",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C11",
+      "condition": false,
+      "additionalPerFace": [
+        2
+      ],
+      "meanExtra": 2
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "C12",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    },
+    {
+      "pool": "candidate",
+      "booster": "B12",
+      "target": "A13",
+      "condition": false,
+      "additionalPerFace": [
+        0
+      ],
+      "meanExtra": 0
+    }
+  ],
+  "searchChecks": [
+    {
+      "pool": "current",
+      "route": "W",
+      "prices": [
+        7,
+        9,
+        8,
+        8
+      ],
+      "paid": 5,
+      "meanMaxPrinted": 8.5,
+      "maxPrinted": 9,
+      "meanSavingVersusDirectPlusBasicArchive": 4.5,
+      "maxSavingVersusDirectPlusBasicArchive": 5
+    },
+    {
+      "pool": "current",
+      "route": "A",
+      "prices": [
+        7,
+        9,
+        8,
+        8
+      ],
+      "paid": 5,
+      "meanMaxPrinted": 8.5,
+      "maxPrinted": 9,
+      "meanSavingVersusDirectPlusBasicArchive": 4.5,
+      "maxSavingVersusDirectPlusBasicArchive": 5
+    },
+    {
+      "pool": "current",
+      "route": "B",
+      "prices": [
+        7,
+        9,
+        8,
+        7
+      ],
+      "paid": 5,
+      "meanMaxPrinted": 8.333333333333334,
+      "maxPrinted": 9,
+      "meanSavingVersusDirectPlusBasicArchive": 4.333333333333334,
+      "maxSavingVersusDirectPlusBasicArchive": 5
+    },
+    {
+      "pool": "current",
+      "route": "C",
+      "prices": [
+        7,
+        9,
+        8,
+        8
+      ],
+      "paid": 5,
+      "meanMaxPrinted": 8.5,
+      "maxPrinted": 9,
+      "meanSavingVersusDirectPlusBasicArchive": 4.5,
+      "maxSavingVersusDirectPlusBasicArchive": 5
+    },
+    {
+      "pool": "candidate",
+      "route": "W",
+      "prices": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "paid": 6,
+      "meanMaxPrinted": 5,
+      "maxPrinted": 5,
+      "meanSavingVersusDirectPlusBasicArchive": 0,
+      "maxSavingVersusDirectPlusBasicArchive": 0
+    },
+    {
+      "pool": "candidate",
+      "route": "A",
+      "prices": [
+        7,
+        8,
+        7,
+        6
+      ],
+      "paid": 7,
+      "meanMaxPrinted": 7.5,
+      "maxPrinted": 8,
+      "meanSavingVersusDirectPlusBasicArchive": 1.5,
+      "maxSavingVersusDirectPlusBasicArchive": 2
+    },
+    {
+      "pool": "candidate",
+      "route": "B",
+      "prices": [
+        5,
+        6,
+        6,
+        5
+      ],
+      "paid": 6,
+      "meanMaxPrinted": 5.833333333333333,
+      "maxPrinted": 6,
+      "meanSavingVersusDirectPlusBasicArchive": 0.833333333333333,
+      "maxSavingVersusDirectPlusBasicArchive": 1
+    },
+    {
+      "pool": "candidate",
+      "route": "C",
+      "prices": [
+        5,
+        6,
+        5,
+        7
+      ],
+      "paid": 6,
+      "meanMaxPrinted": 6.333333333333333,
+      "maxPrinted": 7,
+      "meanSavingVersusDirectPlusBasicArchive": 1.333333333333333,
+      "maxSavingVersusDirectPlusBasicArchive": 2
+    }
+  ],
+  "opportunity": [
+    {
+      "N": 20,
+      "K": 5,
+      "draw": 2,
+      "hit": 0.4473684210526315
+    },
+    {
+      "N": 20,
+      "K": 5,
+      "draw": 3,
+      "hit": 0.6008771929824561
+    },
+    {
+      "N": 20,
+      "K": 5,
+      "draw": 4,
+      "hit": 0.7182662538699691
+    }
+  ],
+  "growth": [
+    {
+      "id": "W01",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "W02",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "W03",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "W06",
+      "expectedNetCashCost": 1.6666666666666667
+    },
+    {
+      "id": "A01",
+      "expectedNetCashCost": 2
+    },
+    {
+      "id": "A02",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "A03",
+      "expectedNetCashCost": 2
+    },
+    {
+      "id": "B01",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "B02",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "B03",
+      "expectedNetCashCost": 2
+    },
+    {
+      "id": "C01",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "C02",
+      "expectedNetCashCost": 1
+    },
+    {
+      "id": "C03",
+      "expectedNetCashCost": 2
+    }
+  ],
+  "capital": [
+    {
+      "id": "C06",
+      "price": 3,
+      "refundableCapital": 3,
+      "startCash": 6,
+      "credit": 1,
+      "profit": 2
+    },
+    {
+      "id": "C08",
+      "price": 4,
+      "refundableCapital": 6,
+      "startCash": 10,
+      "credit": 2,
+      "profit": 3
+    },
+    {
+      "id": "C09",
+      "price": 5,
+      "refundableCapital": 6,
+      "startCash": 11,
+      "credit": 2,
+      "profit": 3
+    },
+    {
+      "id": "C10",
+      "price": 6,
+      "refundableCapital": 8,
+      "startCash": 14,
+      "credit": 2,
+      "profit": 4
+    },
+    {
+      "id": "C11",
+      "price": 5,
+      "refundableCapital": 6,
+      "startCash": 11,
+      "credit": 2,
+      "profit": 2
+    },
+    {
+      "id": "C12",
+      "price": 7,
+      "refundableCapital": 10,
+      "startCash": 17,
+      "credit": 2,
+      "profit": 4
+    }
+  ],
+  "builds": [
+    {
+      "name": "创作＋生活",
+      "skills": "AAAABB",
+      "emptyNights": 6,
+      "expectedProfit": 10,
+      "expectedSanity": 6,
+      "placements": [
+        [
+          "A10",
+          "周一白天"
+        ],
+        [
+          "A05",
+          "周一夜晚"
+        ],
+        [
+          "A09",
+          "周二白天"
+        ],
+        [
+          "A11",
+          "周三白天"
+        ]
+      ],
+      "income": 10,
+      "sanity": 6,
+      "inspirationNet": 0,
+      "buyPrice": 24,
+      "lockedCapital": 0,
+      "activityPurchaseAndPlaceActions": 8
+    },
+    {
+      "name": "开发增强＋生活",
+      "skills": "BBBB",
+      "emptyNights": 6,
+      "expectedProfit": 10,
+      "expectedSanity": 7,
+      "placements": [
+        [
+          "B09",
+          "周一白天"
+        ],
+        [
+          "B06",
+          "周二上午"
+        ],
+        [
+          "A05",
+          "周二夜晚"
+        ],
+        [
+          "B10",
+          "周三白天"
+        ],
+        [
+          "A13",
+          "周四上午"
+        ],
+        [
+          "A07",
+          "周五上午"
+        ],
+        [
+          "B13",
+          "周日上午"
+        ]
+      ],
+      "income": 10,
+      "sanity": 7,
+      "inspirationNet": 0,
+      "buyPrice": 25,
+      "lockedCapital": 0,
+      "activityPurchaseAndPlaceActions": 14
+    },
+    {
+      "name": "商业本金＋生活",
+      "skills": "AACCCC",
+      "emptyNights": 7,
+      "expectedProfit": 10,
+      "expectedSanity": 8,
+      "placements": [
+        [
+          "C10",
+          "周一白天"
+        ],
+        [
+          "C09",
+          "周二白天"
+        ],
+        [
+          "C11",
+          "周三白天"
+        ],
+        [
+          "A13",
+          "周四上午"
+        ]
+      ],
+      "income": 10,
+      "sanity": 8,
+      "inspirationNet": 0,
+      "buyPrice": 20,
+      "lockedCapital": 20,
+      "activityPurchaseAndPlaceActions": 8
+    }
+  ]
+}

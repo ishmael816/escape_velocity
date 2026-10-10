@@ -1,6 +1,6 @@
 {
   "status": "playable-prototype",
-  "version": "0.19.0",
+  "version": "0.18.0",
   "routes": {
     "W": {
       "name": "职场",
@@ -141,7 +141,9 @@
       "requires": "",
       "kind": "growth",
       "cost": {},
-      "gain": {},
+      "gain": {
+        "inspiration": 1
+      },
       "effect": "",
       "professional": true
     },
@@ -168,13 +170,15 @@
       "name": "跨组复盘会",
       "route": "W",
       "hours": 4,
-      "price": 6,
+      "price": 4,
       "stress": 1,
       "minSanity": 0,
       "maxSanity": 2,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "effect": "归档 W；从未亮出的 8h 高级牌中找两张主色为 W 的牌，留一张。",
       "professional": true,
@@ -188,7 +192,7 @@
       "price": 2,
       "stress": 1,
       "minSanity": 0,
-      "maxSanity": 10,
+      "maxSanity": 2,
       "requires": "",
       "kind": "repeat",
       "cost": {},
@@ -208,7 +212,7 @@
       "minSanity": 0,
       "maxSanity": 2,
       "requires": "",
-      "kind": "growth",
+      "kind": "repeat",
       "cost": {},
       "gain": {},
       "effect": "掷骰：1–3 老板画饼，奖金 0；4–5 兑现部分，奖金 2；6 获得认可，奖金 4。",
@@ -236,9 +240,11 @@
       "maxSanity": 2,
       "requires": "",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {
-        "inspiration": 4
+        "inspiration": 3
       },
       "effect": "",
       "professional": true
@@ -248,7 +254,7 @@
       "name": "季度攻坚",
       "route": "W",
       "hours": 8,
-      "price": 4,
+      "price": 5,
       "stress": 2,
       "minSanity": 0,
       "maxSanity": 1,
@@ -266,7 +272,7 @@
       "name": "关键岗位津贴",
       "route": "W",
       "hours": 8,
-      "price": 4,
+      "price": 7,
       "stress": 1,
       "minSanity": 0,
       "maxSanity": 2,
@@ -285,8 +291,8 @@
       "name": "交付负责人",
       "route": "W",
       "hours": 8,
-      "price": 5,
-      "stress": 1,
+      "price": 9,
+      "stress": 2,
       "minSanity": 0,
       "maxSanity": 1,
       "requires": "WWWW",
@@ -304,13 +310,15 @@
       "name": "企业外训讲师",
       "route": "W",
       "hours": 8,
-      "price": 5,
+      "price": 8,
       "stress": 0,
-      "minSanity": 3,
-      "maxSanity": 10,
+      "minSanity": 0,
+      "maxSanity": 2,
       "requires": "WWA",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 2
+      },
       "gain": {
         "profit": 3
       },
@@ -322,13 +330,15 @@
       "name": "流程咨询",
       "route": "W",
       "hours": 8,
-      "price": 5,
-      "stress": 0,
-      "minSanity": 3,
-      "maxSanity": 10,
+      "price": 8,
+      "stress": 1,
+      "minSanity": 0,
+      "maxSanity": 2,
       "requires": "WWB",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
         "profit": 2
       },
@@ -342,15 +352,17 @@
       "name": "速写练习",
       "route": "A",
       "hours": 2,
-      "price": 2,
+      "price": 1,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
-      "gain": {
+      "cost": {
         "inspiration": 1
+      },
+      "gain": {
+        "inspiration": 2
       },
       "effect": ""
     },
@@ -366,7 +378,9 @@
       "requires": "",
       "kind": "growth",
       "cost": {},
-      "gain": {},
+      "gain": {
+        "inspiration": 1
+      },
       "effect": ""
     },
     {
@@ -380,9 +394,11 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
-      "gain": {
+      "cost": {
         "inspiration": 1
+      },
+      "gain": {
+        "inspiration": 3
       },
       "effect": ""
     },
@@ -391,13 +407,15 @@
       "name": "创作研讨会",
       "route": "A",
       "hours": 4,
-      "price": 7,
+      "price": 4,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "effect": "归档 A；从未亮出的 8h 高级牌中找两张主色为 A 的牌，留一张。",
       "search": "A"
@@ -407,7 +425,7 @@
       "name": "听完整张专辑",
       "route": "A",
       "hours": 2,
-      "price": 2,
+      "price": 1,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -424,7 +442,7 @@
       "name": "留白手帐",
       "route": "A",
       "hours": 4,
-      "price": 4,
+      "price": 3,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -441,7 +459,7 @@
       "route": "A",
       "hours": 4,
       "price": 3,
-      "stress": 0,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
@@ -449,10 +467,19 @@
       "cost": {
         "inspiration": 1
       },
-      "gain": {
-        "profit": 2
-      },
-      "effect": ""
+      "gain": {},
+      "effect": "掷骰：1–2 未入选，收入 0；3–4 入选，收入 2；5–6 获奖，收入 4。",
+      "dice": {
+        "resource": "profit",
+        "faces": [
+          0,
+          0,
+          2,
+          2,
+          4,
+          4
+        ]
+      }
     },
     {
       "id": "A08",
@@ -460,13 +487,13 @@
       "route": "A",
       "hours": 8,
       "price": 5,
-      "stress": 0,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
       "cost": {
-        "inspiration": 1
+        "inspiration": 2
       },
       "gain": {
         "profit": 3
@@ -480,11 +507,13 @@
       "hours": 8,
       "price": 7,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "AAA",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 2
+      },
       "gain": {
         "profit": 2
       },
@@ -492,22 +521,22 @@
       "advanced": true,
       "conditionalBonus": 1,
       "condition": "emptyNights",
-      "bonusEmptyNights": 3,
-      "support": 1,
-      "upkeep": 0
+      "bonusEmptyNights": 3
     },
     {
       "id": "A10",
       "name": "独立出版",
       "route": "A",
       "hours": 8,
-      "price": 8,
-      "stress": 0,
-      "minSanity": 0,
+      "price": 9,
+      "stress": 1,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "AAAA",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 2
+      },
       "gain": {
         "profit": 3
       },
@@ -515,46 +544,42 @@
       "advanced": true,
       "conditionalBonus": 1,
       "condition": "emptyNights",
-      "bonusEmptyNights": 5,
-      "support": 1,
-      "upkeep": 0
+      "bonusEmptyNights": 5
     },
     {
       "id": "A11",
       "name": "互动叙事",
       "route": "A",
       "hours": 8,
-      "price": 7,
+      "price": 8,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "ABB",
       "kind": "repeat",
       "cost": {
-        "inspiration": 1
+        "inspiration": 2
       },
       "gain": {
-        "profit": 3
+        "profit": 2
       },
       "effect": "本周此前成功执行过主色 B 的活动：本次少支付 1 灵感。",
       "advanced": true,
-      "discountAfter": "B",
-      "support": 1,
-      "upkeep": 0
+      "discountAfter": "B"
     },
     {
       "id": "A12",
       "name": "商业写作",
       "route": "A",
       "hours": 8,
-      "price": 6,
-      "stress": 0,
+      "price": 8,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "ACC",
       "kind": "repeat",
       "cost": {
-        "inspiration": 1
+        "inspiration": 3
       },
       "gain": {
         "profit": 3
@@ -575,7 +600,9 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
         "cash": 1
       },
@@ -593,7 +620,9 @@
       "requires": "",
       "kind": "growth",
       "cost": {},
-      "gain": {},
+      "gain": {
+        "inspiration": 1
+      },
       "effect": ""
     },
     {
@@ -607,10 +636,11 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
-      "gain": {
-        "cash": 1,
+      "cost": {
         "inspiration": 1
+      },
+      "gain": {
+        "cash": 2
       },
       "effect": ""
     },
@@ -619,13 +649,15 @@
       "name": "开发者交流",
       "route": "B",
       "hours": 4,
-      "price": 6,
+      "price": 4,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "effect": "归档 B；从未亮出的 8h 高级牌中找两张主色为 B 的牌，留一张。",
       "search": "B"
@@ -641,9 +673,11 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {
-        "inspiration": 1
+        "inspiration": 2
       },
       "effect": ""
     },
@@ -658,7 +692,9 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
         "profit": 2
       },
@@ -669,7 +705,7 @@
       "name": "快捷脚本",
       "route": "B",
       "hours": 4,
-      "price": 2,
+      "price": 3,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -694,7 +730,9 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 2
+      },
       "gain": {
         "profit": 3
       },
@@ -705,82 +743,81 @@
       "name": "自动化工具",
       "route": "B",
       "hours": 8,
-      "price": 5,
+      "price": 7,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "BBB",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {},
       "effect": "下一张活动若为副业收入牌，印刷基础收入翻倍；该牌含所有加成最多收入 4。",
       "advanced": true,
       "boost": {
         "type": "double",
         "amount": 2
-      },
-      "support": 1,
-      "upkeep": 0
+      }
     },
     {
       "id": "B10",
       "name": "独立软件服务",
       "route": "B",
       "hours": 8,
-      "price": 6,
+      "price": 9,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "BBBB",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
         "profit": 3
       },
       "effect": "",
-      "advanced": true,
-      "support": 1,
-      "upkeep": 0
+      "advanced": true
     },
     {
       "id": "B11",
       "name": "数字素材工厂",
       "route": "B",
       "hours": 8,
-      "price": 6,
+      "price": 8,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "AAB",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
         "profit": 2
       },
       "effect": "本周至少 3 个留白夜晚：额外获得 1 灵感。",
       "advanced": true,
       "emptyNightThreshold": 3,
-      "emptyNightInspiration": 1,
-      "support": 1,
-      "upkeep": 0
+      "emptyNightInspiration": 1
     },
     {
       "id": "B12",
       "name": "电商自动化",
       "route": "B",
       "hours": 8,
-      "price": 5,
+      "price": 7,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "BCC",
       "kind": "repeat",
       "cost": {},
-      "gain": {
-        "inspiration": 2
-      },
+      "gain": {},
       "effect": "下一张活动若为有本金的副业收入牌，印刷基础收入翻倍；该牌含所有加成最多收入 4。",
       "advanced": true,
+      "capital": 3,
       "boost": {
         "type": "double",
         "amount": 2,
@@ -815,8 +852,12 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
-      "gain": {},
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "inspiration": 2
+      },
       "effect": ""
     },
     {
@@ -824,16 +865,17 @@
       "name": "小规模试运营",
       "route": "C",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {
-        "cash": 1,
-        "inspiration": 1
+        "cash": 2
       },
       "effect": ""
     },
@@ -842,13 +884,15 @@
       "name": "商家沙龙",
       "route": "C",
       "hours": 4,
-      "price": 6,
+      "price": 4,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "effect": "归档 C；从未亮出的 8h 高级牌中找两张主色为 C 的牌，留一张。",
       "search": "C"
@@ -864,7 +908,9 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
         "profit": 1
       },
@@ -876,17 +922,28 @@
       "route": "C",
       "hours": 4,
       "price": 3,
-      "stress": 0,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
-      "effect": "本金在安排时锁定，撤回返还。",
-      "capital": 3
+      "effect": "掷骰：1–2 额外收入 0；3–4 额外收入 1；5–6 额外收入 2。本金继续锁定。",
+      "capital": 3,
+      "dice": {
+        "resource": "profit",
+        "faces": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2
+        ]
+      }
     },
     {
       "id": "C07",
@@ -899,7 +956,9 @@
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {
         "inspiration": 3
       },
@@ -910,8 +969,8 @@
       "name": "周末摊位",
       "route": "C",
       "hours": 8,
-      "price": 4,
-      "stress": 0,
+      "price": 5,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
@@ -928,9 +987,9 @@
       "name": "稳定供货",
       "route": "C",
       "hours": 8,
-      "price": 5,
+      "price": 7,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "CCC",
       "kind": "repeat",
@@ -940,18 +999,16 @@
       },
       "effect": "",
       "advanced": true,
-      "capital": 6,
-      "support": 1,
-      "upkeep": 0
+      "capital": 8
     },
     {
       "id": "C10",
       "name": "自有品牌",
       "route": "C",
       "hours": 8,
-      "price": 6,
-      "stress": 0,
-      "minSanity": 0,
+      "price": 9,
+      "stress": 1,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "CCCC",
       "kind": "repeat",
@@ -961,77 +1018,73 @@
       },
       "effect": "",
       "advanced": true,
-      "capital": 8,
-      "support": 1,
-      "upkeep": 0
+      "capital": 10
     },
     {
       "id": "C11",
       "name": "创作者商店",
       "route": "C",
       "hours": 8,
-      "price": 5,
+      "price": 8,
       "stress": 0,
-      "minSanity": 0,
+      "minSanity": 1,
       "maxSanity": 10,
       "requires": "AAC",
       "kind": "repeat",
-      "cost": {},
+      "cost": {
+        "inspiration": 1
+      },
       "gain": {
-        "profit": 2
+        "profit": 3
       },
       "effect": "",
       "advanced": true,
-      "capital": 6,
-      "support": 2,
-      "upkeep": 0
+      "capital": 6
     },
     {
       "id": "C12",
-      "name": "分红投资组合",
+      "name": "企业客户长约",
       "route": "C",
       "hours": 8,
-      "price": 7,
-      "stress": 0,
+      "price": 8,
+      "stress": 1,
       "minSanity": 0,
       "maxSanity": 10,
       "requires": "CCW",
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 4
+        "profit": 3
       },
-      "effect": "",
+      "effect": "理智 ≤1 时，副业收入额外 +1。",
       "advanced": true,
-      "capital": 10,
-      "support": 1,
-      "upkeep": 0
+      "capital": 6,
+      "conditionalBonus": 1,
+      "condition": "lowSanity"
     },
     {
       "id": "A13",
-      "name": "画画与售卖习作",
+      "name": "公园写生",
       "route": "A",
-      "hours": 4,
-      "price": 4,
+      "hours": 2,
+      "price": 2,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
       "cost": {},
-      "gain": {
-        "profit": 1
-      },
+      "gain": {},
       "effect": "",
       "support": 1,
-      "upkeep": 0
+      "upkeep": 1
     },
     {
       "id": "B13",
       "name": "手作工坊",
       "route": "B",
       "hours": 4,
-      "price": 2,
+      "price": 3,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -1058,14 +1111,14 @@
       "gain": {},
       "effect": "",
       "support": 2,
-      "upkeep": 1
+      "upkeep": 2
     },
     {
       "id": "W13",
       "name": "心理咨询",
       "route": "W",
       "hours": 4,
-      "price": 2,
+      "price": 4,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -1103,13 +1156,15 @@
       "name": "付费寻商",
       "route": "C",
       "hours": 2,
-      "price": 3,
+      "price": 2,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
       "requires": "",
       "kind": "growth",
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "effect": "任选牌堆翻 2 张，原价买至多 1 张；可再付 1 钱换一批，仅一次。其余放堆底。",
       "opportunity": {
@@ -1180,19 +1235,21 @@
       "id": "P02",
       "name": "弹性工作授权",
       "hours": 4,
-      "price": 2,
+      "price": 4,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
-      "requires": "WW",
+      "requires": "WWW",
       "kind": "once",
       "route": "W",
       "permanent": true,
-      "cost": {},
+      "cost": {
+        "money": 2
+      },
       "gain": {},
       "progress": 1,
       "professional": true,
-      "effect": "完成后的下一周起，每周周初标记一个工作时段：该时段的一张 2h 或 4h 非履职活动免受查岗。掷骰前选好，本周不可移动。不保护 8h、团建或熬夜。"
+      "effect": "完成后的下一周起，每周周初标记一个工作时段：该时段的一张 2h 非履职活动免受查岗；查岗骰落定前必须选好，本周不可移动。不保护 4h/8h、团建或熬夜。"
     }
   ]
 }

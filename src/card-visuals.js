@@ -22,10 +22,12 @@ export function familyOf(def) {
 }
 export function specialRules(def) {
   const rules = [];
-  if(def.support)rules.push(`占用日程提供理智支持 +${def.support}；查岗揭晓后、普通活动前每周付 ${def.upkeep} 钱。多张按日程顺序支付；付不起、查停、团建或同晚超过 2h 时失效且不收费。撤回解除，不跨周累加`);
+  if(def.support)rules.push(`占用日程提供理智支持 +${def.support}；${def.upkeep?`查岗揭晓后、普通活动前每周付 ${def.upkeep} 钱，多张按日程顺序支付，付不起则撤回手牌`:'无维持费'}。查停、团建或同晚超过 2h 时支持失效；其余效果按日程执行。撤回解除，不跨周累加`);
+  if(!def.once&&Object.values(def.cost||{}).some(n=>n>0))rules.push('付不起执行消耗时撤回手牌，解除支持与压力并返还本金');
   if (def.rule) rules.push(def.rule);
   if (def.progressTarget) rules.push(`每周至多推进一次，共 ${def.progressTarget} 次；每次付执行消耗，满格才获得效果并离场`);
   if (def.skill) rules.push(`完成 → ${def.skill} 技能（同名只计一次）`);
+  if (def.permanent) rules.push('完成后移到永久效果区，不增加技能；同名权限不叠加');
   if (def.core) rules.push('一次建成 · 下周起永久生效');
   if (def.method === 'slack') rules.push(def.workType === 'desk' ? '仅坐班 · 受抽查' : def.workType === 'meeting' ? '仅开会 · 受抽查' : def.period === 1 ? '仅下午工作 · 受抽查' : '替换工作 · 受抽查');
   if (def.method === 'night') rules.push(def.weekendOnly ? '仅周末夜晚 · 替换休息' : '替换夜间休息');

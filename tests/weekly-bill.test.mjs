@@ -1,27 +1,27 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
-import {make,rig,lock,next,seedFor} from './helpers.mjs';
+import {make,rig,lock,next,seedFor,skills} from './helpers.mjs';
 
 test('side income is paid only after the last slot; inspiration still chains immediately',()=>{
  const g=make({startInspiration:0}),p=g.players[0];
- rig(g,p,[['A05',0],['C05',1],['A05',6]]);lock(g);const money=p.money;
+ rig(g,p,[['A05',0],['A07',1],['A05',6]]);lock(g);const money=p.money;
  E.step(g);E.step(g);assert.equal(p.inspiration,1);
  E.step(g);assert.equal(p.money,money);assert.equal(p.income,0);assert.equal(p.inspiration,0);
  assert.equal(E.eligible(g,p),false);
- E.resolveAll(g);assert.equal(p.money,money+4);assert.equal(p.income,1);
- assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:0,salary:3,eventMoney:0,total:4});
+ E.resolveAll(g);assert.equal(p.money,money+5);assert.equal(p.income,2);
+ assert.deepEqual(p.settlement,{week:1,sideIncome:2,otherIncome:0,salary:3,eventMoney:0,total:5});
  next(g);assert.equal(p.settlement,null);assert.deepEqual(p.weeklyEarnings,[]);assert.equal(p.income,0);
 });
 
 test('earned cash cannot fund a later paid activity; preview uses the same rule',()=>{
  const g=make({startMoney:0}),p=g.players[0];
- rig(g,p,[['C05',0],['C14',6]]);
+ skills(p,'WW');rig(g,p,[['C05',0],['P01',5]]);
  const prediction=E.preview(g,0);assert.equal(prediction.money,4);
  assert.ok(prediction.warnings.some(x=>x.text.includes('资源不足')));
  lock(g);E.resolveAll(g);
  assert.equal(g.opportunity,null);assert.equal(p.money,4);assert.equal(p.income,1);
- assert.ok(p.cards.some(c=>c.type==='C14'));assert.equal(p.skills.length,0);
+ assert.ok(p.cards.some(c=>c.type==='P01'&& !c.progress));assert.equal(p.skills.length,2);
 });
 
 test('cash returns, salary bonuses and event awards share payout but never count as side income',()=>{
@@ -46,7 +46,7 @@ test('opportunity purchase cannot spend pending earnings; reload pays the bill e
 });
 
 test('caught activity contributes no earnings; paid fees and fines are not charged twice',()=>{
- const g=make(),p=g.players[0];rig(g,p,[['C05',0],['C05',6],['A13',6,2]]);
+ const g=make(),p=g.players[0];rig(g,p,[['C05',0],['C05',6],['C13',6,2]]);
  g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);lock(g);const money=p.money;
  E.resolveAll(g);assert.equal(p.caught,1);assert.equal(p.income,1);
  assert.equal(p.settlement.total,4);assert.equal(p.money,money-1-1+4);

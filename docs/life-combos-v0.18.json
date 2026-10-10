@@ -1,0 +1,360 @@
+{
+  "note": "Static candidate arithmetic with selected cards already owned, all fees funded, no inspections or team events, no weekend bonus, no night overtime. Not engine execution, acquisition simulation, win rate or balance validation. Purchase costs exclude archived growth, projects, previous purchases and the path to acquire this position.",
+  "scenarios": [
+    {
+      "name": "画画起步：生活与少量收入",
+      "skills": "",
+      "weekend": false,
+      "plan": [
+        {
+          "id": "A13",
+          "day": 7,
+          "slot": "am"
+        }
+      ],
+      "sideIncome": 1,
+      "sanity": 4,
+      "support": 1,
+      "pressure": 0,
+      "upkeep": 0,
+      "executionMoney": 0,
+      "weeklyCashNet": 4,
+      "inspirationNet": 0,
+      "minimumStartingInspiration": 0,
+      "purchasePrice": 4,
+      "lockedCapital": 0,
+      "operatingReserve": 0,
+      "installedCards": 1,
+      "hours": 4,
+      "qualifiesToEscape": false,
+      "lines": [
+        {
+          "id": "A13",
+          "profit": 1
+        }
+      ],
+      "protection": null
+    },
+    {
+      "name": "权限转型中途：履职与开发并行",
+      "skills": "WWB",
+      "weekend": false,
+      "plan": [
+        {
+          "id": "W05",
+          "day": 1,
+          "slot": "am"
+        },
+        {
+          "id": "A13",
+          "day": 1,
+          "slot": "pm"
+        },
+        {
+          "id": "B06",
+          "day": 2,
+          "slot": "am"
+        },
+        {
+          "id": "B05",
+          "day": 2,
+          "slot": "night"
+        }
+      ],
+      "sideIncome": 3,
+      "sanity": 3,
+      "support": 2,
+      "pressure": 2,
+      "upkeep": 0,
+      "executionMoney": 0,
+      "weeklyCashNet": 7,
+      "inspirationNet": 0,
+      "minimumStartingInspiration": 1,
+      "purchasePrice": 13,
+      "lockedCapital": 0,
+      "operatingReserve": 0,
+      "installedCards": 4,
+      "hours": 12,
+      "qualifiesToEscape": false,
+      "lines": [
+        {
+          "id": "W05",
+          "profit": 0
+        },
+        {
+          "id": "A13",
+          "profit": 1
+        },
+        {
+          "id": "B06",
+          "profit": 2
+        },
+        {
+          "id": "B05",
+          "profit": 0
+        }
+      ],
+      "protection": {
+        "id": "B06",
+        "day": 2,
+        "slot": "am"
+      }
+    },
+    {
+      "name": "红绿混合：无双休，生活与收入合一",
+      "skills": "AAABB",
+      "weekend": false,
+      "plan": [
+        {
+          "id": "A06",
+          "day": 1,
+          "slot": "am"
+        },
+        {
+          "id": "A13",
+          "day": 7,
+          "slot": "pm"
+        },
+        {
+          "id": "A11",
+          "day": 2,
+          "slot": "am"
+        },
+        {
+          "id": "B11",
+          "day": 3,
+          "slot": "am"
+        },
+        {
+          "id": "A09",
+          "day": 4,
+          "slot": "am"
+        },
+        {
+          "id": "A07",
+          "day": 7,
+          "slot": "am"
+        }
+      ],
+      "sideIncome": 10,
+      "sanity": 6,
+      "support": 4,
+      "pressure": 1,
+      "upkeep": 0,
+      "executionMoney": 0,
+      "weeklyCashNet": 13,
+      "inspirationNet": 2,
+      "minimumStartingInspiration": 0,
+      "purchasePrice": 35,
+      "lockedCapital": 0,
+      "operatingReserve": 0,
+      "installedCards": 6,
+      "hours": 36,
+      "qualifiesToEscape": true,
+      "lines": [
+        {
+          "id": "A06",
+          "profit": 0
+        },
+        {
+          "id": "A11",
+          "profit": 2
+        },
+        {
+          "id": "B11",
+          "profit": 2
+        },
+        {
+          "id": "A09",
+          "profit": 3
+        },
+        {
+          "id": "A07",
+          "profit": 2
+        },
+        {
+          "id": "A13",
+          "profit": 1
+        }
+      ],
+      "protection": null
+    },
+    {
+      "name": "开发为主：增强配合集中支持",
+      "skills": "BBBB",
+      "weekend": false,
+      "plan": [
+        {
+          "id": "B13",
+          "day": 1,
+          "slot": "am"
+        },
+        {
+          "id": "W13",
+          "day": 1,
+          "slot": "pm"
+        },
+        {
+          "id": "B09",
+          "day": 2,
+          "slot": "am"
+        },
+        {
+          "id": "B06",
+          "day": 3,
+          "slot": "am"
+        },
+        {
+          "id": "B10",
+          "day": 4,
+          "slot": "am"
+        },
+        {
+          "id": "A06",
+          "day": 5,
+          "slot": "am"
+        },
+        {
+          "id": "B08",
+          "day": 7,
+          "slot": "am"
+        }
+      ],
+      "sideIncome": 10,
+      "sanity": 7,
+      "support": 6,
+      "pressure": 2,
+      "upkeep": 3,
+      "executionMoney": 0,
+      "weeklyCashNet": 10,
+      "inspirationNet": 0,
+      "minimumStartingInspiration": 2,
+      "purchasePrice": 35,
+      "lockedCapital": 0,
+      "operatingReserve": 3,
+      "installedCards": 7,
+      "hours": 40,
+      "qualifiesToEscape": true,
+      "lines": [
+        {
+          "id": "B13",
+          "profit": 0
+        },
+        {
+          "id": "W13",
+          "profit": 0
+        },
+        {
+          "id": "B09",
+          "profit": 0
+        },
+        {
+          "id": "B06",
+          "profit": 4
+        },
+        {
+          "id": "B10",
+          "profit": 3
+        },
+        {
+          "id": "A06",
+          "profit": 0
+        },
+        {
+          "id": "B08",
+          "profit": 3
+        }
+      ],
+      "protection": null
+    },
+    {
+      "name": "职场转商业：存量本金支撑副业",
+      "skills": "CCW",
+      "weekend": false,
+      "plan": [
+        {
+          "id": "C12",
+          "day": 2,
+          "slot": "am"
+        },
+        {
+          "id": "C08",
+          "day": 4,
+          "slot": "am"
+        },
+        {
+          "id": "B13",
+          "day": 5,
+          "slot": "am"
+        },
+        {
+          "id": "C07",
+          "day": 6,
+          "slot": "am"
+        },
+        {
+          "id": "C06",
+          "day": 7,
+          "slot": "am"
+        },
+        {
+          "id": "W13",
+          "day": 7,
+          "slot": "pm"
+        }
+      ],
+      "sideIncome": 10,
+      "sanity": 7,
+      "support": 6,
+      "pressure": 2,
+      "upkeep": 3,
+      "executionMoney": 0,
+      "weeklyCashNet": 10,
+      "inspirationNet": 0,
+      "minimumStartingInspiration": 0,
+      "purchasePrice": 27,
+      "lockedCapital": 23,
+      "operatingReserve": 3,
+      "installedCards": 6,
+      "hours": 32,
+      "qualifiesToEscape": true,
+      "lines": [
+        {
+          "id": "C12",
+          "profit": 3
+        },
+        {
+          "id": "C08",
+          "profit": 3
+        },
+        {
+          "id": "B13",
+          "profit": 0
+        },
+        {
+          "id": "C07",
+          "profit": 2
+        },
+        {
+          "id": "C06",
+          "profit": 2
+        },
+        {
+          "id": "W13",
+          "profit": 0
+        }
+      ],
+      "protection": null
+    }
+  ],
+  "copiesOfA13": {
+    "copies": 4,
+    "sideIncome": 4,
+    "support": 4,
+    "upkeep": 0,
+    "weeklyCashNet": 7,
+    "hours": 16,
+    "purchasePrice": 16,
+    "qualifiesToEscape": false
+  }
+}

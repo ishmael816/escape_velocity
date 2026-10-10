@@ -8,7 +8,7 @@
 .capital-mark .pictogram{--symbol-size:22px}.compact-face .capital-mark .pictogram{--symbol-size:15px}
 .inspection-dice{display:flex;gap:14px;margin:12px 0}.inspection-dice>span{font:44px/1 "Segoe UI Symbol",sans-serif;text-align:center;color:#944d35}.inspection-dice small{display:block;font:12px/1.8 sans-serif}
 .dice-hidden{font-size:16px;padding:12px;background:#ede6d6;border:1px dashed #a89b7e;border-radius:6px}
-.projected-income small{font-size:18px;font-weight:400}.project-reserve{margin-top:20px;padding:15px;background:#eae5d9;border-radius:8px;box-shadow:inset 0 2px 5px #594c3525}.project-reserve>div{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}.project-reserve h3{margin:0}.project-reserve p{font-size:12px}
+.projected-income small{font-size:18px;font-weight:400}.permanent-effects{margin-top:20px;padding:15px;background:#eae5d9;border-radius:8px;box-shadow:inset 0 2px 5px #594c3525}.permanent-effects>div{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}.permanent-effects h3{margin:0}.permanent-effects p{font-size:12px}
 .summary-dice{padding:12px;background:#eee5d4;border-radius:6px;margin-bottom:16px}.log-dot.dice{background:#a9753c}
 .phase-card select{max-width:100%;padding:8px}.phase-card p{overflow-wrap:anywhere}
 .duration-4:has(.dice-table) .printed-effects{gap:5px;padding-top:4px;padding-bottom:35px}.compact-face.duration-4:has(.dice-table) .printed-effects{gap:2px;padding-bottom:23px}

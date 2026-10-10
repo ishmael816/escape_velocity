@@ -1,6 +1,6 @@
 {
-  "status": "playable-prototype",
-  "version": "0.19.0",
+  "status": "design-candidate-not-runtime",
+  "version": "0.18-calibration-1",
   "routes": {
     "W": {
       "name": "职场",
@@ -1031,7 +1031,7 @@
       "name": "手作工坊",
       "route": "B",
       "hours": 4,
-      "price": 2,
+      "price": 4,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -1041,7 +1041,7 @@
       "gain": {},
       "effect": "",
       "support": 2,
-      "upkeep": 1
+      "upkeep": 0
     },
     {
       "id": "C13",
@@ -1065,7 +1065,7 @@
       "name": "心理咨询",
       "route": "W",
       "hours": 4,
-      "price": 2,
+      "price": 4,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -1075,7 +1075,7 @@
       "gain": {},
       "effect": "",
       "support": 3,
-      "upkeep": 2
+      "upkeep": 1
     },
     {
       "id": "A14",
@@ -1194,5 +1194,6 @@
       "professional": true,
       "effect": "完成后的下一周起，每周周初标记一个工作时段：该时段的一张 2h 或 4h 非履职活动免受查岗。掷骰前选好，本周不可移动。不保护 8h、团建或熬夜。"
     }
-  ]
+  ],
+  "designNotice": "仅供设计审阅。包含当前引擎尚不支持的混合支持活动与 4h 弹性保护，禁止直接导出上线。"
 }

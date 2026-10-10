@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
 import {MARKET_LIMITS} from '../src/cards.js';
-import {make,add,skills,finish,next} from './helpers.mjs';
+import {make,add,finish,next} from './helpers.mjs';
 
 const ids=g=>Object.values(g.market).flat().map(c=>c.uid);
 const poolIds=g=>[...Object.values(g.market).flat(),...Object.values(g.decks).flat(),...Object.values(g.discard).flat()].map(c=>c.uid).sort();
@@ -29,12 +29,11 @@ test('a public purchase by either the first or last Monday player prevents the r
  }
 });
 
-test('arranging, moving, withdrawing and buying a personal project do not veto refresh',()=>{
- for(const action of ['place','move','withdraw','project']){
+test('arranging, moving and withdrawing do not veto refresh',()=>{
+ for(const action of ['place','move','withdraw']){
   const g=make(),p=g.players[0],c=add(g,p,'A05');
   if(action==='move'||action==='withdraw')p.schedule={'1-0':[c.uid]};
-  if(action==='project'){skills(p,'WW');E.buyProject(g,0,p.projects.find(c=>c.type==='P01').uid);}
-  else if(action==='withdraw')E.unplace(g,0,c.uid);
+  if(action==='withdraw')E.unplace(g,0,c.uid);
   else E.place(g,0,c.uid,{day:2,period:0});
   finishMonday(g);assert.equal(g.mondayMarketRefreshed,true,action);
  }

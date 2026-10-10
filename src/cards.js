@@ -14,15 +14,14 @@ function adapt(d){
  return {...d,kind:'activity',size:{2:1,4:2,8:3}[d.hours],category:route.name,icon:route.icon,
   price:{money:d.price},cost:{...d.cost},gain:{...(d.gain.inspiration?{inspiration:d.gain.inspiration}:{}),...((d.gain.profit||d.gain.cash||d.gain.salary)?{money:(d.gain.profit||0)+(d.gain.cash||0)+(d.gain.salary||0)}:{})},
   fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.gain.profit||d.dice?.resource==='profit',
-  once:d.kind==='growth'||d.kind==='project',skill:d.kind==='growth'?d.route:null,
+  once:d.kind==='growth'||d.kind==='once',skill:d.kind==='growth'?d.route:null,
   tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.dice?'':d.effect,
-  progressTarget:d.progress,unlockWeekend:d.id==='P01',unlockProtection:d.id==='P02',project:d.kind==='project',route:d.route||'W',
+  progressTarget:d.progress,unlockWeekend:d.id==='P01',unlockProtection:d.id==='P02',permanent:!!d.permanent,route:d.route||'W',
  };
 }
 export const CARDS=design.cards.filter(d=>!d.advanced).map(adapt);
 export const ADVANCED=design.cards.filter(d=>d.advanced).map(adapt);
-export const PROJECTS=design.projects.map(adapt);
-export const CARD_MAP=Object.fromEntries([...CARDS,...ADVANCED,...PROJECTS].map(d=>[d.id,d]));
+export const CARD_MAP=Object.fromEntries([...CARDS,...ADVANCED].map(d=>[d.id,d]));
 export const getCard=value=>CARD_MAP[typeof value==='string'?value:value?.type];
 export const MARKET_LIMITS={2:5,4:4,8:3};
 export const marketLane=d=>d.hours;

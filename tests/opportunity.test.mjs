@@ -12,7 +12,7 @@ function unchanged(g,fn,pattern){const before=structuredClone(g);assert.throws(f
 
 test('four one-time searches fit the shared pool and archive model',()=>{
  const cards=CARDS.filter(d=>d.opportunity);assert.equal(cards.length,4);
- for(const d of cards){assert.equal(d.price.money,2);assert.equal(d.stress,0);assert.ok(d.once);assert.equal(d.skill,d.route);assert.equal(d.draft,null);}
+ for(const d of cards){assert.equal(d.price.money,d.id==='C14'?3:2);assert.equal(d.stress,0);assert.ok(d.once);assert.equal(d.skill,d.route);assert.equal(d.draft,null);}
  assert.deepEqual(cards.map(d=>d.id).sort(),['A14','B14','C14','W14']);
  assert.equal(getCard('B14').hours,4);assert.equal(getCard('W14').maxSanity,3);
 });
@@ -38,8 +38,8 @@ test('invalid ownership, deck and unaffordable choice leave pending state untouc
  unchanged(g,()=>E.retryOpportunity(g,0),/只有/);unchanged(g,()=>E.chooseOpportunityLane(g,0,2),/当前/);
  E.chooseOpportunity(g,0);assert.equal(g.opportunity,null);
 });
-test('yellow pays initial fee and only one retry; first batch cannot reappear',()=>{
- const g=search('C14'),p=g.players[0];assert.equal(p.money,7); // 8 - 1 fee, before salary
+test('yellow has no execution fee and only one paid retry; first batch cannot reappear',()=>{
+ const g=search('C14'),p=g.players[0];assert.equal(p.money,8); // purchase cost is front-loaded; no execution fee
  const cards=stack(g,['A01','A02','B01']);g.decks[2]=cards.slice();g.discard[2]=[];
  E.chooseOpportunityLane(g,0,2);const first=g.opportunity.options.map(c=>c.uid),m=p.money;
  E.retryOpportunity(g,0);assert.equal(p.money,m-1);assert.equal(g.opportunity.options.length,1);

@@ -1,0 +1,5081 @@
+{
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "games": [
+    {
+      "startingHand": 0,
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 13,
+      "opportunities": 5,
+      "opportunityPurchases": 2,
+      "opportunityRetries": 1,
+      "lastOpportunityWeek": 9,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        null,
+        13
+      ],
+      "cashAtEscape": [
+        null,
+        33
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 1,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 8,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 11,
+              "sanity": 1,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 7,
+              "sanity": 8,
+              "supportFee": 3,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 5,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 11,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 22,
+              "income": 8,
+              "sanity": 7,
+              "supportFee": 3,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 5,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 33,
+              "income": 11,
+              "sanity": 8,
+              "supportFee": 3,
+              "marketPurchases": 0
+            }
+          ]
+        }
+      ],
+      "averageSlots": 9.3,
+      "maxSlots": 14,
+      "income": [
+        5,
+        11
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 5,
+          "money": 9,
+          "sanity": 1,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 2,
+            "C": 4
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 11,
+          "money": 33,
+          "sanity": 8,
+          "skills": {
+            "W": 1,
+            "A": 3,
+            "B": 2,
+            "C": 4
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 16,
+      "opportunities": 6,
+      "opportunityPurchases": 1,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 14,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        16,
+        null
+      ],
+      "cashAtEscape": [
+        16,
+        null
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 6,
+              "supportFee": 2,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 7,
+              "sanity": 5,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 7,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 6,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 16,
+              "income": 11,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 10,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        }
+      ],
+      "averageSlots": 6.4,
+      "maxSlots": 13,
+      "income": [
+        11,
+        10
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 11,
+          "money": 16,
+          "sanity": 6,
+          "skills": {
+            "W": 3,
+            "A": 4,
+            "B": 4,
+            "C": 4
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 10,
+          "money": 14,
+          "sanity": 3,
+          "skills": {
+            "W": 3,
+            "A": 4,
+            "B": 3,
+            "C": 3
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 10,
+      "opportunities": 4,
+      "opportunityPurchases": 0,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 9,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        10,
+        null
+      ],
+      "cashAtEscape": [
+        16,
+        null
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 5,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 5,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 8,
+              "sanity": 7,
+              "supportFee": 2,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 16,
+              "income": 12,
+              "sanity": 8,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 11,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        }
+      ],
+      "averageSlots": 7.5,
+      "maxSlots": 11,
+      "income": [
+        12,
+        11
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 12,
+          "money": 16,
+          "sanity": 8,
+          "skills": {
+            "W": 3,
+            "A": 3,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 1
+        },
+        {
+          "id": 1,
+          "income": 11,
+          "money": 15,
+          "sanity": 3,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 3,
+            "C": 3
+          },
+          "caught": 1
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 14,
+      "opportunities": 13,
+      "opportunityPurchases": 2,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 13,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        14,
+        13,
+        14
+      ],
+      "cashAtEscape": [
+        28,
+        38,
+        17
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 6,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 8,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 8,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 8,
+              "supportFee": 3,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 7,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 8,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 7,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 16,
+              "income": 10,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 12,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 16,
+              "income": 10,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 28,
+              "income": 10,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 7,
+              "sanity": 1,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 38,
+              "income": 12,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 28,
+              "income": 13,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 49,
+              "income": 12,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 10,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        }
+      ],
+      "averageSlots": 9.9,
+      "maxSlots": 15,
+      "income": [
+        13,
+        12,
+        10
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 13,
+          "money": 28,
+          "sanity": 6,
+          "skills": {
+            "W": 5,
+            "A": 5,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 1
+        },
+        {
+          "id": 1,
+          "income": 12,
+          "money": 49,
+          "sanity": 10,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 4,
+            "C": 5
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 10,
+          "money": 17,
+          "sanity": 7,
+          "skills": {
+            "W": 3,
+            "A": 3,
+            "B": 3,
+            "C": 3
+          },
+          "caught": 1
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 17,
+      "opportunities": 14,
+      "opportunityPurchases": 1,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 17,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        17,
+        17,
+        null
+      ],
+      "cashAtEscape": [
+        17,
+        14,
+        null
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 6,
+              "supportFee": 2,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 4,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 6,
+              "sanity": 3,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 5,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 4,
+              "sanity": 7,
+              "supportFee": 2,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 2,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 5,
+              "sanity": 6,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 2,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 13,
+              "sanity": 8,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 10,
+              "sanity": 6,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 8,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        }
+      ],
+      "averageSlots": 11.1,
+      "maxSlots": 17,
+      "income": [
+        13,
+        10,
+        8
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 13,
+          "money": 17,
+          "sanity": 8,
+          "skills": {
+            "W": 5,
+            "A": 4,
+            "B": 4,
+            "C": 4
+          },
+          "caught": 1
+        },
+        {
+          "id": 1,
+          "income": 10,
+          "money": 14,
+          "sanity": 6,
+          "skills": {
+            "W": 2,
+            "A": 5,
+            "B": 3,
+            "C": 4
+          },
+          "caught": 1
+        },
+        {
+          "id": 2,
+          "income": 8,
+          "money": 12,
+          "sanity": 3,
+          "skills": {
+            "W": 3,
+            "A": 3,
+            "B": 3,
+            "C": 4
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 14,
+      "opportunities": 8,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 13,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        null,
+        14,
+        14
+      ],
+      "cashAtEscape": [
+        null,
+        28,
+        38
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 2,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 9,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 2,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 6,
+              "sanity": 4,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 9,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 8,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 18,
+              "income": 6,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 3,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 16,
+              "income": 9,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 21,
+              "income": 11,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 3,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 28,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 38,
+              "income": 14,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 0
+            }
+          ]
+        }
+      ],
+      "averageSlots": 8.6,
+      "maxSlots": 16,
+      "income": [
+        6,
+        11,
+        14
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 6,
+          "money": 15,
+          "sanity": 6,
+          "skills": {
+            "W": 2,
+            "A": 3,
+            "B": 3,
+            "C": 4
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 11,
+          "money": 28,
+          "sanity": 10,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 3,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 14,
+          "money": 38,
+          "sanity": 6,
+          "skills": {
+            "W": 4,
+            "A": 2,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 16,
+      "opportunities": 15,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 1,
+      "lastOpportunityWeek": 16,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        11,
+        16,
+        14,
+        null
+      ],
+      "cashAtEscape": [
+        26,
+        17,
+        27,
+        null
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 0,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 2,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 9,
+              "sanity": 8,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 5,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 6,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 7,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 26,
+              "income": 11,
+              "sanity": 8,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 8,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": true,
+              "money": 35,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 7,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 8,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": true,
+              "money": 44,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 9,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 5,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": true,
+              "money": 53,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 8,
+              "supportFee": 3,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 27,
+              "income": 17,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 16,
+              "income": 8,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": true,
+              "money": 62,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 43,
+              "income": 17,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 22,
+              "income": 8,
+              "sanity": 7,
+              "supportFee": 3,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": true,
+              "money": 71,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 13,
+              "sanity": 10,
+              "supportFee": 3,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 59,
+              "income": 17,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 19,
+              "income": 8,
+              "sanity": 9,
+              "supportFee": 4,
+              "marketPurchases": 3
+            }
+          ]
+        }
+      ],
+      "averageSlots": 11.9,
+      "maxSlots": 17,
+      "income": [
+        11,
+        13,
+        17,
+        8
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 11,
+          "money": 71,
+          "sanity": 10,
+          "skills": {
+            "W": 4,
+            "A": 4,
+            "B": 3,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 13,
+          "money": 17,
+          "sanity": 10,
+          "skills": {
+            "W": 3,
+            "A": 5,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 17,
+          "money": 59,
+          "sanity": 10,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 3,
+            "C": 4
+          },
+          "caught": 0
+        },
+        {
+          "id": 3,
+          "income": 8,
+          "money": 19,
+          "sanity": 9,
+          "skills": {
+            "W": 3,
+            "A": 4,
+            "B": 4,
+            "C": 4
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 17,
+      "opportunities": 18,
+      "opportunityPurchases": 1,
+      "opportunityRetries": 1,
+      "lastOpportunityWeek": 16,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        17,
+        14,
+        17,
+        null
+      ],
+      "cashAtEscape": [
+        32,
+        24,
+        24,
+        null
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 2,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 1,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 4,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 4,
+              "sanity": 1,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 2,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 4,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 5,
+              "supportFee": 2,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 1,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 0,
+              "sanity": 0,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 6,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 4,
+              "sanity": 5,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 6,
+              "sanity": 7,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 18,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 24,
+              "income": 12,
+              "sanity": 6,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 34,
+              "income": 12,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 18,
+              "income": 9,
+              "sanity": 8,
+              "supportFee": 3,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 19,
+              "income": 6,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 44,
+              "income": 12,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 3,
+              "sanity": 10,
+              "supportFee": 4,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 8,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 32,
+              "income": 12,
+              "sanity": 8,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 54,
+              "income": 12,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 24,
+              "income": 12,
+              "sanity": 9,
+              "supportFee": 3,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 7,
+              "sanity": 8,
+              "supportFee": 3,
+              "marketPurchases": 1
+            }
+          ]
+        }
+      ],
+      "averageSlots": 13.1,
+      "maxSlots": 19,
+      "income": [
+        12,
+        12,
+        12,
+        7
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 12,
+          "money": 32,
+          "sanity": 8,
+          "skills": {
+            "W": 3,
+            "A": 5,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 12,
+          "money": 54,
+          "sanity": 10,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 12,
+          "money": 24,
+          "sanity": 9,
+          "skills": {
+            "W": 2,
+            "A": 5,
+            "B": 3,
+            "C": 5
+          },
+          "caught": 1
+        },
+        {
+          "id": 3,
+          "income": 7,
+          "money": 14,
+          "sanity": 8,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 3,
+            "C": 4
+          },
+          "caught": 1
+        }
+      ]
+    },
+    {
+      "startingHand": 0,
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 18,
+      "opportunities": 12,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 1,
+      "lastOpportunityWeek": 18,
+      "longestUnchangedMarketWeeks": 0,
+      "escapeWeeks": [
+        18,
+        15,
+        12,
+        null
+      ],
+      "cashAtEscape": [
+        18,
+        27,
+        15,
+        null
+      ],
+      "weeklyEconomy": [
+        {
+          "week": 1,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 4
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 2,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 3,
+              "income": 0,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 1,
+              "supportFee": 0,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 1,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 5,
+              "income": 1,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 3,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 6,
+              "income": 3,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 9,
+              "income": 6,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 6,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 5,
+              "sanity": 7,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 17,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 0
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 4,
+              "supportFee": 0,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 0,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 4,
+              "income": 1,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 8,
+              "income": 5,
+              "sanity": 7,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 11,
+              "sanity": 8,
+              "supportFee": 1,
+              "marketPurchases": 1
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 10,
+              "income": 7,
+              "sanity": 2,
+              "supportFee": 0,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 3
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 10,
+              "sanity": 5,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 25,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 3
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 12,
+              "income": 6,
+              "sanity": 9,
+              "supportFee": 2,
+              "marketPurchases": 1
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 13,
+              "income": 9,
+              "sanity": 5,
+              "supportFee": 2,
+              "marketPurchases": 2
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 35,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 6,
+              "supportFee": 3,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 3,
+              "sanity": 6,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": false,
+              "money": 27,
+              "income": 14,
+              "sanity": 7,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 45,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 7,
+              "income": 4,
+              "sanity": 0,
+              "supportFee": 1,
+              "marketPurchases": 2
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 6,
+              "sanity": 9,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 42,
+              "income": 17,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 55,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 11,
+              "income": 7,
+              "sanity": 3,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 6,
+              "sanity": 7,
+              "supportFee": 1,
+              "marketPurchases": 2
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 57,
+              "income": 17,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 65,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 14,
+              "income": 8,
+              "sanity": 4,
+              "supportFee": 1,
+              "marketPurchases": 1
+            }
+          ]
+        },
+        {
+          "week": 18,
+          "players": [
+            {
+              "id": 0,
+              "alreadyEscaped": false,
+              "money": 18,
+              "income": 10,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 1,
+              "alreadyEscaped": true,
+              "money": 72,
+              "income": 17,
+              "sanity": 10,
+              "supportFee": 2,
+              "marketPurchases": 0
+            },
+            {
+              "id": 2,
+              "alreadyEscaped": true,
+              "money": 75,
+              "income": 11,
+              "sanity": 10,
+              "supportFee": 1,
+              "marketPurchases": 0
+            },
+            {
+              "id": 3,
+              "alreadyEscaped": false,
+              "money": 15,
+              "income": 6,
+              "sanity": 6,
+              "supportFee": 3,
+              "marketPurchases": 1
+            }
+          ]
+        }
+      ],
+      "averageSlots": 13.1,
+      "maxSlots": 18,
+      "income": [
+        10,
+        17,
+        11,
+        6
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 10,
+          "money": 18,
+          "sanity": 10,
+          "skills": {
+            "W": 3,
+            "A": 5,
+            "B": 5,
+            "C": 5
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 17,
+          "money": 72,
+          "sanity": 10,
+          "skills": {
+            "W": 3,
+            "A": 5,
+            "B": 4,
+            "C": 4
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 11,
+          "money": 75,
+          "sanity": 10,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 3,
+          "income": 6,
+          "money": 14,
+          "sanity": 6,
+          "skills": {
+            "W": 4,
+            "A": 4,
+            "B": 2,
+            "C": 4
+          },
+          "caught": 1
+        }
+      ]
+    }
+  ]
+}
