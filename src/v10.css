@@ -13,3 +13,18 @@
 .summary-dice{padding:12px;background:#eee5d4;border-radius:6px;margin-bottom:16px}.log-dot.dice{background:#a9753c}
 .phase-card select{max-width:100%;padding:8px}.phase-card p{overflow-wrap:anywhere}
 .duration-4:has(.dice-table) .printed-effects{gap:5px;padding-top:4px;padding-bottom:35px}.compact-face.duration-4:has(.dice-table) .printed-effects{gap:2px;padding-bottom:23px}
+/* Public search candidates sit beside the shared deck, with explicit ordering. */
+.opportunity-owner{display:flex;justify-content:space-between;gap:16px;font-weight:700;color:#34594d}
+.opportunity-owner span{white-space:nowrap}
+.opportunity-lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.opportunity-lanes button{display:grid;gap:12px;padding:28px 10px;background:#eee5d2;box-shadow:inset 0 2px 5px #44342120;border:1px solid #b6a788;border-radius:12px}
+.opportunity-lanes b{font-size:24px}
+.opportunity-caption,.opportunity-actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0}
+.opportunity-candidates{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));align-items:start;gap:20px;margin:18px 0}
+.opportunity-card{display:grid;gap:10px;min-width:0}
+.opportunity-card .card-paper{position:relative;border-radius:10px;background:#fffcf3;box-shadow:0 3px 8px #33281e24;overflow:hidden}
+.opportunity-order{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
+.opportunity-order section{padding:14px;border:1px solid #bdb19b;background:#ede6d8;border-radius:12px;box-shadow:inset 0 2px 6px #3a2c1720}
+.order-card{padding:12px;margin:10px 0;background:#fffcf3;border-left:5px solid var(--family-color,#548b66);border-radius:6px;box-shadow:0 2px 4px #33281e20}
+.order-card div{display:flex;gap:6px;margin-top:9px}
+@media(max-width:650px){.opportunity-order{grid-template-columns:1fr}.opportunity-lanes{gap:8px}.opportunity-owner{display:block}.opportunity-owner span{display:block}}

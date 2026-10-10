@@ -1,0 +1,203 @@
+{
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "games": [
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 3,
+      "opportunityPurchases": 2,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        null,
+        null
+      ],
+      "averageSlots": 11.2,
+      "maxSlots": 12,
+      "income": [
+        6,
+        3
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 8,
+      "opportunityPurchases": 1,
+      "opportunityRetries": 1,
+      "escapeWeeks": [
+        null,
+        null
+      ],
+      "averageSlots": 12.2,
+      "maxSlots": 16,
+      "income": [
+        4,
+        10
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 4,
+      "opportunityPurchases": 1,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        null,
+        null
+      ],
+      "averageSlots": 9.5,
+      "maxSlots": 14,
+      "income": [
+        3,
+        0
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 4,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 14.7,
+      "maxSlots": 17,
+      "income": [
+        6,
+        6,
+        8
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 6,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 13.6,
+      "maxSlots": 16,
+      "income": [
+        4,
+        8,
+        6
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 5,
+      "opportunityPurchases": 2,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        13,
+        null,
+        null
+      ],
+      "averageSlots": 15.1,
+      "maxSlots": 19,
+      "income": [
+        6,
+        10,
+        4
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 4,
+      "opportunityPurchases": 0,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 10.9,
+      "maxSlots": 13,
+      "income": [
+        1,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 10,
+      "opportunityPurchases": 4,
+      "opportunityRetries": 1,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 15.3,
+      "maxSlots": 17,
+      "income": [
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 8,
+      "opportunityPurchases": 6,
+      "opportunityRetries": 0,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 11.5,
+      "maxSlots": 15,
+      "income": [
+        5,
+        3,
+        7,
+        2
+      ]
+    }
+  ]
+}
