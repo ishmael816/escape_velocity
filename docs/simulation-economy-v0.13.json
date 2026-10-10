@@ -1,0 +1,590 @@
+{
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "games": [
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 18,
+      "opportunities": 5,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 15,
+      "longestUnchangedMarketWeeks": 2,
+      "escapeWeeks": [
+        18,
+        null
+      ],
+      "averageSlots": 10.5,
+      "maxSlots": 14,
+      "income": [
+        10,
+        6
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 10,
+          "money": 18,
+          "sanity": 9,
+          "skills": {
+            "W": 2,
+            "A": 3,
+            "B": 1,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 6,
+          "money": 14,
+          "sanity": 8,
+          "skills": {
+            "W": 3,
+            "A": 4,
+            "B": 5,
+            "C": 2
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 22,
+      "opportunities": 6,
+      "opportunityPurchases": 0,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 10,
+      "longestUnchangedMarketWeeks": 3,
+      "escapeWeeks": [
+        22,
+        null
+      ],
+      "averageSlots": 11.1,
+      "maxSlots": 15,
+      "income": [
+        10,
+        10
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 10,
+          "money": 24,
+          "sanity": 6,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 2,
+            "C": 2
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 10,
+          "money": 91,
+          "sanity": 1,
+          "skills": {
+            "W": 3,
+            "A": 3,
+            "B": 2,
+            "C": 3
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 16,
+      "opportunities": 3,
+      "opportunityPurchases": 1,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 9,
+      "longestUnchangedMarketWeeks": 2,
+      "escapeWeeks": [
+        null,
+        16
+      ],
+      "averageSlots": 10,
+      "maxSlots": 15,
+      "income": [
+        0,
+        10
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 0,
+          "money": 3,
+          "sanity": 5,
+          "skills": {
+            "W": 1,
+            "A": 2,
+            "B": 2,
+            "C": 2
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 10,
+          "money": 12,
+          "sanity": 6,
+          "skills": {
+            "W": 2,
+            "A": 3,
+            "B": 2,
+            "C": 3
+          },
+          "caught": 2
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 4,
+      "opportunityPurchases": 0,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 6,
+      "longestUnchangedMarketWeeks": 26,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 12,
+      "maxSlots": 13,
+      "income": [
+        9,
+        5,
+        2
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 9,
+          "money": 179,
+          "sanity": 2,
+          "skills": {
+            "W": 1,
+            "A": 3,
+            "B": 0,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 5,
+          "money": 180,
+          "sanity": 1,
+          "skills": {
+            "W": 3,
+            "A": 1,
+            "B": 3,
+            "C": 1
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 2,
+          "money": 135,
+          "sanity": 1,
+          "skills": {
+            "W": 3,
+            "A": 1,
+            "B": 3,
+            "C": 1
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 6,
+      "opportunityPurchases": 0,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 18,
+      "longestUnchangedMarketWeeks": 14,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 12.6,
+      "maxSlots": 16,
+      "income": [
+        3,
+        3,
+        5
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 3,
+          "money": 93,
+          "sanity": 4,
+          "skills": {
+            "W": 1,
+            "A": 2,
+            "B": 4,
+            "C": 4
+          },
+          "caught": 3
+        },
+        {
+          "id": 1,
+          "income": 3,
+          "money": 35,
+          "sanity": 1,
+          "skills": {
+            "W": 3,
+            "A": 2,
+            "B": 2,
+            "C": 3
+          },
+          "caught": 2
+        },
+        {
+          "id": 2,
+          "income": 5,
+          "money": 84,
+          "sanity": 4,
+          "skills": {
+            "W": 2,
+            "A": 4,
+            "B": 2,
+            "C": 4
+          },
+          "caught": 1
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 4,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 8,
+      "longestUnchangedMarketWeeks": 20,
+      "escapeWeeks": [
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 12.5,
+      "maxSlots": 16,
+      "income": [
+        1,
+        6,
+        10
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 1,
+          "money": 5,
+          "sanity": 9,
+          "skills": {
+            "W": 3,
+            "A": 2,
+            "B": 2,
+            "C": 2
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 6,
+          "money": 56,
+          "sanity": 5,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 10,
+          "money": 154,
+          "sanity": 1,
+          "skills": {
+            "W": 1,
+            "A": 3,
+            "B": 3,
+            "C": 3
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 7,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 6,
+      "opportunityPurchases": 2,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 8,
+      "longestUnchangedMarketWeeks": 25,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 11.3,
+      "maxSlots": 12,
+      "income": [
+        4,
+        4,
+        3,
+        0
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 4,
+          "money": 182,
+          "sanity": 1,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 3
+          },
+          "caught": 2
+        },
+        {
+          "id": 1,
+          "income": 4,
+          "money": 226,
+          "sanity": 2,
+          "skills": {
+            "W": 0,
+            "A": 3,
+            "B": 2,
+            "C": 2
+          },
+          "caught": 2
+        },
+        {
+          "id": 2,
+          "income": 3,
+          "money": 153,
+          "sanity": 1,
+          "skills": {
+            "W": 1,
+            "A": 3,
+            "B": 3,
+            "C": 1
+          },
+          "caught": 0
+        },
+        {
+          "id": 3,
+          "income": 0,
+          "money": 133,
+          "sanity": 1,
+          "skills": {
+            "W": 3,
+            "A": 1,
+            "B": 1,
+            "C": 2
+          },
+          "caught": 2
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 42,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 11,
+      "opportunityPurchases": 6,
+      "opportunityRetries": 1,
+      "lastOpportunityWeek": 15,
+      "longestUnchangedMarketWeeks": 21,
+      "escapeWeeks": [
+        18,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 14,
+      "maxSlots": 17,
+      "income": [
+        10,
+        3,
+        4,
+        6
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 10,
+          "money": 138,
+          "sanity": 10,
+          "skills": {
+            "W": 1,
+            "A": 3,
+            "B": 2,
+            "C": 4
+          },
+          "caught": 0
+        },
+        {
+          "id": 1,
+          "income": 3,
+          "money": 82,
+          "sanity": 8,
+          "skills": {
+            "W": 4,
+            "A": 2,
+            "B": 4,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 2,
+          "income": 4,
+          "money": 189,
+          "sanity": 1,
+          "skills": {
+            "W": 4,
+            "A": 4,
+            "B": 2,
+            "C": 3
+          },
+          "caught": 0
+        },
+        {
+          "id": 3,
+          "income": 6,
+          "money": 95,
+          "sanity": 6,
+          "skills": {
+            "W": 3,
+            "A": 5,
+            "B": 5,
+            "C": 4
+          },
+          "caught": 0
+        }
+      ]
+    },
+    {
+      "starterActivity": "A02",
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": false,
+      "weeks": 35,
+      "opportunities": 7,
+      "opportunityPurchases": 3,
+      "opportunityRetries": 0,
+      "lastOpportunityWeek": 7,
+      "longestUnchangedMarketWeeks": 16,
+      "escapeWeeks": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "averageSlots": 13.6,
+      "maxSlots": 15,
+      "income": [
+        5,
+        7,
+        5,
+        1
+      ],
+      "lastSettlement": [
+        {
+          "id": 0,
+          "income": 5,
+          "money": 148,
+          "sanity": 1,
+          "skills": {
+            "W": 1,
+            "A": 1,
+            "B": 1,
+            "C": 1
+          },
+          "caught": 1
+        },
+        {
+          "id": 1,
+          "income": 7,
+          "money": 95,
+          "sanity": 1,
+          "skills": {
+            "W": 2,
+            "A": 1,
+            "B": 4,
+            "C": 2
+          },
+          "caught": 1
+        },
+        {
+          "id": 2,
+          "income": 5,
+          "money": 191,
+          "sanity": 1,
+          "skills": {
+            "W": 2,
+            "A": 3,
+            "B": 1,
+            "C": 2
+          },
+          "caught": 1
+        },
+        {
+          "id": 3,
+          "income": 1,
+          "money": 119,
+          "sanity": 1,
+          "skills": {
+            "W": 1,
+            "A": 3,
+            "B": 1,
+            "C": 2
+          },
+          "caught": 0
+        }
+      ]
+    }
+  ]
+}

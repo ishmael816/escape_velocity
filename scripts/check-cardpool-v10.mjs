@@ -166,7 +166,8 @@ for(const a of earners)for(const b of earners){
 }
 assert.equal(data.baseline.incomeTrackMax,10);
 assert.equal(data.baseline.escapeIncomeAtLeast,10);
-assert.equal(data.baseline.salary,2);
+assert.equal(data.baseline.salary,3);
+assert.equal(data.baseline.passMoney,0);
 assert(!Object.hasOwn(data.baseline,'livingCost'));
 assert(earners.every(c=>(c.gain.profit||0)<=4));
 assert(data.cards.every(c=>(c.gain.salary||0)<=4));
@@ -177,12 +178,12 @@ assert(week(shortBoard,4,4,null,{A07:3}).incomeTrack<data.baseline.escapeIncomeA
 const overflow=week(layout([...scenarios[2].plan,at('C11',5)],'AACCCC'),4,4);
 assert.equal(overflow.profit,13);
 assert.equal(overflow.incomeTrack,10);
-assert.equal(overflow.money,19); // Track saturation is not an unannounced cash confiscation.
+assert.equal(overflow.money,17+data.baseline.salary); // Track saturation is not an unannounced cash confiscation.
 
 const day=['','一','二','三','四','五','六','日'];
 const position=p=>`周${day[p.day]}${cards.get(p.id).hours===8?'全天':{am:'上午',pm:'下午',night:'晚间'}[p.slot]}`;
 let md='# v0.10 第四稿 · 10 点收入制静态检查\n\n由 `node scripts/design-cardpool-v10.mjs` 后运行 `node scripts/check-cardpool-v10.mjs` 生成。**这是独立的小型结算校验器，不是网页引擎，也不是完整对局模拟。保留的七条案例仅校验收入循环，不满足 v0.11 的理智 ≥6 逃离条件，也未模拟支持牌；不能作为当前获胜路线证明。**\n\n';
-md+='## 检查边界\n\n所有案例均假设已经取得指定牌与不同名称的技能归档，没有双休、没有查岗或团建；起始理智 3、灵感 4。先一次支付全部买价并锁定本金，另留 4 钱支付执行开支。为检验资源循环，关闭逃离终局，将相同日程连续结算三次。有骰子牌的案例固定使用明确列出的骰点，不能据此称为每周必达标；另穷举六种结果给出单周达标率。\n\n购置总额不包含取得技能归档、寻访、过渡牌和安排操作的历史成本；起始牌也按印刷买价计入，便于比较。总额不是开局就能拿出的现金。技能列表示不同归档的最低构成，同名重复不算。\n\n';
+md+='## 检查边界\n\n所有案例均假设已经取得指定牌与不同名称的技能归档，没有双休、没有查岗或团建；起始理智 3、灵感 4。先一次支付全部买价并锁定本金，另留 4 钱支付执行开支。为检验资源循环，关闭逃离终局，将相同日程连续结算三次。有骰子牌的案例固定使用明确列出的骰点，不能据此称为每周必达标；另穷举六种结果给出单周达标率。\n\n购置总额不包含取得技能归档、寻访、过渡牌和安排操作的历史成本；所有活动牌均按印刷买价计入，便于比较。总额不是开局就能拿出的现金。技能列表示不同归档的最低构成，同名重复不算。\n\n';
 md+='## 七条路线\n\n| 路线 | 技能 | 理智 | 收入牌/全部活动 | 买价 | 本金 | 两者合计 | 周灵感净变化 | 周执行花钱 | 副业收入 | 周资金净增 |\n|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|\n';
 for(const r of results)md+=`| ${r.name} | ${r.skills} | ${r.sanity} | ${r.incomeCards}/${r.activities} | ${r.price} | ${r.capital} | ${r.investment} | ${r.weeklyInspiration} | ${r.weeklyCashCost} | ${r.expected} | ${r.weeklyCashNet} |\n`;
 for(const r of results){
@@ -190,6 +191,6 @@ for(const r of results){
   for(const p of r.plan)md+=`- ${position(p)}：${p.id} ${cards.get(p.id).name}。\n`;
   md+=`\n首周执行记录：${r.firstLog.join('；')}。\n\n没有查岗时的单周收入达标率：${(100*r.probability).toFixed(1)}%${r.rolls?'（穷举该张活动牌全部六种骰点；三周示例仅固定上述骰点检查资源）':'（仅指这些指定牌的确定性收益）'}。\n`;
 }
-md+='\n## 结构与边界结果\n\n- 56 种市场牌；每色 5 归档、5 基础常驻（含 1 支持）、4 高级；2h/4h/8h 分别 17/19/20 种，另有 2 种个人项目。\n- 收入轨道 0–10，每周从 0 重新结算，达到 10 仅收入达标，当前逃离还要求理智 ≥6；不是十周各赚 1 就能获胜。工资不推轨道。轨道满后不必继续记超额，但实际资金仍按成功活动结算。\n- 单项副业连同所有增强最多 4。穷举所有收入牌的两两搭配（包括同名），即使免费给予最佳条件及增强，两项合计仍最多 8，不能逃离。\n- 未双休、没有高级牌且不使用支持牌时，两项基础收入配基础增强的乐观上限为 8；高级成长的价值包含零压力业务和资源效率。已双休可以多安排基础业务，这是付出信用、行动及三周项目后的另一种路线，不禁止。\n- 纯创作终局保留起始跑腿会令理智降到 0，无法维持高级牌门槛。保留淘汰旧工作的必要性。\n- 条件奖励与增强一起结算后检查单卡总收入上限 4。增强遇到失败即消耗，不能叠乘，商业增强不能用于无本金牌。\n\n## 资金量级\n\n开局 8 钱，每周固定领取 2 钱，不设生活费；整备拿钱为 1。基础活动买价 2/4/5，高级活动 8–10，本金 3–10。低级归档买价 2/3，寻访买价 5 加执行 1。\n\n不计工资附加、罚款和支援消耗时，副业为 1/4/8 的周，资金净增分别为 3/6/10。接近逃离时一周结余大致够一张高级牌；无法仅靠基础工资每周买一张。若保持相同副业轨迹并且不消费，六周的起始资金加固定收入共 20（8＋6×2）；这仅隔离比较工资与开局资金，未计副业收益，不能当成实际期末余额。\n\n黄色三业务案例买价 23、本金 24，总投入 47。买价不会随收入等比例缩小，本金不能花第二次；旧业务撤回返还本金，但返还不是收入。寻访支付 6 并消耗买牌/安排两次行动后取得高级牌，是资金紧张时的另一入口。\n\n## 尚未证明的事\n\n这些结果仅检查指定持牌下的资源循环、活动骰达标率及两牌不能获胜，尚未测获取速度、先手、公共市场、查岗与团建。工资降低不保证所有真实对局后期都缺钱；长期卡在收入 8–9、纯工资囤积及寻访免费取牌仍须实测。零压力高级牌不会产生理智，也不应全部堆成唯一最优选择。职场混色案例需要六次不同归档，比其他案例更深，不能把同样 10 收入视作成长速度相同。\n';
+md+='\n## 结构与边界结果\n\n- 56 种市场牌；每色 5 归档、5 基础常驻（含 1 支持）、4 高级；2h/4h/8h 分别 17/19/20 种，另有 2 种个人项目。\n- 收入轨道 0–10，每周从 0 重新结算，达到 10 仅收入达标，当前逃离还要求理智 ≥6；不是十周各赚 1 就能获胜。工资不推轨道。轨道满后不必继续记超额，但实际资金仍按成功活动结算。\n- 单项副业连同所有增强最多 4。穷举所有收入牌的两两搭配（包括同名），即使免费给予最佳条件及增强，两项合计仍最多 8，不能逃离。\n- 未双休、没有高级牌且不使用支持牌时，两项基础收入配基础增强的乐观上限为 8；高级成长的价值包含零压力业务和资源效率。已双休可以多安排基础业务，这是付出信用、行动及三周项目后的另一种路线，不禁止。\n- 纯创作终局保留低级跑腿会令理智降到 0，无法维持高级牌门槛。保留淘汰旧工作的必要性。\n- 条件奖励与增强一起结算后检查单卡总收入上限 4。增强遇到失败即消耗，不能叠乘，商业增强不能用于无本金牌。\n\n## 资金量级\n\n开局 8 钱，每周固定领取 3 钱，不设生活费；躺平仅跳过行动。基础活动买价 2/4/5，高级活动 8–10，本金 3–10。低级归档买价 2/3，寻访买价 5 加执行 1。\n\n不计工资附加、罚款和支援消耗时，副业为 1/4/8 的周，资金净增分别为 4/7/11。接近逃离时一周结余大致够一张高级牌；无法仅靠基础工资每周买一张。若保持相同副业轨迹并且不消费，六周的起始资金加固定收入共 26（8＋6×3）；这仅隔离比较工资与开局资金，未计副业收益，不能当成实际期末余额。\n\n黄色三业务案例买价 23、本金 24，总投入 47。买价不会随收入等比例缩小，本金不能花第二次；旧业务撤回返还本金，但返还不是收入。寻访支付 6 并消耗买牌/安排两次行动后取得高级牌，是资金紧张时的另一入口。\n\n## 尚未证明的事\n\n这些结果仅检查指定持牌下的资源循环、活动骰达标率及两牌不能获胜，尚未测获取速度、先手、公共市场、查岗与团建。工资降低不保证所有真实对局后期都缺钱；长期卡在收入 8–9、纯工资囤积及寻访免费取牌仍须实测。零压力高级牌不会产生理智，也不应全部堆成唯一最优选择。职场混色案例需要六次不同归档，比其他案例更深，不能把同样 10 收入视作成长速度相同。\n';
 writeFileSync('docs/cardpool-check-v0.10.md',md);
 console.log(JSON.stringify({status:'PASS: static checks only',marketTypes:cards.size,projects:data.projects.length,basicCeiling,scenarios:results.map(({name,expected,investment,sanity,probability})=>({name,sampleWeeklyProfit:expected,calmWeekTargetProbability:probability,investment,sanity}))},null,2));

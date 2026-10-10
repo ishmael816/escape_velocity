@@ -15,15 +15,15 @@ test('placing and removing support changes bar immediately, without instant fee 
 });
 test('support prepaid once after inspection, same bar over three weeks, no accumulation',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);
- for(let i=0;i<3;i++){lock(g);const money=p.money;E.rollInspections(g);assert.equal(p.money,money-2);assert.equal(p.sanity,6);E.rollInspections(g);assert.equal(p.money,money-2);E.resolveAll(g);assert.equal(p.money,money);assert.equal(p.sanity,6);if(i<2)next(g);}
+ for(let i=0;i<3;i++){lock(g);const money=p.money;E.rollInspections(g);assert.equal(p.money,money-2);assert.equal(p.sanity,6);E.rollInspections(g);assert.equal(p.money,money-2);E.resolveAll(g);assert.equal(p.money,money+g.config.salary-2);assert.equal(p.sanity,6);if(i<2)next(g);}
 });
 test('Sunday support enables earlier activities and is not charged again on Sunday',()=>{
  const g=make({startSanity:0}),p=g.players[0];rig(g,p,[['A02',0,2],['W13',6]]);lock(g);const m=p.money;E.resolveAll(g);
- assert.equal(p.skills[0]?.type,'A02');assert.equal(p.sanity,3);assert.equal(p.money,m);
+ assert.equal(p.skills[0]?.type,'A02');assert.equal(p.sanity,3);assert.equal(p.money,m+g.config.salary-2);
 });
 test('insufficient upfront cash: later income and salary do not reactivate support',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['A02',0,2],['W13',6]]);lock(g);p.money=1;E.resolveAll(g);
- assert.equal(p.sanity,3);assert.equal(p.money,3);assert.equal(p.supports[0].reason,'维持费不足');assert.equal(p.supports[0].active,false);
+ assert.equal(p.sanity,3);assert.equal(p.money,1+g.config.salary);assert.equal(p.supports[0].reason,'维持费不足');assert.equal(p.supports[0].active,false);
  next(g);assert.equal(p.sanity,6); // Next week can now fund the fee.
 });
 test('multiple support fees paid in schedule order; unaffordable one does not block cheaper later one',()=>{
@@ -32,14 +32,14 @@ test('multiple support fees paid in schedule order; unaffordable one does not bl
 });
 test('caught support loses whole-week contribution, costs no upkeep, fined exactly one',()=>{
  const g=make({startSanity:0}),p=g.players[0];rig(g,p,[['A02',0,2],['W13',5]]);g.inspection.inspectionCount=1;g.diceRandom=seedFor([6]);lock(g);const m=p.money;E.rollInspections(g);
- assert.equal(p.sanity,0);assert.equal(p.money,m);E.resolveAll(g);assert.equal(p.skills.length,0);assert.equal(p.caught,1);assert.equal(p.money,m+1);
+ assert.equal(p.sanity,0);assert.equal(p.money,m);E.resolveAll(g);assert.equal(p.skills.length,0);assert.equal(p.caught,1);assert.equal(p.money,m+g.config.salary-1);
 });
 test('team event disables support without upkeep or inspection fine',()=>{
- const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);g.inspection.blockedTimes=[{day:6,period:0}];lock(g);const m=p.money;E.resolveAll(g);assert.equal(p.sanity,3);assert.equal(p.money,m+2);assert.equal(p.caught,0);
+ const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);g.inspection.blockedTimes=[{day:6,period:0}];lock(g);const m=p.money;E.resolveAll(g);assert.equal(p.sanity,3);assert.equal(p.money,m+g.config.salary);assert.equal(p.caught,0);
 });
 test('4h night and two 2h night cards disable all support on that night, pressure stays',()=>{
  for(const plan of [[['W13',0,2]],[['A13',0,2],['C13',0,2]]]){
-  const g=make({startSanity:8}),p=g.players[0];rig(g,p,plan);assert.equal(p.sanity,4);lock(g);const m=p.money;E.resolveAll(g);assert.equal(p.sanity,4);assert.equal(p.money,m+2);assert.ok(p.supports.every(x=>!x.active));
+  const g=make({startSanity:8}),p=g.players[0];rig(g,p,plan);assert.equal(p.sanity,4);lock(g);const m=p.money;E.resolveAll(g);assert.equal(p.sanity,4);assert.equal(p.money,m+g.config.salary);assert.ok(p.supports.every(x=>!x.active));
  }
  const g=make(),p=g.players[0],c=add(g,p,'W13');assert.match(E.canPlace(g,p,c.uid,{day:6,period:2}),/低于 0/);
 });
@@ -56,7 +56,7 @@ test('buying or locking capital reduces preview support budget',()=>{
  E.place(h,0,job.uid,{day:0,period:0});assert.equal(q.money,1);assert.equal(q.sanity,2);
 });
 test('preview is pure, prepays support and reload never double charges',()=>{
- const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);const before=JSON.stringify(g),preview=E.preview(g,0);assert.equal(preview.sanity,6);assert.equal(preview.money,8);assert.equal(JSON.stringify(g),before);
+ const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);const before=JSON.stringify(g),preview=E.preview(g,0);assert.equal(preview.sanity,6);assert.equal(preview.money,9);assert.equal(JSON.stringify(g),before);
  lock(g);E.step(g);const clone=JSON.parse(JSON.stringify(g));E.resolveAll(g);E.resolveAll(clone);assert.deepEqual(clone,g);
 });
 test('income alone cannot escape; exact sanity six qualifies before escape autonomy',()=>{

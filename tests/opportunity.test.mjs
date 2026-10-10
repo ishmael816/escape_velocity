@@ -12,7 +12,7 @@ function unchanged(g,fn,pattern){const before=structuredClone(g);assert.throws(f
 
 test('four one-time searches fit the shared pool and archive model',()=>{
  const cards=CARDS.filter(d=>d.opportunity);assert.equal(cards.length,4);
- for(const d of cards){assert.equal(d.price.money,3);assert.equal(d.stress,0);assert.ok(d.once);assert.equal(d.skill,d.route);assert.equal(d.draft,null);}
+ for(const d of cards){assert.equal(d.price.money,2);assert.equal(d.stress,0);assert.ok(d.once);assert.equal(d.skill,d.route);assert.equal(d.draft,null);}
  assert.deepEqual(cards.map(d=>d.id).sort(),['A14','B14','C14','W14']);
  assert.equal(getCard('B14').hours,4);assert.equal(getCard('W14').maxSanity,3);
 });
@@ -21,13 +21,13 @@ test('execution pauses before salary, archives once and preserves public market'
  assert.equal(g.phase,'resolving');assert.equal(g.opportunity.stage,'lane');assert.equal(p.inspiration,3);
  assert.ok(p.skills.some(c=>c.type==='A14'));assert.equal(p.cards.length,0);assert.equal(g.history.length,0);
  const m=p.money,actions=g.actionCount;E.chooseOpportunityLane(g,0,2);assert.equal(g.opportunity.options.length,3);
- E.chooseOpportunity(g,0);E.resolveAll(g);assert.equal(g.phase,'escape');assert.equal(p.money,m+2);
+ E.chooseOpportunity(g,0);E.resolveAll(g);assert.equal(g.phase,'escape');assert.equal(p.money,m+g.config.salary);
  assert.equal(g.actionCount,actions);assert.deepEqual(g.market,market);assert.equal(p.skills.length,1);
 });
 test('advanced opportunity purchase pays full price without skills and cannot arrange this week',()=>{
  const g=search(),p=g.players[0],c=stack(g,['A09'])[0];g.decks[8]=[c];g.discard[8]=[];
  E.chooseOpportunityLane(g,0,8);const m=p.money;E.chooseOpportunity(g,0,c.uid);
- assert.equal(p.money,m-8);assert.ok(p.cards.includes(c));assert.equal(E.qualified(p,getCard(c)),false);
+ assert.equal(p.money,m-getCard(c).price.money);assert.ok(p.cards.includes(c));assert.equal(E.qualified(p,getCard(c)),false);
  assert.match(E.canPlace(g,p,c.uid,{day:6,period:0}),/轮到/);assert.equal(g.actionCount,14);
 });
 test('invalid ownership, deck and unaffordable choice leave pending state untouched',()=>{
@@ -39,7 +39,7 @@ test('invalid ownership, deck and unaffordable choice leave pending state untouc
  E.chooseOpportunity(g,0);assert.equal(g.opportunity,null);
 });
 test('yellow pays initial fee and only one retry; first batch cannot reappear',()=>{
- const g=search('C14'),p=g.players[0];assert.equal(p.money,14); // 8 + 7 passes - 1 fee, before salary
+ const g=search('C14'),p=g.players[0];assert.equal(p.money,7); // 8 - 1 fee, before salary
  const cards=stack(g,['A01','A02','B01']);g.decks[2]=cards.slice();g.discard[2]=[];
  E.chooseOpportunityLane(g,0,2);const first=g.opportunity.options.map(c=>c.uid),m=p.money;
  E.retryOpportunity(g,0);assert.equal(p.money,m-1);assert.equal(g.opportunity.options.length,1);
@@ -96,7 +96,7 @@ test('public preview cannot reveal or depend on hidden cards and consumes no cho
 test('caught or unaffordable search stays scheduled, with no search and no archive',()=>{
  for(const type of ['A14','C14']){
   const g=make(),p=g.players[0];rig(g,p,[[type,0]]);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);lock(g);const m=p.money;E.resolveAll(g);
-  assert.equal(g.opportunity,null);assert.equal(p.skills.length,0);assert.equal(p.money,m+1);assert.equal(p.inspiration,4);assert.equal(p.cards.length,1);
+  assert.equal(g.opportunity,null);assert.equal(p.skills.length,0);assert.equal(p.money,m+g.config.salary-1);assert.equal(p.inspiration,4);assert.equal(p.cards.length,1);
  }
  const g=make(),p=g.players[0];rig(g,p,[['A14',6]]);p.inspiration=0;lock(g);E.resolveAll(g);assert.equal(g.opportunity,null);assert.equal(p.skills.length,0);
 });
