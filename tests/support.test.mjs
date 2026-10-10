@@ -5,7 +5,7 @@ import {CARDS,getCard} from '../src/cards.js';
 import {make,turn,lock,finish,next,add,skills,rig,seedFor} from './helpers.mjs';
 
 test('four support types use normal pools and reversible contributions, not gains',()=>{
- const cards=CARDS.filter(d=>d.support&&d.id!=='A05');assert.equal(cards.length,4);
+ const cards=CARDS.filter(d=>['A13','B13','C13','W13'].includes(d.id));assert.equal(cards.length,4);
  assert.deepEqual(cards.map(d=>[d.hours,d.price.money,d.support,d.upkeep]),[[4,4,1,0],[4,2,2,1],[2,3,2,1],[4,2,3,2]]);
  for(const d of cards){assert.equal(d.once,false);assert.deepEqual(d.gain,d.id==='A13'?{money:1}:{});assert.equal(d.stress,0);assert.equal(d.minSanity,0);assert.equal(d.maxSanity,10);assert.ok(!d.professional);}
 });
@@ -53,7 +53,7 @@ test('buying or locking capital reduces preview support budget',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);p.money=2;E.syncSanity(g,p);assert.equal(p.sanity,6);
  const c=g.market[2].find(c=>getCard(c).price.money===2);E.buy(g,0,c.uid);assert.equal(p.sanity,3);
  const h=make(),q=h.players[0];rig(h,q,[['W13',6]]);q.money=4;const job=add(h,q,'C06');
- E.place(h,0,job.uid,{day:0,period:0});assert.equal(q.money,1);assert.equal(q.sanity,3);
+ E.place(h,0,job.uid,{day:0,period:0});assert.equal(q.money,0);assert.equal(q.sanity,2);
 });
 test('preview is pure, prepays support and reload never double charges',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['W13',6]]);const before=JSON.stringify(g),preview=E.preview(g,0);assert.equal(preview.sanity,6);assert.equal(preview.money,9);assert.equal(JSON.stringify(g),before);

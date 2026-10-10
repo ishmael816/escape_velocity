@@ -1,4 +1,4 @@
-// Structure only; effect budgets use the v20 audit and settlement uses the engine.
+// Structure only; effect budgets use the v21 audit and settlement uses the engine.
 import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
 const data=JSON.parse(readFileSync('docs/cardpool-v0.10.json','utf8'));
@@ -34,5 +34,5 @@ assert(!Object.hasOwn(data.baseline,'incomeTrackMax'));
 assert.equal(data.baseline.salary,3);
 assert.equal(data.baseline.passMoney,0);
 assert(!Object.hasOwn(data.baseline,'livingCost'));
-writeFileSync('docs/cardpool-check-v0.10.md','# 当前卡池结构检查（v0.20）\n\n由 `node scripts/check-cardpool-v10.mjs` 生成。58 种牌，职场 16、其余各 14；2h / 4h / 8h 各 17 / 25 / 16 种。四种付费生活支持，混合收入支持不另收现金执行费。收入不封顶、逃离收入至少 10 且理智至少 6；工资 3，无生活费，躺平不给钱。\n\n完整数值预算与特殊收益枚举见 [v0.20 校对](model-v0.20.md)。合法结算由 `npm test` 检查；整局模拟见 [v0.20 报告](economy-runtime-v0.20.md)。旧版七条理想收入组合不再作为当前路线验证，以免独立计算器与网页规则分叉。结构通过不代表平衡通过。\n');
-console.log('PASS: v0.20 card structure; use analyze-model-v20.mjs for effect budgets');
+writeFileSync('docs/cardpool-check-v0.10.md','# 当前卡池结构检查（v0.21）\n\n由 `node scripts/check-cardpool-v10.mjs` 生成。58 种牌，职场 16、其余各 14；2h / 4h / 8h 各 17 / 25 / 16 种。四种付费生活支持，混合收入支持不另收现金执行费。收入不封顶、逃离收入至少 10 且理智至少 6；工资 3，无生活费，躺平不给钱。\n\n完整数值预算与特殊收益枚举见 [v0.21 校对](model-v0.21.md)。合法结算由 `npm test` 检查；整局模拟见 [v0.21 报告](economy-runtime-v0.21.md)。旧版七条理想收入组合不再作为当前路线验证，以免独立计算器与网页规则分叉。结构通过不代表平衡通过。\n');
+console.log('PASS: v0.21 card structure; use analyze-model-v21.mjs for effect budgets');

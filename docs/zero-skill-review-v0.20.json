@@ -1,0 +1,318 @@
+{
+  "note": "v0.20 固定版图实验：零技能、合法安置、供应卡牌及结算前现金。不是逐周重放，也不是路线胜率。没有模拟市场争夺、购买时机或团建。查岗次数固定，独立六面骰，重复不重掷；搜索不购买新牌。",
+  "reportedCompatible": {
+    "income": 10,
+    "sanity": 6,
+    "cash": 15,
+    "eligible": true,
+    "skills": {
+      "W": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0
+    }
+  },
+  "routes": [
+    {
+      "id": "reported-compatible",
+      "name": "与试玩结局相容的九张牌",
+      "cash": 8,
+      "note": "征稿投稿假设在周二上午；画画、代购分占周三上下午，咨询在周五上午。其余日期来自用户记录。只核对终局结算，不重放购牌历史。",
+      "plan": [
+        [
+          "A08",
+          6
+        ],
+        [
+          "B06",
+          3,
+          1
+        ],
+        [
+          "A13",
+          2
+        ],
+        [
+          "C06",
+          2,
+          1
+        ],
+        [
+          "A07",
+          1
+        ],
+        [
+          "B08",
+          5
+        ],
+        [
+          "W13",
+          4
+        ],
+        [
+          "C13",
+          0,
+          2
+        ],
+        [
+          "C14",
+          1,
+          2
+        ]
+      ],
+      "purchasePrice": 31,
+      "lockedCapital": 3,
+      "daytimeHours": 36,
+      "nightHours": 4,
+      "quiet": {
+        "income": 13,
+        "sanity": 7,
+        "cash": 20,
+        "eligible": true,
+        "skills": {
+          "W": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        }
+      },
+      "inspections": [
+        {
+          "checks": 1,
+          "passed": 5,
+          "cases": 6,
+          "fraction": 0.8333333333333334
+        },
+        {
+          "checks": 2,
+          "passed": 13,
+          "cases": 36,
+          "fraction": 0.3611111111111111
+        },
+        {
+          "checks": 3,
+          "passed": 29,
+          "cases": 216,
+          "fraction": 0.13425925925925927
+        }
+      ]
+    },
+    {
+      "id": "six-card",
+      "name": "四张收入牌加两张支持牌",
+      "cash": 8,
+      "note": "把零散开发与征稿投稿集中在周二，减少暴露日期。",
+      "plan": [
+        [
+          "A08",
+          6
+        ],
+        [
+          "B08",
+          5
+        ],
+        [
+          "B06",
+          1
+        ],
+        [
+          "A07",
+          1,
+          1
+        ],
+        [
+          "W13",
+          4
+        ],
+        [
+          "C13",
+          0,
+          2
+        ]
+      ],
+      "purchasePrice": 21,
+      "lockedCapital": 0,
+      "daytimeHours": 28,
+      "nightHours": 2,
+      "quiet": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 18,
+        "eligible": true,
+        "skills": {
+          "W": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        }
+      },
+      "inspections": [
+        {
+          "checks": 1,
+          "passed": 3,
+          "cases": 6,
+          "fraction": 0.5
+        },
+        {
+          "checks": 2,
+          "passed": 9,
+          "cases": 36,
+          "fraction": 0.25
+        },
+        {
+          "checks": 3,
+          "passed": 27,
+          "cases": 216,
+          "fraction": 0.125
+        }
+      ]
+    },
+    {
+      "id": "no-pressure",
+      "name": "无压力的六张牌",
+      "cash": 8,
+      "note": "不用心理咨询，也不需要开发并行；靠五个白天收入活动及夜间健身。",
+      "plan": [
+        [
+          "A08",
+          6
+        ],
+        [
+          "A07",
+          1
+        ],
+        [
+          "A06",
+          1,
+          1
+        ],
+        [
+          "C06",
+          3
+        ],
+        [
+          "A13",
+          3,
+          1
+        ],
+        [
+          "C13",
+          0,
+          2
+        ]
+      ],
+      "purchasePrice": 21,
+      "lockedCapital": 3,
+      "daytimeHours": 24,
+      "nightHours": 2,
+      "quiet": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 20,
+        "eligible": true,
+        "skills": {
+          "W": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        }
+      },
+      "inspections": [
+        {
+          "checks": 1,
+          "passed": 4,
+          "cases": 6,
+          "fraction": 0.6666666666666666
+        },
+        {
+          "checks": 2,
+          "passed": 16,
+          "cases": 36,
+          "fraction": 0.4444444444444444
+        },
+        {
+          "checks": 3,
+          "passed": 64,
+          "cases": 216,
+          "fraction": 0.2962962962962963
+        }
+      ]
+    },
+    {
+      "id": "no-three-income",
+      "name": "不用任何收入三的牌",
+      "cash": 8,
+      "note": "三人牌池允许三张同名基础牌；取得这些重复牌的难度不在本实验内。",
+      "plan": [
+        [
+          "A07",
+          6
+        ],
+        [
+          "A07",
+          6,
+          1
+        ],
+        [
+          "A07",
+          1
+        ],
+        [
+          "A06",
+          1,
+          1
+        ],
+        [
+          "A06",
+          3
+        ],
+        [
+          "C13",
+          0,
+          2
+        ],
+        [
+          "A05",
+          2,
+          2
+        ]
+      ],
+      "purchasePrice": 19,
+      "lockedCapital": 0,
+      "daytimeHours": 20,
+      "nightHours": 4,
+      "quiet": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 19,
+        "eligible": true,
+        "skills": {
+          "W": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        }
+      },
+      "inspections": [
+        {
+          "checks": 1,
+          "passed": 4,
+          "cases": 6,
+          "fraction": 0.6666666666666666
+        },
+        {
+          "checks": 2,
+          "passed": 16,
+          "cases": 36,
+          "fraction": 0.4444444444444444
+        },
+        {
+          "checks": 3,
+          "passed": 64,
+          "cases": 216,
+          "fraction": 0.2962962962962963
+        }
+      ]
+    }
+  ]
+}

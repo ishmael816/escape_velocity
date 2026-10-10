@@ -1,12 +1,12 @@
-# 逃离工位 · 网页试玩版 0.20
+# 逃离工位 · 网页试玩版 0.21
 
-实体桌游规则验证版，支持 2–4 人同机轮流或自动玩家。当前版本接入自选本金、雇人归档、版图灵感、开发并行和重复找牌；数值为首轮校准，仍需真人测试。
+实体桌游规则验证版，支持 2–4 人同机轮流或自动玩家。当前版本重构基础收入与成长回报：基础牌用更多日程积累收入，成长换取低压、支持与并行。保留自选本金、雇人归档、版图灵感和重复找牌；仍需真人测试。
 
 ## 启动与部署
 
 需要 Node.js 24+，无第三方依赖。运行 `npm run dev`，打开 http://127.0.0.1:5173/ 。`npm run build` 生成 `dist/` 静态站点。Vercel 使用仓库内配置；本地修改不会自动部署。
 
-v0.20 使用独立存档，需要新开一局，旧存档保留。刷新网页可续局；可导出 JSON 复盘，暂不支持导入。
+v0.21 使用独立存档，需要新开一局，旧存档保留。刷新网页可续局；可导出 JSON 复盘，暂不支持导入。
 
 ## 第一局
 
@@ -29,16 +29,17 @@ v0.20 使用独立存档，需要新开一局，旧存档保留。刷新网页�
 
 ## 数值与验证
 
-- [当前设计与卡池规模](docs/cardpool-design-v0.10.md)、[完整牌表](docs/cards-v0.10.md)。文件名沿用，内容为 v0.20。
-- [本金比例与组合推演](docs/model-v0.20.md)、[计算数据](docs/model-v0.20.json)。
-- [接入与测试报告](docs/economy-runtime-v0.20.md)、[9 局自动对局](docs/simulation-economy-v0.20.json)。
-- 123 项规则测试、卡池结构检查、骰子概率检查与静态构建通过。9 局自动对局均于 10–16 周结束。四套预置中后期日程各验证三周及 259 个查岗序列；不代表随机市场下的路线胜率或真人时长。
+- [收入重构说明与测试报告](docs/economy-runtime-v0.21.md)、[上一版机制设计说明](docs/design-notes-v0.20.md)。
+- [当前设计与卡池规模](docs/cardpool-design-v0.10.md)、[完整牌表](docs/cards-v0.10.md)。文件名沿用，内容为 v0.21。
+- [模板、旧新对照及路线推演](docs/model-v0.21.md)、[计算数据与逐周行动](docs/model-v0.21.json)。
+- [9 局自动对局](docs/simulation-economy-v0.21.json)：全部于 8–18 周结束，逃离时现金 13–34。
+- 132 项测试覆盖规则与五条固定购买路线；另检查卡池结构、骰子概率及静态构建。五套预置版图各枚举 259 个查岗序列。不代表随机市场路线胜率、真人时长或已经解决后期现金积累。
 
 复现卡池依次执行：
 
 `node scripts/design-cardpool-v10.mjs` → `node scripts/export-runtime-v10.mjs`。
 
-校准以 `scripts/calibrate-cardpool-v20.mjs` 为最终覆盖层。验证执行 `npm test`、`node scripts/check-cardpool-v10.mjs`、`node scripts/check-dice-v10.mjs`、`node scripts/analyze-model-v20.mjs`、`npm run build`。自动对局：`npm run simulate -- --output docs/simulation-economy-v0.20.json`。
+校准以 `scripts/calibrate-cardpool-v21.mjs` 为最终覆盖层。验证执行 `npm test`、`node scripts/check-cardpool-v10.mjs`、`node scripts/check-dice-v10.mjs`、`node scripts/analyze-model-v21.mjs`、`npm run build`。自动对局：`npm run simulate -- --output docs/simulation-economy-v0.21.json`。
 
 ## A4 与主要文件
 

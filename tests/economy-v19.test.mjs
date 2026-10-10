@@ -8,7 +8,7 @@ import {make,rig,lock,finish,next,skills,seedFor,add,turn} from './helpers.mjs';
 test('fixed creative and commercial income never roll activity dice',()=>{
  for(const type of ['A07','C06']){
   const g=make(),p=g.players[0];rig(g,p,[[type,6]]);const random=g.diceRandom;
-  finish(g);assert.equal(p.income,2);assert.equal(g.diceRandom,random);
+  finish(g);assert.equal(p.income,type==='A07'?1:2);assert.equal(g.diceRandom,random);
   assert.equal(g.diceRolls.filter(x=>x.kind==='activity').length,0);
  }
 });
@@ -21,7 +21,7 @@ test('upward management rolls once, archives and cannot generate recurring bonus
 });
 
 test('painting gives schedule support immediately and income only on weekly payout',()=>{
- const g=make(),p=g.players[0],c=add(g,p,'A13');E.place(g,0,c.uid,{day:6,period:0});
+ const g=make(),p=g.players[0],c=add(g,p,'A13');skills(p,'A');E.place(g,0,c.uid,{day:6,period:0});
  assert.equal(p.sanity,4);assert.equal(p.money,8);assert.equal(p.income,0);
  lock(g);E.rollInspections(g);assert.equal(p.money,8);finish(g);
  assert.equal(p.income,1);assert.equal(p.money,12);assert.equal(p.sanity,4);
@@ -31,19 +31,19 @@ test('painting gives schedule support immediately and income only on weekly payo
 test('parallel tools retain their income and support',()=>{
  const g=make(),p=g.players[0];skills(p,'BBBB');
  rig(g,p,[['B09',0],['B06',0],['B11',2]]);skills(p,'AAAABBBB');E.syncSanity(g,p);
- assert.equal(p.sanity,3);finish(g);
- assert.equal(p.income,4);assert.equal(E.inspirationCount(p),7);assert.equal(p.sanity,3);
+ assert.equal(p.sanity,4);finish(g);
+ assert.equal(p.income,5);assert.equal(E.inspirationCount(p),7);assert.equal(p.sanity,4);
 });
 
 test('mixed support lost to inspection also loses income; only one fine',()=>{
- const g=make(),p=g.players[0];rig(g,p,[['A13',0]]);
+ const g=make(),p=g.players[0];skills(p,'A');rig(g,p,[['A13',0]]);
  g.inspection.inspectionCount=3;g.diceRandom=seedFor([1,1,1]);finish(g);
  assert.equal(p.income,0);assert.equal(p.sanity,3);assert.equal(p.caught,1);assert.equal(p.money,10);
  assert.ok(E.findPlacement(p,p.cards[0].uid));
 });
 
 test('overtime disables mixed sanity support but still allows its income effect',()=>{
- const g=make({startSanity:7}),p=g.players[0];rig(g,p,[['A13',6,2]]);finish(g);
+ const g=make({startSanity:7}),p=g.players[0];skills(p,'A');rig(g,p,[['A13',6,2]]);finish(g);
  assert.equal(p.sanity,3);assert.equal(p.income,1);assert.equal(p.money,12);
 });
 
@@ -64,7 +64,7 @@ test('one-time multiweek permissions keep progress when unable to pay',()=>{
 });
 
 test('elastic authorization protects selected 4h card, never an 8h card',()=>{
- for(const [type,income,caught]of [['A07',2,0],['A08',0,1]]){
+ for(const [type,income,caught]of [['A07',1,0],['A08',0,1]]){
   const g=make(),p=g.players[0];p.protectionFrom=1;rig(g,p,[[type,0]]);
   E.setProtection(g,0,{day:0,period:0});g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
   assert.equal(p.income,income);assert.equal(p.caught,caught);

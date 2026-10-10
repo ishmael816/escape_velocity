@@ -1,6 +1,6 @@
 {
   "status": "playable-prototype",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "routes": {
     "W": {
       "name": "职场",
@@ -165,7 +165,7 @@
       "name": "跨组复盘会",
       "route": "W",
       "hours": 4,
-      "price": 6,
+      "price": 5,
       "stress": 1,
       "minSanity": 0,
       "maxSanity": 2,
@@ -267,7 +267,7 @@
       "stress": 1,
       "minSanity": 0,
       "maxSanity": 2,
-      "requires": "WWW",
+      "requires": "WW",
       "kind": "repeat",
       "cost": {},
       "gain": {
@@ -301,7 +301,7 @@
       "name": "企业外训讲师",
       "route": "W",
       "hours": 8,
-      "price": 5,
+      "price": 4,
       "stress": 0,
       "minSanity": 3,
       "maxSanity": 10,
@@ -312,14 +312,16 @@
         "profit": 3
       },
       "effect": "",
-      "advanced": true
+      "advanced": true,
+      "support": 1,
+      "upkeep": 0
     },
     {
       "id": "W12",
       "name": "流程咨询",
       "route": "W",
       "hours": 8,
-      "price": 5,
+      "price": 4,
       "stress": 0,
       "minSanity": 3,
       "maxSanity": 10,
@@ -332,7 +334,9 @@
       "effect": "本周此前成功执行过履职活动：副业收入额外 +1。",
       "advanced": true,
       "conditionalBonus": 1,
-      "condition": "professional"
+      "condition": "professional",
+      "support": 1,
+      "upkeep": 0
     },
     {
       "id": "A01",
@@ -388,7 +392,7 @@
       "name": "创作研讨会",
       "route": "A",
       "hours": 4,
-      "price": 7,
+      "price": 5,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -428,18 +432,18 @@
       "requires": "",
       "kind": "repeat",
       "cost": {},
-      "gain": {
-        "profit": 2
-      },
+      "gain": {},
       "effect": "",
-      "inspirationRequired": 4
+      "inspirationRequired": 4,
+      "support": 1,
+      "upkeep": 0
     },
     {
       "id": "A07",
       "name": "征稿投稿",
       "route": "A",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -447,7 +451,7 @@
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
       "effect": "",
       "inspirationRequired": 2
@@ -457,15 +461,15 @@
       "name": "长篇委托",
       "route": "A",
       "hours": 8,
-      "price": 5,
-      "stress": 0,
+      "price": 4,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 3
+        "profit": 2
       },
       "effect": "",
       "inspirationRequired": 3
@@ -475,11 +479,11 @@
       "name": "专栏连载",
       "route": "A",
       "hours": 8,
-      "price": 7,
+      "price": 5,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
-      "requires": "AAA",
+      "requires": "AA",
       "kind": "repeat",
       "cost": {},
       "gain": {
@@ -498,7 +502,7 @@
       "name": "独立出版",
       "route": "A",
       "hours": 8,
-      "price": 8,
+      "price": 7,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -521,7 +525,7 @@
       "name": "互动叙事",
       "route": "A",
       "hours": 8,
-      "price": 7,
+      "price": 6,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -542,7 +546,7 @@
       "name": "商业写作",
       "route": "A",
       "hours": 8,
-      "price": 6,
+      "price": 5,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -612,7 +616,7 @@
       "name": "开发者交流",
       "route": "B",
       "hours": 4,
-      "price": 6,
+      "price": 5,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -646,14 +650,14 @@
       "route": "B",
       "hours": 4,
       "price": 3,
-      "stress": 1,
+      "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
       "effect": ""
     },
@@ -689,7 +693,7 @@
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 3
+        "profit": 2
       },
       "effect": ""
     },
@@ -698,15 +702,15 @@
       "name": "自动化工具",
       "route": "B",
       "hours": 2,
-      "price": 5,
+      "price": 4,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
-      "requires": "BBB",
+      "requires": "BB",
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 1
+        "profit": 2
       },
       "effect": "",
       "advanced": true,
@@ -727,7 +731,7 @@
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 3
       },
       "effect": "",
       "advanced": true,
@@ -748,7 +752,7 @@
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 1
+        "profit": 2
       },
       "effect": "",
       "advanced": true,
@@ -770,7 +774,7 @@
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 3
       },
       "effect": "",
       "advanced": true,
@@ -832,7 +836,7 @@
       "name": "商家沙龙",
       "route": "C",
       "hours": 4,
-      "price": 6,
+      "price": 5,
       "stress": 0,
       "minSanity": 1,
       "maxSanity": 10,
@@ -866,7 +870,7 @@
       "route": "C",
       "hours": 4,
       "price": 3,
-      "stress": 0,
+      "stress": 1,
       "minSanity": 1,
       "maxSanity": 10,
       "requires": "",
@@ -876,7 +880,7 @@
         "profit": 2
       },
       "effect": "本金在安排时锁定，撤回返还。",
-      "capital": 3
+      "capital": 4
     },
     {
       "id": "C07",
@@ -909,7 +913,7 @@
       "kind": "repeat",
       "cost": {},
       "gain": {
-        "profit": 3
+        "profit": 2
       },
       "effect": "",
       "capital": 6
@@ -919,11 +923,11 @@
       "name": "稳定供货",
       "route": "C",
       "hours": 8,
-      "price": 4,
+      "price": 3,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
-      "requires": "CCC",
+      "requires": "CC",
       "kind": "repeat",
       "cost": {},
       "gain": {},
@@ -939,7 +943,7 @@
       "name": "自有品牌",
       "route": "C",
       "hours": 8,
-      "price": 6,
+      "price": 5,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -959,7 +963,7 @@
       "name": "创作者商店",
       "route": "C",
       "hours": 8,
-      "price": 5,
+      "price": 4,
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
@@ -1004,7 +1008,7 @@
       "stress": 0,
       "minSanity": 0,
       "maxSanity": 10,
-      "requires": "",
+      "requires": "A",
       "kind": "repeat",
       "cost": {},
       "gain": {

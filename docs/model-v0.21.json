@@ -1,0 +1,2370 @@
+{
+  "version": "0.21",
+  "note": "固定版图供应卡牌/归档/现金，以真实安置与结算枚举骰面；逐周实验开局8钱3理智无手牌，指定牌从真实牌堆调至市场、研讨会保证命中目标、全程无查岗，其他玩家躺平。保留购牌、安排、归档、费用和本金。固定购牌优先序，不是最优解、随机市场胜率或真人时长。",
+  "comparison": {
+    "before": {
+      "six": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 22,
+        "eligible": true
+      },
+      "duplicate": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 23,
+        "eligible": true
+      },
+      "acquisition": {
+        "id": "basic",
+        "name": "零技能铺量",
+        "escapeWeek": 4,
+        "weeks": [
+          {
+            "week": 1,
+            "income": 5,
+            "sanity": 2,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 0,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 2,
+            "income": 7,
+            "sanity": 2,
+            "cash": 10,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 0,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 3,
+            "income": 7,
+            "sanity": 7,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 4,
+            "income": 12,
+            "sanity": 6,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13",
+              "B08",
+              "A07"
+            ],
+            "eligible": true
+          }
+        ],
+        "actions": [
+          {
+            "week": 1,
+            "day": 0,
+            "action": "buy",
+            "type": "A08",
+            "price": 5
+          },
+          {
+            "week": 1,
+            "day": 1,
+            "action": "place",
+            "type": "A08"
+          },
+          {
+            "week": 1,
+            "day": 2,
+            "action": "buy",
+            "type": "B06",
+            "price": 3
+          },
+          {
+            "week": 1,
+            "day": 3,
+            "action": "place",
+            "type": "B06"
+          },
+          {
+            "week": 2,
+            "day": 0,
+            "action": "buy",
+            "type": "A07",
+            "price": 3
+          },
+          {
+            "week": 2,
+            "day": 1,
+            "action": "place",
+            "type": "A07"
+          },
+          {
+            "week": 2,
+            "day": 2,
+            "action": "buy",
+            "type": "C13",
+            "price": 3
+          },
+          {
+            "week": 2,
+            "day": 3,
+            "action": "buy",
+            "type": "W13",
+            "price": 2
+          },
+          {
+            "week": 3,
+            "day": 0,
+            "action": "place",
+            "type": "C13"
+          },
+          {
+            "week": 3,
+            "day": 1,
+            "action": "place",
+            "type": "W13"
+          },
+          {
+            "week": 3,
+            "day": 2,
+            "action": "buy",
+            "type": "B08",
+            "price": 5
+          },
+          {
+            "week": 4,
+            "day": 0,
+            "action": "place",
+            "type": "B08"
+          },
+          {
+            "week": 4,
+            "day": 1,
+            "action": "buy",
+            "type": "A07",
+            "price": 3
+          },
+          {
+            "week": 4,
+            "day": 2,
+            "action": "place",
+            "type": "A07"
+          },
+          {
+            "week": 4,
+            "day": 3,
+            "action": "buy",
+            "type": "B06",
+            "price": 3
+          },
+          {
+            "week": 4,
+            "day": 4,
+            "action": "buy",
+            "type": "A07",
+            "price": 3
+          }
+        ]
+      }
+    },
+    "after": {
+      "six": {
+        "income": 6,
+        "sanity": 6,
+        "cash": 18,
+        "eligible": false
+      },
+      "duplicate": {
+        "income": 3,
+        "sanity": 8,
+        "cash": 16,
+        "eligible": false
+      },
+      "acquisition": {
+        "id": "basic",
+        "name": "零技能铺量",
+        "escapeWeek": 7,
+        "weeks": [
+          {
+            "week": 1,
+            "income": 3,
+            "sanity": 2,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 0,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 2,
+            "income": 4,
+            "sanity": 2,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 0,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 3,
+            "income": 5,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13",
+              "A07"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 4,
+            "income": 7,
+            "sanity": 6,
+            "cash": 10,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13",
+              "A07",
+              "B08"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 5,
+            "income": 8,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13",
+              "A07",
+              "B08",
+              "B06"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 6,
+            "income": 9,
+            "sanity": 6,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13",
+              "A07",
+              "A07",
+              "B08",
+              "B06"
+            ],
+            "eligible": false
+          },
+          {
+            "week": 7,
+            "income": 10,
+            "sanity": 6,
+            "cash": 31,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "supportFee": 3,
+            "capital": 0,
+            "scheduled": [
+              "A08",
+              "B06",
+              "A07",
+              "C13",
+              "W13",
+              "A07",
+              "A07",
+              "B08",
+              "B06",
+              "B06"
+            ],
+            "eligible": true
+          }
+        ],
+        "actions": [
+          {
+            "week": 1,
+            "day": 0,
+            "action": "buy",
+            "type": "A08",
+            "price": 4
+          },
+          {
+            "week": 1,
+            "day": 1,
+            "action": "place",
+            "type": "A08"
+          },
+          {
+            "week": 1,
+            "day": 2,
+            "action": "buy",
+            "type": "B06",
+            "price": 3
+          },
+          {
+            "week": 1,
+            "day": 3,
+            "action": "place",
+            "type": "B06"
+          },
+          {
+            "week": 2,
+            "day": 0,
+            "action": "buy",
+            "type": "A07",
+            "price": 2
+          },
+          {
+            "week": 2,
+            "day": 1,
+            "action": "place",
+            "type": "A07"
+          },
+          {
+            "week": 2,
+            "day": 2,
+            "action": "buy",
+            "type": "C13",
+            "price": 3
+          },
+          {
+            "week": 2,
+            "day": 3,
+            "action": "buy",
+            "type": "W13",
+            "price": 2
+          },
+          {
+            "week": 3,
+            "day": 0,
+            "action": "place",
+            "type": "C13"
+          },
+          {
+            "week": 3,
+            "day": 1,
+            "action": "place",
+            "type": "W13"
+          },
+          {
+            "week": 3,
+            "day": 2,
+            "action": "buy",
+            "type": "A07",
+            "price": 2
+          },
+          {
+            "week": 3,
+            "day": 3,
+            "action": "place",
+            "type": "A07"
+          },
+          {
+            "week": 3,
+            "day": 4,
+            "action": "buy",
+            "type": "A07",
+            "price": 2
+          },
+          {
+            "week": 4,
+            "day": 0,
+            "action": "buy",
+            "type": "B08",
+            "price": 5
+          },
+          {
+            "week": 4,
+            "day": 1,
+            "action": "place",
+            "type": "B08"
+          },
+          {
+            "week": 5,
+            "day": 0,
+            "action": "buy",
+            "type": "B06",
+            "price": 3
+          },
+          {
+            "week": 5,
+            "day": 1,
+            "action": "place",
+            "type": "B06"
+          },
+          {
+            "week": 5,
+            "day": 2,
+            "action": "buy",
+            "type": "B06",
+            "price": 3
+          },
+          {
+            "week": 6,
+            "day": 0,
+            "action": "place",
+            "type": "A07"
+          },
+          {
+            "week": 7,
+            "day": 0,
+            "action": "place",
+            "type": "B06"
+          }
+        ]
+      }
+    }
+  },
+  "acquisition": [
+    {
+      "id": "basic",
+      "name": "零技能铺量",
+      "escapeWeek": 7,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 3,
+          "sanity": 2,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 2,
+          "income": 4,
+          "sanity": 2,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06",
+            "A07"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 3,
+          "income": 5,
+          "sanity": 7,
+          "cash": 8,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06",
+            "A07",
+            "C13",
+            "W13",
+            "A07"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 4,
+          "income": 7,
+          "sanity": 6,
+          "cash": 10,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06",
+            "A07",
+            "C13",
+            "W13",
+            "A07",
+            "B08"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 5,
+          "income": 8,
+          "sanity": 6,
+          "cash": 12,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06",
+            "A07",
+            "C13",
+            "W13",
+            "A07",
+            "B08",
+            "B06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 6,
+          "income": 9,
+          "sanity": 6,
+          "cash": 21,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06",
+            "A07",
+            "C13",
+            "W13",
+            "A07",
+            "A07",
+            "B08",
+            "B06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 7,
+          "income": 10,
+          "sanity": 6,
+          "cash": 31,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "A08",
+            "B06",
+            "A07",
+            "C13",
+            "W13",
+            "A07",
+            "A07",
+            "B08",
+            "B06",
+            "B06"
+          ],
+          "eligible": true
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "action": "buy",
+          "type": "A08",
+          "price": 4
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "action": "place",
+          "type": "A08"
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "action": "buy",
+          "type": "B06",
+          "price": 3
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "action": "place",
+          "type": "B06"
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "action": "buy",
+          "type": "A07",
+          "price": 2
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "action": "place",
+          "type": "A07"
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "action": "buy",
+          "type": "C13",
+          "price": 3
+        },
+        {
+          "week": 2,
+          "day": 3,
+          "action": "buy",
+          "type": "W13",
+          "price": 2
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "action": "place",
+          "type": "C13"
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "action": "place",
+          "type": "W13"
+        },
+        {
+          "week": 3,
+          "day": 2,
+          "action": "buy",
+          "type": "A07",
+          "price": 2
+        },
+        {
+          "week": 3,
+          "day": 3,
+          "action": "place",
+          "type": "A07"
+        },
+        {
+          "week": 3,
+          "day": 4,
+          "action": "buy",
+          "type": "A07",
+          "price": 2
+        },
+        {
+          "week": 4,
+          "day": 0,
+          "action": "buy",
+          "type": "B08",
+          "price": 5
+        },
+        {
+          "week": 4,
+          "day": 1,
+          "action": "place",
+          "type": "B08"
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "action": "buy",
+          "type": "B06",
+          "price": 3
+        },
+        {
+          "week": 5,
+          "day": 1,
+          "action": "place",
+          "type": "B06"
+        },
+        {
+          "week": 5,
+          "day": 2,
+          "action": "buy",
+          "type": "B06",
+          "price": 3
+        },
+        {
+          "week": 6,
+          "day": 0,
+          "action": "place",
+          "type": "A07"
+        },
+        {
+          "week": 7,
+          "day": 0,
+          "action": "place",
+          "type": "B06"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "创作逐级升级",
+      "escapeWeek": 5,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 1,
+          "sanity": 3,
+          "cash": 6,
+          "skills": {
+            "W": 0,
+            "A": 1,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "A07"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 2,
+          "income": 1,
+          "sanity": 3,
+          "cash": 5,
+          "skills": {
+            "W": 0,
+            "A": 3,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "A07"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 3,
+          "income": 4,
+          "sanity": 4,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 3,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "A07",
+            "A09"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 4,
+          "income": 5,
+          "sanity": 5,
+          "cash": 9,
+          "skills": {
+            "W": 0,
+            "A": 4,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "A07",
+            "A09",
+            "A13"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 5,
+          "income": 11,
+          "sanity": 7,
+          "cash": 18,
+          "skills": {
+            "W": 0,
+            "A": 4,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 1,
+          "capital": 0,
+          "scheduled": [
+            "A07",
+            "A10",
+            "A09",
+            "C13",
+            "A13",
+            "A08"
+          ],
+          "eligible": true
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "action": "buy",
+          "type": "A07",
+          "price": 2
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "action": "place",
+          "type": "A07"
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "action": "buy",
+          "type": "A02",
+          "price": 1
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "action": "buy",
+          "type": "A01",
+          "price": 2
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "action": "place",
+          "type": "A01"
+        },
+        {
+          "week": 1,
+          "day": 5,
+          "action": "buy",
+          "type": "A03",
+          "price": 2
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "action": "place",
+          "type": "A02"
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "action": "buy",
+          "type": "A04",
+          "price": 5
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "action": "place",
+          "type": "A04"
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "action": "buy",
+          "type": "A09",
+          "price": 5
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "action": "place",
+          "type": "A09"
+        },
+        {
+          "week": 4,
+          "day": 0,
+          "action": "buy",
+          "type": "C13",
+          "price": 3
+        },
+        {
+          "week": 4,
+          "day": 1,
+          "action": "buy",
+          "type": "A13",
+          "price": 4
+        },
+        {
+          "week": 4,
+          "day": 2,
+          "action": "place",
+          "type": "A13"
+        },
+        {
+          "week": 4,
+          "day": 3,
+          "action": "place",
+          "type": "A03"
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "action": "place",
+          "type": "C13"
+        },
+        {
+          "week": 5,
+          "day": 1,
+          "action": "place",
+          "type": "A10"
+        },
+        {
+          "week": 5,
+          "day": 2,
+          "action": "buy",
+          "type": "A08",
+          "price": 4
+        },
+        {
+          "week": 5,
+          "day": 3,
+          "action": "place",
+          "type": "A08"
+        }
+      ]
+    },
+    {
+      "id": "developer",
+      "name": "开发并行",
+      "escapeWeek": 7,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 1,
+          "sanity": 3,
+          "cash": 4,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "B06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 2,
+          "income": 1,
+          "sanity": 3,
+          "cash": 6,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "B06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 3,
+          "income": 3,
+          "sanity": 3,
+          "cash": 6,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "B06",
+            "B09"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 4,
+          "income": 3,
+          "sanity": 3,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 3,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "B06",
+            "B09"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 5,
+          "income": 3,
+          "sanity": 8,
+          "cash": 8,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 4,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "B06",
+            "C13",
+            "B09",
+            "W13"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 6,
+          "income": 8,
+          "sanity": 8,
+          "cash": 11,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 4,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 0,
+          "scheduled": [
+            "B06",
+            "C13",
+            "B09",
+            "W13",
+            "B10",
+            "B08"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 7,
+          "income": 12,
+          "sanity": 6,
+          "cash": 15,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 4,
+            "C": 0
+          },
+          "supportFee": 3,
+          "capital": 4,
+          "scheduled": [
+            "B06",
+            "C13",
+            "B09",
+            "W13",
+            "B10",
+            "C06",
+            "B08",
+            "A08"
+          ],
+          "eligible": true
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "action": "buy",
+          "type": "B06",
+          "price": 3
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "action": "place",
+          "type": "B06"
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "action": "buy",
+          "type": "B02",
+          "price": 1
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "action": "buy",
+          "type": "B01",
+          "price": 2
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "action": "buy",
+          "type": "B03",
+          "price": 2
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "action": "place",
+          "type": "B02"
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "action": "place",
+          "type": "B01"
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "action": "buy",
+          "type": "C13",
+          "price": 3
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "action": "buy",
+          "type": "B09",
+          "price": 4
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "action": "place",
+          "type": "B09"
+        },
+        {
+          "week": 3,
+          "day": 2,
+          "action": "buy",
+          "type": "W13",
+          "price": 2
+        },
+        {
+          "week": 4,
+          "day": 0,
+          "action": "buy",
+          "type": "B04",
+          "price": 5
+        },
+        {
+          "week": 4,
+          "day": 1,
+          "action": "place",
+          "type": "B04"
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "action": "place",
+          "type": "C13"
+        },
+        {
+          "week": 5,
+          "day": 1,
+          "action": "place",
+          "type": "B03"
+        },
+        {
+          "week": 5,
+          "day": 2,
+          "action": "place",
+          "type": "W13"
+        },
+        {
+          "week": 5,
+          "day": 3,
+          "action": "buy",
+          "type": "C06",
+          "price": 3
+        },
+        {
+          "week": 6,
+          "day": 0,
+          "action": "place",
+          "type": "B10"
+        },
+        {
+          "week": 6,
+          "day": 1,
+          "action": "buy",
+          "type": "B08",
+          "price": 5
+        },
+        {
+          "week": 6,
+          "day": 2,
+          "action": "place",
+          "type": "B08"
+        },
+        {
+          "week": 7,
+          "day": 0,
+          "action": "place",
+          "type": "C06"
+        },
+        {
+          "week": 7,
+          "day": 1,
+          "action": "buy",
+          "type": "A08",
+          "price": 4
+        },
+        {
+          "week": 7,
+          "day": 2,
+          "action": "place",
+          "type": "A08"
+        }
+      ]
+    },
+    {
+      "id": "commercial",
+      "name": "商业积累本金",
+      "escapeWeek": 11,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 1,
+          "sanity": 2,
+          "cash": 4,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 2,
+          "income": 1,
+          "sanity": 2,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 3,
+          "income": 1,
+          "sanity": 2,
+          "cash": 4,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 4,
+          "income": 1,
+          "sanity": 2,
+          "cash": 5,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 5,
+          "income": 3,
+          "sanity": 1,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 4,
+          "scheduled": [
+            "C05",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 6,
+          "income": 3,
+          "sanity": 6,
+          "cash": 10,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 4,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 7,
+          "income": 3,
+          "sanity": 6,
+          "cash": 13,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 4,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 8,
+          "income": 5,
+          "sanity": 7,
+          "cash": 10,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 12,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 9,
+          "income": 7,
+          "sanity": 7,
+          "cash": 11,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 18,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C08",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 10,
+          "income": 7,
+          "sanity": 7,
+          "cash": 18,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 18,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C08",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 11,
+          "income": 10,
+          "sanity": 7,
+          "cash": 16,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 30,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C08",
+            "C06"
+          ],
+          "eligible": true
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "action": "buy",
+          "type": "C05",
+          "price": 2
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "action": "place",
+          "type": "C05"
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "action": "buy",
+          "type": "C02",
+          "price": 1
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "action": "buy",
+          "type": "C01",
+          "price": 2
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "action": "buy",
+          "type": "C13",
+          "price": 3
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "action": "place",
+          "type": "C02"
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "action": "place",
+          "type": "C01"
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "action": "buy",
+          "type": "W13",
+          "price": 2
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "action": "buy",
+          "type": "C09",
+          "price": 3
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "action": "buy",
+          "type": "C08",
+          "price": 4
+        },
+        {
+          "week": 4,
+          "day": 0,
+          "action": "buy",
+          "type": "C06",
+          "price": 3
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "action": "place",
+          "type": "C06"
+        },
+        {
+          "week": 6,
+          "day": 0,
+          "action": "place",
+          "type": "C13"
+        },
+        {
+          "week": 6,
+          "day": 1,
+          "action": "place",
+          "type": "W13"
+        },
+        {
+          "week": 8,
+          "day": 0,
+          "action": "place",
+          "type": "C09",
+          "capital": 8
+        },
+        {
+          "week": 9,
+          "day": 0,
+          "action": "place",
+          "type": "C08"
+        },
+        {
+          "week": 11,
+          "day": 0,
+          "action": "invest",
+          "type": "C09",
+          "capital": 20
+        }
+      ]
+    },
+    {
+      "id": "career-commercial",
+      "name": "职场工资转投资",
+      "escapeWeek": 9,
+      "weeks": [
+        {
+          "week": 1,
+          "income": 1,
+          "sanity": 1,
+          "cash": 6,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 0
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "W07",
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 2,
+          "income": 1,
+          "sanity": 1,
+          "cash": 8,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "W07",
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 3,
+          "income": 1,
+          "sanity": 1,
+          "cash": 8,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "W07",
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 4,
+          "income": 1,
+          "sanity": 1,
+          "cash": 14,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 0,
+          "capital": 0,
+          "scheduled": [
+            "W07",
+            "C05"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 5,
+          "income": 4,
+          "sanity": 6,
+          "cash": 7,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 2,
+          "capital": 12,
+          "scheduled": [
+            "C05",
+            "W13",
+            "C09"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 6,
+          "income": 6,
+          "sanity": 7,
+          "cash": 9,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 16,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 7,
+          "income": 6,
+          "sanity": 7,
+          "cash": 15,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 16,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 8,
+          "income": 6,
+          "sanity": 7,
+          "cash": 21,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 16,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C06"
+          ],
+          "eligible": false
+        },
+        {
+          "week": 9,
+          "income": 10,
+          "sanity": 7,
+          "cash": 15,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "supportFee": 3,
+          "capital": 32,
+          "scheduled": [
+            "C05",
+            "C13",
+            "W13",
+            "C09",
+            "C06"
+          ],
+          "eligible": true
+        }
+      ],
+      "actions": [
+        {
+          "week": 1,
+          "day": 0,
+          "action": "buy",
+          "type": "W07",
+          "price": 3
+        },
+        {
+          "week": 1,
+          "day": 1,
+          "action": "place",
+          "type": "W07"
+        },
+        {
+          "week": 1,
+          "day": 2,
+          "action": "buy",
+          "type": "C05",
+          "price": 2
+        },
+        {
+          "week": 1,
+          "day": 3,
+          "action": "place",
+          "type": "C05"
+        },
+        {
+          "week": 1,
+          "day": 4,
+          "action": "buy",
+          "type": "C02",
+          "price": 1
+        },
+        {
+          "week": 1,
+          "day": 5,
+          "action": "buy",
+          "type": "C01",
+          "price": 2
+        },
+        {
+          "week": 2,
+          "day": 0,
+          "action": "place",
+          "type": "C02"
+        },
+        {
+          "week": 2,
+          "day": 1,
+          "action": "place",
+          "type": "C01"
+        },
+        {
+          "week": 2,
+          "day": 2,
+          "action": "buy",
+          "type": "C13",
+          "price": 3
+        },
+        {
+          "week": 2,
+          "day": 3,
+          "action": "buy",
+          "type": "W13",
+          "price": 2
+        },
+        {
+          "week": 3,
+          "day": 0,
+          "action": "buy",
+          "type": "C09",
+          "price": 3
+        },
+        {
+          "week": 3,
+          "day": 1,
+          "action": "buy",
+          "type": "C06",
+          "price": 3
+        },
+        {
+          "week": 5,
+          "day": 0,
+          "action": "place",
+          "type": "C09",
+          "capital": 12
+        },
+        {
+          "week": 5,
+          "day": 1,
+          "action": "place",
+          "type": "W13"
+        },
+        {
+          "week": 5,
+          "day": 2,
+          "action": "remove",
+          "type": "W07"
+        },
+        {
+          "week": 6,
+          "day": 0,
+          "action": "place",
+          "type": "C13"
+        },
+        {
+          "week": 6,
+          "day": 1,
+          "action": "place",
+          "type": "C06"
+        },
+        {
+          "week": 9,
+          "day": 0,
+          "action": "invest",
+          "type": "C09",
+          "capital": 28
+        }
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "id": "basic-expanded",
+      "name": "零技能继续铺量",
+      "skills": "",
+      "plan": [
+        [
+          "A08",
+          6
+        ],
+        [
+          "B08",
+          2
+        ],
+        [
+          "B06",
+          3
+        ],
+        [
+          "B06",
+          3,
+          1
+        ],
+        [
+          "B06",
+          0,
+          1
+        ],
+        [
+          "A07",
+          4
+        ],
+        [
+          "A07",
+          4,
+          1
+        ],
+        [
+          "A07",
+          0
+        ],
+        [
+          "W13",
+          5
+        ],
+        [
+          "C13",
+          1,
+          2
+        ]
+      ],
+      "quiet": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 22,
+        "eligible": true
+      },
+      "boardPrice": 29,
+      "capital": 0,
+      "daylight": 44,
+      "night": 2,
+      "supportFee": 3,
+      "inspections": [
+        {
+          "checks": 1,
+          "cases": 6,
+          "eligible": 1,
+          "fraction": 0.16666666666666666,
+          "meanIncome": 8.666666666666666
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "eligible": 1,
+          "fraction": 0.027777777777777776,
+          "meanIncome": 7.555555555555555
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "eligible": 1,
+          "fraction": 0.004629629629629629,
+          "meanIncome": 6.62962962962963
+        }
+      ]
+    },
+    {
+      "id": "AB",
+      "name": "创作与开发",
+      "skills": "AAAABBBB",
+      "plan": [
+        [
+          "A08",
+          0
+        ],
+        [
+          "B10",
+          0
+        ],
+        [
+          "A10",
+          6
+        ],
+        [
+          "C13",
+          2,
+          2
+        ],
+        [
+          "B09",
+          2,
+          2
+        ]
+      ],
+      "quiet": {
+        "income": 11,
+        "sanity": 6,
+        "cash": 25,
+        "eligible": true
+      },
+      "boardPrice": 25,
+      "capital": 0,
+      "daylight": 16,
+      "night": 2,
+      "supportFee": 1,
+      "inspections": [
+        {
+          "checks": 1,
+          "cases": 6,
+          "eligible": 5,
+          "fraction": 0.8333333333333334,
+          "meanIncome": 10.166666666666666
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "eligible": 25,
+          "fraction": 0.6944444444444444,
+          "meanIncome": 9.472222222222221
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "eligible": 125,
+          "fraction": 0.5787037037037037,
+          "meanIncome": 8.893518518518519
+        }
+      ]
+    },
+    {
+      "id": "AC",
+      "name": "创作与商业",
+      "skills": "ACC",
+      "plan": [
+        [
+          "C09",
+          0,
+          0,
+          12
+        ],
+        [
+          "A12",
+          2
+        ],
+        [
+          "A08",
+          6
+        ],
+        [
+          "C13",
+          1,
+          2
+        ],
+        [
+          "A13",
+          3
+        ]
+      ],
+      "quiet": {
+        "income": 10,
+        "sanity": 6,
+        "cash": 24,
+        "eligible": true
+      },
+      "boardPrice": 19,
+      "capital": 12,
+      "daylight": 28,
+      "night": 2,
+      "supportFee": 1,
+      "inspections": [
+        {
+          "checks": 1,
+          "cases": 6,
+          "eligible": 3,
+          "fraction": 0.5,
+          "meanIncome": 8.5
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "eligible": 9,
+          "fraction": 0.25,
+          "meanIncome": 7.305555555555555
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "eligible": 27,
+          "fraction": 0.125,
+          "meanIncome": 6.347222222222222
+        }
+      ]
+    },
+    {
+      "id": "BC",
+      "name": "开发与商业",
+      "skills": "ABCCCC",
+      "plan": [
+        [
+          "C08",
+          0
+        ],
+        [
+          "B12",
+          0
+        ],
+        [
+          "C10",
+          6,
+          0,
+          12
+        ],
+        [
+          "A13",
+          2
+        ],
+        [
+          "C13",
+          1,
+          2
+        ]
+      ],
+      "quiet": {
+        "income": 10,
+        "sanity": 7,
+        "cash": 24,
+        "eligible": true
+      },
+      "boardPrice": 22,
+      "capital": 18,
+      "daylight": 20,
+      "night": 2,
+      "supportFee": 1,
+      "inspections": [
+        {
+          "checks": 1,
+          "cases": 6,
+          "eligible": 4,
+          "fraction": 0.6666666666666666,
+          "meanIncome": 9
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "eligible": 16,
+          "fraction": 0.4444444444444444,
+          "meanIncome": 8.166666666666666
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "eligible": 64,
+          "fraction": 0.2962962962962963,
+          "meanIncome": 7.472222222222222
+        }
+      ]
+    },
+    {
+      "id": "WC",
+      "name": "职场转型",
+      "skills": "WWABCC",
+      "plan": [
+        [
+          "W12",
+          1
+        ],
+        [
+          "W05",
+          0
+        ],
+        [
+          "C09",
+          6,
+          0,
+          24
+        ],
+        [
+          "A13",
+          2
+        ],
+        [
+          "C13",
+          3,
+          2
+        ]
+      ],
+      "quiet": {
+        "income": 10,
+        "sanity": 7,
+        "cash": 25,
+        "eligible": true
+      },
+      "boardPrice": 16,
+      "capital": 24,
+      "daylight": 22,
+      "night": 2,
+      "supportFee": 1,
+      "inspections": [
+        {
+          "checks": 1,
+          "cases": 6,
+          "eligible": 4,
+          "fraction": 0.6666666666666666,
+          "meanIncome": 9.333333333333334
+        },
+        {
+          "checks": 2,
+          "cases": 36,
+          "eligible": 16,
+          "fraction": 0.4444444444444444,
+          "meanIncome": 8.777777777777779
+        },
+        {
+          "checks": 3,
+          "cases": 216,
+          "eligible": 64,
+          "fraction": 0.2962962962962963,
+          "meanIncome": 8.314814814814815
+        }
+      ]
+    }
+  ]
+}

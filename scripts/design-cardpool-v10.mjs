@@ -1,9 +1,7 @@
+import {calibrateV21} from './calibrate-cardpool-v21.mjs';
 import {calibrateV20} from './calibrate-cardpool-v20.mjs';
 import {calibratePool} from './calibrate-cardpool-v19.mjs';
-// Source for the playable pool, including the v0.20 economy experiment.
-// Light growth costs 1; cash-refunding growth keeps a higher entry price.
-// Recurring income, pressure, upkeep and capital are unchanged: tune access,
-// not weekly money creation. Full rationale and paired results: docs/economy-v0.20.md.
+// Historical layers are reproducible; v21 is the current income calibration.
 import { writeFileSync } from 'node:fs';
 
 const cards=[];
@@ -82,6 +80,7 @@ cards.push(
 );
 calibratePool({cards});
 calibrateV20({cards});
+calibrateV21({cards});
 const events=[
  {id:'E01',name:'例行巡查',copies:4,inspectionCount:1},
  {id:'E02',name:'加强巡查',copies:3,inspectionCount:2},
@@ -91,11 +90,11 @@ const events=[
  {id:'E06',name:'发放奖金',copies:1,inspectionCount:0,cash:2},
  {id:'E07',name:'本周双休',copies:1,inspectionCount:0,temporaryWeekend:true},
 ];
-const design={status:'playable-prototype',version:'0.20.0',routes:{W:{name:'职场',color:'无色/灰',icon:'公文包'},A:{name:'创作',color:'红',icon:'笔尖'},B:{name:'开发',color:'绿',icon:'齿轮'},C:{name:'商业',color:'黄',icon:'店铺'}},baseline:{startingHand:0,money:8,sanity:3,salary:3,passMoney:0,escapeIncomeAtLeast:10,escapeSanityAtLeast:6,searchEmptyCompensation:1,night4hStress:4},market:{2:5,4:4,8:3},inspection:{dieSides:6,rollAfter:'schedule-locked',sharedByAllPlayers:true,periods:['am','pm'],rerollDuplicates:false,repeatPenalty:false,finePerActivity:1,pauseCaughtActivity:true,sanityPenalty:0},events,cards};
+const design={status:'playable-prototype',version:'0.21.0',routes:{W:{name:'职场',color:'无色/灰',icon:'公文包'},A:{name:'创作',color:'红',icon:'笔尖'},B:{name:'开发',color:'绿',icon:'齿轮'},C:{name:'商业',color:'黄',icon:'店铺'}},baseline:{startingHand:0,money:8,sanity:3,salary:3,passMoney:0,escapeIncomeAtLeast:10,escapeSanityAtLeast:6,searchEmptyCompensation:1,night4hStress:4},market:{2:5,4:4,8:3},inspection:{dieSides:6,rollAfter:'schedule-locked',sharedByAllPlayers:true,periods:['am','pm'],rerollDuplicates:false,repeatPenalty:false,finePerActivity:1,pauseCaughtActivity:true,sanityPenalty:0},events,cards};
 writeFileSync('docs/cardpool-v0.10.json',JSON.stringify(design,null,2)+'\n');
 const amount=v=>Object.entries(v).map(([key,n])=>`${{money:'钱',inspiration:'灵感',profit:'副业',salary:'工资附加',cash:'普通现金'}[key]} ${n}`).join('、')||'—';
 const gate=d=>d.maxSanity<10?`≤${d.maxSanity}`:d.minSanity?`≥${d.minSanity}`:'不限';
-let md='# 四流派卡池 v0.20 · 完整牌表\n\n已接入网页 v0.20，仍需真人对局检验平衡。规则与试玩见 [v0.20](economy-runtime-v0.20.md)，本金和组合推演见 [数值报告](model-v0.20.md)。文件路径沿用 v0.10。字段、结算与数值检查见 [设计说明](cardpool-design-v0.10.md)。由 `node scripts/design-cardpool-v10.mjs` 生成。\n\n购买价支付一次；本金在安排时锁定，撤回时返还；执行消耗即时支付，灵感只放在空置夜晚，每格一枚，不花费；活动资金收益在周末统一领取，当周不能预支。无副业轨道，周末汇总成功副业判断逃离。归档牌成功后离开日程并留下主色技能；支持牌提供可逆理智状态，结算前付维持费，不累加；被查停、团建阻断或 4h 熬夜时支持失效。付不起维持费或执行消耗的重复活动撤回手牌、解除支持与压力并返还本金。多张按日程顺序付费，当周收入与工资不能补缴。履职牌仅工作日白天工作槽可用，不算摸鱼。副业收益才计逃离，工资附加与普通现金不计。\n\n';
+let md='# 四流派卡池 v0.21 · 完整牌表\n\n已接入网页 v0.21，仍需真人对局检验平衡。规则与试玩见 [v0.21](economy-runtime-v0.21.md)，本金和组合推演见 [数值报告](model-v0.21.md)。文件路径沿用 v0.10。字段、结算与数值检查见 [设计说明](cardpool-design-v0.10.md)。由 `node scripts/design-cardpool-v10.mjs` 生成。\n\n购买价支付一次；本金在安排时锁定，撤回时返还；执行消耗即时支付，灵感只放在空置夜晚，每格一枚，不花费；活动资金收益在周末统一领取，当周不能预支。无副业轨道，周末汇总成功副业判断逃离。归档牌成功后离开日程并留下主色技能；支持牌提供可逆理智状态，结算前付维持费，不累加；被查停、团建阻断或 4h 熬夜时支持失效。付不起维持费或执行消耗的重复活动撤回手牌、解除支持与压力并返还本金。多张按日程顺序付费，当周收入与工资不能补缴。履职牌仅工作日白天工作槽可用，不算摸鱼。副业收益才计逃离，工资附加与普通现金不计。\n\n';
 md+=`试玩基准：开局没有活动手牌；起始资金 ${design.baseline.money}；每周固定收入 ${design.baseline.salary}，没有生活费；躺平只跳过行动，不获得资源。当周成功副业合计达到 ${design.baseline.escapeIncomeAtLeast} 且理智 ≥${design.baseline.escapeSanityAtLeast} 才可逃离；不跨周积累。单张活动与每周副业收入均不封顶。\n\n周初事件只预告查岗次数；日程锁定后掷对应数量的 D6，1–6 对应周一至周六，全体共用结果、重复不重掷、同牌不重复受罚，查当天白天。被查活动本周暂停、每张罚 1 钱，不影响理智，不按时长加罚。活动骰逐张独立掷，牌面骰表为额外收益，和固定执行收益相加；中高级开发牌可与一张活动并行，时间取较长者；中高级商业牌投入自选本金，每4／3本金产生1收入。详见 [骰子规则与概率](dice-design-v0.10.md)。\n\n`;
 for(const [route,info]of Object.entries(design.routes)){
  md+=`## ${info.color} · ${info.name}\n\n| 编号／名称 | h | 买价 | 本金 | 压力 | 理智 | 技能 | 类型 | 执行消耗 | 执行收益 | 特殊效果 |\n|---|---:|---:|---:|---:|---|---|---|---|---|---|\n`;

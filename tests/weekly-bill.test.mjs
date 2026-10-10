@@ -9,8 +9,8 @@ test('side income is paid only after the last slot; board inspiration is never s
  E.step(g);E.step(g);assert.equal(E.inspirationCount(p),7);
  assert.equal(p.money,money);assert.equal(p.income,0);assert.equal(E.inspirationCount(p),7);
  assert.equal(E.eligible(g,p),false);
- E.resolveAll(g);assert.equal(p.money,money+5);assert.equal(p.income,2);
- assert.deepEqual(p.settlement,{week:1,sideIncome:2,otherIncome:0,salary:3,eventMoney:0,total:5});
+ E.resolveAll(g);assert.equal(p.money,money+4);assert.equal(p.income,1);
+ assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:0,salary:3,eventMoney:0,total:4});
  next(g);assert.equal(p.settlement,null);assert.deepEqual(p.weeklyEarnings,[]);assert.equal(p.income,0);
 });
 
