@@ -1,0 +1,112 @@
+{
+  "fixed": {
+    "n": 96,
+    "ended": 96,
+    "mixedShare": 0.7916666666666666,
+    "opponents": {
+      "basic": {
+        "n": 16,
+        "strictWins": 10,
+        "ties": 6,
+        "losses": 0,
+        "share": 0.8125,
+        "opponentAdapted": 0
+      },
+      "W": {
+        "n": 16,
+        "strictWins": 10,
+        "ties": 2,
+        "losses": 4,
+        "share": 0.6875,
+        "opponentAdapted": 0
+      },
+      "A": {
+        "n": 16,
+        "strictWins": 8,
+        "ties": 3,
+        "losses": 5,
+        "share": 0.59375,
+        "opponentAdapted": 0
+      },
+      "B": {
+        "n": 16,
+        "strictWins": 12,
+        "ties": 2,
+        "losses": 2,
+        "share": 0.8125,
+        "opponentAdapted": 0
+      },
+      "C": {
+        "n": 16,
+        "strictWins": 13,
+        "ties": 2,
+        "losses": 1,
+        "share": 0.875,
+        "opponentAdapted": 0
+      },
+      "repeat": {
+        "n": 16,
+        "strictWins": 15,
+        "ties": 1,
+        "losses": 0,
+        "share": 0.96875,
+        "opponentAdapted": 0
+      }
+    }
+  },
+  "flex-after-two-idle": {
+    "n": 96,
+    "ended": 96,
+    "mixedShare": 0.7916666666666666,
+    "opponents": {
+      "basic": {
+        "n": 16,
+        "strictWins": 10,
+        "ties": 6,
+        "losses": 0,
+        "share": 0.8125,
+        "opponentAdapted": 3
+      },
+      "W": {
+        "n": 16,
+        "strictWins": 10,
+        "ties": 2,
+        "losses": 4,
+        "share": 0.6875,
+        "opponentAdapted": 1
+      },
+      "A": {
+        "n": 16,
+        "strictWins": 8,
+        "ties": 3,
+        "losses": 5,
+        "share": 0.59375,
+        "opponentAdapted": 2
+      },
+      "B": {
+        "n": 16,
+        "strictWins": 12,
+        "ties": 2,
+        "losses": 2,
+        "share": 0.8125,
+        "opponentAdapted": 3
+      },
+      "C": {
+        "n": 16,
+        "strictWins": 13,
+        "ties": 2,
+        "losses": 1,
+        "share": 0.875,
+        "opponentAdapted": 2
+      },
+      "repeat": {
+        "n": 16,
+        "strictWins": 15,
+        "ties": 1,
+        "losses": 0,
+        "share": 0.96875,
+        "opponentAdapted": 0
+      }
+    }
+  }
+}

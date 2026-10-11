@@ -1,0 +1,1598 @@
+[
+  {
+    "n": 2,
+    "seed": 20261009,
+    "roster": [
+      "repeat",
+      "B"
+    ],
+    "mode": "fixed",
+    "target": 1,
+    "escapedWeek": null,
+    "ended": false,
+    "weeks": [
+      {
+        "week": 31,
+        "player": {
+          "id": 1,
+          "income": 0,
+          "sanity": 2,
+          "cash": 245,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 32,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 257,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 33,
+        "player": {
+          "id": 1,
+          "income": 6,
+          "sanity": 4,
+          "cash": 263,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 34,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 277,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 35,
+        "player": {
+          "id": 1,
+          "income": 10,
+          "sanity": 4,
+          "cash": 287,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 36,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 299,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 37,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 311,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 38,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 323,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 39,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 2,
+          "cash": 335,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 40,
+        "player": {
+          "id": 1,
+          "income": 6,
+          "sanity": 2,
+          "cash": 339,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 41,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 353,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 42,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 2,
+          "cash": 365,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 43,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 377,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 44,
+        "player": {
+          "id": 1,
+          "income": 10,
+          "sanity": 4,
+          "cash": 387,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 45,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 399,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 46,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 411,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 47,
+        "player": {
+          "id": 1,
+          "income": 5,
+          "sanity": 0,
+          "cash": 413,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 48,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 425,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 49,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 437,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 50,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 449,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "seed": 20261009,
+    "roster": [
+      "repeat",
+      "B"
+    ],
+    "mode": "mixed",
+    "target": 1,
+    "escapedWeek": 33,
+    "ended": true,
+    "weeks": [
+      {
+        "week": 31,
+        "player": {
+          "id": 1,
+          "income": 0,
+          "sanity": 2,
+          "cash": 241,
+          "skills": {
+            "W": 1,
+            "A": 0,
+            "B": 2,
+            "C": 2
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "learn",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "week": 32,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 251,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 2
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "week": 33,
+        "player": {
+          "id": 1,
+          "income": 15,
+          "sanity": 6,
+          "cash": 250,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 2
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M",
+            "A-X",
+            "W-H"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "seed": 20261009,
+    "roster": [
+      "repeat",
+      "B"
+    ],
+    "mode": "targeted",
+    "target": 1,
+    "escapedWeek": 35,
+    "ended": true,
+    "weeks": [
+      {
+        "week": 31,
+        "player": {
+          "id": 1,
+          "income": 0,
+          "sanity": 2,
+          "cash": 244,
+          "skills": {
+            "W": 0,
+            "A": 1,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "target-learn",
+            "type": "A-G1"
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "week": 32,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 4,
+          "cash": 256,
+          "skills": {
+            "W": 0,
+            "A": 1,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 33,
+        "player": {
+          "id": 1,
+          "income": 6,
+          "sanity": 5,
+          "cash": 260,
+          "skills": {
+            "W": 0,
+            "A": 1,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M",
+            "A-S"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "target-buy",
+            "type": "A-S"
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "week": 34,
+        "player": {
+          "id": 1,
+          "income": 11,
+          "sanity": 5,
+          "cash": 274,
+          "skills": {
+            "W": 0,
+            "A": 1,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M",
+            "A-S"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 35,
+        "player": {
+          "id": 1,
+          "income": 10,
+          "sanity": 6,
+          "cash": 282,
+          "skills": {
+            "W": 0,
+            "A": 1,
+            "B": 2,
+            "C": 0
+          },
+          "board": [
+            "B-S",
+            "B-M",
+            "B-S",
+            "B-H",
+            "B-E",
+            "B-E",
+            "B-M",
+            "A-S",
+            "A-S"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "target-buy",
+            "type": "A-S"
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "seed": 11,
+    "roster": [
+      "repeat",
+      "basic",
+      "repeat",
+      "A"
+    ],
+    "mode": "fixed",
+    "target": 1,
+    "escapedWeek": null,
+    "ended": false,
+    "weeks": [
+      {
+        "week": 31,
+        "player": {
+          "id": 1,
+          "income": 5,
+          "sanity": 10,
+          "cash": 111,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 32,
+        "player": {
+          "id": 1,
+          "income": 7,
+          "sanity": 10,
+          "cash": 116,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 33,
+        "player": {
+          "id": 1,
+          "income": 7,
+          "sanity": 10,
+          "cash": 121,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 34,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 129,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 35,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 137,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 36,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 145,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 37,
+        "player": {
+          "id": 1,
+          "income": 4,
+          "sanity": 10,
+          "cash": 145,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 38,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 6,
+          "cash": 154,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 39,
+        "player": {
+          "id": 1,
+          "income": 4,
+          "sanity": 10,
+          "cash": 154,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 40,
+        "player": {
+          "id": 1,
+          "income": 7,
+          "sanity": 10,
+          "cash": 159,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 41,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 169,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 42,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 177,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 43,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 185,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 44,
+        "player": {
+          "id": 1,
+          "income": 5,
+          "sanity": 10,
+          "cash": 187,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 45,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 195,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 46,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 203,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 47,
+        "player": {
+          "id": 1,
+          "income": 7,
+          "sanity": 10,
+          "cash": 208,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 48,
+        "player": {
+          "id": 1,
+          "income": 6,
+          "sanity": 10,
+          "cash": 211,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 49,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 6,
+          "cash": 220,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      },
+      {
+        "week": 50,
+        "player": {
+          "id": 1,
+          "income": 9,
+          "sanity": 10,
+          "cash": 228,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": []
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "seed": 11,
+    "roster": [
+      "repeat",
+      "basic",
+      "repeat",
+      "A"
+    ],
+    "mode": "mixed",
+    "target": 1,
+    "escapedWeek": 32,
+    "ended": true,
+    "weeks": [
+      {
+        "week": 31,
+        "player": {
+          "id": 1,
+          "income": 5,
+          "sanity": 10,
+          "cash": 107,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 1,
+            "C": 2
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "week": 32,
+        "player": {
+          "id": 1,
+          "income": 12,
+          "sanity": 10,
+          "cash": 109,
+          "skills": {
+            "W": 1,
+            "A": 2,
+            "B": 1,
+            "C": 2
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "A-M",
+            "A-M",
+            "A-M",
+            "C-H"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "buy",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "withdraw",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "seed": 11,
+    "roster": [
+      "repeat",
+      "basic",
+      "repeat",
+      "A"
+    ],
+    "mode": "targeted",
+    "target": 1,
+    "escapedWeek": 32,
+    "ended": true,
+    "weeks": [
+      {
+        "week": 31,
+        "player": {
+          "id": 1,
+          "income": 5,
+          "sanity": 10,
+          "cash": 105,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 1
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-M",
+            "A-M",
+            "A-M"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "target-buy",
+            "type": "A-X"
+          },
+          {
+            "id": 1,
+            "kind": "target-learn",
+            "type": "C-G1"
+          },
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          }
+        ]
+      },
+      {
+        "week": 32,
+        "player": {
+          "id": 1,
+          "income": 12,
+          "sanity": 10,
+          "cash": 114,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 1
+          },
+          "board": [
+            "W-S",
+            "A-E",
+            "W-S",
+            "A-M",
+            "A-M",
+            "A-M",
+            "A-X"
+          ]
+        },
+        "actions": [
+          {
+            "id": 1,
+            "kind": "place",
+            "cost": 1
+          },
+          {
+            "id": 1,
+            "kind": "withdraw",
+            "cost": 0
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "baselineCommit": "847aeb1ef7d4eb4d6cc3e007988878bb82b88fd7",
+  "candidateVersion": "0.23.1",
+  "rulesVersion": 23,
+  "evaluatorRevision": 5,
+  "pairedConfigurations": 504,
+  "uniqueConfigurations": 497,
+  "allPairedGameAndSummaryRecordsEqual": true,
+  "canonicalResultSha256": "e77dba9b89dc48427785c0d07e899731c379ca035fc2a74524a75daf7ce87d98",
+  "endedBy30": 495,
+  "endedBy24": 494,
+  "unchanged": [
+    {
+      "file": "src/engine.js",
+      "sha256": "7386a40a9c860a1edb219120a4025ad0dde77dc177cdbd1fa888a12d2d9a93ba"
+    },
+    {
+      "file": "src/cards.js",
+      "sha256": "c2051c2f7c775e12db56560cc142e051fc6ac0ca18af6f25d9ac9a1d14280d47"
+    },
+    {
+      "file": "src/cardpool-data.js",
+      "sha256": "f59d4555971cad98231be003e12a207da13fede8a54a8e271f0d3e955ace5f78"
+    },
+    {
+      "file": "src/rules-v23.js",
+      "sha256": "a5d2af415abea36ac82f34a95f3cda8b0a097d382ad53dd811e1a389d04cf564"
+    },
+    {
+      "file": "data/cardpool-v22.json",
+      "sha256": "a3b24f30e5ba400bd50c57b66b99eec181329b6f30ad5e3ea350e277e9ea14aa"
+    },
+    {
+      "file": "scripts/evaluate-experience.mjs",
+      "sha256": "1154775b0f54a0b787e56608928c5a452be9bee807c68ce03b21e0f52e59d4df"
+    }
+  ],
+  "smoke": {
+    "games": 9,
+    "allEnded": true,
+    "minWeeks": 5,
+    "maxWeeks": 9
+  },
+  "tests": {
+    "passed": 153,
+    "failed": 0,
+    "skipped": 0
+  },
+  "note": "UI-only candidate. Equal game outcomes establish no gameplay change, not a balance improvement."
+}
