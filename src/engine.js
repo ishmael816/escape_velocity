@@ -1,4 +1,4 @@
-import {CARDS,ADVANCED,MARKET_LIMITS,marketLane,DEFAULTS,EVENTS,getCard,slotKey,slotLabel,DAYS} from './cards.js';
+import {CARDS,ADVANCED,MARKET_LIMITS,marketLane,DEFAULTS,EVENTS,getCard,slotKey,slotLabel,DAYS,cardCopies} from './cards.js';
 import {hours} from './card-visuals.js';
 
 function rng(g,key='random'){let x=g[key];x^=x<<13;x^=x>>>17;x^=x<<5;g[key]=x>>>0;return g[key]/4294967296;}
@@ -65,9 +65,9 @@ export function activityDanger(g,p,c,s){const d=getCard(c);return coveredSlots(d
 export function createGame(options={}){
  const config={...DEFAULTS,...options};for(const [k,v]of Object.entries(DEFAULTS))if(typeof v==='number')config[k]=Number.isFinite(Number(config[k]))?Math.max(0,Math.floor(Number(config[k]))):v;
  config.playerCount=Math.min(4,Math.max(2,config.playerCount));config.maxSanity=10;config.escapeSanity=Math.min(10,config.escapeSanity);config.startSanity=Math.min(10,config.startSanity);config.escapeIncome=Math.min(10,Math.max(1,config.escapeIncome));delete config.nightStress3;delete config.livingCost;delete config.starterActivity;delete config.startInspiration;
- const g={version:23,opportunity:null,opportunityHistory:[],resolutionQueue:null,sanityModel:'support-v1',progressModel:1,config,random:config.seed||1,diceRandom:((config.seed^0x9e3779b9)>>>0)||1,uid:0,week:1,day:0,turn:0,first:0,phase:'planning',players:[],decks:{4:[],8:[]},discard:{4:[],8:[]},market:{4:[],8:[]},inspectionDeck:[],inspectionDiscard:[],logs:[],history:[],timeline:[],cursor:0,actionCount:0,escapeDecisions:{},diceRolls:[]};
+ const g={version:24,opportunity:null,opportunityHistory:[],resolutionQueue:null,sanityModel:'support-v1',progressModel:1,config,random:config.seed||1,diceRandom:((config.seed^0x9e3779b9)>>>0)||1,uid:0,week:1,day:0,turn:0,first:0,phase:'planning',players:[],decks:{4:[],8:[]},discard:{4:[],8:[]},market:{4:[],8:[]},inspectionDeck:[],inspectionDiscard:[],logs:[],history:[],timeline:[],cursor:0,actionCount:0,escapeDecisions:{},diceRolls:[]};
  for(let id=0;id<config.playerCount;id++)g.players.push({id,name:id===0?'你':`玩家 ${id+1}`,bot:config.mode==='bots'&&id>0,money:config.startMoney,sanity:config.startSanity,inspirationSlots:[],escaped:false,escapedWeek:null,weekend:false,tempWeekend:false,freeDays:[],cards:[],completedActivities:[],skills:[],upgrades:[],drafts:[],schedule:{},income:0,caught:0,jobsDone:0,activeRoutes:[]});
- for(const d of [...CARDS,...ADVANCED])for(let n=0;n<(d.tier==='advanced'?Math.ceil(config.playerCount/2):config.playerCount);n++)g.decks[marketLane(d)].push(instance(g,d.id));
+ for(const d of [...CARDS,...ADVANCED])for(let n=0;n<(cardCopies(d,config.playerCount));n++)g.decks[marketLane(d)].push(instance(g,d.id));
  for(const key of Object.keys(g.decks))g.decks[key]=shuffle(g,g.decks[key]);fillMarket(g);startWeek(g);return g;
 }
 function draw(g,lane){if(!g.decks[lane].length){g.decks[lane]=shuffle(g,g.discard[lane]);g.discard[lane]=[];}return g.decks[lane].pop();}

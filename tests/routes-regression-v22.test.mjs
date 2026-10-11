@@ -11,10 +11,10 @@ import {offer, supplyIds, reload} from './regression-helpers-v22.mjs';
 // are never assigned. All cards come from the real finite 2-player supply.
 const routes=[
   {name:'A',growth:['A-G1','A-G2'],board:[['A-S',3],['A-H',6],['A-M',0],['A-M',0,1],['A-E',1],['B-E',1,1]],income:10,sanity:6},
-  {name:'B',growth:['B-G1','B-G2'],board:[['W-S',2],['B-S',0,1],['B-H',6],['B-M',0],['A-E',0],['B-M',0,1]],income:10,sanity:6},
-  {name:'C',growth:['C-G1','C-G2'],board:[['W-S',2],['C-H',6],['C-M',0],['C-E',0,1]],income:10,sanity:6,capital:16},
+  {name:'B',growth:['B-G1','B-G2'],board:[['B-S',0,1],['B-H',6],['B-H',5]],income:10,sanity:6},
+  {name:'C',growth:['C-G1','C-G2'],board:[['W-S',2],['C-H',6],['C-M',0],['C-E',0,1]],income:10,sanity:6,capital:10},
   {name:'W',growth:['W-G1','W-G2'],permission:true,board:[['W-H',6],['W-M',5],['W-M',5,1],['A-E',0],['B-E',0,1]],income:10,sanity:6},
-  {name:'AC hybrid',growth:['A-G1','C-G1','C-G2'],board:[['B-S',0],['A-X',6],['C-H',5]],income:10,sanity:7,capital:14},
+  {name:'AC hybrid',growth:['A-G1','C-G1','C-G2'],board:[['B-S',0],['A-X',6],['C-H',5]],income:10,sanity:8,capital:10},
   {name:'basic zero-skill comparison',growth:[],board:[['A-E',1],['B-E',1,1],['W-S',3],['W-S',4],['C-E',0],['C-E',0,1],['A-L',5],['A-L',6]],income:10,sanity:7,capital:8}
 ];
 

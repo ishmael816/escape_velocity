@@ -35,3 +35,6 @@ export const EVENTS=design.events.flatMap(e=>Array.from({length:e.copies},()=>({
  text:e.inspectionCount?`预告查岗 ${e.inspectionCount} 次；日程锁定后掷骰决定日期，查当天上午与下午。重复不重掷。`:e.blocked?`本周${e.blocked.slot==='am'?'周日上午':'周日下午'}团建，在职玩家该时段无法活动。`:e.temporaryWeekend?'本周周六临时自由；不改变长期理智，不推进双休项目。':`周末发放奖金 ${e.cash}，不计副业收入。`,
 })));
 export const INSPECTIONS=EVENTS;
+
+// All copies are shared; same-route two-skill activities have one copy per player.
+export const cardCopies=(d,n)=>d.advanced&&!(d.requires?.length===2&&new Set(d.requires).size===1)?Math.ceil(n/2):n;

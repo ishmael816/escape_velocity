@@ -1,0 +1,1537 @@
+{
+  "status": "STATIC_DESIGN_ARITHMETIC_NOT_GAME_SIMULATION",
+  "rules": {
+    "version": "v0.24-candidate-c3",
+    "sourceCommit": "fb70c15736af1021bdaaba2a35698a9f4ed293e6",
+    "startMoney": 8,
+    "startSanity": 3,
+    "salary": 3,
+    "escapeIncome": 10,
+    "escapeSanity": 6,
+    "nightStress": 2,
+    "nightCards": 1,
+    "parallelDayOnly": true,
+    "parallelOnly4h": true,
+    "market": {
+      "4": 6,
+      "8": 4
+    },
+    "basicCopies": "playerCount",
+    "advancedCopies": "ceil(playerCount/2)",
+    "skillDistinct": true,
+    "specialistAdvancedCopies": "playerCount"
+  },
+  "sourceCounts": {
+    "W": 2,
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "byHours": [
+    {
+      "hours": 4,
+      "count": 23
+    },
+    {
+      "hours": 8,
+      "count": 9
+    }
+  ],
+  "advanced": 8,
+  "scenarios": [
+    {
+      "id": "early-basic",
+      "stage": "早期",
+      "name": "两张低价小单",
+      "cards": 2,
+      "archives": [],
+      "freedom": 0,
+      "placements": [
+        "周一上午",
+        "周二上午"
+      ],
+      "notes": "购牌2，固定副业2；无维护。是筹资台阶，不达线。",
+      "income": 2,
+      "otherCash": 0,
+      "support": 0,
+      "printedStress": 0,
+      "nightStress": 0,
+      "rawSanity": 3,
+      "sanity": 3,
+      "printedHours": 8,
+      "purchase": 2,
+      "capital": 0,
+      "upkeep": 0,
+      "growthGross": 0,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 2,
+      "minimumCommittedAndFee": 2,
+      "dayHalfSlots": 2,
+      "nightSlots": 0,
+      "calendarHours": 8,
+      "qualifiesAtQuietSettlement": false,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 0,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 0,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 0,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "A-E",
+        "B-E"
+      ]
+    },
+    {
+      "id": "early-capital",
+      "stage": "早期",
+      "name": "小摊与生活预留",
+      "cards": 2,
+      "archives": [],
+      "freedom": 0,
+      "placements": [
+        "周一上午",
+        "周日上午"
+      ],
+      "notes": "购牌3、本金4、预留周费1，恰好使用起始8；收入2、理智4。",
+      "income": 2,
+      "otherCash": 0,
+      "support": 3,
+      "printedStress": 1,
+      "nightStress": 0,
+      "rawSanity": 5,
+      "sanity": 5,
+      "printedHours": 8,
+      "purchase": 3,
+      "capital": 4,
+      "upkeep": 1,
+      "growthGross": 0,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 3,
+      "minimumCommittedAndFee": 8,
+      "dayHalfSlots": 2,
+      "nightSlots": 0,
+      "calendarHours": 8,
+      "qualifiesAtQuietSettlement": false,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 0,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 0,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 0,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "C-E",
+        "B-S"
+      ]
+    },
+    {
+      "id": "mid-a",
+      "stage": "中期",
+      "name": "创作替换",
+      "cards": 5,
+      "archives": [
+        "A-G1"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周一上午",
+        "周二上午",
+        "周三上午",
+        "周四上午",
+        "周日上午"
+      ],
+      "notes": "一技能后收入4、理智6；A-M替换两张小单，未到终局。",
+      "income": 4,
+      "otherCash": 0,
+      "support": 4,
+      "printedStress": 0,
+      "nightStress": 0,
+      "rawSanity": 7,
+      "sanity": 7,
+      "printedHours": 20,
+      "purchase": 9,
+      "capital": 0,
+      "upkeep": 1,
+      "growthGross": 2,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 11,
+      "minimumCommittedAndFee": 12,
+      "dayHalfSlots": 5,
+      "nightSlots": 0,
+      "calendarHours": 20,
+      "qualifiesAtQuietSettlement": false,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 0,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 0,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 0,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "A-M",
+        "A-E",
+        "B-E",
+        "A-S",
+        "B-S"
+      ]
+    },
+    {
+      "id": "mid-b",
+      "stage": "中期",
+      "name": "开发首次并行",
+      "cards": 4,
+      "archives": [
+        "B-G1"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周一上午∥",
+        "周一上午∥",
+        "周二上午",
+        "周日上午"
+      ],
+      "notes": "B-M与A-E同槽；收入4，理智4，付费支持抵一部分固定压力。",
+      "income": 4,
+      "otherCash": 0,
+      "support": 3,
+      "printedStress": 1,
+      "nightStress": 0,
+      "rawSanity": 5,
+      "sanity": 5,
+      "printedHours": 16,
+      "purchase": 7,
+      "capital": 0,
+      "upkeep": 1,
+      "growthGross": 2,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 9,
+      "minimumCommittedAndFee": 10,
+      "dayHalfSlots": 3,
+      "nightSlots": 0,
+      "calendarHours": 12,
+      "qualifiesAtQuietSettlement": false,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 0,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 0,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 0,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "B-M",
+        "A-E",
+        "B-E",
+        "B-S"
+      ]
+    },
+    {
+      "id": "late-a",
+      "stage": "后期",
+      "name": "单一创作路线",
+      "cards": 6,
+      "archives": [
+        "A-G1",
+        "A-G2"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周日全天",
+        "周一上午",
+        "周一下午",
+        "周二上午",
+        "周二下午",
+        "周三上午"
+      ],
+      "notes": "仅一张高级牌；收入10、支持3、理智6、无周费；同名中阶需要两份供给。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 3,
+      "printedStress": 0,
+      "nightStress": 0,
+      "rawSanity": 6,
+      "sanity": 6,
+      "printedHours": 28,
+      "purchase": 16,
+      "capital": 0,
+      "upkeep": 0,
+      "growthGross": 4,
+      "growthReturn": 1,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 19,
+      "minimumCommittedAndFee": 19,
+      "dayHalfSlots": 7,
+      "nightSlots": 0,
+      "calendarHours": 28,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 3,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 9,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 27,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "A-H",
+        "A-M",
+        "A-M",
+        "A-E",
+        "B-E",
+        "A-S"
+      ]
+    },
+    {
+      "id": "late-b",
+      "stage": "后期",
+      "name": "单一开发路线",
+      "cards": 6,
+      "archives": [
+        "B-G1",
+        "B-G2"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周日全天",
+        "周一上午∥",
+        "周一下午∥",
+        "周一上午∥",
+        "周二全天",
+        "周一下午∥"
+      ],
+      "notes": "收入10、压力3、支持6、理智6；两张工具分别带一张普通4h牌，各槽最多两张。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 8,
+      "printedStress": 3,
+      "nightStress": 0,
+      "rawSanity": 8,
+      "sanity": 8,
+      "printedHours": 32,
+      "purchase": 18,
+      "capital": 0,
+      "upkeep": 3,
+      "growthGross": 4,
+      "growthReturn": 1,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 21,
+      "minimumCommittedAndFee": 24,
+      "dayHalfSlots": 6,
+      "nightSlots": 0,
+      "calendarHours": 24,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 4,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 16,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 64,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "B-H",
+        "B-M",
+        "B-M",
+        "A-E",
+        "W-S",
+        "B-S"
+      ]
+    },
+    {
+      "id": "late-c",
+      "stage": "后期",
+      "name": "单一商业路线",
+      "cards": 4,
+      "archives": [
+        "C-G1",
+        "C-G2"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周日全天",
+        "周一上午",
+        "周一下午",
+        "周二全天"
+      ],
+      "notes": "收入10、压力2、支持5、理智6；锁定本金16，周费2。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 5,
+      "printedStress": 2,
+      "nightStress": 0,
+      "rawSanity": 6,
+      "sanity": 6,
+      "printedHours": 24,
+      "purchase": 12,
+      "capital": 10,
+      "upkeep": 2,
+      "growthGross": 4,
+      "growthReturn": 1,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 15,
+      "minimumCommittedAndFee": 27,
+      "dayHalfSlots": 6,
+      "nightSlots": 0,
+      "calendarHours": 24,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 4,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 16,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 64,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "C-H",
+        "C-M",
+        "C-E",
+        "W-S"
+      ]
+    },
+    {
+      "id": "late-w",
+      "stage": "后期",
+      "name": "单一职场转型",
+      "cards": 5,
+      "archives": [
+        "W-G1",
+        "W-G2"
+      ],
+      "freedom": 2,
+      "permissions": [
+        "W-P1"
+      ],
+      "placements": [
+        "周日全天",
+        "周六上午",
+        "周六下午",
+        "周一上午",
+        "周一下午"
+      ],
+      "notes": "WW与双休完成后，收入10、支持1、自主2，理智6；双休此前两周推进且付2。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 1,
+      "printedStress": 0,
+      "nightStress": 0,
+      "rawSanity": 6,
+      "sanity": 6,
+      "printedHours": 24,
+      "purchase": 13,
+      "capital": 0,
+      "upkeep": 0,
+      "growthGross": 4,
+      "growthReturn": 1,
+      "permissionBuy": 3,
+      "permissionExecution": 2,
+      "minimumNetAcquisition": 21,
+      "minimumCommittedAndFee": 21,
+      "dayHalfSlots": 6,
+      "nightSlots": 0,
+      "calendarHours": 24,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 5,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 25,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 125,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "W-H",
+        "W-M",
+        "W-M",
+        "A-E",
+        "B-E"
+      ]
+    },
+    {
+      "id": "late-ab",
+      "stage": "后期",
+      "name": "创作开发主轴＋职场混合",
+      "cards": 5,
+      "archives": [
+        "A-G1",
+        "A-G2",
+        "B-G1",
+        "W-G1"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周日全天",
+        "周一上午∥",
+        "周一上午∥",
+        "周一下午",
+        "周二上午"
+      ],
+      "notes": "收入10、支持6、压力1、理智8；AB并行3+WB收入3，需四个实际归档。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 8,
+      "printedStress": 1,
+      "nightStress": 0,
+      "rawSanity": 10,
+      "sanity": 10,
+      "printedHours": 24,
+      "purchase": 20,
+      "capital": 0,
+      "upkeep": 2,
+      "growthGross": 8,
+      "growthReturn": 1,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 27,
+      "minimumCommittedAndFee": 29,
+      "dayHalfSlots": 5,
+      "nightSlots": 0,
+      "calendarHours": 20,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 5,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 25,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 125,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "A-H",
+        "B-X",
+        "W-X",
+        "B-S",
+        "B-S"
+      ]
+    },
+    {
+      "id": "late-ac",
+      "stage": "后期",
+      "name": "创作商业混合",
+      "cards": 3,
+      "archives": [
+        "A-G1",
+        "C-G1",
+        "C-G2"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周日全天",
+        "周六全天",
+        "周一上午"
+      ],
+      "notes": "收入10、支持4、理智7；3张活动但本金14，三次不同归档且两张高级牌；未双休的周六仍暴露。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 5,
+      "printedStress": 0,
+      "nightStress": 0,
+      "rawSanity": 8,
+      "sanity": 8,
+      "printedHours": 20,
+      "purchase": 12,
+      "capital": 10,
+      "upkeep": 1,
+      "growthGross": 6,
+      "growthReturn": 1,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 17,
+      "minimumCommittedAndFee": 28,
+      "dayHalfSlots": 5,
+      "nightSlots": 0,
+      "calendarHours": 20,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 4,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 16,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 64,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "A-X",
+        "C-H",
+        "B-S"
+      ]
+    },
+    {
+      "id": "late-wc",
+      "stage": "后期",
+      "name": "职场商业混合",
+      "cards": 4,
+      "archives": [
+        "W-G1",
+        "W-G2",
+        "C-G1"
+      ],
+      "freedom": 0,
+      "placements": [
+        "周日全天",
+        "周六全天",
+        "周一上午",
+        "周一下午"
+      ],
+      "notes": "收入10、支持3、理智6；本金4，三次归档，两张高级牌。周六仍可查岗。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 3,
+      "printedStress": 0,
+      "nightStress": 0,
+      "rawSanity": 6,
+      "sanity": 6,
+      "printedHours": 24,
+      "purchase": 13,
+      "capital": 4,
+      "upkeep": 0,
+      "growthGross": 6,
+      "growthReturn": 1,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 18,
+      "minimumCommittedAndFee": 22,
+      "dayHalfSlots": 6,
+      "nightSlots": 0,
+      "calendarHours": 24,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 4,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 16,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 64,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "C-X",
+        "W-H",
+        "W-M",
+        "A-E"
+      ]
+    },
+    {
+      "id": "zero-repeat",
+      "stage": "反例",
+      "name": "零技能重复小摊",
+      "cards": 7,
+      "archives": [],
+      "freedom": 0,
+      "placements": [
+        "周一上午",
+        "周一下午",
+        "周二上午",
+        "周二下午",
+        "周三全天",
+        "周四全天",
+        "周日全天"
+      ],
+      "notes": "四人供给允许同名小摊4张；收入10，压力5、支持8、理智6；本金16、周费4。承认它可达，比较代价而非宣称禁止零技能。",
+      "income": 10,
+      "otherCash": 0,
+      "support": 8,
+      "printedStress": 5,
+      "nightStress": 0,
+      "rawSanity": 6,
+      "sanity": 6,
+      "printedHours": 40,
+      "purchase": 12,
+      "capital": 16,
+      "upkeep": 4,
+      "growthGross": 0,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 12,
+      "minimumCommittedAndFee": 32,
+      "dayHalfSlots": 10,
+      "nightSlots": 0,
+      "calendarHours": 40,
+      "qualifiesAtQuietSettlement": true,
+      "requiredPlayers": 4,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 2,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 4,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 8,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "C-E",
+        "C-E",
+        "C-E",
+        "C-E",
+        "A-L",
+        "W-S",
+        "W-S"
+      ]
+    },
+    {
+      "id": "night-support",
+      "stage": "边界",
+      "name": "标准支持放夜间",
+      "cards": 1,
+      "archives": [],
+      "freedom": 0,
+      "placements": [
+        "周一夜晚"
+      ],
+      "notes": "支持2与夜间压力2抵消，理智仍3；不是免费安全理智。",
+      "income": 0,
+      "otherCash": 0,
+      "support": 3,
+      "printedStress": 0,
+      "nightStress": 2,
+      "rawSanity": 4,
+      "sanity": 4,
+      "printedHours": 4,
+      "purchase": 2,
+      "capital": 0,
+      "upkeep": 1,
+      "growthGross": 0,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 2,
+      "minimumCommittedAndFee": 3,
+      "dayHalfSlots": 0,
+      "nightSlots": 1,
+      "calendarHours": 4,
+      "qualifiesAtQuietSettlement": false,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 0,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 0,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 0,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "B-S"
+      ]
+    },
+    {
+      "id": "night-growth",
+      "stage": "边界",
+      "name": "非职场成长放夜间",
+      "cards": 1,
+      "archives": [],
+      "freedom": 0,
+      "placements": [
+        "周一夜晚"
+      ],
+      "notes": "安排时理智1，完成归档移出后恢复3；不增加技能本身的理智。",
+      "income": 0,
+      "otherCash": 0,
+      "support": 0,
+      "printedStress": 0,
+      "nightStress": 2,
+      "rawSanity": 1,
+      "sanity": 1,
+      "printedHours": 4,
+      "purchase": 2,
+      "capital": 0,
+      "upkeep": 0,
+      "growthGross": 0,
+      "growthReturn": 0,
+      "permissionBuy": 0,
+      "permissionExecution": 0,
+      "minimumNetAcquisition": 2,
+      "minimumCommittedAndFee": 2,
+      "dayHalfSlots": 0,
+      "nightSlots": 1,
+      "calendarHours": 4,
+      "qualifiesAtQuietSettlement": false,
+      "requiredPlayers": 2,
+      "inspectionStaticSurvival": [
+        {
+          "dice": 1,
+          "pass": 0,
+          "total": 6
+        },
+        {
+          "dice": 2,
+          "pass": 0,
+          "total": 36
+        },
+        {
+          "dice": 3,
+          "pass": 0,
+          "total": 216
+        }
+      ],
+      "cardIds": [
+        "A-G1"
+      ]
+    }
+  ],
+  "zeroSkillBounds": [
+    {
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "players": 2,
+      "definitionCount": 6,
+      "examined": 729,
+      "passing": 42,
+      "minCards": 8,
+      "cheapest": {
+        "ids": [
+          "A-E",
+          "A-E",
+          "A-L",
+          "A-L",
+          "B-E",
+          "B-E",
+          "B-S",
+          "B-S",
+          "C-E"
+        ],
+        "cards": 9,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 11,
+        "nights": 0,
+        "upkeep": 2,
+        "purchase": 13,
+        "capital": 4,
+        "firstFeeIncluded": 19
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "W-S",
+            "A-L",
+            "A-L",
+            "B-E",
+            "B-E",
+            "B-S",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 8,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 11,
+          "nights": 0,
+          "upkeep": 3,
+          "purchase": 13,
+          "capital": 8,
+          "firstFeeIncluded": 24
+        },
+        {
+          "ids": [
+            "W-S",
+            "A-E",
+            "A-L",
+            "A-L",
+            "B-E",
+            "B-S",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 8,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 11,
+          "nights": 0,
+          "upkeep": 3,
+          "purchase": 13,
+          "capital": 8,
+          "firstFeeIncluded": 24
+        },
+        {
+          "ids": [
+            "W-S",
+            "A-E",
+            "A-E",
+            "A-L",
+            "A-L",
+            "B-S",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 8,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 11,
+          "nights": 0,
+          "upkeep": 3,
+          "purchase": 13,
+          "capital": 8,
+          "firstFeeIncluded": 24
+        }
+      ]
+    },
+    {
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "players": 3,
+      "definitionCount": 6,
+      "examined": 4096,
+      "passing": 1031,
+      "minCards": 7,
+      "cheapest": {
+        "ids": [
+          "A-E",
+          "A-L",
+          "A-L",
+          "A-L",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-S",
+          "B-S"
+        ],
+        "cards": 9,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 12,
+        "nights": 0,
+        "upkeep": 2,
+        "purchase": 14,
+        "capital": 0,
+        "firstFeeIncluded": 16
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "A-L",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 12,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 14,
+          "capital": 8,
+          "firstFeeIncluded": 26
+        },
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "C-E",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 11,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 13,
+          "capital": 12,
+          "firstFeeIncluded": 29
+        }
+      ]
+    },
+    {
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "players": 4,
+      "definitionCount": 6,
+      "examined": 15625,
+      "passing": 4269,
+      "minCards": 7,
+      "cheapest": {
+        "ids": [
+          "W-S",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-L",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-E"
+        ],
+        "cards": 10,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 12,
+        "nights": 0,
+        "upkeep": 2,
+        "purchase": 13,
+        "capital": 0,
+        "firstFeeIncluded": 15
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "A-L",
+            "A-L",
+            "C-E"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 13,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 15,
+          "capital": 4,
+          "firstFeeIncluded": 23
+        },
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "A-L",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 12,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 14,
+          "capital": 8,
+          "firstFeeIncluded": 26
+        },
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "C-E",
+            "C-E",
+            "C-E"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 11,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 13,
+          "capital": 12,
+          "firstFeeIncluded": 29
+        }
+      ]
+    }
+  ],
+  "oneSkillBounds": [
+    {
+      "skills": {
+        "W": 1,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "players": 4,
+      "definitionCount": 7,
+      "examined": 78125,
+      "passing": 23674,
+      "minCards": 6,
+      "cheapest": {
+        "ids": [
+          "W-M",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-E",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-S"
+        ],
+        "cards": 10,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 10,
+        "nights": 0,
+        "upkeep": 1,
+        "purchase": 13,
+        "capital": 0,
+        "firstFeeIncluded": 14
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "W-M",
+            "W-M",
+            "W-M",
+            "W-M",
+            "W-S",
+            "A-L"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 8,
+          "nights": 0,
+          "upkeep": 2,
+          "purchase": 17,
+          "capital": 0,
+          "firstFeeIncluded": 19
+        },
+        {
+          "ids": [
+            "W-M",
+            "W-M",
+            "W-M",
+            "W-M",
+            "W-S",
+            "C-E"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 7,
+          "nights": 0,
+          "upkeep": 2,
+          "purchase": 16,
+          "capital": 4,
+          "firstFeeIncluded": 22
+        }
+      ]
+    },
+    {
+      "skills": {
+        "W": 0,
+        "A": 1,
+        "B": 0,
+        "C": 0
+      },
+      "players": 4,
+      "definitionCount": 8,
+      "examined": 390625,
+      "passing": 90748,
+      "minCards": 6,
+      "cheapest": {
+        "ids": [
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-M",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-S"
+        ],
+        "cards": 10,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 10,
+        "nights": 0,
+        "upkeep": 1,
+        "purchase": 13,
+        "capital": 0,
+        "firstFeeIncluded": 14
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "W-S",
+            "A-L",
+            "A-M",
+            "A-M",
+            "A-M",
+            "A-M"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 8,
+          "nights": 0,
+          "upkeep": 2,
+          "purchase": 17,
+          "capital": 0,
+          "firstFeeIncluded": 19
+        },
+        {
+          "ids": [
+            "W-S",
+            "A-M",
+            "A-M",
+            "A-M",
+            "A-M",
+            "C-E"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 7,
+          "nights": 0,
+          "upkeep": 2,
+          "purchase": 16,
+          "capital": 4,
+          "firstFeeIncluded": 22
+        }
+      ]
+    },
+    {
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 1,
+        "C": 0
+      },
+      "players": 4,
+      "definitionCount": 7,
+      "examined": 78125,
+      "passing": 26354,
+      "minCards": 7,
+      "cheapest": {
+        "ids": [
+          "W-S",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-L",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-E"
+        ],
+        "cards": 10,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 12,
+        "nights": 0,
+        "upkeep": 2,
+        "purchase": 13,
+        "capital": 0,
+        "firstFeeIncluded": 15
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "A-L",
+            "A-L",
+            "B-M"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 13,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 17,
+          "capital": 0,
+          "firstFeeIncluded": 21
+        },
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "A-L",
+            "B-M",
+            "B-M"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 11,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 18,
+          "capital": 0,
+          "firstFeeIncluded": 22
+        },
+        {
+          "ids": [
+            "W-S",
+            "W-S",
+            "A-L",
+            "A-L",
+            "B-M",
+            "B-M",
+            "B-M"
+          ],
+          "cards": 7,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 10,
+          "nights": 0,
+          "upkeep": 4,
+          "purchase": 19,
+          "capital": 0,
+          "firstFeeIncluded": 23
+        }
+      ]
+    },
+    {
+      "skills": {
+        "W": 0,
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "players": 4,
+      "definitionCount": 7,
+      "examined": 78125,
+      "passing": 20218,
+      "minCards": 6,
+      "cheapest": {
+        "ids": [
+          "W-S",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-E",
+          "A-L",
+          "B-E",
+          "B-E",
+          "B-E",
+          "B-E"
+        ],
+        "cards": 10,
+        "income": 10,
+        "sanity": 6,
+        "daySlots": 12,
+        "nights": 0,
+        "upkeep": 2,
+        "purchase": 13,
+        "capital": 0,
+        "firstFeeIncluded": 15
+      },
+      "lowestFundingAtMinCards": [
+        {
+          "ids": [
+            "B-E",
+            "B-S",
+            "B-S",
+            "C-M",
+            "C-M",
+            "C-M"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 6,
+          "nights": 0,
+          "upkeep": 2,
+          "purchase": 14,
+          "capital": 6,
+          "firstFeeIncluded": 22
+        },
+        {
+          "ids": [
+            "A-E",
+            "B-S",
+            "B-S",
+            "C-M",
+            "C-M",
+            "C-M"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 6,
+          "nights": 0,
+          "upkeep": 2,
+          "purchase": 14,
+          "capital": 6,
+          "firstFeeIncluded": 22
+        },
+        {
+          "ids": [
+            "W-S",
+            "A-L",
+            "A-L",
+            "B-S",
+            "C-M",
+            "C-M"
+          ],
+          "cards": 6,
+          "income": 10,
+          "sanity": 6,
+          "daySlots": 9,
+          "nights": 0,
+          "upkeep": 3,
+          "purchase": 15,
+          "capital": 4,
+          "firstFeeIncluded": 22
+        }
+      ]
+    }
+  ]
+}

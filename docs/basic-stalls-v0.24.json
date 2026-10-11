@@ -1,0 +1,5069 @@
+{
+  "note": "Original idle metric retained; after-first-growth is an additional diagnostic, not a replacement acceptance threshold.",
+  "originalSeeds": {
+    "file": "release-candidate-full-details.json.gz",
+    "players": 232,
+    "idleP90": 3,
+    "afterFirstGrowthP90": 2,
+    "tail3plus": 37,
+    "unresolved": 0,
+    "tail": [
+      {
+        "n": 3,
+        "seed": 20261009,
+        "roster": [
+          "repeat",
+          "basic",
+          "B"
+        ],
+        "id": 1,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 4,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "weekend"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 3,
+            "cash": 20,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 11,
+        "roster": [
+          "basic",
+          "basic",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 4,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 3,
+            "cash": 20,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 11,
+        "roster": [
+          "repeat",
+          "basic",
+          "repeat"
+        ],
+        "id": 1,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 4,
+        "sequence": [
+          {
+            "week": 8,
+            "income": 8,
+            "sanity": 8,
+            "cash": 37,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 9,
+            "sanity": 8,
+            "cash": 46,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 6,
+            "sanity": 8,
+            "cash": 50,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 11,
+            "income": 5,
+            "sanity": 8,
+            "cash": 53,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 4
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "basic",
+          "C",
+          "mixed",
+          "repeat"
+        ],
+        "id": 0,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 6,
+        "grown": 5,
+        "longest": 4,
+        "sequence": [
+          {
+            "week": 7,
+            "income": 7,
+            "sanity": 8,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 8,
+            "income": 7,
+            "sanity": 4,
+            "cash": 24,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 7,
+            "sanity": 8,
+            "cash": 30,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 5,
+            "sanity": 8,
+            "cash": 33,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 4
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "basic",
+          "W",
+          "C",
+          "B"
+        ],
+        "id": 0,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 6,
+        "grown": 5,
+        "longest": 4,
+        "sequence": [
+          {
+            "week": 7,
+            "income": 8,
+            "sanity": 8,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 8,
+            "income": 8,
+            "sanity": 4,
+            "cash": 29,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 8,
+            "sanity": 8,
+            "cash": 36,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 5,
+            "sanity": 8,
+            "cash": 38,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 4
+      },
+      {
+        "n": 3,
+        "seed": 42,
+        "roster": [
+          "B",
+          "repeat",
+          "basic"
+        ],
+        "id": 2,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 8,
+            "income": 11,
+            "sanity": 3,
+            "cash": 43,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 9,
+            "sanity": 7,
+            "cash": 51,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 7,
+            "sanity": 7,
+            "cash": 56,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 3,
+        "seed": 2,
+        "roster": [
+          "basic",
+          "repeat",
+          "basic"
+        ],
+        "id": 0,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 2,
+        "roster": [
+          "mixed",
+          "repeat",
+          "basic"
+        ],
+        "id": 2,
+        "escaped": 10,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 7,
+            "income": 8,
+            "sanity": 8,
+            "cash": 32,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 8,
+            "income": 8,
+            "sanity": 4,
+            "cash": 42,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 7,
+            "sanity": 8,
+            "cash": 49,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 3,
+        "seed": 2,
+        "roster": [
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 1,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 11,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 3,
+        "seed": 3,
+        "roster": [
+          "basic",
+          "basic",
+          "W"
+        ],
+        "id": 0,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 3,
+        "seed": 3,
+        "roster": [
+          "basic",
+          "basic",
+          "W"
+        ],
+        "id": 1,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 5,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 5,
+            "cash": 16,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 20,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 3,
+        "roster": [
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 1,
+        "escaped": 7,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 5,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 5,
+            "cash": 16,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 20,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 3,
+        "roster": [
+          "basic",
+          "W",
+          "W"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 11,
+        "roster": [
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 1,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 8,
+            "income": 8,
+            "sanity": 7,
+            "cash": 30,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 6,
+            "sanity": 7,
+            "cash": 35,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 6,
+            "sanity": 7,
+            "cash": 40,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 42,
+        "roster": [
+          "basic",
+          "B",
+          "C",
+          "mixed"
+        ],
+        "id": 0,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 7,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 7,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 16,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 42,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "C"
+        ],
+        "id": 1,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 3,
+            "sanity": 2,
+            "cash": 16,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 3,
+            "sanity": 2,
+            "cash": 22,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 2,
+            "cash": 25,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "C",
+          "W",
+          "repeat",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 8,
+            "income": 3,
+            "sanity": 2,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 7,
+            "sanity": 8,
+            "cash": 20,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 7,
+            "sanity": 8,
+            "cash": 26,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "A",
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 2,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 7,
+            "income": 5,
+            "sanity": 9,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 4,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 8,
+            "income": 5,
+            "sanity": 5,
+            "cash": 27,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 4,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 5,
+            "sanity": 9,
+            "cash": 32,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 4,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "repeat",
+          "basic",
+          "B",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 7,
+            "cash": 10,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 7,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "B"
+        ],
+        "id": 1,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 7,
+            "cash": 10,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 7,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 20261009,
+        "roster": [
+          "basic",
+          "C",
+          "A",
+          "B"
+        ],
+        "id": 0,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 8,
+            "income": 9,
+            "sanity": 2,
+            "cash": 33,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 9,
+            "income": 9,
+            "sanity": 6,
+            "cash": 42,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 6,
+            "sanity": 6,
+            "cash": 46,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 2,
+        "roster": [
+          "basic",
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 0,
+        "escaped": 13,
+        "censored": false,
+        "firstProjected": 13,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 10,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 4,
+        "seed": 2,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 18,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 28,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 6,
+            "cash": 10,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 6,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "basic",
+          "W",
+          "A",
+          "B"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "basic",
+          "W",
+          "A",
+          "W"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "mixed",
+          "mixed",
+          "repeat",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "C",
+          "mixed",
+          "repeat",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "repeat",
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 2,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 11,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 4,
+        "seed": 3,
+        "roster": [
+          "mixed",
+          "repeat",
+          "basic",
+          "repeat"
+        ],
+        "id": 2,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 11,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 2
+      },
+      {
+        "n": 4,
+        "seed": 11,
+        "roster": [
+          "basic",
+          "basic",
+          "A",
+          "B"
+        ],
+        "id": 0,
+        "escaped": 15,
+        "censored": false,
+        "firstProjected": 11,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 12,
+            "income": 10,
+            "sanity": 3,
+            "cash": 45,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 13,
+            "income": 10,
+            "sanity": 3,
+            "cash": 57,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 14,
+            "income": 9,
+            "sanity": 7,
+            "cash": 66,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 11,
+        "roster": [
+          "basic",
+          "basic",
+          "A",
+          "B"
+        ],
+        "id": 1,
+        "escaped": 15,
+        "censored": false,
+        "firstProjected": 12,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 12,
+            "income": 9,
+            "sanity": 6,
+            "cash": 37,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 10,
+            "maintenance": 5,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 13,
+            "income": 9,
+            "sanity": 2,
+            "cash": 44,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 10,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 14,
+            "income": 11,
+            "sanity": 2,
+            "cash": 54,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 10,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 11,
+        "roster": [
+          "C",
+          "C",
+          "repeat",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 6,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 7,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 23,
+        "roster": [
+          "C",
+          "B",
+          "repeat",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 18,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 28,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 23,
+        "roster": [
+          "mixed",
+          "basic",
+          "W",
+          "A"
+        ],
+        "id": 1,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 5,
+            "sanity": 1,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 5,
+            "sanity": 1,
+            "cash": 29,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 5,
+            "sanity": 1,
+            "cash": 37,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 23,
+        "roster": [
+          "repeat",
+          "basic",
+          "mixed",
+          "A"
+        ],
+        "id": 1,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 18,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 28,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 23,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "mixed"
+        ],
+        "id": 1,
+        "escaped": 7,
+        "censored": false,
+        "firstProjected": 6,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 3,
+            "sanity": 2,
+            "cash": 19,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 3,
+            "income": 3,
+            "sanity": 2,
+            "cash": 25,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 29,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      }
+    ]
+  },
+  "holdout": {
+    "file": "cashflow_candidate-release-holdout-full-details.json.gz",
+    "players": 232,
+    "idleP90": 3,
+    "afterFirstGrowthP90": 1,
+    "tail3plus": 31,
+    "unresolved": 0,
+    "tail": [
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 12,
+        "grown": 5,
+        "longest": 4,
+        "sequence": [
+          {
+            "week": 8,
+            "income": 6,
+            "sanity": 7,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "bonus"
+          },
+          {
+            "week": 9,
+            "income": 2,
+            "sanity": 7,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 6,
+            "sanity": 7,
+            "cash": 27,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 11,
+            "income": 6,
+            "sanity": 7,
+            "cash": 33,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 4
+      },
+      {
+        "n": 2,
+        "seed": 2333908273,
+        "roster": [
+          "basic",
+          "C"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 2,
+        "seed": 2333908273,
+        "roster": [
+          "basic",
+          "C"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 2333908273,
+        "roster": [
+          "B",
+          "basic",
+          "mixed"
+        ],
+        "id": 1,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 2333908273,
+        "roster": [
+          "basic",
+          "C",
+          "A"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 2333908273,
+        "roster": [
+          "basic",
+          "W",
+          "C"
+        ],
+        "id": 0,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 1294897909,
+        "roster": [
+          "basic",
+          "basic",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 1294897909,
+        "roster": [
+          "mixed",
+          "repeat",
+          "basic"
+        ],
+        "id": 2,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 1294897909,
+        "roster": [
+          "repeat",
+          "basic",
+          "repeat"
+        ],
+        "id": 1,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 1,
+            "income": 0,
+            "sanity": 3,
+            "cash": 11,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 3,
+            "cash": 14,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 3,
+            "cash": 17,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 0,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 273090512,
+        "roster": [
+          "W",
+          "basic",
+          "B"
+        ],
+        "id": 1,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 3,
+            "cash": 19,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 273090512,
+        "roster": [
+          "W",
+          "A",
+          "basic"
+        ],
+        "id": 2,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 3,
+            "cash": 19,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 3,
+        "seed": 273090512,
+        "roster": [
+          "mixed",
+          "basic",
+          "W"
+        ],
+        "id": 1,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 3,
+            "cash": 19,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 3,
+        "seed": 273090512,
+        "roster": [
+          "basic",
+          "W",
+          "repeat"
+        ],
+        "id": 0,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 3,
+            "cash": 19,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 1490373735,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "mixed"
+        ],
+        "id": 1,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 834920090,
+        "roster": [
+          "repeat",
+          "basic",
+          "C",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 3,
+            "cash": 16,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 3,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 3,
+            "cash": 26,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 2333908273,
+        "roster": [
+          "mixed",
+          "repeat",
+          "basic",
+          "A"
+        ],
+        "id": 2,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "weekend"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 2333908273,
+        "roster": [
+          "repeat",
+          "basic",
+          "B",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 13,
+        "censored": false,
+        "firstProjected": 11,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "weekend"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 2333908273,
+        "roster": [
+          "basic",
+          "W",
+          "A",
+          "C"
+        ],
+        "id": 0,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 6,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 6,
+            "cash": 12,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "weekend"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 6,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 223179996,
+        "roster": [
+          "C",
+          "basic",
+          "repeat",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 12,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 9,
+            "income": 2,
+            "sanity": 8,
+            "cash": 31,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 2,
+            "sanity": 8,
+            "cash": 33,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 11,
+            "income": 4,
+            "sanity": 8,
+            "cash": 38,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 223179996,
+        "roster": [
+          "repeat",
+          "basic",
+          "A",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 13,
+        "censored": false,
+        "firstProjected": 13,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 9,
+            "income": 6,
+            "sanity": 8,
+            "cash": 44,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 6,
+            "sanity": 5,
+            "cash": 49,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 11,
+            "income": 6,
+            "sanity": 8,
+            "cash": 54,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 223179996,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 7,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 16,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 21,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 26,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 223179996,
+        "roster": [
+          "basic",
+          "W",
+          "B",
+          "B"
+        ],
+        "id": 0,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 6,
+            "cash": 3,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 6,
+            "cash": 3,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 6,
+            "cash": 6,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 2,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 795445899,
+        "roster": [
+          "basic",
+          "repeat",
+          "basic",
+          "W"
+        ],
+        "id": 2,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 10,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "weekend"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 965828206,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "basic"
+        ],
+        "id": 3,
+        "escaped": 12,
+        "censored": false,
+        "firstProjected": 8,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 9,
+            "income": 7,
+            "sanity": 6,
+            "cash": 24,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 10,
+            "income": 8,
+            "sanity": 10,
+            "cash": 29,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 4,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 11,
+            "income": 9,
+            "sanity": 6,
+            "cash": 37,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 3
+      },
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "basic",
+          "basic",
+          "A",
+          "B"
+        ],
+        "id": 0,
+        "escaped": 7,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "basic",
+          "W",
+          "A",
+          "basic"
+        ],
+        "id": 0,
+        "escaped": 11,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 1
+      },
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "mixed",
+          "mixed",
+          "basic",
+          "W"
+        ],
+        "id": 2,
+        "escaped": null,
+        "censored": true,
+        "firstProjected": null,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 0,
+            "sanity": 7,
+            "cash": 7,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 0,
+            "sanity": 7,
+            "cash": 8,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 0,
+            "sanity": 7,
+            "cash": 9,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "mixed",
+          "repeat",
+          "basic",
+          "mixed"
+        ],
+        "id": 2,
+        "escaped": 6,
+        "censored": false,
+        "firstProjected": 6,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 13,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 18,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "repeat",
+          "basic",
+          "repeat",
+          "A"
+        ],
+        "id": 1,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 13,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 18,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 1294897909,
+        "roster": [
+          "repeat",
+          "basic",
+          "W",
+          "repeat"
+        ],
+        "id": 1,
+        "escaped": 8,
+        "censored": false,
+        "firstProjected": 7,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 2,
+            "sanity": 2,
+            "cash": 13,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 2,
+            "sanity": 2,
+            "cash": 18,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 4,
+            "income": 2,
+            "sanity": 2,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      },
+      {
+        "n": 4,
+        "seed": 273090512,
+        "roster": [
+          "mixed",
+          "repeat",
+          "basic",
+          "C"
+        ],
+        "id": 2,
+        "escaped": 9,
+        "censored": false,
+        "firstProjected": 9,
+        "grown": 5,
+        "longest": 3,
+        "sequence": [
+          {
+            "week": 2,
+            "income": 1,
+            "sanity": 3,
+            "cash": 15,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          {
+            "week": 3,
+            "income": 1,
+            "sanity": 3,
+            "cash": 19,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          {
+            "week": 4,
+            "income": 1,
+            "sanity": 3,
+            "cash": 23,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 1,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          }
+        ],
+        "postGrowthLongest": 0
+      }
+    ]
+  }
+}

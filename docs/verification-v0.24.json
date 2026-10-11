@@ -1,0 +1,32 @@
+{
+  "baselineCommit": "fb70c15736af1021bdaaba2a35698a9f4ed293e6",
+  "version": "0.24.0",
+  "rulesVersion": 24,
+  "syntaxFiles": 74,
+  "pairedPolicyMatchesOriginal": true,
+  "generatedCardsMatch": true,
+  "staticBuildPassed": true,
+  "tests": {
+    "passed": 155,
+    "failed": 0,
+    "skipped": 0
+  },
+  "botSmoke": {
+    "games": 36,
+    "ended": 36,
+    "minWeeks": 5,
+    "maxWeeks": 9
+  },
+  "canonicalSha256": "73f72f182b18edbc0de06b7fb555d01991bdc484216150ec91afe0e0afb0f87c",
+  "engineSha256": "4976ea7685ce10b7c8bdb08141f5a084fca233101f69fca48aa040d77a9a9817",
+  "cardsSha256": "77e3ff362d17adf068ff34a5a43b567d83ae9bba80e66ae6c813c6b4ca0e05a4",
+  "policySha256": "1154775b0f54a0b787e56608928c5a452be9bee807c68ce03b21e0f52e59d4df",
+  "evaluation": {
+    "originalConfigurations": 504,
+    "newHoldoutConfigurations": 504,
+    "fairHoldoutPairs": 336,
+    "developmentFairPairs": 96,
+    "validationFairPairs": 192
+  },
+  "note": "Candidate files are the ones used by the final regression/matrix tests. Supply changes alter shuffle consumption: paired seeds do not imply identical market or event order."
+}

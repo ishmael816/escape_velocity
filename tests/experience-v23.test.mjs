@@ -28,7 +28,7 @@ test('v23: direct growth uses a real finite card, full printed price and one pur
  const g=make(),p=g.players[0],ids=supplyIds(g),before=structuredClone(g),offers=E.learningOffers(g,0);
  assert.deepEqual(g,before);assert.equal(offers.length,4);assert.deepEqual(offers.map(c=>getCard(c).skill),[...'WABC']);
  const c=offers.find(c=>c.type==='A-G1'),money=p.money,actions=g.actionCount;
- E.learn(g,0,c.type);assert(p.cards.includes(c));assert.equal(p.money,money-1);assert.equal(g.actionCount,actions+1);assert.equal(E.findPlacement(p,c.uid),null);assert.deepEqual(supplyIds(g),ids);
+ E.learn(g,0,c.type);assert(p.cards.includes(c));assert.equal(p.money,money-2);assert.equal(g.actionCount,actions+1);assert.equal(E.findPlacement(p,c.uid),null);assert.deepEqual(supplyIds(g),ids);
  turn(g);unchanged(g,()=>E.learn(g,0,'A-G1'));assert.equal(E.learningOffers(g,0).find(c=>getCard(c).skill==='A').type,'A-G2');
  const a=g.actionCount;E.place(g,0,c.uid,{day:6,period:0});assert.equal(g.actionCount,a+1);finish(g);assert.equal(E.skillCounts(p).A,1);
 });
@@ -98,6 +98,6 @@ for(const n of [2,3,4])for(const route of 'WABC')test(`v23: ${n} players, ${rout
    const c=p.cards.find(c=>c.type===route+'-'+suffix);assert.equal(p.money,before-getCard(c).price.money);assert.equal(g.actionCount,actions+1);
    turn(g,seat);E.place(g,seat,c.uid,{day:4,period});assert.deepEqual(supplyIds(g),ids);
   }
-  finish(g);assert.equal(E.skillCounts(p)[route],2);assert.equal(p.money,9);assert.equal(p.sanity,3);assert.equal(p.cards.length,0);assert.deepEqual(supplyIds(g),ids);
+  finish(g);assert.equal(E.skillCounts(p)[route],2);assert.equal(p.money,8);assert.equal(p.sanity,3);assert.equal(p.cards.length,0);assert.deepEqual(supplyIds(g),ids);
  }
 });

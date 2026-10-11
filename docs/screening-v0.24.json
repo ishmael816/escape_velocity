@@ -1,0 +1,2359 @@
+{
+  "baselineCommit": "fb70c15736af1021bdaaba2a35698a9f4ed293e6",
+  "policyRevision": 5,
+  "note": "Same policy/seed/seat matrix for each candidate. Maintenance was not used to rank exploratory screens; authoritative final reports use actually funded settlement fees. No human win-rate claim.",
+  "screeningSeeds": [
+    7,
+    42,
+    20261009,
+    1,
+    2,
+    3,
+    11,
+    23
+  ],
+  "validScreened": 30,
+  "invalidProbe": {
+    "name": "hybrid_fee",
+    "reason": "Attempted upkeep on non-support cards; engine only funds support upkeep. Excluded rather than used as a rule candidate."
+  },
+  "screens": [
+    {
+      "name": "advanced_price",
+      "changes": {
+        "W-H": {
+          "price": 6
+        },
+        "A-H": {
+          "price": 7
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7916666666666666,
+      "gameWeeksMean": 5.614583333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 7.4,
+          "cards": 7.2,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.5,
+          "cards": 6.166666666666667,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5,
+          "cards": 6.666666666666667,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.28125,
+          "week": 5.714285714285714,
+          "cards": 6.714285714285714,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.15625,
+          "week": 6.25,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 85,
+          "share": 0.7916666666666666,
+          "week": 5.705882352941177,
+          "cards": 5.1647058823529415,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "base",
+      "changes": {},
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7916666666666666,
+      "gameWeeksMean": 5.458333333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.333333333333333,
+          "cards": 7.333333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.833333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.40625,
+          "week": 4.875,
+          "cards": 6.25,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.1875,
+          "week": 5.5,
+          "cards": 6.75,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 5.666666666666667,
+          "cards": 6.333333333333333,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 84,
+          "share": 0.7916666666666666,
+          "week": 5.583333333333333,
+          "cards": 5.142857142857143,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "b_pair",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.734375,
+      "gameWeeksMean": 5.15625,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6.6,
+          "cards": 7.6,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.34375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 4.875,
+          "cards": 5.875,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.1875,
+          "week": 5.75,
+          "cards": 6.75,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 77,
+          "share": 0.734375,
+          "week": 5.285714285714286,
+          "cards": 4.857142857142857,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.0625,
+          "week": 8.5,
+          "cards": 8.5,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "b_pair_a_support",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 2
+        },
+        "A-S": {
+          "support": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7135416666666666,
+      "gameWeeksMean": 5.166666666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 6.333333333333333,
+          "cards": 7.833333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.34375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 4.875,
+          "cards": 5.875,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.1875,
+          "week": 5.75,
+          "cards": 6.75,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 75,
+          "share": 0.7135416666666666,
+          "week": 5.306666666666667,
+          "cards": 5,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 7.333333333333333,
+          "cards": 8.666666666666666,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "b_pair_capital",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 2
+        },
+        "C-H": {
+          "capital": 6
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.734375,
+      "gameWeeksMean": 5.166666666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6.6,
+          "cards": 7.6,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.34375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 4.875,
+          "cards": 5.875,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 6.2,
+          "cards": 5.6,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 78,
+          "share": 0.734375,
+          "week": 5.32051282051282,
+          "cards": 4.884615384615385,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.0625,
+          "week": 8.5,
+          "cards": 8.5,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "b_pair_c_high",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 2
+        },
+        "C-H": {
+          "support": 2,
+          "capital": 6
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.734375,
+      "gameWeeksMean": 5.15625,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6.6,
+          "cards": 7.6,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.34375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 4.875,
+          "cards": 5.875,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 6,
+          "cards": 5.6,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 78,
+          "share": 0.734375,
+          "week": 5.32051282051282,
+          "cards": 4.884615384615385,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.0625,
+          "week": 8.5,
+          "cards": 8.5,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "b_pair_c_medium",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 2
+        },
+        "C-M": {
+          "stress": 0
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7291666666666666,
+      "gameWeeksMean": 5.15625,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6.6,
+          "cards": 7.6,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.34375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 4.875,
+          "cards": 5.875,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6,
+          "cards": 6.4,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 77,
+          "share": 0.7291666666666666,
+          "week": 5.285714285714286,
+          "cards": 4.857142857142857,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.0625,
+          "week": 8.5,
+          "cards": 8.5,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "b_specialist",
+      "changes": {
+        "B-H": {
+          "support": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7447916666666666,
+      "gameWeeksMean": 5.364583333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.333333333333333,
+          "cards": 7.333333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.833333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.40625,
+          "week": 4.875,
+          "cards": 6.25,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.5,
+          "week": 5,
+          "cards": 6,
+          "idleP90": 0
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.09375,
+          "week": 5,
+          "cards": 7,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 79,
+          "share": 0.7447916666666666,
+          "week": 5.518987341772152,
+          "cards": 5.025316455696203,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "b_support",
+      "changes": {
+        "B-S": {
+          "support": 3
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7395833333333334,
+      "gameWeeksMean": 5.3125,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.25,
+          "week": 6.666666666666667,
+          "cards": 7.5,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 5.333333333333333,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6,
+          "cards": 6.4,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 79,
+          "share": 0.7395833333333334,
+          "week": 5.443037974683544,
+          "cards": 4.962025316455696,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.09375,
+          "week": 8,
+          "cards": 8.666666666666666,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "channel_support",
+      "changes": {
+        "C-X": {
+          "support": 1
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7864583333333334,
+      "gameWeeksMean": 5.479166666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.333333333333333,
+          "cards": 7.333333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.833333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.40625,
+          "week": 4.875,
+          "cards": 6.25,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.1875,
+          "week": 5.5,
+          "cards": 6.75,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.15625,
+          "week": 6,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 84,
+          "share": 0.7864583333333334,
+          "week": 5.607142857142857,
+          "cards": 5.142857142857143,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "c_medium",
+      "changes": {
+        "C-M": {
+          "stress": 0
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7760416666666666,
+      "gameWeeksMean": 5.427083333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.333333333333333,
+          "cards": 7.333333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.833333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.40625,
+          "week": 4.875,
+          "cards": 6.25,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.1875,
+          "week": 5.5,
+          "cards": 6.75,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6.2,
+          "cards": 6.6,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 83,
+          "share": 0.7760416666666666,
+          "week": 5.530120481927711,
+          "cards": 5.132530120481928,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "entry_cost",
+      "changes": {
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        },
+        "B-G1": {
+          "price": 2
+        },
+        "C-G1": {
+          "price": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.6145833333333334,
+      "gameWeeksMean": 6.270833333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 8,
+          "cards": 7.6,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.46875,
+          "week": 7.5,
+          "cards": 6.7,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.53125,
+          "week": 5.909090909090909,
+          "cards": 6.909090909090909,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.65625,
+          "week": 5.833333333333333,
+          "cards": 6.666666666666667,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.3125,
+          "week": 6.571428571428571,
+          "cards": 7.428571428571429,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 70,
+          "share": 0.6145833333333334,
+          "week": 6.271428571428571,
+          "cards": 5.3,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 9.666666666666666,
+          "cards": 9.333333333333334,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "entry_support",
+      "changes": {
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        },
+        "B-G1": {
+          "price": 2
+        },
+        "C-G1": {
+          "price": 2
+        },
+        "B-S": {
+          "support": 3
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.5677083333333334,
+      "gameWeeksMean": 6.010416666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.25,
+          "week": 7.2,
+          "cards": 7,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.4375,
+          "week": 7.333333333333333,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.53125,
+          "week": 4.777777777777778,
+          "cards": 6.666666666666667,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 14,
+          "share": 0.84375,
+          "week": 5.571428571428571,
+          "cards": 6.428571428571429,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.4375,
+          "week": 6.333333333333333,
+          "cards": 6.888888888888889,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 61,
+          "share": 0.5677083333333334,
+          "week": 6.147540983606557,
+          "cards": 5.295081967213115,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.09375,
+          "week": 8.5,
+          "cards": 9,
+          "idleP90": 1
+        }
+      }
+    },
+    {
+      "name": "entry_w",
+      "changes": {
+        "W-G1": {
+          "price": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.734375,
+      "gameWeeksMean": 5.875,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 6.833333333333333,
+          "cards": 7.666666666666667,
+          "idleP90": 3
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 6.833333333333333,
+          "cards": 6.833333333333333,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.40625,
+          "week": 4.875,
+          "cards": 6.25,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.28125,
+          "week": 6.285714285714286,
+          "cards": 6.714285714285714,
+          "idleP90": 3
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 7.333333333333333,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 79,
+          "share": 0.734375,
+          "week": 5.936708860759493,
+          "cards": 5.113924050632911,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.0625,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 5
+        }
+      }
+    },
+    {
+      "name": "entry_wa",
+      "changes": {
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.6770833333333334,
+      "gameWeeksMean": 5.96875,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.25,
+          "week": 7.285714285714286,
+          "cards": 7.714285714285714,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.4375,
+          "week": 6.428571428571429,
+          "cards": 6.714285714285714,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.4375,
+          "week": 5.222222222222222,
+          "cards": 6.777777777777778,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.46875,
+          "week": 6.3,
+          "cards": 6.8,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.25,
+          "week": 6.25,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 73,
+          "share": 0.6770833333333334,
+          "week": 6.068493150684931,
+          "cards": 5.465753424657534,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.09375,
+          "week": 8.5,
+          "cards": 9.5,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "entry_wa_support",
+      "changes": {
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        },
+        "B-S": {
+          "support": 3
+        },
+        "A-S": {
+          "support": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.6145833333333334,
+      "gameWeeksMean": 5.958333333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.25,
+          "week": 7.5,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.53125,
+          "week": 6.222222222222222,
+          "cards": 6.888888888888889,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.53125,
+          "week": 5.090909090909091,
+          "cards": 6.7272727272727275,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.46875,
+          "week": 5.7,
+          "cards": 6.6,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 6.375,
+          "cards": 6.375,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 68,
+          "share": 0.6145833333333334,
+          "week": 6.088235294117647,
+          "cards": 5.205882352941177,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 2,
+          "share": 0.09375,
+          "week": 8.5,
+          "cards": 9,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "final_candidate",
+      "changes": {
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        },
+        "B-G1": {
+          "price": 2
+        },
+        "C-G1": {
+          "price": 2
+        },
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 1,
+          "price": 6
+        },
+        "C-H": {
+          "capital": 4
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6302083333333334,
+      "gameWeeksMean": 5.927083333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.25,
+          "week": 7.5,
+          "cards": 7.5,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.5,
+          "week": 6.2,
+          "cards": 5.7,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.59375,
+          "week": 5.090909090909091,
+          "cards": 5.909090909090909,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 13,
+          "share": 0.53125,
+          "week": 5.461538461538462,
+          "cards": 5.461538461538462,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.21875,
+          "week": 6.75,
+          "cards": 6.25,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 73,
+          "share": 0.6302083333333334,
+          "week": 6.013698630136986,
+          "cards": 4.821917808219178,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.125,
+          "week": 8.75,
+          "cards": 8.75,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "hybrid_support_fee",
+      "changes": {
+        "A-X": {
+          "upkeep": 1
+        },
+        "C-X": {
+          "upkeep": 1
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7864583333333334,
+      "gameWeeksMean": 5.479166666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.333333333333333,
+          "cards": 7.333333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.833333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.4375,
+          "week": 4.888888888888889,
+          "cards": 6.444444444444445,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.1875,
+          "week": 5.5,
+          "cards": 6.75,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 5.666666666666667,
+          "cards": 6.333333333333333,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 84,
+          "share": 0.7864583333333334,
+          "week": 5.607142857142857,
+          "cards": 5.166666666666667,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "route_pair",
+      "changes": {
+        "B-H": {
+          "support": 2
+        },
+        "C-H": {
+          "capital": 6
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7395833333333334,
+      "gameWeeksMean": 5.364583333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.333333333333333,
+          "cards": 7.333333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.3125,
+          "week": 5.833333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.40625,
+          "week": 4.875,
+          "cards": 6.25,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.5,
+          "week": 5,
+          "cards": 6,
+          "idleP90": 0
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 6,
+          "cards": 6,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 79,
+          "share": 0.7395833333333334,
+          "week": 5.518987341772152,
+          "cards": 5.025316455696203,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 7,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "specialist_balanced",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 2
+        },
+        "C-M": {
+          "stress": 0
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6770833333333334,
+      "gameWeeksMean": 5.416666666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 7.8,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.5,
+          "week": 5.333333333333333,
+          "cards": 5.416666666666667,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.40625,
+          "week": 5.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 14,
+          "share": 0.65625,
+          "week": 4.214285714285714,
+          "cards": 5,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 6,
+          "cards": 7.666666666666667,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 80,
+          "share": 0.6770833333333334,
+          "week": 5.625,
+          "cards": 4.775,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.09375,
+          "week": 7.666666666666667,
+          "cards": 8.333333333333334,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "specialist_budget",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 1
+        },
+        "C-H": {
+          "capital": 4
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6927083333333334,
+      "gameWeeksMean": 5.604166666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 7.8,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.46875,
+          "week": 5.363636363636363,
+          "cards": 5.363636363636363,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.5,
+          "week": 5.75,
+          "cards": 6.083333333333333,
+          "idleP90": 2
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.4375,
+          "week": 4.666666666666667,
+          "cards": 4.555555555555555,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 6.8,
+          "cards": 6.8,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 82,
+          "share": 0.6927083333333334,
+          "week": 5.7439024390243905,
+          "cards": 4.7926829268292686,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.09375,
+          "week": 7.666666666666667,
+          "cards": 8.333333333333334,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "specialist_entry",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 1
+        },
+        "C-H": {
+          "capital": 4
+        },
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        },
+        "B-G1": {
+          "price": 2
+        },
+        "C-G1": {
+          "price": 2
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6197916666666666,
+      "gameWeeksMean": 5.885416666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.25,
+          "week": 7.5,
+          "cards": 7.5,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.5,
+          "week": 5.9,
+          "cards": 5.8,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.625,
+          "week": 5.083333333333333,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.5625,
+          "week": 5.818181818181818,
+          "cards": 4.7272727272727275,
+          "idleP90": 2
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.21875,
+          "week": 6.75,
+          "cards": 6.25,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 70,
+          "share": 0.6197916666666666,
+          "week": 6.014285714285714,
+          "cards": 4.757142857142857,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.125,
+          "week": 8.75,
+          "cards": 8.75,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "specialist_light",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 1
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6875,
+      "gameWeeksMean": 5.614583333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 7.8,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.5,
+          "week": 5.416666666666667,
+          "cards": 5.5,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.5,
+          "week": 5.75,
+          "cards": 6.083333333333333,
+          "idleP90": 2
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 9,
+          "share": 0.4375,
+          "week": 4.666666666666667,
+          "cards": 4.555555555555555,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 6.8,
+          "cards": 7.2,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 82,
+          "share": 0.6875,
+          "week": 5.7560975609756095,
+          "cards": 4.7926829268292686,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.09375,
+          "week": 7.666666666666667,
+          "cards": 8.333333333333334,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "specialist_prices",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "W-H": {
+          "price": 6
+        },
+        "A-H": {
+          "price": 7
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6666666666666666,
+      "gameWeeksMean": 6.020833333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 7.6,
+          "cards": 6.8,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.53125,
+          "week": 5.818181818181818,
+          "cards": 5.7272727272727275,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.53125,
+          "week": 6.333333333333333,
+          "cards": 6.75,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.4375,
+          "week": 6.1,
+          "cards": 5.8,
+          "idleP90": 2
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 7.6,
+          "cards": 7.6,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 80,
+          "share": 0.6666666666666666,
+          "week": 6.1125,
+          "cards": 5.0375,
+          "idleP90": 3
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 9.6,
+          "cards": 8.6,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "specialist_supply",
+      "changes": {},
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6927083333333334,
+      "gameWeeksMean": 5.864583333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.1875,
+          "week": 7.833333333333333,
+          "cards": 7.5,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.46875,
+          "week": 5.7,
+          "cards": 5.9,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.46875,
+          "week": 5.6,
+          "cards": 6,
+          "idleP90": 2
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.40625,
+          "week": 6,
+          "cards": 6.363636363636363,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 7.6,
+          "cards": 7.2,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 83,
+          "share": 0.6927083333333334,
+          "week": 5.963855421686747,
+          "cards": 5.0120481927710845,
+          "idleP90": 3
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.125,
+          "week": 7.75,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "specialist_support",
+      "changes": {
+        "B-S": {
+          "support": 3
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.6822916666666666,
+      "gameWeeksMean": 5.75,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 7.8,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.5625,
+          "week": 5.416666666666667,
+          "cards": 5.5,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 11,
+          "share": 0.5,
+          "week": 5.818181818181818,
+          "cards": 6.090909090909091,
+          "idleP90": 2
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.34375,
+          "week": 6,
+          "cards": 5.625,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.1875,
+          "week": 6.8,
+          "cards": 7.2,
+          "idleP90": 1
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 81,
+          "share": 0.6822916666666666,
+          "week": 5.814814814814815,
+          "cards": 4.8765432098765435,
+          "idleP90": 2
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.15625,
+          "week": 8.6,
+          "cards": 8.4,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "specialist_wa_entry",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "B-H": {
+          "support": 1
+        },
+        "C-H": {
+          "capital": 4
+        },
+        "W-G1": {
+          "price": 2
+        },
+        "A-G1": {
+          "price": 2
+        }
+      },
+      "specialistCopies": "playerCount",
+      "games": 96,
+      "mixedShare": 0.625,
+      "gameWeeksMean": 5.666666666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.125,
+          "week": 7.25,
+          "cards": 7,
+          "idleP90": 1
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 13,
+          "share": 0.6875,
+          "week": 5.846153846153846,
+          "cards": 6.153846153846154,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 12,
+          "share": 0.625,
+          "week": 5,
+          "cards": 6,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 10,
+          "share": 0.53125,
+          "week": 5.2,
+          "cards": 4.9,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.25,
+          "week": 6,
+          "cards": 6,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 69,
+          "share": 0.625,
+          "week": 5.898550724637682,
+          "cards": 4.840579710144928,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 1,
+          "share": 0.03125,
+          "week": 6,
+          "cards": 9,
+          "idleP90": 3
+        }
+      }
+    },
+    {
+      "name": "support_capital",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "C-H": {
+          "capital": 6
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7395833333333334,
+      "gameWeeksMean": 5.322916666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.25,
+          "week": 6.666666666666667,
+          "cards": 7.5,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 5.333333333333333,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.21875,
+          "week": 6.333333333333333,
+          "cards": 5.5,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 80,
+          "share": 0.7395833333333334,
+          "week": 5.475,
+          "cards": 4.9875,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.09375,
+          "week": 8,
+          "cards": 8.666666666666666,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "support_pair",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "A-S": {
+          "support": 2
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.71875,
+      "gameWeeksMean": 5.302083333333333,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.3125,
+          "week": 6.428571428571429,
+          "cards": 7.714285714285714,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 5.333333333333333,
+          "cards": 6.5,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6,
+          "cards": 6.4,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 77,
+          "share": 0.71875,
+          "week": 5.441558441558442,
+          "cards": 5.025974025974026,
+          "idleP90": 1
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 4,
+          "share": 0.15625,
+          "week": 7.25,
+          "cards": 8.75,
+          "idleP90": 2
+        }
+      }
+    },
+    {
+      "name": "support_three",
+      "changes": {
+        "B-S": {
+          "support": 3
+        },
+        "A-S": {
+          "support": 2
+        },
+        "B-H": {
+          "support": 2
+        },
+        "C-M": {
+          "stress": 0
+        }
+      },
+      "specialistCopies": "ceil(playerCount/2)",
+      "games": 96,
+      "mixedShare": 0.7083333333333334,
+      "gameWeeksMean": 5.166666666666667,
+      "policies": {
+        "basic": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.28125,
+          "week": 6.333333333333333,
+          "cards": 7.833333333333333,
+          "idleP90": 2
+        },
+        "W": {
+          "n": 16,
+          "escapeN": 7,
+          "share": 0.34375,
+          "week": 5.571428571428571,
+          "cards": 6.142857142857143,
+          "idleP90": 1
+        },
+        "A": {
+          "n": 16,
+          "escapeN": 6,
+          "share": 0.34375,
+          "week": 4.333333333333333,
+          "cards": 6.333333333333333,
+          "idleP90": 1
+        },
+        "B": {
+          "n": 16,
+          "escapeN": 8,
+          "share": 0.4375,
+          "week": 4.875,
+          "cards": 5.875,
+          "idleP90": 1
+        },
+        "C": {
+          "n": 16,
+          "escapeN": 5,
+          "share": 0.21875,
+          "week": 6,
+          "cards": 6.4,
+          "idleP90": 2
+        },
+        "mixed": {
+          "n": 96,
+          "escapeN": 75,
+          "share": 0.7083333333333334,
+          "week": 5.306666666666667,
+          "cards": 4.986666666666666,
+          "idleP90": 0
+        },
+        "repeat": {
+          "n": 16,
+          "escapeN": 3,
+          "share": 0.125,
+          "week": 7.333333333333333,
+          "cards": 8.666666666666666,
+          "idleP90": 2
+        }
+      }
+    }
+  ],
+  "cohorts": {
+    "development": {
+      "construction": "LCG seed 230024, fixed before validation",
+      "validation": [
+        1642513479,
+        1380594938,
+        666451985,
+        1376188988,
+        2656669803,
+        284748494,
+        884929493,
+        3474273072,
+        848800975,
+        489960418,
+        2513674713,
+        4175143268,
+        614989171,
+        3358434358,
+        2675166749,
+        2588211416
+      ],
+      "holdout": [
+        3660424791,
+        3213234122,
+        3946986657,
+        2125278604,
+        504105851,
+        2929822366,
+        21754213,
+        576025472
+      ]
+    },
+    "secondReserved": {
+      "note": "Fresh holdout reserved after initial candidate failed the first holdout; prior holdout now validation only.",
+      "seeds": [
+        1313525983,
+        1799055538,
+        2475438185,
+        1343766196,
+        372890243,
+        3241819654,
+        1336966573,
+        3764208424
+      ]
+    },
+    "finalReserved": {
+      "note": "Final cashflow candidate frozen before this new cohort; all earlier cohorts remain disclosed as development/validation.",
+      "seeds": [
+        1490373735,
+        834920090,
+        2333908273,
+        223179996,
+        795445899,
+        965828206,
+        1294897909,
+        273090512
+      ]
+    }
+  },
+  "finalChanges": {
+    "W-G1": {
+      "price": 2
+    },
+    "A-G1": {
+      "price": 2
+    },
+    "B-G1": {
+      "price": 2
+    },
+    "C-G1": {
+      "price": 2
+    },
+    "B-S": {
+      "support": 3
+    },
+    "B-H": {
+      "support": 1,
+      "price": 6
+    },
+    "C-H": {
+      "capital": 4
+    },
+    "C-M": {
+      "capital": 2
+    }
+  },
+  "finalSupply": {
+    "specialistAdvanced": "playerCount",
+    "hybridAdvanced": "ceil(playerCount/2)"
+  }
+}

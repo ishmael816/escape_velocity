@@ -30,8 +30,8 @@ test('regression: support fees follow calendar order, skip an unaffordable expen
   const g=make({startMoney:3}),p=g.players[0];rig(g,p,[['B-S',2],['W-S',1],['W-S',0]]);
   const expected=['0-0','1-0','2-0'].map(k=>p.schedule[k][0]);lock(g);E.rollInspections(g);
   assert.deepEqual(p.supports.map(x=>x.uid),expected);assert.deepEqual(p.supports.map(x=>x.active),[true,false,true]);
-  assert.equal(p.money,0);assert.equal(p.sanity,9);assert.equal(E.findPlacement(p,expected[1]),null);
-  E.resolveAll(g);assert.equal(p.money,3);assert.equal(p.sanity,9);
+  assert.equal(p.money,0);assert.equal(p.sanity,10);assert.equal(E.findPlacement(p,expected[1]),null);
+  E.resolveAll(g);assert.equal(p.money,3);assert.equal(p.sanity,10);
 });
 
 test('regression: unfunded support does not reactivate from later income or auto-arrange next week',()=>{
@@ -54,7 +54,7 @@ for(const period of [0,1])test(`regression: team on 8h support half ${period} di
 test('regression: protected 4h paid support remains funded and effective on an inspected day',()=>{
   const g=make(),p=g.players[0];rig(g,p,[['B-S',0]]);p.protectionFrom=1;E.setProtection(g,0,{day:0,period:0});
   g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
-  assert.equal(p.money,10);assert.equal(p.sanity,5);assert.equal(p.caught,0);assert.equal(p.supports[0].active,true);
+  assert.equal(p.money,10);assert.equal(p.sanity,6);assert.equal(p.caught,0);assert.equal(p.supports[0].active,true);
 });
 
 test('regression: support and pressure are applied before the upper clamp; withdrawal cannot manufacture sanity',()=>{
