@@ -65,13 +65,38 @@ export function activityDanger(g,p,c,s){const d=getCard(c);return coveredSlots(d
 export function createGame(options={}){
  const config={...DEFAULTS,...options};for(const [k,v]of Object.entries(DEFAULTS))if(typeof v==='number')config[k]=Number.isFinite(Number(config[k]))?Math.max(0,Math.floor(Number(config[k]))):v;
  config.playerCount=Math.min(4,Math.max(2,config.playerCount));config.maxSanity=10;config.escapeSanity=Math.min(10,config.escapeSanity);config.startSanity=Math.min(10,config.startSanity);config.escapeIncome=Math.min(10,Math.max(1,config.escapeIncome));delete config.nightStress3;delete config.livingCost;delete config.starterActivity;delete config.startInspiration;
- const g={version:22,opportunity:null,opportunityHistory:[],resolutionQueue:null,sanityModel:'support-v1',progressModel:1,config,random:config.seed||1,diceRandom:((config.seed^0x9e3779b9)>>>0)||1,uid:0,week:1,day:0,turn:0,first:0,phase:'planning',players:[],decks:{4:[],8:[]},discard:{4:[],8:[]},market:{4:[],8:[]},inspectionDeck:[],inspectionDiscard:[],logs:[],history:[],timeline:[],cursor:0,actionCount:0,escapeDecisions:{},diceRolls:[]};
+ const g={version:23,opportunity:null,opportunityHistory:[],resolutionQueue:null,sanityModel:'support-v1',progressModel:1,config,random:config.seed||1,diceRandom:((config.seed^0x9e3779b9)>>>0)||1,uid:0,week:1,day:0,turn:0,first:0,phase:'planning',players:[],decks:{4:[],8:[]},discard:{4:[],8:[]},market:{4:[],8:[]},inspectionDeck:[],inspectionDiscard:[],logs:[],history:[],timeline:[],cursor:0,actionCount:0,escapeDecisions:{},diceRolls:[]};
  for(let id=0;id<config.playerCount;id++)g.players.push({id,name:id===0?'你':`玩家 ${id+1}`,bot:config.mode==='bots'&&id>0,money:config.startMoney,sanity:config.startSanity,inspirationSlots:[],escaped:false,escapedWeek:null,weekend:false,tempWeekend:false,freeDays:[],cards:[],completedActivities:[],skills:[],upgrades:[],drafts:[],schedule:{},income:0,caught:0,jobsDone:0,activeRoutes:[]});
  for(const d of [...CARDS,...ADVANCED])for(let n=0;n<(d.tier==='advanced'?Math.ceil(config.playerCount/2):config.playerCount);n++)g.decks[marketLane(d)].push(instance(g,d.id));
  for(const key of Object.keys(g.decks))g.decks[key]=shuffle(g,g.decks[key]);fillMarket(g);startWeek(g);return g;
 }
 function draw(g,lane){if(!g.decks[lane].length){g.decks[lane]=shuffle(g,g.discard[lane]);g.discard[lane]=[];}return g.decks[lane].pop();}
-function fillMarket(g){for(const [lane,n]of Object.entries(MARKET_LIMITS))while(g.market[lane].length<n){const c=draw(g,lane);if(!c)break;g.market[lane].push(c);}}
+function fillMarket(g){for(const [lane,n]of Object.entries(MARKET_LIMITS))while(g.market[lane].length<n){const c=draw(g,lane);if(!c)break;c.marketSince=g.week;g.market[lane].push(c);}}
+function clearStaleMarket(g){
+ const stale={};
+ for(const lane of Object.keys(g.market)){
+  stale[lane]=g.market[lane].filter(c=>g.week-(c.marketSince??g.week)>=2);
+  g.market[lane]=g.market[lane].filter(c=>!stale[lane].includes(c));
+ }
+ const n=Object.values(stale).flat().length;if(!n)return;
+ // Draw replacements with old offers set aside; reuse only if supply runs out.
+ fillMarket(g);for(const lane of Object.keys(stale))returnBottom(g,lane,stale[lane]);fillMarket(g);
+ log(g,null,`清理 ${n} 张连续两周未售出的牌；展示位独立计龄。`,'market-aging');
+}
+export function learningOffers(g,id){
+ const p=g.players[id],owned=new Set([...p.cards,...p.skills].map(c=>c.type));
+ const available=[...Object.values(g.market).flat(),...Object.values(g.decks).flat(),...Object.values(g.discard).flat()];
+ return [...'WABC'].map(route=>CARDS.filter(d=>d.skill===route&&!owned.has(d.id)).sort((a,b)=>a.price.money-b.price.money).map(d=>available.find(c=>c.type===d.id)).find(Boolean)).filter(Boolean);
+}
+export function learn(g,id,type){
+ assertTurn(g,id);const p=g.players[id],c=learningOffers(g,id).find(c=>c.type===type);
+ if(!c)throw Error('该成长牌已持有、已归档或公共供给已用尽。');
+ const d=getCard(c);if(!canPay(p,d.price))throw Error('资金不足，无法按原价购买成长牌。');
+ if(Object.values(g.market).flat().includes(c)){buy(g,id,c.uid);return;}
+ const pile=[...Object.values(g.decks),...Object.values(g.discard)].find(a=>a.includes(c));
+ pile.splice(pile.indexOf(c),1);pay(p,d.price);p.cards.push(c);
+ log(g,p,`定向购买成长牌「${d.name}」：原价 ${d.price.money}，仍需另一次行动安排。`,'learning');advance(g);
+}
 function refreshMondayMarket(g){
  // Set all old offers aside so replacements cannot immediately draw them again.
  const previous=g.market;g.market={4:[],8:[]};fillMarket(g);
@@ -84,6 +109,7 @@ function refreshMondayMarket(g){
 function resetExecution(p){p.income=0;p.weeklyEarnings=[];p.settlement=null;p.jobsDone=0;p.activeRoutes=[];p.pendingBoost=null;p.professionalDone=false;p.capitalJobDone=false;}
 function startWeek(g){
  g.phase='planning';g.day=0;g.turn=0;g.actionCount=0;g.dayPasses=0;g.endedByPass=false;g.timeline=[];g.cursor=0;g.resolutionQueue=null;g.inspectionResolved=false;g.mondayMarketBought=false;g.mondayMarketRefreshed=false;
+ clearStaleMarket(g);
  if(!g.inspectionDeck.length){g.inspectionDeck=shuffle(g,EVENTS.map((_,i)=>i));g.inspectionDiscard=[];}
  const index=g.inspectionDeck.pop();g.inspectionDiscard.push(index);const e=EVENTS[index];g.inspection={...e,times:[],rolls:[],blockedTimes:(e.blockedTimes||[]).map(([day,period])=>({day,period}))};
  for(const p of g.players){p.tempWeekend=e.kind==='weekend'&&!p.escaped;resetExecution(p);p.caught=0;p.protectedSlot=null;delete p.protectedUid;p.protectionChosen=false;p.actedThisWeek=false;p.emptyNights=null;refreshInspiration(p);syncSanity(g,p);}
@@ -103,7 +129,7 @@ function advance(g,passed=false){
  if(g.day===7){g.phase='resolving';g.timeline=slots().filter(s=>g.players.some(p=>resolvingCards(p,s).length));g.cursor=0;for(const p of g.players)p.emptyNights=7-Object.keys(p.schedule).filter(k=>k.endsWith('-2')).length;log(g,null,'日程已锁定，接下来掷公共查岗骰。','inspection');}
 }
 export function buy(g,id,uid){assertTurn(g,id);const p=g.players[id],lane=Object.keys(g.market).find(k=>g.market[k].some(c=>c.uid===uid)),c=g.market[lane]?.find(c=>c.uid===uid);if(!c)throw Error('该牌已不在市场。');if(!canPay(p,getCard(c).price))throw Error('资金不足。');pay(p,getCard(c).price);p.cards.push(c);g.market[lane]=g.market[lane].filter(x=>x.uid!==uid);fillMarket(g);if(g.day===0&&!p.escaped)g.mondayMarketBought=true;log(g,p,`购买「${getCard(c).name}」，安排需另花一次行动。`);advance(g);}
-export function setProtection(g,id,s){assertTurn(g,id);const p=g.players[id];if(!p.protectionFrom||p.protectionFrom>g.week||p.actedThisWeek||p.protectionChosen||!Number.isInteger(s.day)||s.day<0||s.day>5||![0,1].includes(s.period)||!workType(p,s))throw Error('须在本周首次行动前，选择一个工作白天时段。');p.protectedSlot=slotKey(s);p.protectionChosen=true;log(g,p,`弹性授权保护 ${slotLabel(s)} 中的一张 4h 活动，本周锁定。`);}
+export function setProtection(g,id,s){assertTurn(g,id);const p=g.players[id];if(!p.protectionFrom||p.protectionFrom>g.week||p.actedThisWeek||p.protectionChosen||!Number.isInteger(s.day)||s.day<0||s.day>5||![0,1].includes(s.period)||!workType(p,s))throw Error('须在本周首次行动前，选择一个工作白天时段。');p.protectedSlot=slotKey(s);p.lastProtectedSlot=p.protectedSlot;p.protectionChosen=true;log(g,p,`弹性授权保护 ${slotLabel(s)} 中的一张 4h 活动，本周锁定。`);}
 export function pass(g,id){assertTurn(g,id);log(g,g.players[id],`躺平：跳过本次行动。`);advance(g,true);}
 export function canPlace(g,p,uid,s,investment){
  if(g.phase!=='planning'||activeBuyer(g)!==p.id)return '还未轮到你。';
@@ -135,7 +161,7 @@ export function place(g,id,uid,s,investment){
  const c=cardAt(p,uid),d=getCard(c);s=anchor(d,s);const moved=!!findPlacement(p,uid),capital=d.capitalRatio?(investment??c.lockedCapital??d.capitalRatio):(d.capital||0);
  p.money+=(c.lockedCapital||0)-capital;if(capital)c.lockedCapital=capital;
  const schedule=without(p.schedule,uid);(schedule[slotKey(s)]||=[]).push(uid);changeSchedule(g,p,schedule);
- log(g,p,(moved?'调整':'安排')+'「'+d.name+'」→ '+slotLabel(s)+(capital?'，锁定本金 '+capital:''));advance(g);
+ log(g,p,(moved?'调整':'安排')+'「'+d.name+'」→ '+slotLabel(s)+(capital?'，锁定本金 '+capital:''));if(!moved)advance(g);
 }
 function releaseCapital(p,c){p.money+=c.lockedCapital||0;delete c.lockedCapital;}
 function returnToHand(g,p,c,reason){
@@ -145,7 +171,7 @@ function returnToHand(g,p,c,reason){
  changeSchedule(g,p,without(p.schedule,c.uid));
  log(g,p,`「${getCard(c).name}」：${reason}，撤回手牌，解除支持与压力并返还本金。`,'warning');
 }
-export function unplace(g,id,uid){assertTurn(g,id);const p=g.players[id],old=findPlacement(p,uid);if(!old||old.day<g.day)throw Error('只能撤回今天及之后的日程。');releaseCapital(p,cardAt(p,uid));changeSchedule(g,p,without(p.schedule,uid));log(g,p,`撤回「${getCard(cardAt(p,uid)).name}」，释放压力及本金。`);advance(g);}
+export function unplace(g,id,uid){assertTurn(g,id);const p=g.players[id],old=findPlacement(p,uid);if(!old||old.day<g.day)throw Error('只能撤回今天及之后的日程。');releaseCapital(p,cardAt(p,uid));changeSchedule(g,p,without(p.schedule,uid));log(g,p,`撤回「${getCard(cardAt(p,uid)).name}」，释放压力及本金。`);}
 function recycle(g,p,c){delete c.progress;delete c.lastProgressWeek;g.discard[marketLane(getCard(c))].push(c);}
 export function discardCard(g,id,uid){assertTurn(g,id);const p=g.players[id],c=cardAt(p,uid),old=findPlacement(p,uid);if(!c||old&&old.day<g.day)throw Error('不能移除已过去的日程。');releaseCapital(p,c);changeSchedule(g,p,without(p.schedule,uid));p.cards=p.cards.filter(x=>x.uid!==uid);recycle(g,p,c);advance(g);}
 
@@ -327,7 +353,7 @@ export function botAct(g){const p=g.players[activeBuyer(g)];if(g.phase!=='planni
  const hand=unplacedCards(p).filter(c=>{if(p.botRetired?.includes(c.uid))return false;const d=getCard(c);if(!qualified(p,d)||d.skill&&!d.opportunity&&!d.draft&&p.skills.some(x=>x.type===c.type))return false;if(d.support&&!d.income&&!d.boost)return p.sanity<g.config.escapeSanity&&p.money>=(d.upkeep||0);if(!d.once&&!d.income&&!d.boost){if(d.professional&&!d.opportunity)return p.money<8;}return true;}).sort((a,b)=>{const value=c=>{const d=getCard(c);return d.support?44:d.tier==='advanced'?45:d.skill?35:d.income?25:5;};return value(b)-value(a);});for(const c of hand){const target=bestSlot(g,p,c);if(target){place(g,p.id,c.uid,target);return;}}
  const reserve=supportPlan(g,p).filter(x=>x.active).reduce((n,x)=>n+x.fee,0)+4;
  for(const c of p.cards){const d=getCard(c),old=findPlacement(p,c.uid);if(d.capitalRatio&&old&&old.day>=g.day&&p.money>=reserve+d.capitalRatio){const amount=(c.lockedCapital||0)+Math.floor((p.money-reserve)/d.capitalRatio)*d.capitalRatio;if(!canPlace(g,p,c.uid,old,amount)){place(g,p.id,c.uid,old,amount);return;}}}
- if(g.day<6){const offers=Object.values(g.market).flat().filter(c=>canPay(p,getCard(c).price)&&botValue(g,p,c)>4&&(unplacedCards(p).length<4||getCard(c).skill)).sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));if(offers.length){buy(g,p.id,offers[0].uid);return;}}
+ if(g.day<6){const offers=[...new Map([...Object.values(g.market).flat(),...learningOffers(g,p.id)].map(c=>[c.uid,c])).values()].filter(c=>canPay(p,getCard(c).price)&&botValue(g,p,c)>4&&(unplacedCards(p).length<4||getCard(c).skill)).sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));if(offers.length){const c=offers[0];if(Object.values(g.market).flat().includes(c))buy(g,p.id,c.uid);else learn(g,p.id,c.type);return;}}
  pass(g,p.id);
 }
 export function botDraft(g,id){const p=g.players[id];for(const draft of [...p.drafts]){const options=[...draft.options].sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));chooseAdvanced(g,id,draft.id,options[0].uid);}}

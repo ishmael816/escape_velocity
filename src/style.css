@@ -30,3 +30,7 @@
 @media(max-width:1180px){.calendar-scroll{overflow-x:auto}.calendar-grid{min-width:660px}.slot-effect,.opportunity-strip{font-size:9px}}
 @media(min-width:1500px){.card-title h3{font-size:12px}.card-description{font-size:11px}.card-flavor{font-size:9px}}
 @media(max-width:620px){.card-description{font-size:11px}.card-title h3{font-size:13px}.calendar-footer,.hand-hint{font-size:10px}.phase-card>p,.escape-card>p{font-size:11px}.game-card{min-height:230px}}
+/* Compact growth access shares the market; no extra card grid or modal. */
+.growth-access{padding:14px 18px;margin:0 0 18px;border:1px solid #b5c6bb;border-radius:12px;background:#f3f7f1}
+.growth-access h3{margin:0 0 6px}.growth-access p{margin:0 0 10px;font-size:.86rem}
+.growth-options{display:flex;flex-wrap:wrap;gap:8px}.growth-options button{display:flex;align-items:center;gap:5px;padding:9px 12px}

@@ -1,0 +1,1360 @@
+{
+  "schema": 2,
+  "note": "Policy v2 permits useful duplicate cards for every policy. Basic prioritises zero-skill for four weeks then can grow A; repeat never grows. Display age resets on re-admission; continuous UID age can be longer when finite pools are exhausted. N-1 censors the last player; unresolved means watchdog, not loss. Policy probes are not human win rates. Revision 5 also retires obsolete cards in policy memory, preventing immediately re-arranging what it just withdrew; permits multi-step pressure reduction. Same revision is used for both engines.",
+  "seeds": [
+    7,
+    42,
+    20261009,
+    1,
+    2,
+    3,
+    11,
+    23
+  ],
+  "totalGames": 504,
+  "ended": 494,
+  "maxMarketAge": 9,
+  "maxContinuousMarketAge": 9,
+  "summary": {
+    "basic": {
+      "samples": 232,
+      "escaped": 158,
+      "censored": 73,
+      "unresolved": 1,
+      "firstShare2p": 0.3125,
+      "escapeWeekMean": 12.183544303797468,
+      "escapeWeekP90": 17,
+      "cardsMean": 7.031645569620253,
+      "maintenanceMean": 2.5,
+      "idleWeeksMean": 5.530172413793103,
+      "longestIdleP90": 5,
+      "reordersMean": 1.5086206896551724,
+      "paidReordersMean": 1.5086206896551724
+    },
+    "W": {
+      "samples": 232,
+      "escaped": 194,
+      "censored": 38,
+      "unresolved": 0,
+      "firstShare2p": 0.59375,
+      "escapeWeekMean": 7.979381443298969,
+      "escapeWeekP90": 11,
+      "cardsMean": 5.128865979381444,
+      "maintenanceMean": 1.4484536082474226,
+      "idleWeeksMean": 2.560344827586207,
+      "longestIdleP90": 3,
+      "reordersMean": 1.0646551724137931,
+      "paidReordersMean": 1.0646551724137931
+    },
+    "A": {
+      "samples": 232,
+      "escaped": 195,
+      "censored": 36,
+      "unresolved": 1,
+      "firstShare2p": 0.578125,
+      "escapeWeekMean": 8.733333333333333,
+      "escapeWeekP90": 13,
+      "cardsMean": 6.702564102564103,
+      "maintenanceMean": 1.6,
+      "idleWeeksMean": 3.021551724137931,
+      "longestIdleP90": 3,
+      "reordersMean": 1.4051724137931034,
+      "paidReordersMean": 1.4051724137931034
+    },
+    "B": {
+      "samples": 232,
+      "escaped": 169,
+      "censored": 62,
+      "unresolved": 1,
+      "firstShare2p": 0.46875,
+      "escapeWeekMean": 10.017751479289942,
+      "escapeWeekP90": 13,
+      "cardsMean": 6.461538461538462,
+      "maintenanceMean": 3.4911242603550297,
+      "idleWeeksMean": 3.538793103448276,
+      "longestIdleP90": 3,
+      "reordersMean": 2.4913793103448274,
+      "paidReordersMean": 2.4913793103448274
+    },
+    "C": {
+      "samples": 232,
+      "escaped": 194,
+      "censored": 38,
+      "unresolved": 0,
+      "firstShare2p": 0.578125,
+      "escapeWeekMean": 9.489690721649485,
+      "escapeWeekP90": 13,
+      "cardsMean": 5.783505154639175,
+      "maintenanceMean": 2.695876288659794,
+      "idleWeeksMean": 3.0560344827586206,
+      "longestIdleP90": 3,
+      "reordersMean": 1.793103448275862,
+      "paidReordersMean": 1.793103448275862
+    },
+    "mixed": {
+      "samples": 232,
+      "escaped": 227,
+      "censored": 5,
+      "unresolved": 0,
+      "firstShare2p": 0.84375,
+      "escapeWeekMean": 6.3392070484581495,
+      "escapeWeekP90": 9,
+      "cardsMean": 5.436123348017621,
+      "maintenanceMean": 1.0308370044052864,
+      "idleWeeksMean": 0.6120689655172413,
+      "longestIdleP90": 1,
+      "reordersMean": 1.5646551724137931,
+      "paidReordersMean": 1.5646551724137931
+    },
+    "repeat": {
+      "samples": 232,
+      "escaped": 72,
+      "censored": 143,
+      "unresolved": 17,
+      "firstShare2p": 0.03125,
+      "escapeWeekMean": 14.083333333333334,
+      "escapeWeekP90": 18,
+      "cardsMean": 8.98611111111111,
+      "maintenanceMean": 3.7083333333333335,
+      "idleWeeksMean": 8.15948275862069,
+      "longestIdleP90": 6,
+      "reordersMean": 1.5258620689655173,
+      "paidReordersMean": 1.5258620689655173
+    }
+  },
+  "evaluatorRevision": 5,
+  "engineRulesVersion": 22,
+  "uniqueConfigurations": 497,
+  "endedBy24": 494,
+  "details": "experience-baseline-v0.22-details.json.gz",
+  "failures": [
+    {
+      "n": 2,
+      "seed": 2,
+      "roster": [
+        "basic",
+        "A"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "basic",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 24,
+          "longestIdle": 21,
+          "consecutiveIdle": 21,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 4,
+            "sanity": 9,
+            "cash": 132,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 4,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "W-S",
+              "B-E",
+              "A-L",
+              "A-L",
+              "A-M",
+              "A-E",
+              "W-S"
+            ],
+            "market": [
+              "C-M",
+              "W-M",
+              "W-X",
+              "W-P2",
+              "A-S",
+              "W-E",
+              "C-H",
+              "W-P1",
+              "B-H",
+              "W-P1"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "policy": "A",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 24,
+          "longestIdle": 23,
+          "consecutiveIdle": 23,
+          "freeReorders": 0,
+          "paidReorders": 5,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 4,
+            "sanity": 8,
+            "cash": 174,
+            "skills": {
+              "W": 0,
+              "A": 2,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 1,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [
+              "C-E",
+              "C-E",
+              "A-E"
+            ],
+            "board": [
+              "A-S",
+              "B-S",
+              "A-M",
+              "B-S",
+              "B-E",
+              "A-H"
+            ],
+            "market": [
+              "C-M",
+              "W-M",
+              "W-X",
+              "W-P2",
+              "A-S",
+              "W-E",
+              "C-H",
+              "W-P1",
+              "B-H",
+              "W-P1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "seed": 3,
+      "roster": [
+        "repeat",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 26,
+          "longestIdle": 23,
+          "consecutiveIdle": 23,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 7,
+            "sanity": 7,
+            "cash": 163,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "W-S",
+              "B-E",
+              "A-E",
+              "B-E",
+              "A-L",
+              "C-E",
+              "B-S"
+            ],
+            "market": [
+              "C-G1",
+              "C-G2",
+              "A-M",
+              "W-G1",
+              "W-G2",
+              "B-M",
+              "W-P1",
+              "C-X",
+              "B-H",
+              "W-H"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 26,
+          "longestIdle": 23,
+          "consecutiveIdle": 23,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 5,
+            "sanity": 7,
+            "cash": 113,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "B-S",
+              "W-S",
+              "A-E",
+              "C-E"
+            ],
+            "market": [
+              "C-G1",
+              "C-G2",
+              "A-M",
+              "W-G1",
+              "W-G2",
+              "B-M",
+              "W-P1",
+              "C-X",
+              "B-H",
+              "W-H"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "seed": 11,
+      "roster": [
+        "repeat",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 26,
+          "longestIdle": 24,
+          "consecutiveIdle": 24,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 4,
+            "sanity": 7,
+            "cash": 113,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "C-E",
+              "W-S",
+              "A-L",
+              "B-E",
+              "B-S"
+            ],
+            "market": [
+              "C-M",
+              "S-Q",
+              "C-G2",
+              "W-G2",
+              "B-M",
+              "B-G1",
+              "A-X",
+              "W-H",
+              "W-P1",
+              "B-H"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 26,
+          "longestIdle": 21,
+          "consecutiveIdle": 21,
+          "freeReorders": 0,
+          "paidReorders": 4,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 4,
+            "sanity": 7,
+            "cash": 160,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "B-E",
+              "A-E",
+              "W-S",
+              "A-L",
+              "A-E",
+              "C-E",
+              "B-S"
+            ],
+            "market": [
+              "C-M",
+              "S-Q",
+              "C-G2",
+              "W-G2",
+              "B-M",
+              "B-G1",
+              "A-X",
+              "W-H",
+              "W-P1",
+              "B-H"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "seed": 2,
+      "roster": [
+        "repeat",
+        "mixed",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 26,
+          "longestIdle": 18,
+          "consecutiveIdle": 18,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 8,
+            "sanity": 6,
+            "cash": 165,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "W-S",
+              "C-E",
+              "B-E",
+              "A-L",
+              "B-S",
+              "C-E",
+              "A-E"
+            ],
+            "market": [
+              "A-S",
+              "B-X",
+              "W-M",
+              "B-M",
+              "B-M",
+              "B-M",
+              "W-P1",
+              "W-P1",
+              "A-H",
+              "A-H"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 25,
+          "longestIdle": 18,
+          "consecutiveIdle": 18,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 8,
+            "sanity": 7,
+            "cash": 173,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-E",
+              "W-S",
+              "A-E",
+              "C-E",
+              "A-L",
+              "B-E",
+              "B-S",
+              "B-E"
+            ],
+            "market": [
+              "A-S",
+              "B-X",
+              "W-M",
+              "B-M",
+              "B-M",
+              "B-M",
+              "W-P1",
+              "W-P1",
+              "A-H",
+              "A-H"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "seed": 2,
+      "roster": [
+        "C",
+        "repeat",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 1,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 22,
+          "longestIdle": 8,
+          "consecutiveIdle": 8,
+          "freeReorders": 0,
+          "paidReorders": 3,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 9,
+            "sanity": 6,
+            "cash": 171,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "team"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "W-S",
+              "A-E",
+              "A-L",
+              "C-E",
+              "B-S",
+              "A-E",
+              "C-E",
+              "A-E"
+            ],
+            "market": [
+              "A-G2",
+              "A-M",
+              "W-X",
+              "W-E",
+              "C-U",
+              "W-X",
+              "B-H",
+              "C-X",
+              "B-H",
+              "A-H"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 24,
+          "longestIdle": 5,
+          "consecutiveIdle": 5,
+          "freeReorders": 0,
+          "paidReorders": 3,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 6,
+            "sanity": 7,
+            "cash": 118,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 3,
+            "productive": 0,
+            "reorders": 1,
+            "paidReorders": 1,
+            "event": "team"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "W-S",
+              "B-E",
+              "B-E",
+              "C-E",
+              "B-S"
+            ],
+            "market": [
+              "A-G2",
+              "A-M",
+              "W-X",
+              "W-E",
+              "C-U",
+              "W-X",
+              "B-H",
+              "C-X",
+              "B-H",
+              "A-H"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "seed": 3,
+      "roster": [
+        "repeat",
+        "repeat",
+        "basic"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 23,
+          "longestIdle": 12,
+          "consecutiveIdle": 12,
+          "freeReorders": 0,
+          "paidReorders": 3,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 7,
+            "sanity": 5,
+            "cash": 161,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "B-E",
+              "C-E",
+              "W-S",
+              "A-E",
+              "B-E",
+              "B-S",
+              "A-E"
+            ],
+            "market": [
+              "A-G2",
+              "B-G2",
+              "C-U",
+              "W-P2",
+              "A-S",
+              "W-X",
+              "A-X",
+              "C-H",
+              "C-H",
+              "B-H"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 25,
+          "longestIdle": 19,
+          "consecutiveIdle": 19,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 8,
+            "sanity": 4,
+            "cash": 163,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "C-E",
+              "A-E",
+              "W-S",
+              "B-E",
+              "A-L",
+              "B-S"
+            ],
+            "market": [
+              "A-G2",
+              "B-G2",
+              "C-U",
+              "W-P2",
+              "A-S",
+              "W-X",
+              "A-X",
+              "C-H",
+              "C-H",
+              "B-H"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "seed": 11,
+      "roster": [
+        "repeat",
+        "repeat",
+        "W"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 25,
+          "longestIdle": 17,
+          "consecutiveIdle": 17,
+          "freeReorders": 0,
+          "paidReorders": 1,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 3,
+            "sanity": 9,
+            "cash": 144,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 4,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-E",
+              "C-E",
+              "W-S",
+              "B-E",
+              "A-E",
+              "A-L",
+              "W-S",
+              "B-E"
+            ],
+            "market": [
+              "S-Q",
+              "B-S",
+              "C-M",
+              "A-G2",
+              "B-S",
+              "C-M",
+              "B-H",
+              "C-H",
+              "A-H",
+              "W-P1"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 26,
+          "longestIdle": 19,
+          "consecutiveIdle": 19,
+          "freeReorders": 0,
+          "paidReorders": 3,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 2,
+            "sanity": 4,
+            "cash": 165,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 6,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "A-L",
+              "W-S",
+              "C-E",
+              "B-S",
+              "A-E"
+            ],
+            "market": [
+              "S-Q",
+              "B-S",
+              "C-M",
+              "A-G2",
+              "B-S",
+              "C-M",
+              "B-H",
+              "C-H",
+              "A-H",
+              "W-P1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "seed": 11,
+      "roster": [
+        "repeat",
+        "basic",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 25,
+          "longestIdle": 12,
+          "consecutiveIdle": 4,
+          "freeReorders": 0,
+          "paidReorders": 4,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 2,
+            "sanity": 6,
+            "cash": 110,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 5,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-E",
+              "W-S",
+              "A-E",
+              "A-E",
+              "C-E"
+            ],
+            "market": [
+              "B-M",
+              "W-G1",
+              "B-X",
+              "C-G2",
+              "C-U",
+              "B-G2",
+              "W-P1",
+              "W-P1",
+              "W-H",
+              "A-X"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 24,
+          "longestIdle": 11,
+          "consecutiveIdle": 4,
+          "freeReorders": 0,
+          "paidReorders": 3,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 7,
+            "sanity": 0,
+            "cash": 147,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "A-L",
+              "C-E",
+              "B-S",
+              "B-E",
+              "W-S",
+              "B-E"
+            ],
+            "market": [
+              "B-M",
+              "W-G1",
+              "B-X",
+              "C-G2",
+              "C-U",
+              "B-G2",
+              "W-P1",
+              "W-P1",
+              "W-H",
+              "A-X"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "seed": 1,
+      "roster": [
+        "B",
+        "repeat",
+        "mixed",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 0,
+          "policy": "B",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 25,
+          "longestIdle": 21,
+          "consecutiveIdle": 21,
+          "freeReorders": 0,
+          "paidReorders": 1,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 4,
+            "sanity": 0,
+            "cash": 220,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 2,
+              "C": 0
+            },
+            "cards": 3,
+            "maintenance": 0,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [
+              "B-M",
+              "A-L"
+            ],
+            "board": [
+              "A-L",
+              "B-M",
+              "A-L"
+            ],
+            "market": [
+              "B-G1",
+              "A-G1",
+              "W-E",
+              "W-P2",
+              "C-U",
+              "B-G1",
+              "A-X",
+              "W-P1",
+              "B-H",
+              "W-P1"
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 25,
+          "longestIdle": 14,
+          "consecutiveIdle": 14,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 5,
+            "sanity": 6,
+            "cash": 162,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-E",
+              "B-E",
+              "C-E",
+              "A-E",
+              "B-E",
+              "W-S",
+              "B-E"
+            ],
+            "market": [
+              "B-G1",
+              "A-G1",
+              "W-E",
+              "W-P2",
+              "C-U",
+              "B-G1",
+              "A-X",
+              "W-P1",
+              "B-H",
+              "W-P1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "seed": 1,
+      "roster": [
+        "B",
+        "C",
+        "repeat",
+        "repeat"
+      ],
+      "players": [
+        {
+          "id": 2,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 22,
+          "longestIdle": 17,
+          "consecutiveIdle": 17,
+          "freeReorders": 0,
+          "paidReorders": 1,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 6,
+            "sanity": 6,
+            "cash": 168,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 8,
+            "maintenance": 2,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-E",
+              "A-L",
+              "A-E",
+              "A-E",
+              "A-E",
+              "B-E",
+              "W-S",
+              "B-E"
+            ],
+            "market": [
+              "A-M",
+              "C-U",
+              "B-X",
+              "A-S",
+              "W-G2",
+              "C-U",
+              "W-H",
+              "W-P1",
+              "C-X",
+              "C-H"
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "policy": "repeat",
+          "firstProjected": null,
+          "firstEligible": null,
+          "escaped": null,
+          "productiveIdle": 24,
+          "longestIdle": 8,
+          "consecutiveIdle": 5,
+          "freeReorders": 0,
+          "paidReorders": 2,
+          "winShare": 0,
+          "final": {
+            "week": 30,
+            "income": 6,
+            "sanity": 7,
+            "cash": 136,
+            "skills": {
+              "W": 0,
+              "A": 0,
+              "B": 0,
+              "C": 0
+            },
+            "cards": 7,
+            "maintenance": 4,
+            "productive": 0,
+            "reorders": 0,
+            "paidReorders": 0,
+            "event": "inspection"
+          },
+          "censored": false,
+          "failure": {
+            "hand": [],
+            "board": [
+              "A-L",
+              "C-E",
+              "B-S",
+              "C-E",
+              "W-S",
+              "B-S",
+              "C-E"
+            ],
+            "market": [
+              "A-M",
+              "C-U",
+              "B-X",
+              "A-S",
+              "W-G2",
+              "C-U",
+              "W-H",
+              "W-P1",
+              "C-X",
+              "C-H"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -18,13 +18,14 @@ test('regression: empty starts, obsolete options ignored, resource and event con
 });
 
 test('regression: seven full action rounds and rotated first player',()=>{
-  const g=make(),p=g.players[0],c=add(g,p,'A-E');
+  // v23: moving is free. Use purchases to exercise all seven paid rounds.
+  const g=make({startMoney:100}),p=g.players[0];let spent=0;
   for(let day=0;day<7;day++)for(let id=0;id<2;id++) {
     assert.equal(g.day,day);assert.equal(E.activeBuyer(g),id);
-    if(id===0)E.place(g,id,c.uid,{day:6,period:day%2});else E.pass(g,id);
+    if(id===0){const c=g.market[4][0];spent+=getCard(c).price.money;E.buy(g,id,c.uid);}else E.pass(g,id);
   }
-  assert.equal(g.actionCount,14);assert.equal(g.endedByPass,false);assert.equal(p.money,8);
-  E.resolveAll(g);assert.equal(p.money,12);next(g);assert.equal(E.activeBuyer(g),1);
+  assert.equal(g.actionCount,14);assert.equal(g.endedByPass,false);assert.equal(p.money,100-spent);
+  E.resolveAll(g);assert.equal(p.money,103-spent);next(g);assert.equal(E.activeBuyer(g),1);
 });
 
 test('regression: rejected purchases and wrong-turn actions preserve the entire state',()=>{
