@@ -40,3 +40,5 @@
 .compact-face .printed-title{padding-right:48px;}
 .compact-face.duration-2 .printed-title{padding-right:43px;}
 .illustrated-face:not(.has-mind) .printed-title{padding-right:8px;}
+
+.family-shared{--family:#8054b7;--wash:#f2edf9;}

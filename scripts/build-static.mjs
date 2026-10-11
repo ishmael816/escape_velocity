@@ -1,4 +1,5 @@
-import { cp, mkdir } from 'node:fs/promises';
+import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -10,3 +11,7 @@ for (const entry of ['index.html', 'src', 'assets', 'designs/board-art-backgroun
   await cp(path.join(root, entry), path.join(output, entry), { recursive: true });
 }
 console.log('Static site built in dist/');
+const pkg=JSON.parse(await readFile(path.join(root,'package.json'),'utf8'));
+let commit=process.env.VERCEL_GIT_COMMIT_SHA||null;
+if(!commit)try{commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();}catch{}
+await writeFile(path.join(output,'version.json'),JSON.stringify({version:pkg.version,commit,cardTypes:32,hours:[4,8]},null,2)+'\n');

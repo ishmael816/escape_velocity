@@ -7,8 +7,9 @@ export const ROUTES={
  A:{name:'创作',pool:'写作与创作',icon:'pen',family:'creative'},
  B:{name:'开发',pool:'开发与制作',icon:'layers',family:'technical'},
  C:{name:'商业',pool:'商业与经营',icon:'shop',family:'business'},
+ S:{name:'共享',pool:'共享工具',icon:'layers',family:'shared'},
 };
-export const DEFAULTS={playerCount:3,mode:'bots',startMoney:8,startSanity:3,maxSanity:10,salary:3,nightStress3:2,nightStress4:4,escapeIncome:10,escapeSanity:6,inspectionFine:1,seed:20261009};
+export const DEFAULTS=design.defaults;
 function adapt(d){
  const route=ROUTES[d.route||'W'];
  return {...d,kind:'activity',size:{2:1,4:2,8:3}[d.hours],category:route.name,icon:route.icon,
@@ -16,14 +17,14 @@ function adapt(d){
   fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.gain.profit||!!d.capitalRatio||d.dice?.resource==='profit',
   once:d.kind==='growth'||d.kind==='once',skill:d.kind==='growth'?d.route:null,
   tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.dice?'':d.effect,
-  progressTarget:d.progress,unlockWeekend:d.id==='P01',unlockProtection:d.id==='P02',permanent:!!d.permanent,route:d.route||'W',
+  progressTarget:d.progress,unlockWeekend:d.permission==='weekend',unlockProtection:d.permission==='protection',permanent:!!d.permanent,route:d.route||'W',
  };
 }
 export const CARDS=design.cards.filter(d=>!d.advanced).map(adapt);
 export const ADVANCED=design.cards.filter(d=>d.advanced).map(adapt);
 export const CARD_MAP=Object.fromEntries([...CARDS,...ADVANCED].map(d=>[d.id,d]));
 export const getCard=value=>CARD_MAP[typeof value==='string'?value:value?.type];
-export const MARKET_LIMITS={2:5,4:4,8:3};
+export const MARKET_LIMITS=design.market;
 export const marketLane=d=>d.hours;
 export const slotKey=s=>`${s.day}-${s.period}`;
 export const slotLabel=s=>`${DAYS[s.day]}${['上午','下午','夜晚'][s.period]}`;
