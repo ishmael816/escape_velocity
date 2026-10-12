@@ -59,9 +59,9 @@ test('v23: moving three future cards frees a whole day without three paid action
 
 test('v23: free move/withdraw cannot farm capital, actions, income or free first placements',()=>{
  const g=make(),p=g.players[0],c=add(g,p,'C-E');E.place(g,0,c.uid,{day:5,period:0});turn(g);const actions=g.actionCount;
- for(let i=0;i<20;i++){E.place(g,0,c.uid,{day:5+i%2,period:1});assert.equal(p.money,4);assert.equal(c.lockedCapital,4);assert.equal(g.actionCount,actions);}
+ for(let i=0;i<20;i++){E.place(g,0,c.uid,{day:5+i%2,period:1});assert.equal(p.money,5);assert.equal(c.lockedCapital,3);assert.equal(g.actionCount,actions);}
  E.unplace(g,0,c.uid);assert.equal(p.money,8);assert.equal(g.actionCount,actions);assert.equal(p.income,0);
- unchanged(g,()=>E.unplace(g,0,c.uid));E.place(g,0,c.uid,{day:6,period:0});assert.equal(p.money,4);assert.equal(g.actionCount,actions+1);
+ unchanged(g,()=>E.unplace(g,0,c.uid));E.place(g,0,c.uid,{day:6,period:0});assert.equal(p.money,5);assert.equal(g.actionCount,actions+1);
 });
 
 test('v23: free edits remain turn-bound, past-bound and locked during inspection or pending choice',()=>{
@@ -73,11 +73,11 @@ test('v23: free edits remain turn-bound, past-bound and locked during inspection
 test('v23: upgrading a basic activity uses free withdrawal plus one paid new arrangement',()=>{
  const g=make(),p=g.players[0];skills(p,'AA');const base=add(g,p,'A-L'),advanced=add(g,p,'A-H');E.place(g,0,base.uid,{day:6,period:0});turn(g);
  const actions=g.actionCount;E.unplace(g,0,base.uid);assert.equal(g.actionCount,actions);E.place(g,0,advanced.uid,{day:6,period:0});assert.equal(g.actionCount,actions+1);
- finish(g);assert.equal(p.income,4);assert.equal(Object.values(p.schedule).flat().length,1);assert.equal(p.sanity,5);
+ finish(g);assert.equal(p.income,3);assert.equal(Object.values(p.schedule).flat().length,1);assert.equal(p.sanity,4);
 });
 
 test('v23: protection remembers a candidate, never silently activates next week or transfers after growth',()=>{
- const g=make(),p=g.players[0];p.protectionFrom=1;skills(p,'B');rig(g,p,[['A-G1',2],['B-M',2]]);E.setProtection(g,0,{day:2,period:0});
+ const g=make(),p=g.players[0];p.protectionFrom=1;skills(p,'BB');rig(g,p,[['A-G1',2],['B-M',2]]);E.setProtection(g,0,{day:2,period:0});
  assert.equal(p.lastProtectedSlot,'2-0');g.inspection.inspectionCount=1;g.diceRandom=seedFor([3]);finish(g);assert.equal(p.caught,1);assert.equal(p.income,0);next(g);
  assert.equal(p.lastProtectedSlot,'2-0');assert.equal(p.protectedSlot,null);assert.equal(p.protectionChosen,false);turn(g);
  E.setProtection(g,0,{day:2,period:0});assert.equal(g.actionCount,1); // seat 1 passed first

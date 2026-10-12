@@ -41,7 +41,7 @@ test('arranging, moving and withdrawing do not veto refresh',()=>{
 
 test('escaped players cannot prevent refresh by purchasing',()=>{
  const g=make({playerCount:3});g.players[0].escaped=true;
- E.buy(g,0,g.market[2][0].uid);assert.equal(g.mondayMarketBought,false);
+ assert.throws(()=>E.buy(g,0,g.market[2][0].uid),/等待/);assert.equal(g.mondayMarketBought,false);
  finishMonday(g);assert.equal(g.mondayMarketRefreshed,true);
 });
 

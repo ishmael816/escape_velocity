@@ -41,7 +41,7 @@ test('regression: search cannot spend pending income; reload pays earnings and s
 });
 
 test('regression: same-slot parallel search and following player resume identically after reload at every pause',()=>{
-  let g=make();const p=g.players[0];skills(p,'B');rig(g,p,[['S-Q',6],['B-M',6]]);rig(g,g.players[1],[['S-Q',6]]);
+  let g=make();const p=g.players[0];skills(p,'BB');rig(g,p,[['S-Q',6],['B-M',6]]);rig(g,g.players[1],[['S-Q',6]]);
   // A legal v22 parallel slot, unlike the retired two-card night fixture.
   assert.equal(E.slotHours(p,{day:6,period:0}),4);lock(g);const initial=supplyIds(g);E.resolveAll(g);
   for(const id of [0,1]){
@@ -94,7 +94,7 @@ test('regression: humans remain pending; bots finish only their own search',()=>
 });
 
 function hiring(options={}) {
-  const g=make(options),p=g.players[0];skills(p,'CB');rig(g,p,[['C-U',0],['B-M',0],['A-E',6]]);
+  const g=make(options),p=g.players[0];skills(p,'CBB');rig(g,p,[['C-U',0],['B-M',0],['A-E',6]]);
   const target=offer(g,'A-G2');g.mondayMarketBought=true;lock(g);E.resolveAll(g);return {g,target};
 }
 
@@ -108,8 +108,8 @@ test('regression: hire owner, target, affordability and double-selection failure
 
 test('regression: hire cannot use pending earnings or rehire an archived name next week',()=>{
   const g=make({startMoney:0}),p=g.players[0];skills(p,'C');rig(g,p,[['W-E',0],['C-U',1]]);
-  const target=offer(g,'A-G1');g.mondayMarketBought=true;lock(g);E.resolveAll(g);assert.equal(p.weeklyEarnings[0].money,2);
-  unchanged(g,()=>E.chooseHire(g,0,target.uid));E.chooseHire(g,0);E.resolveAll(g);assert.equal(p.money,5);
+  const target=offer(g,'A-G1');g.mondayMarketBought=true;lock(g);E.resolveAll(g);assert.equal(p.weeklyEarnings[0].money,1);
+  unchanged(g,()=>E.chooseHire(g,0,target.uid));E.chooseHire(g,0);E.resolveAll(g);assert.equal(p.money,4);
   next(g);g.mondayMarketBought=true;offer(g,'A-G1');lock(g);E.resolveAll(g);E.chooseHire(g,0,target.uid);E.resolveAll(g);
   next(g);g.mondayMarketBought=true;const duplicate=offer(g,'A-G1');lock(g);E.resolveAll(g);
   assert(!E.hireCandidates(g,0).some(c=>c.type==='A-G1'));unchanged(g,()=>E.chooseHire(g,0,duplicate.uid));E.chooseHire(g,0);E.resolveAll(g);

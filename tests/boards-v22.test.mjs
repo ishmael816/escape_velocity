@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';import {getCard} from '../src/cards.js';
-import {scenarios} from '../scripts/scenarios-v22.mjs';
+import {scenarios} from '../scripts/scenarios-v24.2.mjs';
 import {make,add,finish} from './helpers.mjs';
 const day=s=>['周一','周二','周三','周四','周五','周六','周日'].findIndex(d=>s.startsWith(d));
 for(const spec of scenarios)test('real engine matches prepared design board: '+spec.id,()=>{
@@ -14,4 +14,5 @@ for(const spec of scenarios)test('real engine matches prepared design board: '+s
  finish(g);assert.equal(p.income,sum('fixedProfit'));assert.equal(p.money,before-sum('upkeep')+defs.reduce((n,d)=>n+(d.gain.money||0),0)+3);
  assert.equal(p.sanity,spec.id==='night-growth'?3:expectedSanity);
  if(spec.stage==='后期'||spec.id==='zero-repeat')assert(E.eligible(g,p));
+ if(spec.qualifies===false)assert(!E.eligible(g,p));
 });

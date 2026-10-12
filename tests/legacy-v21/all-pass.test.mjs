@@ -46,12 +46,14 @@ test('early finish executes later days, inspections and support exactly like a f
  assert.equal(p.money,8-2-1+3);assert.equal(p.supportWeek,1);
 });
 
-test('all players includes escaped players, and a single pass does not lock that player out',()=>{
+test('only remaining players act and count towards all-pass',()=>{
  const g=make({playerCount:3});g.players[0].escaped=true;
- E.buy(g,0,g.market[2][0].uid);E.pass(g,1);E.pass(g,2);
+ assert.equal(E.activeBuyer(g),1);
+ assert.throws(()=>E.buy(g,0,g.market[2][0].uid),/等待/);
+ E.pass(g,1);E.buy(g,2,g.market[2][0].uid);
  assert.equal(g.day,1);assert.equal(g.phase,'planning');
- E.pass(g,0);E.buy(g,1,g.market[2][0].uid);E.pass(g,2);
- assert.equal(g.day,2);passDay(g);assert.equal(g.phase,'resolving');
+ E.pass(g,1);assert.equal(g.phase,'planning');E.pass(g,2);
+ assert.equal(g.phase,'resolving');assert.equal(g.actionCount,4);
 });
 
 test('an old partial-day save without pass tracking waits for a fully observed day',()=>{

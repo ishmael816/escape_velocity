@@ -5,7 +5,7 @@ import {make,rig} from './helpers.mjs';
 let run=0;
 async function harness(g,body){
  const previous=Object.fromEntries(['document','localStorage','setTimeout','clearTimeout'].map(k=>[k,globalThis[k]]));
- const key='escape-velocity-game-v24.1',storage=new Map([[key,JSON.stringify(g)],['escape-velocity-game-v24','old-C3-preserved']]),listeners={},timers=new Map();let id=0;
+ const key='escape-velocity-game-v24.2',storage=new Map([[key,JSON.stringify(g)],['escape-velocity-game-v24','old-C3-preserved']]),listeners={},timers=new Map();let id=0;
  const root={innerHTML:'',addEventListener:(n,fn)=>listeners[n]=fn},scroll={scrollLeft:0,scrollIntoView(){}},toast={textContent:'',classList:{add(){},remove(){}}};
  globalThis.setTimeout=(fn,ms)=>{timers.set(++id,{fn,ms});return id;};globalThis.clearTimeout=i=>timers.delete(i);
  globalThis.document={querySelector:s=>s==='#app'?root:s==='#toast'?toast:s==='.calendar-scroll'||s==='#shelf'||s==='.calendar-panel'?scroll:null,addEventListener(){},querySelectorAll:()=>[]};

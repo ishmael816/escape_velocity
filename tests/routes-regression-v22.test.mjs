@@ -8,18 +8,25 @@ import {offer, supplyIds, reload} from './regression-helpers-v22.mjs';
 // Favourable market/no-inspection reachability, NOT a balance or win-rate test.
 // Only public supply order and the event fixture are controlled. Starting cash,
 // skills, ownership, schedule, action clock, project progress and escape results
-// are never assigned. All cards come from the real finite 2-player supply.
+// are never assigned. All cards come from the real finite player-count-scaled supply.
 const routes=[
-  {name:'A',growth:['A-G1','A-G2'],board:[['A-S',3],['A-H',6],['A-M',0],['A-M',0,1],['A-E',1],['B-E',1,1]],income:10,sanity:6},
-  {name:'B',growth:['B-G1','B-G2'],board:[['B-S',0,1],['B-H',6],['B-H',5]],income:10,sanity:6},
-  {name:'C',growth:['C-G1','C-G2'],board:[['W-S',2],['C-H',6],['C-M',0],['C-E',0,1]],income:10,sanity:6,capital:10},
-  {name:'W',growth:['W-G1','W-G2'],permission:true,board:[['W-H',6],['W-M',5],['W-M',5,1],['A-E',0],['B-E',0,1]],income:10,sanity:6},
-  {name:'AC hybrid',growth:['A-G1','C-G1','C-G2'],board:[['B-S',0],['A-X',6],['C-H',5]],income:10,sanity:8,capital:10},
-  {name:'basic zero-skill comparison',growth:[],board:[['A-E',1],['B-E',1,1],['W-S',3],['W-S',4],['C-E',0],['C-E',0,1],['A-L',5],['A-L',6]],income:10,sanity:7,capital:8}
+ {"name":"late-a","players":3,"growth":["A-G1","A-G2"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-H",4,0],["A-E",0,0]],"income":10,"sanity":6,"capital":0},
+ {"name":"late-b","players":3,"growth":["B-G1","B-G2"],"permission":false,"board":[["B-H",6,0],["B-H",5,0],["B-H",4,0],["A-E",0,0],["B-S",0,1]],"income":10,"sanity":6,"capital":0},
+ {"name":"late-c","players":3,"growth":["C-G1","C-G2"],"permission":false,"board":[["C-H",6,0],["C-H",5,0],["C-H",4,0],["A-E",0,0]],"income":10,"sanity":6,"capital":9},
+ {"name":"late-w","players":3,"growth":["W-G1","W-G2"],"permission":true,"board":[["W-H",6,0],["W-H",5,0],["W-H",4,0],["A-E",0,0],["B-S",0,1]],"income":10,"sanity":8,"capital":0},
+ {"name":"late-ab","players":2,"growth":["A-G1","A-G2","B-G1","B-G2","W-G1"],"permission":false,"board":[["A-H",6,0],["B-H",5,0],["B-X",0,0],["W-X",0,0],["B-S",1,0]],"income":10,"sanity":8,"capital":0},
+ {"name":"late-ac","players":2,"growth":["A-G1","A-G2","C-G1"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-X",4,0],["A-E",0,0]],"income":10,"sanity":7,"capital":3},
+ {"name":"late-wc","players":2,"growth":["W-G1","W-G2","C-G1","B-G1"],"permission":false,"board":[["W-H",6,0],["W-H",5,0],["C-X",4,0],["W-X",0,0]],"income":10,"sanity":6,"capital":3},
+ {"name":"zero-repeat","players":2,"growth":[],"permission":false,"board":[["A-E",0,0],["A-E",0,1],["B-E",1,0],["B-E",1,1],["C-E",2,0],["C-E",2,1],["A-L",3,0],["A-L",4,0],["W-S",5,0],["W-S",6,0]],"income":10,"sanity":7,"capital":6},
+ {"name":"two-player-W","players":2,"growth":["W-G1","W-G2"],"permission":false,"board":[["W-H",6,0],["W-H",5,0],["W-M",0,0],["W-M",0,1],["B-S",1,0]],"income":10,"sanity":6,"capital":0},
+ {"name":"two-player-A","players":2,"growth":["A-G1","A-G2"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-M",0,0],["A-M",0,1]],"income":10,"sanity":7,"capital":0},
+ {"name":"two-player-B","players":2,"growth":["B-G1","B-G2"],"permission":false,"board":[["B-H",6,0],["B-H",5,0],["B-M",0,0],["B-M",0,1],["B-S",1,0]],"income":10,"sanity":6,"capital":0},
+ {"name":"two-player-C","players":2,"growth":["C-G1","C-G2"],"permission":false,"board":[["C-H",6,0],["C-H",5,0],["C-M",0,0],["C-M",0,1],["B-S",1,0]],"income":10,"sanity":8,"capital":10}
 ];
 
+
 for(const route of routes)test(`full acquisition: ${route.name} buys, schedules, grows and escapes from default empty start`,t=>{
-  let g=make(),p=g.players[0];
+  let g=make({playerCount:route.players}),p=g.players[0];
   const originalIds=supplyIds(g),bought=[],actions=[];
   assert.equal(p.money,8);assert.equal(p.sanity,3);assert.deepEqual(p.cards,[]);assert.deepEqual(p.skills,[]);assert.deepEqual(p.schedule,{});
   function check(){assert.deepEqual(supplyIds(g),originalIds);assert(p.money>=0);assert(g.week<=24,'bounded reachability fixture stalled');}
@@ -65,7 +72,7 @@ for(const route of routes)test(`full acquisition: ${route.name} buys, schedules,
     const uid=acquire('W-P1',4);settle();assert.equal(p.cards.find(c=>c.uid===uid).progress,1);assert(!p.weekend);advanceWeek();settle();
     assert(p.weekend);assert(p.completedActivities.some(c=>c.uid===uid&&c.progress===2));advanceWeek();
   }
-  for(const [type,day,period=0]of route.board)acquire(type,day,period);
+  for(const [type,day,period=0]of [...route.board].sort((a,b)=>route.name==='zero-repeat'?(['A-E','B-E','C-E','W-S','A-L'].indexOf(a[0])-['A-E','B-E','C-E','W-S','A-L'].indexOf(b[0])):getCard(b[0]).support-getCard(a[0]).support))acquire(type,day,period);
   settle();
   assert.equal(p.income,route.income);assert.equal(p.sanity,route.sanity);assert(E.eligible(g,p));
   assert.equal(Object.values(p.schedule).flat().length,route.board.length);
@@ -74,6 +81,6 @@ for(const route of routes)test(`full acquisition: ${route.name} buys, schedules,
   assert.equal(actions.filter(a=>a.kind==='buy').length,bought.length);
   assert.equal(actions.filter(a=>a.kind==='place').length,bought.length);
   const escapedWeek=g.week,cash=p.money;
-  E.chooseEscape(g,0,true);E.closeWeek(g);assert.equal(g.phase,'ended');assert(p.escaped);assert.equal(p.escapedWeek,escapedWeek);assert.equal(p.money,cash);check();
+  E.chooseEscape(g,0,true);E.closeWeek(g);assert.equal(g.phase,route.players===2?'ended':'planning');assert(p.escaped);assert.equal(p.escapedWeek,escapedWeek);assert.equal(p.money,cash);check();
   t.diagnostic(JSON.stringify({route:route.name,week:escapedWeek,purchases:bought.length,paidActions:actions.length,income:p.income,settlementSanity:route.sanity,cash,lockedCapital:route.capital||0}));
 });

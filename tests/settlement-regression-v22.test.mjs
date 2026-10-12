@@ -60,7 +60,7 @@ test('regression: protected 4h paid support remains funded and effective on an i
 test('regression: support and pressure are applied before the upper clamp; withdrawal cannot manufacture sanity',()=>{
   const g=make({startSanity:9}),p=g.players[0],c=add(g,p,'W-S');E.place(g,0,c.uid,{day:6,period:0});assert.equal(p.sanity,10);
   const pressure=add(g,p,'A-L');turn(g);E.place(g,0,pressure.uid,{day:5,period:0});assert.equal(p.sanity,10);
-  turn(g);E.unplace(g,0,c.uid);assert.equal(p.sanity,8);turn(g);E.unplace(g,0,pressure.uid);assert.equal(p.sanity,9);
+  turn(g);E.unplace(g,0,c.uid);assert.equal(p.sanity,7);turn(g);E.unplace(g,0,pressure.uid);assert.equal(p.sanity,9);
 });
 
 test('regression: purchasing reduces preview support budget before the weekly bill',()=>{
@@ -70,11 +70,11 @@ test('regression: purchasing reduces preview support budget before the weekly bi
 });
 
 test('regression: locked capital cannot pay upkeep; caught investment retains principal and refunds exactly once',()=>{
-  const g=make({startMoney:4}),p=g.players[0];rig(g,p,[['W-S',6]]);const c=add(g,p,'C-E');E.place(g,0,c.uid,{day:0,period:0});
-  assert.equal(p.money,0);assert.equal(p.sanity,2);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
-  assert.equal(p.money,3);assert.equal(p.income,0);assert.equal(p.caught,1);assert.equal(c.lockedCapital,4);assert.equal(E.unplacedCards(p).filter(c=>c.type==='W-S').length,1);
-  next(g);turn(g);E.unplace(g,0,c.uid);assert.equal(p.money,7);assert.equal(c.lockedCapital,undefined);turn(g);
-  unchanged(g,()=>E.unplace(g,0,c.uid));E.discardCard(g,0,c.uid);assert.equal(p.money,7);assert.equal(g.discard[4].filter(x=>x.uid===c.uid).length,1);
+  const g=make({startMoney:3}),p=g.players[0];rig(g,p,[['W-S',6]]);const c=add(g,p,'C-E');E.place(g,0,c.uid,{day:0,period:0});
+  assert.equal(p.money,0);assert.equal(p.sanity,3);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
+  assert.equal(p.money,3);assert.equal(p.income,0);assert.equal(p.caught,1);assert.equal(c.lockedCapital,3);assert.equal(E.unplacedCards(p).filter(c=>c.type==='W-S').length,1);
+  next(g);turn(g);E.unplace(g,0,c.uid);assert.equal(p.money,6);assert.equal(c.lockedCapital,undefined);turn(g);
+  unchanged(g,()=>E.unplace(g,0,c.uid));E.discardCard(g,0,c.uid);assert.equal(p.money,6);assert.equal(g.discard[4].filter(x=>x.uid===c.uid).length,1);
 });
 
 test('regression: discard directly releases invested principal without counting it as income',()=>{
@@ -91,22 +91,22 @@ test('regression: interim earnings do not pay until the last slot and next week 
 
 test('regression: pending ordinary cash cannot fund a later multweek project',()=>{
   const g=make({startMoney:0}),p=g.players[0];skills(p,'WW');rig(g,p,[['W-E',0],['W-P1',4]]);
-  const before=structuredClone(g),preview=E.preview(g,0);assert.deepEqual(g,before);assert.equal(preview.money,5);
-  finish(g);assert.equal(p.money,5);assert.equal(p.cards.find(c=>c.type==='W-P1').progress,undefined);assert(!p.weekend);
+  const before=structuredClone(g),preview=E.preview(g,0);assert.deepEqual(g,before);assert.equal(preview.money,4);
+  finish(g);assert.equal(p.money,4);assert.equal(p.cards.find(c=>c.type==='W-P1').progress,undefined);assert(!p.weekend);
 });
 
 test('regression: growth refunds, salary and event awards are cash but never side income',()=>{
   const g=make(),p=g.players[0];rig(g,p,[['W-E',0],['A-G2',1],['A-E',6]]);g.inspection.gain={money:2};
-  finish(g);assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:3,salary:3,eventMoney:2,total:9});assert.equal(p.money,17);assert.equal(p.income,1);
+  finish(g);assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:2,salary:3,eventMoney:2,total:8});assert.equal(p.money,16);assert.equal(p.income,1);
 });
 
-test('regression: escaped players continue side income but receive no employee salary or event bonus',()=>{
+test('regression: escaped players receive no further settlement, income, salary or event bonus',()=>{
   const g=make({playerCount:3}),p=g.players[0];p.escaped=true;rig(g,p,[['A-E',6]]);g.inspection.gain={money:2};g.inspection.employeesOnly=true;finish(g);
-  assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:0,salary:0,eventMoney:0,total:1});assert.equal(p.money,9);
+  assert.equal(p.settlement,null);assert.equal(p.money,8);
   assert.equal(g.players[1].money,13);
 });
 
 test('regression: weekly side income has no cap at the escape threshold',()=>{
-  const g=make(),p=g.players[0];skills(p,'AA');rig(g,p,[['A-H',0],['A-H',1],['A-H',6]]);finish(g);
+  const g=make({playerCount:4}),p=g.players[0];skills(p,'AA');rig(g,p,[['A-H',0],['A-H',1],['A-H',5],['A-H',6]]);finish(g);
   assert.equal(p.income,12);assert.equal(p.settlement.sideIncome,12);assert.equal(p.money,23);assert.equal(p.rawIncome,undefined);
 });

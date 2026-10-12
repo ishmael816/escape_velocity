@@ -109,7 +109,7 @@ export function acquireScenario(spec,{limit=18}={}){
    scheduled:p.cards.filter(c=>E.findPlacement(p,c.uid)).map(c=>c.type),
    eligible:E.eligible(g,p)});
   if(E.eligible(g,p))return {id:spec.id,name:spec.name,escapeWeek:g.week,weeks,actions};
-  for(const q of g.players)if(!Object.hasOwn(g.escapeDecisions,q.id))E.chooseEscape(g,q.id,false);
+  for(const q of g.players)if(!q.escaped&&!Object.hasOwn(g.escapeDecisions,q.id))E.chooseEscape(g,q.id,false);
   E.closeWeek(g);quiet(g);
  }
  return {id:spec.id,name:spec.name,escapeWeek:null,weeks,actions};

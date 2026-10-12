@@ -1,0 +1,219 @@
+{
+  "version": "0.24.2",
+  "note": "Heuristic policies, not human balance or elapsed playtime. Growth-income count means distinct successfully executed card instances with two printed skill requirements, not a game tier. Counts do not include suspended or unplaced cards. Simultaneous escape can produce multiple winners per game. Watchdogs are test limits, not game rules.",
+  "paired": {
+    "games": 168,
+    "ended": 168,
+    "gameWeeksMean": 7.553571428571429,
+    "mixedShare": 0.4479166666666667,
+    "policies": {
+      "basic": {
+        "n": 48,
+        "escapeN": 29,
+        "share": 0.5,
+        "week": 9.10344827586207,
+        "cards": 7.206896551724138,
+        "maintenance": 2.3793103448275863,
+        "idleP90": 3
+      },
+      "W": {
+        "n": 48,
+        "escapeN": 32,
+        "share": 0.5729166666666666,
+        "week": 7.71875,
+        "cards": 6.375,
+        "maintenance": 1.625,
+        "idleP90": 2
+      },
+      "A": {
+        "n": 48,
+        "escapeN": 34,
+        "share": 0.6979166666666666,
+        "week": 7.0588235294117645,
+        "cards": 6.647058823529412,
+        "maintenance": 1.088235294117647,
+        "idleP90": 2
+      },
+      "B": {
+        "n": 48,
+        "escapeN": 34,
+        "share": 0.6145833333333334,
+        "week": 7.352941176470588,
+        "cards": 6.823529411764706,
+        "maintenance": 2.411764705882353,
+        "idleP90": 1
+      },
+      "C": {
+        "n": 48,
+        "escapeN": 37,
+        "share": 0.6666666666666666,
+        "week": 7.351351351351352,
+        "cards": 6.8108108108108105,
+        "maintenance": 1.972972972972973,
+        "idleP90": 1
+      },
+      "mixed": {
+        "n": 48,
+        "escapeN": 29,
+        "share": 0.4479166666666667,
+        "week": 7.827586206896552,
+        "cards": 5.931034482758621,
+        "maintenance": 1.7241379310344827,
+        "idleP90": 1
+      },
+      "repeat": {
+        "n": 48,
+        "escapeN": 0,
+        "share": 0,
+        "week": null,
+        "cards": null,
+        "maintenance": null,
+        "idleP90": 4
+      }
+    },
+    "construction": {
+      "escaped": 195,
+      "successfulIncomeCardsRequiringTwoSkills": {
+        "1": 2,
+        "2": 73,
+        "3": 86,
+        "4": 34
+      },
+      "threeOrFour": 120,
+      "meanCash": 27.646153846153847
+    },
+    "constructionByPolicy": {
+      "W": {
+        "escaped": 32,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "2": 15,
+          "3": 17
+        },
+        "threeOrFour": 17,
+        "meanCash": 26.875
+      },
+      "basic": {
+        "escaped": 29,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "1": 2,
+          "2": 19,
+          "3": 8
+        },
+        "threeOrFour": 8,
+        "meanCash": 30.896551724137932
+      },
+      "A": {
+        "escaped": 34,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "2": 14,
+          "3": 12,
+          "4": 8
+        },
+        "threeOrFour": 20,
+        "meanCash": 31.294117647058822
+      },
+      "B": {
+        "escaped": 34,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "2": 14,
+          "3": 14,
+          "4": 6
+        },
+        "threeOrFour": 20,
+        "meanCash": 28.647058823529413
+      },
+      "C": {
+        "escaped": 37,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "2": 9,
+          "3": 21,
+          "4": 7
+        },
+        "threeOrFour": 28,
+        "meanCash": 26.216216216216218
+      },
+      "mixed": {
+        "escaped": 29,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "2": 2,
+          "3": 14,
+          "4": 13
+        },
+        "threeOrFour": 27,
+        "meanCash": 21.620689655172413
+      }
+    },
+    "watchdogCases": []
+  },
+  "multiplayer": {
+    "games": 126,
+    "ended": 126,
+    "endedBy24": 126,
+    "meanWeeks": 8.492063492063492,
+    "weeks": [
+      5,
+      15
+    ],
+    "construction": {
+      "escaped": 307,
+      "successfulIncomeCardsRequiringTwoSkills": {
+        "0": 7,
+        "1": 7,
+        "2": 60,
+        "3": 143,
+        "4": 89,
+        "5": 1
+      },
+      "threeOrFour": 232,
+      "meanCash": 31.47231270358306
+    },
+    "byPlayerCount": {
+      "2": {
+        "escaped": 33,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "1": 1,
+          "2": 12,
+          "3": 15,
+          "4": 5
+        },
+        "threeOrFour": 20,
+        "meanCash": 25.90909090909091
+      },
+      "3": {
+        "escaped": 92,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "0": 2,
+          "1": 2,
+          "2": 17,
+          "3": 43,
+          "4": 27,
+          "5": 1
+        },
+        "threeOrFour": 70,
+        "meanCash": 31.282608695652176
+      },
+      "4": {
+        "escaped": 182,
+        "successfulIncomeCardsRequiringTwoSkills": {
+          "0": 5,
+          "1": 4,
+          "2": 31,
+          "3": 85,
+          "4": 57
+        },
+        "threeOrFour": 142,
+        "meanCash": 32.57692307692308
+      }
+    }
+  },
+  "demoBots": {
+    "games": 36,
+    "ended": 36,
+    "meanWeeks": 7.888888888888889,
+    "weeks": [
+      6,
+      11
+    ],
+    "cashAtEscape": 18.35164835164835
+  }
+}

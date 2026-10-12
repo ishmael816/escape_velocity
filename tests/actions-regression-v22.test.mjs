@@ -43,11 +43,11 @@ test('regression: past source, past destination and discard failures are atomic'
   unchanged(g,()=>E.discardCard(g,0,past.uid));
   unchanged(g,()=>E.place(g,0,other.uid,{day:0,period:0}));
   unchanged(g,()=>E.unplace(g,0,other.uid));unchanged(g,()=>E.discardCard(g,0,'missing'));
-  assert.equal(past.lockedCapital,4);
+  assert.equal(past.lockedCapital,3);
 });
 
 test('regression: invalid slots, ownership, capital, skill and raw-sanity rejection are atomic',()=>{
-  const g=make({startMoney:3}),p=g.players[0],c=add(g,p,'A-E');
+  const g=make({startMoney:2}),p=g.players[0],c=add(g,p,'A-E');
   for(const s of [{day:-1,period:0},{day:7,period:0},{day:0.5,period:0},{day:0,period:3}])unchanged(g,()=>E.place(g,0,c.uid,s));
   unchanged(g,()=>E.place(g,0,'missing',sun));
   const capital=add(g,p,'C-E'),advanced=add(g,p,'A-H');
@@ -59,7 +59,7 @@ test('regression: invalid slots, ownership, capital, skill and raw-sanity reject
 test('regression: rejected overlapping placement does not release existing capital',()=>{
   const g=make(),p=g.players[0],c=add(g,p,'C-E'),block=add(g,p,'A-L');
   E.place(g,0,c.uid,{day:4,period:0});turn(g);E.place(g,0,block.uid,sun);turn(g);
-  unchanged(g,()=>E.place(g,0,c.uid,sun));assert.equal(c.lockedCapital,4);assert.equal(p.money,4);
+  unchanged(g,()=>E.place(g,0,c.uid,sun));assert.equal(c.lockedCapital,3);assert.equal(p.money,5);
 });
 
 test('regression: 8h anchors to morning, moving and withdrawal release both halves',()=>{
@@ -126,7 +126,7 @@ test('regression: protection selection is once before first action and never shi
 });
 
 test('regression: completed protected growth cannot transfer its shield to the parallel card',()=>{
-  const g=make(),p=g.players[0];skills(p,'B');rig(g,p,[['A-G1',0],['B-M',0]]);p.protectionFrom=1;E.setProtection(g,0,{day:0,period:0});
+  const g=make(),p=g.players[0];skills(p,'BB');rig(g,p,[['A-G1',0],['B-M',0]]);p.protectionFrom=1;E.setProtection(g,0,{day:0,period:0});
   g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
   assert.equal(E.skillCounts(p).A,1);assert.equal(p.caught,1);assert.equal(p.income,0);assert.equal(p.money,10);
 });
@@ -134,7 +134,7 @@ test('regression: completed protected growth cannot transfer its shield to the p
 test('regression: multiweek permission keeps progress through insufficient cash, withdrawal and reload',()=>{
   const g=make({startMoney:1}),p=g.players[0];skills(p,'WW');const c=add(g,p,'W-P1');E.place(g,0,c.uid,{day:4,period:0});finish(g);
   assert.equal(c.progress,1);assert.equal(c.lastProgressWeek,1);assert.equal(p.money,3);next(g);turn(g);
-  E.buy(g,0,offer(g,'W-M').uid);assert.equal(p.money,0);finish(g);
+  E.buy(g,0,offer(g,'W-S').uid);assert.equal(p.money,0);finish(g);
   assert.equal(c.progress,1);assert.equal(c.lastProgressWeek,1);assert(!p.weekend);assert.equal(p.money,3);
   next(g);turn(g);E.unplace(g,0,c.uid);assert.equal(c.progress,1);turn(g);E.place(g,0,c.uid,{day:4,period:0});
   const clone=reload(g);finish(g);finish(clone);assert.deepEqual(g,clone);
@@ -157,12 +157,12 @@ for(const type of ['W-P1','W-P2'])test(`regression: ${type} can be bought before
 
 test('regression: sanity clamps without drift, skill or stacked autonomy gains',()=>{
   const g=make(),p=g.players[0];skills(p,'WWAABBCC');assert.equal(E.syncSanity(g,p),3);
-  p.tempWeekend=true;assert.equal(E.syncSanity(g,p),3);p.weekend=true;assert.equal(E.syncSanity(g,p),5);p.escaped=true;assert.equal(E.syncSanity(g,p),7);
-  p.sanity=24;assert.equal(E.syncSanity(g,p),7);assert.equal(p.accountability,undefined);assert.equal(E.createGame({startSanity:24}).players[0].sanity,10);
-  const h=make({startSanity:10}),q=h.players[0],c=add(h,q,'A-L');q.weekend=true;E.place(h,0,c.uid,sun);assert.equal(q.sanity,9);turn(h);E.unplace(h,0,c.uid);assert.equal(q.sanity,10);
+  p.tempWeekend=true;assert.equal(E.syncSanity(g,p),3);p.weekend=true;assert.equal(E.syncSanity(g,p),5);p.escaped=true;assert.equal(E.syncSanity(g,p),5);
+  p.sanity=24;assert.equal(E.syncSanity(g,p),5);assert.equal(p.accountability,undefined);assert.equal(E.createGame({startSanity:24}).players[0].sanity,10);
+  const h=make({startSanity:10}),q=h.players[0],c=add(h,q,'A-L');q.weekend=true;E.place(h,0,c.uid,sun);assert.equal(q.sanity,8);turn(h);E.unplace(h,0,c.uid);assert.equal(q.sanity,10);
 });
 
 test('regression: persistent income and pressure have no five-week sanity drift',()=>{
   const g=make(),p=g.players[0];rig(g,p,[['A-G1',0,2],['A-L',6]]);
-  for(let i=0;i<5;i++){finish(g);assert.equal(p.sanity,2);assert.equal(p.income,2);if(i<4)next(g);}
+  for(let i=0;i<5;i++){finish(g);assert.equal(p.sanity,1);assert.equal(p.income,2);if(i<4)next(g);}
 });

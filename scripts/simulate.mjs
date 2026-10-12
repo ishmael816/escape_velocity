@@ -6,10 +6,11 @@ for(const playerCount of [2,3,4])for(const seed of process.argv.includes('--matr
  let marketSignature=JSON.stringify(g.market),unchangedMarketWeeks=0,longestUnchangedMarketWeeks=0;
  const weeklyEconomy=[];
  while(g.phase!=='ended'&&g.week<=35){
-  while(g.phase==='planning')E.botAct(g);
+  let planningSteps=0;
+  while(g.phase==='planning'){if(++planningSteps>2000)throw Error(`Bot planning loop: ${playerCount} players, seed ${seed}, week ${g.week}`);E.botAct(g);}
   while(g.phase==='resolving'){E.resolveAll(g);if(g.opportunity)E.botOpportunity(g);}
   weeklyEconomy.push({week:g.week,planningActions:g.actionCount,endedByPass:!!g.endedByPass,players:g.players.map(p=>({id:p.id,alreadyEscaped:p.escaped,money:p.money,income:p.income,sanity:p.sanity,supportFee:(p.supports||[]).filter(s=>s.active).reduce((n,s)=>n+s.fee,0),marketPurchases:g.logs.filter(l=>l.week===g.week&&l.player===p.id&&l.text.startsWith('购买「')).length}))});
-  for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}
+  for(const p of E.playingPlayers(g)){E.botDraft(g,p.id);if(!p.escaped&&!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}
   E.closeWeek(g);
   const nextMarket=JSON.stringify(g.market);unchangedMarketWeeks=nextMarket===marketSignature?unchangedMarketWeeks+1:0;marketSignature=nextMarket;longestUnchangedMarketWeeks=Math.max(longestUnchangedMarketWeeks,unchangedMarketWeeks);
   if(process.argv.includes('--verbose')&&playerCount===3&&seed===42)console.log(JSON.stringify({week:g.week,players:g.players.map(p=>({income:p.income,sanity:p.sanity,skills:E.skillCounts(p),hand:E.unplacedCards(p).map(c=>c.type),cards:p.cards.map(c=>c.type)}))}));

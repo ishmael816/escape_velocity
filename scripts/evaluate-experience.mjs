@@ -118,9 +118,9 @@ for(const n of [2,3,4])for(const seed of seeds)for(const focal of policies)for(l
     const qualifies=E.eligible(g,p);if(qualifies)m.firstEligible??=g.week;
     if(!e.productive&&!qualifies){m.productiveIdle++;m.consecutiveIdle++;m.longestIdle=Math.max(m.longestIdle,m.consecutiveIdle);}else m.consecutiveIdle=0;
     m.freeReorders+=e.reorder-e.paidReorder;m.paidReorders+=e.paidReorder;
-    m.weeks.push({week:g.week,income:p.income,sanity:p.sanity,cash:p.money,skills:counts(p),cards:scheduled(p),maintenance:(p.supports||[]).filter(x=>x.active).reduce((a,x)=>a+x.fee,0),productive:e.productive,reorders:e.reorder,paidReorders:e.paidReorder,event:g.inspection.kind});
+    m.weeks.push({week:g.week,income:p.income,sanity:p.sanity,cash:p.money,skills:counts(p),cards:scheduled(p),advancedIncomeCards:p.cards.filter(c=>E.findPlacement(p,c.uid)&&getCard(c).advanced&&getCard(c).income).length,successfulGrowthIncomeCards:p.weeklyEarnings.filter(x=>x.profit>0&&getCard(x).requires.length>=2).length,growthIncome:p.weeklyEarnings.filter(x=>getCard(x).requires.length>=2).reduce((n,x)=>n+x.profit,0),maintenance:(p.supports||[]).filter(x=>x.active).reduce((a,x)=>a+x.fee,0),productive:e.productive,reorders:e.reorder,paidReorders:e.paidReorder,event:g.inspection.kind});
    }
-   if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,true);
+   if(!p.escaped&&!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,true);
    for(const key of ['money','sanity'])if(!Number.isFinite(p[key])||p[key]<0)throw Error('invalid resources');
   }
   E.closeWeek(g);for(const p of g.players)players[p.id].escaped=p.escapedWeek;

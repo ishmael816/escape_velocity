@@ -23,7 +23,7 @@ for(const playerCount of [2,3,4])for(let seed=1;seed<=100;seed++){
   g.players.forEach((p,i)=>{if(p.skills.length&&firstSkill[i]===null)firstSkill[i]=g.week;if(advancedScheduled[i].some(type=>resolveLogs.some(l=>l.player===i&&l.text.includes(getCard(type).name)&&!['warning','caught'].includes(l.tone)))&&firstAdvanced[i]===null)firstAdvanced[i]=g.week;});
   const resourceOps=resolveLogs.reduce((n,l)=>n+(l.text.match(/(?:资金|理智|灵感) [＋+−-]\d+/g)||[]).length,0);
   weeks.push({week:g.week,event:g.inspection.name,actions,scheduled,slots,board,resourceOps,warnings:resolveLogs.filter(l=>l.tone==='warning').length,caught:resolveLogs.filter(l=>l.tone==='caught').length,players:g.players.map(p=>({income:p.income,sanity:p.sanity,money:p.money,hand:E.unplacedCards(p).length,skills:E.skillCounts(p),upgrades:p.upgrades.length,weekend:p.weekend})),logs:playerCount===3&&seed===42?g.logs.slice(before):undefined});
-  for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}E.closeWeek(g);
+  for(const p of g.players){E.botDraft(g,p.id);if(!p.escaped&&!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}E.closeWeek(g);
  }
  games.push({playerCount,seed,ended:g.phase==='ended',length:weeks.length,escapeWeeks:g.players.map(p=>p.escapedWeek),firstSkill,firstAdvanced,final:g.players.map(p=>({id:p.id,escaped:p.escaped,sanity:p.sanity,money:p.money,weekend:p.weekend,upgrades:p.upgrades.map(c=>c.type),skills:E.skillCounts(p)})),weeks,actionLog:actionLog.length?actionLog:undefined});
 }

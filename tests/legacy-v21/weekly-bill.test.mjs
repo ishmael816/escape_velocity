@@ -53,9 +53,10 @@ test('caught activity contributes no earnings; paid fees and fines are not charg
  assert.equal(p.weeklyEarnings.filter(x=>x.type==='C05').length,1);
 });
 
-test('escaped players still receive side income but no employee salary or bonus',()=>{
- const g=make(),p=g.players[0];p.escaped=true;rig(g,p,[['C05',6]]);
- g.inspection.gain={money:2};g.inspection.employeesOnly=true;lock(g);const money=p.money;
- E.resolveAll(g);assert.equal(p.settlement.salary,0);assert.equal(p.settlement.eventMoney,0);
- assert.equal(p.settlement.total,1);assert.equal(p.money,money+1);
+test('escaped players receive neither activity income nor salary or events',()=>{
+ const g=make({playerCount:3}),p=g.players[0];rig(g,p,[['C05',6]]);p.escaped=true;
+ const before=structuredClone(p);
+ g.inspection.gain={money:2};g.inspection.employeesOnly=false;lock(g);
+ E.resolveAll(g);assert.deepEqual(p,before);assert.equal(g.timeline.length,0);
+ assert.equal(g.players[1].settlement.total,5);
 });

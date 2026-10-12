@@ -109,11 +109,11 @@ function run(n,seed,roster,{flexAfterIdle=false,capture=false}={}){
    act(g,id,effective[id],(kind,cost)=>acts[id].push({kind,cost}));
   }
   resolve(g,effective);
-  weeks.push({week:g.week,players:g.players.map(p=>({id:p.id,escaped:p.escaped,income:p.income,sanity:p.sanity,cash:p.money,skills:E.skillCounts(p),maintenance:(p.supports||[]).filter(x=>x.active).reduce((s,x)=>s+x.fee,0),cards:Object.values(p.schedule).flat().length,acts:acts[p.id],effective:effective[p.id]}))});
+  weeks.push({week:g.week,players:g.players.map(p=>({id:p.id,escaped:p.escaped,income:p.income,sanity:p.sanity,cash:p.money,skills:E.skillCounts(p),maintenance:(p.supports||[]).filter(x=>x.active).reduce((s,x)=>s+x.fee,0),cards:Object.values(p.schedule).flat().length,advancedIncomeCards:p.cards.filter(c=>E.findPlacement(p,c.uid)&&getCard(c).advanced&&getCard(c).income).length,successfulGrowthIncomeCards:p.weeklyEarnings.filter(x=>x.profit>0&&getCard(x).requires.length>=2).length,growthIncome:p.weeklyEarnings.filter(x=>getCard(x).requires.length>=2).reduce((n,x)=>n+x.profit,0),acts:acts[p.id],effective:effective[p.id]}))});
   for(const p of g.players){
    const useful=acts[p.id].some(a=>['buy','learn','place'].includes(a.kind));idle[p.id]=useful?0:idle[p.id]+1;
    if(flexAfterIdle&&roster[p.id]!=='mixed'&&roster[p.id]!=='repeat'&&idle[p.id]>=2)flex[p.id]=true;
-   if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,true);
+   if(!p.escaped&&!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,true);
   }
   E.closeWeek(g);
  }

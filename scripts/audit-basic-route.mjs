@@ -24,7 +24,7 @@ for(let seed=1;seed<=100;seed++){
  while(g.phase!=='ended'&&g.week<=35){
   while(g.phase==='planning'){const id=E.activeBuyer(g),start=g.logs.length,day=g.day;if(id===0)act(g);else E.botAct(g);if(id===0&&seed===42)actions.push({week:g.week,day,logs:g.logs.slice(start)});}
   E.resolveAll(g);weeks.push({week:g.week,income:g.players[0].income,sanity:g.players[0].sanity,money:g.players[0].money,schedule:Object.values(g.players[0].schedule).flat().length});
-  for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}E.closeWeek(g);
+  for(const p of g.players){E.botDraft(g,p.id);if(!p.escaped&&!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);}E.closeWeek(g);
  }
  runs.push({seed,ended:g.phase==='ended',length:weeks.length,escaped:g.players[0].escaped,escapeWeek:g.players[0].escapedWeek,cards:g.players[0].cards.map(c=>c.type),skills:g.players[0].skills.length,weeks,actions:seed===42?actions:undefined});
 }

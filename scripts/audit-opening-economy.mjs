@@ -20,7 +20,7 @@ for(const salary of [3,4])for(const playerCount of [2,3,4])for(const seed of [7,
    actions.push({...base,player:p.id,day,money,kind,affordable,handPlace,text});
   }
   while(g.phase==='resolving'){E.resolveAll(g);if(g.opportunity)E.botOpportunity(g);}
-  for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);Object.assign(stats[p.id],{endMoney:p.money,income:p.income,sanity:p.sanity,caught:p.caught});}
+  for(const p of g.players){E.botDraft(g,p.id);if(!p.escaped&&!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id);Object.assign(stats[p.id],{endMoney:p.money,income:p.income,sanity:p.sanity,caught:p.caught});}
   rows.push(...stats);E.closeWeek(g);
  }
 }

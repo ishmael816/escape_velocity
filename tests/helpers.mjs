@@ -5,7 +5,7 @@ export function quiet(g){g.inspection={name:'平静',inspectionCount:0,times:[],
 export function turn(g,id=0){while(g.phase==='planning'&&E.activeBuyer(g)!==id)E.pass(g,E.activeBuyer(g));}
 export function lock(g){while(g.phase==='planning')E.pass(g,E.activeBuyer(g));}
 export function finish(g){lock(g);E.resolveAll(g);}
-export function next(g){for(const p of g.players){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,false);}E.closeWeek(g);quiet(g);}
+export function next(g){for(const p of E.playingPlayers(g)){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,false);}E.closeWeek(g);quiet(g);}
 export function add(g,p,type){const c={uid:`fixture-${++g.uid}`,type};p.cards.push(c);return c;}
 export function skills(p,pattern){p.skills=[];for(const r of new Set(pattern))p.skills.push(...CARDS.filter(d=>d.skill===r).slice(0,[...pattern].filter(x=>x===r).length).map(d=>({uid:'archive-'+d.id,type:d.id})));}
 // Prepared midgame boards isolate resolution from purchase sequencing.
