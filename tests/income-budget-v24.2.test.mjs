@@ -18,7 +18,7 @@ test('v24.2: any pair of repeat income activities cannot alone fund escape',()=>
 
 test('bot keeps beneficial night support instead of oscillating between full days',()=>{
  const g=make({playerCount:4}),p=g.players[0];p.bot=true;skills(p,'WW');
- rig(g,p,[['W-H',4],['W-H',5],['W-H',6],['B-S',4,2]]);g.day=4;
+ rig(g,p,[['W-H',4],['W-H',5],['W-H',3],['B-S',4,2]]);g.day=4;
  assert.equal(p.sanity,4);
  const support=p.cards.find(c=>c.type==='B-S'),before=E.findPlacement(p,support.uid),action=g.actionCount;
  for(let i=0;i<20&&g.phase==='planning'&&E.activeBuyer(g)===0;i++)E.botAct(g);

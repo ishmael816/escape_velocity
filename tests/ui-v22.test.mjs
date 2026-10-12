@@ -7,11 +7,11 @@ test('fresh v24 UI renders, preserves v21 save, and shows the rebuilt catalogue 
  globalThis.localStorage={getItem:k=>{reads.push(k);return storage.get(k);},setItem:(k,v)=>storage.set(k,v)};
  globalThis.document={querySelector:s=>s==='#app'?root:s==='.calendar-scroll'||s==='#shelf'||s==='.calendar-panel'?scroll:null,addEventListener(){},querySelectorAll:()=>[]};
  await import('../src/app.js');
- assert(root.innerHTML.includes('v0.24.2'));assert(!root.innerHTML.includes('版图灵感'));assert(!root.innerHTML.includes('undefined'));
- assert.deepEqual(reads,['escape-velocity-game-v24.2']);assert.equal(storage.get('escape-velocity-game-v22'),old22);assert.equal(storage.get('escape-velocity-game-v23'),old23);
+ assert(root.innerHTML.includes('v0.24.2'));assert(root.innerHTML.includes('空置夜晚灵感'));assert(!root.innerHTML.includes('undefined'));
+ assert.deepEqual(reads,['escape-velocity-game-v24.2-engines']);assert.equal(storage.get('escape-velocity-game-v22'),old22);assert.equal(storage.get('escape-velocity-game-v23'),old23);
  const click=action=>listeners.click({target:{closest:()=>({dataset:{action}})}});
  click('catalogue');assert(root.innerHTML.includes('寻找机会'));assert(root.innerHTML.includes('自有品牌'));assert(root.innerHTML.includes('W-G1'));assert(!root.innerHTML.replace(/<[^>]*>/g,'').includes('2h'));
- click('rules');assert(root.innerHTML.includes('移动和撤回已安排、尚未过去的牌免费'));assert(root.innerHTML.includes('两周'));assert(root.innerHTML.includes('按原价购买'));assert(root.innerHTML.includes('32种卡牌'));assert(root.innerHTML.includes('两个不同名成长来源'));assert(root.innerHTML.includes('夜间照常有效'));
+ click('rules');assert(root.innerHTML.includes('移动和撤回已安排、尚未过去的牌免费'));assert(root.innerHTML.includes('两周'));assert(root.innerHTML.includes('按原价购买'));assert(root.innerHTML.includes('37种卡牌'));assert(root.innerHTML.includes('两个不同名成长来源'));assert(root.innerHTML.includes('正理智影响照常有效'));assert(root.innerHTML.includes('购买条件'));
  click('settings');assert(root.innerHTML.includes('value="2"'));assert(root.innerHTML.includes('旧版本存档保留'));assert.equal(storage.get('escape-velocity-game-v21'),oldSave);
  delete globalThis.document;delete globalThis.localStorage;
 });

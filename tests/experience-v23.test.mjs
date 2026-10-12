@@ -8,7 +8,7 @@ import {offer,unchanged,supplyIds,reload} from './regression-helpers-v22.mjs';
 test('v23: another lane purchase cannot keep stale cards on display beyond two weeks',()=>{
  const g=make({startMoney:100}),initial=supplyIds(g),old8=g.market[8].map(c=>c.uid);
  for(let week=1;week<=2;week++){
-  turn(g);E.buy(g,0,g.market[4][0].uid);finish(g);assert(!g.mondayMarketRefreshed);assert(old8.every(uid=>g.market[8].some(c=>c.uid===uid)));
+  turn(g);E.buy(g,0,g.market[4].find(c=>!E.canBuy(g,g.players[0],getCard(c))).uid);finish(g);assert(!g.mondayMarketRefreshed);assert(old8.every(uid=>g.market[8].some(c=>c.uid===uid)));
   const clone=reload(g);next(g);next(clone);assert.deepEqual(g,clone);
  }
  assert.equal(g.week,3);assert(g.market[8].every(c=>!old8.includes(c.uid)&&c.marketSince===3));assert.deepEqual(supplyIds(g),initial);
@@ -16,8 +16,8 @@ test('v23: another lane purchase cannot keep stale cards on display beyond two w
 });
 
 test('v23: independently replenished offers keep their own age; exhausted expiry conserves instances',()=>{
- const g=make({startMoney:100});turn(g);E.buy(g,0,g.market[4][0].uid);finish(g);next(g);
- turn(g);E.buy(g,0,g.market[4][0].uid);const fresh=g.market[4].at(-1).uid;finish(g);next(g);
+ const g=make({startMoney:100});turn(g);E.buy(g,0,g.market[4].find(c=>!E.canBuy(g,g.players[0],getCard(c))).uid);finish(g);next(g);
+ turn(g);E.buy(g,0,g.market[4].find(c=>!E.canBuy(g,g.players[0],getCard(c))).uid);const fresh=g.market[4].at(-1).uid;finish(g);next(g);
  assert(g.market[4].some(c=>c.uid===fresh&&c.marketSince===2));
  const h=make({startMoney:100});for(const lane of [4,8]){h.decks[lane]=[];h.discard[lane]=[];}
  const ids=supplyIds(h);for(let i=0;i<3;i++){finish(h);next(h);}
@@ -30,7 +30,7 @@ test('v23: direct growth uses a real finite card, full printed price and one pur
  const c=offers.find(c=>c.type==='A-G1'),money=p.money,actions=g.actionCount;
  E.learn(g,0,c.type);assert(p.cards.includes(c));assert.equal(p.money,money-2);assert.equal(g.actionCount,actions+1);assert.equal(E.findPlacement(p,c.uid),null);assert.deepEqual(supplyIds(g),ids);
  turn(g);unchanged(g,()=>E.learn(g,0,'A-G1'));assert.equal(E.learningOffers(g,0).find(c=>getCard(c).skill==='A').type,'A-G2');
- const a=g.actionCount;E.place(g,0,c.uid,{day:6,period:0});assert.equal(g.actionCount,a+1);finish(g);assert.equal(E.skillCounts(p).A,1);
+ const a=g.actionCount;E.place(g,0,c.uid,{day:6,period:0});assert.equal(g.actionCount,a+1);finish(g);assert.equal(c.progress,1);next(g);finish(g);assert.equal(E.skillCounts(p).A,1);
 });
 
 test('v23: direct growth failures are atomic and cannot mint copies from another player or completed archives',()=>{
@@ -54,7 +54,7 @@ test('v23: moving three future cards frees a whole day without three paid action
  for(const [i,s]of [{day:4,period:0},{day:4,period:1},{day:5,period:2}].entries())E.place(g,0,p.cards[i].uid,s);
  assert.equal(g.actionCount,0);assert.equal(g.day,0);assert.equal(E.activeBuyer(g),0);assert.equal(p.money,money);assert.equal(p.sanity,1);
  for(const period of [0,1,2])assert.equal(E.cardsInSlot(p,{day:6,period}).length,0);assert.deepEqual(supplyIds(g),ids);
- const clone=reload(g);finish(g);finish(clone);assert.deepEqual(g,clone);assert.equal(p.income,2);assert.equal(E.skillCounts(p).A,1);
+ const clone=reload(g);finish(g);finish(clone);assert.deepEqual(g,clone);assert.equal(p.income,2);assert.equal(E.skillCounts(p).A,0);assert.equal(p.cards.find(c=>c.type==='A-G1').progress,1);
 });
 
 test('v23: free move/withdraw cannot farm capital, actions, income or free first placements',()=>{
@@ -71,7 +71,7 @@ test('v23: free edits remain turn-bound, past-bound and locked during inspection
 });
 
 test('v23: upgrading a basic activity uses free withdrawal plus one paid new arrangement',()=>{
- const g=make(),p=g.players[0];skills(p,'AA');const base=add(g,p,'A-L'),advanced=add(g,p,'A-H');E.place(g,0,base.uid,{day:6,period:0});turn(g);
+ const g=make({startSanity:5}),p=g.players[0];skills(p,'AA');p.inspirationSlots=['0-2','1-2','2-2'];const base=add(g,p,'A-L'),advanced=add(g,p,'A-H');E.place(g,0,base.uid,{day:6,period:0});turn(g);
  const actions=g.actionCount;E.unplace(g,0,base.uid);assert.equal(g.actionCount,actions);E.place(g,0,advanced.uid,{day:6,period:0});assert.equal(g.actionCount,actions+1);
  finish(g);assert.equal(p.income,3);assert.equal(Object.values(p.schedule).flat().length,1);assert.equal(p.sanity,4);
 });
@@ -98,6 +98,6 @@ for(const n of [2,3,4])for(const route of 'WABC')test(`v23: ${n} players, ${rout
    const c=p.cards.find(c=>c.type===route+'-'+suffix);assert.equal(p.money,before-getCard(c).price.money);assert.equal(g.actionCount,actions+1);
    turn(g,seat);E.place(g,seat,c.uid,{day:4,period});assert.deepEqual(supplyIds(g),ids);
   }
-  finish(g);assert.equal(E.skillCounts(p)[route],2);assert.equal(p.money,8);assert.equal(p.sanity,3);assert.equal(p.cards.length,0);assert.deepEqual(supplyIds(g),ids);
+  finish(g);assert.equal(E.skillCounts(p)[route],0);next(g);finish(g);assert.equal(E.skillCounts(p)[route],1);next(g);finish(g);assert.equal(E.skillCounts(p)[route],2);assert.equal(p.money,9);assert.equal(p.sanity,3);assert.equal(p.cards.length,0);assert.deepEqual(supplyIds(g),ids);
  }
 });

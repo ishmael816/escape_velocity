@@ -1,0 +1,921 @@
+{
+  "rulesVersion": "v0.24.2-complete-engines",
+  "cardTypes": 37,
+  "copiesPerCard": 4,
+  "note": "Heuristic bots verify legal progress, not human enjoyment, route balance or playtime. No fixed week cap exists in the game; 35 weeks is the test watchdog.",
+  "command": "node scripts/simulate.mjs --output tmp/engines-simulation.json",
+  "watchdogWeeks": 35,
+  "games": [
+    {
+      "playerCount": 2,
+      "seed": 7,
+      "ended": true,
+      "weeks": 12,
+      "startingHand": 0,
+      "escapeWeeks": [
+        12,
+        null
+      ],
+      "cashAtEscape": [
+        13,
+        null
+      ],
+      "opportunities": 17,
+      "opportunityPurchases": 3,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 0
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "B-S",
+            "A-E",
+            "B-E",
+            "A-E",
+            "B-E",
+            "W-Q",
+            "C-E",
+            "C-E",
+            "B-S",
+            "A-L",
+            "A-Q",
+            "W-M",
+            "W-X",
+            "B-G2",
+            "C-G1",
+            "W-P1"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "W-S",
+            "B-E",
+            "A-Q",
+            "W-G1",
+            "A-L",
+            "C-E",
+            "A-H",
+            "C-E"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 2,
+      "seed": 42,
+      "ended": true,
+      "weeks": 13,
+      "startingHand": 0,
+      "escapeWeeks": [
+        null,
+        13
+      ],
+      "cashAtEscape": [
+        null,
+        21
+      ],
+      "opportunities": 11,
+      "opportunityPurchases": 2,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 1,
+            "B": 1,
+            "C": 2
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "C-E",
+            "B-E",
+            "A-E",
+            "W-S",
+            "A-L",
+            "W-S",
+            "C-E",
+            "C-Q",
+            "B-E",
+            "A-G2",
+            "W-Q",
+            "W-H"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 1
+          },
+          "inspiration": 5,
+          "cardTypes": [
+            "W-E",
+            "B-E",
+            "A-E",
+            "B-E",
+            "W-S",
+            "A-E",
+            "B-S",
+            "A-L",
+            "A-L",
+            "A-M",
+            "B-S",
+            "W-Q",
+            "W-X",
+            "W-X"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 2,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 12,
+      "startingHand": 0,
+      "escapeWeeks": [
+        12,
+        null
+      ],
+      "cashAtEscape": [
+        13,
+        null
+      ],
+      "opportunities": 13,
+      "opportunityPurchases": 3,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 1
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "B-S",
+            "A-L",
+            "C-E",
+            "A-E",
+            "W-S",
+            "A-L",
+            "A-S",
+            "W-Q",
+            "A-Q",
+            "B-E",
+            "W-X",
+            "B-X",
+            "A-E"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 0,
+            "A": 2,
+            "B": 0,
+            "C": 2
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "B-E",
+            "B-E",
+            "C-E",
+            "W-E",
+            "B-S",
+            "W-S",
+            "A-Q",
+            "A-H",
+            "C-E",
+            "A-E",
+            "A-S",
+            "A-H",
+            "A-L",
+            "B-G2",
+            "A-X",
+            "W-S"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 3,
+      "seed": 7,
+      "ended": true,
+      "weeks": 16,
+      "startingHand": 0,
+      "escapeWeeks": [
+        null,
+        16,
+        12
+      ],
+      "cashAtEscape": [
+        null,
+        19,
+        14
+      ],
+      "opportunities": 29,
+      "opportunityPurchases": 3,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 1,
+            "A": 2,
+            "B": 0,
+            "C": 2
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "B-S",
+            "A-E",
+            "B-E",
+            "A-S",
+            "A-Q",
+            "C-E",
+            "A-M",
+            "C-E",
+            "C-Q",
+            "C-M",
+            "W-G2",
+            "W-Q",
+            "B-G1",
+            "A-S",
+            "C-H"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 2,
+            "A": 1,
+            "B": 1,
+            "C": 0
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "W-S",
+            "W-Q",
+            "A-E",
+            "C-E",
+            "A-L",
+            "A-S",
+            "W-H",
+            "A-G2",
+            "A-S",
+            "B-E",
+            "A-E",
+            "A-L",
+            "W-H",
+            "W-H"
+          ]
+        },
+        {
+          "id": 2,
+          "skills": {
+            "W": 2,
+            "A": 1,
+            "B": 2,
+            "C": 0
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "B-S",
+            "B-E",
+            "B-E",
+            "A-E",
+            "C-E",
+            "W-E",
+            "B-S",
+            "W-M",
+            "B-Q",
+            "W-Q",
+            "A-L",
+            "W-M",
+            "B-M",
+            "A-G2"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 3,
+      "seed": 42,
+      "ended": true,
+      "weeks": 12,
+      "startingHand": 0,
+      "escapeWeeks": [
+        12,
+        null,
+        12
+      ],
+      "cashAtEscape": [
+        22,
+        null,
+        19
+      ],
+      "opportunities": 5,
+      "opportunityPurchases": 4,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 0,
+            "B": 1,
+            "C": 2
+          },
+          "inspiration": 5,
+          "cardTypes": [
+            "C-E",
+            "B-E",
+            "A-E",
+            "B-E",
+            "W-S",
+            "C-X",
+            "C-X",
+            "C-X",
+            "A-L",
+            "W-P1",
+            "C-Q",
+            "W-H",
+            "B-G1",
+            "W-H"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "inspiration": 5,
+          "cardTypes": [
+            "W-E",
+            "A-L",
+            "B-E",
+            "A-E",
+            "W-S",
+            "C-E",
+            "A-E",
+            "B-S",
+            "W-S",
+            "A-L",
+            "A-S",
+            "B-S",
+            "A-M",
+            "B-G2"
+          ]
+        },
+        {
+          "id": 2,
+          "skills": {
+            "W": 2,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "C-E",
+            "A-L",
+            "W-S",
+            "B-S",
+            "C-H",
+            "C-H",
+            "W-H",
+            "A-G2"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 3,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 13,
+      "startingHand": 0,
+      "escapeWeeks": [
+        13,
+        null,
+        12
+      ],
+      "cashAtEscape": [
+        13,
+        null,
+        19
+      ],
+      "opportunities": 26,
+      "opportunityPurchases": 5,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 0
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "B-S",
+            "B-E",
+            "A-Q",
+            "A-L",
+            "A-S",
+            "A-S",
+            "B-E",
+            "W-H",
+            "B-G2",
+            "A-L",
+            "A-M",
+            "B-X",
+            "A-E",
+            "B-X",
+            "W-X"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 1
+          },
+          "inspiration": 5,
+          "cardTypes": [
+            "A-L",
+            "C-E",
+            "W-E",
+            "A-E",
+            "W-S",
+            "B-S",
+            "C-E",
+            "B-E",
+            "A-L",
+            "A-Q",
+            "A-E",
+            "B-S",
+            "W-H",
+            "W-Q",
+            "W-M",
+            "B-G2",
+            "C-G1"
+          ]
+        },
+        {
+          "id": 2,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 0
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "B-E",
+            "C-E",
+            "W-Q",
+            "W-M",
+            "W-S",
+            "A-Q",
+            "B-G2",
+            "A-E",
+            "W-H",
+            "C-E",
+            "A-H",
+            "C-G2",
+            "A-H",
+            "W-S",
+            "A-H"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 4,
+      "seed": 7,
+      "ended": true,
+      "weeks": 18,
+      "startingHand": 0,
+      "escapeWeeks": [
+        12,
+        null,
+        16,
+        18
+      ],
+      "cashAtEscape": [
+        18,
+        null,
+        18,
+        20
+      ],
+      "opportunities": 35,
+      "opportunityPurchases": 7,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 0,
+            "C": 1
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "B-S",
+            "A-E",
+            "B-E",
+            "C-E",
+            "C-E",
+            "W-M",
+            "A-M",
+            "W-Q",
+            "W-H",
+            "W-E",
+            "A-M",
+            "B-G1",
+            "A-H"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 0,
+            "A": 0,
+            "B": 2,
+            "C": 2
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "W-S",
+            "A-E",
+            "A-L",
+            "W-S",
+            "C-Q",
+            "B-Q",
+            "C-E"
+          ]
+        },
+        {
+          "id": 2,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 1
+          },
+          "inspiration": 4,
+          "cardTypes": [
+            "B-E",
+            "A-S",
+            "A-E",
+            "A-S",
+            "W-S",
+            "W-Q",
+            "C-E",
+            "W-X",
+            "A-Q",
+            "B-Q",
+            "B-H",
+            "A-H",
+            "W-H",
+            "C-G2"
+          ]
+        },
+        {
+          "id": 3,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 1
+          },
+          "inspiration": 5,
+          "cardTypes": [
+            "B-S",
+            "B-E",
+            "B-E",
+            "A-E",
+            "A-Q",
+            "W-E",
+            "B-S",
+            "W-Q",
+            "A-L",
+            "A-L",
+            "A-S",
+            "A-S",
+            "W-H",
+            "A-M",
+            "W-X",
+            "B-X",
+            "C-G2",
+            "A-X",
+            "C-X",
+            "A-X",
+            "W-H",
+            "B-H"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 4,
+      "seed": 42,
+      "ended": true,
+      "weeks": 12,
+      "startingHand": 0,
+      "escapeWeeks": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "cashAtEscape": [
+        17,
+        16,
+        29,
+        19
+      ],
+      "opportunities": 12,
+      "opportunityPurchases": 3,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 0,
+            "C": 1
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "C-E",
+            "B-E",
+            "A-E",
+            "A-S",
+            "W-S",
+            "A-E",
+            "A-S",
+            "A-L",
+            "A-L",
+            "A-M",
+            "W-M",
+            "A-X"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 0
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "W-E",
+            "A-L",
+            "A-E",
+            "B-E",
+            "W-S",
+            "W-S",
+            "A-E",
+            "W-P1",
+            "A-Q",
+            "A-M",
+            "A-H"
+          ]
+        },
+        {
+          "id": 2,
+          "skills": {
+            "W": 2,
+            "A": 0,
+            "B": 0,
+            "C": 2
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "C-E",
+            "A-L",
+            "C-Q",
+            "C-E",
+            "W-E",
+            "C-X",
+            "C-X",
+            "C-X",
+            "B-S",
+            "W-S",
+            "W-Q",
+            "W-H",
+            "A-G1"
+          ]
+        },
+        {
+          "id": 3,
+          "skills": {
+            "W": 2,
+            "A": 0,
+            "B": 1,
+            "C": 2
+          },
+          "inspiration": 7,
+          "cardTypes": [
+            "B-E",
+            "W-E",
+            "W-H",
+            "B-S",
+            "C-Q",
+            "B-S",
+            "B-E",
+            "C-E",
+            "C-H",
+            "C-H",
+            "C-M"
+          ]
+        }
+      ]
+    },
+    {
+      "playerCount": 4,
+      "seed": 20261009,
+      "ended": true,
+      "weeks": 21,
+      "startingHand": 0,
+      "escapeWeeks": [
+        14,
+        null,
+        14,
+        21
+      ],
+      "cashAtEscape": [
+        26,
+        null,
+        20,
+        19
+      ],
+      "opportunities": 47,
+      "opportunityPurchases": 28,
+      "longestUnchangedMarketWeeks": 0,
+      "finalBoards": [
+        {
+          "id": 0,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 1,
+            "C": 1
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "B-S",
+            "A-L",
+            "B-S",
+            "A-L",
+            "A-H",
+            "A-Q",
+            "W-H",
+            "B-E",
+            "A-H",
+            "W-P1",
+            "A-M",
+            "C-G2",
+            "B-X",
+            "B-G1",
+            "C-X",
+            "A-S"
+          ]
+        },
+        {
+          "id": 1,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 1
+          },
+          "inspiration": 4,
+          "cardTypes": [
+            "B-E",
+            "C-E",
+            "W-S",
+            "A-M",
+            "W-H",
+            "A-Q",
+            "W-M",
+            "C-G2",
+            "W-H",
+            "W-X",
+            "W-Q",
+            "W-X",
+            "W-P1",
+            "A-H",
+            "W-M",
+            "A-M",
+            "B-X",
+            "B-H",
+            "B-H",
+            "B-H",
+            "C-X",
+            "A-S",
+            "A-M"
+          ]
+        },
+        {
+          "id": 2,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 0,
+            "C": 0
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "B-E",
+            "W-E",
+            "W-Q",
+            "W-S",
+            "B-G2",
+            "B-S",
+            "W-H",
+            "W-M",
+            "A-E",
+            "W-S",
+            "B-S",
+            "W-M",
+            "A-L",
+            "W-P1",
+            "C-E"
+          ]
+        },
+        {
+          "id": 3,
+          "skills": {
+            "W": 2,
+            "A": 2,
+            "B": 2,
+            "C": 2
+          },
+          "inspiration": 6,
+          "cardTypes": [
+            "C-E",
+            "A-E",
+            "A-Q",
+            "A-S",
+            "A-L",
+            "W-E",
+            "B-E",
+            "A-S",
+            "A-E",
+            "C-E",
+            "W-S",
+            "W-Q",
+            "C-X",
+            "A-X",
+            "A-H",
+            "A-X",
+            "A-X",
+            "C-H",
+            "C-H",
+            "C-H",
+            "W-P1",
+            "C-Q",
+            "B-X",
+            "C-M",
+            "B-M",
+            "B-Q",
+            "W-X"
+          ]
+        }
+      ]
+    }
+  ]
+}

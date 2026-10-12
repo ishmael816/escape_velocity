@@ -18,9 +18,9 @@ test('v24.2 bot: turn existing skills into a playable income before unrelated le
  assert.equal(g.actionCount,actions+1);assert.equal(g.diceRandom,random);assert.deepEqual(supplyIds(g),ids);
  E.pass(g,1);E.botAct(g);assert(E.findPlacement(p,target.uid));
 });
-test('v24.2 bot: needed growth for an owned advanced card still comes first',()=>{
- const {g,p}=fixture({pattern:'AAB',money:8});add(g,p,'B-H');
- E.botAct(g);assert(p.cards.some(c=>c.type==='B-G2'));assert(!p.cards.some(c=>c.type==='A-M'));
+test('v24.2 bot: an owned card does not repeat its purchase skill gate',()=>{
+ const {g,p}=fixture({pattern:'AAB',money:8}),owned=add(g,p,'B-H');
+ E.botAct(g);assert(E.findPlacement(p,owned.uid));assert(!p.cards.some(c=>c.type==='B-G2'));assert(!p.cards.some(c=>c.type==='A-M'));
 });
 test('v24.2 bot: the initial two-skill investment remains available',()=>{
  const {g,p}=fixture({pattern:'A',money:4});E.botAct(g);

@@ -8,20 +8,20 @@ import {offer, supplyIds, reload} from './regression-helpers-v22.mjs';
 // Favourable market/no-inspection reachability, NOT a balance or win-rate test.
 // Only public supply order and the event fixture are controlled. Starting cash,
 // skills, ownership, schedule, action clock, project progress and escape results
-// are never assigned. All cards come from the real finite player-count-scaled supply.
+// are never assigned. All cards come from the real finite fixed-copy supply.
 const routes=[
- {"name":"late-a","players":3,"growth":["A-G1","A-G2"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-H",4,0],["A-E",0,0]],"income":10,"sanity":6,"capital":0},
- {"name":"late-b","players":3,"growth":["B-G1","B-G2"],"permission":false,"board":[["B-H",6,0],["B-H",5,0],["B-H",4,0],["A-E",0,0],["B-S",0,1]],"income":10,"sanity":6,"capital":0},
- {"name":"late-c","players":3,"growth":["C-G1","C-G2"],"permission":false,"board":[["C-H",6,0],["C-H",5,0],["C-H",4,0],["A-E",0,0]],"income":10,"sanity":6,"capital":9},
- {"name":"late-w","players":3,"growth":["W-G1","W-G2"],"permission":true,"board":[["W-H",6,0],["W-H",5,0],["W-H",4,0],["A-E",0,0],["B-S",0,1]],"income":10,"sanity":8,"capital":0},
- {"name":"late-ab","players":2,"growth":["A-G1","A-G2","B-G1","B-G2","W-G1"],"permission":false,"board":[["A-H",6,0],["B-H",5,0],["B-X",0,0],["W-X",0,0],["B-S",1,0]],"income":10,"sanity":8,"capital":0},
- {"name":"late-ac","players":2,"growth":["A-G1","A-G2","C-G1"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-X",4,0],["A-E",0,0]],"income":10,"sanity":7,"capital":3},
- {"name":"late-wc","players":2,"growth":["W-G1","W-G2","C-G1","B-G1"],"permission":false,"board":[["W-H",6,0],["W-H",5,0],["C-X",4,0],["W-X",0,0]],"income":10,"sanity":6,"capital":3},
+ {"name":"late-a","players":3,"growth":["A-G1","A-G2"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-H",4,0],["A-E",0,0],["B-S",2,0]],"income":10,"sanity":7,"capital":0},
+ {"name":"late-b","players":3,"growth":["B-G1","B-G2"],"permission":false,"board":[["B-H",6,0],["B-H",5,0],["B-H",4,0],["A-E",0,0],["B-S",0,1],["B-S",2,0]],"income":10,"sanity":7,"capital":0},
+ {"name":"late-c","players":3,"growth":["C-G1","C-G2"],"permission":false,"board":[["C-H",6,0],["C-H",5,0],["C-H",4,0],["A-E",0,0],["B-S",2,0]],"income":10,"sanity":7,"capital":9},
+ {"name":"late-w","players":3,"growth":["W-G1","W-G2"],"permission":true,"board":[["W-H",6,0],["W-H",5,0],["W-H",4,0],["A-E",0,0],["B-S",0,1]],"income":10,"sanity":6,"capital":0},
+ {"name":"late-ab","players":2,"growth":["A-G1","A-G2","B-G1","B-G2","W-G1"],"permission":false,"board":[["A-H",6,0],["B-H",5,0],["B-X",0,0],["W-X",0,0],["B-S",1,0]],"income":10,"sanity":6,"capital":0},
+ {"name":"late-ac","players":2,"growth":["A-G1","A-G2","C-G1"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-X",4,0],["A-E",0,0],["B-S",2,0]],"income":10,"sanity":8,"capital":3},
+ {"name":"late-wc","players":2,"growth":["W-G1","W-G2","C-G1","B-G1"],"permission":false,"board":[["W-H",6,0],["W-H",5,0],["C-X",4,0],["W-X",0,0],["B-S",2,0]],"income":10,"sanity":7,"capital":3},
  {"name":"zero-repeat","players":2,"growth":[],"permission":false,"board":[["A-E",0,0],["A-E",0,1],["B-E",1,0],["B-E",1,1],["C-E",2,0],["C-E",2,1],["A-L",3,0],["A-L",4,0],["W-S",5,0],["W-S",6,0]],"income":10,"sanity":7,"capital":6},
- {"name":"two-player-W","players":2,"growth":["W-G1","W-G2"],"permission":false,"board":[["W-H",6,0],["W-H",5,0],["W-M",0,0],["W-M",0,1],["B-S",1,0]],"income":10,"sanity":6,"capital":0},
- {"name":"two-player-A","players":2,"growth":["A-G1","A-G2"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-M",0,0],["A-M",0,1]],"income":10,"sanity":7,"capital":0},
- {"name":"two-player-B","players":2,"growth":["B-G1","B-G2"],"permission":false,"board":[["B-H",6,0],["B-H",5,0],["B-M",0,0],["B-M",0,1],["B-S",1,0]],"income":10,"sanity":6,"capital":0},
- {"name":"two-player-C","players":2,"growth":["C-G1","C-G2"],"permission":false,"board":[["C-H",6,0],["C-H",5,0],["C-M",0,0],["C-M",0,1],["B-S",1,0]],"income":10,"sanity":8,"capital":10}
+ {"name":"two-player-W","players":2,"growth":["W-G1","W-G2"],"permission":false,"board":[["W-H",6,0],["W-H",5,0],["W-M",0,0],["W-M",0,1],["B-S",1,0],["B-S",2,0]],"income":10,"sanity":7,"capital":0},
+ {"name":"two-player-A","players":2,"growth":["A-G1","A-G2"],"permission":false,"board":[["A-H",6,0],["A-H",5,0],["A-M",0,0],["A-M",0,1],["B-S",2,0]],"income":10,"sanity":8,"capital":0},
+ {"name":"two-player-B","players":2,"growth":["B-G1","B-G2"],"permission":false,"board":[["B-H",6,0],["B-H",5,0],["B-M",0,0],["B-M",0,1],["B-S",1,0],["B-S",2,0]],"income":10,"sanity":7,"capital":0},
+ {"name":"two-player-C","players":2,"growth":["C-G1","C-G2"],"permission":false,"board":[["C-H",6,0],["C-H",5,0],["C-M",0,0],["C-M",0,1],["B-S",1,0]],"income":10,"sanity":6,"capital":10}
 ];
 
 
@@ -29,7 +29,7 @@ for(const route of routes)test(`full acquisition: ${route.name} buys, schedules,
   let g=make({playerCount:route.players}),p=g.players[0];
   const originalIds=supplyIds(g),bought=[],actions=[];
   assert.equal(p.money,8);assert.equal(p.sanity,3);assert.deepEqual(p.cards,[]);assert.deepEqual(p.skills,[]);assert.deepEqual(p.schedule,{});
-  function check(){assert.deepEqual(supplyIds(g),originalIds);assert(p.money>=0);assert(g.week<=24,'bounded reachability fixture stalled');}
+  function check(){assert.deepEqual(supplyIds(g),originalIds);assert(p.money>=0);assert(g.week<=40,'bounded reachability fixture stalled');}
   function settle(){finish(g);assert.equal(g.opportunity,null);assert.equal(g.phase,'escape');check();}
   function advanceWeek(){
     if(g.phase==='planning'||g.phase==='resolving')settle();
@@ -48,7 +48,7 @@ for(const route of routes)test(`full acquisition: ${route.name} buys, schedules,
     for(;;){
       ready();const fees=E.supportPlan(g,p).filter(x=>x.active).reduce((n,x)=>n+x.fee,0);
       // Preserve next settlement's maintenance and reserve the printed principal.
-      if(p.money<d.price.money+d.capital+d.upkeep+fees){advanceWeek();continue;}
+      if(p.money<d.price.money+d.capital+d.upkeep+fees+(d.cost.money||0)){advanceWeek();continue;}
       c=offer(g,type);const money=p.money,action=g.actionCount;
       E.buy(g,0,c.uid);assert.equal(p.money,money-d.price.money);assert.equal(g.actionCount,action+1);assert.equal(E.findPlacement(p,c.uid),null);
       bought.push(c.uid);record('buy',c.uid);break;
@@ -65,7 +65,7 @@ for(const route of routes)test(`full acquisition: ${route.name} buys, schedules,
   }
   // Each skill is paid for and individually settled before buying its upgrade.
   for(const type of route.growth){
-    const uid=acquire(type,4);settle();assert(p.skills.some(c=>c.uid===uid));assert(!p.cards.some(c=>c.uid===uid));assert.equal(E.findPlacement(p,uid),null);advanceWeek();
+    const uid=acquire(type,4);for(let i=1;i<=getCard(type).progressTarget;i++){settle();if(i<getCard(type).progressTarget){assert.equal(p.cards.find(c=>c.uid===uid).progress,i);assert(!p.skills.some(c=>c.uid===uid));advanceWeek();}}assert(p.skills.some(c=>c.uid===uid));assert(!p.cards.some(c=>c.uid===uid));assert.equal(E.findPlacement(p,uid),null);advanceWeek();
   }
   assert.equal(p.skills.length,route.growth.length);
   if(route.permission){

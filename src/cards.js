@@ -14,6 +14,7 @@ function adapt(d){
  const route=ROUTES[d.route||'W'];
  return {...d,kind:'activity',size:{2:1,4:2,8:3}[d.hours],category:route.name,icon:route.icon,
   price:{money:d.price},cost:{...d.cost},gain:{...((d.gain.profit||d.gain.cash||d.gain.salary)?{money:(d.gain.profit||0)+(d.gain.cash||0)+(d.gain.salary||0)}:{})},
+  sanityImpact:(d.support||0)-(d.stress||0),
   fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.gain.profit||!!d.capitalRatio||d.dice?.resource==='profit',
   once:d.kind==='growth'||d.kind==='once',skill:d.kind==='growth'?d.route:null,
   tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.dice?'':d.effect,
@@ -24,6 +25,13 @@ export const CARDS=design.cards.filter(d=>!d.advanced).map(adapt);
 export const ADVANCED=design.cards.filter(d=>d.advanced).map(adapt);
 export const CARD_MAP=Object.fromEntries([...CARDS,...ADVANCED].map(d=>[d.id,d]));
 export const getCard=value=>CARD_MAP[typeof value==='string'?value:value?.type];
+// One public vocabulary for every card; legacy fields remain for saved games and
+// balance tooling. Costs and gains stay separate so pending gains cannot pay fees.
+export function cardPhases(d){return {
+ purchase:{price:d.price,skills:d.requires||''},
+ play:{sanity:(d.support||0)-(d.stress||0),sundayRelief:d.sundayRelief||0,capital:d.capital||0,capitalRatio:d.capitalRatio||0,parallel:!!d.parallel,professional:!!d.professional,offHours:!!d.offHours},
+ settlement:{sanity:{min:d.minSanity||0,max:d.maxSanity??10},inspiration:d.inspirationRequired||0,pay:{...d.cost,money:(d.cost?.money||0)+(d.upkeep||0)},receive:d.gain,opportunity:d.opportunity,dice:d.dice,skill:d.skill,hireFee:d.hireFee},
+};}
 export const MARKET_LIMITS=design.market;
 export const marketLane=d=>d.hours;
 export const slotKey=s=>`${s.day}-${s.period}`;
@@ -36,5 +44,5 @@ export const EVENTS=design.events.flatMap(e=>Array.from({length:e.copies},()=>({
 })));
 export const INSPECTIONS=EVENTS;
 
-// All copies are shared; same-route two-skill activities have one copy per player.
-export const cardCopies=(d,n)=>d.advanced&&!(d.requires?.length===2&&new Set(d.requires).size===1)?Math.ceil(n/2):n;
+// The physical supply is fixed, shared, and independent of player count.
+export const cardCopies=d=>d.copies??design.copiesPerCard;

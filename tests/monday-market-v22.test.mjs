@@ -66,7 +66,7 @@ test('discard supplies replacements before set-aside old offers are returned',()
  const g=make(),old=ids(g),replacement=g.decks[4].splice(0,2);
  g.decks[4]=[];g.discard[4]=replacement;
  finishMonday(g);assert.deepEqual(g.market[4].slice(0,2).map(c=>c.uid).sort(),replacement.map(c=>c.uid).sort());
- assert.equal(g.market[4].filter(c=>old.includes(c.uid)).length,4);
+ assert.equal(g.market[4].filter(c=>old.includes(c.uid)).length,MARKET_LIMITS[4]-replacement.length);
 });
 
 test('purchase status survives reload, resets next week, and later days never trigger a refresh',()=>{

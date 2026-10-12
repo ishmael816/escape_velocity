@@ -6,7 +6,7 @@ import {offer} from './regression-helpers-v22.mjs';
 
 test('v24: a prepared B board qualifies without W support and pays its printed support fees',()=>{
  const g=make({playerCount:2}),p=g.players[0];skills(p,'BB');
- rig(g,p,[['B-H',6],['B-H',5],['B-M',0],['B-M',1],['B-E',2],['B-E',3],['B-S',4]]);
+ rig(g,p,[['B-H',2,1],['B-H',5],['B-M',0],['B-M',1],['B-E',2],['B-E',3],['B-S',4]]);
  assert.equal(p.sanity,6);assert.equal(E.supportPlan(g,p).reduce((s,x)=>s+x.fee,0),1);
  finish(g);assert.equal(p.income,12);assert.equal(p.sanity,6);assert.equal(p.money,22);assert(E.eligible(g,p));
  assert(!p.cards.some(c=>c.type==='W-S'));

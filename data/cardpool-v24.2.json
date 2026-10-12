@@ -1,6 +1,6 @@
 {
   "rules": {
-    "version": "v0.24.2-income-budget",
+    "version": "v0.24.2-complete-engines",
     "sourceCommit": "dda84103ae6d043eab3bc7e44f3c8cf171b6051f",
     "startMoney": 8,
     "startSanity": 3,
@@ -8,17 +8,17 @@
     "escapeIncome": 10,
     "escapeSanity": 6,
     "nightStress": 2,
+    "sundayStress": 2,
     "nightCards": 1,
     "parallelDayOnly": true,
     "parallelOnly4h": true,
     "market": {
-      "4": 6,
+      "4": 8,
       "8": 4
     },
-    "basicCopies": "playerCount",
-    "advancedCopies": "ceil(playerCount/2)",
     "skillDistinct": true,
-    "specialistAdvancedCopies": "playerCount"
+    "copiesPerCard": 4,
+    "inspiration": "empty-night-markers"
   },
   "cards": [
     {
@@ -37,8 +37,8 @@
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 1,
       "maxSanity": 10,
       "professional": true,
       "parallel": false,
@@ -46,9 +46,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 2,
       "conditions": [],
-      "reason": "v0.24：入门成长买价2，购买与安排各耗一次行动；多路线展开有明确前期资金成本。"
+      "reason": "两次成功执行，每次资金−1、理智≥1；完成解除日程并归档。",
+      "copies": 4
     },
     {
       "id": "W-G2",
@@ -61,13 +62,13 @@
       "skill": "W",
       "profit": 0,
       "cash": 1,
-      "stress": 0,
+      "stress": 1,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 2,
       "maxSanity": 10,
       "professional": true,
       "parallel": false,
@@ -75,9 +76,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 3,
       "conditions": [],
-      "reason": "第二个不同名成长来源：买价2、执行后周末返现1，净成本1；不赠高级牌。"
+      "reason": "三次成功执行，每次资金−1、理智≥2；日程理智−1，完成解除并归档，最后返现1。",
+      "copies": 4
     },
     {
       "id": "A-G1",
@@ -95,8 +97,8 @@
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 1,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -104,9 +106,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 2,
       "conditions": [],
-      "reason": "v0.24：入门成长买价2，购买与安排各耗一次行动；多路线展开有明确前期资金成本。"
+      "reason": "两次成功执行，每次资金−1、理智≥1；完成解除日程并归档。",
+      "copies": 4
     },
     {
       "id": "A-G2",
@@ -119,13 +122,13 @@
       "skill": "A",
       "profit": 0,
       "cash": 1,
-      "stress": 0,
+      "stress": 1,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 2,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -133,9 +136,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 3,
       "conditions": [],
-      "reason": "第二个不同名成长来源：买价2、执行后周末返现1，净成本1；不赠高级牌。"
+      "reason": "三次成功执行，每次资金−1、理智≥2；日程理智−1，完成解除并归档，最后返现1。",
+      "copies": 4
     },
     {
       "id": "B-G1",
@@ -153,8 +157,8 @@
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 1,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -162,9 +166,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 2,
       "conditions": [],
-      "reason": "v0.24：入门成长买价2，购买与安排各耗一次行动；多路线展开有明确前期资金成本。"
+      "reason": "两次成功执行，每次资金−1、理智≥1；完成解除日程并归档。",
+      "copies": 4
     },
     {
       "id": "B-G2",
@@ -177,13 +182,13 @@
       "skill": "B",
       "profit": 0,
       "cash": 1,
-      "stress": 0,
+      "stress": 1,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 2,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -191,9 +196,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 3,
       "conditions": [],
-      "reason": "第二个不同名成长来源：买价2、执行后周末返现1，净成本1；不赠高级牌。"
+      "reason": "三次成功执行，每次资金−1、理智≥2；日程理智−1，完成解除并归档，最后返现1。",
+      "copies": 4
     },
     {
       "id": "C-G1",
@@ -211,8 +217,8 @@
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 1,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -220,9 +226,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 2,
       "conditions": [],
-      "reason": "v0.24：入门成长买价2，购买与安排各耗一次行动；多路线展开有明确前期资金成本。"
+      "reason": "两次成功执行，每次资金−1、理智≥1；完成解除日程并归档。",
+      "copies": 4
     },
     {
       "id": "C-G2",
@@ -235,13 +242,13 @@
       "skill": "C",
       "profit": 0,
       "cash": 1,
-      "stress": 0,
+      "stress": 1,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
       "capitalRatio": null,
-      "cost": 0,
-      "minSanity": 0,
+      "cost": 1,
+      "minSanity": 2,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -249,9 +256,10 @@
       "opportunity": null,
       "hireFee": null,
       "permanent": null,
-      "progress": 0,
+      "progress": 3,
       "conditions": [],
-      "reason": "第二个不同名成长来源：买价2、执行后周末返现1，净成本1；不赠高级牌。"
+      "reason": "三次成功执行，每次资金−1、理智≥2；日程理智−1，完成解除并归档，最后返现1。",
+      "copies": 4
     },
     {
       "id": "W-E",
@@ -280,7 +288,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "现金起步：购价2，成功工作两周回本；压力1。不计逃离收入。"
+      "reason": "现金起步：购价2，成功工作两周回本；压力1。不计逃离收入。",
+      "copies": 4
     },
     {
       "id": "W-M",
@@ -309,7 +318,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "4h收入基准：WW、买价4、收入2，无额外支持。"
+      "reason": "4h收入基准：WW、买价4、收入2，无额外支持。",
+      "copies": 4
     },
     {
       "id": "W-H",
@@ -338,7 +348,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "8h收入基准：WW、买价5、收入3；支持需要另行构筑。"
+      "reason": "8h收入基准：WW、买价5、收入3；支持需要另行构筑。",
+      "copies": 4
     },
     {
       "id": "W-X",
@@ -367,7 +378,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "4h收入2、支持1：WB、买价5，与AA的同效果牌等额；跨色成长提供另一条路径。"
+      "reason": "4h收入2、支持1：WB、买价5，与AA的同效果牌等额；跨色成长提供另一条路径。",
+      "copies": 4
     },
     {
       "id": "W-P1",
@@ -396,7 +408,8 @@
       "permanent": "weekend",
       "progress": 2,
       "conditions": [],
-      "reason": "保留职场改变排程的特色；改为两周各付1，不再追踪本周先完成副业。"
+      "reason": "保留职场改变排程的特色；改为两周各付1，不再追踪本周先完成副业。",
+      "copies": 4
     },
     {
       "id": "W-P2",
@@ -425,11 +438,12 @@
       "permanent": "protection",
       "progress": 1,
       "conditions": [],
-      "reason": "一技能可得；下周起保护一个工作半天内明确选定的一张4h非履职牌，不保护同槽另一张。"
+      "reason": "一技能可得；下周起保护一个工作半天内明确选定的一张4h非履职牌，不保护同槽另一张。",
+      "copies": 4
     },
     {
       "id": "W-S",
-      "name": "完整休整",
+      "name": "出游",
       "route": "W",
       "hours": 8,
       "price": 3,
@@ -454,7 +468,9 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "压缩两张标准支持为一张8h；占整天且费率不折扣，不能放夜晚。"
+      "reason": "理智＋4，安排在周日全天且支付费用时额外补偿2点占用压力；每周付2，不累加。",
+      "sundayRelief": 2,
+      "copies": 4
     },
     {
       "id": "A-E",
@@ -483,7 +499,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "低价零技能收入标尺；无灵感条件、无收益加成。"
+      "reason": "低价零技能收入标尺；无灵感条件、无收益加成。",
+      "copies": 4
     },
     {
       "id": "A-L",
@@ -512,7 +529,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "无技能8h收入2，承担压力2；比两张小单节约行动，但生活成本更高。"
+      "reason": "无技能8h收入2，承担压力2；比两张小单节约行动，但生活成本更高。",
+      "copies": 4
     },
     {
       "id": "A-M",
@@ -541,7 +559,9 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "4h收入2、支持1：AA、买价5，比无支持基准多付1。"
+      "reason": "4h收入2、支持1：AA、买价5，比无支持基准多付1。",
+      "copies": 4,
+      "inspirationRequired": 2
     },
     {
       "id": "A-H",
@@ -570,7 +590,9 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "8h收入3、支持1：AA、买价6，比无支持基准多付1。"
+      "reason": "8h收入3、支持1：AA、买价6，比无支持基准多付1。",
+      "copies": 4,
+      "inspirationRequired": 3
     },
     {
       "id": "A-X",
@@ -599,7 +621,9 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "8h收入3、支持2：AC、买价5、锁本金3；额外支持以部署资金和跨色成长交换。"
+      "reason": "8h收入3、支持2：AC、买价5、锁本金3；额外支持以部署资金和跨色成长交换。",
+      "copies": 4,
+      "inspirationRequired": 3
     },
     {
       "id": "A-S",
@@ -628,7 +652,9 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "小额免维护支持须先成长；同名照常相加，以时间限制堆叠，不新增递减表。"
+      "reason": "小额免维护支持须先成长；同名照常相加，以时间限制堆叠，不新增递减表。",
+      "copies": 4,
+      "inspirationRequired": 1
     },
     {
       "id": "B-E",
@@ -657,7 +683,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "与短稿同一基础预算，保留不同路线题材与基础供给；不制造伪条件。"
+      "reason": "与短稿同一基础预算，保留不同路线题材与基础供给；不制造伪条件。",
+      "copies": 4
     },
     {
       "id": "B-M",
@@ -686,7 +713,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "4h收入2、白天并行：BB、买价5，比纯收入基准多付1。"
+      "reason": "4h收入2、白天并行：BB、买价5，比纯收入基准多付1。",
+      "copies": 4
     },
     {
       "id": "B-H",
@@ -715,7 +743,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "8h收入基准：BB、买价5、收入3，无支持无压力。"
+      "reason": "8h收入基准：BB、买价5、收入3，无支持无压力。",
+      "copies": 4
     },
     {
       "id": "B-X",
@@ -744,7 +773,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "4h收入2、白天并行：AB、买价5；与同色并行牌等额收益，提供另一种成长路径。"
+      "reason": "4h收入2、白天并行：AB、买价5；与同色并行牌等额收益，提供另一种成长路径。",
+      "copies": 4
     },
     {
       "id": "B-S",
@@ -773,7 +803,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "v0.24：公共支持3、维护1；夜间计入压力2后净支持1，仍支付完整维护。"
+      "reason": "v0.24：公共支持3、维护1；夜间计入压力2后净支持1，仍支付完整维护。",
+      "copies": 4
     },
     {
       "id": "C-E",
@@ -802,7 +833,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "无技能4h收入1：购价0、锁本金3。以较多暂时占用的现金换取无永久购牌支出；购买仍占行动，撤回才能取回本金。"
+      "reason": "无技能4h收入1：购价0、锁本金3。以较多暂时占用的现金换取无永久购牌支出；购买仍占行动，撤回才能取回本金。",
+      "copies": 4
     },
     {
       "id": "C-M",
@@ -831,7 +863,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "4h收入2：CC、买价3、锁本金2，部署需5现金；本金可退，不视作永久花费。"
+      "reason": "4h收入2：CC、买价3、锁本金2，部署需5现金；本金可退，不视作永久花费。",
+      "copies": 4
     },
     {
       "id": "C-H",
@@ -860,7 +893,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "8h收入3、支持1：CC、买价4、锁本金3；部署需7现金，本金可退。"
+      "reason": "8h收入3、支持1：CC、买价4、锁本金3；部署需7现金，本金可退。",
+      "copies": 4
     },
     {
       "id": "C-X",
@@ -889,7 +923,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "8h收入2、支持2：WC、买价3、锁本金3；以少1收入换多1支持及少1买价。"
+      "reason": "8h收入2、支持2：WC、买价3、锁本金3；以少1收入换多1支持及少1买价。",
+      "copies": 4
     },
     {
       "id": "C-U",
@@ -918,7 +953,8 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "保留现金换成长行动；从两个市场中选尚未归档的4h成长牌，原价+1直接归档，不执行返现。"
+      "reason": "保留现金换成长行动；从两个市场中选尚未归档的4h成长牌，原价+1直接归档，不执行返现。",
+      "copies": 4
     },
     {
       "id": "S-Q",
@@ -951,7 +987,176 @@
       "permanent": null,
       "progress": 0,
       "conditions": [],
-      "reason": "v0.24.1：买价2，与一次成长投入形成资金取舍；保留4h/8h自由选堆、看3买1原价，不叠加新限制。"
+      "reason": "v0.24.1：买价2，与一次成长投入形成资金取舍；保留4h/8h自由选堆、看3买1原价，不叠加新限制。",
+      "copies": 4
+    },
+    {
+      "id": "W-O",
+      "name": "加班赶工",
+      "route": "W",
+      "hours": 4,
+      "price": 1,
+      "kind": "repeat",
+      "requires": "",
+      "skill": null,
+      "profit": 0,
+      "cash": 2,
+      "stress": 1,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "capitalRatio": null,
+      "cost": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "parallel": false,
+      "advanced": false,
+      "opportunity": null,
+      "hireFee": null,
+      "permanent": null,
+      "progress": 0,
+      "conditions": [],
+      "reason": "只在非上班时段；收入是工资附加，不计逃离。夜间还承担理智−2。",
+      "copies": 4,
+      "offHours": true
+    },
+    {
+      "id": "W-Q",
+      "name": "同事引荐",
+      "route": "W",
+      "hours": 4,
+      "price": 2,
+      "kind": "repeat",
+      "requires": "W",
+      "skill": null,
+      "profit": 0,
+      "cash": 0,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "capitalRatio": null,
+      "cost": 0,
+      "minSanity": 2,
+      "maxSanity": 10,
+      "professional": true,
+      "parallel": false,
+      "advanced": false,
+      "opportunity": {
+        "count": 2,
+        "buyLimit": 1,
+        "fee": 0
+      },
+      "hireFee": null,
+      "permanent": null,
+      "progress": 0,
+      "conditions": [],
+      "reason": "重复：理智≥2，看2原价买1；占工作白天、免查岗，不产生收入。",
+      "copies": 4
+    },
+    {
+      "id": "A-Q",
+      "name": "采风阅读",
+      "route": "A",
+      "hours": 4,
+      "price": 2,
+      "kind": "repeat",
+      "requires": "A",
+      "skill": null,
+      "profit": 0,
+      "cash": 0,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "capitalRatio": null,
+      "cost": 0,
+      "minSanity": 2,
+      "maxSanity": 10,
+      "professional": false,
+      "parallel": false,
+      "advanced": false,
+      "opportunity": {
+        "count": 3,
+        "buyLimit": 1,
+        "fee": 0
+      },
+      "hireFee": null,
+      "permanent": null,
+      "progress": 0,
+      "conditions": [],
+      "reason": "重复：理智≥2、版图灵感≥2，看3原价买1；不消耗灵感。",
+      "copies": 4,
+      "inspirationRequired": 2
+    },
+    {
+      "id": "B-Q",
+      "name": "技术调研",
+      "route": "B",
+      "hours": 4,
+      "price": 3,
+      "kind": "repeat",
+      "requires": "BB",
+      "skill": null,
+      "profit": 0,
+      "cash": 0,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "capitalRatio": null,
+      "cost": 0,
+      "minSanity": 2,
+      "maxSanity": 10,
+      "professional": false,
+      "parallel": false,
+      "advanced": false,
+      "opportunity": {
+        "count": 3,
+        "buyLimit": 1,
+        "fee": 0
+      },
+      "hireFee": null,
+      "permanent": null,
+      "progress": 0,
+      "conditions": [],
+      "reason": "重复：理智≥2，看3原价买1；需两项开发成长，不产生收入。",
+      "copies": 4
+    },
+    {
+      "id": "C-Q",
+      "name": "付费寻商",
+      "route": "C",
+      "hours": 4,
+      "price": 2,
+      "kind": "repeat",
+      "requires": "C",
+      "skill": null,
+      "profit": 0,
+      "cash": 0,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "capitalRatio": null,
+      "cost": 1,
+      "minSanity": 2,
+      "maxSanity": 10,
+      "professional": false,
+      "parallel": false,
+      "advanced": false,
+      "opportunity": {
+        "count": 4,
+        "buyLimit": 1,
+        "fee": 0
+      },
+      "hireFee": null,
+      "permanent": null,
+      "progress": 0,
+      "conditions": [],
+      "reason": "重复：每次资金−1、理智≥2，看4原价买1；保留公共市场，不产生收入。",
+      "copies": 4
     }
   ]
 }

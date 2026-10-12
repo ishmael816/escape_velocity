@@ -42,3 +42,17 @@
 .illustrated-face:not(.has-mind) .printed-title{padding-right:8px;}
 
 .family-shared{--family:#8054b7;--wash:#f2edf9;}
+
+/* The three physical zones share one vocabulary: play / settle / purchase. */
+.printed-play{display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:3px 10px 0;flex-wrap:wrap;}
+.printed-play .capital-mark,.printed-play .professional-mark{display:inline-flex;align-items:center;gap:4px;}
+.printed-play .pictogram{--symbol-size:22px;}
+.printed-price{gap:10px;padding:5px 8px;flex-wrap:wrap;}
+.printed-price .card-skills{gap:6px;}
+.resource-equation .income-mark{position:static;align-self:center;}
+.settlement-gates{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px;}
+.compact-face .printed-play{gap:5px;padding:0 5px;}
+.compact-face .printed-play .pictogram{--symbol-size:16px;}
+.compact-face .printed-price{gap:7px;padding:3px 4px;}
+.compact-face .printed-price .card-skills{gap:4px;}
+.compact-face .printed-price .route-mark svg{width:11px;height:11px;}

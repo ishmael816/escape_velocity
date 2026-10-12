@@ -23,7 +23,7 @@ test('regression: support prepaid exactly once, including repeated rolls, reload
 test('regression: Sunday support funds earlier night growth, charged once',()=>{
   const g=make({startSanity:0}),p=g.players[0],support=add(g,p,'W-S'),growth=add(g,p,'A-G1');
   E.place(g,0,support.uid,{day:6,period:0});turn(g);E.place(g,0,growth.uid,{day:1,period:2});assert.equal(p.sanity,2);
-  finish(g);assert.equal(E.skillCounts(p).A,1);assert.equal(p.sanity,4);assert.equal(p.money,9);
+  finish(g);assert.equal(growth.progress,1);assert.equal(p.sanity,2);assert.equal(p.money,8);next(g);finish(g);assert.equal(E.skillCounts(p).A,1);assert.equal(p.sanity,4);assert.equal(p.money,8);
 });
 
 test('regression: support fees follow calendar order, skip an unaffordable expensive card and still fund a cheaper card',()=>{
@@ -48,7 +48,7 @@ test('regression: caught paid support loses whole-week effect, pays no upkeep, r
 
 for(const period of [0,1])test(`regression: team on 8h support half ${period} disables it without upkeep or fines`,()=>{
   const g=make(),p=g.players[0];rig(g,p,[['W-S',6]]);g.inspection.blockedTimes=[{day:6,period}];finish(g);
-  assert.equal(p.money,11);assert.equal(p.sanity,3);assert.equal(p.caught,0);assert.equal(p.supports[0].active,false);
+  assert.equal(p.money,11);assert.equal(p.sanity,1);assert.equal(p.caught,0);assert.equal(p.supports[0].active,false);
 });
 
 test('regression: protected 4h paid support remains funded and effective on an inspected day',()=>{
@@ -65,13 +65,13 @@ test('regression: support and pressure are applied before the upper clamp; withd
 
 test('regression: purchasing reduces preview support budget before the weekly bill',()=>{
   const g=make({startMoney:2}),p=g.players[0];rig(g,p,[['W-S',6]]);assert.equal(p.sanity,7);
-  E.buy(g,0,offer(g,'A-G2').uid);assert.equal(p.money,0);assert.equal(p.sanity,3);
+  E.buy(g,0,offer(g,'A-G2').uid);assert.equal(p.money,0);assert.equal(p.sanity,1);
   const before=structuredClone(g),preview=E.preview(g,0);assert.deepEqual(g,before);assert.equal(preview.sanity,3);assert.equal(preview.money,3);
 });
 
 test('regression: locked capital cannot pay upkeep; caught investment retains principal and refunds exactly once',()=>{
   const g=make({startMoney:3}),p=g.players[0];rig(g,p,[['W-S',6]]);const c=add(g,p,'C-E');E.place(g,0,c.uid,{day:0,period:0});
-  assert.equal(p.money,0);assert.equal(p.sanity,3);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
+  assert.equal(p.money,0);assert.equal(p.sanity,1);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);finish(g);
   assert.equal(p.money,3);assert.equal(p.income,0);assert.equal(p.caught,1);assert.equal(c.lockedCapital,3);assert.equal(E.unplacedCards(p).filter(c=>c.type==='W-S').length,1);
   next(g);turn(g);E.unplace(g,0,c.uid);assert.equal(p.money,6);assert.equal(c.lockedCapital,undefined);turn(g);
   unchanged(g,()=>E.unplace(g,0,c.uid));E.discardCard(g,0,c.uid);assert.equal(p.money,6);assert.equal(g.discard[4].filter(x=>x.uid===c.uid).length,1);
@@ -96,8 +96,8 @@ test('regression: pending ordinary cash cannot fund a later multweek project',()
 });
 
 test('regression: growth refunds, salary and event awards are cash but never side income',()=>{
-  const g=make(),p=g.players[0];rig(g,p,[['W-E',0],['A-G2',1],['A-E',6]]);g.inspection.gain={money:2};
-  finish(g);assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:2,salary:3,eventMoney:2,total:8});assert.equal(p.money,16);assert.equal(p.income,1);
+  const g=make({startSanity:4}),p=g.players[0];rig(g,p,[['W-E',0],['A-G2',1],['A-E',6]]);p.cards.find(c=>c.type==='A-G2').progress=2;g.inspection.gain={money:2};
+  finish(g);assert.deepEqual(p.settlement,{week:1,sideIncome:1,otherIncome:2,salary:3,eventMoney:2,total:8});assert.equal(p.money,15);assert.equal(p.income,1);
 });
 
 test('regression: escaped players receive no further settlement, income, salary or event bonus',()=>{

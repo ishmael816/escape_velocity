@@ -1,6 +1,7 @@
 // Migrated from legacy-v21: same control-flow assertions, new 4h cards and market sizes.
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {getCard} from '../src/cards.js';
 import * as E from '../src/engine.js';
 import {make,add,rig,next,seedFor} from './helpers.mjs';
 
@@ -25,7 +26,7 @@ test('one non-pass continues planning; passes across two different days do not c
  E.place(g,0,c.uid,{day:6,period:0});E.pass(g,1);
  assert.equal(g.day,1);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,0);
  E.pass(g,0);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,1);
- E.buy(g,1,g.market[4][0].uid);assert.equal(g.day,2);assert.equal(g.endedByPass,false);
+ E.buy(g,1,g.market[4].find(c=>!E.canBuy(g,g.players[1],getCard(c))).uid);assert.equal(g.day,2);assert.equal(g.endedByPass,false);
  passDay(g);assert.equal(g.phase,'resolving');assert.equal(g.actionCount,6);
 });
 
@@ -49,9 +50,9 @@ test('early finish executes later days, inspections and support exactly like a f
 
 test('only active players act; a single pass does not lock that player out',()=>{
  const g=make({playerCount:3});g.players[0].escaped=true;
- assert.throws(()=>E.buy(g,0,g.market[4][0].uid));E.buy(g,1,g.market[4][0].uid);E.pass(g,2);
+ assert.throws(()=>E.buy(g,0,g.market[4][0].uid));E.buy(g,1,g.market[4].find(c=>!E.canBuy(g,g.players[1],getCard(c))).uid);E.pass(g,2);
  assert.equal(g.day,1);assert.equal(g.phase,'planning');
- E.pass(g,1);E.buy(g,2,g.market[4][0].uid);
+ E.pass(g,1);E.buy(g,2,g.market[4].find(c=>!E.canBuy(g,g.players[2],getCard(c))).uid);
  assert.equal(g.day,2);passDay(g);assert.equal(g.phase,'resolving');
 });
 

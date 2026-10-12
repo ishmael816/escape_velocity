@@ -28,8 +28,9 @@ for(const buy of [false,true])test(`regression: search ${buy?'purchase':'skip'} 
 
 test('regression: search advanced purchase has full price, no skill bypass and no same-week arrangement',()=>{
   const g=search(),p=g.players[0],c=stack(g,['A-H'])[0];g.decks[8]=[c];g.discard[8]=[];
-  E.chooseOpportunityLane(g,0,8);E.chooseOpportunity(g,0,c.uid);assert.equal(p.money,2);assert(p.cards.includes(c));assert(!E.qualified(p,getCard(c)));
-  unchanged(g,()=>E.place(g,0,c.uid,{day:6,period:0}));E.resolveAll(g);next(g);turn(g);unchanged(g,()=>E.place(g,0,c.uid,{day:6,period:0}));
+  E.chooseOpportunityLane(g,0,8);unchanged(g,()=>E.chooseOpportunity(g,0,c.uid));skills(p,'AA');
+  E.chooseOpportunity(g,0,c.uid);assert.equal(p.money,2);assert(p.cards.includes(c));assert(E.qualified(p,getCard(c)));
+  unchanged(g,()=>E.place(g,0,c.uid,{day:6,period:0}));E.resolveAll(g);next(g);turn(g);E.place(g,0,c.uid,{day:6,period:0});assert(E.findPlacement(p,c.uid));
 });
 
 test('regression: search cannot spend pending income; reload pays earnings and salary exactly once',()=>{
@@ -83,7 +84,8 @@ test('regression: exhausted search deck draws discard, excludes its source and c
 test('regression: search can reveal both public permissions in their actual duration decks',()=>{
   for(const type of ['W-P1','W-P2']){
     const g=search(),c=stack(g,[type])[0],lane=getCard(type).hours;g.decks[lane]=[c];g.discard[lane]=[];
-    E.chooseOpportunityLane(g,0,lane);E.chooseOpportunity(g,0,c.uid);assert(g.players[0].cards.includes(c));assert(!E.qualified(g.players[0],getCard(c)));
+    E.chooseOpportunityLane(g,0,lane);unchanged(g,()=>E.chooseOpportunity(g,0,c.uid));skills(g.players[0],getCard(c).requires);
+    E.chooseOpportunity(g,0,c.uid);assert(g.players[0].cards.includes(c));assert(E.qualified(g.players[0],getCard(c)));
   }
 });
 
@@ -101,7 +103,7 @@ function hiring(options={}) {
 test('regression: hire owner, target, affordability and double-selection failures are atomic; reload resumes same-slot queue',()=>{
   const {g,target}=hiring();unchanged(g,()=>E.chooseHire(g,1,target.uid));unchanged(g,()=>E.chooseHire(g,0,'missing'));
   const clone=reload(g),before=supplyIds(g);
-  for(const x of [g,clone]){E.chooseHire(x,0,target.uid);unchanged(x,()=>E.chooseHire(x,0,target.uid));E.resolveAll(x);assert.equal(x.players[0].income,3);assert.equal(x.players[0].money,11);assert.equal(x.players[0].settlement.otherIncome,0);}
+  for(const x of [g,clone]){E.chooseHire(x,0,target.uid);unchanged(x,()=>E.chooseHire(x,0,target.uid));E.resolveAll(x);assert.equal(x.players[0].income,3);assert.equal(x.players[0].money,8);assert.equal(x.players[0].settlement.otherIncome,0);}
   assert.deepEqual(g,clone);assert.deepEqual(supplyIds(g),before);assert.equal(g.players[0].skills.filter(c=>c.uid===target.uid).length,1);
   const poor=hiring({startMoney:0});unchanged(poor.g,()=>E.chooseHire(poor.g,0,poor.target.uid));E.chooseHire(poor.g,0);E.resolveAll(poor.g);assert.equal(poor.g.players[0].money,6);
 });
@@ -110,7 +112,7 @@ test('regression: hire cannot use pending earnings or rehire an archived name ne
   const g=make({startMoney:0}),p=g.players[0];skills(p,'C');rig(g,p,[['W-E',0],['C-U',1]]);
   const target=offer(g,'A-G1');g.mondayMarketBought=true;lock(g);E.resolveAll(g);assert.equal(p.weeklyEarnings[0].money,1);
   unchanged(g,()=>E.chooseHire(g,0,target.uid));E.chooseHire(g,0);E.resolveAll(g);assert.equal(p.money,4);
-  next(g);g.mondayMarketBought=true;offer(g,'A-G1');lock(g);E.resolveAll(g);E.chooseHire(g,0,target.uid);E.resolveAll(g);
+  next(g);g.mondayMarketBought=true;offer(g,'A-G1');lock(g);E.resolveAll(g);unchanged(g,()=>E.chooseHire(g,0,target.uid));E.chooseHire(g,0);E.resolveAll(g);next(g);g.mondayMarketBought=true;offer(g,'A-G1');lock(g);E.resolveAll(g);E.chooseHire(g,0,target.uid);E.resolveAll(g);
   next(g);g.mondayMarketBought=true;const duplicate=offer(g,'A-G1');lock(g);E.resolveAll(g);
   assert(!E.hireCandidates(g,0).some(c=>c.type==='A-G1'));unchanged(g,()=>E.chooseHire(g,0,duplicate.uid));E.chooseHire(g,0);E.resolveAll(g);
 });
