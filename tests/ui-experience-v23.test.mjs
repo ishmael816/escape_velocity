@@ -24,6 +24,6 @@ test('v23 UI: explicit protection target, growth action, old-save preservation a
   select.value='2-0';click('protect');let saved=JSON.parse(storage.get('escape-velocity-game-v24.1'));assert.equal(saved.players[0].lastProtectedSlot,'2-0');assert.equal(saved.actionCount,0);
   click('shelf',{tab:'market'});assert(root.innerHTML.includes('缺成长牌？按原价购买'));assert(root.innerHTML.includes('两周'));assert(root.innerHTML.includes('data-action="learn"'));
   click('learn',{type:'A-G1'});saved=JSON.parse(storage.get('escape-velocity-game-v24.1'));assert(saved.players[0].cards.some(c=>c.type==='A-G1'));assert.equal(saved.players[0].money,6);assert.equal(saved.actionCount,1);
-  click('export');const record=JSON.parse(await exported.text());assert.equal(record.rulesVersion,'0.24.1');assert.equal(record.game.version,24);assert(download.includes('v24.1'));assert.equal(storage.get('escape-velocity-game-v22'),old);
+  click('export');const record=JSON.parse(await exported.text());assert.equal(record.appVersion,'0.24.2');assert.equal(record.rulesVersion,'0.24.1');assert.equal(record.game.version,24);assert(download.includes('v24.2'));assert.equal(storage.get('escape-velocity-game-v22'),old);
  }finally{globalThis.document=previous.document;globalThis.localStorage=previous.localStorage;globalThis.setTimeout=previous.setTimeout;globalThis.clearTimeout=previous.clearTimeout;URL.createObjectURL=previous.create;URL.revokeObjectURL=previous.revoke;}
 });

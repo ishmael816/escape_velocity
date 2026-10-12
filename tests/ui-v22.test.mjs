@@ -7,7 +7,7 @@ test('fresh v24 UI renders, preserves v21 save, and shows the rebuilt catalogue 
  globalThis.localStorage={getItem:k=>{reads.push(k);return storage.get(k);},setItem:(k,v)=>storage.set(k,v)};
  globalThis.document={querySelector:s=>s==='#app'?root:s==='.calendar-scroll'||s==='#shelf'||s==='.calendar-panel'?scroll:null,addEventListener(){},querySelectorAll:()=>[]};
  await import('../src/app.js');
- assert(root.innerHTML.includes('v0.24.1'));assert(!root.innerHTML.includes('版图灵感'));assert(!root.innerHTML.includes('undefined'));
+ assert(root.innerHTML.includes('v0.24.2'));assert(!root.innerHTML.includes('版图灵感'));assert(!root.innerHTML.includes('undefined'));
  assert.deepEqual(reads,['escape-velocity-game-v24.1']);assert.equal(storage.get('escape-velocity-game-v22'),old22);assert.equal(storage.get('escape-velocity-game-v23'),old23);
  const click=action=>listeners.click({target:{closest:()=>({dataset:{action}})}});
  click('catalogue');assert(root.innerHTML.includes('寻找机会'));assert(root.innerHTML.includes('自有品牌'));assert(root.innerHTML.includes('W-G1'));assert(!root.innerHTML.replace(/<[^>]*>/g,'').includes('2h'));

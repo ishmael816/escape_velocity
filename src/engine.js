@@ -342,6 +342,13 @@ function botValue(g,p,c){const d=getCard(c),counts=skillCounts(p),missing=skillM
  return d.professional&&!d.skill&&p.money<8?7:1;
 }
 function bestSlot(g,p,c){const d=getCard(c);return slots().filter(s=>{if(canPlace(g,p,c.uid,s)||activityDanger(g,p,c,s))return false;const schedule=without(p.schedule,c.uid),key=slotKey(anchor(d,s));(schedule[key]||=[]).push(c.uid);const state=sanityState(g,p,schedule).value;return Object.values(schedule).flat().every(uid=>{const def=getCard(cardAt(p,uid));return state>=def.minSanity&&state<=def.maxSanity&&inspirationCount({...p,schedule})>=(def.inspirationRequired||0);});}).sort((a,b)=>{const value=s=>s.day*3+s.period+(s.period===2?d.hours>2?100:-3:0)+(g.inspection.inspectionCount&&workType(p,s)&&!d.professional?8:0);return value(a)-value(b);})[0];}
+function botIncomeReady(g,p,c){
+ const d=getCard(c);if(!d.income||!qualified(p,d))return false;
+ // Check only the visible offer, printed price, current cash and public schedule.
+ // A card requiring unaffordable capital or lacking room is not a conversion.
+ const clone=structuredClone(g),buyer=clone.players[p.id];pay(buyer,d.price);buyer.cards.push(structuredClone(c));
+ return !!bestSlot(clone,buyer,c);
+}
 export function botAct(g){const p=g.players[activeBuyer(g)];if(g.phase!=='planning'||!p.bot)return;if(p.escaped){pass(g,p.id);return;}
  if(p.protectionFrom<=g.week&&!p.actedThisWeek&&!p.protectionChosen){const s=slots().find(s=>workType(p,s)&&cardsInSlot(p,s).some(c=>getCard(c).hours<=4&&!getCard(c).professional))||slots().find(s=>workType(p,s));if(s)setProtection(g,p.id,s);}
  for(const c of p.cards){const old=findPlacement(p,c.uid);if(old&&old.day>=g.day&&(activityDanger(g,p,c,old)||old.period===2&&sanityState(g,p).value<g.config.escapeSanity)){const target=bestSlot(g,p,c);if(target)place(g,p.id,c.uid,target);else unplace(g,p.id,c.uid);return;}}
@@ -359,11 +366,19 @@ export function botAct(g){const p=g.players[activeBuyer(g)];if(g.phase!=='planni
   }
  }
  const blocked=unplacedCards(p).find(c=>{if(p.botRetired?.includes(c.uid))return false;const d=getCard(c);return qualified(p,d)&&d.income&&d.tier==='advanced'&&!bestSlot(g,p,c);});
- if(blocked){const d=getCard(blocked),weak=p.cards.filter(c=>{const old=findPlacement(p,c.uid),def=getCard(c);return old&&old.day>=g.day&&def.stress&&(expectedIncome(def)<(d.capitalRatio?Math.floor(p.money/d.capitalRatio):expectedIncome(d))||def.professional);}).sort((a,b)=>expectedIncome(getCard(a))-expectedIncome(getCard(b)))[0];if(weak){(p.botRetired||=[]).push(weak.uid);unplace(g,p.id,weak.uid);return;}}
+ if(blocked){const d=getCard(blocked),weak=p.cards.filter(c=>{const old=findPlacement(p,c.uid),def=getCard(c);
+  // Do not retire current income for an upgrade that still cannot fund its capital.
+  const funded=p.money+(c.lockedCapital||0)+(blocked.lockedCapital||0)>=(d.capitalRatio||d.capital||0);
+  return funded&&old&&old.day>=g.day&&def.stress&&(expectedIncome(def)<(d.capitalRatio?Math.floor(p.money/d.capitalRatio):expectedIncome(d))||def.professional);}).sort((a,b)=>expectedIncome(getCard(a))-expectedIncome(getCard(b)))[0];if(weak){(p.botRetired||=[]).push(weak.uid);unplace(g,p.id,weak.uid);return;}}
  const hand=unplacedCards(p).filter(c=>{if(p.botRetired?.includes(c.uid))return false;const d=getCard(c);if(!qualified(p,d)||d.skill&&!d.opportunity&&!d.draft&&p.skills.some(x=>x.type===c.type))return false;if(d.support&&!d.income&&!d.boost)return p.sanity<g.config.escapeSanity&&p.money>=(d.upkeep||0);if(!d.once&&!d.income&&!d.boost){if(d.professional&&!d.opportunity)return p.money<8;}return true;}).sort((a,b)=>{const value=c=>{const d=getCard(c);return d.support?44:d.tier==='advanced'?45:d.skill?35:d.income?25:5;};return value(b)-value(a);});for(const c of hand){const target=bestSlot(g,p,c);if(target){place(g,p.id,c.uid,target);return;}}
  const reserve=supportPlan(g,p).filter(x=>x.active).reduce((n,x)=>n+x.fee,0)+4;
  for(const c of p.cards){const d=getCard(c),old=findPlacement(p,c.uid);if(d.capitalRatio&&old&&old.day>=g.day&&p.money>=reserve+d.capitalRatio){const amount=(c.lockedCapital||0)+Math.floor((p.money-reserve)/d.capitalRatio)*d.capitalRatio;if(!canPlace(g,p,c.uid,old,amount)){place(g,p.id,c.uid,old,amount);return;}}}
- if(g.day<6){const offers=[...new Map([...Object.values(g.market).flat(),...learningOffers(g,p.id)].map(c=>[c.uid,c])).values()].filter(c=>canPay(p,getCard(c).price)&&botValue(g,p,c)>4&&(unplacedCards(p).length<4||getCard(c).skill)).sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));if(offers.length){const c=offers[0];if(Object.values(g.market).flat().includes(c))buy(g,p.id,c.uid);else learn(g,p.id,c.type);return;}}
+ if(g.day<6){const offers=[...new Map([...Object.values(g.market).flat(),...learningOffers(g,p.id)].map(c=>[c.uid,c])).values()].filter(c=>canPay(p,getCard(c).price)&&botValue(g,p,c)>4&&(unplacedCards(p).length<4||getCard(c).skill)).sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));if(offers.length){let c=offers[0];
+  const skill=getCard(c).skill,needed=skill&&p.cards.some(x=>skillMissing(p,getCard(x)).includes(skill));
+  // After an initial two-skill investment, use an executable income offer before
+  // collecting unrelated skills. Growth unlocking an owned card stays ahead.
+  if(skill&&!needed&&Object.values(skillCounts(p)).reduce((a,b)=>a+b,0)>=2)c=offers.find(x=>botIncomeReady(g,p,x))||c;
+  if(Object.values(g.market).flat().includes(c))buy(g,p.id,c.uid);else learn(g,p.id,c.type);return;}}
  pass(g,p.id);
 }
 export function botDraft(g,id){const p=g.players[id];for(const draft of [...p.drafts]){const options=[...draft.options].sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));chooseAdvanced(g,id,draft.id,options[0].uid);}}
