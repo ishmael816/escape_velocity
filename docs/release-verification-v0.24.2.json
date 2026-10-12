@@ -1,0 +1,527 @@
+{
+  "note": "Post-merge built-in bot smoke test. 24 seed/player configurations with rotating first seats, not 72 independent samples or a human balance verdict.",
+  "command": "node scripts/evaluate-bot-conversion.mjs . tmp/release-bots-merged.json --full",
+  "tests": {
+    "passed": 200,
+    "failed": 0
+  },
+  "build": "passed",
+  "summary": {
+    "games": 72,
+    "ended": 72,
+    "missed": 558,
+    "players": 232,
+    "zeroAt4": 18,
+    "firstIncome": 2.7327586206896552,
+    "income5": 5.633187772925764,
+    "income10": 7.683720930232558,
+    "escape": 8.305699481865284,
+    "maxWeeks": 10
+  },
+  "configurations": [
+    {
+      "players": 2,
+      "seed": 20261014,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 2,
+      "seed": 20261014,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 2,
+      "seed": 20261015,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 2,
+      "seed": 20261015,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 2,
+      "seed": 20261016,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 2,
+      "seed": 20261016,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 2,
+      "seed": 991,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 2,
+      "seed": 991,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 2,
+      "seed": 65537,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 2,
+      "seed": 65537,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 2,
+      "seed": 90817,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 2,
+      "seed": 90817,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 2,
+      "seed": 424242,
+      "first": 0,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 2,
+      "seed": 424242,
+      "first": 1,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 2,
+      "seed": 71933,
+      "first": 0,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 2,
+      "seed": 71933,
+      "first": 1,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 20261014,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 20261014,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 20261014,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 20261015,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 3,
+      "seed": 20261015,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 3,
+      "seed": 20261015,
+      "first": 2,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 3,
+      "seed": 20261016,
+      "first": 0,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 20261016,
+      "first": 1,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 20261016,
+      "first": 2,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 991,
+      "first": 0,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 3,
+      "seed": 991,
+      "first": 1,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 3,
+      "seed": 991,
+      "first": 2,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 3,
+      "seed": 65537,
+      "first": 0,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 65537,
+      "first": 1,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 65537,
+      "first": 2,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 3,
+      "seed": 90817,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 90817,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 90817,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 424242,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 424242,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 424242,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 3,
+      "seed": 71933,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 3,
+      "seed": 71933,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 3,
+      "seed": 71933,
+      "first": 2,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 20261014,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 20261014,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 20261014,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 20261014,
+      "first": 3,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 20261015,
+      "first": 0,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 4,
+      "seed": 20261015,
+      "first": 1,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 4,
+      "seed": 20261015,
+      "first": 2,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 4,
+      "seed": 20261015,
+      "first": 3,
+      "ended": true,
+      "weeks": 7
+    },
+    {
+      "players": 4,
+      "seed": 20261016,
+      "first": 0,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 4,
+      "seed": 20261016,
+      "first": 1,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 4,
+      "seed": 20261016,
+      "first": 2,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 4,
+      "seed": 20261016,
+      "first": 3,
+      "ended": true,
+      "weeks": 10
+    },
+    {
+      "players": 4,
+      "seed": 991,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 991,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 991,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 991,
+      "first": 3,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 65537,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 65537,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 65537,
+      "first": 2,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 65537,
+      "first": 3,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 90817,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 90817,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 90817,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 90817,
+      "first": 3,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 424242,
+      "first": 0,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 424242,
+      "first": 1,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 424242,
+      "first": 2,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 424242,
+      "first": 3,
+      "ended": true,
+      "weeks": 9
+    },
+    {
+      "players": 4,
+      "seed": 71933,
+      "first": 0,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 71933,
+      "first": 1,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 71933,
+      "first": 2,
+      "ended": true,
+      "weeks": 8
+    },
+    {
+      "players": 4,
+      "seed": 71933,
+      "first": 3,
+      "ended": true,
+      "weeks": 8
+    }
+  ]
+}
