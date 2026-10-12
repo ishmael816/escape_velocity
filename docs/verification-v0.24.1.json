@@ -1,0 +1,42 @@
+{
+  "baselineCommit": "7ca83a1a909e8cab227a62e5a6c72d9c966e61c0",
+  "version": "0.24.1",
+  "schemaVersion": 24,
+  "saveKey": "escape-velocity-game-v24.1",
+  "tests": {
+    "passed": 172,
+    "failed": 0,
+    "skipped": 0
+  },
+  "botSmoke": {
+    "games": 36,
+    "ended": 36,
+    "minWeeks": 5,
+    "maxWeeks": 9
+  },
+  "pairedValidation": {
+    "gamesPerVersion": 336,
+    "seeds": [
+      20261014,
+      20261015,
+      991,
+      65537,
+      90817,
+      424242,
+      71933,
+      241013
+    ]
+  },
+  "originalMatrix": {
+    "configurations": 504,
+    "ended": 498
+  },
+  "hashes": {
+    "source": "f71c3250cb511dbe1b11f2db1fc2c31908abe2c83fb5526dd08039190d20706c",
+    "engine": "77e2ee7c1158ec13ec4ebb4910c51c587c2e0ef991011dee93eab1598becbf5b",
+    "app": "b107da046fab3b7066503a7d47e4592ab0180430e90b181af41b33db2bbef032",
+    "policy": "1154775b0f54a0b787e56608928c5a452be9bee807c68ce03b21e0f52e59d4df"
+  },
+  "limitations": "No new local real-browser playtest. DOM workflow and real-engine simulations are separate evidence; cloud playtesting follows deployment.",
+  "syntaxFiles": 82
+}

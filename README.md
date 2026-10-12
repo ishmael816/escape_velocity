@@ -1,6 +1,6 @@
-# 逃离工位 · 网页试玩版 0.24
+# 逃离工位 · 网页试玩版 0.24.1
 
-**当前为 v0.24 候选 C3。** 调整成长投入、同色高级供给、B支持与C本金，保留成长补救、免费未来日程整理和C2提示修复。见 [规则、对照与未通过项](docs/release-v0.24.md)。
+**当前为 v0.24.1 候选 C4。** 软件订阅改为无支持、无压力；查岗仍停收收入并罚款，但不再额外损失1理智。 调整成长投入、同色高级供给、B支持与C本金，保留成长补救、免费未来日程整理和C2提示修复。寻找机会买价2；新增自愿“本周安排完成”。见 [规则、对照与未通过项](docs/release-v0.24.1.md)。
 
 完整重设计的32种卡牌，只有4h与8h。入门成长买价2；通过成长把多张小单替换为更少的高级活动。支持2–4人同机轮流或启发式自动玩家。
 
@@ -8,7 +8,7 @@
 
 Node.js 24+，无第三方依赖。`npm run dev`后打开 http://127.0.0.1:5173/ 。`npm run build`检查卡池一致性并生成dist；Vercel按vercel.json发布静态站点。线上`/version.json`可核对版本和提交SHA。
 
-v0.24使用独立存档键，需要新开局；v0.21/v0.22/v0.23存档保留。刷新可续局，可以导出JSON，暂不支持导入。
+v0.24.1使用独立存档键，需要新开局；v0.21/v0.22/v0.23/v0.24存档保留。刷新可续局，可以导出JSON，暂不支持导入。
 
 ## 本版规则
 
@@ -23,14 +23,14 @@ v0.24使用独立存档键，需要新开局；v0.21/v0.22/v0.23存档保留。�
 
 ## 数据和验证
 
-[完整牌表](docs/cards-v0.24.md) · [当前预算与验证](docs/release-v0.24.md) · [v0.22重设计记录](docs/cardpool-redesign-v0.22.md)
+[完整牌表](docs/cards-v0.24.1.md) · [当前预算与验证](docs/release-v0.24.md) · [v0.22重设计记录](docs/cardpool-redesign-v0.22.md)
 
-唯一卡池来源为`data/cardpool-v24.json`。运行`npm run generate`，生成网页数据和牌表；不要直接改`src/cardpool-data.js`。旧v0.10运行导出器已阻止覆盖新版，历史分析脚本不用于生成本版。
+唯一卡池来源为`data/cardpool-v24.1.json`。运行`npm run generate`，生成网页数据和牌表；不要直接改`src/cardpool-data.js`。旧v0.10运行导出器已阻止覆盖新版，历史分析脚本不用于生成本版。
 
-`npm test`运行新版规则与构筑测试；`npm run check:cards`检查生成一致性；`node scripts/check-balance-v24.mjs`为独立静态预算；`npm run simulate`为真实引擎自动对局；`node scripts/evaluate-experience.mjs`运行七策略多人矩阵，`node scripts/evaluate-paired.mjs --all-pairs`运行公平配对。静态可行不等于随机市场平衡，自动对局不等于真人体验。
+`npm test`运行新版规则与构筑测试；`npm run check:cards`检查生成一致性；`node scripts/check-balance-v24.1.mjs`为独立静态预算；`npm run simulate`为真实引擎自动对局；`node scripts/evaluate-experience.mjs`运行七策略多人矩阵，`node scripts/evaluate-paired.mjs --all-pairs`运行公平配对。静态可行不等于随机市场平衡，自动对局不等于真人体验。
 
-`src/engine.js`负责规则；`src/app.js`与卡面模块负责页面；`src/rules-v24.js`负责帮助文案。`tests/legacy-v21`保留旧规则测试快照，不能把其132项当成新版测试结果。
+`src/engine.js`负责规则；`src/app.js`与卡面模块负责页面；`src/rules-v24.1.js`负责帮助文案。`tests/legacy-v21`保留旧规则测试快照，不能把其132项当成新版测试结果。
 
 `output/pdf/`仍为v0.6归档印刷品，不适用于当前规则。
 
-v0.22交付时活跃测试为128项；v0.23新增24项、C2再加1项；当前v0.24保留并迁移原153项，新增2项，共155项。旧132项不是等价替换或通过统计的一部分。通用回归迁移、退役规则与完整获取路线的具体关系见 [测试覆盖迁移说明](docs/test-coverage-v0.22.md)。
+v0.22交付时活跃测试为128项；v0.23新增24项、C2再加1项；v0.24保留原153项并新增2项；当前v0.24.1保留155项，新增17项，共172项。旧132项不是等价替换或通过统计的一部分。通用回归迁移、退役规则与完整获取路线的具体关系见 [测试覆盖迁移说明](docs/test-coverage-v0.22.md)。

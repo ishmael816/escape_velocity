@@ -131,6 +131,16 @@ function advance(g,passed=false){
 export function buy(g,id,uid){assertTurn(g,id);const p=g.players[id],lane=Object.keys(g.market).find(k=>g.market[k].some(c=>c.uid===uid)),c=g.market[lane]?.find(c=>c.uid===uid);if(!c)throw Error('该牌已不在市场。');if(!canPay(p,getCard(c).price))throw Error('资金不足。');pay(p,getCard(c).price);p.cards.push(c);g.market[lane]=g.market[lane].filter(x=>x.uid!==uid);fillMarket(g);if(g.day===0&&!p.escaped)g.mondayMarketBought=true;log(g,p,`购买「${getCard(c).name}」，安排需另花一次行动。`);advance(g);}
 export function setProtection(g,id,s){assertTurn(g,id);const p=g.players[id];if(!p.protectionFrom||p.protectionFrom>g.week||p.actedThisWeek||p.protectionChosen||!Number.isInteger(s.day)||s.day<0||s.day>5||![0,1].includes(s.period)||!workType(p,s))throw Error('须在本周首次行动前，选择一个工作白天时段。');p.protectedSlot=slotKey(s);p.lastProtectedSlot=p.protectedSlot;p.protectionChosen=true;log(g,p,`弹性授权保护 ${slotLabel(s)} 中的一张 4h 活动，本周锁定。`);}
 export function pass(g,id){assertTurn(g,id);log(g,g.players[id],`躺平：跳过本次行动。`);advance(g,true);}
+export const planningDone=(g,id)=>g.phase==='planning'&&g.players[id]?.planningDoneWeek===g.week;
+export function setPlanningDone(g,id,done){
+ const p=g.players[id];if(g.phase!=='planning'||!p||p.bot)throw Error('只能设置玩家本周的安排状态。');
+ if(done){assertTurn(g,id);p.planningDoneWeek=g.week;}else delete p.planningDoneWeek;
+}
+export function autoPassPlanning(g){
+ if(g.phase!=='planning'||g.opportunity)return false;const id=activeBuyer(g);
+ if(g.players[id].bot||!planningDone(g,id))return false;
+ pass(g,id);return true;
+}
 export function canPlace(g,p,uid,s,investment){
  if(g.phase!=='planning'||activeBuyer(g)!==p.id)return '还未轮到你。';
  if(!Number.isInteger(s.day)||s.day<g.day||s.day>6||![0,1,2].includes(s.period))return '只能安排今天及之后。';
