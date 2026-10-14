@@ -26,7 +26,7 @@ test('staggered winners leave play; N−1 ends without an extra week',()=>{
 test('retired board stays frozen through events, support fees, search and reload',()=>{
  const g=make({playerCount:4,startSanity:6}),p=g.players[0];
  // Paid support, repeat search, and ordinary income must all stop executing.
- rig(g,p,[['B-S',0],['C-U',1,2],['A-E',6]]);
+ rig(g,p,[['B-S',0],['C-Q',1,2],['A-E',6]]);
  escape(g,0);const before=structuredClone(p);
  for(let week=0;week<2;week++){
   quiet(g);g.inspection.gain={money:5};g.inspection.blockedTimes=[{day:0,period:2}];
@@ -55,6 +55,6 @@ test('rotated rounds skip two retired seats and preserve partial passes on reloa
 test('early settlement still executes Sunday for remaining players',()=>{
  const g=make({playerCount:3});g.players[1].escaped=true;
  rig(g,g.players[2],[['A-E',6]]);finish(g);
- assert.equal(g.endedByPass,true);assert.equal(g.players[2].income,1);
+ assert.equal(g.endedByPass,true);assert.equal(g.players[2].income,2);
  assert.equal(g.players[1].settlement,null);
 });

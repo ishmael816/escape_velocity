@@ -16,7 +16,7 @@ test('completion can be cancelled between turns, survives reload, and expires af
  const old=make();E.setPlanningDone(old,0,true);finish(old);next(old);assert(!E.planningDone(old,0));
 });
 test('completion stops before resolution and cannot consume a pending human search',()=>{
- const g=make();rig(g,g.players[0],[['S-Q',6]]);E.setPlanningDone(g,0,true);E.autoPassPlanning(g);
+ const g=make();rig(g,g.players[0],[['B-Q',6]]);E.setPlanningDone(g,0,true);E.autoPassPlanning(g);
  E.setPlanningDone(g,1,true);E.autoPassPlanning(g);assert.equal(g.phase,'resolving');assert(!g.inspectionResolved);
  const before=structuredClone(g);assert.equal(E.autoPassPlanning(g),false);assert.deepEqual(g,before);
  E.resolveAll(g);assert(g.opportunity);const pending=structuredClone(g);assert.equal(E.autoPassPlanning(g),false);assert.deepEqual(g,pending);

@@ -44,7 +44,7 @@ test('early finish executes later days, inspections and support exactly like a f
  const full=structuredClone(g);full.endedByPass=false;full.actionCount=14;
  E.resolveAll(g);E.resolveAll(full);
  assert.deepEqual(g.players,full.players);assert.deepEqual(g.diceRolls,full.diceRolls);
- assert.equal(p.caught,1);assert.equal(p.income,0);assert.equal(p.sanity,7);
+ assert.equal(p.caught,1);assert.equal(p.income,0);assert.equal(p.sanity,5);
  assert.equal(p.money,8-2-1+3);assert.equal(p.supportWeek,1);
 });
 
