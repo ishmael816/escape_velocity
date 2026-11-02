@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
+import {getCard} from '../src/cards.js';
 
 test('v23 UI: explicit protection target, growth action, old-save preservation and correct export version',async()=>{
  const g=E.createGame({playerCount:2,mode:'hotseat'}),p=g.players[0];p.protectionFrom=1;p.lastProtectedSlot='5-0';p.weekend=true;
@@ -22,8 +23,9 @@ test('v23 UI: explicit protection target, growth action, old-save preservation a
   click('select',{uid:c.uid});assert(root.innerHTML.includes('点击绿色时段（移动免费）'));click('cancel');
   assert(!root.innerHTML.includes('value="0-0" selected'));click('protect');assert.equal(toast.textContent,'请先选择时段与目标牌。');
   select.value='2-0';click('protect');let saved=JSON.parse(storage.get('escape-velocity-game-v32-sanity'));assert.equal(saved.players[0].lastProtectedSlot,'2-0');assert.equal(saved.actionCount,0);
-  assert(root.innerHTML.includes('购买成长牌'));assert(root.innerHTML.includes('data-action="learn"'));
-  click('learn',{type:'A04'});saved=JSON.parse(storage.get('escape-velocity-game-v32-sanity'));assert(saved.players[0].cards.some(c=>c.type==='A04'));assert.equal(saved.players[0].money,6);assert.equal(saved.actionCount,1);
+  assert(!root.innerHTML.includes('购买成长牌'));assert(!root.innerHTML.includes('data-action="learn"'));
+  const growth=Object.values(saved.market).flat().find(c=>getCard(c).skill&&!E.canBuy(saved,saved.players[0],getCard(c)));assert(growth);
+  click('buy',{uid:growth.uid});saved=JSON.parse(storage.get('escape-velocity-game-v32-sanity'));assert(saved.players[0].cards.some(c=>c.uid===growth.uid));assert.equal(saved.players[0].money,8-getCard(growth).price.money);assert.equal(saved.actionCount,1);
   click('export');const record=JSON.parse(await exported.text());assert.equal(record.appVersion,'0.32.0');assert.equal(record.rulesVersion,'0.32.0');assert.equal(record.game.version,32);assert(download.includes('v32'));assert.equal(storage.get('escape-velocity-game-v22'),old);
  }finally{globalThis.document=previous.document;globalThis.localStorage=previous.localStorage;globalThis.setTimeout=previous.setTimeout;globalThis.clearTimeout=previous.clearTimeout;URL.createObjectURL=previous.create;URL.revokeObjectURL=previous.revoke;}
 });

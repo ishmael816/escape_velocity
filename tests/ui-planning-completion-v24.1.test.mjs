@@ -43,3 +43,38 @@ test('opening help interrupts pending automatic passes until the dialog is close
   assert.equal([...timers.values()].filter(t=>t.ms===420).length,0);
  });
 });
+
+test('Monday row refresh UI blocks ordinary actions, changes only its row, then hands over',async()=>{
+ const g=make(),before=g.market[4].filter(c=>c.marketRow===0).map(c=>c.uid),other=Object.values(g.market).flat().filter(c=>c.marketRow!==0).map(c=>c.uid);
+ await harness(g,async({click,saved,root})=>{
+  assert.equal((root.innerHTML.match(/class="route-market-title /g)||[]).length,4);
+  assert(root.innerHTML.includes('暂无职场II级牌'));
+  click('pass');assert.equal(saved().marketRefresh.player,0);assert.equal(saved().actionCount,1);
+  assert.equal((root.innerHTML.match(/data-action="market-row"/g)||[]).length,3);
+  assert.equal((root.innerHTML.match(/data-action="market-card"/g)||[]).length,3);
+  assert(!root.innerHTML.includes('data-action="learn"'));
+  assert(root.innerHTML.includes('data-action="pass" disabled'));
+  click('market-row',{row:'0'});const changed=saved();
+  assert.equal(E.activeBuyer(changed),1);assert.equal(changed.actionCount,1);assert.equal(changed.marketRefresh,null);
+  const all=Object.values(changed.market).flat().map(c=>c.uid);assert(before.every(id=>!all.includes(id)));assert(other.every(id=>all.includes(id)));
+  assert(!root.innerHTML.includes('data-action="market-row"'));
+  click('pass');assert.equal(saved().marketRefresh.player,1);click('market-keep');assert.equal(saved().phase,'resolving');
+ });
+});
+test('reload with a pending refresh restores controls for its owner only',async()=>{
+ const g=make();E.pass(g,0);
+ await harness(g,async({click,saved,root,timers})=>{
+  assert(root.innerHTML.includes('data-action="market-keep"'));assert.equal(timers.size,0);
+  click('player',{id:'1'});assert(!root.innerHTML.includes('data-action="market-keep"'));
+  click('player',{id:'0'});click('market-keep');assert.equal(E.activeBuyer(saved()),1);
+ });
+});
+
+test('II refresh button replaces only the selected card and uses the single free choice',async()=>{
+ const g=make(),target=E.marketCell(g,'C',3).uid,others=Object.values(g.market).flat().filter(c=>c.uid!==target).map(c=>c.uid);
+ await harness(g,async({click,saved,root})=>{
+  click('pass');assert(!root.innerHTML.includes('data-action="market-row" data-row="3"'));
+  click('market-card',{route:'C'});const after=saved(),ids=Object.values(after.market).flat().map(c=>c.uid);
+  assert(!ids.includes(target));assert(others.every(id=>ids.includes(id)));assert.equal(after.marketRefresh,null);assert.equal(after.actionCount,1);assert.equal(E.activeBuyer(after),1);
+ });
+});

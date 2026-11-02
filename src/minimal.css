@@ -16,3 +16,19 @@
 .simple-calendar{grid-template-rows:31px repeat(3,minmax(112px,auto))}.simple-day{grid-row:1 / 5;grid-template-rows:subgrid;align-content:normal}
 
 .marker-form{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:12px}.marker-form p,.marker-form details{flex-basis:100%}.marker-form label{display:flex;gap:8px;align-items:center}.marker-form input[type=number]{width:64px}.marker-form select,.marker-form input{padding:6px}.marker-form details label{margin:8px 0}
+
+/* Four route columns share row positions; row refresh never shifts another row. */
+.simple-workspace{grid-template-columns:minmax(0,1fr)}
+.simple-market{border-left:0;border-top:1px solid var(--line);padding:10px 0}
+.route-market-scroll{overflow-x:auto;padding-bottom:8px}
+.route-market-grid{display:grid;grid-template-columns:62px repeat(4,minmax(0,1fr));gap:10px;min-width:730px}
+.route-market-title{display:flex;align-items:center;gap:8px;padding:8px 10px;border-top:3px solid var(--family);background:var(--wash);font-weight:600}
+.market-row-label{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;color:var(--muted);font-size:12px}
+.market-row-label button{padding:6px 10px;min-height:36px}
+.market-empty{display:flex;align-items:center;justify-content:center;min-height:184px;border:1px dashed var(--line);border-radius:4px;color:var(--muted);font-size:12px}
+.market-refresh-choice{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 12px;padding:10px 12px;background:#e3eee8;border-left:3px solid var(--accent)}
+@media(max-width:600px){.route-market-grid{grid-template-columns:54px repeat(4,158px);gap:8px}.market-refresh-choice button{min-height:40px}}
+
+.market-cell{min-width:0;display:flex;flex-direction:column;gap:6px}
+.market-cell>.mini-card{flex:1}
+.refresh-single{min-height:40px;width:100%}

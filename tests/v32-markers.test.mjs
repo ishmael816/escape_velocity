@@ -1,3 +1,4 @@
+import {passKeeping,keepMarket} from './helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -8,7 +9,7 @@ import {validatePool} from '../src/card-studio-model.js';
 import {generateOutputs} from '../scripts/generate-v31.mjs';
 const make=()=>{const g=E.createGame({playerCount:2,mode:'hotseat',startMoney:60});g.inspection={inspectionCount:0,times:[],blockedTimes:[],gain:{}};return g;};
 function add(g,type,day,period=0){const p=g.players[0],c={uid:'fixture'+(++g.uid),type};p.cards.push(c);if(day!==undefined)(p.schedule[`${day}-${period}`]||=[]).push(c.uid);E.syncSanity(g,p);return c;}
-function lock(g){while(g.phase==='planning')E.pass(g,E.activeBuyer(g));}
+function lock(g){keepMarket(g);while(g.phase==='planning')passKeeping(g,E.activeBuyer(g));}
 function finish(g){lock(g);let guard=100;while(g.phase==='resolving'&&guard--){if(g.opportunity){const q=g.opportunity,p=g.players[q.player];if(q.stage==='v32')E.chooseActivity(g,p.id,V.defaultChoice(g,p,E.cardAt(p,q.uid)));else if(q.stage==='lane')E.chooseOpportunityLane(g,p.id,4);else if(q.stage==='hire')E.chooseHire(g,p.id);else E.chooseOpportunity(g,p.id);}else E.resolveAll(g);}assert(guard>0);}
 function next(g){for(const p of g.players)if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,false);E.closeWeek(g);g.inspection={inspectionCount:0,times:[],blockedTimes:[],gain:{}};}
 function pending(g){lock(g);E.resolveAll(g);assert.equal(g.opportunity?.stage,'v32');return g.opportunity;}
@@ -16,7 +17,7 @@ test('55 definitions, 220 physical cards, fixed supply and generated docs agree'
  const pool=JSON.parse(fs.readFileSync('data/cardpool-v31.json','utf8'));assert.deepEqual(validatePool(pool),[]);assert.equal(pool.cards.length,55);
  assert.deepEqual(Object.fromEntries('ABWC'.split('').map(r=>[r,pool.cards.filter(c=>c.route===r).length])),{A:15,B:14,W:13,C:13});
  for(const [path,text]of Object.entries(generateOutputs(pool)))assert.equal(fs.readFileSync(path,'utf8').replaceAll('\r\n','\n'),text);
- const g=make();assert.equal(Object.values(g.market).flat().length,12);assert.equal(Object.values(g.market).flat().length+Object.values(g.decks).flat().length,220);
+ const g=make();assert.equal(Object.values(g.market).flat().length,15);assert.equal(Object.values(g.market).flat().length+Object.values(g.decks).flat().length,220);
 });
 test('same empty night stacks inspiration; whole-pile conversion progresses only on success',()=>{
  const g=make(),c=add(g,'A03',0);pending(g);E.chooseActivity(g,0,{nights:['3-2','3-2']});finish(g);assert.equal(E.inspirationCount(g.players[0]),2);
@@ -36,7 +37,7 @@ test('invalid choice is atomic and pending choice survives JSON reload',()=>{
 test('automatic pipeline archives, replays and does not grant immunity',()=>{
  const g=make(),p=g.players[0],pipeline=add(g,'B05',0),target=add(g,'B02',1);pending(g);
  E.chooseActivity(g,0,{target:target.uid});finish(g);let q=g.players[0];assert.equal(E.cardAt(q,target.uid).auto,1);assert.equal(q.money,62);assert.equal(q.skills.length,1);assert.equal(E.protectedActivity(q,E.cardAt(q,target.uid),{day:1,period:0}),false);
- next(g);while(E.activeBuyer(g)!==0)E.pass(g,E.activeBuyer(g));q=g.players[0];assert(E.unplacedCards(q).some(c=>c.uid===pipeline.uid));
+ next(g);while(E.activeBuyer(g)!==0)passKeeping(g,E.activeBuyer(g));q=g.players[0];assert(E.unplacedCards(q).some(c=>c.uid===pipeline.uid));
  E.place(g,0,pipeline.uid,{day:2,period:0});assert.equal(q.skills.length,0);assert.equal(E.cardAt(q,pipeline.uid).progress,undefined);
 });
 test('same-name archives count once as skill but twice for sale course',()=>{
@@ -52,7 +53,7 @@ test('8h adjacency does not skip gaps and below means the night',()=>{
 });
 test('capital placement spends exchange cash, withdrawal returns tokens not money',()=>{
  const g=make(),p=g.players[0],c=add(g,'C06');p.principal=1;E.place(g,0,c.uid,{day:0,period:0},{capital:3});assert.equal(p.money,54);assert.equal(c.principal,3);assert.equal(p.principal,0);
- finish(g);assert.equal(p.income,3);next(g);while(E.activeBuyer(g)!==0)E.pass(g,E.activeBuyer(g));const before=p.money;E.unplace(g,0,c.uid);assert.equal(p.money,before);assert.equal(p.principal,3);
+ finish(g);assert.equal(p.income,3);next(g);while(E.activeBuyer(g)!==0)passKeeping(g,E.activeBuyer(g));const before=p.money;E.unplace(g,0,c.uid);assert.equal(p.money,before);assert.equal(p.principal,3);
 });
 test('trading sells investment tokens and revenue is not escape income',()=>{
  const g=make(),c=add(g,'C03',0),investment=add(g,'C06',1);investment.principal=3;pending(g);
@@ -65,7 +66,7 @@ test('duty attaches once and consumed duty stops protecting the card',()=>{
  const g=make(),p=g.players[0],c=add(g,'A06');p.duty=1;E.place(g,0,c.uid,{day:0,period:0},{duty:true});assert(E.protectedActivity(p,c,{day:0,period:0}));V.spend(p,'duty',c.uid);assert(!E.protectedActivity(p,c,{day:0,period:0}));
 });
 test('play costs do not repeat when moving; redeployment pays again',()=>{
- const g=make(),p=g.players[0],c=add(g,'B13');p.principal=2;E.place(g,0,c.uid,{day:1,period:0},{resource:'reserve'});E.pass(g,1);E.place(g,0,c.uid,{day:2,period:0});assert.equal(p.principal,1);E.unplace(g,0,c.uid);E.place(g,0,c.uid,{day:3,period:0},{resource:'reserve'});assert.equal(p.principal,0);
+ const g=make(),p=g.players[0],c=add(g,'B13');p.principal=2;E.place(g,0,c.uid,{day:1,period:0},{resource:'reserve'});passKeeping(g,1);E.place(g,0,c.uid,{day:2,period:0});assert.equal(p.principal,1);E.unplace(g,0,c.uid);E.place(g,0,c.uid,{day:3,period:0},{resource:'reserve'});assert.equal(p.principal,0);
 });
 test('artist transfers once, capped at four, withdrawal clears stored inspiration',()=>{
  const g=make(),p=g.players[0],c=add(g,'A09');p.inspirationSlots=['4-2','4-2','4-2','5-2','5-2'];assert(E.canPlace(g,p,c.uid,{day:0,period:0},{art:5}));E.place(g,0,c.uid,{day:0,period:0},{art:4});assert.equal(c.art,4);assert.equal(E.inspirationCount(p),1);finish(g);assert.equal(p.income,4);

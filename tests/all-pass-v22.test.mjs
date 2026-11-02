@@ -1,3 +1,4 @@
+import {passKeeping,keepMarket} from './helpers.mjs';
 // Migrated from legacy-v21: same control-flow assertions, new 4h cards and market sizes.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -5,17 +6,17 @@ import {getCard} from '../src/cards.js';
 import * as E from '../src/engine.js';
 import {make,add,rig,next,seedFor} from './helpers.mjs';
 
-function passDay(g){const day=g.day;while(g.phase==='planning'&&g.day===day)E.pass(g,E.activeBuyer(g));}
+function passDay(g){const day=g.day;while(g.phase==='planning'&&g.day===day)passKeeping(g,E.activeBuyer(g));}
 
 test('2–4 players: only a whole day of passes locks the week, with no free resources',()=>{
  for(const playerCount of [2,3,4]){
   const g=make({playerCount}),before=g.players.map(p=>[p.money,p.sanity,p.inspiration]);
-  for(let n=0;n<playerCount-1;n++){E.pass(g,E.activeBuyer(g));assert.equal(g.phase,'planning');}
-  E.pass(g,E.activeBuyer(g));
+  for(let n=0;n<playerCount-1;n++){passKeeping(g,E.activeBuyer(g));assert.equal(g.phase,'planning');}
+  passKeeping(g,E.activeBuyer(g));
   assert.equal(g.phase,'resolving');assert.equal(g.endedByPass,true);assert.equal(g.actionCount,playerCount);
   assert.deepEqual(g.players.map(p=>[p.money,p.sanity,p.inspiration]),before);
-  assert.equal(g.mondayMarketRefreshed,true);assert.equal(g.inspectionResolved,false);
-  assert.throws(()=>E.pass(g,0),/等待/);
+  assert.equal(g.marketRefresh,null);assert.equal(g.inspectionResolved,false);
+  assert.throws(()=>passKeeping(g,0),/等待/);
   E.resolveAll(g);assert.equal(g.phase,'escape');assert.equal(g.history.length,1);
   assert.equal(g.players[0].money,before[0][0]+g.config.salary);
  }
@@ -23,16 +24,16 @@ test('2–4 players: only a whole day of passes locks the week, with no free res
 
 test('one non-pass continues planning; passes across two different days do not combine',()=>{
  const g=make(),p=g.players[0],c=add(g,p,'A06');
- E.place(g,0,c.uid,{day:6,period:0});E.pass(g,1);
+ E.place(g,0,c.uid,{day:6,period:0});passKeeping(g,1);
  assert.equal(g.day,1);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,0);
- E.pass(g,0);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,1);
+ passKeeping(g,0);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,1);
  E.buy(g,1,g.market[4].find(c=>!E.canBuy(g,g.players[1],getCard(c))).uid);assert.equal(g.day,2);assert.equal(g.endedByPass,false);
  passDay(g);assert.equal(g.phase,'resolving');assert.equal(g.actionCount,6);
 });
 
 test('reload preserves partial-day passes, and rotated next week resets them',()=>{
- const g=make({playerCount:3});E.pass(g,0);E.pass(g,1);
- const restored=JSON.parse(JSON.stringify(g));E.pass(g,2);E.pass(restored,2);assert.deepEqual(restored,g);
+ const g=make({playerCount:3});passKeeping(g,0);passKeeping(g,1);
+ const restored=JSON.parse(JSON.stringify(g));passKeeping(g,2);passKeeping(restored,2);assert.deepEqual(restored,g);
  E.resolveAll(g);next(g);assert.equal(g.dayPasses,0);assert.equal(g.endedByPass,false);assert.equal(E.activeBuyer(g),1);
  passDay(g);assert.equal(g.phase,'resolving');assert.equal(g.actionCount,3);
 });
@@ -50,14 +51,14 @@ test('early finish executes later days, inspections and support exactly like a f
 
 test('only active players act; a single pass does not lock that player out',()=>{
  const g=make({playerCount:3});g.players[0].escaped=true;
- assert.throws(()=>E.buy(g,0,g.market[4][0].uid));E.buy(g,1,g.market[4].find(c=>!E.canBuy(g,g.players[1],getCard(c))).uid);E.pass(g,2);
+ assert.throws(()=>E.buy(g,0,g.market[4][0].uid));E.buy(g,1,g.market[4].find(c=>!E.canBuy(g,g.players[1],getCard(c))).uid);passKeeping(g,2);
  assert.equal(g.day,1);assert.equal(g.phase,'planning');
- E.pass(g,1);E.buy(g,2,g.market[4].find(c=>!E.canBuy(g,g.players[2],getCard(c))).uid);
+ passKeeping(g,1);E.buy(g,2,g.market[4].find(c=>!E.canBuy(g,g.players[2],getCard(c))).uid);
  assert.equal(g.day,2);passDay(g);assert.equal(g.phase,'resolving');
 });
 
 test('an old partial-day save without pass tracking waits for a fully observed day',()=>{
- const g=make();E.pass(g,0);delete g.dayPasses;
- E.pass(g,1);assert.equal(g.phase,'planning');assert.equal(g.day,1);
+ const g=make();passKeeping(g,0);delete g.dayPasses;
+ passKeeping(g,1);assert.equal(g.phase,'planning');assert.equal(g.day,1);
  passDay(g);assert.equal(g.phase,'resolving');
 });

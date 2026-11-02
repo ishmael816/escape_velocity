@@ -1,3 +1,4 @@
+import {passKeeping,keepMarket} from './helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
@@ -39,16 +40,16 @@ test('retired board stays frozen through events, support fees, search and reload
  }
  const restored=JSON.parse(JSON.stringify(g));E.syncSanity(restored,restored.players[0]);
  assert.deepEqual(restored.players[0],before);
- assert.throws(()=>E.pass(g,0),/等待/);
+ assert.throws(()=>passKeeping(g,0),/等待/);
  assert.throws(()=>E.place(g,0,p.cards[0].uid,{day:3,period:2}),/等待/);
  assert.throws(()=>E.unplace(g,0,p.cards[0].uid),/等待/);
 });
 
 test('rotated rounds skip two retired seats and preserve partial passes on reload',()=>{
  const g=make({playerCount:4});g.players[0].escaped=true;g.players[2].escaped=true;g.first=2;
- assert.equal(E.activeBuyer(g),3);E.pass(g,3);
+ assert.equal(E.activeBuyer(g),3);passKeeping(g,3);
  assert.equal(E.activeBuyer(g),1);assert.equal(g.phase,'planning');
- const restored=structuredClone(g);E.pass(g,1);E.pass(restored,1);
+ const restored=structuredClone(g);passKeeping(g,1);passKeeping(restored,1);
  assert.deepEqual(restored,g);assert.equal(g.phase,'resolving');assert.equal(g.actionCount,2);
 });
 

@@ -23,10 +23,10 @@ test('UI feedback clears after a valid action, new game and timeout; failed acti
   assert.equal([...timers.values()].filter(t=>t.ms===3500).length,1);
   click('slot',{day:'0',period:'1'});assert.equal(saved().actionCount,1);assertCleared();
   // A new invalid action must show its own feedback after the old one was cleared.
-  click('learn',{type:'missing-card'});assert(toast.textContent.length>0);assert(classes.has('visible'));
+  click('buy',{uid:'missing-card'});assert(toast.textContent.length>0);assert(classes.has('visible'));
   listeners.submit({target:{id:'settings-form',fields:{mode:'hotseat',playerCount:'2',seed:'42'}},preventDefault(){}});
   assert.equal(saved().config.seed,42);assert.equal(saved().actionCount,0);assertCleared();
-  click('learn',{type:'missing-card'});assert(toast.textContent.length>0);assert(classes.has('visible'));
+  click('buy',{uid:'missing-card'});assert(toast.textContent.length>0);assert(classes.has('visible'));
   const timeout=[...timers.entries()].find(([,t])=>t.ms===3500);assert(timeout);timers.delete(timeout[0]);timeout[1].fn();assertCleared();
  }finally{for(const [key,value] of Object.entries(previous))globalThis[key]=value;}
 });

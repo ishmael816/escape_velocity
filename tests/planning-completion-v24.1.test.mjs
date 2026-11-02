@@ -1,3 +1,4 @@
+import {passKeeping,keepMarket} from './helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
@@ -5,14 +6,14 @@ import {make,rig,next,finish} from './helpers.mjs';
 
 test('voluntary planning completion uses ordinary passes, never skips an unmarked player',()=>{
  const g=make(),manual=structuredClone(g);E.setPlanningDone(g,0,true);assert.equal(g.actionCount,0);
- assert(E.autoPassPlanning(g));E.pass(manual,0);assert.equal(g.actionCount,1);assert.equal(E.activeBuyer(g),1);
+ assert(E.autoPassPlanning(g));passKeeping(manual,0);assert.equal(g.actionCount,1);assert.equal(E.activeBuyer(g),1);
  const before=structuredClone(g);assert.equal(E.autoPassPlanning(g),false);assert.deepEqual(g,before);
  delete g.players[0].planningDoneWeek;assert.deepEqual(g,manual);
 });
 test('completion can be cancelled between turns, survives reload, and expires after its week',()=>{
  const g=make();E.setPlanningDone(g,0,true);const restored=JSON.parse(JSON.stringify(g));assert(E.planningDone(restored,0));
  E.autoPassPlanning(restored);const actions=restored.actionCount;E.setPlanningDone(restored,0,false);assert.equal(restored.actionCount,actions);assert(!E.planningDone(restored,0));
- E.pass(restored,1);E.resolveAll(restored);next(restored);assert(!E.planningDone(restored,0));assert.equal(E.autoPassPlanning(restored),false);
+ passKeeping(restored,1);E.resolveAll(restored);next(restored);assert(!E.planningDone(restored,0));assert.equal(E.autoPassPlanning(restored),false);
  const old=make();E.setPlanningDone(old,0,true);finish(old);next(old);assert(!E.planningDone(old,0));
 });
 test('completion stops before resolution and cannot consume a pending human search',()=>{

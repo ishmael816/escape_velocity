@@ -2,8 +2,10 @@ import * as E from '../src/engine.js';
 import {CARDS} from '../src/cards.js';
 export const make=(options={})=>quiet(E.createGame({playerCount:2,mode:'hotseat',...options}));
 export function quiet(g){g.inspection={name:'平静',inspectionCount:0,times:[],rolls:[],blockedTimes:[],gain:{}};return g;}
-export function turn(g,id=0){while(g.phase==='planning'&&E.activeBuyer(g)!==id)E.pass(g,E.activeBuyer(g));}
-export function lock(g){while(g.phase==='planning')E.pass(g,E.activeBuyer(g));}
+export function keepMarket(g){if(g.marketRefresh)E.chooseMarketRefresh(g,g.marketRefresh.player);}
+export function passKeeping(g,id){keepMarket(g);E.pass(g,id);keepMarket(g);}
+export function turn(g,id=0){keepMarket(g);while(g.phase==='planning'&&E.activeBuyer(g)!==id)passKeeping(g,E.activeBuyer(g));}
+export function lock(g){keepMarket(g);while(g.phase==='planning')passKeeping(g,E.activeBuyer(g));}
 export function finish(g){lock(g);E.resolveAll(g);}
 export function next(g){for(const p of E.playingPlayers(g)){E.botDraft(g,p.id);if(!Object.hasOwn(g.escapeDecisions,p.id))E.chooseEscape(g,p.id,false);}E.closeWeek(g);quiet(g);}
 export function add(g,p,type){const c={uid:`fixture-${++g.uid}`,type};p.cards.push(c);return c;}
