@@ -1,8 +1,10 @@
 // Shared, data-derived text: editing a number must also change the card preview.
+import {focusText} from './sanity-rules.js';
 const names={inspiration:'✦',principal:'本金',duty:'履职',auto:'⚙'};
 export function markerRules(d){
  const m=d.mechanic;if(!m)return d.effect||'';
  return [
+  focusText(d),
   m.playSpend?`打出：${names[m.playSpend]} −1`:'',
   m.generate?`空夜 ✦ +${m.generate}，可叠加`:'',
   m.spend?`每次 ${names[m.spend]} −1`:'',

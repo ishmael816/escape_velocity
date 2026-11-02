@@ -1,3 +1,4 @@
+import {riskText} from './sanity-rules.js';
 import source from './cardpool-data.js';
 import {adapt, cardLevel, ROUTES} from './cards.js';
 import {cardFace, badge} from './card-face.js';
@@ -51,7 +52,7 @@ function filtered(){
  if(filters.sort==='hours')list.sort((a,b)=>(a.hours||0)-(b.hours||0));
  return list;
 }
-function eventFace(c){return `<div class="event-face"><header>${icon('calendar',18)}<strong>${esc(c.name)}</strong></header><div class="event-ornament">${icon(c.inspectionCount?'eye':c.blocked?'bag':c.temporaryWeekend?'sun':'money',58)}</div><div class="event-effect">${c.inspectionCount?`${'⚄ '.repeat(c.inspectionCount)}<p>查岗 ${c.inspectionCount} 轮</p>`:c.blocked?`<b>7 · ${c.blocked.slot==='am'?'上午':'下午'}</b><p>团建占用</p>`:c.temporaryWeekend?'<b>6 + 7</b><p>本周双休</p>':badge('money','+'+(c.cash||0),'发放奖金')}</div><footer>公共事件 · ${c.copies} 张</footer></div>`;}
+function eventFace(c){return `<div class="event-face"><header>${icon('calendar',18)}<strong>${esc(c.name)}</strong></header><div class="event-ornament">${icon(c.inspectionCount?'eye':c.blocked?'bag':c.temporaryWeekend?'sun':'money',58)}</div><div class="event-effect">${c.inspectionCount?`${'⚄ '.repeat(c.inspectionCount)}<p>查岗 ${c.inspectionCount} 轮</p>`:c.blocked?`<b>7 · ${c.blocked.slot==='am'?'上午':'下午'}</b><p>团建占用</p>`:c.temporaryWeekend?'<b>6 + 7</b><p>本周双休</p>':badge('money','+'+(c.cash||0),'发放奖金')}</div>${c.wellbeing?`<p>${esc(riskText(c.wellbeing))}</p>`:''}<footer>公共事件 · ${c.copies} 张</footer></div>`;}
 function face(c,event=group==='events'){
  try{return event?eventFace(c):cardFace(adapt(c));}catch{return '<div class="broken-card">字段暂不完整，请检查编辑区。</div>';}
 }
@@ -88,12 +89,14 @@ function renderEditor(){
   form+=section('01 / 购买',num('资金','price')+field('技能要求','requires','text',{hint:'如 AA、BC；留空表示无要求'}));
   form+=section('02 / 打出',select('等级 / 占用时间','hours',[[4,'I级牌（4h）'],[8,'II级牌（8h）']])+num('日程理智 ±','sanityImpact',-10,10)+num('锁定本金','capital')+num('本金 / 1 收入','capitalRatio')+check('仅工作白天 · 免查岗','professional')+check('仅非上班时间','offHours')+check('白天并行（4h）','parallel'));
   form+=section('03 / 结算',num('理智 ≥','minSanity',0,10)+num('理智 ≤','maxSanity',0,10)+num('执行资金 −','cost.money')+num('维持资金 −','upkeep')+num('收入 +（计逃离）','gain.profit')+num('奖金 +（不计逃离）','gain.cash')+num('工资 +（不计逃离）','gain.salary'));
+  form+=section('高理智奖励',effectToggle('focus','高理智奖励',c.mechanic?.focus)+(c.mechanic?.focus?num('理智 ≥','mechanic.focus.min',1,10)+Object.entries({profit:'额外副业 +',cash:'额外资金 +',look:'看牌数改为',belowBonus:'下邻加成改为 +'}).filter(([key])=>c.mechanic.focus[key]!==undefined).map(([key,label])=>num(label,'mechanic.focus.'+key,1,key==='look'?12:10)).join('')+(c.dice?check('收益骰掷两次取高','mechanic.focus.reroll'):''):''),!!c.mechanic?.focus);
   form+=section('持久度与归档',select('活动类型','kind',Object.entries(kinds))+(c.kind!=='repeat'?num('成功几次完成','progress',1,12):'')+select('完成权限','permission',[['','无'],['weekend','永久双休'],['protection','每周保护一张I级牌']])+check('完成后保留永久效果','permanent')+check('可被高级找牌效果找到','advanced'));
   form+=section('灵感与过牌',num('空夜放置灵感','inspirationGenerate',0,7)+num('灵感 ≥（不消耗）','inspirationRequired',0,7)+num('过牌消耗灵感','inspirationSpend',0,1)+num('弃手牌另加收入','handDiscardBonus')+effectToggle('opportunity','过牌',c.opportunity)+ (c.opportunity?num('查看几张','opportunity.count',1,12)+check('符合技能免费取 1','opportunity.free'):'')+num('招聘附加费','hireFee')+num('招聘查看几张','hireDrawCount',0,12),!!(c.inspirationGenerate||c.inspirationRequired||c.inspirationSpend||c.handDiscardBonus||c.opportunity||c.hireFee));
   form+=section('骰子、成熟与联动',effectToggle('dice','骰子收益',c.dice)+(c.dice?select('骰子收益类型','dice.resource',[['profit','收入（计逃离）'],['salary','奖金（不计逃离）']])+`<div class="dice-fields wide">${c.dice.faces.map((n,i)=>num('⚀⚁⚂⚃⚄⚅'[i],`dice.faces.${i}`)).join('')}</div>`:'')+effectToggle('maturation','多周成熟',c.maturation)+(c.maturation?num('成熟所需次数','maturation.steps',1,12)+num('成熟前收入','maturation.initial')+num('成熟后收入','maturation.mature'):'')+select('条件收益','condition',[['','无'],['lowSanity','理智低于门槛'],['inspiration','灵感达到门槛'],['professional','此前完成工作活动'],['capitalJob','此前完成有本金活动']])+(c.condition?num('额外收益','conditionalBonus')+(c.condition==='lowSanity'?num('理智 ≤','lowSanityAt',0,10):c.condition==='inspiration'?num('灵感 ≥','inspirationBonusAt',1,7):''):'')+effectToggle('boost','下一张收入联动',c.boost)+(c.boost?num('下一张收入 +','boost.amount',1,99)+check('仅有本金的牌','boost.capitalOnly'):''),!!(c.dice||c.maturation||c.condition||c.boost));
  }else{
   const type=c.inspectionCount?'inspection':c.blocked?'team':c.temporaryWeekend?'weekend':'bonus';
   form+=section('事件效果',`<label class="field wide"><span>事件类型</span><select id="event-type">${options([['inspection','领导查岗'],['team','周日团建'],['bonus','发放奖金'],['weekend','临时双休']],type)}</select></label>`+(type==='inspection'?num('查岗轮数','inspectionCount',1,6):type==='team'?select('团建时段','blocked.slot',[['am','周日上午'],['pm','周日下午']]):type==='bonus'?num('资金 +','cash',1,99):'<p class="field-note wide">周六临时自由，不提供永久理智加成。</p>'));
+  form+=section('精神状态事件',effectToggle('wellbeing','精神状态事件',c.wellbeing)+(c.wellbeing?num('触发理智 ≤','wellbeing.max',0,3)+select('后果','wellbeing.effect',[['hand','自选弃1张手牌'],['hospital','骰定一天全部活动暂停'],['withdraw','撤回1张非正理智多次活动'],['discard','理智0：弃置1张非正理智多次活动']]):''),!!c.wellbeing);
  }
  el.innerHTML=`<div class="editor-top"><span>正在编辑 <b id="editing-id">${esc(c.id)}</b></span><div><button data-action="previous" aria-label="上一张">←</button><button data-action="next" aria-label="下一张">→</button><button data-action="close-editor" aria-label="关闭编辑器">×</button></div></div><div class="editor-scroll"><div class="preview-heading"><span>左侧牌面实时更新</span><button data-action="compare" class="text-button">对比原版</button></div><details class="preview-details"><summary>展开大图预览</summary><div id="live-preview" class="live-preview"></div></details><div id="validation" class="validation" role="status" hidden></div><form id="card-form" onsubmit="return false">${form}</form><details class="raw-section"><summary>完整卡牌 JSON</summary><p>用于检查完整数据。文字说明不会自动变成可执行效果。</p><textarea id="raw-json" spellcheck="false" aria-label="完整卡牌 JSON">${esc(JSON.stringify(c,null,2))}</textarea><button data-action="apply-json">应用 JSON 到这张牌</button><span id="raw-status"></span></details><div class="card-actions"><button data-action="duplicate">复制为新牌</button><button data-action="reset-card">还原本张</button><button data-action="delete" class="danger">删除</button></div></div>`;
  renderPreview();updateStatus();
@@ -113,6 +116,7 @@ function editField(input){
   if(!/^[A-Za-z0-9_-]{1,40}$/.test(value)||[...pool.cards,...pool.events].some(x=>x!==c&&x.id===value)){undo.pop();notice('编号须唯一，且只含字母、数字或横线');input.value=c.id;return;}
   c.id=value;selected=value;
  }else{setPath(c,path,value);}
+ if(path==='wellbeing.effect'&&value==='discard')c.wellbeing.max=0;
  if(path==='requires')c.requires=value.toUpperCase().replace(/\s/g,'');
  if(path==='kind'){
   if(value==='repeat'){delete c.progress;delete c.permission;delete c.permanent;}
@@ -121,7 +125,7 @@ function editField(input){
  if(path==='permission'){if(value){c.kind='once';c.permanent=true;c.progress=c.progress||2;}else{delete c.permission;delete c.permanent;}}
  if(path==='condition'){if(value){c.conditionalBonus??=1;if(value==='lowSanity')c.lowSanityAt??=2;if(value==='inspiration')c.inspirationBonusAt??=1;}else delete c.condition;}
  rawDirty=false;markChange();
- if(['kind','permission','condition'].includes(path))renderEditor();
+ if(['kind','permission','condition','wellbeing.effect'].includes(path))renderEditor();
 }
 async function leaveRaw(){return !rawDirty||await confirmAction('有尚未应用的 JSON','继续将丢弃文本框中尚未应用的 JSON；其他字段修改已自动保存。','继续');}
 function download(poolToSave){const blob=new Blob([JSON.stringify(poolToSave,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`escape-velocity-cardpool-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);}
@@ -146,7 +150,8 @@ root.addEventListener('change',e=>{
  if(t.dataset.field&&(!['text','number'].includes(t.type)||t.dataset.field==='id'))editField(t);
  if(t.dataset.filter){filters[t.dataset.filter]=t.value;renderGrid();}
  if(t.id==='changed-filter'){filters.changed=t.checked;renderGrid();}
- if(t.dataset.effect){snapshot();const key=t.dataset.effect;if(t.checked)get()[key]=clone({dice:{resource:'profit',faces:[0,0,1,1,2,2]},maturation:{steps:2,initial:1,mature:3},opportunity:{count:3},boost:{amount:1}}[key]);else delete get()[key];rawDirty=false;persist();renderEditor();renderGrid();}
+ if(t.dataset.effect==='focus'){snapshot();const c=get();c.mechanic??={};if(t.checked)c.mechanic.focus={min:6,...(c.opportunity?{look:Math.max(1,c.opportunity.count+1)}:{cash:1})};else delete c.mechanic.focus;rawDirty=false;persist();renderEditor();renderGrid();return;}
+ if(t.dataset.effect){snapshot();const key=t.dataset.effect;if(t.checked)get()[key]=clone({wellbeing:{max:2,effect:'hospital'},dice:{resource:'profit',faces:[0,0,1,1,2,2]},maturation:{steps:2,initial:1,mature:3},opportunity:{count:3},boost:{amount:1}}[key]);else delete get()[key];rawDirty=false;persist();renderEditor();renderGrid();}
  if(t.id==='event-type'){snapshot();const c=get();for(const key of ['inspectionCount','blocked','cash','temporaryWeekend'])delete c[key];Object.assign(c,{inspection:{inspectionCount:1},team:{inspectionCount:0,blocked:{day:7,slot:'am'}},bonus:{inspectionCount:0,cash:2},weekend:{inspectionCount:0,temporaryWeekend:true}}[t.value]);persist();renderEditor();renderGrid();}
 });
 root.addEventListener('click',async e=>{

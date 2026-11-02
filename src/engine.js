@@ -1,3 +1,4 @@
+import * as Wellbeing from './wellbeing.js';
 import * as V32 from './engine-v32.js';
 import {CARDS,ADVANCED,MARKET_LIMITS,marketLane,DEFAULTS,EVENTS,getCard,slotKey,slotLabel,DAYS,cardCopies,cardPhases} from './cards.js';
 import {hours} from './card-visuals.js';
@@ -73,7 +74,7 @@ export const capacity=()=>4;
 export const eventBlocksSlot=(g,p,s)=>!p.escaped&&(g.inspection.blockedTimes||[]).some(t=>slotKey(t)===slotKey(s));
 export const inspected=(g,p,s)=>!!workType(p,s)&&(g.inspection.playerTimes?.[p.id]||g.inspection.times||[]).some(t=>slotKey(t)===slotKey(s));
 export function protectedActivity(p,c,s){return !!c.duty||p.protectedSlot===slotKey(s)&&(p.protectedUid!==undefined?p.protectedUid:cardsInSlot(p,s).find(x=>getCard(x).hours<=4&&!getCard(x).professional)?.uid)===c.uid;}
-export function activityDanger(g,p,c,s){const d=getCard(c);return coveredSlots(d,s).some(t=>eventBlocksSlot(g,p,t)||(!d.professional&&inspected(g,p,t)&&!protectedActivity(p,c,t)));}
+export function activityDanger(g,p,c,s){if(Wellbeing.hospitalPaused(g,p,c,s))return true;const d=getCard(c);return coveredSlots(d,s).some(t=>eventBlocksSlot(g,p,t)||(!d.professional&&inspected(g,p,t)&&!protectedActivity(p,c,t)));}
 
 export function createGame(options={}){
  const config={...DEFAULTS,...options};for(const [k,v]of Object.entries(DEFAULTS))if(typeof v==='number')config[k]=Number.isFinite(Number(config[k]))?Math.max(0,Math.floor(Number(config[k]))):v;
@@ -121,7 +122,7 @@ function refreshMondayMarket(g){
 }
 function resetExecution(p){for(const c of p.cards){delete c.weekBonus;delete c.bonusWeek;}p.income=0;p.weeklyEarnings=[];p.settlement=null;p.jobsDone=0;p.activeRoutes=[];p.pendingBoost=null;p.professionalDone=false;p.capitalJobDone=false;}
 function startWeek(g){
- g.phase='planning';g.day=0;g.turn=0;g.actionCount=0;g.dayPasses=0;g.endedByPass=false;g.timeline=[];g.cursor=0;g.resolutionQueue=null;g.inspectionResolved=false;g.mondayMarketBought=false;g.mondayMarketRefreshed=false;
+ g.phase='planning';g.day=0;g.turn=0;g.actionCount=0;g.dayPasses=0;g.endedByPass=false;g.timeline=[];g.cursor=0;g.resolutionQueue=null;g.inspectionResolved=false;g.wellbeingQueue=[];g.mondayMarketBought=false;g.mondayMarketRefreshed=false;
  clearStaleMarket(g);
  if(!g.inspectionDeck.length){g.inspectionDeck=shuffle(g,EVENTS.map((_,i)=>i));g.inspectionDiscard=[];}
  const index=g.inspectionDeck.pop();g.inspectionDiscard.push(index);const e=EVENTS[index];g.inspection={...e,times:[],rolls:[],blockedTimes:(e.blockedTimes||[]).map(([day,period])=>({day,period}))};
@@ -225,7 +226,7 @@ export function rollInspections(g){
  g.inspection.playerTimes=Object.fromEntries(players.map(p=>[p.id,[...hit[p.id]].flatMap(day=>[0,1].map(period=>({day,period})))]));
  g.inspectionResolved=true;g.diceRolls.push({week:g.week,kind:'inspection',faces:rolls,chains});
  log(g,null,chains.length?'查岗 / 追查：'+chains.map(c=>c.map(x=>x.face+'['+(x.players.map(id=>id+1).join(',')||'落空')+']').join(' → ')).join('；')+'。方括号为被命中的玩家；各自落空后退出本轮。':'本周无查岗骰。','dice');
- for(const p of players)settleSupport(g,p);return rolls;
+ for(const p of players)settleSupport(g,p);Wellbeing.beginWellbeing(g);return rolls;
 }
 function activityCost(p,d){return {...d.cost};}
 function resolveActivity(g,p,s,c,incoming){
@@ -293,6 +294,7 @@ function resolveActivity(g,p,s,c,incoming){
  }
 }
 function resolveSlot(g,p,s,onlyUid){for(const c of resolvingCards(p,s).filter(c=>onlyUid===undefined||c.uid===onlyUid)){
+ if(Wellbeing.hospitalPaused(g,p,c,s)){log(g,p,getCard(c).name+'：就医，当天暂停。','warning',s);continue;}
  const d=getCard(c),coverage=coveredSlots(d,s),incoming=p.pendingBoost;p.pendingBoost=null;
  if(coverage.some(t=>eventBlocksSlot(g,p,t))){log(g,p,`${slotLabel(s)} · ${d.name}：团建占用，暂停保留。`,'warning',s);continue;}
  const caught=!d.professional&&coverage.some(t=>inspected(g,p,t)&&!protectedActivity(p,c,t));
@@ -301,7 +303,7 @@ function resolveSlot(g,p,s,onlyUid){for(const c of resolvingCards(p,s).filter(c=
 }}
 export function step(g){
  if(g.phase!=='resolving')throw Error('当前不是结算阶段。');
- if(g.opportunity)throw Error('请先完成寻找机会。');
+ if(g.opportunity)throw Error('请先完成当前结算选择。');
  if(!g.inspectionResolved){rollInspections(g);return null;}
  const s=g.timeline[g.cursor];
  if(s){
@@ -319,6 +321,7 @@ export function resolveAll(g){while(g.phase==='resolving'&&!g.opportunity)step(g
 // Choices use existing board markers and hand cards. All validation precedes mutation.
 export const inspirationSpaces=p=>Array.from({length:7},(_,day)=>day+'-2').filter(k=>!cardsInSlot(p,k).length&&!(p.inspirationSlots||[]).includes(k));
 export function chooseActivity(g,id,value=null){
+ if(g.opportunity?.stage==='wellbeing')return Wellbeing.chooseWellbeing(g,id,value);
  if(g.opportunity?.stage==='v32')return V32.choose(g,id,value);
  const q=g.opportunity,p=g.players[id];
  if(g.phase!=='resolving'||!q||q.player!==id||!['inspire','spend-inspiration','discard-hand'].includes(q.stage))throw Error('当前没有这项活动选择。');
@@ -397,6 +400,7 @@ export function chooseOpportunity(g,id,uid=null){
 export function botOpportunity(g){
  const q=g.opportunity;if(!q||!g.players[q.player].bot)return;
  const p=g.players[q.player];
+ if(q.stage==='wellbeing'){const candidates=Wellbeing.wellbeingCandidates(g,p.id,q.effect).sort((a,b)=>botValue(g,p,a)-botValue(g,p,b));chooseActivity(g,p.id,candidates[0]?.uid);return;}
  if(q.stage==='v32'){const c=cardAt(p,q.uid);chooseActivity(g,p.id,V32.defaultChoice(g,p,c));return;}
  if(q.stage==='inspire'){const need=Math.max(0,...p.cards.map(c=>getCard(c).inspirationRequired||0))+(p.cards.some(c=>getCard(c).inspirationSpend)?1:0);chooseActivity(g,p.id,p.money>=(q.cost.money||0)&&inspirationCount(p)<need?inspirationSpaces(p).slice(0,q.count):null);return;}
  if(q.stage==='spend-inspiration'){const reserve=Math.max(0,...p.cards.filter(c=>findPlacement(p,c.uid)).map(c=>getCard(c).inspirationRequired||0));chooseActivity(g,p.id,inspirationCount(p)>reserve?p.inspirationSlots.at(-1):null);return;}
@@ -437,7 +441,7 @@ export function closeWeek(g){
  g.week++;g.first=(g.first+1)%g.players.length;g.first=turnOrder(g)[0].id;startWeek(g);
 }
 // Public preview never reads the random stream or predicts hidden inspection dates.
-export function preview(g,id){const retired=g.players[id];if(retired.escaped)return {income:retired.income,money:retired.money,sanity:retired.sanity,inspiration:inspirationCount(retired),warnings:[],incomeLow:retired.income,incomeHigh:retired.income,uncertain:false,retired:true};const run=mode=>{const clone=structuredClone(g),p=clone.players[id];clone.logs=[];clone.previewMode=mode;clone.inspection.times=[];clone.inspection.playerTimes={};clone.phase='resolving';delete p.supportWeek;resetExecution(p);for(const c of p.cards)delete c.lastExecutedWeek;p.emptyNightSlots=Array.from({length:7},(_,day)=>day+'-2').filter(key=>!cardsInSlot(p,key).length);p.emptyNights=p.emptyNightSlots.length;settleSupport(clone,p);for(const s of slots())resolveSlot(clone,p,s);endResources(clone,p);return {income:p.income,money:p.money,sanity:p.sanity,inspiration:inspirationCount(p),warnings:clone.logs.filter(l=>l.tone==='warning')};};const low=run('low'),high=run('high');return {...high,incomeLow:low.income,incomeHigh:high.income,uncertain:!!g.inspection.inspectionCount||g.players[id].cards.some(c=>findPlacement(g.players[id],c.uid)&&(getCard(c).dice||getCard(c).opportunity||getCard(c).hireFee||getCard(c).inspirationGenerate||getCard(c).handDiscardBonus))};}
+export function preview(g,id){const retired=g.players[id];if(retired.escaped)return {income:retired.income,money:retired.money,sanity:retired.sanity,inspiration:inspirationCount(retired),warnings:[],incomeLow:retired.income,incomeHigh:retired.income,uncertain:false,retired:true};const run=mode=>{const clone=structuredClone(g),p=clone.players[id];clone.logs=[];clone.previewMode=mode;clone.inspection.times=[];clone.inspection.playerTimes={};clone.phase='resolving';delete p.supportWeek;resetExecution(p);for(const c of p.cards)delete c.lastExecutedWeek;p.emptyNightSlots=Array.from({length:7},(_,day)=>day+'-2').filter(key=>!cardsInSlot(p,key).length);p.emptyNights=p.emptyNightSlots.length;settleSupport(clone,p);for(const s of slots())resolveSlot(clone,p,s);if(clone.inspection.wellbeing)log(clone,p,'试算未扣除精神状态事件造成的停工、撤回或弃牌损失；按周初预告安排。','warning');endResources(clone,p);return {income:p.income,money:p.money,sanity:p.sanity,inspiration:inspirationCount(p),warnings:clone.logs.filter(l=>l.tone==='warning')};};const low=run('low'),high=run('high');return {...high,incomeLow:low.income,incomeHigh:high.income,uncertain:!!g.inspection.inspectionCount||!!g.inspection.wellbeing||g.players[id].cards.some(c=>findPlacement(g.players[id],c.uid)&&(getCard(c).dice||getCard(c).opportunity||getCard(c).hireFee||getCard(c).inspirationGenerate||getCard(c).handDiscardBonus))};}
 
 function expectedIncome(d){return (d.maturation?.mature??d.fixedProfit)+(d.dice?.resource==='profit'?d.dice.faces.reduce((a,b)=>a+b,0)/6:0)+(d.conditionalBonus||0)*.5;}
 function botValue(g,p,c){const d=getCard(c),counts=skillCounts(p),missing=skillMissing(p,d).length,ownedCount=p.cards.filter(x=>x.type===c.type).length,owned=ownedCount>0;
@@ -498,4 +502,4 @@ export function botAct(g){const p=g.players[activeBuyer(g)];if(g.phase!=='planni
 export function botDraft(g,id){const p=g.players[id];if(p.escaped)return;for(const draft of [...p.drafts]){const options=[...draft.options].sort((a,b)=>botValue(g,p,b)-botValue(g,p,a));chooseAdvanced(g,id,draft.id,options[0].uid);}}
 
 // Internal hooks shared with the marker-rule module.
-export {log,pay,die,changeSchedule,without,returnToHand,fillMarket};
+export {log,pay,die,changeSchedule,without,returnToHand,fillMarket,recycle};

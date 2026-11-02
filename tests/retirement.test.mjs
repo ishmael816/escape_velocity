@@ -55,6 +55,6 @@ test('rotated rounds skip two retired seats and preserve partial passes on reloa
 test('early settlement still executes Sunday for remaining players',()=>{
  const g=make({playerCount:3});g.players[1].escaped=true;
  rig(g,g.players[2],[['A06',6]]);finish(g);
- assert.equal(g.endedByPass,true);assert.equal(g.players[2].income,2);
+ assert.equal(g.endedByPass,true);assert.equal(g.players[2].income,1);
  assert.equal(g.players[1].settlement,null);
 });

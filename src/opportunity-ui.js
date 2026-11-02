@@ -1,4 +1,5 @@
 import {markerPanel} from './marker-ui.js';
+import {wellbeingCandidates} from './wellbeing.js';
 import {getCard,DAYS,cardLevel} from './cards.js';
 import {hireCandidates,canBuy,hireCost,inspirationSpaces,unplacedCards} from './engine.js';
 import {familyOf} from './card-visuals.js';
@@ -8,6 +9,7 @@ export function opportunityPanel(g){
  if(q.stage==='v32')return markerPanel(g);
  const p=g.players[q.player],disabled=p.bot?'disabled':'';
  const header='<p>玩家 '+(p.id+1)+' · '+q.source+' · 资金 '+p.money+'</p>';
+ if(q.stage==='wellbeing')return header+'<p>触发时理智 '+q.sanity+'。'+(q.effect==='withdraw'?'选择一张撤回手牌，保留进度和自动指示物。':'选择一张弃置，进入对应弃牌堆。')+(q.effect==='hand'?'':'正理智牌不作为此事件目标。')+'</p><div class="opportunity-candidates">'+wellbeingCandidates(g,p.id,q.effect).map(c=>'<article class="opportunity-card"><div class="card-paper">'+cardFace(getCard(c),false,c)+'</div><button data-action="opp-discard" data-uid="'+c.uid+'" '+disabled+'>'+(q.effect==='withdraw'?'撤回':'弃置')+'</button></article>').join('')+'</div>';
  if(q.stage==='inspire')return header+'<p>支付 '+q.cost.money+'，在 '+q.count+' 个不同空夜各放1枚灵感；也可放弃。</p>'+Array.from({length:q.count},(_,i)=>'<select id="inspire-'+i+'" '+disabled+'>'+inspirationSpaces(p).map((key,index)=>'<option value="'+key+'" '+(index===i?'selected':'')+'>'+DAYS[Number(key[0])]+'夜晚</option>').join('')+'</select>').join(' ')+'<button data-action="opp-inspire" '+disabled+'>放置灵感</button><button data-action="opp-activity-skip" '+disabled+'>放弃，不付费</button>';
  if(q.stage==='spend-inspiration')return header+'<p>选择消耗哪一枚灵感，再选I级牌/II级牌堆看3张、免费取得至多1张；仍须满足技能。</p>'+p.inspirationSlots.map(key=>'<button data-action="opp-token" data-key="'+key+'" '+disabled+'>'+DAYS[Number(key[0])]+'夜晚灵感</button>').join('')+'<button data-action="opp-activity-skip" '+disabled+'>保留灵感</button>';
  if(q.stage==='discard-hand')return header+'<p>基础收入已记账；可弃1张手牌，另加收入 '+q.bonus+'。</p><div class="opportunity-candidates">'+unplacedCards(p).map(c=>'<article class="opportunity-card family-'+familyOf(getCard(c))+'"><div class="card-paper">'+cardFace(getCard(c),false,c)+'</div><button data-action="opp-discard" data-uid="'+c.uid+'" '+disabled+'>弃掉换收入</button></article>').join('')+'</div><button data-action="opp-activity-skip" '+disabled+'>保留手牌</button>';

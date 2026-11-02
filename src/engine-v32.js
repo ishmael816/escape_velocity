@@ -1,4 +1,5 @@
 // Data-driven marker rules. Choice payloads and pending operations are JSON-safe.
+import {focusedMechanic} from './sanity-rules.js';
 import {getCard,slotKey,slotLabel} from './cards.js';
 import {cardAt,cardsInSlot,findPlacement,workType,coveredSlots,syncSanity,inspirationCount,canBuy,
   log,pay,die,changeSchedule,without,returnToHand,fillMarket} from './engine.js';
@@ -53,7 +54,7 @@ export function applyPlay(g,p,c,options={}){
  if(options.duty){if(c.duty)throw Error('每张牌至多一枚履职。');spend(p,'duty','reserve');c.duty=1;}
 }
 export function selection(g,p,c){
- const d=getCard(c),m=d.mechanic,s=findPlacement(p,c.uid);
+ const d=getCard(c),m=focusedMechanic(d,p),s=findPlacement(p,c.uid);
  return {spend:m.spend||(m.finalSpend&&(c.progress||0)+1>=d.progressTarget?m.finalSpend:null),generate:m.generate||0,
   wholeNight:m.wholeNight||0,convert:m.convert||0,trade:m.trade||null,
   targets:m.rightAuto?neighbors(p,c,'right').filter(t=>!t.auto):m.belowBonus?neighbors(p,c,'below').filter(t=>getCard(t).income):[],
@@ -113,7 +114,7 @@ export function advanceProgress(g,p,c){
  log(g,p,d.name+'：完成归档'+(end.weekend?'，下周起永久双休':'')+(end.duty?'，履职 +'+end.duty:''),'unlock');
 }
 function execute(g,p,c,v){
- const d=getCard(c),m=d.mechanic,f=selection(g,p,c);
+ const d=getCard(c),m=focusedMechanic(d,p),f=selection(g,p,c),focus=m.focus&&p.sanity>=m.focus.min?m.focus:null;
  validateChoice(g,structuredClone(p),c,v); // No partial payment on invalid input.
  const all=f.wholeNight?tokenSources(p,'inspiration').find(x=>x.key===v.night).count:0;
  const fee=effectiveCost(c,d);pay(p,{money:fee});
@@ -129,7 +130,8 @@ function execute(g,p,c,v){
  if(m.sellCourse)cash+=p.skills.length*m.sellCourse;
  if(m.duty)p.duty=(p.duty||0)+m.duty;
  if(d.maturation){profit=(c.progress||0)>=d.maturation.steps?d.maturation.mature:d.maturation.initial;c.progress=Math.min(d.maturation.steps,(c.progress||0)+1);}
- if(d.dice){let value;if(g.previewMode)value=Math[g.previewMode==='low'?'min':'max'](...d.dice.faces);else{const face=die(g);value=d.dice.faces[face-1];g.diceRolls.push({week:g.week,kind:'activity',player:p.id,uid:c.uid,type:c.type,face,value});}if(d.dice.resource==='profit')profit+=value;else cash+=value;}
+ if(d.dice){let value;if(g.previewMode)value=Math[g.previewMode==='low'?'min':'max'](...d.dice.faces);else{const face=die(g),second=focus?.reroll?die(g):null;value=second?Math.max(d.dice.faces[face-1],d.dice.faces[second-1]):d.dice.faces[face-1];g.diceRolls.push({week:g.week,kind:'activity',player:p.id,uid:c.uid,type:c.type,face,second,value});}if(d.dice.resource==='profit')profit+=value;else cash+=value;}
+ if(focus){profit+=focus.profit||0;cash+=focus.cash||0;}
  if(d.income&&c.bonusWeek===g.week)profit+=c.weekBonus||0;
  let advance=0;
  if(m.trade&&v.quantity){
@@ -143,7 +145,7 @@ function execute(g,p,c,v){
  earn(p,c,profit+cash-advance,profit);c.lastExecutedWeek=g.week;if(d.income)p.jobsDone++;
  log(g,p,d.name+'：'+(fee?'支付 '+fee+'；':'')+'副业 '+profit+'，其他资金 '+cash+(advance?'（其中已使用 '+advance+'）':''),'income');
  advanceProgress(g,p,c);syncSanity(g,p);
- if(d.opportunity&&!g.previewMode)g.opportunity={player:p.id,source:d.name,sourceType:d.id,...d.opportunity,stage:'lane',options:[],seen:[],bought:null};
+ if(d.opportunity&&!g.previewMode)g.opportunity={player:p.id,source:d.name,sourceType:d.id,...d.opportunity,count:focus?.look||d.opportunity.count,stage:'lane',options:[],seen:[],bought:null};
 }
 export function choose(g,id,value){
  const q=g.opportunity;if(g.phase!=='resolving'||q?.stage!=='v32'||q.player!==id)throw Error('当前没有这项活动选择。');

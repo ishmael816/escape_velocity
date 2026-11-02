@@ -57,7 +57,22 @@ export function validatePool(pool) {
     const numeric=['generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty'];
     const flags=['rightAuto','replay','leftAuto','hire','advanceCash'];
     const tokens=['spend','playSpend','finalSpend'];
-    for(const k of Object.keys(m))if(![...numeric,...flags,...tokens,'completion','trade'].includes(k))fail(name,'未知规则 '+k);
+    for(const k of Object.keys(m))if(![...numeric,...flags,...tokens,'completion','trade','focus'].includes(k))fail(name,'未知规则 '+k);
+    if(m.focus!==undefined){
+     const f=m.focus;
+     if(!object(f))fail(name,'高理智奖励须为对象');
+     else{
+      integer(f.min,name,'高理智门槛',1,10);
+      for(const k of Object.keys(f))if(!['min','profit','cash','look','belowBonus','reroll'].includes(k))fail(name,'未知高理智奖励 '+k);
+      for(const k of ['profit','cash','look','belowBonus'])if(f[k]!==undefined)integer(f[k],name,'focus.'+k,1,k==='look'?12:10);
+      if(f.reroll!==undefined&&typeof f.reroll!=='boolean')fail(name,'重掷须为布尔值');
+      if(f.reroll&&!c.dice)fail(name,'重掷需要收益骰');
+      if(f.look&&!c.opportunity)fail(name,'看牌奖励需要过牌效果');
+      if(f.belowBonus&&!m.belowBonus)fail(name,'下邻奖励需要基础下邻效果');
+      if(f.profit&&!(c.gain?.profit||c.dice?.resource==='profit'||m.agent||m.artist||m.capital||c.maturation))fail(name,'副业奖励需要基础副业效果');
+      if(c.kind!=='repeat')fail(name,'高理智奖励当前仅用于多次活动');
+     }
+    }
     for(const k of numeric)if(m[k]!==undefined)integer(m[k],name,'mechanic.'+k,1,k==='generate'?7:20);
     for(const k of flags)if(m[k]!==undefined&&typeof m[k]!=='boolean')fail(name,k+'须为布尔值');
     for(const k of tokens)if(m[k]!==undefined&&!['inspiration','principal','duty','auto'].includes(m[k]))fail(name,k+'指示物无效');
@@ -128,7 +143,17 @@ export function validatePool(pool) {
  }
  for(const c of pool.events){
   if(!common(c))continue;const name=c.name||c.id;
-  for(const k of Object.keys(c))if(!['id','name','copies','inspectionCount','blocked','cash','temporaryWeekend','exchangeDelta'].includes(k))fail(name,`未知事件字段 ${k}`);
+  for(const k of Object.keys(c))if(!['id','name','copies','inspectionCount','blocked','cash','temporaryWeekend','exchangeDelta','wellbeing'].includes(k))fail(name,`未知事件字段 ${k}`);
+  if(c.wellbeing!==undefined){
+   const r=c.wellbeing;
+   if(!object(r))fail(name,'理智事件须为对象');
+   else{
+    integer(r.max,name,'事件理智上限',0,3);
+    if(!['hospital','hand','withdraw','discard'].includes(r.effect))fail(name,'未知理智惩罚');
+    if(r.effect==='discard'&&r.max!==0)fail(name,'永久弃置日程仅限理智0');
+    if(Object.keys(r).some(k=>!['max','effect'].includes(k)))fail(name,'未知理智事件字段');
+   }
+  }
   if(c.exchangeDelta!==undefined)integer(c.exchangeDelta,name,'汇率变化',-1,1);
   integer(c.copies,name,'张数',1,20);integer(c.inspectionCount??0,name,'查岗轮数',0,6);
   if(c.cash!==undefined)integer(c.cash,name,'奖金');

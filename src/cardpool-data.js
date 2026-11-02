@@ -28,14 +28,14 @@ export default {
     {
       "id": "E01",
       "name": "例行巡查",
-      "copies": 4,
+      "copies": 2,
       "inspectionCount": 1,
       "exchangeDelta": 0
     },
     {
       "id": "E02",
       "name": "加强巡查",
-      "copies": 3,
+      "copies": 1,
       "inspectionCount": 2,
       "exchangeDelta": 1
     },
@@ -44,7 +44,11 @@ export default {
       "name": "专项整顿",
       "copies": 1,
       "inspectionCount": 3,
-      "exchangeDelta": -1
+      "exchangeDelta": -1,
+      "wellbeing": {
+        "max": 0,
+        "effect": "discard"
+      }
     },
     {
       "id": "E04",
@@ -83,6 +87,50 @@ export default {
       "inspectionCount": 0,
       "temporaryWeekend": true,
       "exchangeDelta": 0
+    },
+    {
+      "id": "E08",
+      "name": "巡查与精力涣散",
+      "copies": 1,
+      "inspectionCount": 1,
+      "exchangeDelta": 0,
+      "wellbeing": {
+        "max": 3,
+        "effect": "hand"
+      }
+    },
+    {
+      "id": "E09",
+      "name": "巡查与临时就医",
+      "copies": 1,
+      "inspectionCount": 1,
+      "exchangeDelta": 0,
+      "wellbeing": {
+        "max": 2,
+        "effect": "hospital"
+      }
+    },
+    {
+      "id": "E10",
+      "name": "赶工与无力维持",
+      "copies": 1,
+      "inspectionCount": 2,
+      "exchangeDelta": 1,
+      "wellbeing": {
+        "max": 2,
+        "effect": "withdraw"
+      }
+    },
+    {
+      "id": "E11",
+      "name": "赶工与临时就医",
+      "copies": 1,
+      "inspectionCount": 2,
+      "exchangeDelta": 1,
+      "wellbeing": {
+        "max": 2,
+        "effect": "hospital"
+      }
     }
   ],
   "cards": [
@@ -235,9 +283,14 @@ export default {
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
-      "mechanic": {}
+      "mechanic": {
+        "focus": {
+          "min": 6,
+          "profit": 1
+        }
+      }
     },
     {
       "id": "A07",
@@ -285,10 +338,14 @@ export default {
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 4
+        "profit": 2
       },
       "mechanic": {
-        "convert": 1
+        "convert": 1,
+        "focus": {
+          "min": 6,
+          "profit": 2
+        }
       },
       "effect": "可额外消耗任意 ✦，每枚 → $1"
     },
@@ -313,7 +370,11 @@ export default {
       "cost": {},
       "gain": {},
       "mechanic": {
-        "artist": 4
+        "artist": 4,
+        "focus": {
+          "min": 8,
+          "cash": 1
+        }
       },
       "effect": "打出：转入至多4枚 ✦；每枚提供副业1。撤回清空"
     },
@@ -338,11 +399,15 @@ export default {
       "cost": {},
       "gain": {},
       "opportunity": {
-        "count": 3,
+        "count": 2,
         "free": true
       },
       "mechanic": {
-        "spend": "inspiration"
+        "spend": "inspiration",
+        "focus": {
+          "min": 6,
+          "look": 4
+        }
       },
       "effect": "每次 ✦ −1；看3免费取1，仍检查技能"
     },
@@ -365,10 +430,24 @@ export default {
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {
-        "profit": 1
+      "gain": {},
+      "mechanic": {
+        "focus": {
+          "min": 8,
+          "reroll": true
+        }
       },
-      "mechanic": {}
+      "dice": {
+        "resource": "profit",
+        "faces": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2
+        ]
+      }
     },
     {
       "id": "A12",
@@ -483,14 +562,18 @@ export default {
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {
-        "cash": 1
-      },
+      "gain": {},
       "opportunity": {
-        "count": 3
+        "count": 2
       },
       "effect": "看3原价买1",
-      "mechanic": {}
+      "mechanic": {
+        "focus": {
+          "min": 6,
+          "look": 4,
+          "cash": 1
+        }
+      }
     },
     {
       "id": "B05",
@@ -542,7 +625,11 @@ export default {
       "cost": {},
       "gain": {},
       "mechanic": {
-        "belowBonus": 2
+        "belowBonus": 1,
+        "focus": {
+          "min": 6,
+          "belowBonus": 2
+        }
       },
       "effect": "下邻有副业的牌，本周成功执行时副业 +2"
     },
@@ -621,10 +708,15 @@ export default {
       "gain": {},
       "maturation": {
         "steps": 2,
-        "initial": 2,
-        "mature": 4
+        "initial": 1,
+        "mature": 3
       },
-      "mechanic": {}
+      "mechanic": {
+        "focus": {
+          "min": 6,
+          "profit": 1
+        }
+      }
     },
     {
       "id": "B10",
@@ -639,7 +731,7 @@ export default {
       "support": 0,
       "upkeep": 0,
       "capital": 0,
-      "minSanity": 0,
+      "minSanity": 4,
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
@@ -647,7 +739,11 @@ export default {
       "cost": {},
       "gain": {},
       "mechanic": {
-        "agent": 4
+        "agent": 3,
+        "focus": {
+          "min": 8,
+          "profit": 1
+        }
       },
       "effect": "每张带 ⚙ 的日程牌提供副业1，最多4"
     },
@@ -818,7 +914,7 @@ export default {
       "name": "例行汇报",
       "route": "W",
       "hours": 4,
-      "price": 3,
+      "price": 4,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -833,9 +929,18 @@ export default {
       "advanced": false,
       "cost": {},
       "gain": {
-        "cash": 2
+        "cash": 1
       },
-      "mechanic": {}
+      "mechanic": {
+        "focus": {
+          "min": 6,
+          "cash": 1
+        }
+      },
+      "opportunity": {
+        "count": 2,
+        "free": false
+      }
     },
     {
       "id": "W07",
@@ -878,7 +983,7 @@ export default {
       "support": 0,
       "upkeep": 0,
       "capital": 0,
-      "minSanity": 0,
+      "minSanity": 4,
       "maxSanity": 10,
       "professional": true,
       "parallel": false,
@@ -1023,6 +1128,10 @@ export default {
           "limit": 2,
           "mode": "either",
           "delta": 0
+        },
+        "focus": {
+          "min": 6,
+          "cash": 1
         }
       },
       "effect": "按当前汇率买入或卖出至多2本金"
@@ -1047,7 +1156,7 @@ export default {
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
       "dice": {
         "resource": "profit",
@@ -1060,7 +1169,12 @@ export default {
           2
         ]
       },
-      "mechanic": {}
+      "mechanic": {
+        "focus": {
+          "min": 6,
+          "profit": 1
+        }
+      }
     },
     {
       "id": "C05",
@@ -1092,7 +1206,7 @@ export default {
       "name": "投资",
       "route": "C",
       "hours": 8,
-      "price": 4,
+      "price": 6,
       "requires": "CC",
       "kind": "repeat",
       "copies": 4,
@@ -1108,7 +1222,11 @@ export default {
       "cost": {},
       "gain": {},
       "mechanic": {
-        "capital": 3
+        "capital": 3,
+        "focus": {
+          "min": 8,
+          "profit": 1
+        }
       },
       "effect": "打出：装入至多3本金，不足可按汇率购买；每枚副业1"
     },
@@ -1560,10 +1678,14 @@ export default {
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 3
+        "profit": 2
       },
       "mechanic": {
-        "playSpend": "duty"
+        "playSpend": "duty",
+        "focus": {
+          "min": 6,
+          "profit": 1
+        }
       },
       "effect": "打出：履职 −1"
     }

@@ -8,8 +8,8 @@ import {placementPanel} from '../src/marker-ui.js';
 test('chain inspection continues on unprotected hits and stops on an already checked day',()=>{
  const g=make(),[p,q]=g.players;rig(g,p,[['A06',0],['A06',1]]);rig(g,q,[['A06',1]]);
  g.inspection.inspectionCount=1;g.diceRandom=seedFor([1,2,2]);finish(g);
- assert.deepEqual(g.inspection.rolls,[1,2,2]);assert.equal(p.caught,2);assert.equal(q.caught,0);assert.equal(p.income,0);assert.equal(q.income,2);
- assert.equal(p.money,9);assert.equal(q.money,13);
+ assert.deepEqual(g.inspection.rolls,[1,2,2]);assert.equal(p.caught,2);assert.equal(q.caught,0);assert.equal(p.income,0);assert.equal(q.income,1);
+ assert.equal(p.money,9);assert.equal(q.money,12);
 });
 test('8h hit and repeated inspection charge each actual activity only once',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['B09',0],['A06',1],['A06',1,1]]);
@@ -17,11 +17,13 @@ test('8h hit and repeated inspection charge each actual activity only once',()=>
 });
 test('duty and working professional cards do not extend an inspection chain',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['W06',0],['A06',1]]);p.cards[1].duty=1;
- g.inspection.inspectionCount=1;g.diceRandom=seedFor([2,1]);finish(g);assert.deepEqual(g.inspection.rolls,[2]);assert.equal(p.caught,0);assert.equal(p.income,2);
+ g.inspection.inspectionCount=1;g.diceRandom=seedFor([2,1]);finish(g);
+ assert.equal(g.opportunity.stage,'lane');E.chooseOpportunityLane(g,0,4);E.chooseOpportunity(g,0);E.resolveAll(g);
+ assert.deepEqual(g.inspection.rolls,[2]);assert.equal(p.caught,0);assert.equal(p.income,1);
 });
 test('earlier income cannot pay a later growth execution fee before weekly payout',()=>{
  const g=make({startMoney:0}),p=g.players[0];rig(g,p,[['A06',0],['B02',1]]);finish(g);
- assert.equal(p.cards.find(c=>c.type==='B02').progress,undefined);assert.equal(p.money,5);
+ assert.equal(p.cards.find(c=>c.type==='B02').progress,undefined);assert.equal(p.money,4);
 });
 test('empty nights never generate inspiration automatically',()=>{
  const g=make();for(let n=0;n<3;n++){finish(g);assert.equal(E.inspirationCount(g.players[0]),0);if(n<2)next(g);}

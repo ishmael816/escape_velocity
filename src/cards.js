@@ -1,3 +1,4 @@
+import {riskText} from './sanity-rules.js';
 import design from './cardpool-data.js';
 import {markerRules} from './marker-rules.js';
 
@@ -40,10 +41,10 @@ export const marketLane=d=>d.hours;
 export const slotKey=s=>`${s.day}-${s.period}`;
 export const slotLabel=s=>`${DAYS[s.day]}${['上午','下午','夜晚'][s.period]}`;
 export const EVENTS=design.events.flatMap(e=>Array.from({length:e.copies},()=>({
- name:e.name,kind:e.inspectionCount?'inspection':e.blocked?'team':e.temporaryWeekend?'weekend':'bonus',
+ name:e.name,wellbeing:e.wellbeing,kind:e.inspectionCount?'inspection':e.blocked?'team':e.temporaryWeekend?'weekend':'bonus',
  exchangeDelta:e.exchangeDelta||0,inspectionCount:e.inspectionCount,blockedTimes:e.blocked?[[e.blocked.day-1,e.blocked.slot==='am'?0:1]]:[],
  gain:e.cash?{money:e.cash}:{},employeesOnly:true,
- text:e.inspectionCount?`预告查岗 ${e.inspectionCount} 轮；锁定后掷骰查当天白天。查到摸鱼继续追查，落空或重复结束本轮；每位玩家分别判定。`:e.blocked?`本周${e.blocked.slot==='am'?'周日上午':'周日下午'}团建，在职玩家该时段无法活动。`:e.temporaryWeekend?'本周周六临时自由；不改变长期理智，不推进双休项目。':`周末发放奖金 ${e.cash}，不计副业收入。`,
+ text:(e.inspectionCount?`预告查岗 ${e.inspectionCount} 轮；锁定后掷骰查当天白天。查到摸鱼继续追查，落空或重复结束本轮；每位玩家分别判定。`:e.blocked?`本周${e.blocked.slot==='am'?'周日上午':'周日下午'}团建，在职玩家该时段无法活动。`:e.temporaryWeekend?'本周周六临时自由；不改变长期理智，不推进双休项目。':`周末发放奖金 ${e.cash}，不计副业收入。`)+(e.wellbeing?' '+riskText(e.wellbeing):''),
 })));
 export const INSPECTIONS=EVENTS;
 

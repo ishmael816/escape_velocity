@@ -43,7 +43,7 @@ test('same-name archives count once as skill but twice for sale course',()=>{
  const g=make(),p=g.players[0];p.skills=[{uid:'s1',type:'B01'},{uid:'s2',type:'B01'}];add(g,'B11',0);finish(g);assert.equal(E.skillCounts(p).B,2);assert.equal(p.skills.length,3);assert.equal(p.income,0);assert.equal(p.money,66);
 });
 test('below bonus needs touching income and successful execution, resets each week',()=>{
- const g=make(),source=add(g,'B06',0),target=add(g,'B03',0,1);assert.deepEqual(V.neighbors(g.players[0],source,'below').map(c=>c.uid),[target.uid]);finish(g);assert.equal(g.players[0].income,4);
+ const g=make(),source=add(g,'B06',0),target=add(g,'B03',0,1);assert.deepEqual(V.neighbors(g.players[0],source,'below').map(c=>c.uid),[target.uid]);finish(g);assert.equal(g.players[0].income,3);
  next(g);g.players[0].schedule['0-0']=[];finish(g);assert.equal(g.players[0].income,2);
 });
 test('8h adjacency does not skip gaps and below means the night',()=>{
