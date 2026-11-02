@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#263f36"><title>卡牌工坊 · 逃离工位</title>
+ <link rel="stylesheet" href="/src/card-face.css"><link rel="stylesheet" href="/src/card-studio.css">
+</head>
+<body>
+ <header class="studio-header"><a class="studio-brand" href="/"><span class="brand-seal">逃</span><span>逃离工位<small>ESCAPE VELOCITY</small></span></a><div class="studio-title">卡牌工坊 <span>Card atelier</span></div><a class="back-link" href="/">返回游戏 ↗</a></header>
+ <main id="studio"><p class="loading">正在整理卡牌收藏……</p></main>
+ <div id="notification" role="status" aria-live="polite"></div>
+ <dialog id="confirm-dialog"><h2 id="confirm-title"></h2><p id="confirm-message"></p><div class="dialog-actions"><button id="confirm-cancel">取消</button><button id="confirm-ok" class="primary">确认</button></div></dialog>
+ <input type="file" id="import-file" accept="application/json,.json" hidden>
+ <script type="module" src="/src/card-studio.js"></script>
+</body></html>

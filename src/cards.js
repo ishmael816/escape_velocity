@@ -1,23 +1,26 @@
 import design from './cardpool-data.js';
+import {markerRules} from './marker-rules.js';
 
 export const DAYS=['周一','周二','周三','周四','周五','周六','周日'];
 export const SIZE={1:'小',2:'中',3:'大'};
 export const ROUTES={
- W:{name:'职场',pool:'职场与信用',icon:'bag',family:'career'},
- A:{name:'创作',pool:'写作与创作',icon:'pen',family:'creative'},
- B:{name:'开发',pool:'开发与制作',icon:'layers',family:'technical'},
+ W:{name:'履职',pool:'职场与信用',icon:'bag',family:'career'},
+ A:{name:'创意',pool:'写作与创作',icon:'pen',family:'creative'},
+ B:{name:'技术',pool:'开发与制作',icon:'layers',family:'technical'},
  C:{name:'商业',pool:'商业与经营',icon:'shop',family:'business'},
  S:{name:'共享',pool:'共享工具',icon:'layers',family:'shared'},
 };
 export const DEFAULTS=design.defaults;
-function adapt(d){
+// Card levels name the two time-based pools; skill requirements remain independent.
+export const cardLevel=hours=>Number(hours)===8?'II级牌':'I级牌';
+export function adapt(d){
  const route=ROUTES[d.route||'W'];
  return {...d,kind:'activity',size:{2:1,4:2,8:3}[d.hours],category:route.name,icon:route.icon,
   price:{money:d.price},cost:{...d.cost},gain:{...((d.gain.profit||d.gain.cash||d.gain.salary)?{money:(d.gain.profit||0)+(d.gain.cash||0)+(d.gain.salary||0)}:{})},
   sanityImpact:(d.support||0)-(d.stress||0),
-  fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.gain.profit||!!d.maturation||!!d.capitalRatio||d.dice?.resource==='profit',
+  fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.mechanic?.capital||!!d.mechanic?.artist||!!d.mechanic?.agent||!!d.gain.profit||!!d.maturation||!!d.capitalRatio||d.dice?.resource==='profit',
   once:d.kind==='growth'||d.kind==='once',skill:d.kind==='growth'?d.route:null,
-  tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.dice?'':d.effect,
+  tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.mechanic?markerRules(d):d.dice?'':d.effect,
   progressTarget:d.progress,unlockWeekend:d.permission==='weekend',unlockProtection:d.permission==='protection',permanent:!!d.permanent,route:d.route||'W',
  };
 }
@@ -38,7 +41,7 @@ export const slotKey=s=>`${s.day}-${s.period}`;
 export const slotLabel=s=>`${DAYS[s.day]}${['上午','下午','夜晚'][s.period]}`;
 export const EVENTS=design.events.flatMap(e=>Array.from({length:e.copies},()=>({
  name:e.name,kind:e.inspectionCount?'inspection':e.blocked?'team':e.temporaryWeekend?'weekend':'bonus',
- inspectionCount:e.inspectionCount,blockedTimes:e.blocked?[[e.blocked.day-1,e.blocked.slot==='am'?0:1]]:[],
+ exchangeDelta:e.exchangeDelta||0,inspectionCount:e.inspectionCount,blockedTimes:e.blocked?[[e.blocked.day-1,e.blocked.slot==='am'?0:1]]:[],
  gain:e.cash?{money:e.cash}:{},employeesOnly:true,
  text:e.inspectionCount?`预告查岗 ${e.inspectionCount} 轮；锁定后掷骰查当天白天。查到摸鱼继续追查，落空或重复结束本轮；每位玩家分别判定。`:e.blocked?`本周${e.blocked.slot==='am'?'周日上午':'周日下午'}团建，在职玩家该时段无法活动。`:e.temporaryWeekend?'本周周六临时自由；不改变长期理智，不推进双休项目。':`周末发放奖金 ${e.cash}，不计副业收入。`,
 })));

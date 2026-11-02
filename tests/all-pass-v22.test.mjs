@@ -22,7 +22,7 @@ test('2–4 players: only a whole day of passes locks the week, with no free res
 });
 
 test('one non-pass continues planning; passes across two different days do not combine',()=>{
- const g=make(),p=g.players[0],c=add(g,p,'A-E');
+ const g=make(),p=g.players[0],c=add(g,p,'A06');
  E.place(g,0,c.uid,{day:6,period:0});E.pass(g,1);
  assert.equal(g.day,1);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,0);
  E.pass(g,0);assert.equal(g.phase,'planning');assert.equal(g.dayPasses,1);
@@ -38,7 +38,7 @@ test('reload preserves partial-day passes, and rotated next week resets them',()
 });
 
 test('early finish executes later days, inspections and support exactly like a full locked week',()=>{
- const g=make(),p=g.players[0];rig(g,p,[['A-E',5],['W-S',6]]);
+ const g=make(),p=g.players[0];rig(g,p,[['A06',5],['W10',6]]);
  g.inspection.inspectionCount=1;g.diceRandom=seedFor([6]);
  passDay(g);assert.equal(g.timeline.length,2);
  const full=structuredClone(g);full.endedByPass=false;full.actionCount=14;

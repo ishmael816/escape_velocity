@@ -32,7 +32,7 @@ test('a public purchase by either the first or last Monday player prevents the r
 
 test('arranging, moving and withdrawing do not veto refresh',()=>{
  for(const action of ['place','move','withdraw']){
-  const g=make(),p=g.players[0],c=add(g,p,'A-E');
+  const g=make(),p=g.players[0],c=add(g,p,'A06');
   if(action==='move'||action==='withdraw')p.schedule={'1-0':[c.uid]};
   if(action==='withdraw')E.unplace(g,0,c.uid);
   else E.place(g,0,c.uid,{day:2,period:0});

@@ -2,13 +2,16 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createStudioApi } from './scripts/card-studio-api.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 5173);
+const studioApi = createStudioApi(root);
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml' };
 const server = http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, 'http://localhost');
+    if(url.pathname === '/api/cardpool') { await studioApi(request,response); return; }
     const requested = decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname);
     const filename = path.resolve(root, '.' + requested);
     const relative = path.relative(root, filename);
