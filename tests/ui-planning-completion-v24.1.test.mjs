@@ -50,14 +50,14 @@ test('Monday row refresh UI blocks ordinary actions, changes only its row, then 
   assert.equal((root.innerHTML.match(/class="route-market-title /g)||[]).length,4);
   assert(root.innerHTML.includes('II 级混合'));
   click('pass');assert.equal(saved().marketRefresh,null);click('pass');assert.equal(saved().marketRefresh.player,0);assert.equal(saved().actionCount,2);
-  assert.equal((root.innerHTML.match(/data-action="market-row"/g)||[]).length,3);
+  assert.equal((root.innerHTML.match(/data-action="market-row"/g)||[]).length,2);
   assert.equal((root.innerHTML.match(/data-action="market-card"/g)||[]).length,4);
   assert(!root.innerHTML.includes('data-action="learn"'));
   assert(root.innerHTML.includes('data-action="pass" disabled'));
   click('market-row',{row:'0'});const changed=saved();
   assert.equal(E.activeBuyer(changed),1);assert.equal(changed.actionCount,2);assert.equal(changed.marketRefresh.player,1);assert(E.refreshProtected(changed,0));
   const all=Object.values(changed.market).flat().map(c=>c.uid);assert(before.every(id=>!all.includes(id)));assert(other.every(id=>all.includes(id)));
-  assert.equal((root.innerHTML.match(/data-action="market-row"/g)||[]).length,2);
+  assert.equal((root.innerHTML.match(/data-action="market-row"/g)||[]).length,1);
   assert.equal(saved().marketRefresh.player,1);click('market-keep');assert.equal(saved().phase,'planning');assert.equal(saved().day,1);
  });
 });

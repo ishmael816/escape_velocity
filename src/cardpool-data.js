@@ -20,7 +20,7 @@ export default {
     "seed": 20261009
   },
   "market": {
-    "4": 12,
+    "4": 8,
     "8": 4
   },
   "copiesPerCard": 4,

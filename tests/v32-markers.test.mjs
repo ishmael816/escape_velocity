@@ -18,7 +18,7 @@ test('56 definitions, 224 physical cards, fixed supply and generated docs agree'
  const pool=JSON.parse(fs.readFileSync('data/cardpool-v31.json','utf8'));assert.deepEqual(validatePool(pool),[]);assert.equal(pool.cards.length,56);
  assert.deepEqual(Object.fromEntries('ABWC'.split('').map(r=>[r,pool.cards.filter(c=>c.route===r).length])),{A:15,B:14,W:14,C:13});
  for(const [path,text]of Object.entries(generateOutputs(pool)))assert.equal(fs.readFileSync(path,'utf8').replaceAll('\r\n','\n'),text);
- const g=make();assert.equal(Object.values(g.market).flat().length,16);assert.equal(Object.values(g.market).flat().length+Object.values(g.decks).flat().length,224);
+ const g=make();assert.equal(Object.values(g.market).flat().length,12);assert.equal(Object.values(g.market).flat().length+Object.values(g.decks).flat().length,224);
 });
 test('same empty night stacks inspiration; whole-pile conversion progresses only on success',()=>{
  const g=make(),c=add(g,'A03',0);pending(g);E.chooseActivity(g,0,{nights:['3-2','3-2']});finish(g);assert.equal(E.inspirationCount(g.players[0]),2);

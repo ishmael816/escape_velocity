@@ -14,7 +14,7 @@ export function specialRules(d){return [
  d.capital?'安排时锁定本金 '+d.capital+'，不能消费；撤回全额返还。':'',
  d.opportunity?(d.inspirationSpend?'可消耗1灵感，':'')+'看'+d.opportunity.count+'张，'+(d.opportunity.free?'免费取得':'原价买')+'至多1张，检查技能；余牌弃置，下周安排。':'',
  d.hireFee?'买价＋全部执行费＋'+d.hireFee+'，招聘I级成长直接归档；自有手牌免买价，不执行完成奖励。猎头限暗堆候选，伙伴限明牌/手牌。':'',
- d.support?'日程理智 +'+d.support+'；'+(d.upkeep?'结算资金 −'+d.upkeep+'，付不起撤回。':'')+'查停或团建时失效，不逐周累加。':'',
+ d.support?'日程理智 +'+d.support+'；'+(d.upkeep?'结算资金 −'+d.upkeep+'，付不起撤回。':'')+'查停保留理智且不付执行费用；团建时失效，不逐周累加。':'',
  d.stress?'日程理智 −'+d.stress+'，撤回解除。':'',
  d.professional?'仅工作白天，免查岗；放假时暂停。':'',d.offHours?'仅非上班时间。':'',d.inspirationRequired?'结算需空置夜晚的灵感≥'+d.inspirationRequired+'，不消耗。':'',d.rule||'',
  d.progressTarget?'每周最多推进一次，共'+d.progressTarget+'次；每次支付牌面消耗，完成后获得奖励并离场。':'',

@@ -6,10 +6,10 @@ import {make,rig,finish,next,seedFor,add,lock} from './helpers.mjs';
 import {opportunityPanel} from '../src/opportunity-ui.js';
 import {placementPanel} from '../src/marker-ui.js';
 
-test('chain inspection continues on unprotected hits and stops on an already checked day',()=>{
+test('chain inspection stops after one follow-up even when it hits',()=>{
  const g=make(),[p,q]=g.players;rig(g,p,[['A06',0],['A06',1]]);rig(g,q,[['A06',1]]);
  g.inspection.inspectionCount=1;g.diceRandom=seedFor([1,2,2]);finish(g);
- assert.deepEqual(g.inspection.rolls,[1,2,2]);assert.equal(p.caught,2);assert.equal(q.caught,0);assert.equal(p.income,0);assert.equal(q.income,1);
+ assert.deepEqual(g.inspection.rolls,[1,2]);assert.equal(p.caught,2);assert.equal(q.caught,0);assert.equal(p.income,0);assert.equal(q.income,1);
  assert.equal(p.money,9);assert.equal(q.money,12);
 });
 test('8h hit and repeated inspection charge each actual activity only once',()=>{

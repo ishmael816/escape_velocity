@@ -36,3 +36,20 @@
 .market-protected{display:block;padding:8px 10px;background:#e3eee8;border-radius:4px;color:#28695a;text-align:center}
 
 .week-steps{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:12px 0;padding:0}.week-steps li{padding:7px 10px;border:1px solid #d8d9d0;border-radius:5px;font-size:13px;color:#59635d}.week-steps li[aria-current]{background:#315d50;color:#fff;border-color:#315d50}.reserved-tray{margin:18px 0;padding:12px;border:1px dashed #9ca99f;border-radius:6px;background:#f5f5ee}.reserved-tray .mini-card{max-width:340px}.reserved-tray p{font-size:14px;line-height:1.6;margin:8px 0}.reserved-tray .section-head{margin-bottom:8px}
+
+/* Physical card faces, with controls outside the printed card. */
+.market-first>.simple-market{order:-1;border-top:0;padding-top:0}
+.route-market-grid{max-width:1000px;margin:auto;align-items:start}
+.illustrated-card{position:relative;padding:0;border:0;background:transparent;gap:7px;min-height:0!important}
+.card-image-button{display:block;width:100%;padding:0;border:0;border-radius:7px;background:transparent;box-shadow:0 2px 5px #17252124;overflow:hidden}
+.card-image-button:hover:not(:disabled){background:transparent;box-shadow:0 3px 9px #17252140}
+.card-image-button img{display:block;width:100%;height:auto}
+.illustrated-card.unavailable .card-image-button img{filter:saturate(.6);opacity:.8}
+.illustrated-card .mini-card-foot{margin:0;padding:0 3px;min-height:36px}
+.illustrated-card .mini-card-foot button{min-height:36px;white-space:nowrap}
+.illustrated-card .buy-reason,.illustrated-card .mini-progress{padding:0 3px}
+.new-offer{position:absolute;right:6px;top:6px;background:#275b4d;color:white;padding:3px 7px;border-radius:3px;z-index:1;font-size:11px;pointer-events:none;box-shadow:0 1px 3px #0003}
+.simple-hand-grid{grid-template-columns:repeat(auto-fill,minmax(160px,210px));align-items:start}
+.reserved-tray .mini-card{max-width:210px}
+.card-reference-image{display:block;width:min(100%,420px);height:auto;margin:0 auto 20px}
+@media(max-width:600px){.simple-hand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.route-market-grid{grid-template-columns:46px repeat(4,180px)}.section-head{flex-wrap:wrap}.illustrated-card .mini-card-foot button{min-height:40px}}
