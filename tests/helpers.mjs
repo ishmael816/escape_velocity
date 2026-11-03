@@ -2,8 +2,11 @@ import * as E from '../src/engine.js';
 import {CARDS} from '../src/cards.js';
 export const make=(options={})=>quiet(E.createGame({playerCount:2,mode:'hotseat',...options}));
 export function quiet(g){g.inspection={name:'平静',inspectionCount:0,times:[],rolls:[],blockedTimes:[],gain:{}};return g;}
-export function keepMarket(g){if(g.marketRefresh)E.chooseMarketRefresh(g,g.marketRefresh.player);}
-export function passKeeping(g,id){keepMarket(g);E.pass(g,id);keepMarket(g);}
+export function keepMarket(g){while(g.marketRefresh)E.chooseMarketRefresh(g,g.marketRefresh.player);while(g.weekendReserve)E.chooseReserve(g,g.weekendReserve.player);}
+export function passKeeping(g,id){keepMarket(g);if(g.phase==='planning')E.pass(g,id);keepMarket(g);}
+// Prepared phase fixtures for isolated card-mechanic tests; full flow is tested in fixed-week-v33.
+export function placementTurn(g,id=0){g.day=3;g.turn=0;while(E.activeBuyer(g)!==id)g.turn++;}
+export function adjustmentTurn(g,id=0){placementTurn(g,id);g.day=2;}
 export function turn(g,id=0){keepMarket(g);while(g.phase==='planning'&&E.activeBuyer(g)!==id)passKeeping(g,E.activeBuyer(g));}
 export function lock(g){keepMarket(g);while(g.phase==='planning')passKeeping(g,E.activeBuyer(g));}
 export function finish(g){lock(g);E.resolveAll(g);}

@@ -27,14 +27,14 @@ function board(sanity,plan){const g=make({startSanity:sanity,startMoney:60});rig
 function risk(g,effect,max=2){g.inspection.wellbeing={effect,max};}
 
 test('all focus cards have executable rewards and explicit card text',()=>{
- const cards=pool.cards.filter(c=>c.mechanic.focus);assert.equal(cards.length,14);
+ const cards=pool.cards.filter(c=>c.mechanic.focus);assert.equal(cards.length,15);
  for(const c of cards){assert([6,8].includes(c.mechanic.focus.min));assert(cardFace(getCard(c.id)).includes('理智≥'+c.mechanic.focus.min));}
  assert.deepEqual(validatePool(pool),[]);
 });
-test('income is partial below 6, full at 6; business and writing share the threshold',()=>{
- for(const [type,low,high]of [['A06',1,2],['A08',2,4],['C13',2,3]]){
+test('sanity 6 rewards cash while writing and business keep printed income',()=>{
+ for(const [type,low,high]of [['A06',1,1],['A08',3,3],['C13',3,3]]){
   for(const [sanity,expected]of [[5,low],[6,high],[7,high]]){
-   const g=board(sanity,[[type,0]]);drain(g);assert.equal(g.players[0].income,expected,type+' @'+sanity);
+   const g=board(sanity,[[type,0]]);drain(g);assert.equal(g.players[0].income,expected,type+' @'+sanity);assert.equal(g.players[0].settlement.otherIncome,sanity>=6?1:0);
   }
  }
 });
@@ -45,34 +45,34 @@ test('technical search rewards sanity 6 with four choices and cash, without requ
   assert.equal(getCard('B04').requires,'');drain(g);assert.equal(g.players[0].money,60+3+(sanity===6?1:0));
  }
 });
-test('creative free search spends inspiration and scales from two to four candidates',()=>{
+test('creative free search spends inspiration and scales from two to three I candidates',()=>{
  for(const sanity of [5,6]){
   const g=board(sanity,[['A10',0]]);lock(g);E.resolveAll(g);
   E.chooseActivity(g,0,V.defaultChoice(g,g.players[0],g.players[0].cards[0]));
-  assert.equal(g.opportunity.count,sanity===6?4:2);assert(g.opportunity.free);
+  assert.equal(g.opportunity.count,sanity===6?3:2);assert(g.opportunity.free);assert.equal(g.opportunity.lane,4);
   assert.equal(E.inspirationCount(g.players[0]),6);drain(g);
  }
 });
 test('below bonus upgrades to two rather than stacking three at sanity 6',()=>{
  for(const sanity of [5,6]){
-  const g=board(sanity,[['B06',0],['B03',0,1]]);drain(g);assert.equal(g.players[0].income,sanity===6?4:3);
+  const g=board(sanity,[['B06',0],['B03',0,1]]);drain(g);assert.equal(g.players[0].income,sanity===6?3:2);
  }
 });
-test('mature subscription keeps a four-income ceiling at sanity 6',()=>{
+test('mature subscription has three income and sanity 6 adds cash',()=>{
  for(const sanity of [5,6]){
   const g=board(sanity,[['B09',0]]);g.players[0].cards[0].progress=getCard('B09').maturation.steps;
-  drain(g);assert.equal(g.players[0].income,sanity===6?4:3);
+  drain(g);assert.equal(g.players[0].income,3);assert.equal(g.players[0].settlement.otherIncome,sanity===6?1:0);
  }
 });
-test('capital investment needs sanity 8 for fourth income, not just extra principal',()=>{
- for(const sanity of [7,8]){const g=board(sanity,[['C06',0]]);g.players[0].cards[0].principal=3;drain(g);assert.equal(g.players[0].income,sanity===8?4:3);}
+test('capital investment gives cash at sanity 8 without extra escape income',()=>{
+ for(const sanity of [7,8]){const g=board(sanity,[['C06',0]]);g.players[0].cards[0].principal=3;drain(g);assert.equal(g.players[0].income,4);assert.equal(g.players[0].settlement.otherIncome,sanity===8?1:0);}
 });
-test('painting rolls once below 8, twice taking higher at 8; mean is 13/9',()=>{
+test('painting keeps income 1; bonus cash mean rises from 0.5 to 0.75 at sanity 8',()=>{
  for(const base of [6,7]){ // painting itself adds one sanity
   const g=board(base,[['A11',0]]);g.diceRandom=seedFor([1,6]);drain(g);
-  const roll=g.diceRolls.find(r=>r.kind==='activity');assert.equal(g.players[0].income,base===7?2:0);assert.equal(roll.second,base===7?6:null);
+  const roll=g.diceRolls.find(r=>r.kind==='activity');assert.equal(g.players[0].income,1);assert.equal(g.players[0].settlement.otherIncome,base===7?1:0);assert.equal(roll.second,base===7?6:null);
  }
- const faces=getCard('A11').dice.faces;assert.equal(faces.flatMap(a=>faces.map(b=>Math.max(a,b))).reduce((a,b)=>a+b,0)/36,13/9);
+ const faces=getCard('A11').dice.faces;assert.equal(faces.flatMap(a=>faces.map(b=>Math.max(a,b))).reduce((a,b)=>a+b,0)/36,0.75);
 });
 test('12 physical events preserve 8 inspections, five conditional risks, one permanent loss at zero',()=>{
  const sum=f=>pool.events.filter(f).reduce((n,e)=>n+e.copies,0);
@@ -80,10 +80,10 @@ test('12 physical events preserve 8 inspections, five conditional risks, one per
  assert.equal(sum(e=>e.wellbeing?.effect==='discard'),1);assert.equal(pool.events.find(e=>e.wellbeing?.effect==='discard').wellbeing.max,0);
 });
 test('event eligibility uses paid support after inspection; no repeated risk checks',()=>{
- const g=board(3,[['W10',0]]),p=g.players[0];add(g,p,'A06');risk(g,'hand',3);
+ const g=board(3,[['W10',6]]),p=g.players[0];add(g,p,'A06');risk(g,'hand',3);
  lock(g);E.rollInspections(g);assert.equal(g.opportunity,null);assert.equal(p.sanity,5);
  const before=structuredClone(g);E.rollInspections(g);assert.deepEqual(g,before);
- const h=board(3,[['W10',0]]);h.players[0].money=0;add(h,h.players[0],'A06');risk(h,'hand',3);
+ const h=board(3,[['W10',6]]);h.players[0].money=0;add(h,h.players[0],'A06');risk(h,'hand',3);
  lock(h);E.rollInspections(h);assert.equal(h.opportunity.stage,'wellbeing');assert.equal(h.opportunity.sanity,3);
 });
 test('discard choices are atomic, resumable, cannot skip, and process multiple players once',()=>{
@@ -109,7 +109,7 @@ test('zero-sanity discard removes one board card and clears markers; no eligible
  const h=board(0,[]);risk(h,'discard',0);drain(h);assert.equal(h.opportunity,null);
 });
 test('hospital pauses all periods, refunds paused support, preserves progress and charges no fine',()=>{
- const g=board(0,[['B02',0],['W10',0,1],['A06',0,2]]),p=g.players[0];p.cards[0].progress=1;
+ const g=board(0,[['B02',0],['W10',0,1],['A06',0,2]]),p=g.players[0];p.freeDays=[0];p.cards[0].progress=1;
  risk(g,'hospital');g.diceRandom=seedFor([1,2]);lock(g);E.rollInspections(g);
  assert.equal(p.hospitalDay,0);assert.equal(p.money,60);assert.equal(p.supports[0].active,false);assert.equal(p.sanity,0);
  drain(g);assert.equal(p.money,63);assert.equal(p.income,0);assert.equal(p.caught,0);assert.equal(p.cards[0].progress,1);assert.equal(p.cards.length,3);

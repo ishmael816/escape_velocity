@@ -54,8 +54,8 @@ export function validatePool(pool) {
    const m=c.mechanic;
    if(!object(m))fail(name,'mechanic须为对象');
    else{
-    const numeric=['generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty'];
-    const flags=['rightAuto','replay','leftAuto','hire','advanceCash'];
+    const numeric=['generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty','salaryTransfer','autoProfit','focusDraw','optionalInspirationProfit','optionalInspirationCash'];
+    const flags=['rightAuto','replay','leftAuto','hire','advanceCash','projectDuty','salaryDice','eventSplit','autoRequiresFull'];
     const tokens=['spend','playSpend','finalSpend'];
     for(const k of Object.keys(m))if(![...numeric,...flags,...tokens,'completion','trade','focus'].includes(k))fail(name,'未知规则 '+k);
     if(m.focus!==undefined){

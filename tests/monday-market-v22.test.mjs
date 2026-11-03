@@ -2,85 +2,68 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
 import {getCard} from '../src/cards.js';
-import {make,add,finish,next,passKeeping,keepMarket} from './helpers.mjs';
+import {make,add,finish,next,skills} from './helpers.mjs';
 const offers=g=>Object.values(g.market).flat();
 const supply=g=>[...offers(g),...Object.values(g.decks).flat(),...Object.values(g.discard).flat(),...g.players.flatMap(p=>p.cards)].map(c=>c.uid).sort();
 const ids=g=>offers(g).map(c=>c.uid).sort();
 const rowIds=(g,row)=>E.MARKET_ROUTES.map(r=>E.marketCell(g,r,row)?.uid).filter(Boolean);
 function layout(g){
- assert.equal(g.market[4].length,12);assert.equal(g.market[8].length,3);
- for(const r of E.MARKET_ROUTES)for(let row=0;row<4;row++){
-  const c=E.marketCell(g,r,row);if(r==='W'&&row===3){assert.equal(c,undefined);continue;}
-  assert.equal(getCard(c).route,r);assert.equal(getCard(c).hours,row===3?8:4);
- }
+ assert.equal(g.market[4].length,12);assert.equal(g.market[8].length,4);
+ for(const r of E.MARKET_ROUTES)for(let row=0;row<3;row++){const c=E.marketCell(g,r,row);assert.equal(getCard(c).route,r);assert.equal(getCard(c).hours,4);}
+ for(let slot=0;slot<4;slot++)assert.equal(getCard(E.marketCell(g,slot,3)).hours,8);
 }
-
-test('route columns have 3 I + 1 II, W II stays empty; fixed supply for 2–4 players',()=>{
- for(const playerCount of [2,3,4])for(const seed of [1,7,42]){const g=make({playerCount,seed});layout(g);assert.equal(supply(g).length,220);assert.equal(new Set(supply(g)).size,220);}
+test('four I route columns and four mixed II offers use a fixed 224-card supply',()=>{
+ for(const playerCount of [2,3,4])for(const seed of [1,7,42]){const g=make({playerCount,seed});layout(g);assert.equal(supply(g).length,224);assert.equal(new Set(supply(g)).size,224);}
 });
-test('each Monday non-buyer gets one optional row refresh before the next player',()=>{
- const g=make({playerCount:4}),before=supply(g);
+test('refresh waits for all Monday actions, follows seat order, costs no action and defers all-pass settlement',()=>{
+ const g=make({playerCount:4}),before=supply(g),old=ids(g);
+ for(let id=0;id<4;id++){E.pass(g,id);assert.equal(g.marketRefresh?.player,id===3?0:undefined);assert.deepEqual(ids(g),old);}
+ assert.equal(g.actionCount,4);assert.equal(g.phase,'planning');
  for(let id=0;id<4;id++){
-  const old=ids(g),changed=id===3?[E.marketCell(g,'A',3).uid]:rowIds(g,id),actions=g.actionCount;
-  E.pass(g,id);assert.equal(g.marketRefresh.player,id);assert.equal(E.activeBuyer(g),id);assert.equal(g.actionCount,actions+1);assert.deepEqual(ids(g),old);
-  const pending=structuredClone(g);assert.throws(()=>E.buy(g,id,offers(g)[0].uid));assert.throws(()=>E.chooseMarketRefresh(g,(id+1)%4,0));assert.throws(()=>E.chooseMarketRefresh(g,id,4));assert.deepEqual(g,pending);
-  E.chooseMarketRefresh(g,id,id,id===3?'A':null);assert.equal(g.actionCount,actions+1);
-  assert(old.filter(uid=>!changed.includes(uid)).every(uid=>ids(g).includes(uid)));
-  assert((id===3?[E.marketCell(g,'A',3).uid]:rowIds(g,id)).every(uid=>!old.includes(uid)));layout(g);assert.deepEqual(supply(g),before);
-  assert.throws(()=>E.chooseMarketRefresh(g,id,0));
+  assert.equal(E.activeBuyer(g),id);const row=id===3?3:id,slot=id===3?0:null;
+  const changed=row===3?[E.marketCell(g,slot,3).uid]:rowIds(g,row);
+  E.chooseMarketRefresh(g,id,row,slot);assert(changed.every(uid=>!ids(g).includes(uid)));assert(E.refreshProtected(g,row,slot));
+  assert.equal(g.actionCount,4);assert.deepEqual(supply(g),before);layout(g);
  }
- assert.equal(g.phase,'resolving');assert(g.endedByPass);assert.equal(g.actionCount,4);
+ assert.equal(g.phase,'planning');assert.equal(g.day,1);assert(!g.endedByPass);
 });
-test('purchase fills the same route/row, forbids refresh for buyer but not opponent',()=>{
- const g=make(),c=offers(g).find(c=>!E.canBuy(g,g.players[0],getCard(c))),d=getCard(c),row=c.marketRow,before=ids(g),pool=supply(g);
- E.buy(g,0,c.uid);assert.equal(g.marketRefresh,null);assert.equal(E.activeBuyer(g),1);
- const replacement=E.marketCell(g,d.route,row);assert(replacement&&replacement.uid!==c.uid);assert(before.filter(id=>id!==c.uid).every(id=>ids(g).includes(id)));
- assert.throws(()=>E.chooseMarketRefresh(g,0,0));E.pass(g,1);assert.equal(g.marketRefresh.player,1);E.chooseMarketRefresh(g,1,0);
- assert.equal(g.day,1);assert.deepEqual(supply(g),pool);layout(g);
- E.pass(g,0);assert.equal(g.marketRefresh,null);assert.equal(E.activeBuyer(g),1);
+test('one Monday purchase cancels the free refresh for everyone',()=>{
+ const g=make({playerCount:4,startMoney:100}),c=g.market[4].find(c=>!getCard(c).requires),r=getCard(c).route,row=c.marketRow;
+ E.buy(g,0,c.uid);for(let id=1;id<4;id++)E.pass(g,id);
+ assert.equal(g.marketRefresh,null);assert.equal(g.day,1);assert.notEqual(E.marketCell(g,r,row).uid,c.uid);layout(g);
 });
-test('placing earns refresh; free moves do not; failed purchase leaves choice unspent',()=>{
- const g=make(),p=g.players[0],c=add(g,p,'A06');p.schedule={'1-0':[c.uid]};
- E.place(g,0,c.uid,{day:2,period:0});assert.equal(g.marketRefresh,null);assert.equal(g.actionCount,0);
- E.unplace(g,0,c.uid);assert.equal(g.marketRefresh,null);
- p.money=0;const before=structuredClone(g);assert.throws(()=>E.buy(g,0,offers(g)[0].uid));assert.deepEqual(g,before);
- E.place(g,0,c.uid,{day:3,period:0});assert.equal(g.marketRefresh.player,0);
- const old=ids(g);E.chooseMarketRefresh(g,0);assert.deepEqual(ids(g),old);assert.equal(E.activeBuyer(g),1);
+test('Monday rejects arrangement; Wednesday movement is free until confirmed',()=>{
+ const g=make(),c=add(g,g.players[0],'A06');assert.throws(()=>E.place(g,0,c.uid,{day:3,period:0}),/周四/);
+ E.pass(g,0);E.pass(g,1);E.chooseMarketRefresh(g,0);E.chooseMarketRefresh(g,1);E.pass(g,0);E.pass(g,1);
+ g.players[0].schedule={'3-0':[c.uid]};const n=g.actionCount;E.place(g,0,c.uid,{day:0,period:0});assert.equal(g.actionCount,n);assert.equal(E.activeBuyer(g),0);
 });
-test('growth cards use ordinary market supply; no direct growth purchase channel',()=>{
- const g=make({startMoney:100}),c=offers(g).find(c=>getCard(c).skill&&!E.canBuy(g,g.players[0],getCard(c)));assert(c);
- assert.equal(E.learningOffers,undefined);assert.equal(E.learn,undefined);
- E.buy(g,0,c.uid);assert.equal(g.marketRefresh,null);assert.equal(E.activeBuyer(g),1);
+test('protection rejects another refresh atomically and still permits buying after the queue',()=>{
+ const g=make({startMoney:100});E.pass(g,0);E.pass(g,1);
+ E.chooseMarketRefresh(g,0,0);const before=structuredClone(g);assert.throws(()=>E.chooseMarketRefresh(g,1,0),/保护/);assert.deepEqual(g,before);
+ E.chooseMarketRefresh(g,1);skills(g.players[0],'WWAAABBBCCC');const target=E.marketCell(g,'A',0);E.buy(g,0,target.uid);
+ assert(g.players[0].cards.some(c=>c.uid===target.uid));assert(E.refreshProtected(g,0));
 });
-
-test('II refresh requires one existing route and rejects an entire row or empty W cell atomically',()=>{
- const g=make();E.pass(g,0);const before=structuredClone(g),pool=supply(g),old=ids(g),target=E.marketCell(g,'B',3).uid;
- for(const args of [[3],[3,'W'],[3,'Z'],[0,'A']]){assert.throws(()=>E.chooseMarketRefresh(g,0,...args));assert.deepEqual(g,before);}
- E.chooseMarketRefresh(g,0,3,'B');assert.equal(ids(g).filter(id=>!old.includes(id)).length,1);
- assert(!ids(g).includes(target));assert(old.filter(id=>id!==target).every(id=>ids(g).includes(id)));assert.deepEqual(supply(g),pool);
- assert.equal(g.actionCount,1);assert.equal(E.activeBuyer(g),1);assert.throws(()=>E.chooseMarketRefresh(g,0,0));
+test('II refill draws from the common deck regardless of old offer color',()=>{
+ const g=make(),target=E.marketCell(g,0,3),replacement=g.decks[8].find(c=>getCard(c).route!==getCard(target).route);
+ g.decks[8]=g.decks[8].filter(c=>c!==replacement);g.decks[8].push(replacement);E.pass(g,0);E.pass(g,1);
+ const others=ids(g).filter(id=>id!==target.uid);E.chooseMarketRefresh(g,0,3,0);
+ assert.equal(E.marketCell(g,0,3).uid,replacement.uid);assert(others.every(id=>ids(g).includes(id)));
+ const before=structuredClone(g);assert.throws(()=>E.chooseMarketRefresh(g,1,3,0));assert.deepEqual(g,before);
 });
-test('pending refresh survives JSON reload; skipping all retains market and ends week',()=>{
- const g=make(),before=ids(g);E.pass(g,0);const restored=JSON.parse(JSON.stringify(g));
- for(const x of [g,restored]){E.chooseMarketRefresh(x,0);E.pass(x,1);assert.equal(x.phase,'planning');E.chooseMarketRefresh(x,1);}
- assert.deepEqual(g,restored);assert.equal(g.phase,'resolving');assert.deepEqual(ids(g),before);
+test('refresh queue and protections survive reload; invalid targets do not mutate state',()=>{
+ let g=make();E.pass(g,0);E.pass(g,1);E.chooseMarketRefresh(g,0,1);g=JSON.parse(JSON.stringify(g));
+ for(const args of [[0,0],[1,4],[1,3],[1,3,9],[1,0,'A']]){const before=structuredClone(g);assert.throws(()=>E.chooseMarketRefresh(g,...args));assert.deepEqual(g,before);}
+ E.chooseMarketRefresh(g,1);assert.equal(g.phase,'planning');assert.equal(g.day,1);assert(E.refreshProtected(g,1));
 });
-test('exhausted route recycles only its own discarded cards, then reuses old offers without duplicates',()=>{
- const g=make();g.decks[4]=g.decks[4].filter(c=>getCard(c).route!=='A');g.discard[4]=[];
- const before=supply(g),old=E.marketCell(g,'A',0).uid;E.pass(g,0);E.chooseMarketRefresh(g,0,0);
- assert.equal(E.marketCell(g,'A',0).uid,old);assert.deepEqual(supply(g),before);layout(g);
- const c=g.decks[4].find(c=>getCard(c).route==='B');g.decks[4]=g.decks[4].filter(x=>getCard(x).route!=='B');g.discard[4]=[c];
- E.pass(g,1);E.chooseMarketRefresh(g,1,1);assert.equal(E.marketCell(g,'B',1).uid,c.uid);layout(g);
+test('exhausted route reuses cards without losing supply or creating duplicates',()=>{
+ const g=make();g.discard[4]=g.decks[4].filter(c=>getCard(c).route==='W');g.decks[4]=g.decks[4].filter(c=>getCard(c).route!=='W');
+ const before=supply(g);E.pass(g,0);E.pass(g,1);E.chooseMarketRefresh(g,0,0);layout(g);assert.deepEqual(supply(g),before);
 });
-test('old market migration preserves ownership and supply; migration is idempotent',()=>{
- const g=make(),pool=supply(g),players=structuredClone(g.players);delete g.marketModel;
- for(const lane of [4,8]){g.decks[lane].push(...g.market[lane]);g.market[lane]=g.decks[lane].splice(-Number(lane===4?8:4));g.market[lane].forEach(c=>delete c.marketRow);}
- E.upgradeMarket(g);layout(g);assert.deepEqual(supply(g),pool);assert.deepEqual(g.players,players);
- const before=structuredClone(g);E.upgradeMarket(g);assert.deepEqual(g,before);
+test('old display migration is idempotent and preserves all cards',()=>{
+ const g=make(),before=supply(g);g.marketModel='route-columns-v1';E.upgradeMarket(g);layout(g);assert.deepEqual(supply(g),before);
+ const snapshot=structuredClone(g);E.upgradeMarket(g);assert.deepEqual(g,snapshot);
 });
-test('aging replaces stale cells and keeps recent offers; rotated active players retain refresh rights',()=>{
- const g=make(),recent=E.marketCell(g,'A',1);recent.marketSince=3;g.week=2;const old=ids(g);
- finish(g);next(g);assert.equal(E.activeBuyer(g),1);layout(g);assert(ids(g).includes(recent.uid));assert.equal(old.filter(id=>ids(g).includes(id)).length,1);
- E.pass(g,1);assert.equal(g.marketRefresh.player,1);keepMarket(g);
- passKeeping(g,0);assert.equal(g.phase,'resolving');
+test('protection expires next week and escaped players do not join Monday refresh',()=>{
+ const g=make({playerCount:3});for(let i=0;i<3;i++)E.pass(g,i);E.chooseMarketRefresh(g,0,0);E.chooseMarketRefresh(g,1);E.chooseMarketRefresh(g,2);finish(g);next(g);
+ assert.deepEqual(g.marketProtected,[]);g.players[0].escaped=true;E.pass(g,1);assert.equal(g.marketRefresh,null);E.pass(g,2);assert.equal(g.marketRefresh.player,1);assert.deepEqual(g.marketRefresh.remaining,[2]);
 });

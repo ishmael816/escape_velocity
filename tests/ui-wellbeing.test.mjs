@@ -7,7 +7,7 @@ test('human event choice works after reload, advances seats, saves, and preserve
  const g=make({startSanity:2});
  for(const p of g.players)add(g,p,'A06');
  g.inspection.wellbeing={max:2,effect:'hand'};lock(g);E.rollInspections(g);
- const key='escape-velocity-game-v32-sanity',oldKey='escape-velocity-game-v32-markers';
+ const key='escape-velocity-game-v33-fixed-week',oldKey='escape-velocity-game-v32-markers';
  const storage=new Map([[key,JSON.stringify(g)],[oldKey,'previous save untouched']]),listeners={};
  const root={innerHTML:'',addEventListener:(name,fn)=>listeners[name]=fn};
  const toast={textContent:'',classList:{add(){},remove(){}}};

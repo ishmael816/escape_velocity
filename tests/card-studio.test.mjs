@@ -14,7 +14,7 @@ import * as E from '../src/engine.js';
 import {make,rig,lock} from './helpers.mjs';
 
 test('studio preserves every source card, event and mechanic in JSON round trips',()=>{
- assert.equal(source.cards.length,55);assert.equal(source.events.length,11);
+ assert.equal(source.cards.length,56);assert.equal(source.events.length,11);
  assert.deepEqual(validatePool(source),[]);assert.deepEqual(parsePool(JSON.stringify(source)),source);
  assert.deepEqual(changedEntries(source,clone(source)),[]);
  for(const card of source.cards)assert(cardFace(adapt(card)).includes(card.name));

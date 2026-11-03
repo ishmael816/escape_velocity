@@ -27,11 +27,11 @@ test('staggered winners leave play; N−1 ends without an extra week',()=>{
 test('retired board stays frozen through events, support fees, search and reload',()=>{
  const g=make({playerCount:4,startSanity:6}),p=g.players[0];
  // Paid support, repeat search, and ordinary income must all stop executing.
- rig(g,p,[['W10',0],['B04',1,2],['A06',6]]);
+ rig(g,p,[['W10',0,2],['B04',1,2],['A06',6]]);
  escape(g,0);const before=structuredClone(p);
  for(let week=0;week<2;week++){
   quiet(g);g.inspection.gain={money:5};g.inspection.blockedTimes=[{day:0,period:2}];
-  lock(g);assert.equal(g.actionCount,3);assert.deepEqual(g.timeline,[]);
+  lock(g);assert.equal(g.actionCount,15);assert.deepEqual(g.timeline,[]);
   E.resolveAll(g);assert.equal(g.opportunity,null);assert.deepEqual(p,before);
   assert.equal(Object.hasOwn(g.escapeDecisions,0),false);
   assert.equal(E.preview(g,0).retired,true);assert.deepEqual(E.sanityState(g,p),before.escapeSanityState);
@@ -50,12 +50,12 @@ test('rotated rounds skip two retired seats and preserve partial passes on reloa
  assert.equal(E.activeBuyer(g),3);passKeeping(g,3);
  assert.equal(E.activeBuyer(g),1);assert.equal(g.phase,'planning');
  const restored=structuredClone(g);passKeeping(g,1);passKeeping(restored,1);
- assert.deepEqual(restored,g);assert.equal(g.phase,'resolving');assert.equal(g.actionCount,2);
+ assert.deepEqual(restored,g);assert.equal(g.phase,'planning');assert.equal(g.day,1);assert.equal(g.actionCount,2);
 });
 
 test('early settlement still executes Sunday for remaining players',()=>{
  const g=make({playerCount:3});g.players[1].escaped=true;
  rig(g,g.players[2],[['A06',6]]);finish(g);
- assert.equal(g.endedByPass,true);assert.equal(g.players[2].income,1);
+ assert.equal(g.endedByPass,false);assert.equal(g.players[2].income,1);
  assert.equal(g.players[1].settlement,null);
 });

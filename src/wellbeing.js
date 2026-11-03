@@ -1,5 +1,5 @@
 import {getCard,DAYS} from './cards.js';
-import {playingPlayers,findPlacement,coveredSlots,syncSanity,die,log,returnToHand,recycle} from './engine.js';
+import {playingPlayers,findPlacement,coveredSlots,syncSanity,die,log,returnToHand,recycle,eventFor} from './engine.js';
 import {riskNames} from './sanity-rules.js';
 
 export function wellbeingCandidates(g,id,effect){
@@ -14,8 +14,8 @@ export function hospitalPaused(g,p,c,s){
 export function beginWellbeing(g){
  if(g.wellbeingWeek===g.week)return;
  g.wellbeingWeek=g.week;g.wellbeingQueue=[];
- const risk=g.inspection.wellbeing;if(!risk)return;
  for(const p of playingPlayers(g)){
+  const risk=eventFor(g,p).wellbeing;if(!risk)continue;
   syncSanity(g,p);
   if(p.sanity<=risk.max)g.wellbeingQueue.push({player:p.id,effect:risk.effect,sanity:p.sanity});
  }

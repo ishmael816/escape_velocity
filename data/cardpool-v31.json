@@ -1,5 +1,5 @@
 {
-  "version": "0.32.0",
+  "version": "0.32.2",
   "rulesVersion": 32,
   "rules": {
     "version": 32
@@ -138,7 +138,7 @@
       "name": "灵感管理",
       "route": "A",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -155,15 +155,14 @@
       "gain": {},
       "mechanic": {
         "generate": 1
-      },
-      "effect": "空夜 ✦ +1，可叠加"
+      }
     },
     {
       "id": "A02",
       "name": "集中创作",
       "route": "A",
       "hours": 4,
-      "price": 4,
+      "price": 3,
       "requires": "",
       "kind": "growth",
       "copies": 4,
@@ -181,15 +180,14 @@
       "progress": 3,
       "mechanic": {
         "wholeNight": 2
-      },
-      "effect": "消耗一个夜晚全部 ✦ → 每枚 $2"
+      }
     },
     {
       "id": "A03",
       "name": "冥思苦想",
       "route": "A",
       "hours": 4,
-      "price": 4,
+      "price": 3,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -206,15 +204,14 @@
       "gain": {},
       "mechanic": {
         "generate": 2
-      },
-      "effect": "空夜 ✦ +2，可叠加"
+      }
     },
     {
       "id": "A04",
       "name": "阅读",
       "route": "A",
       "hours": 4,
-      "price": 2,
+      "price": 1,
       "requires": "",
       "kind": "growth",
       "copies": 4,
@@ -227,13 +224,14 @@
       "professional": false,
       "parallel": false,
       "advanced": false,
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "progress": 3,
       "mechanic": {
         "generate": 1
-      },
-      "effect": "空夜 ✦ +1"
+      }
     },
     {
       "id": "A05",
@@ -259,15 +257,14 @@
       },
       "mechanic": {
         "spend": "inspiration"
-      },
-      "effect": "每次 ✦ −1"
+      }
     },
     {
       "id": "A06",
       "name": "专栏写作",
       "route": "A",
       "hours": 4,
-      "price": 4,
+      "price": 2,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -287,7 +284,7 @@
       "mechanic": {
         "focus": {
           "min": 6,
-          "profit": 1
+          "cash": 1
         }
       }
     },
@@ -309,20 +306,21 @@
       "professional": false,
       "parallel": false,
       "advanced": false,
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "progress": 2,
       "mechanic": {
         "generate": 1
-      },
-      "effect": "空夜 ✦ +1"
+      }
     },
     {
       "id": "A08",
       "name": "专栏签约",
       "route": "A",
       "hours": 8,
-      "price": 7,
+      "price": 5,
       "requires": "AA",
       "kind": "repeat",
       "copies": 4,
@@ -337,16 +335,15 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 3
       },
       "mechanic": {
         "convert": 1,
         "focus": {
           "min": 6,
-          "profit": 2
+          "cash": 1
         }
-      },
-      "effect": "可额外消耗任意 ✦，每枚 → $1"
+      }
     },
     {
       "id": "A09",
@@ -367,15 +364,16 @@
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {},
+      "gain": {
+        "profit": 1
+      },
       "mechanic": {
-        "artist": 4,
+        "artist": 3,
         "focus": {
           "min": 8,
           "cash": 1
         }
-      },
-      "effect": "打出：转入至多4枚 ✦；每枚提供副业1。撤回清空"
+      }
     },
     {
       "id": "A10",
@@ -399,23 +397,23 @@
       "gain": {},
       "opportunity": {
         "count": 2,
-        "free": true
+        "free": true,
+        "lane": 4
       },
       "mechanic": {
         "spend": "inspiration",
         "focus": {
           "min": 6,
-          "look": 4
+          "look": 3
         }
-      },
-      "effect": "每次 ✦ −1；看3免费取1，仍检查技能"
+      }
     },
     {
       "id": "A11",
       "name": "画画",
       "route": "A",
       "hours": 4,
-      "price": 4,
+      "price": 5,
       "requires": "A",
       "kind": "repeat",
       "copies": 4,
@@ -429,7 +427,9 @@
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {},
+      "gain": {
+        "profit": 1
+      },
       "mechanic": {
         "focus": {
           "min": 8,
@@ -437,14 +437,14 @@
         }
       },
       "dice": {
-        "resource": "profit",
+        "resource": "salary",
         "faces": [
           0,
           0,
+          0,
           1,
           1,
-          2,
-          2
+          1
         ]
       }
     },
@@ -475,7 +475,7 @@
       "name": "学习技术",
       "route": "B",
       "hours": 4,
-      "price": 2,
+      "price": 1,
       "requires": "",
       "kind": "growth",
       "copies": 4,
@@ -488,9 +488,11 @@
       "professional": false,
       "parallel": false,
       "advanced": false,
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
-      "progress": 4,
+      "progress": 3,
       "mechanic": {}
     },
     {
@@ -498,7 +500,7 @@
       "name": "买课",
       "route": "B",
       "hours": 4,
-      "price": 4,
+      "price": 3,
       "requires": "",
       "kind": "growth",
       "copies": 4,
@@ -523,7 +525,7 @@
       "name": "零散开发",
       "route": "B",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -538,7 +540,7 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
       "mechanic": {}
     },
@@ -565,7 +567,6 @@
       "opportunity": {
         "count": 2
       },
-      "effect": "看3原价买1",
       "mechanic": {
         "focus": {
           "min": 6,
@@ -600,8 +601,7 @@
       "mechanic": {
         "rightAuto": true,
         "replay": true
-      },
-      "effect": "右邻放置 ⚙1；可从归档区再次安排"
+      }
     },
     {
       "id": "B06",
@@ -629,8 +629,7 @@
           "min": 6,
           "belowBonus": 2
         }
-      },
-      "effect": "下邻有副业的牌，本周成功执行时副业 +2"
+      }
     },
     {
       "id": "B07",
@@ -658,15 +657,14 @@
       },
       "mechanic": {
         "leftAuto": true
-      },
-      "effect": "左邻有 ⚙ 才执行；看3原价买1"
+      }
     },
     {
       "id": "B08",
       "name": "兴趣编程",
       "route": "B",
       "hours": 4,
-      "price": 4,
+      "price": 3,
       "requires": "B",
       "kind": "repeat",
       "copies": 4,
@@ -690,7 +688,7 @@
       "name": "订阅产品",
       "route": "B",
       "hours": 8,
-      "price": 1,
+      "price": 3,
       "requires": "B",
       "kind": "repeat",
       "copies": 4,
@@ -713,7 +711,7 @@
       "mechanic": {
         "focus": {
           "min": 6,
-          "profit": 1
+          "cash": 1
         }
       }
     },
@@ -722,8 +720,8 @@
       "name": "Agent商业化",
       "route": "B",
       "hours": 8,
-      "price": 6,
-      "requires": "BBB",
+      "price": 4,
+      "requires": "BB",
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
@@ -736,23 +734,24 @@
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {},
+      "gain": {
+        "profit": 1
+      },
       "mechanic": {
         "agent": 3,
         "focus": {
           "min": 8,
-          "profit": 1
+          "cash": 1
         }
-      },
-      "effect": "每张带 ⚙ 的日程牌提供副业1，最多4"
+      }
     },
     {
       "id": "B11",
       "name": "卖课",
       "route": "B",
       "hours": 4,
-      "price": 4,
-      "requires": "",
+      "price": 3,
+      "requires": "B",
       "kind": "growth",
       "copies": 4,
       "stress": 0,
@@ -770,9 +769,8 @@
       "gain": {},
       "progress": 1,
       "mechanic": {
-        "sellCourse": 2
-      },
-      "effect": "每张已归档牌 → $2，随后本牌归档"
+        "sellCourse": 1
+      }
     },
     {
       "id": "W01",
@@ -833,7 +831,7 @@
       "requires": "",
       "kind": "repeat",
       "copies": 4,
-      "stress": 3,
+      "stress": 2,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
@@ -844,7 +842,7 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "cash": 6
+        "cash": 5
       },
       "offHours": true,
       "mechanic": {}
@@ -858,25 +856,26 @@
       "requires": "",
       "kind": "growth",
       "copies": 4,
-      "stress": 2,
+      "stress": 0,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
-      "minSanity": 0,
+      "minSanity": 2,
       "maxSanity": 10,
       "professional": true,
       "parallel": false,
       "advanced": false,
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "progress": 2,
       "mechanic": {
         "completion": {
-          "cash": 5,
+          "cash": 2,
           "duty": 1
         }
-      },
-      "effect": "完成：$ +5，履职 +1"
+      }
     },
     {
       "id": "W05",
@@ -897,27 +896,24 @@
       "parallel": false,
       "advanced": false,
       "cost": {
-        "money": 1
+        "money": 2
       },
       "gain": {},
       "progress": 2,
       "mechanic": {
-        "completion": {
-          "duty": 1
-        }
-      },
-      "effect": "完成：履职 +1"
+        "duty": 1
+      }
     },
     {
       "id": "W06",
       "name": "例行汇报",
       "route": "W",
       "hours": 4,
-      "price": 4,
+      "price": 3,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
-      "stress": 0,
+      "stress": 1,
       "support": 0,
       "upkeep": 0,
       "capital": 0,
@@ -928,7 +924,7 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "cash": 1
+        "cash": 2
       },
       "mechanic": {
         "focus": {
@@ -938,73 +934,16 @@
       },
       "opportunity": {
         "count": 2,
-        "free": false
+        "free": false,
+        "lane": 4
       }
-    },
-    {
-      "id": "W07",
-      "name": "成果汇报",
-      "route": "W",
-      "hours": 4,
-      "price": 2,
-      "requires": "W",
-      "kind": "growth",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": true,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "cash": 4
-      },
-      "progress": 2,
-      "mechanic": {
-        "spend": "duty"
-      },
-      "effect": "每次 履职 −1"
-    },
-    {
-      "id": "W08",
-      "name": "弹性授权",
-      "route": "W",
-      "hours": 4,
-      "price": 3,
-      "requires": "W",
-      "kind": "growth",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 4,
-      "maxSanity": 10,
-      "professional": true,
-      "parallel": false,
-      "advanced": false,
-      "cost": {
-        "money": 1
-      },
-      "gain": {},
-      "progress": 2,
-      "mechanic": {
-        "completion": {
-          "duty": 2
-        }
-      },
-      "effect": "完成：履职 +2"
     },
     {
       "id": "W09",
       "name": "争取双休",
       "route": "W",
-      "hours": 4,
-      "price": 3,
+      "hours": 8,
+      "price": 6,
       "requires": "WW",
       "kind": "growth",
       "copies": 4,
@@ -1016,23 +955,22 @@
       "maxSanity": 10,
       "professional": true,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {
-        "money": 1
+        "money": 2
       },
       "gain": {},
       "progress": 3,
       "mechanic": {
-        "finalSpend": "duty",
+        "projectDuty": true,
         "completion": {
           "weekend": true
         }
-      },
-      "effect": "最后一次 履职 −1；完成后下周起双休、基础理智 +2"
+      }
     },
     {
       "id": "W10",
-      "name": "下班散步",
+      "name": "下楼遛弯",
       "route": "W",
       "hours": 4,
       "price": 3,
@@ -1083,7 +1021,7 @@
       "name": "小本生意",
       "route": "C",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -1098,7 +1036,7 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
       "mechanic": {}
     },
@@ -1107,7 +1045,7 @@
       "name": "炒股",
       "route": "C",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -1132,15 +1070,14 @@
           "min": 6,
           "cash": 1
         }
-      },
-      "effect": "按当前汇率买入或卖出至多2本金"
+      }
     },
     {
       "id": "C04",
       "name": "中本生意",
       "route": "C",
       "hours": 4,
-      "price": 6,
+      "price": 5,
       "requires": "C",
       "kind": "repeat",
       "copies": 4,
@@ -1155,10 +1092,10 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "profit": 1
+        "profit": 2
       },
       "dice": {
-        "resource": "profit",
+        "resource": "salary",
         "faces": [
           0,
           0,
@@ -1171,7 +1108,7 @@
       "mechanic": {
         "focus": {
           "min": 6,
-          "profit": 1
+          "cash": 1
         }
       }
     },
@@ -1205,7 +1142,7 @@
       "name": "投资",
       "route": "C",
       "hours": 8,
-      "price": 6,
+      "price": 3,
       "requires": "CC",
       "kind": "repeat",
       "copies": 4,
@@ -1219,15 +1156,16 @@
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {},
+      "gain": {
+        "profit": 1
+      },
       "mechanic": {
         "capital": 3,
         "focus": {
           "min": 8,
-          "profit": 1
+          "cash": 1
         }
-      },
-      "effect": "打出：装入至多3本金，不足可按汇率购买；每枚副业1"
+      }
     },
     {
       "id": "C07",
@@ -1253,8 +1191,7 @@
       "hireFee": 1,
       "mechanic": {
         "hire": true
-      },
-      "effect": "招募其他流派明牌成长：牌价＋全部执行费＋1，直接归档；不发完成奖励"
+      }
     },
     {
       "id": "C08",
@@ -1282,8 +1219,7 @@
           "mode": "buy",
           "delta": -1
         }
-      },
-      "effect": "按当前汇率 −1 买入至多2本金，最低1"
+      }
     },
     {
       "id": "C09",
@@ -1311,15 +1247,14 @@
           "mode": "sell",
           "delta": 1
         }
-      },
-      "effect": "按当前汇率 +1 卖出至多2本金"
+      }
     },
     {
       "id": "C10",
       "name": "兴趣小店",
       "route": "C",
       "hours": 4,
-      "price": 3,
+      "price": 2,
       "requires": "C",
       "kind": "repeat",
       "copies": 4,
@@ -1336,16 +1271,15 @@
       "gain": {},
       "mechanic": {
         "capital": 1
-      },
-      "effect": "打出：装入至多1本金，每枚副业1"
+      }
     },
     {
       "id": "A13",
       "name": "带薪驻留",
       "route": "A",
-      "hours": 4,
-      "price": 4,
-      "requires": "A",
+      "hours": 8,
+      "price": 6,
+      "requires": "WA",
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
@@ -1356,23 +1290,26 @@
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 3
       },
       "mechanic": {
-        "playSpend": "duty"
+        "focus": {
+          "min": 6,
+          "cash": 1
+        }
       },
-      "effect": "打出：履职 −1"
+      "offHours": false
     },
     {
       "id": "A14",
       "name": "自费出版",
       "route": "A",
       "hours": 8,
-      "price": 3,
-      "requires": "A",
+      "price": 4,
+      "requires": "AC",
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
@@ -1383,15 +1320,16 @@
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
-        "profit": 4
+        "profit": 3
       },
       "mechanic": {
-        "playSpend": "principal"
+        "playSpend": "principal",
+        "optionalInspirationCash": 2
       },
-      "effect": "打出：本金 −1"
+      "offHours": false
     },
     {
       "id": "A15",
@@ -1417,16 +1355,15 @@
       },
       "mechanic": {
         "spend": "auto"
-      },
-      "effect": "每次 ⚙ −1"
+      }
     },
     {
       "id": "B12",
       "name": "企业试点",
       "route": "B",
-      "hours": 4,
-      "price": 3,
-      "requires": "B",
+      "hours": 8,
+      "price": 5,
+      "requires": "WB",
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
@@ -1437,47 +1374,19 @@
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "cash": 3
-      },
-      "mechanic": {
-        "spend": "duty",
-        "rightAuto": true
-      },
-      "effect": "每次 履职 −1；右邻放置 ⚙1"
-    },
-    {
-      "id": "B13",
-      "name": "云端托管",
-      "route": "B",
-      "hours": 4,
-      "price": 3,
-      "requires": "B",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
         "profit": 3
       },
       "mechanic": {
-        "playSpend": "principal"
+        "autoProfit": 1
       },
-      "effect": "打出：本金 −1"
+      "offHours": false
     },
     {
-      "id": "B14",
-      "name": "创意原型",
+      "id": "B13",
+      "name": "云端托管",
       "route": "B",
       "hours": 4,
       "price": 4,
@@ -1495,12 +1404,39 @@
       "advanced": false,
       "cost": {},
       "gain": {
+        "profit": 2
+      },
+      "mechanic": {
+        "playSpend": "principal"
+      }
+    },
+    {
+      "id": "B14",
+      "name": "创意原型",
+      "route": "B",
+      "hours": 8,
+      "price": 5,
+      "requires": "AB",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
         "profit": 3
       },
       "mechanic": {
-        "spend": "inspiration"
+        "spend": "inspiration",
+        "focusDraw": 6
       },
-      "effect": "每次 ✦ −1"
+      "offHours": false
     },
     {
       "id": "W11",
@@ -1522,7 +1458,7 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "cash": 3
+        "cash": 2
       },
       "progress": 2,
       "mechanic": {
@@ -1530,15 +1466,14 @@
         "completion": {
           "duty": 1
         }
-      },
-      "effect": "每次 ✦ −1；完成：履职 +1"
+      }
     },
     {
       "id": "W12",
       "name": "垫资推进",
       "route": "W",
       "hours": 4,
-      "price": 2,
+      "price": 3,
       "requires": "W",
       "kind": "growth",
       "copies": 4,
@@ -1557,11 +1492,10 @@
       "mechanic": {
         "playSpend": "principal",
         "completion": {
-          "cash": 7,
+          "cash": 5,
           "duty": 1
         }
-      },
-      "effect": "打出：本金 −1；完成：$ +7，履职 +1"
+      }
     },
     {
       "id": "W13",
@@ -1583,14 +1517,13 @@
       "advanced": false,
       "cost": {},
       "gain": {
-        "cash": 3
+        "cash": 2
       },
       "progress": 2,
       "mechanic": {
         "spend": "auto",
         "duty": 1
-      },
-      "effect": "每次 ⚙ −1 → 履职 +1"
+      }
     },
     {
       "id": "C11",
@@ -1622,16 +1555,15 @@
           "delta": 0
         },
         "advanceCash": true
-      },
-      "effect": "每次 ✦ −1 → $3，可用这笔资金按汇率购买1本金"
+      }
     },
     {
       "id": "C12",
       "name": "自动补货",
       "route": "C",
-      "hours": 4,
+      "hours": 8,
       "price": 4,
-      "requires": "C",
+      "requires": "BC",
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
@@ -1642,28 +1574,25 @@
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 1
       },
       "mechanic": {
-        "playSpend": "auto",
-        "trade": {
-          "limit": 1,
-          "mode": "either",
-          "delta": 0
-        }
+        "capital": 2,
+        "autoProfit": 1,
+        "autoRequiresFull": true
       },
-      "effect": "打出：⚙ −1；每次可按汇率买卖1本金"
+      "offHours": false
     },
     {
       "id": "C13",
       "name": "企业团购",
       "route": "C",
-      "hours": 4,
+      "hours": 8,
       "price": 4,
-      "requires": "C",
+      "requires": "WC",
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
@@ -1674,19 +1603,94 @@
       "maxSanity": 10,
       "professional": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
-        "profit": 2
+        "profit": 3
       },
       "mechanic": {
-        "playSpend": "duty",
+        "playSpend": "principal",
         "focus": {
           "min": 6,
-          "profit": 1
+          "cash": 1
         }
       },
-      "effect": "打出：履职 −1"
+      "offHours": false
+    },
+    {
+      "id": "W14",
+      "name": "向上管理",
+      "route": "W",
+      "hours": 8,
+      "price": 8,
+      "requires": "W",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": true,
+      "parallel": false,
+      "advanced": true,
+      "cost": {
+        "money": 2
+      },
+      "gain": {},
+      "mechanic": {
+        "salaryDice": true
+      }
+    },
+    {
+      "id": "W15",
+      "name": "砸烂地球",
+      "route": "W",
+      "hours": 4,
+      "price": 4,
+      "requires": "WW",
+      "kind": "once",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 1,
+      "professional": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "eventSplit": true
+      }
+    },
+    {
+      "id": "W16",
+      "name": "暗图大事",
+      "route": "W",
+      "hours": 8,
+      "price": 4,
+      "requires": "W",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 2,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "salaryTransfer": 3
+      },
+      "offHours": true
     }
   ]
 }

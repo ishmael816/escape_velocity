@@ -5,6 +5,14 @@ export function markerRules(d){
  const m=d.mechanic;if(!m)return d.effect||'';
  return [
   focusText(d),
+  m.projectDuty?'每次在本牌放履职1；仅记进度，不能移入移出':'',
+  m.salaryTransfer?`打出：从工资区转入至多${m.salaryTransfer}履职；每枚副业1`:'',
+  m.salaryDice?'D6 ≤3：获得当前工资；≥4：当前工资 +2（均为奖金）':'',
+  m.eventSplit?'锁定日程后、查岗前：揭示事件2张，选1替换自己的事件，另1替换其他人事件；不改汇率；弃置本牌':'',
+  m.autoProfit?`本牌有 ⚙${m.autoRequiresFull?'且本金装满':''}：副业 +${m.autoProfit}`:'',
+  m.focusDraw?`理智 ≥${m.focusDraw}：抽I级牌1张入手`:'',
+  m.optionalInspirationProfit?`可消耗 ✦1：副业 +${m.optionalInspirationProfit}`:'',
+  m.optionalInspirationCash?`可消耗 ✦1：资金 +${m.optionalInspirationCash}`:'',
   m.playSpend?`打出：${names[m.playSpend]} −1`:'',
   m.generate?`空夜 ✦ +${m.generate}，可叠加`:'',
   m.spend?`每次 ${names[m.spend]} −1`:'',

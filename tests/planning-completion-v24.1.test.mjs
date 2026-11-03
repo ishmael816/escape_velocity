@@ -13,12 +13,12 @@ test('voluntary planning completion uses ordinary passes, never skips an unmarke
 test('completion can be cancelled between turns, survives reload, and expires after its week',()=>{
  const g=make();E.setPlanningDone(g,0,true);const restored=JSON.parse(JSON.stringify(g));assert(E.planningDone(restored,0));
  E.autoPassPlanning(restored);const actions=restored.actionCount;E.setPlanningDone(restored,0,false);assert.equal(restored.actionCount,actions);assert(!E.planningDone(restored,0));
- passKeeping(restored,1);E.resolveAll(restored);next(restored);assert(!E.planningDone(restored,0));assert.equal(E.autoPassPlanning(restored),false);
+ passKeeping(restored,1);finish(restored);next(restored);assert(!E.planningDone(restored,0));assert.equal(E.autoPassPlanning(restored),false);
  const old=make();E.setPlanningDone(old,0,true);finish(old);next(old);assert(!E.planningDone(old,0));
 });
 test('completion stops before resolution and cannot consume a pending human search',()=>{
  const g=make();rig(g,g.players[0],[['B04',6]]);E.setPlanningDone(g,0,true);E.autoPassPlanning(g);
- E.setPlanningDone(g,1,true);E.autoPassPlanning(g);assert.equal(g.phase,'resolving');assert(!g.inspectionResolved);
+ E.setPlanningDone(g,1,true);while(E.autoPassPlanning(g)){};assert(g.weekendReserve);assert.equal(g.inspectionResolved,false);keepMarket(g);assert.equal(g.phase,'resolving');assert(!g.inspectionResolved);
  const before=structuredClone(g);assert.equal(E.autoPassPlanning(g),false);assert.deepEqual(g,before);
  E.resolveAll(g);assert(g.opportunity);const pending=structuredClone(g);assert.equal(E.autoPassPlanning(g),false);assert.deepEqual(g,pending);
 });

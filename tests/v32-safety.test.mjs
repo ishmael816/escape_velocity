@@ -1,3 +1,4 @@
+import {placementTurn,adjustmentTurn} from './helpers.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as E from '../src/engine.js';
@@ -34,7 +35,7 @@ test('night and full Sunday costs use occupancy; support does not accumulate',()
 });
 test('discarding a replayable archive preserves one physical card and clears markers',()=>{
  const g=make(),p=g.players[0],c={uid:'archived-pipeline',type:'B05',auto:1,progress:1};p.skills.push(c);
- E.discardCard(g,0,c.uid);assert(!p.skills.includes(c));assert.equal(g.discard[4].filter(x=>x.uid===c.uid).length,1);assert.equal(c.auto,undefined);assert.equal(c.progress,undefined);
+ adjustmentTurn(g);E.discardCard(g,0,c.uid);assert(!p.skills.includes(c));assert.equal(g.discard[4].filter(x=>x.uid===c.uid).length,1);assert.equal(c.auto,undefined);assert.equal(c.progress,undefined);
 });
 test('marker selection UI exposes sources and occupied nights are excluded',()=>{
  const g=make(),p=g.players[0];rig(g,p,[['A03',0],['W01',2,2]]);lock(g);E.resolveAll(g);
