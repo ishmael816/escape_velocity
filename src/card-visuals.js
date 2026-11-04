@@ -11,7 +11,7 @@ export function specialRules(d){return [
  d.unlockWeekend?'完成撤下，下周起永久双休，基础理智+2。':'',
  d.unlockProtection?'完成撤下，下周起每周保护一张I级牌。':'',
  d.parallel?'仅白天与另一张I级牌同槽，最多两张；各自结算。II级牌不能叠放。':'',
- d.capital?'安排时锁定本金 '+d.capital+'，不能消费；撤回全额返还。':'',
+ d.capital?'安排时锁定占款 '+d.capital+'，不能消费；撤回全额返还。':'',
  d.opportunity?(d.inspirationSpend?'可消耗1灵感，':'')+'看'+d.opportunity.count+'张，'+(d.opportunity.free?'免费取得':'原价买')+'至多1张，检查技能；余牌弃置，下周安排。':'',
  d.hireFee?'买价＋全部执行费＋'+d.hireFee+'，招聘I级成长直接归档；自有手牌免买价，不执行完成奖励。猎头限暗堆候选，伙伴限明牌/手牌。':'',
  d.support?'日程理智 +'+d.support+'；'+(d.upkeep?'结算资金 −'+d.upkeep+'，付不起撤回。':'')+'查停保留理智且不付执行费用；团建时失效，不逐周累加。':'',

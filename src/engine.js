@@ -90,7 +90,7 @@ export function activityDanger(g,p,c,s){if(Wellbeing.hospitalPaused(g,p,c,s))ret
 export function createGame(options={}){
  const config={...DEFAULTS,...options};for(const [k,v]of Object.entries(DEFAULTS))if(typeof v==='number')config[k]=Number.isFinite(Number(config[k]))?Math.max(0,Math.floor(Number(config[k]))):v;
  config.playerCount=Math.min(4,Math.max(2,config.playerCount));config.maxSanity=10;config.escapeSanity=Math.min(10,config.escapeSanity);config.startSanity=Math.min(10,config.startSanity);config.escapeIncome=Math.min(10,Math.max(1,config.escapeIncome));delete config.nightStress3;delete config.livingCost;delete config.starterActivity;delete config.startInspiration;
- const g={version:32,marketModel:'mixed-II-v3-12',planningModel:'fixed-week-v1',weekendReserve:null,marketRefresh:null,exchangeRate:3,opportunity:null,opportunityHistory:[],resolutionQueue:null,sanityModel:'support-v1',progressModel:2,config,random:config.seed||1,diceRandom:((config.seed^0x9e3779b9)>>>0)||1,uid:0,week:1,day:0,turn:0,first:0,phase:'planning',players:[],decks:{4:[],8:[]},discard:{4:[],8:[]},market:{4:[],8:[]},inspectionDeck:[],inspectionDiscard:[],logs:[],history:[],timeline:[],cursor:0,actionCount:0,escapeDecisions:{},diceRolls:[]};
+ const g={version:32,marketModel:'mixed-II-v3-12',planningModel:'fixed-week-v1',weekendReserve:null,marketRefresh:null,opportunity:null,opportunityHistory:[],resolutionQueue:null,sanityModel:'support-v1',progressModel:2,config,random:config.seed||1,diceRandom:((config.seed^0x9e3779b9)>>>0)||1,uid:0,week:1,day:0,turn:0,first:0,phase:'planning',players:[],decks:{4:[],8:[]},discard:{4:[],8:[]},market:{4:[],8:[]},inspectionDeck:[],inspectionDiscard:[],logs:[],history:[],timeline:[],cursor:0,actionCount:0,escapeDecisions:{},diceRolls:[]};
  for(let id=0;id<config.playerCount;id++)g.players.push({id,name:id===0?'你':`玩家 ${id+1}`,bot:config.mode==='bots'&&id>0,money:config.startMoney,sanity:config.startSanity,inspirationSlots:[],principal:0,duty:0,escaped:false,escapedWeek:null,weekend:false,tempWeekend:false,freeDays:[],reserved:null,cards:[],completedActivities:[],skills:[],upgrades:[],drafts:[],schedule:{},income:0,caught:0,jobsDone:0,activeRoutes:[]});
  for(const d of [...CARDS,...ADVANCED])for(let n=0;n<(cardCopies(d,config.playerCount));n++)g.decks[marketLane(d)].push(instance(g,d.id));
  for(const key of Object.keys(g.decks))g.decks[key]=shuffle(g,g.decks[key]);fillMarket(g);startWeek(g);return g;
@@ -172,8 +172,6 @@ function startWeek(g){
  clearStaleMarket(g);
  if(!g.inspectionDeck.length){g.inspectionDeck=shuffle(g,EVENTS.map((_,i)=>i));g.inspectionDiscard=[];}
  const index=g.inspectionDeck.pop();g.inspectionDiscard.push(index);const e=EVENTS[index];g.inspection={...e,times:[],rolls:[],blockedTimes:(e.blockedTimes||[]).map(([day,period])=>({day,period}))};
- if(g.week>1)g.exchangeRate=Math.max(2,Math.min(4,(g.exchangeRate||3)+(e.exchangeDelta||0)));
- log(g,null,'本金汇率：'+g.exchangeRate+' 资金 / 枚','exchange');
  for(const p of playingPlayers(g)){if(p.weekendFrom&&p.weekendFrom<=g.week)p.weekend=true;p.tempWeekend=e.kind==='weekend';resetExecution(p);p.caught=0;p.protectedSlot=null;delete p.protectedUid;delete p.inspectionProtected;p.protectionChosen=false;p.actedThisWeek=false;p.emptyNights=null;p.emptyNightSlots=[];clearOccupiedInspiration(p);syncSanity(g,p);}
  log(g,null,`公开本周事件「${e.name}」：${e.text}`,'inspection');
 }
@@ -239,8 +237,8 @@ export function canPlace(g,p,uid,s,investment){
  const options=typeof investment==='object'&&investment?investment:{};
  let planned=p;if(d.mechanic){planned=structuredClone(p);try{V32.applyPlay(g,planned,cardAt(planned,uid),options);}catch(e){return e.message;}}
  const capital=d.capitalRatio?(investment??c.lockedCapital??d.capitalRatio):(d.capital||0);
- if(!Number.isSafeInteger(capital)||capital<0||d.capitalRatio&&(capital<d.capitalRatio||capital%d.capitalRatio))return '本金须为 '+d.capitalRatio+' 的正整数倍。';
- if(capital>(p.money+(c.lockedCapital||0)))return '资金不足，无法锁定本金。';
+ if(!Number.isSafeInteger(capital)||capital<0||d.capitalRatio&&(capital<d.capitalRatio||capital%d.capitalRatio))return '占款须为 '+d.capitalRatio+' 的正整数倍。';
+ if(capital>(p.money+(c.lockedCapital||0)))return '资金不足，无法锁定占款。';
  if(old?.key===slotKey(s)&&capital===(c.lockedCapital||0))return '已经在这个时段。';
  if(d.unlockWeekend&&(p.weekend||p.escaped))return '已经不需要争取双休。';if(d.unlockProtection&&p.protectionFrom)return '已经获得弹性工作授权。';
  if(coveredSlots(d,s).some(t=>eventBlocksSlot(g,p,t)))return '团建占用，不能安排。';
@@ -262,7 +260,7 @@ export function place(g,id,uid,s,investment){
  if(d.mechanic){V32.applyPlay(g,p,c,typeof investment==='object'&&investment?investment:{});if(!p.cards.includes(c)){p.skills=p.skills.filter(x=>x.uid!==uid);delete c.progress;delete c.lastProgressWeek;delete c.lastExecutedWeek;p.cards.push(c);}}
  p.money+=(c.lockedCapital||0)-capital;if(capital)c.lockedCapital=capital;
  const schedule=without(p.schedule,uid);(schedule[slotKey(s)]||=[]).push(uid);changeSchedule(g,p,schedule);
- log(g,p,(moved?'调整':'安排')+'「'+d.name+'」→ '+slotLabel(s)+(capital?'，锁定本金 '+capital:''));if(!moved)advance(g);
+ log(g,p,(moved?'调整':'安排')+'「'+d.name+'」→ '+slotLabel(s)+(capital?'，锁定占款 '+capital:''));if(!moved)advance(g);
 }
 function releaseCapital(p,c){if(getCard(c).mechanic)V32.release(p,c);p.money+=c.lockedCapital||0;delete c.lockedCapital;}
 function returnToHand(g,p,c,reason){
@@ -270,9 +268,9 @@ function returnToHand(g,p,c,reason){
  const support=p.supports?.find(x=>x.uid===c.uid);
  if(support){support.active=false;support.reason=reason;}
  changeSchedule(g,p,without(p.schedule,c.uid));
- log(g,p,`「${getCard(c).name}」：${reason}，撤回手牌，解除理智影响并返还本金。`,'warning');
+ log(g,p,`「${getCard(c).name}」：${reason}，撤回手牌，解除理智影响并收回牌上指示物。`,'warning');
 }
-export function unplace(g,id,uid){assertTurn(g,id);const p=g.players[id],old=findPlacement(p,uid);if(!old||![2,3,4].includes(g.day))throw Error('只能在调度或安排阶段撤回日程。');releaseCapital(p,cardAt(p,uid));changeSchedule(g,p,without(p.schedule,uid));log(g,p,`撤回「${getCard(cardAt(p,uid)).name}」，解除理智影响并返还本金。`);}
+export function unplace(g,id,uid){assertTurn(g,id);const p=g.players[id],old=findPlacement(p,uid);if(!old||![2,3,4].includes(g.day))throw Error('只能在调度或安排阶段撤回日程。');releaseCapital(p,cardAt(p,uid));changeSchedule(g,p,without(p.schedule,uid));log(g,p,`撤回「${getCard(cardAt(p,uid)).name}」，解除理智影响并收回牌上指示物。`);}
 function recycle(g,p,c){for(const key of ['progress','lastProgressWeek','lastExecutedWeek','auto','weekBonus','principal','duty','art','projectDuty'])delete c[key];g.discard[marketLane(getCard(c))].push(c);}
 export function discardCard(g,id,uid){assertTurn(g,id);const p=g.players[id],c=cardAt(p,uid);if(!c||g.day!==2)throw Error('只能在周三调度时丢弃自己的活动牌，待买牌不能丢弃。');releaseCapital(p,c);changeSchedule(g,p,without(p.schedule,uid));p.cards=p.cards.filter(x=>x.uid!==uid);p.skills=p.skills.filter(x=>x.uid!==uid);recycle(g,p,c);}
 
@@ -496,6 +494,7 @@ export function botOpportunity(g){
 }
 function endResources(g,p){
  if(p.settlement?.week===g.week)return;
+ V32.settleBoardIncome(p);
  const activityMoney=p.weeklyEarnings.reduce((sum,x)=>sum+x.money,0),salary=p.escaped?0:g.config.salary+(p.duty||0),event=eventFor(g,p),eventGain=!event.employeesOnly||!p.escaped?event.gain||{}:{};
  p.income=p.weeklyEarnings.reduce((sum,x)=>sum+x.profit,0);refreshInspiration(p);
  const other=activityMoney-p.income,eventMoney=eventGain.money||0,total=activityMoney+salary+eventMoney;

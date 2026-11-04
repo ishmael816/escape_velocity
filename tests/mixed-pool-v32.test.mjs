@@ -7,13 +7,13 @@ import {getCard,EVENTS} from '../src/cards.js';
 import {make,add,lock,next,turn,skills,seedFor} from './helpers.mjs';
 
 function scheduled(g,type,day,period=0){const p=g.players[0],c=add(g,p,type);(p.schedule[`${day}-${period}`]??=[]).push(c.uid);E.syncSanity(g,p);return c;}
-function finish(g){lock(g);let guard=300;while(g.phase==='resolving'&&guard--){if(g.opportunity){const q=g.opportunity,p=g.players[q.player];if(q.stage==='v32')E.chooseActivity(g,p.id,V.defaultChoice(g,p,E.cardAt(p,q.uid)));else if(q.stage==='duty')E.chooseActivity(g,p.id);else throw Error('Unexpected choice: '+q.stage);}else E.resolveAll(g);}assert(guard>0);assert.equal(g.phase,'escape');}
+function finish(g){lock(g);let guard=300;while(g.phase==='resolving'&&guard--){if(g.opportunity){const q=g.opportunity,p=g.players[q.player];if(q.stage==='v32')E.chooseActivity(g,p.id,V.defaultChoice(g,p,E.cardAt(p,q.uid)));else if(q.stage==='choose'){const target=q.options.find(c=>!E.canBuy(g,p,getCard(c),-getCard(c).price.money));E.chooseOpportunity(g,p.id,target?.uid);}else if(q.stage==='duty')E.chooseActivity(g,p.id);else throw Error('Unexpected choice: '+q.stage);}else E.resolveAll(g);}assert(guard>0);assert.equal(g.phase,'escape');}
 
 test('restocking counts printed income and attached markers each week without accumulating income',()=>{
- for(const [principal,auto,expected] of [[0,0,1],[1,0,2],[2,0,3],[1,1,2],[2,1,4]]){
+ for(const [principal,auto,expected,second] of [[0,0,1,1],[1,0,2,2],[2,0,3,3],[0,1,2,4],[1,1,4,4],[2,1,4,4]]){
   const g=make({startMoney:60}),c=scheduled(g,'C12',0);c.principal=principal;c.auto=auto;
   finish(g);assert.equal(g.players[0].income,expected);
-  next(g);finish(g);assert.equal(g.players[0].income,expected);
+  next(g);finish(g);assert.equal(g.players[0].income,second);
  }
 });
 
@@ -60,9 +60,9 @@ test('reporting searches only I cards and management bonus excludes escape incom
 });
 
 test('all six mixed-route II cards require both archives and fit the 3–4 income band',()=>{
- const specs=[['A13','WA',3],['B12','WB',4],['C13','WC',3],['B14','AB',3],['A14','AC',3],['C12','BC',4]];
+ const specs=[['A13','WA',3],['B12','WB',4],['C13','WC',3],['B14','AAB',4],['A14','AC',3],['C12','BCC',4]];
  for(const [id,req,profit] of specs){const g=make({startMoney:60,startSanity:7}),p=g.players[0],d=getCard(id);assert.equal(d.requires,req);assert.equal(d.hours,8);
-  skills(p,req[0]);assert(E.canBuy(g,p,d));skills(p,req);assert.equal(E.canBuy(g,p,d),null);
+  skills(p,req.slice(0,-1));assert(E.canBuy(g,p,d));skills(p,req);assert.equal(E.canBuy(g,p,d),null);
   const c=scheduled(g,id,0);c.auto=1;if(id==='C12')c.principal=2;if(id==='B14')p.inspirationSlots=['4-2'];
   const count=p.cards.length;finish(g);const result=g.players[0];assert.equal(result.income,profit,id);if(id==='B14'){assert.equal(result.cards.length,count+1);assert.equal(getCard(result.cards.at(-1)).hours,4);assert.equal(E.findPlacement(result,result.cards.at(-1).uid),null);}
  }

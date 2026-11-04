@@ -41,7 +41,7 @@ test('marker selection UI exposes sources and occupied nights are excluded',()=>
  const g=make(),p=g.players[0];rig(g,p,[['A03',0],['W01',2,2]]);lock(g);E.resolveAll(g);
  const html=opportunityPanel(g);assert(html.includes('marker-night-0'));assert(html.includes('marker-night-1'));assert(!html.includes('value="2-2"'));assert(html.includes('opp-marker'));
 });
-test('investment placement UI exposes current rate, capacity and duty choice',()=>{
+test('shelf placement shows fixed unit price, capacity and duty choice even with a legacy rate',()=>{
  const g=make(),p=g.players[0],c=add(g,p,'C06');p.duty=1;g.exchangeRate=4;
- const html=placementPanel(g,p,c.uid,{day:0,period:0});assert(html.includes('marker-play-capital'));assert(html.includes('max="3"'));assert(html.includes('$4'));assert(html.includes('marker-play-duty'));
+ const html=placementPanel(g,p,c.uid,{day:0,period:0});assert(html.includes('marker-play-capital'));assert(html.includes('max="3"'));assert(html.includes('$3'));assert(html.includes('marker-play-duty'));
 });

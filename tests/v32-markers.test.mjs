@@ -52,13 +52,22 @@ test('8h adjacency does not skip gaps and below means the night',()=>{
  const g=make(),wide=add(g,'A08',0),right1=add(g,'B03',1),right2=add(g,'A06',1,1),below=add(g,'W01',0,2);add(g,'B03',3);
  assert.deepEqual(V.neighbors(g.players[0],wide,'right').map(x=>x.uid),[right1.uid,right2.uid]);assert.deepEqual(V.neighbors(g.players[0],wide,'below').map(x=>x.uid),[below.uid]);
 });
-test('capital placement spends exchange cash, withdrawal returns tokens not money',()=>{
+test('goods placement costs three per missing item; withdrawal restores stock',()=>{
  const g=make(),p=g.players[0],c=add(g,'C06');p.principal=1;(E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:0,period:0},{capital:3});assert.equal(p.money,54);assert.equal(c.principal,3);assert.equal(p.principal,0);
- finish(g);assert.equal(p.income,4);next(g);while(E.activeBuyer(g)!==0)passKeeping(g,E.activeBuyer(g));const before=p.money;adjustmentTurn(g);E.unplace(g,0,c.uid);assert.equal(p.money,before);assert.equal(p.principal,3);
+ finish(g);const q=g.players[0];assert.equal(q.income,4);next(g);while(E.activeBuyer(g)!==0)passKeeping(g,E.activeBuyer(g));const before=q.money;adjustmentTurn(g);E.unplace(g,0,c.uid);assert.equal(q.money,before);assert.equal(q.principal,3);
 });
 test('trading sells investment tokens and revenue is not escape income',()=>{
  const g=make(),c=add(g,'C03',0),investment=add(g,'C06',1);investment.principal=3;pending(g);
  E.chooseActivity(g,0,{trade:'sell',quantity:2,capitalSource:investment.uid});finish(g);const p=g.players[0];assert.equal(E.cardAt(p,investment.uid).principal,1);assert.equal(p.income,2);assert.equal(p.money,71);
+});
+test('wholesale and retail earn four cash on two goods, including in legacy saves',()=>{
+ const g=make();assert(!Object.hasOwn(g,'exchangeRate'));
+ g.exchangeRate=4;add(g,'C08',0);add(g,'C09',1);
+ pending(g);E.chooseActivity(g,0,{trade:'buy',quantity:2,capitalTarget:'reserve'});
+ assert.equal(g.players[0].money,56);assert.equal(g.players[0].principal,2);
+ E.resolveAll(g);E.chooseActivity(g,0,{trade:'sell',quantity:2,capitalSource:'reserve'});
+ finish(g);assert.equal(g.players[0].money,67);assert.equal(g.players[0].principal,0);
+ assert.equal(g.players[0].income,0);
 });
 test('preorder can fund its own purchase without double-crediting cash',()=>{
  const g=make(),p=g.players[0];p.money=0;p.inspirationSlots=['5-2'];add(g,'C11',0);pending(g);E.chooseActivity(g,0,{resource:'5-2',trade:'buy',quantity:1,capitalTarget:'reserve'});finish(g);assert.equal(g.players[0].money,3);assert.equal(g.players[0].principal,1);assert.equal(g.players[0].income,0);
@@ -66,11 +75,41 @@ test('preorder can fund its own purchase without double-crediting cash',()=>{
 test('duty attaches once and consumed duty stops protecting the card',()=>{
  const g=make(),p=g.players[0],c=add(g,'A06');p.duty=1;(E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:0,period:0},{duty:true});assert(E.protectedActivity(p,c,{day:0,period:0}));V.spend(p,'duty',c.uid);assert(!E.protectedActivity(p,c,{day:0,period:0}));
 });
-test('play costs do not repeat when moving; redeployment pays again',()=>{
- const g=make(),p=g.players[0],c=add(g,'B13');p.principal=2;(E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:1,period:0},{resource:'reserve'});passKeeping(g,1);(E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:2,period:0});assert.equal(p.principal,1);adjustmentTurn(g);E.unplace(g,0,c.uid);(E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:3,period:0},{resource:'reserve'});assert.equal(p.principal,0);
+test('cash placement fee is paid on deployment only, including after withdrawal',()=>{
+ const g=make(),p=g.players[0],c=add(g,'B13');placementTurn(g);
+ p.money=2;const before=JSON.stringify(g);assert.throws(()=>E.place(g,0,c.uid,{day:1,period:0}),/3 资金/);assert.equal(JSON.stringify(g),before);
+ p.money=8;E.place(g,0,c.uid,{day:1,period:0});assert.equal(p.money,5);
+ passKeeping(g,1);adjustmentTurn(g);E.place(g,0,c.uid,{day:2,period:0});assert.equal(p.money,5);
+ E.unplace(g,0,c.uid);placementTurn(g);E.place(g,0,c.uid,{day:3,period:0});assert.equal(p.money,2);
 });
-test('artist transfers once, capped at three, withdrawal clears stored inspiration',()=>{
- const g=make(),p=g.players[0],c=add(g,'A09');p.inspirationSlots=['4-2','4-2','4-2','5-2','5-2'];assert(E.canPlace(g,p,c.uid,{day:0,period:0},{art:5}));(E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:0,period:0},{art:3});assert.equal(c.art,3);assert.equal(E.inspirationCount(p),2);finish(g);assert.equal(p.income,4);
+test('artist takes one inspiration per distinct empty night on deployment and scores the same visible pile each week',()=>{
+ const g=make(),p=g.players[0],artist=add(g,'A09');p.inspirationSlots=['4-2','4-2','5-2','5-2','6-2'];
+ placementTurn(g);E.place(g,0,artist.uid,{day:1,period:0});assert.equal(artist.art,3);assert.deepEqual(p.inspirationSlots,['4-2','5-2']);
+ const preview=E.preview(g,0);assert.equal(preview.incomeHigh,5);assert.equal(preview.incomeLow,5);
+ finish(g);assert.equal(p.income,5);
+ next(g);p.inspirationSlots=['6-2'];adjustmentTurn(g);E.place(g,0,artist.uid,{day:2,period:0});finish(g);
+ assert.equal(p.income,5);assert.deepEqual(p.inspirationSlots,['6-2']);
+ next(g);adjustmentTurn(g);E.unplace(g,0,artist.uid);assert.equal(artist.art,undefined);assert.deepEqual(p.inspirationSlots,['6-2']);
+});
+test('artist with an empty pile scores its base income, and saved artist markers stay on the card',()=>{
+ const g=make(),p=g.players[0],artist=add(g,'A09');placementTurn(g);E.place(g,0,artist.uid,{day:1,period:0});finish(g);assert.equal(p.income,2);
+ artist.art=3;V.restoreArtistInspiration(p);assert.equal(artist.art,3);assert.deepEqual(p.inspirationSlots,[]);
+});
+test('full shelf can ship one real item and count only what remains at week end',()=>{
+ const g=make(),c=add(g,'C06',0);c.principal=3;pending(g);E.chooseActivity(g,0,{sellFull:true});finish(g);
+ assert.equal(g.players[0].income,3);assert.equal(g.players[0].settlement.otherIncome,4);assert.equal(E.cardAt(g.players[0],c.uid).principal,2);
+ next(g);finish(g);assert.equal(g.players[0].income,3);
+});
+test('a later trade changes the displayed shelf value for the same weekly bill',()=>{
+ const g=make(),shelf=add(g,'C06',0);shelf.principal=3;add(g,'C03',1);pending(g);
+ E.chooseActivity(g,0,{sellFull:false});pending(g);
+ E.chooseActivity(g,0,{trade:'sell',quantity:2,capitalSource:shelf.uid});finish(g);
+ const p=g.players[0];assert.equal(E.cardAt(p,shelf.uid).principal,1);assert.equal(p.income,2);assert.equal(p.money,71);
+});
+test('automation relay scores the visible marker on the night under it',()=>{
+ const g=make();g.config.startSanity=7;add(g,'B10',0);const evening=add(g,'W01',0,2);
+ finish(g);assert.equal(g.players[0].income,3);assert.equal(E.cardAt(g.players[0],evening.uid).auto,1);
+ next(g);finish(g);assert.equal(g.players[0].income,3);assert.equal(E.cardAt(g.players[0],evening.uid).auto,1);
 });
 test('hire charges full target cost and only archives after two actual hires',()=>{
  const g=make(),h=add(g,'C07',0);g.mondayMarketBought=true;g.market[4]=[{uid:'hire1',type:'W05'},{uid:'hire2',type:'B02'}];lock(g);E.resolveAll(g);assert.equal(g.opportunity.stage,'hire');E.chooseHire(g,0,'hire1');finish(g);let p=g.players[0];assert.equal(E.cardAt(p,h.uid).progress,1);assert.equal(p.duty,0);assert.equal(p.money,56);

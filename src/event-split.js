@@ -21,7 +21,7 @@ export function prepare(g){
 export function choose(g,id,index){
  const q=g.opportunity;if(g.phase!=='resolving'||q?.stage!=='event-split'||q.player!==id||![0,1].includes(index))throw Error('请选择对自己生效的事件。');
  const p=g.players[id],c=p.cards.find(c=>c.uid===q.uid);g.eventOverrides??={};
- for(const player of playingPlayers(g)){const event=structuredClone(q.options[player.id===id?index:1-index]);g.eventOverrides[player.id]=event;player.tempWeekend=event.kind==='weekend';syncSanity(g,player);log(g,player,'本周事件替换为「'+event.name+'」，公共汇率不变。','inspection');}
+ for(const player of playingPlayers(g)){const event=structuredClone(q.options[player.id===id?index:1-index]);g.eventOverrides[player.id]=event;player.tempWeekend=event.kind==='weekend';syncSanity(g,player);log(g,player,'本周事件替换为「'+event.name+'」。','inspection');}
  returnToHand(g,p,c,'事件已生效');p.cards=p.cards.filter(x=>x!==c);recycle(g,p,c);
  g.opportunity=null;prepare(g);
 }

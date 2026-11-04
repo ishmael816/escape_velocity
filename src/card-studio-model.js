@@ -54,8 +54,8 @@ export function validatePool(pool) {
    const m=c.mechanic;
    if(!object(m))fail(name,'mechanic须为对象');
    else{
-    const numeric=['generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty','salaryTransfer','autoProfit','focusDraw','optionalInspirationProfit','optionalInspirationCash'];
-    const flags=['rightAuto','replay','leftAuto','hire','advanceCash','projectDuty','salaryDice','eventSplit','autoRequiresFull'];
+    const numeric=['encore','fullSale','automatedLook','playFee','generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty','salaryTransfer','autoProfit','focusDraw','optionalInspirationProfit','optionalInspirationCash'];
+    const flags=['autoRestock','relayBelow','rightAuto','replay','leftAuto','hire','advanceCash','projectDuty','salaryDice','eventSplit','autoRequiresFull'];
     const tokens=['spend','playSpend','finalSpend'];
     for(const k of Object.keys(m))if(![...numeric,...flags,...tokens,'completion','trade','focus'].includes(k))fail(name,'未知规则 '+k);
     if(m.focus!==undefined){
@@ -73,8 +73,10 @@ export function validatePool(pool) {
       if(c.kind!=='repeat')fail(name,'高理智奖励当前仅用于多次活动');
      }
     }
-    for(const k of numeric)if(m[k]!==undefined)integer(m[k],name,'mechanic.'+k,1,k==='generate'?7:20);
+    for(const k of numeric)if(m[k]!==undefined&&!(k==='artist'&&['onePerNight','all'].includes(m[k])))integer(m[k],name,'mechanic.'+k,1,k==='generate'?7:20);
     for(const k of flags)if(m[k]!==undefined&&typeof m[k]!=='boolean')fail(name,k+'须为布尔值');
+    if((m.fullSale||m.autoRestock)&&!m.capital)fail(name,'满架出货或自动补货需要货架');
+    if(m.automatedLook&&(!m.focusDraw||c.opportunity))fail(name,'自动选牌需要高理智抽牌，不能叠加其他找牌');
     for(const k of tokens)if(m[k]!==undefined&&!['inspiration','principal','duty','auto'].includes(m[k]))fail(name,k+'指示物无效');
     if(m.completion!==undefined){
      if(!object(m.completion))fail(name,'完成奖励须为对象');
@@ -88,13 +90,13 @@ export function validatePool(pool) {
     if(m.trade!==undefined){
      if(!object(m.trade))fail(name,'交易须为对象');
      else{
-      integer(m.trade.limit,name,'交易数量',1,10);integer(m.trade.delta,name,'汇率调整',-2,2);
+      integer(m.trade.limit,name,'交易数量',1,10);integer(m.trade.price,name,'货品单价',1,99);
       if(!['buy','sell','either'].includes(m.trade.mode))fail(name,'交易方向无效');
-      if(Object.keys(m.trade).some(k=>!['limit','delta','mode'].includes(k)))fail(name,'未知交易字段');
+      if(Object.keys(m.trade).some(k=>!['limit','price','mode'].includes(k)))fail(name,'未知交易字段');
      }
     }
     if(m.hire&&(!(c.hireFee>0)||c.kind!=='growth'||c.opportunity||m.spend||m.trade||m.completion))fail(name,'招募需要归档进度及招聘费，不能叠加其他选择或完成奖励');
-    if(m.advanceCash&&(!m.trade||m.trade.mode!=='buy'||!(c.gain?.cash>0)))fail(name,'预付收益只支持本次现金买入本金');
+    if(m.advanceCash&&(!m.trade||m.trade.mode!=='buy'||!(c.gain?.cash>0)))fail(name,'预付收益只支持本次现金进货');
     if([m.artist,m.agent,m.capital,c.maturation].filter(Boolean).length>1)fail(name,'只能选一种动态收入机制');
     if(m.rightAuto&&m.belowBonus)fail(name,'每次只支持一种相邻目标');
     if(m.spend&&m.finalSpend)fail(name,'不能同时设置每次与末次消耗');
@@ -105,7 +107,7 @@ export function validatePool(pool) {
   if(c.progress>12)fail(name,'完成进度最多 12');
   if(c.parallel&&c.hours!==4)fail(name,'当前并行仅支持 4h');
   if(c.professional&&c.offHours)fail(name,'仅工作白天与仅非上班时间不能并存');
-  if(c.capitalRatio&&c.capital)fail(name,'固定本金和浮动本金只能选一种');
+  if(c.capitalRatio&&c.capital)fail(name,'固定占款和浮动占款只能选一种');
   if(c.permission&&!['weekend','protection'].includes(c.permission))fail(name,'权限类型无效');
   if(c.permission&&(c.kind!=='once'||!c.permanent))fail(name,'权限牌须为一次性并启用永久效果');
   if(c.effect!==undefined&&(typeof c.effect!=='string'||c.effect.length>500))fail(name,'补充说明最多 500 字');
@@ -120,7 +122,7 @@ export function validatePool(pool) {
   if(c.inspirationSpend&&(!c.opportunity||c.inspirationSpend!==1))fail(name,'当前灵感过牌支持消耗 1 灵感，需启用过牌');
   if(c.boost){
    if(!object(c.boost))fail(name,'下一张联动须为包含 amount 的对象');
-   else {integer(c.boost.amount,name,'下一张额外收入',1,99);if(c.boost.capitalOnly!==undefined&&typeof c.boost.capitalOnly!=='boolean')fail(name,'本金联动须为布尔值');}
+   else {integer(c.boost.amount,name,'下一张额外收入',1,99);if(c.boost.capitalOnly!==undefined&&typeof c.boost.capitalOnly!=='boolean')fail(name,'占款联动须为布尔值');}
   }
   if([!!c.hireFee,!!c.handDiscardBonus,!!c.opportunity].filter(Boolean).length>1)fail(name,'招聘、弃牌变现、过牌一次只能启用一种');
   if(c.inspirationGenerate||c.inspirationSpend){
@@ -143,7 +145,7 @@ export function validatePool(pool) {
  }
  for(const c of pool.events){
   if(!common(c))continue;const name=c.name||c.id;
-  for(const k of Object.keys(c))if(!['id','name','copies','inspectionCount','blocked','cash','temporaryWeekend','exchangeDelta','wellbeing'].includes(k))fail(name,`未知事件字段 ${k}`);
+  for(const k of Object.keys(c))if(!['id','name','copies','inspectionCount','blocked','cash','temporaryWeekend','wellbeing'].includes(k))fail(name,`未知事件字段 ${k}`);
   if(c.wellbeing!==undefined){
    const r=c.wellbeing;
    if(!object(r))fail(name,'理智事件须为对象');
@@ -154,7 +156,6 @@ export function validatePool(pool) {
     if(Object.keys(r).some(k=>!['max','effect'].includes(k)))fail(name,'未知理智事件字段');
    }
   }
-  if(c.exchangeDelta!==undefined)integer(c.exchangeDelta,name,'汇率变化',-1,1);
   integer(c.copies,name,'张数',1,20);integer(c.inspectionCount??0,name,'查岗轮数',0,6);
   if(c.cash!==undefined)integer(c.cash,name,'奖金');
   if(c.temporaryWeekend!==undefined&&typeof c.temporaryWeekend!=='boolean')fail(name,'双休须为布尔值');
@@ -163,4 +164,16 @@ export function validatePool(pool) {
  }
  return errors;
 }
-export function parsePool(text){const pool=JSON.parse(text);const errors=validatePool(pool);if(errors.length)throw Error(errors.join('\n'));return pool;}
+export function migrateGoods(pool){
+ if(pool?.rulesVersion!==32)return pool;
+ for(const event of Array.isArray(pool.events)?pool.events:[])if(object(event))delete event.exchangeDelta;
+ for(const card of Array.isArray(pool.cards)?pool.cards:[]){
+  const trade=card?.mechanic?.trade;
+  if(object(trade)&&Number.isInteger(trade.delta)){
+   trade.price??=3+trade.delta;
+   delete trade.delta;
+  }
+ }
+ return pool;
+}
+export function parsePool(text){const pool=migrateGoods(JSON.parse(text));const errors=validatePool(pool);if(errors.length)throw Error(errors.join('\n'));return pool;}

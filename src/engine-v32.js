@@ -1,10 +1,11 @@
 // Data-driven marker rules. Choice payloads and pending operations are JSON-safe.
+import {GOODS_PRICE} from './marker-rules.js';
 import {focusedMechanic} from './sanity-rules.js';
 import {getCard,slotKey,slotLabel} from './cards.js';
 import {cardAt,cardsInSlot,findPlacement,workType,coveredSlots,syncSanity,inspirationCount,canBuy,
-  log,pay,die,changeSchedule,without,returnToHand,fillMarket,draw} from './engine.js';
+  log,pay,die,changeSchedule,without,returnToHand,fillMarket,draw,chooseOpportunityLane} from './engine.js';
 
-export const tokenNames={inspiration:'灵感',principal:'本金',duty:'履职',auto:'自动'};
+export const tokenNames={inspiration:'灵感',principal:'货品',duty:'履职',auto:'自动'};
 export function tokenSources(p,kind){
  if(kind==='inspiration')return [...new Set(p.inspirationSlots)].filter(k=>!cardsInSlot(p,k).length).map(key=>({key,count:p.inspirationSlots.filter(k=>k===key).length,label:slotLabel({day:+key[0],period:2})}));
  const field=kind==='principal'?'principal':kind==='duty'?'duty':'auto';
@@ -22,6 +23,14 @@ export function spend(p,kind,key,count=1){
 }
 const autoSource=(p,kind)=>tokenSources(p,kind)[0]?.key;
 const emptyNights=p=>Array.from({length:7},(_,d)=>d+'-2').filter(k=>!cardsInSlot(p,k).length);
+export function restoreArtistInspiration(p){
+ for(const c of p.cards){
+  if(c.type!=='A09'||c.art===undefined||getCard(c).mechanic.artist)continue;
+  const night=emptyNights(p)[0];
+  if(night)p.inspirationSlots.push(...Array(c.art).fill(night));
+  delete c.art;
+ }
+}
 export function neighbors(p,c,direction){
  const s=findPlacement(p,c.uid);if(!s)return [];
  const locations=coveredSlots(getCard(c),s),delta={right:[1,0],left:[-1,0],below:[0,1]}[direction];
@@ -32,19 +41,27 @@ export function effectiveCost(c,d){return Math.max(0,(d.cost.money||0)-Math.max(
 export function release(p,c){p.principal=(p.principal||0)+(c.principal||0);p.duty=(p.duty||0)+(c.duty||0);delete c.principal;delete c.duty;delete c.art;}
 export function playOptions(p,c,g){
  const m=getCard(c).mechanic||{},old=!!findPlacement(p,c.uid);
- return {spend:!old?m.playSpend:null,capital:!old?m.capital:0,artist:!old?m.artist:0,salaryTransfer:!old?m.salaryTransfer:0,duty:!old&&!m.salaryTransfer&&!m.projectDuty&&!c.duty&&(p.duty||0)>0,rate:g.exchangeRate||3};
+ return {spend:!old?m.playSpend:null,capital:!old?m.capital:0,artist:!old&&typeof m.artist==='number'?m.artist:0,salaryTransfer:!old?m.salaryTransfer:0,duty:!old&&!m.salaryTransfer&&!m.projectDuty&&!c.duty&&(p.duty||0)>0,goodsPrice:GOODS_PRICE};
 }
 export function applyPlay(g,p,c,options={}){
  const m=getCard(c).mechanic||{},old=!!findPlacement(p,c.uid);
  if(!old){
+  if(m.playFee){if(p.money<m.playFee)throw Error('打出需付 '+m.playFee+' 资金。');p.money-=m.playFee;}
   if(m.salaryTransfer){const n=options.salaryTransfer??Math.min(m.salaryTransfer,p.duty||0);if(!Number.isSafeInteger(n)||n<0||n>m.salaryTransfer||n>(p.duty||0))throw Error('工资区履职不足或超过容量。');p.duty-=n;c.duty=n;}
   if(m.playSpend)spend(p,m.playSpend,options.resource??autoSource(p,m.playSpend));
   if(m.capital){
-   const n=options.capital??0;if(!Number.isSafeInteger(n)||n<0||n>m.capital)throw Error('超出本金容量。');
-   const reserve=Math.min(n,p.principal||0),cost=(n-reserve)*(g.exchangeRate||3);
-   if(p.money<cost)throw Error('资金不足，无法购入本金。');p.money-=cost;p.principal=(p.principal||0)-reserve;c.principal=n;
+   const n=options.capital??0;if(!Number.isSafeInteger(n)||n<0||n>m.capital)throw Error('超出货品容量。');
+   const reserve=Math.min(n,p.principal||0),cost=(n-reserve)*GOODS_PRICE;
+   if(p.money<cost)throw Error('资金不足，无法购入货品。');p.money-=cost;p.principal=(p.principal||0)-reserve;c.principal=n;
   }
-  if(m.artist){
+  if(m.artist==='onePerNight'||m.artist==='all'){
+   c.art=0;
+   for(const pile of tokenSources(p,'inspiration')){
+    const count=m.artist==='onePerNight'?1:pile.count;
+    spend(p,'inspiration',pile.key,count);
+    c.art+=count;
+   }
+  }else if(m.artist){
    const n=options.art??0;if(!Number.isSafeInteger(n)||n<0||n>m.artist||n>inspirationCount(p))throw Error('只能转入现有的至多'+m.artist+'枚灵感。');
    // A supplied list lets the player preserve particular empty-night piles.
    const keys=options.artSources??p.inspirationSlots.slice(0,n);
@@ -56,14 +73,14 @@ export function applyPlay(g,p,c,options={}){
 }
 export function selection(g,p,c){
  const d=getCard(c),m=focusedMechanic(d,p),s=findPlacement(p,c.uid);
- return {spend:m.spend||(m.finalSpend&&(c.progress||0)+1>=d.progressTarget?m.finalSpend:null),generate:m.generate||0,
+ return {encore:m.encore||0,fullSale:m.fullSale&&c.principal===m.capital?m.fullSale:0,spend:m.spend||(m.finalSpend&&(c.progress||0)+1>=d.progressTarget?m.finalSpend:null),generate:m.generate||0,
   wholeNight:m.wholeNight||0,convert:m.convert||0,optionalInspirationProfit:m.optionalInspirationProfit||0,optionalInspirationCash:m.optionalInspirationCash||0,trade:m.trade||null,
   targets:m.rightAuto?neighbors(p,c,'right').filter(t=>!t.auto):m.belowBonus?neighbors(p,c,'below').filter(t=>getCard(t).income):[],
   targetRequired:!!(m.rightAuto||m.belowBonus),empty:emptyNights(p),slot:s};
 }
 export function defaultChoice(g,p,c){
  const f=selection(g,p,c),n=f.empty[0],t=f.trade;
- return {resource:f.spend?autoSource(p,f.spend):undefined,night:tokenSources(p,'inspiration')[0]?.key,
+ return {encoreNight:f.encore?tokenSources(p,'inspiration').sort((a,b)=>b.count-a.count)[0]?.key:undefined,sellFull:!!f.fullSale&&p.money<6,resource:f.spend?autoSource(p,f.spend):undefined,night:tokenSources(p,'inspiration')[0]?.key,
   nights:Array(f.generate).fill(n),amount:0,target:f.targets[0]?.uid,trade:t?.mode==='sell'?'sell':'buy',quantity:0,capitalTarget:'reserve'};
 }
 function feeFailure(g,p,c){const d=getCard(c);if(!d.once)returnToHand(g,p,c,'付不起结算费用');else log(g,p,d.name+'：付不起费用，进度保留。','warning');}
@@ -79,7 +96,7 @@ export function resolve(g,p,s,c){
  const failure=f.spend&&!tokenCount(p,f.spend)?tokenNames[f.spend]+'不足':f.wholeNight&&!inspirationCount(p)?'没有灵感':f.generate&&!f.empty.length?'没有空夜':f.targetRequired&&!f.targets.length?'没有符合条件的相邻牌':m.leftAuto&&!neighbors(p,c,'left').some(x=>x.auto)?'左邻没有自动指示物':null;
  if(failure){log(g,p,d.name+'：'+failure+'，不付费、不推进。','warning');return;}
  if(m.hire){if(!g.previewMode)g.opportunity={player:p.id,uid:c.uid,source:d.name,sourceType:d.id,stage:'hire',fee:d.hireFee,options:[],v32:true};return;}
- const choice=!!(f.spend||f.generate||f.wholeNight||f.convert||f.trade||f.targetRequired||(f.optionalInspirationProfit||f.optionalInspirationCash)&&inspirationCount(p));
+ const choice=!!(f.spend||f.generate||f.wholeNight||f.convert||f.trade||f.targetRequired||f.fullSale||(f.encore||f.optionalInspirationProfit||f.optionalInspirationCash)&&inspirationCount(p));
  if(choice&&!g.previewMode){g.opportunity={player:p.id,uid:c.uid,source:d.name,sourceType:d.id,stage:'v32'};return;}
  if(choice)log(g,p,d.name+'：试算按默认指示物选择，不预判交易和新牌。','warning');
  execute(g,p,c,defaultChoice(g,p,c));
@@ -87,6 +104,8 @@ export function resolve(g,p,s,c){
 function validateChoice(g,p,c,v){
  const f=selection(g,p,c),d=getCard(c),m=d.mechanic;
  if(p.money<effectiveCost(c,d))throw Error('执行资金不足。');
+ if(v.encoreNight&&(!f.encore||!tokenSources(p,'inspiration').some(x=>x.key===v.encoreNight)))throw Error('返场须选已有灵感的空夜。');
+ if(v.sellFull&&!f.fullSale)throw Error('只有满架才能出货。');
  if(f.spend)spend(p,f.spend,v.resource);
  if(v.useInspiration&&(f.optionalInspirationProfit||f.optionalInspirationCash))spend(p,'inspiration',v.optionalSource);
  if(f.wholeNight){const source=tokenSources(p,'inspiration').find(x=>x.key===v.night);if(!source)throw Error('请选择一个有灵感的夜晚。');spend(p,'inspiration',v.night,source.count);}
@@ -96,15 +115,31 @@ function validateChoice(g,p,c,v){
  if(f.trade){
   const t=f.trade,n=v.quantity||0;if(!Number.isSafeInteger(n)||n<0||n>t.limit)throw Error('交易数量超出限制。');
   if(!['buy','sell'].includes(v.trade)||t.mode!=='either'&&t.mode!==v.trade)throw Error('交易方向无效。');
-  if(n){const rate=Math.max(1,(g.exchangeRate||3)+t.delta);
+  if(n){const rate=t.price;
    if(v.trade==='buy'){
     if(p.money-effectiveCost(c,d)+(m.advanceCash?(d.gain.money||0):0)<n*rate)throw Error('交易资金不足。');
-    const target=v.capitalTarget||'reserve';if(target!=='reserve'){const tc=cardAt(p,target);if(!tc||!findPlacement(p,target)||!getCard(tc).mechanic.capital||(tc.principal||0)+n>getCard(tc).mechanic.capital)throw Error('目标投资牌容量不足。');}
+    const target=v.capitalTarget||'reserve';if(target!=='reserve'){const tc=cardAt(p,target);if(!tc||!findPlacement(p,target)||!getCard(tc).mechanic.capital||(tc.principal||0)+n>getCard(tc).mechanic.capital)throw Error('目标牌货架容量不足。');}
    }else spend(p,'principal',v.capitalSource,n);
   }
  }
 }
-function earn(p,c,money,profit=0){if(money||profit)p.weeklyEarnings.push({uid:c.uid,type:c.type,money,profit});}
+function usesBoardIncome(m){return !!(m.capital||m.artist||m.salaryTransfer||m.autoProfit||m.agent);}
+function boardIncome(p,c){
+ const m=getCard(c).mechanic;
+ const automated=m.agent?Math.min(m.agent,p.cards.filter(x=>x.auto&&findPlacement(p,x.uid)).length):0;
+ const machine=m.autoProfit&&c.auto&&(!m.autoRequiresFull||c.principal===m.capital)?m.autoProfit:0;
+ return (m.capital?c.principal||0:0)+(m.artist?c.art||0:0)+(m.salaryTransfer?c.duty||0:0)+machine+automated;
+}
+export function settleBoardIncome(p){
+ for(const entry of p.weeklyEarnings){
+  if(!entry.readBoard)continue;
+  const c=cardAt(p,entry.uid),extra=c&&findPlacement(p,c.uid)?boardIncome(p,c):0;
+  entry.money+=extra;entry.profit+=extra;delete entry.readBoard;
+ }
+}
+function earn(p,c,money,profit=0,readBoard=false){
+ if(money||profit||readBoard)p.weeklyEarnings.push({uid:c.uid,type:c.type,money,profit,...(readBoard?{readBoard:true}:{})});
+}
 export function advanceProgress(g,p,c){
  const d=getCard(c),m=d.mechanic;
  if(!d.progressTarget)return;
@@ -129,13 +164,13 @@ function execute(g,p,c,v){
  if(m.rightAuto)cardAt(p,v.target).auto=1;
  if(m.belowBonus){const t=cardAt(p,v.target);t.bonusWeek=g.week;t.weekBonus=(t.weekBonus||0)+m.belowBonus;}
  let profit=d.fixedProfit||0,cash=(d.gain.money||0)-(d.fixedProfit||0)+all*(m.wholeNight||0)+(v.amount||0)*(m.convert||0);
- if(m.capital)profit+=c.principal||0;if(m.artist)profit+=c.art||0;
- if(m.salaryTransfer)profit+=c.duty||0;
- if(m.autoProfit&&c.auto&&(!m.autoRequiresFull||c.principal===m.capital))profit+=m.autoProfit;
+ if(m.encore&&v.encoreNight){const pile=tokenSources(p,'inspiration').find(x=>x.key===v.encoreNight);p.inspirationSlots.push(...Array(Math.min(pile.count,m.encore)).fill(pile.key));}
+ if(m.autoRestock&&c.auto&&(c.principal||0)<m.capital)c.principal=(c.principal||0)+1;
+ if(f.fullSale&&v.sellFull){c.principal--;cash+=f.fullSale;}
  if(v.useInspiration&&m.optionalInspirationProfit)profit+=m.optionalInspirationProfit;
  if(v.useInspiration&&m.optionalInspirationCash)cash+=m.optionalInspirationCash;
  if(m.salaryDice){const face=g.previewMode?(g.previewMode==='low'?1:6):die(g),value=g.config.salary+(p.duty||0)+(face>3?2:0);cash+=value;if(!g.previewMode)g.diceRolls.push({week:g.week,kind:'activity',player:p.id,uid:c.uid,type:c.type,face,value});}
- if(m.agent)profit+=Math.min(m.agent,p.cards.filter(x=>findPlacement(p,x.uid)&&x.auto).length);
+ if(m.relayBelow){const target=neighbors(p,c,'below').find(x=>!x.auto);if(target){target.auto=1;log(g,p,d.name+'：下邻「'+getCard(target).name+'」获得自动。','progress');}}
  if(m.sellCourse)cash+=p.skills.length*m.sellCourse;
  if(m.duty)awardDuty(g,p,m.duty);
  if(d.maturation){profit=(c.progress||0)>=d.maturation.steps?d.maturation.mature:d.maturation.initial;c.progress=Math.min(d.maturation.steps,(c.progress||0)+1);}
@@ -144,17 +179,25 @@ function execute(g,p,c,v){
  if(d.income&&c.bonusWeek===g.week)profit+=c.weekBonus||0;
  let advance=0;
  if(m.trade&&v.quantity){
-  const rate=Math.max(1,(g.exchangeRate||3)+m.trade.delta),amount=rate*v.quantity;
+  const rate=m.trade.price,amount=rate*v.quantity;
   if(v.trade==='buy'){
    // Only this explicit card may use its own freshly earned cash before week end.
    advance=m.advanceCash?Math.min(cash,Math.max(0,amount-p.money)):0;p.money+=advance;p.money-=amount;
    const target=v.capitalTarget==='reserve'||!v.capitalTarget?p:cardAt(p,v.capitalTarget);target.principal=(target.principal||0)+v.quantity;
   }else{spend(p,'principal',v.capitalSource,v.quantity);cash+=amount;}
  }
- earn(p,c,profit+cash-advance,profit);c.lastExecutedWeek=g.week;if(d.income)p.jobsDone++;
- log(g,p,d.name+'：'+(fee?'支付 '+fee+'；':'')+'副业 '+profit+'，其他资金 '+cash+(advance?'（其中已使用 '+advance+'）':''),'income');
+ earn(p,c,profit+cash-advance,profit,usesBoardIncome(m));c.lastExecutedWeek=g.week;if(d.income)p.jobsDone++;
+ log(g,p,d.name+'：'+(fee?'支付 '+fee+'；':'')+'副业 '+profit+(usesBoardIncome(m)?'＋周末牌面指示物':'')+'，其他资金 '+cash+(advance?'（其中已使用 '+advance+'）':''),'income');
  advanceProgress(g,p,c);syncSanity(g,p);
- if(m.focusDraw&&p.sanity>=m.focusDraw&&!g.previewMode){const card=draw(g,4);if(card){p.cards.push(card);log(g,p,d.name+'：抽取「'+getCard(card).name+'」入手，下周可安排。','opportunity');}}
+ if(m.focusDraw&&p.sanity>=m.focusDraw&&!g.previewMode){
+  if(m.automatedLook&&c.auto){
+   if(g.decks[4].length||g.discard[4].length){
+    g.opportunity={player:p.id,source:d.name,sourceType:d.id,count:m.automatedLook,lane:4,free:true,stage:'lane',options:[],seen:[],bought:null};
+    chooseOpportunityLane(g,p.id,4);
+   }
+  }
+  else{const card=draw(g,4);if(card){p.cards.push(card);log(g,p,d.name+'：抽取「'+getCard(card).name+'」入手，下周可安排。','opportunity');}}
+ }
  if(d.opportunity&&!g.previewMode)g.opportunity={player:p.id,source:d.name,sourceType:d.id,...d.opportunity,count:focus?.look||d.opportunity.count,stage:'lane',options:[],seen:[],bought:null};
 }
 function awardDuty(g,p,count){if(!count)return;p.duty=(p.duty||0)+count;if(!g.previewMode)(g.dutyAwards??=[]).push({player:p.id,count});}

@@ -43,7 +43,7 @@ export const slotLabel=s=>`${DAYS[s.day]}${['上午','下午','夜晚'][s.period
 export const inspectionText=e=>`预告查岗 ${e.inspectionCount} 轮；每轮命中后最多追查一次，落空或重复即停止，各玩家分别判定。查停只暂停结算，保留理智影响。`+(e.wellbeing?' '+riskText(e.wellbeing):'');
 export const EVENTS=design.events.flatMap(e=>Array.from({length:e.copies},()=>({
  name:e.name,wellbeing:e.wellbeing,kind:e.inspectionCount?'inspection':e.blocked?'team':e.temporaryWeekend?'weekend':'bonus',
- exchangeDelta:e.exchangeDelta||0,inspectionCount:e.inspectionCount,blockedTimes:e.blocked?[[e.blocked.day-1,e.blocked.slot==='am'?0:1]]:[],
+ inspectionCount:e.inspectionCount,blockedTimes:e.blocked?[[e.blocked.day-1,e.blocked.slot==='am'?0:1]]:[],
  gain:e.cash?{money:e.cash}:{},employeesOnly:true,
  text:e.inspectionCount?inspectionText(e):(e.blocked?`本周${e.blocked.slot==='am'?'周日上午':'周日下午'}团建，在职玩家该时段无法活动。`:e.temporaryWeekend?'本周周六临时自由；不改变长期理智，不推进双休项目。':`周末发放奖金 ${e.cash}，不计副业收入。`)+(e.wellbeing?' '+riskText(e.wellbeing):''),
 })));

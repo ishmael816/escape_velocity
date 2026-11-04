@@ -35,7 +35,7 @@ test('edited special-effect values appear in both preview and generated document
  q.opportunity.count=5;m.maturation.steps=3;
  assert(cardFace(adapt(q)).includes('看 5 张'));
  const outputs=generateOutputs(pool);assert(outputs['docs/cards-v0.32.md'].includes('看5免费取1'));assert(outputs['docs/cards-v0.32.md'].includes('前3次收入'));
- const d=newCard(pool.cards);d.boost={amount:2,capitalOnly:true};assert(cardFace(adapt(d)).includes('有本金的牌收入 +2'));
+ const d=newCard(pool.cards);d.boost={amount:2,capitalOnly:true};assert(cardFace(adapt(d)).includes('有占款的牌收入 +2'));
 });
 test('edited inspiration search count is used by the actual settlement engine',()=>{
  const def=getCard('A10'),before=def.opportunity.count;
