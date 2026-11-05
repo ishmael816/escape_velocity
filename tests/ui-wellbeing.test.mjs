@@ -7,12 +7,12 @@ test('human event choice works after reload, advances seats, saves, and preserve
  const g=make({startSanity:2});
  for(const p of g.players)add(g,p,'A06');
  g.inspection.wellbeing={max:2,effect:'hand'};lock(g);E.rollInspections(g);
- const key='escape-velocity-game-v33-fixed-week',oldKey='escape-velocity-game-v32-markers';
+ const key='escape-velocity-game-v34-unified',oldKey='escape-velocity-game-v34-unified-markers';
  const storage=new Map([[key,JSON.stringify(g)],[oldKey,'previous save untouched']]),listeners={};
  const root={innerHTML:'',addEventListener:(name,fn)=>listeners[name]=fn};
  const toast={textContent:'',classList:{add(){},remove(){}}};
  const previous=Object.fromEntries(['document','localStorage','setTimeout','clearTimeout'].map(k=>[k,globalThis[k]]));
- globalThis.setTimeout=()=>0;globalThis.clearTimeout=()=>{};
+ const timers=new Map();let timerId=0;globalThis.setTimeout=(fn,ms)=>{timers.set(++timerId,{fn,ms});return timerId;};globalThis.clearTimeout=id=>timers.delete(id);
  globalThis.localStorage={getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)};
  globalThis.document={querySelector:s=>s==='#app'?root:s==='#toast'?toast:null,querySelectorAll:()=>[],addEventListener(){}};
  const click=(action,uid)=>listeners.click({target:{closest:()=>({dataset:{action,uid}})}});
@@ -27,7 +27,7 @@ test('human event choice works after reload, advances seats, saves, and preserve
   click('opp-discard',g.players[1].cards[0].uid);
   assert.equal(saved().opportunity,null);
   assert.equal(saved().players[1].cards.length,0);
-  click('resolve');assert.equal(saved().phase,'escape');
+  click('resolve');for(let i=0;i<40&&saved().phase==='resolving';i++){const entry=[...timers].find(([,t])=>t.ms===180);assert(entry);timers.delete(entry[0]);entry[1].fn();}assert.equal(saved().phase,'escape');
   assert.equal(storage.get(oldKey),'previous save untouched');
   assert.equal(toast.textContent,'');
  }finally{for(const [k,v]of Object.entries(previous))globalThis[k]=v;}

@@ -1,8 +1,9 @@
 {
-  "version": "0.32.7",
+  "version": "0.34.0",
   "rulesVersion": 32,
   "rules": {
-    "version": 32
+    "version": 32,
+    "revision": "unified-2026-11"
   },
   "defaults": {
     "playerCount": 3,
@@ -138,6 +139,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -162,9 +164,12 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
-      "cost": {},
+      "cost": {
+        "money": 1
+      },
       "gain": {},
       "progress": 3,
       "mechanic": {
@@ -187,6 +192,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -211,6 +217,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -238,14 +245,13 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
-      "gain": {
-        "cash": 3
-      },
+      "gain": {},
       "mechanic": {
-        "spend": "inspiration"
+        "discardHand": 3
       }
     },
     {
@@ -253,7 +259,7 @@
       "name": "专栏写作",
       "route": "A",
       "hours": 4,
-      "price": 2,
+      "price": 3,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -264,18 +270,14 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {
         "profit": 1
       },
-      "mechanic": {
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      }
+      "mechanic": {}
     },
     {
       "id": "A07",
@@ -293,6 +295,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -300,9 +303,12 @@
       },
       "gain": {},
       "progress": 2,
-      "mechanic": {
-        "generate": 1
-      }
+      "opportunity": {
+        "count": 2,
+        "route": "A",
+        "lane": 4
+      },
+      "mechanic": {}
     },
     {
       "id": "A08",
@@ -320,19 +326,14 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
         "profit": 3
       },
-      "mechanic": {
-        "convert": 1,
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      }
+      "mechanic": {}
     },
     {
       "id": "A09",
@@ -344,24 +345,22 @@
       "kind": "repeat",
       "copies": 4,
       "stress": 0,
-      "support": 1,
+      "support": 0,
       "upkeep": 0,
       "capital": 0,
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
         "profit": 2
       },
       "mechanic": {
-        "artist": "onePerNight",
-        "focus": {
-          "min": 8,
-          "cash": 1
-        }
+        "artist": 2,
+        "distinctNights": true
       }
     },
     {
@@ -380,6 +379,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -402,7 +402,7 @@
       "name": "画画",
       "route": "A",
       "hours": 4,
-      "price": 5,
+      "price": 9,
       "requires": "A",
       "kind": "repeat",
       "copies": 4,
@@ -413,6 +413,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -420,21 +421,7 @@
         "profit": 1
       },
       "mechanic": {
-        "focus": {
-          "min": 8,
-          "reroll": true
-        }
-      },
-      "dice": {
-        "resource": "salary",
-        "faces": [
-          0,
-          0,
-          0,
-          1,
-          1,
-          1
-        ]
+        "inspirationDice": 4
       }
     },
     {
@@ -448,16 +435,96 @@
       "copies": 4,
       "stress": 0,
       "support": 4,
-      "upkeep": 5,
+      "upkeep": 4,
       "capital": 0,
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": true,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {},
       "mechanic": {}
+    },
+    {
+      "id": "A13",
+      "name": "带薪驻留",
+      "route": "A",
+      "hours": 8,
+      "price": 8,
+      "requires": "WA",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 1,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 2
+      },
+      "mechanic": {}
+    },
+    {
+      "id": "A14",
+      "name": "自费出版",
+      "route": "A",
+      "hours": 8,
+      "price": 2,
+      "requires": "AC",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 3
+      },
+      "mechanic": {
+        "playSpend": "principal"
+      }
+    },
+    {
+      "id": "A15",
+      "name": "作品发行",
+      "route": "A",
+      "hours": 4,
+      "price": 3,
+      "requires": "A",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {
+        "cash": 5
+      },
+      "mechanic": {
+        "spend": "auto"
+      }
     },
     {
       "id": "B01",
@@ -475,6 +542,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -500,6 +568,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -514,7 +583,7 @@
       "name": "零散开发",
       "route": "B",
       "hours": 4,
-      "price": 2,
+      "price": 3,
       "requires": "",
       "kind": "repeat",
       "copies": 4,
@@ -525,6 +594,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -549,18 +619,20 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {},
       "opportunity": {
-        "count": 2
+        "count": 2,
+        "route": "B",
+        "lane": 4
       },
       "mechanic": {
         "focus": {
           "min": 6,
-          "look": 4,
-          "cash": 1
+          "look": 4
         }
       }
     },
@@ -580,6 +652,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -597,7 +670,7 @@
       "name": "数据收集",
       "route": "B",
       "hours": 4,
-      "price": 2,
+      "price": 4,
       "requires": "B",
       "kind": "repeat",
       "copies": 4,
@@ -608,6 +681,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -636,13 +710,15 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {},
       "progress": 2,
       "opportunity": {
-        "count": 3
+        "count": 3,
+        "lane": 4
       },
       "mechanic": {
         "leftAuto": true
@@ -653,7 +729,7 @@
       "name": "兴趣编程",
       "route": "B",
       "hours": 4,
-      "price": 3,
+      "price": 9,
       "requires": "B",
       "kind": "repeat",
       "copies": 4,
@@ -664,6 +740,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -688,20 +765,15 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
-      "gain": {},
-      "maturation": {
-        "steps": 2,
-        "initial": 1,
-        "mature": 3
+      "gain": {
+        "profit": 1
       },
       "mechanic": {
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
+        "autoProfit": 2
       }
     },
     {
@@ -717,27 +789,23 @@
       "support": 0,
       "upkeep": 0,
       "capital": 0,
-      "minSanity": 4,
+      "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
       "parallel": false,
-      "advanced": false,
+      "advanced": true,
       "cost": {},
       "gain": {
         "profit": 2
       },
       "mechanic": {
-        "agent": 2,
-        "relayBelow": true,
-        "focus": {
-          "min": 8,
-          "cash": 1
-        }
+        "agent": 2
       }
     },
     {
       "id": "B11",
-      "name": "卖课",
+      "name": "工具交付",
       "route": "B",
       "hours": 4,
       "price": 3,
@@ -751,15 +819,469 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {
+        "money": 1
+      },
+      "gain": {
+        "cash": 5
+      },
+      "progress": 1,
+      "mechanic": {
+        "spend": "auto"
+      }
+    },
+    {
+      "id": "B12",
+      "name": "企业试点",
+      "route": "B",
+      "hours": 8,
+      "price": 5,
+      "requires": "WB",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": true,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 3
+      },
+      "mechanic": {}
+    },
+    {
+      "id": "B13",
+      "name": "云端托管",
+      "route": "B",
+      "hours": 4,
+      "price": 4,
+      "requires": "BB",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {
+        "profit": 2
+      },
+      "mechanic": {
+        "playSpend": "auto"
+      }
+    },
+    {
+      "id": "B14",
+      "name": "创意原型",
+      "route": "B",
+      "hours": 8,
+      "price": 5,
+      "requires": "AAB",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 4
+      },
+      "mechanic": {
+        "playResources": {
+          "inspiration": 2,
+          "auto": 1
+        }
+      }
+    },
+    {
+      "id": "C01",
+      "name": "社交",
+      "route": "C",
+      "hours": 4,
+      "price": 2,
+      "requires": "",
+      "kind": "growth",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
         "money": 1
       },
       "gain": {},
-      "progress": 1,
+      "progress": 2,
+      "mechanic": {}
+    },
+    {
+      "id": "C02",
+      "name": "小额进货",
+      "route": "C",
+      "hours": 4,
+      "price": 2,
+      "requires": "",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
       "mechanic": {
-        "sellCourse": 1
+        "trade": {
+          "mode": "buy",
+          "limit": 1,
+          "price": 2
+        }
+      }
+    },
+    {
+      "id": "C03",
+      "name": "摆摊换货",
+      "route": "C",
+      "hours": 4,
+      "price": 2,
+      "requires": "",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "trade": {
+          "mode": "either",
+          "limit": 2,
+          "price": 3
+        }
+      }
+    },
+    {
+      "id": "C04",
+      "name": "品牌专柜",
+      "route": "C",
+      "hours": 4,
+      "price": 3,
+      "requires": "C",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "capital": 2,
+        "goodsIncome": false,
+        "trade": {
+          "mode": "sell",
+          "limit": 1,
+          "price": 4,
+          "own": true,
+          "fullPrice": 5
+        }
+      }
+    },
+    {
+      "id": "C05",
+      "name": "市场调研",
+      "route": "C",
+      "hours": 4,
+      "price": 3,
+      "requires": "",
+      "kind": "growth",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {
+        "money": 2
+      },
+      "gain": {},
+      "progress": 1,
+      "opportunity": {
+        "count": 2,
+        "route": "C",
+        "lane": 4
+      },
+      "mechanic": {}
+    },
+    {
+      "id": "C06",
+      "name": "经营卖场",
+      "route": "C",
+      "hours": 8,
+      "price": 3,
+      "requires": "CCC",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 1
+      },
+      "mechanic": {
+        "capital": 3
+      }
+    },
+    {
+      "id": "C07",
+      "name": "招募伙伴",
+      "route": "C",
+      "hours": 4,
+      "price": 2,
+      "requires": "C",
+      "kind": "growth",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "progress": 2,
+      "hireFee": 1,
+      "mechanic": {
+        "hire": true
+      }
+    },
+    {
+      "id": "C08",
+      "name": "批发进货",
+      "route": "C",
+      "hours": 4,
+      "price": 3,
+      "requires": "C",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "trade": {
+          "mode": "buy",
+          "limit": 3,
+          "price": 5,
+          "bundle": true
+        }
+      }
+    },
+    {
+      "id": "C09",
+      "name": "零售出货",
+      "route": "C",
+      "hours": 4,
+      "price": 3,
+      "requires": "C",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "trade": {
+          "mode": "sell",
+          "limit": 2,
+          "price": 4
+        }
+      }
+    },
+    {
+      "id": "C10",
+      "name": "兴趣小店",
+      "route": "C",
+      "hours": 4,
+      "price": 6,
+      "requires": "C",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 1,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "capital": 1
+      }
+    },
+    {
+      "id": "C11",
+      "name": "概念预售",
+      "route": "C",
+      "hours": 4,
+      "price": 3,
+      "requires": "C",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
+      "mechanic": {
+        "spend": "inspiration",
+        "goods": 1
+      }
+    },
+    {
+      "id": "C12",
+      "name": "自动补货",
+      "route": "C",
+      "hours": 8,
+      "price": 4,
+      "requires": "BCC",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 1
+      },
+      "mechanic": {
+        "capital": 2,
+        "autoProfit": 1,
+        "autoRequiresFull": true,
+        "autoRestock": true
+      }
+    },
+    {
+      "id": "C13",
+      "name": "企业团购",
+      "route": "C",
+      "hours": 8,
+      "price": 2,
+      "requires": "WC",
+      "kind": "repeat",
+      "copies": 4,
+      "stress": 0,
+      "support": 0,
+      "upkeep": 0,
+      "capital": 0,
+      "minSanity": 0,
+      "maxSanity": 10,
+      "professional": false,
+      "offHours": false,
+      "parallel": false,
+      "advanced": true,
+      "cost": {},
+      "gain": {
+        "profit": 3
+      },
+      "mechanic": {
+        "playSpend": "principal"
       }
     },
     {
@@ -778,13 +1300,13 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": true,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {
         "cash": 1
       },
-      "offHours": true,
       "mechanic": {}
     },
     {
@@ -803,13 +1325,13 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": true,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {
         "cash": 3
       },
-      "offHours": true,
       "mechanic": {}
     },
     {
@@ -828,13 +1350,13 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": true,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {
         "cash": 5
       },
-      "offHours": true,
       "mechanic": {}
     },
     {
@@ -853,6 +1375,7 @@
       "minSanity": 2,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -883,6 +1406,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {
@@ -910,23 +1434,18 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {
         "cash": 2
       },
-      "mechanic": {
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      },
       "opportunity": {
         "count": 2,
-        "free": false,
         "lane": 4
-      }
+      },
+      "mechanic": {}
     },
     {
       "id": "W09",
@@ -944,6 +1463,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": true,
       "cost": {
@@ -952,7 +1472,6 @@
       "gain": {},
       "progress": 3,
       "mechanic": {
-        "projectDuty": true,
         "completion": {
           "weekend": true
         }
@@ -974,462 +1493,12 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {},
       "offHours": true,
+      "parallel": false,
+      "advanced": false,
+      "cost": {},
+      "gain": {},
       "mechanic": {}
-    },
-    {
-      "id": "C01",
-      "name": "社交",
-      "route": "C",
-      "hours": 4,
-      "price": 2,
-      "requires": "",
-      "kind": "growth",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {
-        "money": 1
-      },
-      "gain": {},
-      "progress": 2,
-      "mechanic": {}
-    },
-    {
-      "id": "C02",
-      "name": "小本生意",
-      "route": "C",
-      "hours": 4,
-      "price": 2,
-      "requires": "",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "profit": 1
-      },
-      "mechanic": {}
-    },
-    {
-      "id": "C03",
-      "name": "摆摊换货",
-      "route": "C",
-      "hours": 4,
-      "price": 2,
-      "requires": "",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {},
-      "mechanic": {
-        "trade": {
-          "limit": 2,
-          "mode": "either",
-          "price": 3
-        },
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      }
-    },
-    {
-      "id": "C04",
-      "name": "中本生意",
-      "route": "C",
-      "hours": 4,
-      "price": 5,
-      "requires": "C",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "profit": 2
-      },
-      "dice": {
-        "resource": "salary",
-        "faces": [
-          0,
-          0,
-          0,
-          2,
-          2,
-          2
-        ]
-      },
-      "mechanic": {
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      }
-    },
-    {
-      "id": "C05",
-      "name": "商业模式学习",
-      "route": "C",
-      "hours": 4,
-      "price": 3,
-      "requires": "",
-      "kind": "growth",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {
-        "money": 2
-      },
-      "gain": {},
-      "progress": 1,
-      "mechanic": {}
-    },
-    {
-      "id": "C06",
-      "name": "经营卖场",
-      "route": "C",
-      "hours": 8,
-      "price": 3,
-      "requires": "CCC",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "profit": 1
-      },
-      "mechanic": {
-        "capital": 3,
-        "fullSale": 4,
-        "focus": {
-          "min": 8,
-          "cash": 1
-        }
-      }
-    },
-    {
-      "id": "C07",
-      "name": "招募伙伴",
-      "route": "C",
-      "hours": 4,
-      "price": 2,
-      "requires": "C",
-      "kind": "growth",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {},
-      "progress": 2,
-      "hireFee": 1,
-      "mechanic": {
-        "hire": true
-      }
-    },
-    {
-      "id": "C08",
-      "name": "批发进货",
-      "route": "C",
-      "hours": 4,
-      "price": 3,
-      "requires": "C",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {},
-      "mechanic": {
-        "trade": {
-          "limit": 2,
-          "mode": "buy",
-          "price": 2
-        }
-      }
-    },
-    {
-      "id": "C09",
-      "name": "零售出货",
-      "route": "C",
-      "hours": 4,
-      "price": 3,
-      "requires": "C",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {},
-      "mechanic": {
-        "trade": {
-          "limit": 2,
-          "mode": "sell",
-          "price": 4
-        }
-      }
-    },
-    {
-      "id": "C10",
-      "name": "兴趣小店",
-      "route": "C",
-      "hours": 4,
-      "price": 2,
-      "requires": "C",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 1,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {},
-      "mechanic": {
-        "capital": 1
-      }
-    },
-    {
-      "id": "A13",
-      "name": "带薪驻留",
-      "route": "A",
-      "hours": 8,
-      "price": 6,
-      "requires": "WA",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 1,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": true,
-      "cost": {},
-      "gain": {
-        "profit": 3
-      },
-      "mechanic": {
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      },
-      "offHours": false
-    },
-    {
-      "id": "A14",
-      "name": "自费出版",
-      "route": "A",
-      "hours": 8,
-      "price": 4,
-      "requires": "AC",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": true,
-      "cost": {},
-      "gain": {
-        "profit": 3
-      },
-      "mechanic": {
-        "playSpend": "principal",
-        "optionalInspirationCash": 2
-      },
-      "offHours": false
-    },
-    {
-      "id": "A15",
-      "name": "作品发行",
-      "route": "A",
-      "hours": 4,
-      "price": 3,
-      "requires": "A",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "cash": 5
-      },
-      "mechanic": {
-        "spend": "auto"
-      }
-    },
-    {
-      "id": "B12",
-      "name": "企业试点",
-      "route": "B",
-      "hours": 8,
-      "price": 5,
-      "requires": "WB",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": true,
-      "cost": {},
-      "gain": {
-        "profit": 3
-      },
-      "mechanic": {
-        "autoProfit": 1
-      },
-      "offHours": false
-    },
-    {
-      "id": "B13",
-      "name": "云端托管",
-      "route": "B",
-      "hours": 4,
-      "price": 4,
-      "requires": "B",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "profit": 2
-      },
-      "mechanic": {
-        "playFee": 3
-      }
-    },
-    {
-      "id": "B14",
-      "name": "创意原型",
-      "route": "B",
-      "hours": 8,
-      "price": 5,
-      "requires": "AAB",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": true,
-      "cost": {},
-      "gain": {
-        "profit": 3
-      },
-      "mechanic": {
-        "spend": "inspiration",
-        "focusDraw": 6,
-        "automatedLook": 3,
-        "autoProfit": 1
-      },
-      "offHours": false
     },
     {
       "id": "W11",
@@ -1447,6 +1516,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -1477,17 +1547,18 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
       "gain": {},
       "progress": 2,
       "mechanic": {
+        "playFee": 3,
         "completion": {
           "cash": 5,
           "duty": 1
-        },
-        "playFee": 3
+        }
       }
     },
     {
@@ -1506,6 +1577,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -1517,99 +1589,6 @@
         "spend": "auto",
         "duty": 1
       }
-    },
-    {
-      "id": "C11",
-      "name": "概念预售",
-      "route": "C",
-      "hours": 4,
-      "price": 3,
-      "requires": "C",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": false,
-      "cost": {},
-      "gain": {
-        "cash": 3
-      },
-      "mechanic": {
-        "spend": "inspiration",
-        "trade": {
-          "limit": 1,
-          "mode": "buy",
-          "price": 3
-        },
-        "advanceCash": true
-      }
-    },
-    {
-      "id": "C12",
-      "name": "自动补货",
-      "route": "C",
-      "hours": 8,
-      "price": 4,
-      "requires": "BCC",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": true,
-      "cost": {},
-      "gain": {
-        "profit": 1
-      },
-      "mechanic": {
-        "capital": 2,
-        "autoProfit": 1,
-        "autoRequiresFull": true,
-        "autoRestock": true
-      },
-      "offHours": false
-    },
-    {
-      "id": "C13",
-      "name": "企业团购",
-      "route": "C",
-      "hours": 8,
-      "price": 4,
-      "requires": "WC",
-      "kind": "repeat",
-      "copies": 4,
-      "stress": 0,
-      "support": 0,
-      "upkeep": 0,
-      "capital": 0,
-      "minSanity": 0,
-      "maxSanity": 10,
-      "professional": false,
-      "parallel": false,
-      "advanced": true,
-      "cost": {},
-      "gain": {
-        "profit": 3
-      },
-      "mechanic": {
-        "playSpend": "principal",
-        "focus": {
-          "min": 6,
-          "cash": 1
-        }
-      },
-      "offHours": false
     },
     {
       "id": "W14",
@@ -1627,6 +1606,7 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": true,
+      "offHours": false,
       "parallel": false,
       "advanced": true,
       "cost": {
@@ -1653,6 +1633,7 @@
       "minSanity": 0,
       "maxSanity": 1,
       "professional": false,
+      "offHours": false,
       "parallel": false,
       "advanced": false,
       "cost": {},
@@ -1677,14 +1658,14 @@
       "minSanity": 0,
       "maxSanity": 10,
       "professional": false,
+      "offHours": true,
       "parallel": false,
       "advanced": true,
       "cost": {},
       "gain": {},
       "mechanic": {
         "salaryTransfer": 3
-      },
-      "offHours": true
+      }
     }
   ]
 }

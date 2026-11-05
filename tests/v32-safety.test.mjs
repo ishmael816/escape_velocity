@@ -17,10 +17,10 @@ test('8h hit and repeated inspection charge each actual activity only once',()=>
  g.inspection.inspectionCount=2;g.diceRandom=seedFor([1,2,2,1]);finish(g);assert.equal(p.caught,3);assert.equal(p.income,0);assert.equal(p.money,8);
 });
 test('duty and working professional cards do not extend an inspection chain',()=>{
- const g=make(),p=g.players[0];rig(g,p,[['W06',0],['A06',1]]);p.cards[1].duty=1;
+ const g=make(),p=g.players[0];rig(g,p,[['W06',0],['A06',1]]);p.duty=1;
  g.inspection.inspectionCount=1;g.diceRandom=seedFor([2,1]);finish(g);
- assert.equal(g.opportunity.stage,'lane');E.chooseOpportunityLane(g,0,4);E.chooseOpportunity(g,0);E.resolveAll(g);
- assert.deepEqual(g.inspection.rolls,[2]);assert.equal(p.caught,0);assert.equal(p.income,1);
+ assert.equal(g.opportunity.stage,'duty');E.chooseActivity(g,0,p.cards[1].uid);E.resolveAll(g);assert.equal(g.opportunity.stage,'choose');E.chooseOpportunity(g,0);E.resolveAll(g);
+ assert.deepEqual(g.inspection.rolls,[2,1]);assert.equal(p.caught,0);assert.equal(p.income,1);
 });
 test('earlier income cannot pay a later growth execution fee before weekly payout',()=>{
  const g=make({startMoney:0}),p=g.players[0];rig(g,p,[['A06',0],['B02',1]]);finish(g);
@@ -43,5 +43,5 @@ test('marker selection UI exposes sources and occupied nights are excluded',()=>
 });
 test('shelf placement shows fixed unit price, capacity and duty choice even with a legacy rate',()=>{
  const g=make(),p=g.players[0],c=add(g,p,'C06');p.duty=1;g.exchangeRate=4;
- const html=placementPanel(g,p,c.uid,{day:0,period:0});assert(html.includes('marker-play-capital'));assert(html.includes('max="3"'));assert(html.includes('$3'));assert(html.includes('marker-play-duty'));
+ const html=placementPanel(g,p,c.uid,{day:0,period:0});assert(html.includes('marker-play-capital'));assert(html.includes('max="3"'));assert(html.includes('$3'));assert(!html.includes('marker-play-duty'));
 });

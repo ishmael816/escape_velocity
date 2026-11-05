@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>仅工作白天，免查岗</title>
+  <g stroke="#263b3b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 18v-5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5"/>
+    <rect x="7" y="18" width="48" height="34" rx="5"/>
+    <path d="M8 30c14 7 32 7 46 0M27 32v6h8v-6"/>
+  </g>
+  <path d="M45 31l13 5v10c0 8-7 13-13 16-6-3-13-8-13-16V36z" fill="#263b3b" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m39 46 4 4 8-9" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

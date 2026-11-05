@@ -5,9 +5,9 @@ import {cardFace, badge} from './card-face.js';
 import {icon} from './icons.js';
 import {clone, same, changedEntries, validatePool, newCard, parsePool, migrateGoods} from './card-studio-model.js';
 
-const DRAFT='ev-card-studio-v32',root=document.querySelector('#studio');
+const DRAFT='ev-card-studio-v34',root=document.querySelector('#studio');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const kinds={repeat:'多次活动',growth:'成长归档',once:'一次性活动'};
+const kinds={repeat:'多次活动',growth:'多次完成后归档',once:'一次性活动'};
 let base=clone(source),pool=clone(source),revision=null,local=false,selected=null,group='cards';
 let filters={query:'',route:'',hours:'',kind:'',price:'',changed:false,sort:'original'};
 let undo=[],redo=[],savedAt='',persistError='',busy=false,rawDirty=false,otherTab=false;
@@ -87,12 +87,15 @@ function renderEditor(){
  let form=section('卡牌信息',field('名称','name','text',{wide:true})+field('编号','id','text')+(group==='cards'?select('流派','route',Object.entries(ROUTES).filter(([r])=>r!=='S').map(([r,d])=>[r,d.name])):num('实体张数','copies',1,20)));
  if(group==='cards'){
   form+=section('01 / 购买',num('资金','price')+field('技能要求','requires','text',{hint:'如 AA、BC；留空表示无要求'}));
-  form+=section('02 / 打出',select('等级 / 占用时间','hours',[[4,'I级牌（4h）'],[8,'II级牌（8h）']])+num('日程理智 ±','sanityImpact',-10,10)+num('锁定占款','capital')+num('占款 / 1 收入','capitalRatio')+check('仅工作白天 · 免查岗','professional')+check('仅非上班时间','offHours')+check('白天并行（4h）','parallel'));
+  form+=section('02 / 打出',select('等级 / 占用时间','hours',[[4,'I级牌（4h）'],[8,'II级牌（8h）']])+num('日程理智 ±','sanityImpact',-10,10)+check('仅工作白天 · 免查岗','professional')+check('仅非上班时间','offHours'));
   form+=section('03 / 结算',num('理智 ≥','minSanity',0,10)+num('理智 ≤','maxSanity',0,10)+num('执行资金 −','cost.money')+num('维持资金 −','upkeep')+num('收入 +（计逃离）','gain.profit')+num('奖金 +（不计逃离）','gain.cash')+num('工资 +（不计逃离）','gain.salary'));
   form+=section('高理智奖励',effectToggle('focus','高理智奖励',c.mechanic?.focus)+(c.mechanic?.focus?num('理智 ≥','mechanic.focus.min',1,10)+Object.entries({profit:'额外副业 +',cash:'额外资金 +',look:'看牌数改为',belowBonus:'下邻加成改为 +'}).filter(([key])=>c.mechanic.focus[key]!==undefined).map(([key,label])=>num(label,'mechanic.focus.'+key,1,key==='look'?12:10)).join('')+(c.dice?check('收益骰掷两次取高','mechanic.focus.reroll'):''):''),!!c.mechanic?.focus);
-  form+=section('持久度与归档',select('活动类型','kind',Object.entries(kinds))+(c.kind!=='repeat'?num('成功几次完成','progress',1,12):'')+select('完成权限','permission',[['','无'],['weekend','永久双休'],['protection','每周保护一张I级牌']])+check('完成后保留永久效果','permanent')+check('可被高级找牌效果找到','advanced'));
-  form+=section('灵感与过牌',num('空夜放置灵感','inspirationGenerate',0,7)+num('灵感 ≥（不消耗）','inspirationRequired',0,7)+num('过牌消耗灵感','inspirationSpend',0,1)+num('弃手牌另加收入','handDiscardBonus')+effectToggle('opportunity','过牌',c.opportunity)+ (c.opportunity?num('查看几张','opportunity.count',1,12)+check('符合技能免费取 1','opportunity.free'):'')+num('招聘附加费','hireFee')+num('招聘查看几张','hireDrawCount',0,12),!!(c.inspirationGenerate||c.inspirationRequired||c.inspirationSpend||c.handDiscardBonus||c.opportunity||c.hireFee));
-  form+=section('骰子、成熟与联动',effectToggle('dice','骰子收益',c.dice)+(c.dice?select('骰子收益类型','dice.resource',[['profit','收入（计逃离）'],['salary','奖金（不计逃离）']])+`<div class="dice-fields wide">${c.dice.faces.map((n,i)=>num('⚀⚁⚂⚃⚄⚅'[i],`dice.faces.${i}`)).join('')}</div>`:'')+effectToggle('maturation','多周成熟',c.maturation)+(c.maturation?num('成熟所需次数','maturation.steps',1,12)+num('成熟前收入','maturation.initial')+num('成熟后收入','maturation.mature'):'')+select('条件收益','condition',[['','无'],['lowSanity','理智低于门槛'],['inspiration','灵感达到门槛'],['professional','此前完成工作活动'],['capitalJob','此前完成有占款活动']])+(c.condition?num('额外收益','conditionalBonus')+(c.condition==='lowSanity'?num('理智 ≤','lowSanityAt',0,10):c.condition==='inspiration'?num('灵感 ≥','inspirationBonusAt',1,7):''):'')+effectToggle('boost','下一张收入联动',c.boost)+(c.boost?num('下一张收入 +','boost.amount',1,99)+check('仅有占款的牌','boost.capitalOnly'):''),!!(c.dice||c.maturation||c.condition||c.boost));
+  form+=section('持久度与归档',select('活动类型','kind',Object.entries(kinds))+(c.kind!=='repeat'?num('成功几次完成','progress',1,12):''));
+  form+=section('灵感与过牌',num('每次灵感 +','mechanic.generate',0,7)+num('弃手牌1 → 资金 +','mechanic.discardHand')+effectToggle('opportunity','过牌',c.opportunity)+(c.opportunity?num('查看几张','opportunity.count',1,12)+select('查看范围','opportunity.route',[['','任意流派'],['W','履职'],['A','创意'],['B','技术'],['C','商业']])+check('符合技能免费取 1','opportunity.free'):'')+num('招聘附加费','hireFee'),!!(c.mechanic?.generate||c.mechanic?.discardHand||c.opportunity||c.hireFee));
+  form+=section('货品与自动',num('货品容量','mechanic.capital',0,7)+num('基础以外的自动副业 +','mechanic.autoProfit')+check('自动奖励要求货品装满','mechanic.autoRequiresFull')+check('有自动时每次补货1','mechanic.autoRestock')+(c.mechanic?.trade?num('交易价','mechanic.trade.price',1,99)+num('每次最多货品','mechanic.trade.limit',1,7):''),!!(c.mechanic?.capital||c.mechanic?.autoProfit||c.mechanic?.trade));
+  if(c.kind==='growth')form+=section('完成奖励',num('资金 +','mechanic.completion.cash')+num('履职 +','mechanic.completion.duty')+check('下周起永久双休','mechanic.completion.weekend')+check('归档后可再次安排','mechanic.replay'),!!c.mechanic?.completion);
+  form+='<p class="field-note">指定资源来源、相邻条件等特殊效果可在下方完整 JSON 中修改。</p>';
+
  }else{
   const type=c.inspectionCount?'inspection':c.blocked?'team':c.temporaryWeekend?'weekend':'bonus';
   form+=section('事件效果',`<label class="field wide"><span>事件类型</span><select id="event-type">${options([['inspection','领导查岗'],['team','周日团建'],['bonus','发放奖金'],['weekend','临时双休']],type)}</select></label>`+(type==='inspection'?num('查岗轮数','inspectionCount',1,6):type==='team'?select('团建时段','blocked.slot',[['am','周日上午'],['pm','周日下午']]):type==='bonus'?num('资金 +','cash',1,99):'<p class="field-note wide">周六临时自由，不提供永久理智加成。</p>'));
@@ -115,12 +118,13 @@ function editField(input){
  else if(path==='id'){
   if(!/^[A-Za-z0-9_-]{1,40}$/.test(value)||[...pool.cards,...pool.events].some(x=>x!==c&&x.id===value)){undo.pop();notice('编号须唯一，且只含字母、数字或横线');input.value=c.id;return;}
   c.id=value;selected=value;
- }else{setPath(c,path,value);}
+ }else if(path==='opportunity.route'&&!value){delete c.opportunity.route;}else if(path.startsWith('mechanic.')&&value===0&&!path.startsWith('mechanic.trade.')&&!path.startsWith('mechanic.completion.')){delete c.mechanic?.[path.split('.')[1]];}else{setPath(c,path,value);}
+ if(path==='hours')c.advanced=value===8;
  if(path==='wellbeing.effect'&&value==='discard')c.wellbeing.max=0;
  if(path==='requires')c.requires=value.toUpperCase().replace(/\s/g,'');
  if(path==='kind'){
-  if(value==='repeat'){delete c.progress;delete c.permission;delete c.permanent;}
-  else{delete c.maturation;c.progress=value==='growth'?2:1;if(value==='growth'){c.cost.money=Math.max(1,c.cost.money||0);c.minSanity=Math.max(1,c.minSanity||0);delete c.permission;delete c.permanent;}}
+  if(value==='repeat'){delete c.progress;delete c.permission;delete c.permanent;if(c.mechanic){delete c.mechanic.completion;delete c.mechanic.replay;delete c.mechanic.finalSpend;}}
+  else{delete c.maturation;c.progress=value==='growth'?2:1;if(value==='growth'){delete c.permission;delete c.permanent;}}
  }
  if(path==='permission'){if(value){c.kind='once';c.permanent=true;c.progress=c.progress||2;}else{delete c.permission;delete c.permanent;}}
  if(path==='condition'){if(value){c.conditionalBonus??=1;if(value==='lowSanity')c.lowSanityAt??=2;if(value==='inspiration')c.inspirationBonusAt??=1;}else delete c.condition;}

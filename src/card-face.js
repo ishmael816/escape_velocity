@@ -1,3 +1,4 @@
+import { cardIllustration } from './card-images.js';
 import { ROUTES, cardPhases } from './cards.js';
 import { familyOf, hours } from './card-visuals.js';
 import { icon } from './icons.js';
@@ -57,6 +58,7 @@ export function cardFace(d,compact=false,c=null) {
   const dice=settlement.dice?Object.entries(settlement.dice.faces.reduce((out,n,i)=>((out[n]||=[]).push(i+1),out),{})).map(([n,faces])=>`<span class="dice-outcome"><span class="die-faces" aria-label="骰点 ${faces.join('、')}">${faces.map(f=>`<span aria-hidden="true">${'⚀⚁⚂⚃⚄⚅'[f-1]}</span>`).join('')}</span><span>→</span>${badge('money','+'+n,`结算资金 +${n}`)}</span>`).join(''):'';
   return `<div class="tabletop-face illustrated-face family-${familyOf(d)} duration-${hours(d.size)} ${compact?'compact-face':''} ${mind?'has-mind':''}" style="--card-hours:${hours(d.size)}">
     <header class="printed-title"><span class="route-emblem">${icon(d.icon,14)}</span><strong>${esc(d.name)}</strong></header>
+    ${cardIllustration(d)}
     <div class="mind-corner" data-phase="play" aria-label="打出：理智影响">${mind?badge('sanity',(mind>0?'+':'−')+Math.abs(mind),`打出：理智 ${mind>0?'+':'−'}${Math.abs(mind)}，撤回解除${mind>0?'；须能支付结算费用，不逐周累加':''}`,'reversible'):''}</div>
     ${play.capital||play.capitalRatio||play.parallel||play.professional||play.offHours||play.sundayRelief?`<div class="printed-play" data-phase="play" aria-label="打出：占款与时段">${icon('arrow',12)}${play.sundayRelief?`<span class="mechanic-glyph" title="周日全天且成功付费：额外补偿2点占用压力" aria-label="周日全天理智补偿＋2"><b>7</b>${icon('sun',14)} → ${badge('sanity','+'+play.sundayRelief,'周日全天理智补偿＋'+play.sundayRelief)}</span>`:''}${play.capital||play.capitalRatio?`<span class="capital-mark" title="打出锁定占款，撤回返还">${icon('lock',12)}${badge('money',c?.lockedCapital||play.capital||play.capitalRatio,'打出锁定占款')}</span>`:''}${play.parallel?`<span class="mechanic-glyph" title="仅白天与另一张I级牌并行">${icon('layers',16)} ∥</span>`:''}${play.offHours?`<span class="mechanic-glyph" title="仅非上班时间" aria-label="仅非上班时间">${icon('moon',16)} / ${icon('sun',16)} ${icon('bag',13)}⊘</span>`:''}${play.professional?`<span class="professional-mark" title="仅工作白天，免查岗">${icon('bag',13)} ${icon('check',12)}</span>`:''}</div>`:''}
     <div class="printed-effects" data-phase="settlement" aria-label="结算效果">${settlement.sanity.min||settlement.sanity.max<10?`<div class="settlement-gates">${settlement.sanity.min?badge('sanity','≥'+settlement.sanity.min,`结算要求理智 ≥${settlement.sanity.min}`):''}${settlement.sanity.max<10?badge('sanity','≤'+settlement.sanity.max,`结算要求理智 ≤${settlement.sanity.max}`):''}${icon('arrow',14)}</div>`:''}<div class="resource-equation">${resources(settlement.pay,'−')}${Object.values(settlement.pay).some(Boolean)&&Object.values(settlement.receive||{}).some(Boolean)?'<span class="effect-arrow" aria-hidden="true">→</span>':''}${!d.mechanic&&target&&Object.values(settlement.receive||{}).some(Boolean)?`<span class="completion-gain" title="完成${target}次后获得" aria-label="完成${target}次后获得">${icon("check",14)}${resources(settlement.receive)}</span>`:resources(settlement.receive)}${d.income?`<span class="income-mark" title="此处正资金计入逃离门槛" aria-label="计入逃离门槛">${icon('exit',13)}</span>`:''}</div>
@@ -72,13 +74,13 @@ export function cardFace(d,compact=false,c=null) {
 }
 
 export function iconHelp(){return `<div class="icon-help">${[
-  [icon('layers',24)+' ∥','并行：与另一张活动共用时段，时间取较长者。最多两张，分别计算理智影响、结算资金与查岗。'],
-  [icon('eye',24)+icon('layers',24)+'3 → '+icon('shop',24)+'1','看3买1：选一个时长牌堆查看，原价购买至多一张；其余弃置，下周再安排。'],
+  [icon('bag',24)+icon('check',18),'工作标签：仅工作白天、免查岗。月亮标签：仅非工作时间。'],
+  [icon('eye',24)+icon('layers',24)+'3 → '+icon('shop',24)+'1','看3买1：按卡面指定流派或任意I级牌堆查看，原价购买至多一张；其余弃置，下周再安排。'],
   [icon('shop',24)+badge('money',5,'买价示例'),'购买：底栏检查价格与技能，满足后支付买价；理智线不在购买或安排时检查。搜索与招募中的购买同样检查。'],
-  [icon('arrow',24)+badge('sanity','+2','理智影响','reversible'),'打出：右上理智 +／− 是日程影响，撤回解除，不逐周累加。正影响须能支付结算费用；查停或团建时失效。夜间另计理智 −1；周日白天排满8h另计理智 −2，只占半天不扣。货品优先从库存上架，不足按每件3资金进货。撤回时货品回库存。'],
+  [icon('arrow',24)+badge('sanity','+2','理智影响','reversible'),'打出：右上理智 +／− 是日程影响，撤回解除，不逐周累加。正影响须能支付结算费用；查岗只暂停结算，保留理智影响。夜间另计理智 −1；周日白天排满8h另计理智 −2，只占半天不扣。货品优先从库存上架，不足按每件3资金进货。撤回时货品回库存。'],
   [badge('money','−1','结算支付')+' → '+badge('money','+2','结算获得'),'结算：执行前检查中央理智线，不满足则本周不执行、不收费，牌保留；满足后中央负金币先支付，正金币在周末到账；付不起的重复活动撤回手牌并解除理智影响。看牌、骰子、技能归档也在中央结算区。带出口图标的正资金计入逃离门槛，工资与奖金不计。'],
   [badge('once',null,'一次性'),'票券：成功执行一次后离场。'],
-  [badge('once',2,'两次完成'),'票券角标2／3：累计成功相应次数后完成，每次都支付中央费用；执行效果每次发生，完成奖励与技能在最后一次获得，圆孔放进度指示物。'],
+  [badge('once',2,'两次完成'),'票券角标2／3：累计成功相应次数后完成，每次都支付中央费用；执行效果每次发生，完成奖励与技能在最后一次获得，从已付费用留1枚钱币记次，没有付费则从公共供应取1枚。完成收回；未完成撤回不返还。'],
   [badge('repeat',null,'多次'),'循环箭头：跨周保留，重复执行，包括找牌活动。'],
   [badge('inspiration','≥2','版图灵感门槛'),'灵感：仅由卡牌放在空夜，同一空夜可叠加，放牌清除、不自动补充。≥只检查不消耗；−是消耗。空位不足不生成、不收费。'],
   [badge('sanity','≥2','结算理智线'),'中央理智 ≥2（或 ≤2）只在本张活动执行前检查一次，理智不作为费用。'],

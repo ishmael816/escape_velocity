@@ -27,22 +27,22 @@ function board(sanity,plan){const g=make({startSanity:sanity,startMoney:60});rig
 function risk(g,effect,max=2){g.inspection.wellbeing={effect,max};}
 
 test('all focus cards have executable rewards and explicit card text',()=>{
- const cards=pool.cards.filter(c=>c.mechanic.focus);assert.equal(cards.length,15);
+ const cards=pool.cards.filter(c=>c.mechanic.focus);assert.equal(cards.length,3);
  for(const c of cards){assert([6,8].includes(c.mechanic.focus.min));assert(cardFace(getCard(c.id)).includes('理智≥'+c.mechanic.focus.min));}
  assert.deepEqual(validatePool(pool),[]);
 });
 test('sanity 6 rewards cash while writing and business keep printed income',()=>{
  for(const [type,low,high]of [['A06',1,1],['A08',3,3],['C13',3,3]]){
   for(const [sanity,expected]of [[5,low],[6,high],[7,high]]){
-   const g=board(sanity,[[type,0]]);drain(g);assert.equal(g.players[0].income,expected,type+' @'+sanity);assert.equal(g.players[0].settlement.otherIncome,sanity>=6?1:0);
+   const g=board(sanity,[[type,0]]);drain(g);assert.equal(g.players[0].income,expected,type+' @'+sanity);assert.equal(g.players[0].settlement.otherIncome,0);
   }
  }
 });
 test('technical search rewards sanity 6 with four choices and cash, without requiring skills',()=>{
  for(const sanity of [5,6]){
   const g=board(sanity,[['B04',0]]);lock(g);E.resolveAll(g);
-  assert.equal(g.opportunity.stage,'lane');assert.equal(g.opportunity.count,sanity===6?4:2);
-  assert.equal(getCard('B04').requires,'');drain(g);assert.equal(g.players[0].money,60+3+(sanity===6?1:0));
+  assert.equal(g.opportunity.stage,'choose');assert.equal(g.opportunity.count,sanity===6?4:2);
+  assert.equal(getCard('B04').requires,'');drain(g);assert.equal(g.players[0].money,63);
  }
 });
 test('creative free search spends inspiration and scales from two to three I candidates',()=>{
@@ -60,20 +60,21 @@ test('below bonus upgrades to two rather than stacking three at sanity 6',()=>{
 });
 test('mature subscription has three income and sanity 6 adds cash',()=>{
  for(const sanity of [5,6]){
-  const g=board(sanity,[['B09',0]]);g.players[0].cards[0].progress=getCard('B09').maturation.steps;
-  drain(g);assert.equal(g.players[0].income,3);assert.equal(g.players[0].settlement.otherIncome,sanity===6?1:0);
+  const g=board(sanity,[['B09',0]]);g.players[0].cards[0].auto=1;
+  drain(g);assert.equal(g.players[0].income,3);assert.equal(g.players[0].settlement.otherIncome,0);
  }
 });
 test('capital investment gives cash at sanity 8 without extra escape income',()=>{
- for(const sanity of [7,8]){const g=board(sanity,[['C06',0]]);g.players[0].cards[0].principal=3;drain(g);assert.equal(g.players[0].income,4);assert.equal(g.players[0].settlement.otherIncome,sanity===8?1:0);}
+ for(const sanity of [7,8]){const g=board(sanity,[['C06',0]]);g.players[0].cards[0].principal=3;drain(g);assert.equal(g.players[0].income,4);assert.equal(g.players[0].settlement.otherIncome,0);}
 });
-test('painting keeps income 1; bonus cash mean rises from 0.5 to 0.75 at sanity 8',()=>{
- for(const base of [6,7]){ // painting itself adds one sanity
-  const g=board(base,[['A11',0]]);g.diceRandom=seedFor([1,6]);drain(g);
-  const roll=g.diceRolls.find(r=>r.kind==='activity');assert.equal(g.players[0].income,1);assert.equal(g.players[0].settlement.otherIncome,base===7?1:0);assert.equal(roll.second,base===7?6:null);
+test('painting spends one inspiration for a 50 percent four-cash bonus, never extra side income',()=>{
+ for(const face of [1,2,3,4,5,6]){
+  const g=board(6,[['A11',0]]);g.diceRandom=seedFor([face]);lock(g);E.resolveAll(g);const count=E.inspirationCount(g.players[0]);
+  E.chooseActivity(g,0,{useInspiration:true,optionalSource:'0-2'});drain(g);
+  assert.equal(g.players[0].income,1);assert.equal(g.players[0].settlement.otherIncome,face>=4?4:0);assert.equal(E.inspirationCount(g.players[0]),count-1);
  }
- const faces=getCard('A11').dice.faces;assert.equal(faces.flatMap(a=>faces.map(b=>Math.max(a,b))).reduce((a,b)=>a+b,0)/36,0.75);
 });
+
 test('12 physical events preserve 8 inspections, five conditional risks, one permanent loss at zero',()=>{
  const sum=f=>pool.events.filter(f).reduce((n,e)=>n+e.copies,0);
  assert.equal(sum(()=>true),12);assert.equal(sum(e=>e.inspectionCount),8);assert.equal(sum(e=>e.wellbeing),5);
@@ -96,11 +97,11 @@ test('discard choices are atomic, resumable, cannot skip, and process multiple p
  E.chooseActivity(g,1,g.players[1].cards[0].uid);assert.equal(g.opportunity,null);
  assert.equal(g.discard[4].filter(x=>x.uid===c.uid).length,1);E.rollInspections(g);assert.equal(g.opportunity,null);drain(g);
 });
-test('withdraw releases principal and duty, retains maturity, excludes support and growth',()=>{
+test('withdraw releases principal and duty, clears progress and automatic markers, excludes support and growth',()=>{
  const g=board(0,[['C06',0],['W10',1],['B02',2]]),p=g.players[0],c=p.cards[0];
  c.principal=3;c.duty=1;c.progress=1;c.auto=1;risk(g,'withdraw');lock(g);E.rollInspections(g);
  assert.deepEqual(W.wellbeingCandidates(g,0,'withdraw').map(x=>x.uid),[c.uid]);
- E.chooseActivity(g,0,c.uid);assert.equal(E.findPlacement(p,c.uid),null);assert.equal(p.principal,3);assert.equal(p.duty,1);assert.equal(c.progress,1);assert.equal(c.auto,1);
+ E.chooseActivity(g,0,c.uid);assert.equal(E.findPlacement(p,c.uid),null);assert.equal(p.principal,3);assert.equal(p.duty,1);assert.equal(c.progress,undefined);assert.equal(c.auto,undefined);
 });
 test('zero-sanity discard removes one board card and clears markers; no eligible target is harmless',()=>{
  const g=board(0,[['C06',0]]),p=g.players[0],c=p.cards[0];c.principal=2;c.progress=1;c.auto=1;

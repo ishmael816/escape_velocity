@@ -20,9 +20,9 @@ test('restocking counts printed income and attached markers each week without ac
 test('focused delivery charges on both weeks and awards completion only once',()=>{
  const g=make({startMoney:60}),c=scheduled(g,'W04',0);
  finish(g);assert.equal(c.progress,1);assert.equal(g.players[0].duty||0,0);assert.equal(g.players[0].money,62);
- next(g);finish(g);assert.equal(g.players[0].duty,1);assert.equal(g.players[0].money,67);
+ next(g);finish(g);assert.equal(g.players[0].duty,1);assert.equal(g.players[0].money,69);
  assert.equal(E.findPlacement(g.players[0],c.uid),null);
- next(g);finish(g);assert.equal(g.players[0].duty,1);assert.equal(g.players[0].money,71);
+ next(g);finish(g);assert.equal(g.players[0].duty,1);assert.equal(g.players[0].money,73);
 });
 
 test('selling courses requires prior technical growth and free inspiration search stays in level I',()=>{
@@ -44,8 +44,8 @@ test('weekend project pays three times, cannot accept external duty, and unlocks
  placementTurn(g);assert.match(E.canPlace(g,p,c.uid,{day:0,period:0},{duty:true}),/履职/);
  (E.findPlacement(g.players[0],c.uid)?adjustmentTurn:placementTurn)(g);E.place(g,0,c.uid,{day:0,period:0});
  for(let week=1;week<=3;week++){
-  const money=p.money;finish(g);assert.equal(p.money,money-2+g.config.salary+5);assert.equal(p.weekend,false);assert.equal(p.duty,5);
-  if(week<3){assert.equal(c.progress,week);assert.equal(c.projectDuty,week);assert(E.findPlacement(p,c.uid));}
+  const money=p.money;finish(g);assert.equal(p.money,money-2+g.config.salary+5+(week===3?3:0));assert.equal(p.weekend,false);assert.equal(p.duty,5);
+  if(week<3){assert.equal(c.progress,week);assert.equal(c.progressCoins,week);assert(E.findPlacement(p,c.uid));}
   else{assert.equal(p.weekendFrom,4);assert(p.skills.some(x=>x.uid===c.uid));assert.equal(E.findPlacement(p,c.uid),null);}
   next(g);
  }
@@ -54,30 +54,31 @@ test('weekend project pays three times, cannot accept external duty, and unlocks
 
 test('reporting searches only I cards and management bonus excludes escape income',()=>{
  const g=make({startMoney:60,startSanity:7}),p=g.players[0];scheduled(g,'W06',0);lock(g);E.resolveAll(g);
- assert.equal(g.opportunity.stage,'lane');const before=structuredClone(g);assert.throws(()=>E.chooseOpportunityLane(g,0,8));assert.deepEqual(g,before);
- E.chooseOpportunityLane(g,0,4);assert.equal(g.opportunity.options.length,2);assert(g.opportunity.options.every(c=>getCard(c).hours===4));E.chooseOpportunity(g,0);finish(g);assert.equal(p.income,0);assert.equal(p.settlement.otherIncome,3);
+ assert.equal(g.opportunity.stage,'choose');const before=structuredClone(g);assert.throws(()=>E.chooseOpportunityLane(g,0,8));assert.deepEqual(g,before);
+ assert.equal(g.opportunity.options.length,2);assert(g.opportunity.options.every(c=>getCard(c).hours===4));E.chooseOpportunity(g,0);finish(g);assert.equal(p.income,0);assert.equal(p.settlement.otherIncome,2);
  for(const face of [2,5]){const h=make({startMoney:60}),q=h.players[0];q.duty=2;scheduled(h,'W14',0);h.diceRandom=seedFor([face]);finish(h);assert.equal(q.income,0);assert.equal(q.settlement.otherIncome,5+(face>3?2:0));assert.equal(q.money,60-2+5+q.settlement.otherIncome);}
 });
 
 test('all six mixed-route II cards require both archives and fit the 3–4 income band',()=>{
- const specs=[['A13','WA',3],['B12','WB',4],['C13','WC',3],['B14','AAB',4],['A14','AC',3],['C12','BCC',4]];
+ const specs=[['A13','WA',2],['B12','WB',3],['C13','WC',3],['B14','AAB',4],['A14','AC',3],['C12','BCC',4]];
  for(const [id,req,profit] of specs){const g=make({startMoney:60,startSanity:7}),p=g.players[0],d=getCard(id);assert.equal(d.requires,req);assert.equal(d.hours,8);
   skills(p,req.slice(0,-1));assert(E.canBuy(g,p,d));skills(p,req);assert.equal(E.canBuy(g,p,d),null);
   const c=scheduled(g,id,0);c.auto=1;if(id==='C12')c.principal=2;if(id==='B14')p.inspirationSlots=['4-2'];
-  const count=p.cards.length;finish(g);const result=g.players[0];assert.equal(result.income,profit,id);if(id==='B14'){assert.equal(result.cards.length,count+1);assert.equal(getCard(result.cards.at(-1)).hours,4);assert.equal(E.findPlacement(result,result.cards.at(-1).uid),null);}
+  const count=p.cards.length;finish(g);const result=g.players[0];assert.equal(result.income,profit,id);if(id==='B14')assert.equal(result.cards.length,count);
  }
 });
 
-test('publishing optional inspiration pays exactly once and rejects a missing source atomically',()=>{
- const g=make({startMoney:60}),p=g.players[0];p.inspirationSlots=['4-2'];scheduled(g,'A14',0);lock(g);E.resolveAll(g);assert.equal(g.opportunity.stage,'v32');
- const before=structuredClone(g);assert.throws(()=>E.chooseActivity(g,0,{useInspiration:true,optionalSource:'3-2'}));assert.deepEqual(g,before);
- E.chooseActivity(g,0,{useInspiration:true,optionalSource:'4-2'});finish(g);assert.equal(g.players[0].income,3);assert.equal(g.players[0].settlement.otherIncome,2);assert.equal(E.inspirationCount(g.players[0]),0);
+test('publishing consumes one real good at placement, not inspiration every week',()=>{
+ const g=make({startMoney:60}),p=g.players[0],c=add(g,p,'A14');placementTurn(g);const before=structuredClone(g);
+ assert.throws(()=>E.place(g,0,c.uid,{day:0,period:0}));assert.deepEqual(g,before);
+ p.principal=1;E.place(g,0,c.uid,{day:0,period:0});assert.equal(p.principal,0);finish(g);assert.equal(p.income,3);assert.equal(p.settlement.otherIncome,0);
 });
 
-test('new duty cannot undo a resolved inspection; already protected cards remain safe that week',()=>{
- const g=make({startMoney:60}),p=g.players[0],c=scheduled(g,'B03',0);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1,2]);lock(g);E.rollInspections(g);
- assert(E.activityDanger(g,p,c,{day:0,period:0}));p.duty=1;g.opportunity={stage:'duty',player:0,count:1};E.chooseActivity(g,0,c.uid);assert.equal(c.duty,1);assert(E.activityDanger(g,p,c,{day:0,period:0}));finish(g);assert.equal(p.income,0);
- next(g);assert.equal(p.inspectionProtected,undefined);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1]);lock(g);E.rollInspections(g);assert(!E.activityDanger(g,p,c,{day:0,period:0}));V.spend(p,'duty',c.uid);assert(!E.activityDanger(g,p,c,{day:0,period:0}));finish(g);assert.equal(p.income,1);
+test('inspection duty protects a hit but does not cancel the rolled chase or remain attached',()=>{
+ const g=make({startMoney:60}),p=g.players[0],c=scheduled(g,'B03',0);p.duty=1;g.inspection.inspectionCount=1;g.diceRandom=seedFor([1,2]);lock(g);E.rollInspections(g);
+ assert(E.activityDanger(g,p,c,{day:0,period:0}));assert.equal(g.opportunity.stage,'duty');E.chooseActivity(g,0,c.uid);
+ assert.equal(p.duty,0);assert.equal(c.duty,undefined);assert(!E.activityDanger(g,p,c,{day:0,period:0}));assert.deepEqual(g.inspection.rolls,[1,2]);finish(g);assert.equal(p.income,1);assert.equal(p.caught,0);
+ next(g);assert.equal(p.inspectionProtected,undefined);g.inspection.inspectionCount=1;g.diceRandom=seedFor([1,2]);finish(g);assert.equal(p.income,0);assert.equal(p.caught,1);
 });
 
 test('event split replaces own and opponents events before dice, excludes escaped players and resets weekly',()=>{

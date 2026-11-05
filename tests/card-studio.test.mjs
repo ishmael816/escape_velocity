@@ -31,7 +31,7 @@ test('new cards have distinct IDs and invalid engine combinations cannot be appl
  assert.throws(()=>parsePool('{bad'));
 });
 test('edited special-effect values appear in both preview and generated documentation',()=>{
- const pool=clone(source),q=pool.cards.find(c=>c.id==='A10'),m=pool.cards.find(c=>c.maturation);
+ const pool=clone(source),q=pool.cards.find(c=>c.id==='A10'),m=pool.cards.find(c=>c.id==='B09');m.maturation={steps:2,initial:1,mature:3};
  q.opportunity.count=5;m.maturation.steps=3;
  assert(cardFace(adapt(q)).includes('看 5 张'));
  const outputs=generateOutputs(pool);assert(outputs['docs/cards-v0.32.md'].includes('看5免费取1'));assert(outputs['docs/cards-v0.32.md'].includes('前3次收入'));
@@ -41,7 +41,7 @@ test('edited inspiration search count is used by the actual settlement engine',(
  const def=getCard('A10'),before=def.opportunity.count;
  try{
   def.opportunity.count=5;const g=make(),p=g.players[0];rig(g,p,[['A10',0]]);p.inspirationSlots=['3-2'];lock(g);E.resolveAll(g);
-  assert.equal(g.opportunity.stage,'v32');E.chooseActivity(g,0,{resource:'3-2'});assert.equal(g.opportunity.count,5);E.chooseOpportunityLane(g,0,4);assert.equal(g.opportunity.options.length,5);
+  assert.equal(g.opportunity.stage,'v32');E.chooseActivity(g,0,{resource:'3-2'});assert.equal(g.opportunity.count,5);assert.equal(g.opportunity.stage,'choose');assert.equal(g.opportunity.options.length,5);
  }finally{def.opportunity.count=before;}
 });
 

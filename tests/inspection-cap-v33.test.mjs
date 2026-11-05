@@ -24,21 +24,21 @@ test('a miss ends only that player participation; protected cards do not trigger
  const g=checked([['B03',0],['B03',1]],[1,2]);rig(g,g.players[1],[['B03',1]]);
  lock(g);E.rollInspections(g);
  assert.equal(g.inspection.playerTimes[1].length,0);assert.equal(g.inspection.playerTimes[0].length,4);
- const h=checked([['B03',0]],[1,2]);h.players[0].cards[0].duty=1;
+ const h=checked([['W04',0]],[1,2]);
  lock(h);E.rollInspections(h);assert.deepEqual(h.inspection.rolls,[1]);
 });
 test('caught support retains sanity, waives execution fees, and cannot trigger a low sanity event',()=>{
- const g=checked([['A12',0]],[1,2]),p=g.players[0];add(g,p,'A06');
+ const g=checked([['A11',0]],[1,2]),p=g.players[0];add(g,p,'A06');
  g.inspection.wellbeing={effect:'hand',max:3};
- assert.equal(p.sanity,7);lock(g);E.rollInspections(g);
- assert.equal(p.sanity,7);assert.equal(p.money,30);assert.equal(g.opportunity,null);
+ assert.equal(p.sanity,4);lock(g);E.rollInspections(g);
+ assert.equal(p.sanity,4);assert.equal(p.money,30);assert.equal(g.opportunity,null);
  assert.equal(p.supports[0].active,true);assert.equal(p.supports[0].fee,0);
  const before=structuredClone(g);E.rollInspections(g);assert.deepEqual(g,before);
- E.resolveAll(g);assert.equal(p.money,32);assert.equal(p.sanity,7);assert.equal(p.caught,1);
+ E.resolveAll(g);assert.equal(p.money,32);assert.equal(p.sanity,4);assert.equal(p.caught,1);
  // Withdrawing still cancels the placement effect.
  next(g);g.day=2;g.turn=0;
  while(E.activeBuyer(g)!==0)g.turn++;
- E.unplace(g,0,p.cards.find(c=>c.type==='A12').uid);assert.equal(p.sanity,3);
+ E.unplace(g,0,p.cards.find(c=>c.type==='A11').uid);assert.equal(p.sanity,3);
 });
 test('mixed income/support and negative sanity remain on the board when caught',()=>{
  const g=checked([['A11',0],['A03',0,1]],[1,2]),p=g.players[0];

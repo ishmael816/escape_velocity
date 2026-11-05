@@ -54,10 +54,14 @@ export function validatePool(pool) {
    const m=c.mechanic;
    if(!object(m))fail(name,'mechanic须为对象');
    else{
-    const numeric=['encore','fullSale','automatedLook','playFee','generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty','salaryTransfer','autoProfit','focusDraw','optionalInspirationProfit','optionalInspirationCash'];
-    const flags=['autoRestock','relayBelow','rightAuto','replay','leftAuto','hire','advanceCash','projectDuty','salaryDice','eventSplit','autoRequiresFull'];
+    const numeric=['discardHand','goods','inspirationDice','encore','fullSale','automatedLook','playFee','generate','wholeNight','convert','artist','belowBonus','agent','sellCourse','capital','duty','salaryTransfer','autoProfit','focusDraw','optionalInspirationProfit','optionalInspirationCash'];
+    const flags=['distinctNights','goodsIncome','autoRestock','relayBelow','rightAuto','replay','leftAuto','hire','advanceCash','projectDuty','salaryDice','eventSplit','autoRequiresFull'];
     const tokens=['spend','playSpend','finalSpend'];
-    for(const k of Object.keys(m))if(![...numeric,...flags,...tokens,'completion','trade','focus'].includes(k))fail(name,'未知规则 '+k);
+    for(const k of Object.keys(m))if(![...numeric,...flags,...tokens,'playResources','completion','trade','focus'].includes(k))fail(name,'未知规则 '+k);
+    if(m.playResources!==undefined){
+     if(!object(m.playResources))fail(name,'打出资源须为对象');
+     else for(const [k,v] of Object.entries(m.playResources)){if(!['inspiration','principal','auto'].includes(k))fail(name,'未知打出资源 '+k);integer(v,name,'playResources.'+k,1,7);}
+    }
     if(m.focus!==undefined){
      const f=m.focus;
      if(!object(f))fail(name,'高理智奖励须为对象');
@@ -75,7 +79,7 @@ export function validatePool(pool) {
     }
     for(const k of numeric)if(m[k]!==undefined&&!(k==='artist'&&['onePerNight','all'].includes(m[k])))integer(m[k],name,'mechanic.'+k,1,k==='generate'?7:20);
     for(const k of flags)if(m[k]!==undefined&&typeof m[k]!=='boolean')fail(name,k+'须为布尔值');
-    if((m.fullSale||m.autoRestock)&&!m.capital)fail(name,'满架出货或自动补货需要货架');
+    if((m.fullSale||m.autoRestock)&&!m.capital)fail(name,'出货或自动补货需要货品容量');
     if(m.automatedLook&&(!m.focusDraw||c.opportunity))fail(name,'自动选牌需要高理智抽牌，不能叠加其他找牌');
     for(const k of tokens)if(m[k]!==undefined&&!['inspiration','principal','duty','auto'].includes(m[k]))fail(name,k+'指示物无效');
     if(m.completion!==undefined){
@@ -92,7 +96,10 @@ export function validatePool(pool) {
      else{
       integer(m.trade.limit,name,'交易数量',1,10);integer(m.trade.price,name,'货品单价',1,99);
       if(!['buy','sell','either'].includes(m.trade.mode))fail(name,'交易方向无效');
-      if(Object.keys(m.trade).some(k=>!['limit','price','mode'].includes(k)))fail(name,'未知交易字段');
+      if(Object.keys(m.trade).some(k=>!['limit','price','mode','bundle','own','fullPrice'].includes(k)))fail(name,'未知交易字段');
+      for(const k of ['bundle','own'])if(m.trade[k]!==undefined&&typeof m.trade[k]!=='boolean')fail(name,'交易标签须为布尔值');
+      if(m.trade.fullPrice!==undefined)integer(m.trade.fullPrice,name,'满货售价',1,99);
+      if(m.trade.own&&!m.capital)fail(name,'自身出货需要货品容量');
      }
     }
     if(m.hire&&(!(c.hireFee>0)||c.kind!=='growth'||c.opportunity||m.spend||m.trade||m.completion))fail(name,'招募需要归档进度及招聘费，不能叠加其他选择或完成奖励');
@@ -117,7 +124,7 @@ export function validatePool(pool) {
   }
   if(c.opportunity){
    if(!object(c.opportunity))fail(name,'过牌格式错误');
-   else{integer(c.opportunity.count,name,'看牌数',1,12);if(c.opportunity.free!==undefined&&typeof c.opportunity.free!=='boolean')fail(name,'免费拿牌须为布尔值');}
+   else{integer(c.opportunity.count,name,'看牌数',1,12);if(c.opportunity.free!==undefined&&typeof c.opportunity.free!=='boolean')fail(name,'免费拿牌须为布尔值');if(c.opportunity.route!==undefined&&!['W','A','B','C'].includes(c.opportunity.route))fail(name,'找牌流派无效');}
   }
   if(c.inspirationSpend&&(!c.opportunity||c.inspirationSpend!==1))fail(name,'当前灵感过牌支持消耗 1 灵感，需启用过牌');
   if(c.boost){

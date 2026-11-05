@@ -19,7 +19,7 @@ export function adapt(d){
  return {...d,kind:'activity',size:{2:1,4:2,8:3}[d.hours],category:route.name,icon:route.icon,
   price:{money:d.price},cost:{...d.cost},gain:{...((d.gain.profit||d.gain.cash||d.gain.salary)?{money:(d.gain.profit||0)+(d.gain.cash||0)+(d.gain.salary||0)}:{})},
   sanityImpact:(d.support||0)-(d.stress||0),
-  fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.mechanic?.salaryTransfer||!!d.mechanic?.capital||!!d.mechanic?.artist||!!d.mechanic?.agent||!!d.gain.profit||!!d.maturation||!!d.capitalRatio||d.dice?.resource==='profit',
+  fixedProfit:d.gain.profit||0,salaryGain:d.gain.salary||0,income:!!d.mechanic?.salaryTransfer||!!(d.mechanic?.capital&&d.mechanic?.goodsIncome!==false)||!!d.mechanic?.artist||!!d.mechanic?.agent||!!d.gain.profit||!!d.maturation||!!d.capitalRatio||d.dice?.resource==='profit',
   once:d.kind==='growth'||d.kind==='once',skill:d.kind==='growth'?d.route:null,
   tier:d.advanced?'advanced':'basic',draft:d.search||null,rule:d.mechanic?markerRules(d):d.dice?'':d.effect,
   progressTarget:d.progress,unlockWeekend:d.permission==='weekend',unlockProtection:d.permission==='protection',permanent:!!d.permanent,route:d.route||'W',

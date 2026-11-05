@@ -1,0 +1,5826 @@
+{
+  "date": "2026-11-05",
+  "scope": "设计核算，不改demo；56种×4；算术非多人试玩结论",
+  "eventCount": 12,
+  "weights": [
+    4,
+    4,
+    3,
+    1
+  ],
+  "riskTable": [
+    {
+      "days": 1,
+      "q1": 0.16666666666666669,
+      "q2": 0.3055555555555555,
+      "q3": 0.4212962962962961,
+      "mixed": 0.16705246913580243
+    },
+    {
+      "days": 2,
+      "q1": 0.19444444444444445,
+      "q2": 0.34722222222222227,
+      "q3": 0.46836419753086417,
+      "mixed": 0.19065072016460907
+    },
+    {
+      "days": 3,
+      "q1": 0.22222222222222224,
+      "q2": 0.38580246913580246,
+      "q3": 0.5092592592592593,
+      "mixed": 0.21296296296296294
+    },
+    {
+      "days": 4,
+      "q1": 0.24999999999999997,
+      "q2": 0.4212962962962962,
+      "q3": 0.5447530864197531,
+      "mixed": 0.2340534979423868
+    },
+    {
+      "days": 5,
+      "q1": 0.27777777777777785,
+      "q2": 0.45370370370370355,
+      "q3": 0.5756172839506177,
+      "mixed": 0.2539866255144034
+    },
+    {
+      "days": 6,
+      "q1": 0.3055555555555555,
+      "q2": 0.48302469135802467,
+      "q3": 0.6026234567901233,
+      "mixed": 0.2728266460905349
+    }
+  ],
+  "model": {
+    "horizons": [
+      3,
+      5
+    ],
+    "salary": 3,
+    "startMoney": 8,
+    "baseSanity": 3,
+    "escapeSanity": 6,
+    "escapeIncome": 10,
+    "referenceTimeCost": 1,
+    "sanityShadow": 2,
+    "warning": "影子价仅用于筛查；整盘直接扣支持与风险后绝不再扣影子价。"
+  },
+  "audit": [
+    {
+      "id": "A01",
+      "name": "灵感管理",
+      "route": "A",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "✦＋1",
+      "resources": "每次产✦1",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -2,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.638888888888889,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -3.0648148148148144,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A02",
+      "name": "集中创作",
+      "route": "A",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 2,
+      "fee": 1,
+      "steps": 3,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1；消耗一个夜晚全部✦，每枚💰＋2",
+      "resources": "计算列按每次消耗✦1；可集中更多，按实际来源另算",
+      "changed": "执行费0→1，完成仍退3枚钱币；消除归档路径额外白送3现金",
+      "completedCashCost": -3,
+      "safe3": {
+        "cash": 3,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 3,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 0.18475889727175843,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0.4875122250165118,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 1.9267490972918717,
+        "executions": 2.922669440069874,
+        "completionProbability": 0.9316398744528505,
+        "fines": 0.7908399661365538
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A03",
+      "name": "冥思苦想",
+      "route": "A",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": -1,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "✦＋2",
+      "resources": "每次产✦2",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -3,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -3.638888888888889,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -4.064814814814815,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A04",
+      "name": "阅读",
+      "route": "A",
+      "grade": "I",
+      "price": 1,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 3,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1；✦＋1",
+      "resources": "完成共产✦3",
+      "completedCashCost": 1,
+      "safe3": {
+        "cash": -1,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -1,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.5374633249504646,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0.4875122250165118,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -1.918589782847876,
+        "executions": 2.922669440069874,
+        "completionProbability": 0.9316398744528505,
+        "fines": 0.7908399661365538
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A05",
+      "name": "日常写作",
+      "route": "A",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 3,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "弃手牌1张 → 💰＋3",
+      "resources": "每次手牌−1，不含待买/归档/日程牌",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 7,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 13,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 4.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 8.74074074074074,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A06",
+      "name": "专栏写作",
+      "route": "A",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 1,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业1",
+      "resources": "—",
+      "changed": "统一零配置I级收入模板：购价3→副业1",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 0,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -1.277777777777777,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -0.12962962962962893,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A07",
+      "name": "灵感搜寻",
+      "route": "A",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1；看2张创作I级，买1",
+      "resources": "完成共搜索2次；购入费用另计",
+      "search": 2,
+      "changed": "定向搜创作，提高找关键牌的真实命中率，不补现金",
+      "completedCashCost": 2,
+      "safe3": {
+        "cash": -2,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -2,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.6140578163897774,
+        "executions": 1.8735988860945996,
+        "completionProbability": 0.8832574429710919,
+        "fines": 0.5069738162373622
+      },
+      "work5": {
+        "cash": -2.546843517582471,
+        "executions": 1.9910295656170234,
+        "completionProbability": 0.9914676123066377,
+        "fines": 0.5387491765787238
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A08",
+      "name": "专栏签约",
+      "route": "A",
+      "grade": "II",
+      "price": 5,
+      "req": "AA",
+      "copies": 4,
+      "sanity": 0,
+      "income": 3,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业3",
+      "resources": "—",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 4,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 10,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 1.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 5.740740740740742,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A09",
+      "name": "流窜艺人",
+      "route": "A",
+      "grade": "II",
+      "price": 5,
+      "req": "AAA",
+      "copies": 4,
+      "sanity": 0,
+      "income": 4,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "从不同空夜各移1枚✦，最多2枚",
+      "text": "副业＝2＋本牌✦数",
+      "resources": "打出锁✦2；计算按满配；离场清除",
+      "changed": "新增两个灵感位，删除附赠理智1；保留基础副业2，避免两张过10及终端免费兼顾支持",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 7,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 15,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 3.8055555555555562,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 9.675925925925927,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A10",
+      "name": "灵感采风",
+      "route": "A",
+      "grade": "I",
+      "price": 2,
+      "req": "A",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "✦−1；看2免费取1。理智≥6改看3",
+      "resources": "每次✦−1；实际手牌产出与命中率另列",
+      "search": 2,
+      "free": true,
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -2,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.638888888888889,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -3.0648148148148144,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A11",
+      "name": "画画",
+      "route": "A",
+      "grade": "I",
+      "price": 9,
+      "req": "A",
+      "copies": 4,
+      "sanity": 1,
+      "income": 1,
+      "cash": 2,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业1；可✦−1掷骰，4–6：💰＋4",
+      "resources": "现金列按每次消耗✦1、骰子均值2；不消耗则无现金奖励",
+      "changed": "购价5→9；基础收入价3＋理智1的三周预算6；骰子另付灵感，资源源牌与占时须同时计入",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 0,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 6,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.5555555555555562,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 1.740740740740741,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A12",
+      "name": "城市出游",
+      "route": "A",
+      "grade": "II",
+      "price": 5,
+      "req": "",
+      "copies": 4,
+      "sanity": 4,
+      "income": 0,
+      "cash": 0,
+      "fee": 4,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−4",
+      "resources": "—",
+      "tag": "闲",
+      "changed": "加非上班标签；费用5→4，按两个I级支持的占位与费用核算",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -17,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -25,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -15.083333333333332,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -21.805555555555554,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A13",
+      "name": "带薪驻留",
+      "route": "A",
+      "grade": "II",
+      "price": 8,
+      "req": "WA",
+      "copies": 4,
+      "sanity": 1,
+      "income": 2,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业2",
+      "resources": "—",
+      "changed": "改为价8／副业2／理智1；相对价5副业3，牺牲1收入换理智，并支付3额外购价",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -2,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -3.916666666666666,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -1.1944444444444433,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A14",
+      "name": "自费出版",
+      "route": "A",
+      "grade": "II",
+      "price": 2,
+      "req": "AC",
+      "copies": 4,
+      "sanity": 0,
+      "income": 3,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "消耗■1",
+      "text": "副业3",
+      "resources": "打出消耗■1；不含货品取得成本",
+      "changed": "购价4→2；直接买货部署合计5，与专栏签约对照",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 7,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 13,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 4.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 8.74074074074074,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "A15",
+      "name": "作品发行",
+      "route": "A",
+      "grade": "I",
+      "price": 3,
+      "req": "A",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 5,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "⚙−1 → 💰＋5",
+      "resources": "每次⚙−1；必须反复配置，不是免费常驻5现金",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 12,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 22,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 8.166666666666668,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 15.611111111111112,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B01",
+      "name": "学习技术",
+      "route": "B",
+      "grade": "I",
+      "price": 1,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 3,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1",
+      "resources": "—",
+      "completedCashCost": 1,
+      "safe3": {
+        "cash": -1,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -1,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.5374633249504646,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0.4875122250165118,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -1.918589782847876,
+        "executions": 2.922669440069874,
+        "completionProbability": 0.9316398744528505,
+        "fines": 0.7908399661365538
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B02",
+      "name": "买课",
+      "route": "B",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1",
+      "resources": "—",
+      "completedCashCost": 3,
+      "safe3": {
+        "cash": -3,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -3,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -3.6140578163897774,
+        "executions": 1.8735988860945996,
+        "completionProbability": 0.8832574429710919,
+        "fines": 0.5069738162373622
+      },
+      "work5": {
+        "cash": -3.546843517582471,
+        "executions": 1.9910295656170234,
+        "completionProbability": 0.9914676123066377,
+        "fines": 0.5387491765787238
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B03",
+      "name": "零散开发",
+      "route": "B",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 1,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业1",
+      "resources": "—",
+      "changed": "统一零配置I级收入模板：购价3→副业1",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 0,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -1.277777777777777,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -0.12962962962962893,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B04",
+      "name": "技术交流",
+      "route": "B",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "看2张开发I级，买1。理智≥6改看4",
+      "resources": "搜索；买到的牌另付原价",
+      "search": 2,
+      "changed": "改为定向开发牌堆，强化检索质量而非附赠现金",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -3,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -3.638888888888889,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -4.064814814814815,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B05",
+      "name": "自动管线",
+      "route": "B",
+      "grade": "I",
+      "price": 3,
+      "req": "B",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 1,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "可从归档区再次安排",
+      "text": "💰−1；右邻牌⚙＋1",
+      "resources": "每次产⚙1；再次配置需再次打出",
+      "completedCashCost": 3,
+      "safe3": {
+        "cash": -3,
+        "executions": 1,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -3,
+        "executions": 1,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -3.2679747434334194,
+        "executions": 0.9903414431235076,
+        "completionProbability": 0.9903414431235076,
+        "fines": 0.2679747434334197
+      },
+      "work5": {
+        "cash": -3.270469705013398,
+        "executions": 0.9995619533103853,
+        "completionProbability": 0.9995619533103853,
+        "fines": 0.2704697050133984
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B06",
+      "name": "数据收集",
+      "route": "B",
+      "grade": "I",
+      "price": 4,
+      "req": "B",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "下邻牌副业＋1；理智≥6改为＋2",
+      "resources": "加成1/2；必须本牌与下邻都成功，不计入自身基础副业",
+      "changed": "购价2→4；高理智常驻加成2计入预算，保持双牌成功条件",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -4,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -4,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -4.638888888888888,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -5.064814814814815,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B07",
+      "name": "日志分析",
+      "route": "B",
+      "grade": "I",
+      "price": 2,
+      "req": "B",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "左邻有⚙：看3买1",
+      "resources": "要求左邻保有⚙；不消耗；取得卡另付钱",
+      "search": 3,
+      "completedCashCost": 0,
+      "safe3": {
+        "cash": 0,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 0,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -0.7404589302951781,
+        "executions": 1.8735988860945996,
+        "completionProbability": 0.8832574429710919,
+        "fines": 0.5069738162373622
+      },
+      "work5": {
+        "cash": -0.5558139519654479,
+        "executions": 1.9910295656170234,
+        "completionProbability": 0.9914676123066377,
+        "fines": 0.5387491765787238
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B08",
+      "name": "兴趣编程",
+      "route": "B",
+      "grade": "I",
+      "price": 9,
+      "req": "B",
+      "copies": 4,
+      "sanity": 1,
+      "income": 1,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业1",
+      "resources": "—",
+      "changed": "购价3→9：基础收入牌3＋理智1的三周预算6；防止廉价混合牌替代所有生活支持",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -6,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -4,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -7.2777777777777795,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -6.129629629629631,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B09",
+      "name": "订阅产品",
+      "route": "B",
+      "grade": "II",
+      "price": 3,
+      "req": "B",
+      "copies": 4,
+      "sanity": 0,
+      "income": 3,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业1；本牌有⚙时为3",
+      "resources": "满配列要求本牌⚙1；无配置时副业1",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 6,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 12,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 3.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 7.7407407407407405,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B10",
+      "name": "Agent商业化",
+      "route": "B",
+      "grade": "II",
+      "price": 5,
+      "req": "BBB",
+      "copies": 4,
+      "sanity": 0,
+      "income": 4,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业2；其他日程牌每有⚙1，再＋1，最多＋2",
+      "resources": "满配要求另外两张日程牌各有⚙1；未配置基础2",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 7,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 15,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 3.8055555555555562,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 9.675925925925927,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B11",
+      "name": "工具交付",
+      "route": "B",
+      "grade": "I",
+      "price": 3,
+      "req": "B",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 5,
+      "fee": 1,
+      "steps": 1,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1；⚙−1 → 💰＋5",
+      "resources": "消耗⚙1；归档后不能重放",
+      "completedCashCost": -2,
+      "safe3": {
+        "cash": 2,
+        "executions": 1,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 2,
+        "executions": 1,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 1.6837324721841187,
+        "executions": 0.9903414431235076,
+        "completionProbability": 0.9903414431235076,
+        "fines": 0.2679747434334197
+      },
+      "work5": {
+        "cash": 1.727340061538529,
+        "executions": 0.9995619533103853,
+        "completionProbability": 0.9995619533103853,
+        "fines": 0.2704697050133984
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B12",
+      "name": "企业试点",
+      "route": "B",
+      "grade": "II",
+      "price": 5,
+      "req": "WB",
+      "copies": 4,
+      "sanity": 0,
+      "income": 3,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "副业3",
+      "resources": "—",
+      "tag": "工",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 4,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 10,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 4,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work5": {
+        "cash": 10,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B13",
+      "name": "云端托管",
+      "route": "B",
+      "grade": "I",
+      "price": 4,
+      "req": "BB",
+      "copies": 4,
+      "sanity": 0,
+      "income": 2,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "消耗⚙1",
+      "text": "副业2",
+      "resources": "打出消耗⚙1；不占额外位置",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 2,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 6,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 0.08333333333333426,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 2.805555555555557,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "B14",
+      "name": "创意原型",
+      "route": "B",
+      "grade": "II",
+      "price": 5,
+      "req": "AAB",
+      "copies": 4,
+      "sanity": 0,
+      "income": 4,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "消耗✦2、⚙1",
+      "text": "副业4",
+      "resources": "打出消耗✦2与日程牌上的⚙1；撤回重放须重付",
+      "changed": "删除反复付灵感与高理智搜牌附注；改为一次投入灵感和工具的固定4副业混合终端，不增加新牌型",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 7,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 15,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 3.8055555555555562,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 9.675925925925927,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C01",
+      "name": "社交",
+      "route": "C",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−1",
+      "resources": "—",
+      "completedCashCost": 2,
+      "safe3": {
+        "cash": -2,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -2,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2.6140578163897774,
+        "executions": 1.8735988860945996,
+        "completionProbability": 0.8832574429710919,
+        "fines": 0.5069738162373622
+      },
+      "work5": {
+        "cash": -2.546843517582471,
+        "executions": 1.9910295656170234,
+        "completionProbability": 0.9914676123066377,
+        "fines": 0.5387491765787238
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C02",
+      "name": "小额进货",
+      "route": "C",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 2,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰2 → ■1",
+      "resources": "每次产■1；买货交易费不享受自动化减费",
+      "trade": true,
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -8,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -12,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -7.361111111111111,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -10.935185185185185,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C03",
+      "name": "摆摊换货",
+      "route": "C",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 6,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "每件💰3，买入或卖出至多■2",
+      "resources": "现金列为卖2件；买2件则付6，不能同次买卖",
+      "trade": true,
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 16,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 28,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 11.527777777777779,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 20.546296296296298,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C04",
+      "name": "品牌专柜",
+      "route": "C",
+      "grade": "I",
+      "price": 3,
+      "req": "C",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 5,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "可放■2",
+      "text": "卖本牌■1得💰4；售前有■2时得💰5",
+      "resources": "每次耗■1；表按满货售价5，另留展示货1",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 12,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 22,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 8.166666666666668,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 15.611111111111112,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C05",
+      "name": "市场调研",
+      "route": "C",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 2,
+      "steps": 1,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−2；看2张商业I级，买1",
+      "resources": "候选购价另计",
+      "search": 2,
+      "completedCashCost": 4,
+      "safe3": {
+        "cash": -4,
+        "executions": 1,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -4,
+        "executions": 1,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -4.258316186556927,
+        "executions": 0.9903414431235076,
+        "completionProbability": 0.9903414431235076,
+        "fines": 0.2679747434334197
+      },
+      "work5": {
+        "cash": -4.270031658323784,
+        "executions": 0.9995619533103853,
+        "completionProbability": 0.9995619533103853,
+        "fines": 0.2704697050133984
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C06",
+      "name": "经营卖场",
+      "route": "C",
+      "grade": "II",
+      "price": 3,
+      "req": "CCC",
+      "copies": 4,
+      "sanity": 0,
+      "income": 4,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "可放■3",
+      "text": "副业＝1＋本牌■数",
+      "resources": "计算按锁■3；无货副业1；货可回收",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 9,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 17,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 5.805555555555556,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 11.675925925925926,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C07",
+      "name": "招募伙伴",
+      "route": "C",
+      "grade": "I",
+      "price": 2,
+      "req": "C",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "招募其他流派可归档牌1张",
+      "resources": "每次实付目标购价＋全部原执行费＋1；本账按阅读与学习技术各5，其他目标另计；只取得归档资格",
+      "externalFee": 5,
+      "completedCashCost": 10,
+      "safe3": {
+        "cash": -10,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -10,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -10.108453360768173,
+        "executions": 1.8735988860945996,
+        "completionProbability": 0.8832574429710919,
+        "fines": 0.5069738162373622
+      },
+      "work5": {
+        "cash": -10.510961780050561,
+        "executions": 1.9910295656170234,
+        "completionProbability": 0.9914676123066377,
+        "fines": 0.5387491765787238
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C08",
+      "name": "批发进货",
+      "route": "C",
+      "grade": "I",
+      "price": 3,
+      "req": "C",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 5,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰5 → ■3",
+      "resources": "整批交易，不拆分；不享受自动化减费",
+      "trade": true,
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -18,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -28,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -15.444444444444443,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -23.74074074074074,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C09",
+      "name": "零售出货",
+      "route": "C",
+      "grade": "I",
+      "price": 3,
+      "req": "C",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 8,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "每件💰4，卖出至多■2",
+      "resources": "计算按每次消耗■2；不能忽略进货与滞销",
+      "trade": true,
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 21,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 37,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 15.250000000000004,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 27.416666666666675,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C10",
+      "name": "兴趣小店",
+      "route": "C",
+      "grade": "I",
+      "price": 6,
+      "req": "C",
+      "copies": 4,
+      "sanity": 1,
+      "income": 1,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "可放■1",
+      "text": "副业＝本牌■数",
+      "resources": "锁■1；卖掉则无副业，理智保留",
+      "changed": "购价2→6；加直接购货3后启动9，与收入1＋理智1模板对照；留货可回收，长窗仍更有优势",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -1,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -4.277777777777777,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -3.1296296296296275,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C11",
+      "name": "概念预售",
+      "route": "C",
+      "grade": "I",
+      "price": 3,
+      "req": "C",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "✦−1 → ■＋1",
+      "resources": "每次消耗✦1、产■1",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -3,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -3.638888888888889,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -4.064814814814815,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C12",
+      "name": "自动补货",
+      "route": "C",
+      "grade": "II",
+      "price": 4,
+      "req": "BCC",
+      "copies": 4,
+      "sanity": 0,
+      "income": 4,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "可放■2",
+      "text": "有⚙：本牌■＋1。副业＝1＋■数；有⚙且满货时为4",
+      "resources": "满配要求⚙1＋■2；空货启动按逐周1→2单独核算",
+      "changed": "保留满配4，撤销上一轮纯文案导致的削弱",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 8,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 16,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 4.805555555555556,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 10.675925925925927,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "C13",
+      "name": "企业团购",
+      "route": "C",
+      "grade": "II",
+      "price": 2,
+      "req": "WC",
+      "copies": 4,
+      "sanity": 0,
+      "income": 3,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "消耗■1",
+      "text": "副业3",
+      "resources": "打出消耗■1",
+      "changed": "购价4→2；直接买货总部署5，与免查岗企业试点对照",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 7,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 13,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 4.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 8.74074074074074,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W01",
+      "name": "加班",
+      "route": "W",
+      "grade": "I",
+      "price": 0,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 1,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰＋1",
+      "resources": "—",
+      "tag": "闲",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 5,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 1.7222222222222225,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 2.870370370370371,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W02",
+      "name": "猛烈加班",
+      "route": "W",
+      "grade": "I",
+      "price": 0,
+      "req": "",
+      "copies": 4,
+      "sanity": -1,
+      "income": 0,
+      "cash": 3,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰＋3",
+      "resources": "—",
+      "tag": "闲",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 9,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 15,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 6.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 10.74074074074074,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W03",
+      "name": "极其猛烈加班",
+      "route": "W",
+      "grade": "I",
+      "price": 0,
+      "req": "",
+      "copies": 4,
+      "sanity": -2,
+      "income": 0,
+      "cash": 5,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰＋5",
+      "resources": "—",
+      "tag": "闲",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 15,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 25,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 11.166666666666668,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 18.611111111111114,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W04",
+      "name": "集中攻坚",
+      "route": "W",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 1,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 2,
+      "play": "—",
+      "text": "理智≥2：💰−1。完成💰＋2、★＋1",
+      "resources": "完成获★1；工资后续价值另列",
+      "tag": "工",
+      "duty": 1,
+      "completedCashCost": 1,
+      "safe3": {
+        "cash": -1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work5": {
+        "cash": -1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W05",
+      "name": "工作交接",
+      "route": "W",
+      "grade": "I",
+      "price": 2,
+      "req": "",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 2,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−2；★＋1",
+      "resources": "每次★1，完成共2；工资在获得当周即可结算",
+      "tag": "工",
+      "duty": 2,
+      "completedCashCost": 4,
+      "safe3": {
+        "cash": -4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work5": {
+        "cash": -4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W06",
+      "name": "例行汇报",
+      "route": "W",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": -1,
+      "income": 0,
+      "cash": 2,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰＋2；看2买1",
+      "resources": "购入卡另付钱",
+      "tag": "工",
+      "search": 2,
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 7,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 3,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work5": {
+        "cash": 7,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W09",
+      "name": "争取双休",
+      "route": "W",
+      "grade": "II",
+      "price": 6,
+      "req": "WW",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 2,
+      "steps": 3,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−2。完成：下周起永久双休、基础理智＋2",
+      "resources": "完成前不提前记理智或安全位置收益",
+      "tag": "工",
+      "completedCashCost": 9,
+      "safe3": {
+        "cash": -9,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -9,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -9,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work5": {
+        "cash": -9,
+        "executions": 3,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W10",
+      "name": "下楼遛弯",
+      "route": "W",
+      "grade": "I",
+      "price": 3,
+      "req": "",
+      "copies": 4,
+      "sanity": 2,
+      "income": 0,
+      "cash": 0,
+      "fee": 2,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−2",
+      "resources": "—",
+      "tag": "闲",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -9,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -13,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -8.36111111111111,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": -11.935185185185185,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W11",
+      "name": "提案汇报",
+      "route": "W",
+      "grade": "I",
+      "price": 2,
+      "req": "W",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 2,
+      "fee": 0,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "✦−1 → 💰＋2。完成★＋1",
+      "resources": "完成消耗✦2、获得★1",
+      "tag": "工",
+      "duty": 1,
+      "completedCashCost": -4,
+      "safe3": {
+        "cash": 4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work5": {
+        "cash": 4,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W12",
+      "name": "垫资推进",
+      "route": "W",
+      "grade": "I",
+      "price": 3,
+      "req": "W",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 2,
+      "playCash": 3,
+      "completionCash": 5,
+      "play": "💰−3",
+      "text": "完成💰＋5、★＋1",
+      "resources": "前付3；完成★1，未完成不可提前套回",
+      "tag": "工",
+      "duty": 1,
+      "completedCashCost": -1,
+      "safe3": {
+        "cash": 1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work5": {
+        "cash": 1,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W13",
+      "name": "流程验收",
+      "route": "W",
+      "grade": "I",
+      "price": 3,
+      "req": "W",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 2,
+      "fee": 0,
+      "steps": 2,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "⚙−1 → 💰＋2、★＋1",
+      "resources": "完成消耗⚙2、获得★2",
+      "tag": "工",
+      "duty": 2,
+      "completedCashCost": -3,
+      "safe3": {
+        "cash": 3,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 3,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 3,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "work5": {
+        "cash": 3,
+        "executions": 2,
+        "completionProbability": 1,
+        "fines": 0
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W14",
+      "name": "向上管理",
+      "route": "W",
+      "grade": "II",
+      "price": 8,
+      "req": "W",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 4,
+      "fee": 2,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "💰−2；获得等于工资的资金；骰4–6再💰＋2",
+      "resources": "现金列以工资3计算；每枚工资区★另使本牌现金＋1",
+      "tag": "工",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -2,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -2,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work5": {
+        "cash": 2,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W15",
+      "name": "砸烂地球",
+      "route": "W",
+      "grade": "I",
+      "price": 4,
+      "req": "WW",
+      "copies": 4,
+      "sanity": 0,
+      "income": 0,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "—",
+      "text": "查岗前，理智≤1：揭示事件2张，一张对自己、一张对其他玩家；弃置",
+      "resources": "事件效果逐情景审计，不以虚构固定金币估价",
+      "oneShot": true,
+      "status": "保留实验牌，不计入经济平衡已校准范围",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": -4,
+        "executions": 1,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": -4,
+        "executions": 1,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": -4.267974743433419,
+        "executions": 0.9903414431235076,
+        "completionProbability": 0,
+        "fines": 0.2679747434334197
+      },
+      "work5": {
+        "cash": -4.270469705013398,
+        "executions": 0.9995619533103853,
+        "completionProbability": 0,
+        "fines": 0.2704697050133984
+      },
+      "unit": 1,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    },
+    {
+      "id": "W16",
+      "name": "暗图大事",
+      "route": "W",
+      "grade": "II",
+      "price": 4,
+      "req": "W",
+      "copies": 4,
+      "sanity": 2,
+      "income": 3,
+      "cash": 0,
+      "fee": 0,
+      "steps": 0,
+      "playCash": 0,
+      "completionCash": 0,
+      "play": "从工资区移至多★3到本牌",
+      "text": "副业＝本牌★数",
+      "resources": "满配转移★3，同时工资−3；总现金并未增加3",
+      "tag": "闲",
+      "completedCashCost": null,
+      "safe3": {
+        "cash": 5,
+        "executions": 3,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "safe5": {
+        "cash": 11,
+        "executions": 5,
+        "completionProbability": 0,
+        "fines": 0
+      },
+      "work3": {
+        "cash": 2.444444444444445,
+        "executions": 2.3611111111111116,
+        "completionProbability": 0,
+        "fines": 0.6388888888888888
+      },
+      "work5": {
+        "cash": 6.7407407407407405,
+        "executions": 3.935185185185186,
+        "completionProbability": 0,
+        "fines": 1.0648148148148147
+      },
+      "unit": 2,
+      "allocation": "共享归档仅在整套组合计一次；不自动作为本牌免费收益预算"
+    }
+  ],
+  "search": [
+    {
+      "req": "none",
+      "n": 2,
+      "pool": 164,
+      "eligible": 88,
+      "any": 0.7867724076013767,
+      "maxAvoidedPrice": 1.8018853808169983,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "none",
+      "n": 3,
+      "pool": 164,
+      "eligible": 88,
+      "any": 0.9025997417438387,
+      "maxAvoidedPrice": 2.2203268658453457,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "none",
+      "n": 4,
+      "pool": 164,
+      "eligible": 88,
+      "any": 0.9558371499832312,
+      "maxAvoidedPrice": 2.4824584185584517,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "A",
+      "n": 2,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.8491695346401317,
+      "maxAvoidedPrice": 2.3169235373335333,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "A",
+      "n": 3,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.9422747601709146,
+      "maxAvoidedPrice": 2.850394311714079,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "A",
+      "n": 4,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.9781289464001602,
+      "maxAvoidedPrice": 3.2122861446323334,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "AA",
+      "n": 2,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.8491695346401317,
+      "maxAvoidedPrice": 2.3169235373335333,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "AA",
+      "n": 3,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.9422747601709146,
+      "maxAvoidedPrice": 2.850394311714079,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "AA",
+      "n": 4,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.9781289464001602,
+      "maxAvoidedPrice": 3.2122861446323334,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "B",
+      "n": 2,
+      "pool": 164,
+      "eligible": 108,
+      "any": 0.8847822834056561,
+      "maxAvoidedPrice": 2.5211731258416883,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "B",
+      "n": 3,
+      "pool": 164,
+      "eligible": 108,
+      "any": 0.961594094468552,
+      "maxAvoidedPrice": 3.0495896165505627,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "B",
+      "n": 4,
+      "pool": 164,
+      "eligible": 108,
+      "any": 0.9873570621542438,
+      "maxAvoidedPrice": 3.4006414787566195,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "BB",
+      "n": 2,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9007930570103246,
+      "maxAvoidedPrice": 2.6402813107885685,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "BB",
+      "n": 3,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9693805731513347,
+      "maxAvoidedPrice": 3.1714909582633664,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "BB",
+      "n": 4,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9906810440025802,
+      "maxAvoidedPrice": 3.5231442455287523,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "C",
+      "n": 2,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9007930570103246,
+      "maxAvoidedPrice": 2.4022145742929824,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "C",
+      "n": 3,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9693805731513347,
+      "maxAvoidedPrice": 2.8228285145837146,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "C",
+      "n": 4,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9906810440025802,
+      "maxAvoidedPrice": 3.069107119579116,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "CC",
+      "n": 2,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9007930570103246,
+      "maxAvoidedPrice": 2.4022145742929824,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "CC",
+      "n": 3,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9693805731513347,
+      "maxAvoidedPrice": 2.8228285145837146,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "CC",
+      "n": 4,
+      "pool": 164,
+      "eligible": 112,
+      "any": 0.9906810440025802,
+      "maxAvoidedPrice": 3.069107119579116,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    },
+    {
+      "req": "W",
+      "n": 2,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.8491695346401317,
+      "maxAvoidedPrice": 2.026934011671405,
+      "target1": 0.04833158761035461,
+      "target3": 0.14140356127487652
+    },
+    {
+      "req": "W",
+      "n": 3,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.9422747601709146,
+      "maxAvoidedPrice": 2.4194168731053365,
+      "target1": 0.07182957310145699,
+      "target3": 0.2050032974767375
+    },
+    {
+      "req": "W",
+      "n": 4,
+      "pool": 164,
+      "eligible": 100,
+      "any": 0.9781289464001602,
+      "maxAvoidedPrice": 2.642947897044925,
+      "target1": 0.09488970793123452,
+      "target3": 0.26425771008716703
+    }
+  ],
+  "targetedSearch": [
+    {
+      "route": "A",
+      "n": 2,
+      "N": 40,
+      "target1": 0.1923076923076923
+    },
+    {
+      "route": "A",
+      "n": 3,
+      "N": 40,
+      "target1": 0.2773279352226721
+    },
+    {
+      "route": "A",
+      "n": 4,
+      "N": 40,
+      "target1": 0.3554546449283291
+    },
+    {
+      "route": "B",
+      "n": 2,
+      "N": 40,
+      "target1": 0.1923076923076923
+    },
+    {
+      "route": "B",
+      "n": 3,
+      "N": 40,
+      "target1": 0.2773279352226721
+    },
+    {
+      "route": "B",
+      "n": 4,
+      "N": 40,
+      "target1": 0.3554546449283291
+    },
+    {
+      "route": "C",
+      "n": 2,
+      "N": 40,
+      "target1": 0.1923076923076923
+    },
+    {
+      "route": "C",
+      "n": 3,
+      "N": 40,
+      "target1": 0.2773279352226721
+    },
+    {
+      "route": "C",
+      "n": 4,
+      "N": 40,
+      "target1": 0.3554546449283291
+    }
+  ],
+  "curves": {
+    "I_income1_training_san3": [
+      {
+        "n": 0,
+        "cost": 2,
+        "side": 0,
+        "sanity": 3,
+        "days": 1,
+        "q": 0.16666666666666669,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 0
+          }
+        ],
+        "marginal": 0
+      },
+      {
+        "n": 1,
+        "cost": 2.388888888888889,
+        "side": 0.8055555555555556,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.19444444444444445,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 1
+          }
+        ],
+        "marginal": 0.38888888888888884
+      },
+      {
+        "n": 2,
+        "cost": 2.7777777777777777,
+        "side": 1.6111111111111112,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.19444444444444445,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          }
+        ],
+        "marginal": 0.38888888888888884
+      },
+      {
+        "n": 3,
+        "cost": 3.3333333333333335,
+        "side": 2.3333333333333335,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.22222222222222224,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 3
+          }
+        ],
+        "marginal": 0.5555555555555558
+      },
+      {
+        "n": 4,
+        "cost": 3.7777777777777777,
+        "side": 3.111111111111111,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.22222222222222224,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 4
+          }
+        ],
+        "marginal": 0.4444444444444442
+      },
+      {
+        "n": 5,
+        "cost": 4.5,
+        "side": 3.75,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.24999999999999997,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 5
+          }
+        ],
+        "marginal": 0.7222222222222223
+      },
+      {
+        "n": 6,
+        "cost": 5,
+        "side": 4.5,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.24999999999999997,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 6
+          }
+        ],
+        "marginal": 0.5
+      },
+      {
+        "n": 7,
+        "cost": 5.888888888888889,
+        "side": 5.0555555555555545,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.27777777777777785,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 7
+          }
+        ],
+        "marginal": 0.8888888888888893
+      },
+      {
+        "n": 8,
+        "cost": 6.4444444444444455,
+        "side": 5.777777777777777,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.27777777777777785,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 8
+          }
+        ],
+        "marginal": 0.5555555555555562
+      },
+      {
+        "n": 9,
+        "cost": 7.499999999999999,
+        "side": 6.25,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 9
+          }
+        ],
+        "marginal": 1.0555555555555536
+      },
+      {
+        "n": 10,
+        "cost": 8.11111111111111,
+        "side": 6.944444444444445,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 10
+          }
+        ],
+        "marginal": 0.6111111111111116
+      },
+      {
+        "n": 11,
+        "cost": 10.11111111111111,
+        "side": 7.944444444444445,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 1,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 1,
+            "work": 10
+          }
+        ],
+        "marginal": 2
+      },
+      {
+        "n": 12,
+        "cost": 12.11111111111111,
+        "side": 8.944444444444445,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 2,
+            "work": 10
+          }
+        ],
+        "marginal": 2
+      }
+    ],
+    "I_income2_training_san3": [
+      {
+        "n": 0,
+        "cost": 2,
+        "side": 0,
+        "sanity": 3,
+        "days": 1,
+        "q": 0.16666666666666669,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 0
+          }
+        ],
+        "marginal": 0
+      },
+      {
+        "n": 1,
+        "cost": 2.5833333333333335,
+        "side": 1.6111111111111112,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.19444444444444445,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 1
+          }
+        ],
+        "marginal": 0.5833333333333335
+      },
+      {
+        "n": 2,
+        "cost": 3.166666666666667,
+        "side": 3.2222222222222223,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.19444444444444445,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          }
+        ],
+        "marginal": 0.5833333333333335
+      },
+      {
+        "n": 3,
+        "cost": 4,
+        "side": 4.666666666666667,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.22222222222222224,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 3
+          }
+        ],
+        "marginal": 0.833333333333333
+      },
+      {
+        "n": 4,
+        "cost": 4.666666666666667,
+        "side": 6.222222222222222,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.22222222222222224,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 4
+          }
+        ],
+        "marginal": 0.666666666666667
+      },
+      {
+        "n": 5,
+        "cost": 5.75,
+        "side": 7.5,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.24999999999999997,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 5
+          }
+        ],
+        "marginal": 1.083333333333333
+      },
+      {
+        "n": 6,
+        "cost": 6.499999999999999,
+        "side": 9,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.24999999999999997,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 6
+          }
+        ],
+        "marginal": 0.7499999999999991
+      },
+      {
+        "n": 7,
+        "cost": 7.833333333333335,
+        "side": 10.111111111111109,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.27777777777777785,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 7
+          }
+        ],
+        "marginal": 1.3333333333333357
+      },
+      {
+        "n": 8,
+        "cost": 8.666666666666668,
+        "side": 11.555555555555554,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.27777777777777785,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 8
+          }
+        ],
+        "marginal": 0.833333333333333
+      },
+      {
+        "n": 9,
+        "cost": 10.25,
+        "side": 12.5,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 9
+          }
+        ],
+        "marginal": 1.5833333333333321
+      },
+      {
+        "n": 10,
+        "cost": 11.166666666666666,
+        "side": 13.88888888888889,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 10
+          }
+        ],
+        "marginal": 0.9166666666666661
+      },
+      {
+        "n": 11,
+        "cost": 13.166666666666666,
+        "side": 15.88888888888889,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 1,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 1,
+            "work": 10
+          }
+        ],
+        "marginal": 2
+      },
+      {
+        "n": 12,
+        "cost": 15.166666666666666,
+        "side": 17.88888888888889,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 2,
+            "work": 10
+          }
+        ],
+        "marginal": 2
+      }
+    ],
+    "II_income3_training_san3": [
+      {
+        "n": 0,
+        "cost": 2,
+        "side": 0,
+        "sanity": 3,
+        "days": 1,
+        "q": 0.16666666666666669,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 0
+          }
+        ],
+        "marginal": 0
+      },
+      {
+        "n": 1,
+        "cost": 2.7777777777777777,
+        "side": 2.416666666666667,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.19444444444444445,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 1
+          }
+        ],
+        "marginal": 0.7777777777777777
+      },
+      {
+        "n": 2,
+        "cost": 3.7777777777777777,
+        "side": 4.666666666666667,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.22222222222222224,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          }
+        ],
+        "marginal": 1
+      },
+      {
+        "n": 3,
+        "cost": 5,
+        "side": 6.75,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.24999999999999997,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 3
+          }
+        ],
+        "marginal": 1.2222222222222223
+      },
+      {
+        "n": 4,
+        "cost": 6.4444444444444455,
+        "side": 8.666666666666664,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.27777777777777785,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 4
+          }
+        ],
+        "marginal": 1.4444444444444455
+      },
+      {
+        "n": 5,
+        "cost": 8.11111111111111,
+        "side": 10.416666666666668,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 5
+          }
+        ],
+        "marginal": 1.6666666666666652
+      }
+    ],
+    "II_income4_training_san6": [
+      {
+        "n": 0,
+        "cost": 8,
+        "side": 0,
+        "sanity": 6,
+        "days": 1,
+        "q": 0.16666666666666669,
+        "supportSunday": 1,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 0,
+            "night": 1,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 0
+          }
+        ],
+        "marginal": 0
+      },
+      {
+        "n": 1,
+        "cost": 8.972222222222221,
+        "side": 3.2222222222222223,
+        "sanity": 6,
+        "days": 2,
+        "q": 0.19444444444444445,
+        "supportSunday": 1,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 0,
+            "night": 1,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 1
+          }
+        ],
+        "marginal": 0.9722222222222214
+      },
+      {
+        "n": 2,
+        "cost": 10.222222222222221,
+        "side": 6.222222222222222,
+        "sanity": 6,
+        "days": 3,
+        "q": 0.22222222222222224,
+        "supportSunday": 1,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 0,
+            "night": 1,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          }
+        ],
+        "marginal": 1.25
+      },
+      {
+        "n": 3,
+        "cost": 11.75,
+        "side": 9,
+        "sanity": 6,
+        "days": 4,
+        "q": 0.24999999999999997,
+        "supportSunday": 1,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 0,
+            "night": 1,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 3
+          }
+        ],
+        "marginal": 1.5277777777777786
+      },
+      {
+        "n": 4,
+        "cost": 13.555555555555557,
+        "side": 11.555555555555554,
+        "sanity": 6,
+        "days": 5,
+        "q": 0.27777777777777785,
+        "supportSunday": 1,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 0,
+            "night": 1,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 4
+          }
+        ],
+        "marginal": 1.8055555555555571
+      },
+      {
+        "n": 5,
+        "cost": 15.63888888888889,
+        "side": 13.88888888888889,
+        "sanity": 6,
+        "days": 6,
+        "q": 0.3055555555555555,
+        "supportSunday": 1,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 0,
+            "night": 1,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 5
+          }
+        ],
+        "marginal": 2.083333333333332
+      }
+    ],
+    "I_income1_training_checks2": [
+      {
+        "n": 0,
+        "cost": 2,
+        "side": 0,
+        "sanity": 3,
+        "days": 1,
+        "q": 0.3055555555555555,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 0
+          }
+        ],
+        "marginal": 0
+      },
+      {
+        "n": 1,
+        "cost": 2.6944444444444446,
+        "side": 0.6527777777777777,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.34722222222222227,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 1
+          }
+        ],
+        "marginal": 0.6944444444444446
+      },
+      {
+        "n": 2,
+        "cost": 3.3888888888888893,
+        "side": 1.3055555555555554,
+        "sanity": 3,
+        "days": 2,
+        "q": 0.34722222222222227,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          }
+        ],
+        "marginal": 0.6944444444444446
+      },
+      {
+        "n": 3,
+        "cost": 4.314814814814815,
+        "side": 1.8425925925925928,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.38580246913580246,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 3
+          }
+        ],
+        "marginal": 0.9259259259259256
+      },
+      {
+        "n": 4,
+        "cost": 5.086419753086419,
+        "side": 2.4567901234567904,
+        "sanity": 3,
+        "days": 3,
+        "q": 0.38580246913580246,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 4
+          }
+        ],
+        "marginal": 0.7716049382716044
+      },
+      {
+        "n": 5,
+        "cost": 6.212962962962962,
+        "side": 2.8935185185185186,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.4212962962962962,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 5
+          }
+        ],
+        "marginal": 1.1265432098765427
+      },
+      {
+        "n": 6,
+        "cost": 7.0555555555555545,
+        "side": 3.4722222222222223,
+        "sanity": 3,
+        "days": 4,
+        "q": 0.4212962962962962,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 6
+          }
+        ],
+        "marginal": 0.8425925925925926
+      },
+      {
+        "n": 7,
+        "cost": 8.35185185185185,
+        "side": 3.8240740740740753,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.45370370370370355,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 7
+          }
+        ],
+        "marginal": 1.296296296296295
+      },
+      {
+        "n": 8,
+        "cost": 9.259259259259256,
+        "side": 4.370370370370372,
+        "sanity": 3,
+        "days": 5,
+        "q": 0.45370370370370355,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 8
+          }
+        ],
+        "marginal": 0.9074074074074066
+      },
+      {
+        "n": 9,
+        "cost": 10.694444444444445,
+        "side": 4.652777777777778,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.48302469135802467,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 9
+          }
+        ],
+        "marginal": 1.4351851851851887
+      },
+      {
+        "n": 10,
+        "cost": 11.660493827160494,
+        "side": 5.169753086419753,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.48302469135802467,
+        "supportSunday": 0,
+        "supportNights": 0,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 0,
+            "work": 10
+          }
+        ],
+        "marginal": 0.966049382716049
+      },
+      {
+        "n": 11,
+        "cost": 13.660493827160494,
+        "side": 6.169753086419753,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.48302469135802467,
+        "supportSunday": 0,
+        "supportNights": 1,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 1,
+            "work": 10
+          }
+        ],
+        "marginal": 2
+      },
+      {
+        "n": 12,
+        "cost": 15.660493827160494,
+        "side": 7.169753086419753,
+        "sanity": 3,
+        "days": 6,
+        "q": 0.48302469135802467,
+        "supportSunday": 0,
+        "supportNights": 2,
+        "placement": [
+          {
+            "id": "G",
+            "sun": 0,
+            "night": 0,
+            "work": 2
+          },
+          {
+            "id": "Q",
+            "sun": 1,
+            "night": 0,
+            "work": 0
+          },
+          {
+            "id": "R",
+            "sun": 0,
+            "night": 2,
+            "work": 10
+          }
+        ],
+        "marginal": 2
+      }
+    ]
+  },
+  "archivePaths": [
+    {
+      "route": "A",
+      "ids": [
+        "A04",
+        "A07",
+        "A02"
+      ],
+      "price": 6,
+      "grossFees": 8,
+      "coinReturn": 8,
+      "completionCash": 0,
+      "conditionalCash": 6,
+      "successExecutions": 8,
+      "notes": "阅读产✦3可供集中创作消耗3；两次原价找牌另计；总8次执行非8个连续周"
+    },
+    {
+      "route": "B",
+      "ids": [
+        "B02",
+        "B05",
+        "B07"
+      ],
+      "price": 8,
+      "grossFees": 3,
+      "coinReturn": 5,
+      "completionCash": 0,
+      "conditionalCash": 0,
+      "successExecutions": 5,
+      "notes": "买课→管线→日志；管线需另一张目标牌，日志需目标位于左邻；需调度，目标另计"
+    },
+    {
+      "route": "W",
+      "ids": [
+        "W04",
+        "W05"
+      ],
+      "price": 5,
+      "grossFees": 6,
+      "coinReturn": 4,
+      "completionCash": 2,
+      "conditionalCash": 0,
+      "successExecutions": 4,
+      "notes": "两张可同期执行，各占自己的槽位；共★3，不重复当现金奖励减去"
+    },
+    {
+      "route": "C",
+      "ids": [
+        "C01",
+        "C05",
+        "C07"
+      ],
+      "price": 7,
+      "grossFees": 4,
+      "coinReturn": 5,
+      "hireOutlay": 10,
+      "netCash": 16,
+      "successExecutions": 5,
+      "notes": "社交与市场调研先得CC；招聘阅读与学习技术各5，取得C及额外A/B。总净16，不把整笔费用同时分摊给C、A、B三次；不领取被招聘牌奖励"
+    }
+  ],
+  "hire": [
+    {
+      "id": "A02",
+      "name": "集中创作",
+      "directCashCost": -3,
+      "hirePrice": 7,
+      "stepsSaved": 3,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "A04",
+      "name": "阅读",
+      "directCashCost": 1,
+      "hirePrice": 5,
+      "stepsSaved": 3,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "A07",
+      "name": "灵感搜寻",
+      "directCashCost": 2,
+      "hirePrice": 5,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "B01",
+      "name": "学习技术",
+      "directCashCost": 1,
+      "hirePrice": 5,
+      "stepsSaved": 3,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "B02",
+      "name": "买课",
+      "directCashCost": 3,
+      "hirePrice": 6,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "B05",
+      "name": "自动管线",
+      "directCashCost": 3,
+      "hirePrice": 5,
+      "stepsSaved": 1,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "B07",
+      "name": "日志分析",
+      "directCashCost": 0,
+      "hirePrice": 3,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "B11",
+      "name": "工具交付",
+      "directCashCost": -2,
+      "hirePrice": 5,
+      "stepsSaved": 1,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "C01",
+      "name": "社交",
+      "directCashCost": 2,
+      "hirePrice": 5,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "C05",
+      "name": "市场调研",
+      "directCashCost": 4,
+      "hirePrice": 6,
+      "stepsSaved": 1,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "C07",
+      "name": "招募伙伴",
+      "directCashCost": 0,
+      "hirePrice": 3,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "W04",
+      "name": "集中攻坚",
+      "directCashCost": 1,
+      "hirePrice": 6,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "W05",
+      "name": "工作交接",
+      "directCashCost": 4,
+      "hirePrice": 7,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "W09",
+      "name": "争取双休",
+      "directCashCost": 9,
+      "hirePrice": 13,
+      "stepsSaved": 3,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "W11",
+      "name": "提案汇报",
+      "directCashCost": -4,
+      "hirePrice": 3,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "W12",
+      "name": "垫资推进",
+      "directCashCost": -1,
+      "hirePrice": 4,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    },
+    {
+      "id": "W13",
+      "name": "流程验收",
+      "directCashCost": -3,
+      "hirePrice": 4,
+      "stepsSaved": 2,
+      "note": "只归档，不能领目标卡钱币/现金/指示物；招聘本身仍占时、付购价"
+    }
+  ],
+  "boards": [
+    {
+      "name": "开发：两订阅＋Agent",
+      "placements": [
+        [
+          "B09",
+          0,
+          0
+        ],
+        [
+          "B09",
+          1,
+          0
+        ],
+        [
+          "B10",
+          2,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ],
+        [
+          "W10",
+          2,
+          2
+        ]
+      ],
+      "side": 10,
+      "sanity": 6,
+      "purchase": 20,
+      "extraSetup": 0,
+      "evSide": 7.87037037037037,
+      "evNet": 4.231481481481481,
+      "pWin": 0.5729166666666666,
+      "notes": "2枚自动化仍在两订阅上；BBB一次共享，源牌与归档另计"
+    },
+    {
+      "name": "创作开发：原型＋两订阅",
+      "placements": [
+        [
+          "B14",
+          0,
+          0
+        ],
+        [
+          "B09",
+          1,
+          0
+        ],
+        [
+          "B09",
+          2,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ],
+        [
+          "W10",
+          2,
+          2
+        ]
+      ],
+      "side": 10,
+      "sanity": 6,
+      "purchase": 20,
+      "extraSetup": 0,
+      "evSide": 7.87037037037037,
+      "evNet": 4.231481481481481,
+      "pWin": 0.5729166666666666,
+      "notes": "AAB；原型消耗2灵感与1工具，订阅另留2工具；共需3次配置，不重复记同一枚"
+    },
+    {
+      "name": "创作：艺人＋签约＋驻留＋专栏",
+      "placements": [
+        [
+          "A09",
+          0,
+          0
+        ],
+        [
+          "A08",
+          1,
+          0
+        ],
+        [
+          "A13",
+          2,
+          0
+        ],
+        [
+          "A06",
+          3,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ]
+      ],
+      "side": 10,
+      "sanity": 6,
+      "purchase": 27,
+      "extraSetup": 0,
+      "evSide": 7.65946502057613,
+      "evNet": 5.723251028806585,
+      "pWin": 0.47530864197530864,
+      "notes": "艺人锁2灵感；驻留理智1＋两支持夜晚净2；AAA＋W；四张收入牌"
+    },
+    {
+      "name": "商业：两卖场＋团购",
+      "placements": [
+        [
+          "C06",
+          0,
+          0
+        ],
+        [
+          "C06",
+          1,
+          0
+        ],
+        [
+          "C13",
+          2,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ],
+        [
+          "W10",
+          2,
+          2
+        ]
+      ],
+      "side": 11,
+      "sanity": 6,
+      "purchase": 17,
+      "extraSetup": 21,
+      "evSide": 8.657407407407408,
+      "evNet": 5.018518518518518,
+      "pWin": 0.5729166666666666,
+      "notes": "锁货6＋消耗货1；21为按直接3/件计的资金需求，不全是沉没成本；CCC＋W"
+    },
+    {
+      "name": "混合：驻留＋试点＋原型＋云端",
+      "placements": [
+        [
+          "A13",
+          0,
+          0
+        ],
+        [
+          "B12",
+          1,
+          0
+        ],
+        [
+          "B14",
+          2,
+          0
+        ],
+        [
+          "B13",
+          3,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ]
+      ],
+      "side": 11,
+      "sanity": 6,
+      "purchase": 28,
+      "extraSetup": 0,
+      "evSide": 9.296296296296298,
+      "evNet": 7.657407407407408,
+      "pWin": 0.5729166666666666,
+      "notes": "W＋AA＋BB共享归档；原型与云端合计消耗2自动化及2灵感；试点免查岗"
+    },
+    {
+      "name": "职场转型：暗图＋试点＋团购＋云端",
+      "placements": [
+        [
+          "W16",
+          6,
+          0
+        ],
+        [
+          "B12",
+          0,
+          0
+        ],
+        [
+          "C13",
+          1,
+          0
+        ],
+        [
+          "B13",
+          2,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ],
+        [
+          "W10",
+          2,
+          2
+        ]
+      ],
+      "side": 11,
+      "sanity": 6,
+      "purchase": 24,
+      "extraSetup": 0,
+      "evSide": 10.046746399176953,
+      "evNet": 6.665444958847736,
+      "pWin": 0.6913580246913581,
+      "notes": "工资区3枚转入暗图；工资仍按3计算，不能再多记3；暗图的+2抵消周日占满−2"
+    },
+    {
+      "name": "无维持费：三兴趣编程＋两订阅＋云端",
+      "placements": [
+        [
+          "B08",
+          0,
+          0
+        ],
+        [
+          "B08",
+          0,
+          1
+        ],
+        [
+          "B08",
+          1,
+          0
+        ],
+        [
+          "B09",
+          2,
+          0
+        ],
+        [
+          "B09",
+          3,
+          0
+        ],
+        [
+          "B13",
+          1,
+          1
+        ]
+      ],
+      "side": 11,
+      "sanity": 6,
+      "purchase": 37,
+      "extraSetup": 0,
+      "evSide": 8.425411522633743,
+      "evNet": 10.021090534979425,
+      "pWin": 0.47530864197530864,
+      "notes": "静态11/6，6张收入牌；两枚保留自动化＋一枚部署消耗；不宣称必须付支持费"
+    },
+    {
+      "name": "高理智开发：数据＋兴趣＋两订阅＋云端",
+      "placements": [
+        [
+          "B06",
+          0,
+          0
+        ],
+        [
+          "B08",
+          0,
+          1,
+          {
+            "boostSource": "B06",
+            "bonus": 2
+          }
+        ],
+        [
+          "B09",
+          1,
+          0
+        ],
+        [
+          "B09",
+          2,
+          0
+        ],
+        [
+          "B13",
+          3,
+          0
+        ],
+        [
+          "W10",
+          0,
+          2
+        ],
+        [
+          "W10",
+          1,
+          2
+        ]
+      ],
+      "side": 11,
+      "sanity": 6,
+      "purchase": 29,
+      "extraSetup": 0,
+      "evSide": 8.425411522633743,
+      "evNet": 6.255144032921811,
+      "pWin": 0.47530864197530864,
+      "notes": "BB；数据与兴趣为真实上下邻，必须同时执行；两订阅各留工具1，云端消耗工具1；三张产品与数据组合"
+    }
+  ],
+  "loops": [
+    {
+      "name": "批发＋零售",
+      "price": 6,
+      "rows": [
+        {
+          "week": 1,
+          "buy": 3,
+          "sell": 2,
+          "stock": 1,
+          "cumulativeCash": -3
+        },
+        {
+          "week": 2,
+          "buy": 3,
+          "sell": 2,
+          "stock": 2,
+          "cumulativeCash": 0
+        },
+        {
+          "week": 3,
+          "buy": 0,
+          "sell": 2,
+          "stock": 0,
+          "cumulativeCash": 8
+        },
+        {
+          "week": 4,
+          "buy": 3,
+          "sell": 2,
+          "stock": 1,
+          "cumulativeCash": 11
+        },
+        {
+          "week": 5,
+          "buy": 3,
+          "sell": 2,
+          "stock": 2,
+          "cumulativeCash": 14
+        },
+        {
+          "week": 6,
+          "buy": 0,
+          "sell": 2,
+          "stock": 0,
+          "cumulativeCash": 22
+        }
+      ],
+      "steadyCash": 4.666666666666667,
+      "side": 0,
+      "units": 2
+    },
+    {
+      "name": "小额进货＋摆摊",
+      "price": 4,
+      "steadyCash": 1,
+      "side": 0,
+      "units": 2
+    },
+    {
+      "name": "小额进货＋零售",
+      "price": 5,
+      "steadyCash": 2,
+      "side": 0,
+      "units": 2
+    },
+    {
+      "name": "小额进货＋专柜（留货1）",
+      "price": 5,
+      "stockCapital": 3,
+      "steadyCash": 3,
+      "side": 0,
+      "units": 2
+    },
+    {
+      "name": "灵感管理＋采风＋写作",
+      "price": 6,
+      "steadyCash": 3,
+      "side": 0,
+      "units": 3,
+      "notes": "稳态每周消耗1张前周免费所得手牌；首周最多0现金，搜不到或留牌时更低"
+    },
+    {
+      "name": "灵感管理＋画画",
+      "price": 11,
+      "steadyCash": 3,
+      "side": 1,
+      "sanity": 1,
+      "units": 2,
+      "variance": 4,
+      "notes": "每次骰额外现金0/4各半；实际现金1/5，不是稳定3副业"
+    },
+    {
+      "name": "灵感管理＋预售＋专柜",
+      "price": 8,
+      "stockCapital": 3,
+      "steadyCash": 5,
+      "side": 0,
+      "units": 3,
+      "notes": "有展示货；每周1灵感→1货→售5；未扣时间支持查岗"
+    },
+    {
+      "name": "管线重放＋作品发行",
+      "price": 6,
+      "steadyCash": 5,
+      "side": 0,
+      "units": 2,
+      "notes": "每周重放管线，费用1完成返还；还需目标牌和相邻位置；两张源牌不是免费工资"
+    },
+    {
+      "name": "自动补货＋零售（每周取1）",
+      "price": 7,
+      "steadyCash": 6,
+      "side": 2,
+      "units": 3,
+      "notes": "补货先发生、随后取走1，周末余1：副业2＋卖货4；先卖后补且保持满货时可到副业4＋卖货4；需库存与合法时序"
+    },
+    {
+      "name": "配置管线＋工具交付",
+      "price": 6,
+      "oneShotCash": 5,
+      "coinRefund": 2,
+      "side": 0,
+      "units": 2,
+      "notes": "两次费合计2并退回；净−1，换B归档与管线复用。须另有目标，不能自己放标记；工具交付不可重放"
+    }
+  ],
+  "tradeStress": [
+    {
+      "kind": "bulk",
+      "spread": false,
+      "H": 5,
+      "price": 6,
+      "initialFloat": 5,
+      "initialStock": 0,
+      "initialStockCash": 0,
+      "trajectory": [
+        {
+          "week": 1,
+          "expectedCash": 10.164737654320987,
+          "expectedStock": 0.8329475308641974,
+          "tradeNetAfterCardPrice": -3.8352623456790127
+        },
+        {
+          "week": 2,
+          "expectedCash": 15.329475308641971,
+          "expectedStock": 1.6658950617283947,
+          "tradeNetAfterCardPrice": -1.670524691358029
+        },
+        {
+          "week": 3,
+          "expectedCash": 23.361539536959082,
+          "expectedStock": 0.778446648194912,
+          "tradeNetAfterCardPrice": 3.361539536959082
+        },
+        {
+          "week": 4,
+          "expectedCash": 30.01874557558803,
+          "expectedStock": 0.7159131484743406,
+          "tradeNetAfterCardPrice": 7.0187455755880315
+        },
+        {
+          "week": 5,
+          "expectedCash": 35.67012847084303,
+          "expectedStock": 1.2568735347781268,
+          "tradeNetAfterCardPrice": 9.670128470843032
+        }
+      ],
+      "expectedCashShortageExecutions": 0,
+      "note": "工资逐周到账，采购先付、销售周末到账；净交易列扣购牌，不扣可回收展示货3；没有把归档取得或市场等待当免费已完成。品牌策略保留最后一件展示货"
+    },
+    {
+      "kind": "bulk",
+      "spread": true,
+      "H": 5,
+      "price": 6,
+      "initialFloat": 5,
+      "initialStock": 0,
+      "initialStockCash": 0,
+      "trajectory": [
+        {
+          "week": 1,
+          "expectedCash": 9.220807613168724,
+          "expectedStock": 1.045331790123457,
+          "tradeNetAfterCardPrice": -4.7791923868312765
+        },
+        {
+          "week": 2,
+          "expectedCash": 14.247149186047723,
+          "expectedStock": 1.6904722702851562,
+          "tradeNetAfterCardPrice": -2.7528508139522767
+        },
+        {
+          "week": 3,
+          "expectedCash": 21.464627581813065,
+          "expectedStock": 1.1152955260174195,
+          "tradeNetAfterCardPrice": 1.4646275818130654
+        },
+        {
+          "week": 4,
+          "expectedCash": 27.77875065719353,
+          "expectedStock": 0.9942931792765827,
+          "tradeNetAfterCardPrice": 4.77875065719353
+        },
+        {
+          "week": 5,
+          "expectedCash": 33.469210677335006,
+          "expectedStock": 1.2318492584815242,
+          "tradeNetAfterCardPrice": 7.469210677335006
+        }
+      ],
+      "expectedCashShortageExecutions": 0,
+      "note": "工资逐周到账，采购先付、销售周末到账；净交易列扣购牌，不扣可回收展示货3；没有把归档取得或市场等待当免费已完成。品牌策略保留最后一件展示货"
+    },
+    {
+      "kind": "small",
+      "spread": false,
+      "H": 5,
+      "price": 4,
+      "initialFloat": 2,
+      "initialStock": 0,
+      "initialStockCash": 0,
+      "trajectory": [
+        {
+          "week": 1,
+          "expectedCash": 5.498842592592593,
+          "expectedStock": 0,
+          "tradeNetAfterCardPrice": -3.5011574074074074
+        },
+        {
+          "week": 2,
+          "expectedCash": 8.997685185185183,
+          "expectedStock": 0,
+          "tradeNetAfterCardPrice": -3.0023148148148167
+        },
+        {
+          "week": 3,
+          "expectedCash": 12.496527777777777,
+          "expectedStock": 0,
+          "tradeNetAfterCardPrice": -2.503472222222223
+        },
+        {
+          "week": 4,
+          "expectedCash": 15.995370370370365,
+          "expectedStock": 0,
+          "tradeNetAfterCardPrice": -2.004629629629635
+        },
+        {
+          "week": 5,
+          "expectedCash": 19.494212962962944,
+          "expectedStock": 0,
+          "tradeNetAfterCardPrice": -1.5057870370370559
+        }
+      ],
+      "expectedCashShortageExecutions": 0,
+      "note": "工资逐周到账，采购先付、销售周末到账；净交易列扣购牌，不扣可回收展示货3；没有把归档取得或市场等待当免费已完成。品牌策略保留最后一件展示货"
+    },
+    {
+      "kind": "small",
+      "spread": true,
+      "H": 5,
+      "price": 4,
+      "initialFloat": 2,
+      "initialStock": 0,
+      "initialStockCash": 0,
+      "trajectory": [
+        {
+          "week": 1,
+          "expectedCash": 5.1920653292181065,
+          "expectedStock": 0.11799125514403291,
+          "tradeNetAfterCardPrice": -3.8079346707818935
+        },
+        {
+          "week": 2,
+          "expectedCash": 8.49922758318785,
+          "expectedStock": 0.12603692532319075,
+          "tradeNetAfterCardPrice": -3.5007724168121506
+        },
+        {
+          "week": 3,
+          "expectedCash": 11.822326752337764,
+          "expectedStock": 0.12653115354938269,
+          "tradeNetAfterCardPrice": -3.177673247662236
+        },
+        {
+          "week": 4,
+          "expectedCash": 15.146407246897583,
+          "expectedStock": 0.12655803225468165,
+          "tradeNetAfterCardPrice": -2.853592753102417
+        },
+        {
+          "week": 5,
+          "expectedCash": 18.47054122425272,
+          "expectedStock": 0.12655929136453148,
+          "tradeNetAfterCardPrice": -2.5294587757472797
+        }
+      ],
+      "expectedCashShortageExecutions": 0,
+      "note": "工资逐周到账，采购先付、销售周末到账；净交易列扣购牌，不扣可回收展示货3；没有把归档取得或市场等待当免费已完成。品牌策略保留最后一件展示货"
+    },
+    {
+      "kind": "brand",
+      "spread": false,
+      "H": 5,
+      "price": 5,
+      "initialFloat": 2,
+      "initialStock": 1,
+      "initialStockCash": 3,
+      "trajectory": [
+        {
+          "week": 1,
+          "expectedCash": 7.164737654320987,
+          "expectedStock": 0.9999999999999998,
+          "tradeNetAfterCardPrice": -2.8352623456790127
+        },
+        {
+          "week": 2,
+          "expectedCash": 12.329475308641971,
+          "expectedStock": 1.0000000000000002,
+          "tradeNetAfterCardPrice": -0.670524691358029
+        },
+        {
+          "week": 3,
+          "expectedCash": 17.494212962962962,
+          "expectedStock": 0.9999999999999996,
+          "tradeNetAfterCardPrice": 1.494212962962962
+        },
+        {
+          "week": 4,
+          "expectedCash": 22.65895061728395,
+          "expectedStock": 0.9999999999999997,
+          "tradeNetAfterCardPrice": 3.658950617283949
+        },
+        {
+          "week": 5,
+          "expectedCash": 27.823688271604922,
+          "expectedStock": 0.9999999999999992,
+          "tradeNetAfterCardPrice": 5.823688271604922
+        }
+      ],
+      "expectedCashShortageExecutions": 0,
+      "note": "工资逐周到账，采购先付、销售周末到账；净交易列扣购牌，不扣可回收展示货3；没有把归档取得或市场等待当免费已完成。品牌策略保留最后一件展示货"
+    },
+    {
+      "kind": "brand",
+      "spread": true,
+      "H": 5,
+      "price": 5,
+      "initialFloat": 2,
+      "initialStock": 1,
+      "initialStockCash": 3,
+      "trajectory": [
+        {
+          "week": 1,
+          "expectedCash": 6.574781378600822,
+          "expectedStock": 1.117991255144033,
+          "tradeNetAfterCardPrice": -3.4252186213991784
+        },
+        {
+          "week": 2,
+          "expectedCash": 11.29105370188511,
+          "expectedStock": 1.1260369253231906,
+          "tradeNetAfterCardPrice": -1.7089462981148902
+        },
+        {
+          "week": 3,
+          "expectedCash": 16.02493100289806,
+          "expectedStock": 1.1265311535493834,
+          "tradeNetAfterCardPrice": 0.02493100289806094
+        },
+        {
+          "week": 4,
+          "expectedCash": 20.759882882057223,
+          "expectedStock": 1.126558032254682,
+          "tradeNetAfterCardPrice": 1.759882882057223
+        },
+        {
+          "week": 5,
+          "expectedCash": 25.49489273122038,
+          "expectedStock": 1.126559291364531,
+          "tradeNetAfterCardPrice": 3.4948927312203786
+        }
+      ],
+      "expectedCashShortageExecutions": 0,
+      "note": "工资逐周到账，采购先付、销售周末到账；净交易列扣购牌，不扣可回收展示货3；没有把归档取得或市场等待当免费已完成。品牌策略保留最后一件展示货"
+    }
+  ],
+  "restockStress": [
+    {
+      "sellFirst": false,
+      "rows": [
+        {
+          "week": 1,
+          "evSide": 1.8546810699588476,
+          "cash": 9.710776748971192,
+          "goods": 1.190650720164609,
+          "netAfterTwoCardPrices": -2.289223251028808
+        },
+        {
+          "week": 2,
+          "evSide": 1.8546810699588478,
+          "cash": 17.421553497942384,
+          "goods": 1.0341043861973649,
+          "netAfterTwoCardPrices": 2.4215534979423836
+        },
+        {
+          "week": 3,
+          "evSide": 1.764649905638607,
+          "cash": 24.9983750141266,
+          "goods": 0.9375854192809006,
+          "netAfterTwoCardPrices": 6.9983750141266015
+        },
+        {
+          "week": 4,
+          "evSide": 1.68886824930074,
+          "cash": 32.46201450032012,
+          "goods": 0.862887801445465,
+          "netAfterTwoCardPrices": 11.462014500320123
+        },
+        {
+          "week": 5,
+          "evSide": 1.6290671917409756,
+          "cash": 39.83589967556686,
+          "goods": 0.80421697714897,
+          "netAfterTwoCardPrices": 15.835899675566857
+        }
+      ],
+      "scope": "预先配置完成并锁货2；两牌购价7已扣，货款6、管线3、BCC取得、支持及市场等待另计；周末按实际剩货结算，没有先计满额再卖货"
+    },
+    {
+      "sellFirst": true,
+      "rows": [
+        {
+          "week": 1,
+          "evSide": 3.237397119341564,
+          "cash": 11.093492798353905,
+          "goods": 1.882008744855967,
+          "netAfterTwoCardPrices": -0.9065072016460949
+        },
+        {
+          "week": 2,
+          "evSide": 3.07029398927547,
+          "cash": 20.019882466641718,
+          "goods": 1.777214499677848,
+          "netAfterTwoCardPrices": 5.019882466641718
+        },
+        {
+          "week": 3,
+          "evSide": 2.9388231582262105,
+          "cash": 28.77087723541354,
+          "goods": 1.6938343584323607,
+          "netAfterTwoCardPrices": 10.77087723541354
+        },
+        {
+          "week": 4,
+          "evSide": 2.835758125904036,
+          "cash": 37.38140659821035,
+          "goods": 1.6281387467580073,
+          "netAfterTwoCardPrices": 16.381406598210347
+        },
+        {
+          "week": 5,
+          "evSide": 2.755228928707389,
+          "cash": 45.881453510423476,
+          "goods": 1.576568838679355,
+          "netAfterTwoCardPrices": 21.881453510423476
+        }
+      ],
+      "scope": "预先配置完成并锁货2；两牌购价7已扣，货款6、管线3、BCC取得、支持及市场等待另计；周末按实际剩货结算，没有先计满额再卖货"
+    }
+  ],
+  "earlyBuilds": [
+    {
+      "route": "A",
+      "rows": [
+        {
+          "week": 1,
+          "buy": [
+            "A04",
+            "A07"
+          ],
+          "place": [
+            "A04",
+            "A07"
+          ],
+          "buyCost": 3,
+          "fees": 2,
+          "rewards": 0,
+          "side": 0,
+          "money": 6,
+          "skills": [],
+          "inspiration": 1,
+          "auto": 0
+        },
+        {
+          "week": 2,
+          "buy": [
+            "A02"
+          ],
+          "place": [
+            "A02"
+          ],
+          "buyCost": 3,
+          "fees": 3,
+          "rewards": 4,
+          "side": 0,
+          "money": 7,
+          "skills": [
+            "A07"
+          ],
+          "inspiration": 1,
+          "auto": 0
+        },
+        {
+          "week": 3,
+          "buy": [],
+          "place": [],
+          "buyCost": 0,
+          "fees": 2,
+          "rewards": 5,
+          "side": 0,
+          "money": 13,
+          "skills": [
+            "A07",
+            "A04"
+          ],
+          "inspiration": 1,
+          "auto": 0
+        },
+        {
+          "week": 4,
+          "buy": [],
+          "place": [],
+          "buyCost": 0,
+          "fees": 1,
+          "rewards": 5,
+          "side": 0,
+          "money": 20,
+          "skills": [
+            "A07",
+            "A04",
+            "A02"
+          ],
+          "inspiration": 0,
+          "auto": 0
+        }
+      ],
+      "scope": "无查停、候选牌恰好可买、主动搜牌不买任何候选；AAA灵感分放空夜，集中创作每次只取一个夜晚的1枚；BBB使用Mon管线→Tue目标→Wed日志。不是市场可达性或胜率证明"
+    },
+    {
+      "route": "B",
+      "rows": [
+        {
+          "week": 1,
+          "buy": [
+            "B02",
+            "B03"
+          ],
+          "place": [
+            "B02",
+            "B03"
+          ],
+          "buyCost": 6,
+          "fees": 1,
+          "rewards": 0,
+          "side": 1,
+          "money": 5,
+          "skills": [],
+          "inspiration": 0,
+          "auto": 0
+        },
+        {
+          "week": 2,
+          "buy": [],
+          "place": [],
+          "buyCost": 0,
+          "fees": 1,
+          "rewards": 2,
+          "side": 1,
+          "money": 10,
+          "skills": [
+            "B02"
+          ],
+          "inspiration": 0,
+          "auto": 0
+        },
+        {
+          "week": 3,
+          "buy": [
+            "B05",
+            "B07"
+          ],
+          "place": [
+            "B05",
+            "B07"
+          ],
+          "buyCost": 5,
+          "fees": 1,
+          "rewards": 1,
+          "side": 1,
+          "money": 9,
+          "skills": [
+            "B02",
+            "B05"
+          ],
+          "inspiration": 0,
+          "auto": 1
+        },
+        {
+          "week": 4,
+          "buy": [],
+          "place": [],
+          "buyCost": 0,
+          "fees": 0,
+          "rewards": 2,
+          "side": 1,
+          "money": 15,
+          "skills": [
+            "B02",
+            "B05",
+            "B07"
+          ],
+          "inspiration": 0,
+          "auto": 1
+        }
+      ],
+      "scope": "无查停、候选牌恰好可买、主动搜牌不买任何候选；AAA灵感分放空夜，集中创作每次只取一个夜晚的1枚；BBB使用Mon管线→Tue目标→Wed日志。不是市场可达性或胜率证明"
+    }
+  ],
+  "wellbeing": [
+    {
+      "sanity": 0,
+      "exposure": 0.4166666666666667,
+      "kinds": [
+        "discard",
+        "hand",
+        "hospital",
+        "withdraw",
+        "hospital"
+      ]
+    },
+    {
+      "sanity": 1,
+      "exposure": 0.3333333333333333,
+      "kinds": [
+        "hand",
+        "hospital",
+        "withdraw",
+        "hospital"
+      ]
+    },
+    {
+      "sanity": 2,
+      "exposure": 0.3333333333333333,
+      "kinds": [
+        "hand",
+        "hospital",
+        "withdraw",
+        "hospital"
+      ]
+    },
+    {
+      "sanity": 3,
+      "exposure": 0.08333333333333333,
+      "kinds": [
+        "hand"
+      ]
+    },
+    {
+      "sanity": 4,
+      "exposure": 0,
+      "kinds": []
+    },
+    {
+      "sanity": 6,
+      "exposure": 0,
+      "kinds": []
+    }
+  ]
+}
